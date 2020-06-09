@@ -6,7 +6,8 @@ const autoprefixer = require('autoprefixer')
 const autoprefixerOption = {
     grid: true
 }
-const postcssOption =[ autoprefixer(autoprefixerOption)]
+
+const postcssOption =[ autoprefixer(autoprefixerOption) ]
 
 gulp.task('sass', () => {
     return gulp.src('./scss/bootstrap/bootstrap.scss')
