@@ -2522,7 +2522,7 @@ input[type="button"].btn-block {
   .input-group > .custom-select,
   .input-group > .custom-file {
     position: relative;
-    flex: 1 1 0%;
+    flex: 1 1;
     min-width: 0;
     margin-bottom: 0; }
     .input-group > .form-control + .form-control,
@@ -3420,7 +3420,7 @@ input[type="button"].btn-block {
     margin-right: -15px;
     margin-left: -15px; }
     .card-deck .card {
-      flex: 1 0 0%;
+      flex: 1 0;
       margin-right: 15px;
       margin-bottom: 0;
       margin-left: 15px; } }
@@ -3433,7 +3433,7 @@ input[type="button"].btn-block {
     display: flex;
     flex-flow: row wrap; }
     .card-group > .card {
-      flex: 1 0 0%;
+      flex: 1 0;
       margin-bottom: 0; }
       .card-group > .card + .card {
         margin-left: 0;
@@ -3852,7 +3852,7 @@ input[type="button"].btn-block {
   align-items: flex-start; }
 
 .media-body {
-  flex: 1; }
+  flex: 1 1; }
 
 .list-group {
   display: flex;
