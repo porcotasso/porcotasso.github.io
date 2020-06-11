@@ -3,4 +3,10 @@
   display: grid; }
 
 h1 {
-  font-size: 14px; }
+  font-size: 34px;
+  font-weight: bold; }
+
+h2 {
+  font-size: 23px;
+  font-weight: bold; }
+/*# sourceMappingURL=maps/common.css.map */
