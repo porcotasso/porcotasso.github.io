@@ -13,7 +13,6 @@ const notify = require('gulp-notify');// error notice
 const cssdeclsort = require('css-declaration-sorter') // プロパティをソートし直す
 // const cssWring = require('csswring')
 
-
 const autoprefixerOption = {
     grid: true
 }
@@ -25,7 +24,7 @@ const postcssOption = [
 ]
 
 gulp.task('sass', () => {
-    return gulp.src('./scss/common.scss', { sourcemaps: true })
+    return gulp.src(['./scss/common.scss', './scss/bootstrap/bootstrap.scss'], { sourcemaps: true })
     // return gulp.src('./scss/bootstrap/bootstrap.scss')
     .pipe(plumber(notify.onError('Error: <%= error.message %>')))
     .pipe(sass())
