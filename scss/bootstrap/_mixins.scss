@@ -9,7 +9,7 @@
 // @import "mixins/deprecate";
 
 // // Utilities
-// @import "mixins/breakpoints";
+@import "mixins/breakpoints";
 @import "mixins/hover";
 // @import "mixins/image";
 // @import "mixins/badge";
@@ -43,5 +43,5 @@
 // // Layout
 // @import "mixins/clearfix";
 // @import "mixins/grid-framework";
-// @import "mixins/grid";
+@import "mixins/grid";
 // @import "mixins/float";
