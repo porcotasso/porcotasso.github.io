@@ -18,6 +18,22 @@ const cleanCSS = require("gulp-clean-css") //minify
 // const uglify = require('gulp-uglify')　// minify JavaScript
 // const rename = require('gulp-rename') //rename
 
+// ejs
+const ejs = require('gulp-ejs')
+
+// ejsのコンパイル設定用のオブジェクト
+const ejsSettingOption = {
+    ext: '.html'
+  }
+  
+  // ejsをコンパイルするタスク
+  gulp.task('ejs', () => {
+    return gulp
+      .src('./src/html/index.ejs')
+      .pipe(ejs({}, {}, ejsSettingOption))
+      .pipe(gulp.dest('./'))
+  })
+
 const autoprefixerOption = {
     grid: true
 }

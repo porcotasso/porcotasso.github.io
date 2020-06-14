@@ -2,17 +2,17 @@
 // //
 // // Set the container width, and override it for fixed navbars in media queries.
 
-@if $enable-grid-classes {
+// @if $enable-grid-classes {
 //   // Single container class with breakpoint max-widths
-  .container {
-    @include make-container();
-    @include make-container-max-widths();
-  }
+  // .container {
+  //   @include make-container();
+  //   @include make-container-max-widths();
+  // }
 
 //   // 100% wide container at all breakpoints
-  .container-fluid {
-    @include make-container();
-  }
+  // .container-fluid {
+  //   @include make-container();
+  // }
 
 //   // Responsive containers that are 100% wide until a breakpoint
 //   @each $breakpoint, $container-max-width in $container-max-widths {
@@ -34,7 +34,7 @@
 //       }
 //     }
 //   }
-}
+// }
 
 
 // // Row
