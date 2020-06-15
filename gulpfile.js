@@ -16,23 +16,16 @@ const cssdeclsort = require('css-declaration-sorter') // sort
 const cleanCSS = require("gulp-clean-css") //minify
 // const cssWring = require('csswring') //minify
 // const uglify = require('gulp-uglify')　// minify JavaScript
-// const rename = require('gulp-rename') //rename
+const rename = require('gulp-rename') //rename
+const ejs = require('gulp-ejs') // ejs - compile html
 
-// ejs
-const ejs = require('gulp-ejs')
-
-// ejsのコンパイル設定用のオブジェクト
-const ejsSettingOption = {
-    ext: '.html'
-  }
-  
-  // ejsをコンパイルするタスク
-  gulp.task('ejs', () => {
-    return gulp
-      .src('./src/html/index.ejs')
-      .pipe(ejs({}, {}, ejsSettingOption))
-      .pipe(gulp.dest('./'))
-  })
+// compile ejs
+gulp.task('ejs', () => {
+  return gulp.src('./src/html/*.ejs')
+    .pipe(ejs({}))
+    .pipe(rename({ extname: '.html' }))
+    .pipe(gulp.dest('./'))
+})
 
 const autoprefixerOption = {
     grid: true
@@ -42,7 +35,6 @@ const postcssOption = [
     autoprefixer(autoprefixerOption),
     // cssWring
 ]
-
 
 const options = minimist(process.argv.slice(2), envOption); //process.argv には第一引数にnode、第２引数には実行ファイル名、第３引数以降にはコマンドライン引数が入る。minimistに渡す場合はprocess.argv.slice(2) がお決まり。
 //minimist は第２引数にオプション(ここではenvOption と定義)を与えることができ、envOption.string に定義した値を取得する。またコマンドライン引数に該当の値がない場合はenvOption.defaut に定義した値がデフォルト値となる。
@@ -67,7 +59,7 @@ gulp.task('sass', () => {
 })
 
 gulp.task('watch', () => {
-    return gulp.watch('./scss/**/*.scss', gulp.series('sass'))
+    return gulp.watch(['./scss/**/*.scss', './src/html/**/*.ejs'], gulp.series('sass', 'ejs'))
 })
 
 //create default task  -> 'npm run dev' -> run
