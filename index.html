@@ -15,8 +15,7 @@
 </head>
 
 <body>
-    <script src="js/jquery.slim.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    
     <div class="home">
         <div class="header">
             <div class="header__box">
@@ -35,12 +34,23 @@
             </div>
         </div>
         <div class="content-box">
-            <ul class="side-menu list-unstyled">
-                <li><a href="bootstrap/modal.html">modal</a></li>
-                <li><a href="bootstrap/modal.html">modal</a></li>
-                <li><a href="bootstrap/modal.html">modal</a></li>
-            </ul>
-
+            <div class="side-menu">
+                <ul class="list-unstyled">
+                    <li><a href="bootstrap/modal.html">modal</a></li>
+                    <li><a href="bootstrap/modal.html">modal</a></li>
+                    <li><a href="bootstrap/modal.html">modal</a></li>    
+                </ul>
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">リスト項目1</a>
+                    <a href="#" class="list-group-item list-group-item-action">リスト項目2</a>
+                    <a href="#" class="list-group-item list-group-item-action disabled">リスト項目3</a>
+                </div>
+                <div class="listgroup">
+                    <button type="button" class="list-group-item list-group-item-action">リスト項目1</button>
+                    <button type="button" class="list-group-item list-group-item-action">リスト項目1</button>
+                    <button type="button" class="list-group-item list-group-item-action disabled">リスト項目1</button>
+                </div>
+            </div>
             <div class="main">
                 <div class="title-box">
                     <h2 class="text-success">bootstrap</h2>
@@ -133,6 +143,8 @@
             </div>
         </div>
     </div>
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
