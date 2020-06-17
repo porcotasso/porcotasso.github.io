@@ -6,20 +6,20 @@
 //each page
 
 //bootstrap-custom
-.container {
-  width: 100%;
-  max-width: 1140px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: $gutter-width/2;
-  padding-left: $gutter-width/2;
-}
-.container-fluid {
+.wapper{
   width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding-right: $gutter-width/2;
   padding-left: $gutter-width/2;
+  &__inner{
+    width: 100%;
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $gutter-width/2;
+    padding-left: $gutter-width/2;
+  }
 }
 .inner-box {
   width: 100%;
@@ -34,7 +34,15 @@
   margin-left: -$gutter-width/2; 
 }
 
+
 // basic tag
+body{
+  color: $font-black;
+  font-weight: normal;
+  letter-spacing: 0.04rem;
+  font-family: 'Montserrat', "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+}
+
 h1{
 
 }
@@ -44,43 +52,75 @@ h2{
 h3{
 
 }
+
 img{
   max-width: 100%;
   height: auto;
 }
+p{
+  font-size: $font-size-16;
+  letter-spacing: 0.06rem;
+  line-height: 2;
+  margin:0 0 1.2rem;
+
+}
+
+
 
 // common area
 .header {
-  @extend .container-fluid;
-  height: 120px;
-  background: $gray-300;
-  &__box{
-    @extend .container;
-    display: flex;
+  @extend .wapper;
+  height: 180px;
+  background: $white;
+  align-items: center;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transform: translateY(0px);
+  transition: all 600ms 0s ease;
+  &.smaller {
+    transform: translateY(-120px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    .header__inner{
+      transform: translateY(60px);
+    }
+  }
+  &__inner{
+    @extend .wapper__inner;
+    transform: translateY(0px);
+    transition: all 600ms 0s ease;
+    h1{
+      text-align: center;
+      font-family: 'Roboto Slab', serif;
+      letter-spacing: 0.14rem;
+      font-size: $font-size-21;
+
+    }
+    .header-nav{
+      list-style: none;
+      display: flex;
+      margin-top: -40px;
+      float: right;
+      padding-left: 0;
+      li{
+        width: 84px;
+      }
+    }
   }
 }
+
+
+
 .content-box{
-  @extend .container;
+  @extend .wapper__inner;
   display: flex;
   .side-menu{
     @extend .inner-box;
     width: 240px;
     background: $gray-200;
   }
-  .main{
-    @extend .inner-box;
-    background: $gray-100;
-    .display-grid{
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-    }
-    @media (min-width: 768px) {
-      .display-grid{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-  }
+
 }
 
 .tag-content{
@@ -88,3 +128,20 @@ img{
 }
 
 //each page
+
+
+//test
+.main{
+  @extend .inner-box;
+  background: $gray-100;
+  .display-grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @media (min-width: 768px) {
+    .display-grid{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

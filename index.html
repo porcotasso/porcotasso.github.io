@@ -8,49 +8,34 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="widht=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-default.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/common.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
     <title>Code Memoaewrrgaaaw</title>
 </head>
 
 <body>
-    
+    <header class="header">
+        <nav class="header__inner">
+            <h1>porco tasso</h1>
+            <ul class="header-nav">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+            </ul>
+        </nav>
+    </header>
     <div class="home">
-        <div class="header">
-            <div class="header__box">
-                <h1>code memo</h1>
-            </div>
-        </div>
-        <div class="container">
-            <div class="bread-crumb">
-                <nav aria-label="breadcrumb" role="navigation">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">ホーム</a></li>
-                        <li class="breadcrumb-item"><a href="#">ライブラリー</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">データ</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
+
+
         <div class="content-box">
-            <div class="side-menu">
-                <ul class="list-unstyled">
-                    <li><a href="bootstrap/modal.html">modal</a></li>
-                    <li><a href="bootstrap/modal.html">modal</a></li>
-                    <li><a href="bootstrap/modal.html">modal</a></li>    
-                </ul>
-                <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">リスト項目1</a>
-                    <a href="#" class="list-group-item list-group-item-action">リスト項目2</a>
-                    <a href="#" class="list-group-item list-group-item-action disabled">リスト項目3</a>
-                </div>
-                <div class="listgroup">
-                    <button type="button" class="list-group-item list-group-item-action">リスト項目1</button>
-                    <button type="button" class="list-group-item list-group-item-action">リスト項目1</button>
-                    <button type="button" class="list-group-item list-group-item-action disabled">リスト項目1</button>
-                </div>
-            </div>
+            <ul class="side-menu list-unstyled">
+                <li><a href="bootstrap/modal.html">modal</a></li>
+                <li><a href="bootstrap/modal.html">modal</a></li>
+                <li><a href="bootstrap/modal.html">modal</a></li>
+            </ul>
+
             <div class="main">
                 <div class="title-box">
                     <h2 class="text-success">bootstrap</h2>
@@ -124,27 +109,16 @@
                         <a class="nav-link disable" href="#">リンク</a>
                     </li>
                 </ul>
-
-                <div>
-                    <p>指定のdirectryで　npm -init npmの初期化でpackage.jsonが作られる</p>
-                    <p>npm install gulp -D gulpのインストール</p>
-                    <p>gulpfile.js を手動で作成。</p>
-                    <p>npm i gulp-sass -D gulp-sass のインストール　sassを利用する</p>
-                    <p>npm i gulp-postcss -D gulp-postcss のインストール　CSS解析</p>
-                    <p>npm i autoprefixer -D autoprefixer のインストール　ベンダープレフィックスの使用：ブラウザ独自の試験的実装•非標準のCSSプロパティに付ける接頭辞</p>
-                    <p>npm i -D csswring インストール 圧縮PostCSS</p>
-                    <p>npm i -D postcss-flexbugs-fixes　インストール ブラウザによって違う挙動の差異を回避</p>
-                    <p>npm i -D gulp-plumber コンパイルエラー検知</p>
-                    <p>npm i -D gulp-notify デスクトップ通知</p>
-                    <p>npm i -D gulp-sourcemaps マップ作成</p>
-                    <p>gulpfile.js に記入</p>
-                    <p>gulp watch </p>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    dddddd
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
             </div>
         </div>
     </div>
     <script src="js/jquery.slim.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/smaller.js"></script>
 </body>
 
 </html>

@@ -10,25 +10,19 @@ var pageData = {
 <%- include('./_partial/head', pageData) %>
 
 <body>
-    <script src="js/jquery.slim.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <header class="header">
+        <nav class="header__inner">
+            <h1>porco tasso</h1>
+            <ul class="header-nav">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+            </ul>
+        </nav>
+    </header>
     <div class="home">
-        <div class="header">
-            <div class="header__box">
-                <h1>code memo</h1>
-            </div>
-        </div>
-        <div class="container">
-            <div class="bread-crumb">
-                <nav aria-label="breadcrumb" role="navigation">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">ホーム</a></li>
-                        <li class="breadcrumb-item"><a href="#">ライブラリー</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">データ</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
+
+
         <div class="content-box">
             <ul class="side-menu list-unstyled">
                 <li><a href="bootstrap/modal.html">modal</a></li>
@@ -109,25 +103,16 @@ var pageData = {
                         <a class="nav-link disable" href="#">リンク</a>
                     </li>
                 </ul>
-
-                <div>
-                    <p>指定のdirectryで　npm -init npmの初期化でpackage.jsonが作られる</p>
-                    <p>npm install gulp -D gulpのインストール</p>
-                    <p>gulpfile.js を手動で作成。</p>
-                    <p>npm i gulp-sass -D gulp-sass のインストール　sassを利用する</p>
-                    <p>npm i gulp-postcss -D gulp-postcss のインストール　CSS解析</p>
-                    <p>npm i autoprefixer -D autoprefixer のインストール　ベンダープレフィックスの使用：ブラウザ独自の試験的実装•非標準のCSSプロパティに付ける接頭辞</p>
-                    <p>npm i -D csswring インストール 圧縮PostCSS</p>
-                    <p>npm i -D postcss-flexbugs-fixes　インストール ブラウザによって違う挙動の差異を回避</p>
-                    <p>npm i -D gulp-plumber コンパイルエラー検知</p>
-                    <p>npm i -D gulp-notify デスクトップ通知</p>
-                    <p>npm i -D gulp-sourcemaps マップ作成</p>
-                    <p>gulpfile.js に記入</p>
-                    <p>gulp watch </p>
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    dddddd
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/smaller.js"></script>
 </body>
 
 </html>

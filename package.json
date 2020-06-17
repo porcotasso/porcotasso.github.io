@@ -6,12 +6,13 @@
     "live": "gulp --env live",
     "dev": "gulp"
   },
+  "license": "UNLICENSED",
+  "private": true,
   "stylelint": {
     "extends": "stylelint-config-standard"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.0",
-    "browser-sync": "^2.26.7",
     "css-declaration-sorter": "^5.1.2",
     "csswring": "^7.0.0",
     "gulp": "^4.0.2",
