@@ -36,11 +36,17 @@
 
 
 // basic tag
+html{
+   /* ルートのフォントサイズを10pxに設定しておく */
+  font-size: 62.5%;
+}
 body{
   color: $font-black;
   font-weight: normal;
   letter-spacing: 0.04rem;
   font-family: 'Montserrat', "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  /* ルートのフォントサイズを1.6em（16pxと同等のサイズ）に設定 */
+	font-size: 1.6em;
 }
 h1, h2, h3, h4, h5, h6 {
   a{
@@ -115,7 +121,7 @@ p{
     }
     .menu-trigger{
       position: relative;
-      top: -16px;
+      top: -6px;
       margin: -24px 16px 0 0;
       width: 34px;
       height: 24px;
@@ -138,15 +144,13 @@ p{
       }
     }
     @media only screen and (min-width: 1050px){
-      .pc-header-none {
-          display: none !important;
-      }
+
     }
     ul{
         display: none;
         position: absolute;
         opacity: 0;
-        top: 68px;
+        top: 55px;
         width: 100vw;
         height: 100vh;
         padding: 0;
@@ -163,8 +167,9 @@ p{
           border-top: 1px solid #dedede;
           a{
             display: block;
-            padding: 12px 16px;
-            font-size: 1.6rem;
+            padding: 12px 16px 12px 20px;
+            font-size: $font-size-14;
+            color: $font-black;
           }
         }
     }
@@ -190,27 +195,43 @@ p{
         transform: translateY(54px);
       }
     }
+    &__innner{
+      .pc-header-none {
+        display: none !important;
+      }
+    }
   }
 }
 
 
 
-.content-box{
-  @extend .wapper__inner;
-  display: flex;
-  .side-menu{
-    @extend .inner-box;
-    width: 240px;
-    background: $gray-200;
-  }
 
-}
 
-.tag-content{
-  background: $gray-100;
-}
 
 //each page
+.home{
+  &__icon{
+    text-align: center;
+    padding: 16px;
+    &__image{
+      width: 50%;
+      max-width: 160px;
+    }
+
+  }
+  &__menu{
+    list-style: none;
+    li{
+      a{
+        display: block;
+        padding: 12px 16px 12px 20px;
+        font-size: $font-size-14;
+        color: $font-black;
+      }
+    }
+  }
+
+}
 
 
 //test

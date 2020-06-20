@@ -5,7 +5,7 @@
   margin-left: auto;
   padding-right: 16px;
   padding-left: 16px; }
-  .wapper__inner, .content-box {
+  .wapper__inner {
     width: 100%;
     max-width: 1140px;
     margin-right: auto;
@@ -13,7 +13,7 @@
     padding-right: 16px;
     padding-left: 16px; }
 
-.inner-box, .content-box .side-menu, .main {
+.inner-box, .main {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -25,9 +25,15 @@
   margin-right: -16px;
   margin-left: -16px; }
 
+html {
+  /* ルートのフォントサイズを10pxに設定しておく */
+  font-size: 62.5%; }
+
 body {
   color: #333;
   font-family: 'Montserrat', "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  /* ルートのフォントサイズを1.6em（16pxと同等のサイズ）に設定 */
+  font-size: 1.6em;
   font-weight: normal;
   letter-spacing: 0.04rem; }
 
@@ -82,7 +88,7 @@ p {
       transition: all .4s; }
     .header__inner .menu-trigger {
       position: relative;
-      top: -16px;
+      top: -6px;
       width: 34px;
       height: 24px;
       margin: -24px 16px 0 0; }
@@ -99,13 +105,10 @@ p {
           top: 11px; }
         .header__inner .menu-trigger span:nth-of-type(3) {
           bottom: 0; }
-    @media only screen and (min-width: 1050px) {
-      .header__inner .pc-header-none {
-        display: none !important; } }
     .header__inner ul {
       display: none;
       position: absolute;
-      top: 68px;
+      top: 55px;
       width: 100vw;
       height: 100vh;
       padding: 0;
@@ -122,8 +125,9 @@ p {
         border-top: 1px solid #dedede; }
         .header__inner ul li a {
           display: block;
-          padding: 12px 16px;
-          font-size: 1.6rem; }
+          padding: 12px 16px 12px 20px;
+          color: #333;
+          font-size: 1.4rem; }
     @media only screen and (min-width: 1050px) {
       .header__inner ul {
         display: flex;
@@ -139,16 +143,24 @@ p {
     .header.smaller {
       transform: translateY(-110px); }
       .header.smaller .header__inner {
-        transform: translateY(54px); } }
+        transform: translateY(54px); }
+    .header__innner .pc-header-none {
+      display: none !important; } }
 
-.content-box {
-  display: flex; }
-  .content-box .side-menu {
-    width: 240px;
-    background: #e9ecef; }
+.home__icon {
+  padding: 16px;
+  text-align: center; }
+  .home__icon__image {
+    width: 50%;
+    max-width: 160px; }
 
-.tag-content {
-  background: #f8f9fa; }
+.home__menu {
+  list-style: none; }
+  .home__menu li a {
+    display: block;
+    padding: 12px 16px 12px 20px;
+    color: #333;
+    font-size: 1.4rem; }
 
 .main {
   background: #f8f9fa; }
