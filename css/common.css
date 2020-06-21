@@ -150,9 +150,6 @@ p {
 .home__icon {
   padding: 16px;
   text-align: center; }
-  .home__icon__image {
-    width: 50%;
-    max-width: 160px; }
 
 .home__menu {
   list-style: none; }
