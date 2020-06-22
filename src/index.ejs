@@ -1,39 +1,11 @@
-
-<!doctype html>
-<html lang="ja">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="widht=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="/css/common.css">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <title>Code Memoaewrrgaaaw</title>
-</head>
-<body>
-    <header class="header">  
-        <nav class="header__inner">
-            <h1><a href="">porco tasso</a></h1>
-            <a class="menu-trigger pc-header-none">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
-            <ul class="header-nav">
-                <li><a href="">menu1</a></li>
-                <li><a href="">menu1</a></li>
-                <li><a href="">menu1</a></li>
-                <li><a href="">menu1</a></li>
-            </ul>
-        </nav>
-    </header>
+<% var pageData = { pageTitle: "Code Memoaewrrgaaaw"} %>
+<%- include('/Users/porcokafuka/projects/porcotasso.github.io/src/_partial/wrapper-head', pageData) %>
 
 <main class="home">
     <div class="home__icon">
         <img class="home__icon__image" src="/images/common/icon.jpg" alt="porco tasso">
-        <h2>porco tasso</h2>
+        <h2>porco tasso（ポルコ タッソ）</h2>
+        <p>ウェブサイトのフロントエンドエンジニアです。作ること全般が好きで、イラストやレタッチ、動画、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。</p>
     </div>
 
     <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modal02">
@@ -154,18 +126,4 @@
         </div>
 </main>
 
-    <footer>
-        footer
-    </footer>
-        
-        <script src="js/jquery.slim.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <!-- <script src="js/src/util.js"></script>
-        <script src="js/src/index.js"></script>
-        <script src="js/src/tooltip.js"></script>
-        <script src="js/src/modal.js"></script> -->
-        <script src="js/smaller.js"></script>
-        <script src="js/trigger.js"></script>
-    </body>
-
-</html>
+<%- include('/Users/porcokafuka/projects/porcotasso.github.io/src/_partial/wrapper-foot') %>
