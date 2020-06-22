@@ -21,7 +21,7 @@ const ejs = require('gulp-ejs') // ejs - compile html
 
 // compile ejs
 gulp.task('ejs', () => {
-  return gulp.src('./src/**/*.ejs')
+  return gulp.src('./src/index.ejs', './src/*/*.ejs')
     .pipe(ejs({}))
     .pipe(rename({ extname: '.html' }))
     .pipe(gulp.dest('./'))
@@ -46,7 +46,7 @@ var live = (options.env === 'live') ? true : false;
 // console.log('[build env]', options.env, '[is live]', islive);
 
 gulp.task('sass', () => {
-    return gulp.src(['./scss/common.scss'], { sourcemaps: true })
+    return gulp.src(['./scss/common.scss', './scss/reset.scss'], { sourcemaps: true })
     .pipe(plumber(notify.onError('Error: <%= error.message %>')))
     .pipe(sass())
     .pipe(postcss([cssdeclsort({

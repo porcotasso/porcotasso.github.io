@@ -1,5 +1,4 @@
-@charset "UTF-8";
-.wapper {
+.wapper, .home {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -7,7 +6,6 @@
   padding-left: 16px; }
   .wapper__inner {
     width: 100%;
-    max-width: 1140px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 16px;
@@ -25,31 +23,6 @@
   margin-right: -16px;
   margin-left: -16px; }
 
-html {
-  /* ルートのフォントサイズを10pxに設定しておく */
-  font-size: 62.5%; }
-
-body {
-  color: #333;
-  font-family: 'Montserrat', "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
-  /* ルートのフォントサイズを1.6em（16pxと同等のサイズ）に設定 */
-  font-size: 1.6em;
-  font-weight: normal;
-  letter-spacing: 0.04rem; }
-
-h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
-  text-decoration: none; }
-
-img {
-  max-width: 100%;
-  height: auto; }
-
-p {
-  margin: 0 0 1.2rem;
-  font-size: 1.6rem;
-  letter-spacing: 0.06rem;
-  line-height: 2; }
-
 .header {
   display: flex;
   z-index: 100;
@@ -62,7 +35,7 @@ p {
   margin-right: auto;
   margin-left: auto;
   transform: translateY(0);
-  background: #fff;
+  background: #fcfcfc;
   transition: all 600ms 0s ease; }
   .header__inner {
     width: 100%;
@@ -150,17 +123,35 @@ p {
         width: 84px; } }
 
 .home__icon {
-  padding: 16px;
   text-align: center; }
   .home__icon__image {
     width: 50%;
     max-width: 160px; }
 
+.home__name {
+  margin-bottom: 16px;
+  font-size: 1.7rem;
+  text-align: center; }
+
+.home__profile {
+  margin-bottom: 16px; }
+
 .home__menu {
+  padding: 0;
   list-style: none; }
-  .home__menu li a {
-    display: block;
-    padding: 12px 16px 12px 20px;
-    color: #333;
-    font-size: 1.4rem; }
+  .home__menu__cnt {
+    width: 100%;
+    min-height: 200px;
+    margin-bottom: 16px;
+    border: 1px solid #e9ecef;
+    background: #fff; }
+    .home__menu__cnt__box {
+      display: block;
+      padding: 16px;
+      color: #333;
+      font-size: 1.4rem; }
+      .home__menu__cnt__box__ttl {
+        padding-top: 8px;
+        font-size: 1.8rem;
+        font-weight: bold; }
 /*# sourceMappingURL=maps/common.css.map */
