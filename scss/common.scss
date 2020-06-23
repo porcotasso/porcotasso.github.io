@@ -11,21 +11,21 @@
   margin-left: auto;
   padding-right: $gutter-width/2;
   padding-left: $gutter-width/2;
-  &__inner{
-    width: 100%;
+  // &__inner{
+    // width: 100%;
     // max-width: 1140px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $gutter-width/2;
-    padding-left: $gutter-width/2;
-  }
+    // margin-right: auto;
+    // margin-left: auto;
+    // padding-right: $gutter-width/2;
+    // padding-left: $gutter-width/2;
+  // }
 }
-.inner-box {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding: $gutter-width/2;
-}
+// .inner-box {
+//   width: 100%;
+//   margin-right: auto;
+//   margin-left: auto;
+//   padding: $gutter-width/2;
+// }
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -62,11 +62,12 @@
     margin-left: auto;
     transform: translateY(0px);
     transition: all 600ms 0s ease;
-    h1{
+    .web-ttl{
       text-align: center;
       font-family: 'Pacifico', cursive;
       letter-spacing: 0.14rem;
       font-size: $font-size-21;
+      margin-bottom: 4px;
     }
     .menu-trigger, .menu-trigger span {
       display: inline-block;
@@ -77,7 +78,7 @@
     .menu-trigger{
       position: relative;
       top: -6px;
-      margin: -24px 16px 0 0;
+      margin: -24px $gutter-width/2 0 0;
       width: 34px;
       height: 24px;
       span{
@@ -142,6 +143,12 @@
     }
   }
 }
+.footer{
+  bottom: 0;
+  height: 100px;
+  background: $gray-200;
+  padding: $space-unit *2 $gutter-width/2;
+}
 @media only screen and (min-width: 1050px){
   .header {
     height: 180px;
@@ -182,7 +189,10 @@
   &__name{
     text-align: center;
     font-size: $font-size-17;
-    margin-bottom: $space-unit * 2;
+    margin:0 auto $space-unit * 2;
+    border-bottom: 1px dashed $gray-300;
+    display: table;
+    padding: $space-unit $space-unit * 4;
   }
   &__profile{
     margin-bottom: $space-unit * 2;
@@ -191,27 +201,42 @@
     list-style: none;
     padding: 0;
     &__cnt{
-      border: 1px solid $gray-200;
       background: #fff;
       width: 100%;
       min-height: 200px;
       margin-bottom: 16px;
       &__box{
+        border: 1px solid $gray-200;
         display: block;
         padding: $space-unit * 2;
         font-size: $font-size-14;
         color: $font-black;
+        &:hover{
+          border-color:rgb(173, 207, 252);
+          color: $font-black;
+        }
+        
         &__ttl{
           font-size: $font-size-18;
           font-weight: bold;
           padding-top: 8px;
-
-
         }
         &__txt{
 
         }
       }
     }
+  }
+}
+
+.coding{
+  @extend .wapper;
+  h1{
+    font-size: $font-size-21;
+    padding: $space-unit*3 0;
+  }
+  h2{
+    font-size: $font-size-18;
+    padding: $space-unit*2 0;
   }
 }

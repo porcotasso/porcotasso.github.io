@@ -1,21 +1,9 @@
-.wapper, .home {
+.wapper, .home, .coding {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding-right: 5%;
   padding-left: 5%; }
-  .wapper__inner {
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 5%;
-    padding-left: 5%; }
-
-.inner-box {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 5%; }
 
 .row {
   display: flex;
@@ -49,7 +37,8 @@
     margin-left: auto;
     transform: translateY(0px);
     transition: all 600ms 0s ease; }
-    .header__inner h1 {
+    .header__inner .web-ttl {
+      margin-bottom: 4px;
       font-family: 'Pacifico', cursive;
       font-size: 2.1rem;
       letter-spacing: 0.14rem;
@@ -64,7 +53,7 @@
       top: -6px;
       width: 34px;
       height: 24px;
-      margin: -24px 16px 0 0; }
+      margin: -24px 5% 0 0; }
       .header__inner .menu-trigger span {
         position: absolute;
         left: 0;
@@ -110,6 +99,12 @@
           color: #333;
           font-size: 1.4rem; }
 
+.footer {
+  bottom: 0;
+  height: 100px;
+  padding: 16px 5%;
+  background: #e9ecef; }
+
 @media only screen and (min-width: 1050px) {
   .header {
     height: 180px; }
@@ -134,7 +129,10 @@
     max-width: 160px; }
 
 .home__name {
-  margin-bottom: 16px;
+  display: table;
+  margin: 0 auto 16px;
+  padding: 8px 32px;
+  border-bottom: 1px dashed #dee2e6;
   font-size: 1.7rem;
   text-align: center; }
 
@@ -148,15 +146,26 @@
     width: 100%;
     min-height: 200px;
     margin-bottom: 16px;
-    border: 1px solid #e9ecef;
     background: #fff; }
     .home__menu__cnt__box {
       display: block;
       padding: 16px;
+      border: 1px solid #e9ecef;
       color: #333;
       font-size: 1.4rem; }
+      .home__menu__cnt__box:hover {
+        border-color: #adcffc;
+        color: #333; }
       .home__menu__cnt__box__ttl {
         padding-top: 8px;
         font-size: 1.8rem;
         font-weight: bold; }
+
+.coding h1 {
+  padding: 24px 0;
+  font-size: 2.1rem; }
+
+.coding h2 {
+  padding: 16px 0;
+  font-size: 1.8rem; }
 /*# sourceMappingURL=maps/common.css.map */

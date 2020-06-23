@@ -21,10 +21,10 @@ const ejs = require('gulp-ejs') // ejs - compile html
 
 // compile ejs
 gulp.task('ejs', () => {
-  return gulp.src('./src/index.ejs', './src/*/*.ejs')
+  return gulp.src(['./ejs/pages/*.ejs', './ejs/pages/**/*.ejs'])
     .pipe(ejs({}))
     .pipe(rename({ extname: '.html' }))
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./pages/'))
 })
 
 const autoprefixerOption = {
@@ -59,7 +59,7 @@ gulp.task('sass', () => {
 })
 
 gulp.task('watch', () => {
-    return gulp.watch(['./scss/**/*.scss', './src/**/*.ejs'], gulp.series('sass', 'ejs'))
+    return gulp.watch(['./scss/**/*.scss', './ejs/pages/*.ejs', './ejs/pages/**/*.ejs'], gulp.series('sass', 'ejs'))
 })
 
 //create default task  -> 'npm run dev' -> run
