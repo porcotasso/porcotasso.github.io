@@ -24,7 +24,7 @@ gulp.task('ejs', () => {
   return gulp.src(['./ejs/pages/*.ejs', './ejs/pages/**/*.ejs'])
     .pipe(ejs({}))
     .pipe(rename({ extname: '.html' }))
-    .pipe(gulp.dest('./pages/'))
+    .pipe(gulp.dest('./'))
 })
 
 const autoprefixerOption = {

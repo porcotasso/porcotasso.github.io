@@ -1,13 +1,16 @@
-$(function () {
-  $('.menu-trigger').on('click', function () {
-    $(this).toggleClass('active');
-    $('.header-nav').toggleClass('active');
-    $('.menu-tel-box').removeClass('active');
-  });
+var menuTrigger = document.getElementById("menu-trigger");
+var headerNav = document.getElementById("header-nav");
 
-  $('.menu-tel').on('click', function () {
-    $('.menu-tel-box').toggleClass('active');
-    $('.header-nav').removeClass('active');
-    $('.menu-trigger').removeClass('active');
-  });
-});
+menuTrigger.onclick = function() {
+  this.classList.toggle("active");
+  headerNav.classList.toggle("active");
+};
+
+
+// jquery ver
+// $(function () {
+//   $('.menu-trigger').on('click', function () {
+//     $(this).toggleClass('active');
+//     $('.header-nav').toggleClass('active');
+//     $('.menu-tel-box').removeClass('active');
+//   });
