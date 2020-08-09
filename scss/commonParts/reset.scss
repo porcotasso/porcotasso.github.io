@@ -11,7 +11,7 @@
    line-height: 1.15;
    -webkit-text-size-adjust: 100%;
    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-     /* ルートのフォントサイズを10pxに設定しておく */
+     // ルートのフォントサイズを10pxに設定しておく
  font-size: 62.5%;
  }
 
@@ -19,49 +19,59 @@
    display: block;
  }
  
- body {
-   margin: 0;
+body {
+  margin: 0;
   //  font-family: 'Montserrat', "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
-   font-family:"游ゴシック Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,sans-serif;;
-   font-size: 1.4em;  /* ルートのフォントサイズを1.6em（16pxと同等のサイズ）に設定 */
-   font-weight: normal;
-   -webkit-font-smoothing: antialiased;
-   line-height: 1.5;
-   color: $font-black;
-   letter-spacing: 0.035rem;
-   text-align: left;
-   background-color: $bg-white;
- }
+  font-family:"游ゴシック Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,sans-serif;
+  // 基本のフォントサイズをpc16px. モバイル14pxにする。chrome対策にbodyの単位はemに設定 
+  font-size: 1.4em; 
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  color: $font-black;
+  // フォントサイズを基準にするようにemを使う。
+  letter-spacing: 0.04em;
+  text-align: left;
+  background-color: $bg-white;
+}
  
- [tabindex="-1"]:focus:not(:focus-visible) {
-   outline: 0 !important;
- }
- 
- hr {
-   box-sizing: content-box;
-   height: 0;
-   overflow: visible;
- }
- 
- h1, h2, h3, h4, h5, h6 {
-   margin-top: 0;
-   margin-bottom: 0.8rem;
-   font-size: $font-size-14;
-   font-weight: normal;
-   a{
-    &:hover{
-      text-decoration: none;
-    }
-  }
- }
- 
- p {
-   font-size: $font-size-14;
-   letter-spacing: 0.05rem;
-   line-height: 1.9;
-   margin:0 0 1.2rem;
- }
- 
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: 0 !important;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-weight: normal;
+}
+h1{
+  font-size: $font-size-18;
+  font-weight: bold;
+}
+h2{
+  font-size: $font-size-16;
+  font-weight: bold;
+}
+h3{
+  font-size: $font-size-14;
+  font-weight: bold;
+}
+p {
+  font-size: $font-size-14;
+  letter-spacing: 0.06em;
+  line-height: 1.9;
+  margin-bottom:1.8em;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
  abbr[title],
  abbr[data-original-title] {
    text-decoration: underline;
@@ -92,7 +102,11 @@
  ul ol {
    margin-bottom: 0;
  }
- 
+ ul{
+  //  フォントサイズに比例して幅を変える
+   padding-left: 2em;
+   margin-bottom:2em;
+ }
  dt {
    font-weight: 700;
  }
@@ -130,7 +144,6 @@
  sup {
    top: -.5em;
  }
- 
  a {
    color: $link-blue;
    text-decoration: none;
@@ -139,7 +152,7 @@
  
  a:hover {
    color: $hover-blue;
-  //  text-decoration: underline;
+   text-decoration: underline;
  }
  
  a:not([href]) {

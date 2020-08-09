@@ -5,22 +5,21 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="widht=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/common.css">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>Code Memoaewrrgaaaw</title>
 </head>
 <body>
-    <header class="header">  
-        <nav class="header__inner">
+    <header class="ly-header js-headerMenu">  
+        <nav class="ly-header__inner">
             <div class="web-ttl"><a href="/">porco tasso</a></div>
-            <a class="menu-trigger pc-header-none">
+            <a class="menu-trigger pc-header-none" id="menu-trigger">
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
-            <ul class="header-nav">
+            <ul class="header-nav" id="header-nav">
                 <li><a href="/coding/coding.html">htmlとcssのコーディング</a></li>
                 <li><a href="">menu1</a></li>
                 <li><a href="">menu1</a></li>
@@ -29,27 +28,96 @@
         </nav>
     </header>
 
-<main class="coding">
-    <h1>htmlとcssのコーディング</h1>
-    <p>メンテナンスと運用を考えたコードでないと、あっと言う間にカオスになってしまうことを前提に作る必要があるわけですが、それがわかった上で何が難しいかというと、サイト自体の内容や機能、大枠さえも、予想を超えてよく変更されていくものなので、未来が見える能力でもない限り「話が違う」ことが起きるのです。家で例えると、間仕切りをとったり、部屋をわけたりくらいまでは建てた後でもリフォームは簡単にできますが、柱を切ったり増築したり、建ぺい率や構造計算は大丈夫なのかとかまでなると、なかなか大変な作業になるわけです。また仕事などでは他のひとと共同作業をするわけで、初見でも理解しやすく、その時の気分や他の人で書き方が変わらないような状態が理想です。よくある問題が、そのスタイルのスコープと、実際どこに使われているかわからず、個別のスタイルを追加してどんどんカオス化していくことです。ひどい場合は、同じクラスが複数書かれていたり、とりあえず今をしのぐ作業をせざるえない状況だったことは予想できるのですが。予想外の影響の可能性は出来るだけ減らしておく考えです。限定させる。smacss htmlとscssの階層を同じにしたBEMがとてもわかりやすい。最近はアジャイル方法で徐々に質を高めていく方法があるので、美しいより変更に強いコードのほうがいいんじゃないかなと思ってます。</p>
-    <h2>cssファイルの構成</h2>
-    <p>cssの構成と優先順位は<br>
-        default ＜ reset ＜ common ＜ each page<br>
-        基本こんなイメージです。リセット(ノーマライズ、サニタイズ)CSSはいろいろあるようですが、bootstrap-reboot.cssを参考にサイト用にカスタマイズしています。<br>
-        bootstrap.cssはお世話になったときもありますが、結果使わないようになりました。</p>
+<main class="ly-baseWrap">
+    <h1>htmlとcssのコーディングルールをまとめる</h1>
+    <h2>CSSを役割ごとに明確に分類する</h2>
+    <p>CSSを役割ごとにカテゴライズする。何を目的としたクラスかわかるように</p>
+    <ul>
+        <li>ベースグループ</li>
+        <li>レイアウトグループ</li>
+        <li>ブロックモジュールグループ</li>
+        <li>エレメントモジュールグループ</li>
+        <li>エレメントモジュールモディファイヤーグループ</li>
+        <li>ヘルパーグループ</li>
+        <li>ユニークグループ</li>
+        <li>プログラムグループ</li>
+    </ul>
+    <h3>ベースグループ</h3>
+    <p>ノーマライズCSS，リセットCSS、プロジェクトの標準となるスタイリング</p>
+    <p>cssの種類ーベースグループ。normarize.scss。ブラウザ、デバイス間の不一致を修正。bootstrap-reboot.css をコピーしてカスタマイズなのでリセットではなくノーマライズcss。リセットCSSーuser agent stylesheetを無効化する</p>
 
+    <h3>レイアウトグループ</h3>
+    <p>位置調整を担当。header, footer, main, nav, aside, article, section</p>
+    <p>position, z-index, top/right/left/bottom, float, width, margin</p>
+
+    <h3>ブロックモジュールグループ</h3>
+    <p>いろんな場所で使える。子要素を持つ。bl-</p>
+
+    <h3>エレメントモジュールグループ</h3>
+    <p>最小単位のモジュール、どこにでも使える、ボタン、ラベル el-</p>
+
+    <h3>エレメントモジュールモディファイヤーグループ</h3>
+    <p>--name</p>
+    <h3>ヘルパーグループ</h3>
+    <h3>ユニークグループ</h3>
+    <h3>プログラムグループ</h3>
+
+
+    <h2>命名ルール</h2>
+    <ul>
+        <li>ローワーキャメル</li>
+        <li>ly- レイアウトグループ</li>
+        <li>bl- ブロックモジュール</li>
+        <li>el- エレメントモジュール</li>
+        <li>--　モディファイヤーの区切り</li>
+        <li>_ block element を繋ぐ</li>
+        <li>wrapーレイアウト的な入れ物</li>
+        <li>containerー意味的な入れ物</li>
+        <li>__inner ly-name の下で使う入れ物</li>
+        <li>wrapーレイアウト的な入れ物</li>
+        <li>wrapーレイアウト的な入れ物</li>
+    </ul>
+    <h2>略語</h2>
+    <ul>
+        <li>btnーbutton</li>
+        <li>txtーtext</li>
+        <li>cntーcontent</li>
+        <li>icoーicon</li>
+        <li>catーcategory</li>
+    </ul>
+
+
+    <h2>よく起きる問題</h2>
+    <p>CSSは管理が不十分だとカオスになりやすい。サイトの全体構成や運用、メンテナンスの考えが不十分だと、すぐカオスになります。それがわかった上で何が難しいかというと、サイト自体の内容や機能、大枠さえも予想を超えた変更がされていくものなので、未来が見える能力でもない限り「話が違う」ことが起こります。家で例えると、間仕切りをとったり、部屋をわけたりくらいまでは建てる前でも想像できますが、２階建を１０階建にしたり、大黒柱を切ったり、和風を洋風にしたり、建ぺい率や構造計算無視の素敵なアイデアがでてくると、なかなか大変な作業になるわけです。<br>
+    また仕事では他のひとと共同作業をするわけで、初見でも理解しやすく、その時の気分で書き方が変わらないような状態が理想です。</p>
+    <h2>スコープの限定でカオスをふせぐ</h2>
+    <p>スコープの限定ができてないと既存のスタイルが編集できなくなります。cssでグローバルスコープにするのは簡単ですが、管理ができてないとスコープが不明確で既存のスタイルを修正できず、スタイルを追加しどんどんカオス化していきます。ひどい場合は同じクラスが複数書かれていたり、とりあえずその時をしのいだ感満載のコードをみて、人生の悲哀を現実の厳しさを感じ逆にカタルシスさえ覚えそうです。なのでスコープの限定をしましょう。</p>
+    <h2></h2>
+    <p></p>
+
+
+    <h2>cssファイルの構成</h2>
+    <p>cssの構成と優先順位<br>
+        user agent stylesheet ＜ reset ＜ common ＜ each page<br>
+        基本こんなイメージです。リセット(ノーマライズ、サニタイズ)CSSはいろいろあるようですが、bootstrap-reboot.cssを参考にサイト用にカスタマイズしています。<br>
+        bootstrap.cssはお世話になったときもありますが、結果そのままは使わないようになりました。
+        最初に予想してない変更に対応できる変化に強いCSSを重要と考えているので、BEMでクラスのスコープを限定するやり方をよく使ってます。SMACCSも少しだけ</p>
 
     <h2>技法</h2>
-    <p>BEMを利用しています。aaaaaaacssの階層がとにかくながったらしくなるわけですが、基本cssを確認することはないです。</p>
-    
-    <h2>フォント</h2>
-    <p>aaaaaaa</p>
+    <p>smacss htmlとscssの階層を同じにしたBEMがとてもわかりやすい。最近はアジャイル方法で徐々に質を高めていく方法があるので、美しいより変更に強いコードのほうがいいんじゃないかなと思ってます。cssの階層がとにかくながったらしくなるわけですが、基本cssを確認することはないです。</p>
+    <h2>body</h2>
+    <p>font-feature-settings: "palt" 1;カーニング　読みやすいのかどうか判断が難しい</p>
+    <h2>フォントサイズ</h2>
+    <p>フォントサイズの単位はremを使う。htmlにfont-size:62.5% にすることで、をかけて、単位remで指定します。bodyだけはchrome対策に1.6emにします。バランスを考えたときつい小さい文字を使いがちになるのですが、可読性を重視するため、モバイルで1.4rem, PCで1.6rem以上を出来るだけ守りたいと思いつつ、よく悩んでいます。</p>
     <h2>Pタグ</h2>
-    <p>line-height letter-space</p>
+    <p>pタグは「Paragraph」の略です。文章のひとかたまりだけでなく、テキストを使う用途でいろんな使われ方をするので、スタイルの指定が難しいです。ただ、個人的には、複数行にわたる文章を基本として設定するのがいいと思うので、長文が読みやすいスタイルを指定します。具体的にはline-heightを1.8~2 letter-space0.05em など通常よりスペースを開けています。フォントサイズは大きければいいというものでないので、mobileで1.4rem、PCで1.6remあたりを基本に考えています。</p>
+
     <h2>リストタグ</h2>
-    <p>aaaaaaa</p>
+    <p>文章中のリストだけでなく、メニュー、パンくずリストなどでも使われるので、list-styleの設定をnoneにするかどうか、サイトの内容によって変えます。</p>
     <h2>モバイルの左右幅。ガターについて</h2>
+    <p>機種によってモバイルの幅が違い、狭いものと広いものの差は、かなり大きいので、端の幅はピクセル固定せずに425px 20px 320px 16pxのように比率で変えたほうが見やすいと考えています。</p>
     <h2>モバイルファーストについて</h2>
+    <p>時代のながれでそうしないといけないで、モバイルから作るという方法をしています。</p>
     <h2>ejsついて</h2>
     <h2>class名を書くかどうか</h2>
     <h2>bootstrap</h2>
@@ -57,6 +125,7 @@
     <h2>gulpfile.js package.json</h2>
     <h2>ローカルサーバnginx バーチャルホスト</h2>
     <h2>SVG</h2>
+    <h2>全部にクラスをつけるかどうか</h2>
     <h2>本</h2>
 
 

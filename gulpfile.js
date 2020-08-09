@@ -46,7 +46,7 @@ var live = (options.env === 'live') ? true : false;
 // console.log('[build env]', options.env, '[is live]', islive);
 
 gulp.task('sass', () => {
-    return gulp.src(['./scss/common.scss', './scss/reset.scss'], { sourcemaps: true })
+    return gulp.src(['./scss/common.scss', './scss/home.scss'], { sourcemaps: true })
     .pipe(plumber(notify.onError('Error: <%= error.message %>')))
     .pipe(sass())
     .pipe(postcss([cssdeclsort({
@@ -59,7 +59,7 @@ gulp.task('sass', () => {
 })
 
 gulp.task('watch', () => {
-    return gulp.watch(['./scss/**/*.scss', './ejs/pages/*.ejs', './ejs/pages/**/*.ejs'], gulp.series('sass', 'ejs'))
+    return gulp.watch(['./scss/*.scss', './scss/**/*.scss', './ejs/pages/*.ejs', './ejs/pages/**/*.ejs'], gulp.series('sass', 'ejs'))
 })
 
 //create default task  -> 'npm run dev' -> run

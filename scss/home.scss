@@ -1,0 +1,53 @@
+@import "variables";
+
+.home{
+  // @extend .wapper;
+  &__icon{
+    text-align: center;
+    &__image{
+      width: 50%;
+      max-width: 160px;
+    }
+  }
+  &__name{
+    text-align: center;
+    font-size: $font-size-17;
+    margin:0 auto $space-unit * 2;
+    border-bottom: 1px dashed $gray-300;
+    display: table;
+    padding: $space-unit $space-unit * 4;
+  }
+  &__profile{
+    margin-bottom: $space-unit * 2;
+  }
+  &__menu{
+    list-style: none;
+    padding: 0;
+    &__cnt{
+      background: #fff;
+      width: 100%;
+      min-height: 200px;
+      margin-bottom: 16px;
+      &__box{
+        border: 1px solid $gray-200;
+        display: block;
+        padding: $space-unit * 2;
+        font-size: $font-size-14;
+        color: $font-black;
+        &:hover{
+          border-color:rgb(173, 207, 252);
+          color: $font-black;
+        }
+        
+        &__ttl{
+          font-size: $font-size-18;
+          font-weight: bold;
+          padding-top: 8px;
+        }
+        &__txt{
+
+        }
+      }
+    }
+  }
+}

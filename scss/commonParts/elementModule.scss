@@ -1,0 +1,26 @@
+@import "variables";
+
+// menuなどで使うリスト
+ul.noListStyle{
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 0;
+}
+// 一行でテキスト切り捨て
+.textTruncate{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+// 複数行でテキスト切り捨て
+.threeLinesTruncate{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+}
+
+.el-btn{
+	
+	display: inline-block;
+
+}

@@ -1,0 +1,13 @@
+@import "variables";
+
+.coding{
+	@extend .wapper;
+	h1{
+	  font-size: $font-size-21;
+	  padding: $space-unit*3 0;
+	}
+	h2{
+	  font-size: $font-size-18;
+	  padding: $space-unit*2 0;
+	}
+  }
