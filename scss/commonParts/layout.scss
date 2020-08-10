@@ -27,7 +27,7 @@
 	transition: all 600ms 0s ease;
 	&.smaller {
 	  transform: translateY(-20px);
-	  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+	  box-shadow: $box-shadow;
 	//   height: 44px;
 	  .ly-header__inner{
 		transform: translateY(10px);
@@ -45,6 +45,7 @@
 		font-family: 'Pacifico', cursive;
 		letter-spacing: 0.14rem;
 		font-size: $font-size-21;
+		font-weight: normal;
 		margin-bottom: 4px;
 	  }
 	  .menu-trigger, .menu-trigger span {
@@ -56,7 +57,7 @@
 	  .menu-trigger{
 		position: relative;
 		top: -6px;
-		margin: -24px $gutter-width/2 0 0;
+		margin: -24px $gutter-width 0 0;
 		width: 34px;
 		height: 24px;
 		span{
@@ -92,7 +93,7 @@
 		  }
 		}
 	  }
-	  ul{
+	  .headerNav{
 		  display: none;
 		  position: absolute;
 		  opacity: 0;
@@ -128,7 +129,15 @@
 	padding: $space-unit *2 $gutter-width;
   }
 
-
+.ly-mainNav{
+	margin-bottom: 80px;
+	.el-mainNavTtl{
+		margin-bottom: $space-unit*2;
+	}
+}
+.ly-section{
+	margin-bottom: $space-unit*8;
+}
 
 
   

@@ -1,11 +1,10 @@
-<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/variable.php"); ?>
-<?php $title = $namingRule ?>
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
+<?php $title = $namingRule["title"] ?>
 <main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article>
         <header>
             <h1><?php echo $title ?></h1>
-            <p>クローラーや読み上げソフトが、タグから各コンテンツの役割がわかるように。</p>
+            <p>名前からクラスの目的やスコープがわかりやすいようにする。</p>
             <nav>
                 <div>目次</div>
                 <ol>
@@ -41,7 +40,7 @@
 
         <section>
             <h3>参考</h3>
-            <cite><a href="https://wunderstand.net/1417/">html5のarticle・section等、まとめる要素まとめ</a></cite>
+            <cite><a href="https://wunderstand.net/1417/" target="_blank" rel="noopener noreferrer">html5のarticle・section等、まとめる要素まとめ</a></cite>
         </section>
     </article>
 </main>

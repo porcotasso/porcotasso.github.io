@@ -1,6 +1,5 @@
-<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/variable.php"); ?>
-<?php $title = $semanticTags ?>
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
+<?php $title = $semanticTags["title"] ?>
 <main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article>
         <header>
@@ -43,7 +42,7 @@ aside要素…補足情報や余談的なブロックを表します
 
         <section>
             <h3>参考</h3>
-            <cite><a href="https://wunderstand.net/1417/">html5のarticle・section等、まとめる要素まとめ</a></cite>
+            <cite><a href="https://wunderstand.net/1417/" target="_blank" rel="noopener noreferrer">html5のarticle・section等、まとめる要素まとめ</a></cite>
         </section>
     </article>
 </main>

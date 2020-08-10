@@ -1,35 +1,19 @@
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/variable.php"); ?>
-<?php $title = $coding ?>
+<?php $title = $codingss ?>
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
 <main class="ly-baseWrap ly-UnderheaderSpace">
     <article>
         <h1><?php echo $title ?></h1>
         <nav>
             <ul class="bl-contentsList">
+                <?php for($i = 0; $i < count($coding); $i++){ ?>
                 <li class="bl-contentsList__cnt">
-                    <a href="/coding/categorized-css.html" class="bl-contentsList__link">
-                        <h2 class=""><?php echo $categorizedCSS ?></h2>
-                        <p class="">CSSを役割ごとにカテゴライズする。何を目的としたクラスかわかるように分ける。</p>
+                    <a href="<?php echo $coding[$i]["html"]; ?>" class="bl-contentsList__link">
+                        <h2 class="bl-contentsList__ttl"><?php echo $coding[$i]["title"]; ?></h2>
+                        <p class="bl-contentsList__txt"><?php echo $coding[$i]["description"]; ?></p>
                     </a>
                 </li>
-                <li class="bl-contentsList__cnt">
-                    <a href="/coding/semantic-tags.html" class="bl-contentsList__link">
-                        <h2 class=""><?php echo $semanticTags ?></h2>
-                        <p class="">クローラーや読み上げソフトが、タグから各コンテンツの役割がわかるように。</p>
-                    </a>
-                </li>
-                <li class="bl-contentsList__cnt">
-                    <a href="/coding/about-tags.html" class="bl-contentsList__link">
-                        <h2 class=""><?php echo $aboutTags ?></h2>
-                        <p class="">各タグのスタイルをどうするかは、考え方やサイトのないようによりますが、できるだけなぜそうしたかを明確にしておくことで修正がしやすくなるのでメモ。</p>
-                    </a>
-                </li>
-                <li class="bl-contentsList__cnt">
-                    <a href="/coding/naming-rule.html" class="bl-contentsList__link">
-                        <h2 class=""><?php echo $namingRule ?></h2>
-                        <p class="">クラスの名前でスコープや役割が判断できるのが理想なので、</p>
-                    </a>
-                </li>
+                <?php } ?>
             </ul>
         </nav>
     </article>

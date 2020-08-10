@@ -1,6 +1,5 @@
-<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/variable.php"); ?>
-<?php $title = $aboutTags ?>
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
+<?php $title = $aboutTags["title"] ?>
 <main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article>
         <header>

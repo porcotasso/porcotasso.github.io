@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="ja">
+<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/variable.php"); ?>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/css/common.css">
     <?php if($_SERVER['REQUEST_URI'] == "/php/pages/index.php"){ ?>
         <link rel="stylesheet" href="/css/home.css">
-    <?php } ?>
-    
+    <?php } ?>  
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title><?php echo $title ?></title>
 </head>
@@ -25,8 +25,20 @@
                 <span></span>
                 <span></span>
             </a>
-            <ul class="header-nav" id="header-nav">
+            
+            <ul class="headerNav" id="header-nav">
                 <li><a href="/coding/coding.html">htmlとcssのコーディング</a></li>
+                <li>
+                <ul class="bl-contentsList">
+                    <?php for($i = 0; $i < count($coding); $i++){ ?>
+                    <li class="">
+                        <a href="<?php echo $coding[$i]["html"]; ?>" class="">
+                            <div class=""><?php echo $coding[$i]["title"]; ?></div>
+                        </a>
+                    </li>
+                    <?php } ?>
+                </ul>
+                </li>
                 <li><a href="">menu1</a></li>
                 <li><a href="">menu1</a></li>
                 <li><a href="">menu1</a></li>

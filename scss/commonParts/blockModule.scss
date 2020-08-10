@@ -11,19 +11,19 @@
     &__link{
       border: 1px solid $gray-200;
       display: block;
-      padding: $space-unit * 2;
+      padding: $space-unit * 3 $space-unit * 2;
       color: $font-black;
       &:hover{
-        border-color:#adcffc;
-        color: $font-black;
+        border-color:$gray-100;
+        color: $font-gray;
       }
     }
     &__ttl{
-      font-size: $font-size-18;
+      font-size: $font-size-17;
       font-weight: bold;
-      padding-top: 8px;
     }
     &__txt{
 		font-size: $font-size-15;
+		margin-bottom: 0;
     }
-  }
+}

@@ -13,13 +13,13 @@
                 <li class="bl-contentsList__cnt">
                     <a href="/coding/coding.html" class="bl-contentsList__link">
                         <h2 class="bl-contentsList__ttl">htmlとcssなどコーディング</h2>
-                        <p class="bl-contentsList__txt">W3Cの意図を理解しつつ、サイトの内容にあったコーディングが必要になってきます。コーディングのルールを論理的にも納得しながら、自分以外のひとも同じように運営できること。感覚的にも編集していて居心地がいいコーディングをめざしたいと思い、最低限、理解しておけばいいかをまとめるのが目的にまとめ</p>
+                        <p class="bl-contentsList__txt">htmlとcssは書き方のルールがありますが、なかなか絶対的に正しい完璧なルールというものはなさそうで、たとえばCSSの記法もいろんな種類があったり、どの書き方が正しいか判断するよりもなぜそう書いたかを明確に客観的に論理立てて把握できておくことが大事だと思います。<br>また実際には既にコードがカオス化しているサイトを編集する必要がある場合も多く、一旦理想を置いておいて状況に即した現実的な判断も求められます。書き方はW3Cの意図を理解しつつサイトの内容にあったコーディングが必要になってきます。コーディングのルールを論理的にも納得しながら、自分以外のひとも同じように運営できること。感覚的にも編集していて居心地がいいコーディングをめざして、ここに自分なりの基準をまとめておき、今後の参考として役立てるのが目的です。</p>
                     </a>
                 </li>
                 <li class="bl-contentsList__cnt">
                     <a href="/coding/coding.html" class="bl-contentsList__link">
                         <h2 class="bl-contentsList__ttl">作業効率を高める環境設定</h2>
-                        <p class="bl-contentsList__txt">gulpfile.js package.json、ローカルサーバnginx バーチャルホスト</p>
+                        <p class="bl-contentsList__txt">gulpfile.js package.json、ローカルサーバnginx バーチャルホスト,scss</p>
                     </a>
                 </li>
         
