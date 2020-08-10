@@ -1,32 +1,6 @@
-<!doctype html>
-<html lang="ja">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="/css/common.css">
-            <link rel="stylesheet" href="/css/home.css">
-        
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <title>Porco Tassoのフロントエンドエンジニアまとめ</title>
-</head>
-<body>
-    <header class="ly-header js-headerMenu">  
-        <nav class="ly-header__inner">
-                            <h1 class="web-ttl"><a href="/">porco tasso</a></h1>
-            
-            <a class="menu-trigger pc-header-none" id="menu-trigger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
-            <ul class="header-nav" id="header-nav">
-                <li><a href="/coding/coding.html">htmlとcssのコーディング</a></li>
-                <li><a href="">menu1</a></li>
-                <li><a href="">menu1</a></li>
-                <li><a href="">menu1</a></li>
-            </ul>
-        </nav>
-    </header><main class="ly-baseWrap">
+<?php $title = "Porco Tassoのフロントエンドエンジニアまとめ"?>
+<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
+<main class="ly-baseWrap">
     <article>
         <div class="home__icon">
             <img class="home__icon__image" src="/images/common/icon.jpg" alt="porco tasso">
@@ -77,18 +51,4 @@
         </nav>
     </article>
 </main>
-    <footer class="footer">
-        porco tasso footer
-    </footer>
-        
-        <script src="/js/jquery.slim.min.js"></script>
-        <!-- <script src="/js/bootstrap.bundle.min.js"></script> -->
-        <!-- <script src="js/src/util.js"></script>
-        <script src="js/src/index.js"></script>
-        <script src="js/src/tooltip.js"></script>
-        <script src="js/src/modal.js"></script> -->
-        <script src="/js/smaller.js"></script>
-        <script src="/js/trigger.js"></script>
-    </body>
-
-</html>
+<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-foot.php"); ?>

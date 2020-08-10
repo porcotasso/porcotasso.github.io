@@ -1,56 +1,32 @@
-<!doctype html>
-<html lang="ja">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="/css/common.css">
-        
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <title>htmlとcssなどコーディング</title>
-</head>
-<body>
-    <header class="ly-header js-headerMenu">  
-        <nav class="ly-header__inner">
-                            <div class="web-ttl"><a href="/">porco tasso</a></div>
-            
-            <a class="menu-trigger pc-header-none" id="menu-trigger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
-            <ul class="header-nav" id="header-nav">
-                <li><a href="/coding/coding.html">htmlとcssのコーディング</a></li>
-                <li><a href="">menu1</a></li>
-                <li><a href="">menu1</a></li>
-                <li><a href="">menu1</a></li>
-            </ul>
-        </nav>
-    </header><main class="ly-baseWrap ly-UnderheaderSpace">
+<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/variable.php"); ?>
+<?php $title = $coding ?>
+<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
+<main class="ly-baseWrap ly-UnderheaderSpace">
     <article>
-        <h1>htmlとcssなどコーディング</h1>
+        <h1><?php echo $title ?></h1>
         <nav>
             <ul class="bl-contentsList">
                 <li class="bl-contentsList__cnt">
                     <a href="/coding/categorized-css.html" class="bl-contentsList__link">
-                        <h2 class="">CSSを役割ごとにカテゴライズする</h2>
+                        <h2 class=""><?php echo $categorizedCSS ?></h2>
                         <p class="">CSSを役割ごとにカテゴライズする。何を目的としたクラスかわかるように分ける。</p>
                     </a>
                 </li>
                 <li class="bl-contentsList__cnt">
                     <a href="/coding/semantic-tags.html" class="bl-contentsList__link">
-                        <h2 class="">セマンティックなタグの各意味まとめ</h2>
+                        <h2 class=""><?php echo $semanticTags ?></h2>
                         <p class="">クローラーや読み上げソフトが、タグから各コンテンツの役割がわかるように。</p>
                     </a>
                 </li>
                 <li class="bl-contentsList__cnt">
                     <a href="/coding/about-tags.html" class="bl-contentsList__link">
-                        <h2 class="">各タグ要素について</h2>
+                        <h2 class=""><?php echo $aboutTags ?></h2>
                         <p class="">各タグのスタイルをどうするかは、考え方やサイトのないようによりますが、できるだけなぜそうしたかを明確にしておくことで修正がしやすくなるのでメモ。</p>
                     </a>
                 </li>
                 <li class="bl-contentsList__cnt">
                     <a href="/coding/naming-rule.html" class="bl-contentsList__link">
-                        <h2 class="">命名ルール</h2>
+                        <h2 class=""><?php echo $namingRule ?></h2>
                         <p class="">クラスの名前でスコープや役割が判断できるのが理想なので、</p>
                     </a>
                 </li>
@@ -97,18 +73,4 @@
     <h2>SVG</h2>
 
 </main>
-    <footer class="footer">
-        porco tasso footer
-    </footer>
-        
-        <script src="/js/jquery.slim.min.js"></script>
-        <!-- <script src="/js/bootstrap.bundle.min.js"></script> -->
-        <!-- <script src="js/src/util.js"></script>
-        <script src="js/src/index.js"></script>
-        <script src="js/src/tooltip.js"></script>
-        <script src="js/src/modal.js"></script> -->
-        <script src="/js/smaller.js"></script>
-        <script src="/js/trigger.js"></script>
-    </body>
-
-</html>
+<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-foot.php"); ?>

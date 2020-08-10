@@ -17,12 +17,21 @@ const cleanCSS = require("gulp-clean-css") //minify
 // const cssWring = require('csswring') //minify
 // const uglify = require('gulp-uglify')　// minify JavaScript
 const rename = require('gulp-rename') //rename
-const ejs = require('gulp-ejs') // ejs - compile html
-
+// const ejs = require('gulp-ejs') // ejs - compile html
+const php2html = require('gulp-php2html');
+ 
 // compile ejs
-gulp.task('ejs', () => {
-  return gulp.src(['./ejs/pages/*.ejs', './ejs/pages/**/*.ejs'])
-    .pipe(ejs({}))
+// gulp.task('ejs', () => {
+//   return gulp.src(['./ejs/pages/*.ejs', './ejs/pages/**/*.ejs'])
+//     .pipe(ejs({}))
+//     .pipe(rename({ extname: '.html' }))
+//     .pipe(gulp.dest('./'))
+// })
+
+// compile php
+gulp.task('php', () => {
+  return gulp.src(['./php/pages/*.php', './php/pages/**/*.php'])
+    .pipe(php2html({}))
     .pipe(rename({ extname: '.html' }))
     .pipe(gulp.dest('./'))
 })
@@ -59,7 +68,7 @@ gulp.task('sass', () => {
 })
 
 gulp.task('watch', () => {
-    return gulp.watch(['./scss/*.scss', './scss/**/*.scss', './ejs/pages/*.ejs', './ejs/pages/**/*.ejs'], gulp.series('sass', 'ejs'))
+    return gulp.watch(['./scss/*.scss', './scss/**/*.scss', './php/pages/*.php', './php/pages/**/*.php'], gulp.series('sass', 'php'))
 })
 
 //create default task  -> 'npm run dev' -> run

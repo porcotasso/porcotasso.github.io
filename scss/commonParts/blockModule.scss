@@ -1,2 +1,29 @@
 @import "variables";
 
+.bl-contentsList{
+    list-style: none;
+    padding: 0;
+    &__cnt{
+      background: #fff;
+      width: 100%;
+      margin-bottom: 16px;
+    }
+    &__link{
+      border: 1px solid $gray-200;
+      display: block;
+      padding: $space-unit * 2;
+      color: $font-black;
+      &:hover{
+        border-color:#adcffc;
+        color: $font-black;
+      }
+    }
+    &__ttl{
+      font-size: $font-size-18;
+      font-weight: bold;
+      padding-top: 8px;
+    }
+    &__txt{
+		font-size: $font-size-15;
+    }
+  }
