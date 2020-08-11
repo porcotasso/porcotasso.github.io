@@ -23,7 +23,6 @@
             <h2>モバイルの左右幅。ガターについて</h2>
             <p>機種によってモバイルの幅が違い、狭いものと広いものの差は、かなり大きいので、端の幅はピクセル固定せずに425px 20px 320px 16pxのように比率で変えたほうが見やすいと考えています。</p>
         </section>
-
         <section>
             <h3>参考</h3>
             <cite><a href="https://wunderstand.net/1417/">html5のarticle・section等、まとめる要素まとめ</a></cite>

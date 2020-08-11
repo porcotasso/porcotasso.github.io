@@ -29,7 +29,7 @@
             <ul class="headerNav" id="header-nav">
                 <li><a href="/coding/coding.html">htmlとcssのコーディング</a></li>
                 <li>
-                <ul class="bl-contentsList">
+                <ul class="">
                     <?php for($i = 0; $i < count($coding); $i++){ ?>
                     <li class="">
                         <a href="<?php echo $coding[$i]["html"]; ?>" class="">

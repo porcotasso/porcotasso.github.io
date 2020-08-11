@@ -2,18 +2,16 @@
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
 <main class="ly-baseWrap">
     <article>
-        <div class="home__icon">
-            <img class="home__icon__image" src="/images/common/icon.jpg" alt="porco tasso">
+        <div class="ly-homeIco">
+            <img class="ly-homeIco_image" src="/images/common/icon.jpg" alt="porco tasso">
         </div>
-        <div class="home__name">Porco Tasso</div>
-        <p class="home__profile">ウェブサイトのフロントエンドエンジニアです。html, ejs, css, sass, php, javascript,gulp、adobe XD, Illustrator, phptoshopなどを使います。作ること全般が好きで、イラストやレタッチ、動画、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。<b>そしてこのサイトはまだ制作中です。</b>だれもみてないと思ってたったら毎日ちょこちょこ組み立てて遊んでます。
-        </p>
+        <p class="ly-homeProfile">ウェブのフロントエンドエンジニアです。html, css, php, javascript,gulp、adobe XD, Illustrator, phptoshopなどを使います。作ること全般が好きで、イラストやレタッチ、動画、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。<b>このサイトはまだ制作中です。</b></p>
         <nav>  
             <ul class="bl-contentsList">
                 <li class="bl-contentsList__cnt">
                     <a href="/coding/coding.html" class="bl-contentsList__link">
                         <h2 class="bl-contentsList__ttl">htmlとcssなどコーディング</h2>
-                        <p class="bl-contentsList__txt">htmlとcssは書き方のルールがありますが、なかなか絶対的に正しい完璧なルールというものはなさそうで、たとえばCSSの記法もいろんな種類があったり、どの書き方が正しいか判断するよりもなぜそう書いたかを明確に客観的に論理立てて把握できておくことが大事だと思います。<br>また実際には既にコードがカオス化しているサイトを編集する必要がある場合も多く、一旦理想を置いておいて状況に即した現実的な判断も求められます。書き方はW3Cの意図を理解しつつサイトの内容にあったコーディングが必要になってきます。コーディングのルールを論理的にも納得しながら、自分以外のひとも同じように運営できること。感覚的にも編集していて居心地がいいコーディングをめざして、ここに自分なりの基準をまとめておき、今後の参考として役立てるのが目的です。</p>
+                        <p class="bl-contentsList__txt">論理立ててhtmlとcssを理解して使えるようになるように、情報や基準をまとめて今後の参考にするのが目的。</p>
                     </a>
                 </li>
                 <li class="bl-contentsList__cnt">
@@ -22,7 +20,6 @@
                         <p class="bl-contentsList__txt">gulpfile.js package.json、ローカルサーバnginx バーチャルホスト,scss</p>
                     </a>
                 </li>
-        
                 <!-- <li class="home__menu__cnt">
                     <a href="" class="home__menu__cnt__box">
                         <h2 class="home__menu__cnt__box__ttl">イラストとか4コマ漫画とか</h2>
@@ -49,6 +46,11 @@
                 </li> -->
             </ul>
         </nav>
+        <section>
+            <h3>参考</h3>
+            <cite><a href="https://murashun.jp" target="_blank" rel="noopener noreferrer">murashun.jp</a></cite>
+            <cite><a href="https://www.ameamelog.com/category/web-design/css/" target="_blank" rel="noopener noreferrer">ameamelogコーディング</a></cite>
+        </section>
     </article>
 </main>
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-foot.php"); ?>

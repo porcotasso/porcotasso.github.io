@@ -25,6 +25,11 @@ $elementEmStrongMarkB = array(
 	"description" => "em・strong・mark・b要素の違いと使い方のメモ",
 	"html" => "/coding/element-em-strong-mark-b-difference.html"
 );
+$button = array(
+	"title" => "ボタンは&lt;a&gt;か&lt;button&gt;か&lt;input&gt;か",
+	"description" => "タグの使い分けを明確にボタンを作成する。",
+	"html" => "/coding/button.html"
+);
 
-$coding = array($categorizedCSS, $semanticTags, $aboutTags, $namingRule, $elementEmStrongMarkB);
+$coding = array($categorizedCSS, $semanticTags, $aboutTags, $namingRule, $elementEmStrongMarkB, $button);
 ?>

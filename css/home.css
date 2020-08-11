@@ -1,2 +1,9 @@
-.home__icon{text-align:center}.home__icon__image{width:50%;max-width:160px}.home__name{display:table;margin:0 auto 16px;padding:8px 32px;border-bottom:1px dashed #dee2e6;font-size:1.7rem;text-align:center}.home__profile{margin-bottom:16px}
+.ly-homeIco {
+  text-align: center; }
+  .ly-homeIco_image {
+    width: 50%;
+    max-width: 160px; }
+
+.ly-homeProfile {
+  margin-bottom: 16px; }
 /*# sourceMappingURL=maps/home.css.map */
