@@ -32,36 +32,42 @@ ul.noListStyle{
 	color: $font-black;
 	margin-bottom: $space-unit*2;
 	border: 1px solid currentColor;
-	position: relative;
+	
 	transition: .25s;
-	&:after{
-		right: 20px;
-		width: 8px;
-		height: 8px;
-		border-style: solid;
-		border-width: 1px 1px 0 0;
-		border-color: $font-black;
-		transform: translate(0, -50%) rotate(45deg);
-		content: "";
-		display: block;
-		position: absolute;
-		top:50%;
-		transition: border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s, -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
-		transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s, border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
-		transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s, border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s, -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
-		content: "";
-	}
+	
 	&:hover, &:focus{
 		background: $font-black;
 		color: #fff;
-		&::after{
-			transform: translate(3px, -50%) rotate(45deg);
-			border-color: #fff;
-		}
 	}
 	&--center{
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
+	}
+	&--angle{
+		position: relative;
+		&:after{
+			right: 20px;
+			width: 8px;
+			height: 8px;
+			border-style: solid;
+			border-width: 1px 1px 0 0;
+			border-color: $font-black;
+			transform: translate(0, -50%) rotate(45deg);
+			content: "";
+			display: block;
+			position: absolute;
+			top:50%;
+			transition: border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s, -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+			transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s, border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+			transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s, border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s, -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
+			content: "";
+		}
+		&:hover, &:focus{
+			&::after{
+				transform: translate(3px, -50%) rotate(45deg);
+				border-color: #fff;
+			}
+		}
 	}
 }

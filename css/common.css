@@ -445,7 +445,6 @@ ul.noListStyle {
 
 .el-btn {
   display: inline-block;
-  position: relative;
   width: 300px;
   max-width: 100%;
   margin-bottom: 16px;
@@ -454,28 +453,30 @@ ul.noListStyle {
   color: #222;
   text-align: center;
   transition: .25s; }
-  .el-btn:after {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    width: 8px;
-    height: 8px;
-    transform: translate(0, -50%) rotate(45deg);
-    border-width: 1px 1px 0 0;
-    border-style: solid;
-    border-color: #222;
-    content: "";
-    content: "";
-    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s, border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s; }
   .el-btn:hover, .el-btn:focus {
     background: #222;
     color: #fff; }
-    .el-btn:hover::after, .el-btn:focus::after {
-      transform: translate(3px, -50%) rotate(45deg);
-      border-color: #fff; }
   .el-btn--center {
     display: block;
     margin-right: auto;
     margin-left: auto; }
+  .el-btn--angle {
+    position: relative; }
+    .el-btn--angle:after {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      width: 8px;
+      height: 8px;
+      transform: translate(0, -50%) rotate(45deg);
+      border-width: 1px 1px 0 0;
+      border-style: solid;
+      border-color: #222;
+      content: "";
+      content: "";
+      transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s, border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s; }
+    .el-btn--angle:hover::after, .el-btn--angle:focus::after {
+      transform: translate(3px, -50%) rotate(45deg);
+      border-color: #fff; }
 /*# sourceMappingURL=maps/common.css.map */

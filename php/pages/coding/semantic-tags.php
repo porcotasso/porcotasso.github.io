@@ -42,6 +42,7 @@ aside要素…補足情報や余談的なブロックを表します
 
         <section>
             <h3>参考</h3>
+            <cite><a href="http://www.tohoho-web.com/html/memo/html5.htm#flow" target="_blank" rel="noopener noreferrer">とほほのWWW入門</a></cite>
             <cite><a href="https://wunderstand.net/1417/" target="_blank" rel="noopener noreferrer">html5のarticle・section等、まとめる要素まとめ</a></cite>
         </section>
     </article>
