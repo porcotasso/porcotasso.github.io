@@ -1,25 +1,7 @@
-<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/variable.php"); ?>
-<?php $title = $codingss ?>
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
+<?php $page = $codeHtml ?>
 <main class="ly-baseWrap ly-UnderheaderSpace">
-    <article>
-        <h1><?php echo $title ?></h1>
-        <p>htmlとcssは書き方のルールがありますが、絶対的に正しい完璧なルールはなく、例えばCSSの記法もいろんな種類があるので、どの書き方が正しいか決めるよりも、なぜそう書いたかを明確に論理立てて把握することが大事です。<br>また実際の仕事ではカオス化したコードの編集を求められることもしばしばあり、一旦理想を置いておいて状況に即した現実的なコーディングも求められます。書き方はW3Cの意図を理解しつつサイトの内容にあったコーディングの検討が必要です。論理的なルールを構築して自分以外のひとも同じように運営できること、また感覚的にも編集していて違和感なくコーディングできるのをめざして、自分なりの基準をまとめて、今後の参考にするのが目的です。</p>
-        <nav>
-            <ul class="bl-contentsList">
-                <?php for($i = 0; $i < count($coding); $i++){ ?>
-                <li class="bl-contentsList__cnt">
-                    <a href="<?php echo $coding[$i]["html"]; ?>" class="bl-contentsList__link">
-                        <h2 class="bl-contentsList__ttl"><?php echo $coding[$i]["title"]; ?></h2>
-                        <p class="bl-contentsList__txt"><?php echo $coding[$i]["description"]; ?></p>
-                    </a>
-                </li>
-                <?php } ?>
-            </ul>
-        </nav>
-    </article>
-
-
+    <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/pages/_partial/link-lists.php"); ?>
 
 
     <h2>よく起きる問題</h2>

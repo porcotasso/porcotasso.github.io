@@ -22,24 +22,22 @@
             <li>el- エレメントモジュール</li>
             <li>--　モディファイヤーの区切り</li>
             <li>_ block element を繋ぐ</li>
-            <li>wrapーレイアウト的な入れ物</li>
-            <li>containerー意味的な入れ物</li>
-            <li>__inner ly-name の下で使う入れ物</li>
-            <li>wrapーレイアウト的な入れ物</li>
-            <li>wrapーレイアウト的な入れ物</li>
         </ul>
-        <h2>略語</h2>
+        <h2></h2>
         <ul>
-            <li>btnーbutton</li>
-            <li>txtーtext</li>
-            <li>cntーcontent</li>
-            <li>icoーicon</li>
-            <li>catーcategory</li>
+            <li>container　単体のブロックを囲う時に使う　主にレイアウト的な入れ物　レイアウトに関するスタイルをつける </li>
+            <li>wrapper　単体のブロックを囲う時に使う　意味的な入れ物　レイアウト以外に関するスタイルをつける</li>
+            <li>_inner 複数のブロックを囲う時に使う　の下で使う入れ物　</li>
+            <li>btn ーbutton</li>
+            <li>txt ーtext</li>
+            <li>cnt ーcontent</li>
+            <li>ico ーicon</li>
+            <li>cat ーcategory</li>
         </ul>
         </section>
 
         <section>
-            <h3>参考</h3>
+            <h3>参考</h3>https://qiita.com/manabuyasuda/items/dbb76ed36970bec95470
             <cite><a href="https://wunderstand.net/1417/" target="_blank" rel="noopener noreferrer">html5のarticle・section等、まとめる要素まとめ</a></cite>
         </section>
     </article>
