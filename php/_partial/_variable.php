@@ -6,13 +6,8 @@
 // /code-html
 $contentsModel = array(
 	"title" => "コンテンツ・モデルからタグを分類",
-	"description" => "「要素内にどんな要素を置くか」",
+	"description" => "要素内にどんな要素を置くか",
 	"html" => "/code-html/contents-model.html"
-);
-$tagRole = array(
-	"title" => "役割からタグを分類",
-	"description" => "役割からタグを分類",
-	"html" => "/code-html/tag-role.html"
 );
 $semanticTags = array(
 	"title" => "セマンティックなタグの各意味まとめ",
@@ -28,7 +23,7 @@ $codeHtml = array(
 	"title" => "htmlコーディング",
 	"description" => "HTML5では「要素内にどんな要素を置くか」が決められています。このルールをコンテンツ・モデル（Content models）といいます。「コンテンツ（Content）」はここでは「要素の中身」、「モデル（models）」は「型式」といった意味です。コンテンツ・モデルはすべての要素に定義されていて、そのとおりに使わないとNG。コンテンツ・モデルには、前回の7つのカテゴリーが使われることが多いですが、カテゴリーに関係ない定義もあります。",
 	"html" => "/code-html/index.html",
-	"pages" => array($contentsModel, $tagRole, $semanticTags, $aboutTags)
+	"pages" => array($contentsModel, $semanticTags, $aboutTags)
 );
 
 // /code-css
@@ -45,7 +40,7 @@ $namingRule = array(
 $codeCss = array(
 	"title" => "cssコーディング",
 	"description" => "cssについての説明",
-	"html" => "/code-html/index.html",
+	"html" => "/code-css/index.html",
 	"pages" => array($categorizedCSS, $namingRule)
 );
 
@@ -64,9 +59,11 @@ $elementEmStrongMarkB = array(
 $codeParts = array(
 	"title" => "html,cssなどの部分について",
 	"description" => "パーツについてのせつめい",
-	"html" => "/code-html/index.html",
+	"html" => "/code-parts/index.html",
 	"pages" => array($elementEmStrongMarkB, $button)
 );
 
 $pageLists = array($codeHtml, $codeCss, $codeParts);
+
+$targetBlank = 'target="_blank" rel="noopener noreferrer"';
 ?>

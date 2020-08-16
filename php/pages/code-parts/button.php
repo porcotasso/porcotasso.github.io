@@ -41,7 +41,7 @@
 
         <section>
             <h3>参考</h3>
-            <cite><a href="https://www.ameamelog.com/html-a-button/">ameamelog.com</a></cite>
+            <cite><a href="https://www.ameamelog.com/html-a-button/" <?php echo $targetBlank ?>>ameamelog.com</a></cite>
         </section>
     </article>
 </main>

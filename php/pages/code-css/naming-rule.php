@@ -38,7 +38,7 @@
 
         <section>
             <h3>参考</h3>https://qiita.com/manabuyasuda/items/dbb76ed36970bec95470
-            <cite><a href="https://wunderstand.net/1417/" target="_blank" rel="noopener noreferrer">html5のarticle・section等、まとめる要素まとめ</a></cite>
+            <cite><a href="https://wunderstand.net/1417/" <?php echo $targetBlank ?>>html5のarticle・section等、まとめる要素まとめ</a></cite>
         </section>
     </article>
 </main>

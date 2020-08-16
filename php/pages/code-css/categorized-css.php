@@ -46,8 +46,8 @@
         <section><h2>プログラムグループ</h2></section>
         <section>
             <h3>参考</h3>
-            <cite><a href="https://qiita.com/pugiemonn/items/964203782e1fcb3d02c3">こんなHTMLとCSSのコーディング規約で書きたい</a></cite>
-            <cite><a href="https://www.amazon.co.jp/CSS設計完全ガイド-詳細解説-実践的モジュール集-半田-惇志/dp/429711173X">CSS設計完全ガイド</a></cite>
+            <cite><a href="https://qiita.com/pugiemonn/items/964203782e1fcb3d02c3" <?php echo $targetBlank ?>>こんなHTMLとCSSのコーディング規約で書きたい</a></cite>
+            <cite><a href="https://www.amazon.co.jp/CSS設計完全ガイド-詳細解説-実践的モジュール集-半田-惇志/dp/429711173X" <?php echo $targetBlank ?>>CSS設計完全ガイド</a></cite>
         </section>
     </article>
 </main>

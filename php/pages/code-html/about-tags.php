@@ -25,7 +25,7 @@
         </section>
         <section>
             <h3>参考</h3>
-            <cite><a href="https://wunderstand.net/1417/">html5のarticle・section等、まとめる要素まとめ</a></cite>
+            <cite><a href="https://wunderstand.net/1417/" <?php echo $targetBlank ?>>html5のarticle・section等、まとめる要素まとめ</a></cite>
         </section>
     </article>
 </main>
