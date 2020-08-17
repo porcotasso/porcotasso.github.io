@@ -14,8 +14,19 @@
             </nav>
         </header>
         <section>
-        <h2>Pタグ</h2>
+            <h2>Pタグ</h2>
             <p>pタグは「Paragraph」の略です。文章のひとかたまりだけでなく、テキストを使う用途でいろんな使われ方をするので、スタイルの指定が難しいです。ただ、個人的には、複数行にわたる文章を基本として設定するのがいいと思うので、長文が読みやすいスタイルを指定します。具体的にはline-heightを1.8~2 letter-space0.05em など通常よりスペースを開けています。フォントサイズは大きければいいというものでないので、mobileで1.4rem、PCで1.6remあたりを基本に考えています。</p>
+        </section>
+        <section>
+            <h2>aタグ</h2>
+<pre>
+    a{
+        outline: 0;
+        cursor: pointer;
+        text-decoration:none;
+        color: #222;
+    }
+</pre>
         </section>
         <section>
             <h2>リストタグ</h2>

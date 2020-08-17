@@ -120,34 +120,41 @@
             </div>
             <!-- <img class="ly-homeIco_image" src="/images/common/icon.jpg" alt="porco tasso"> -->
         </div>
-        <p class="ly-homeProfile">ウェブのフロントエンドエンジニアです。html, css, php, javascript,gulp、adobe XD, Illustrator, phptoshopなどを使います。作ること全般が好きで、イラストやレタッチ、動画、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。<b>このサイトはまだ制作中です。</b></p>
+        <p class="ly-homeProfile"><b>このサイトはまだ制作中です。</b></p>
+        <nav>
+            <ul class="bl-contentsList">
+                <?php foreach($pageLists as $list){ ?>
+                <li class="bl-contentsList_cnt js-accordionTrigger">
+                    <div class="bl-contentsList_index">
+                       <h2 class="bl-contentsList_ttl"><?php echo $list["title"]; ?></h2>
+                       <p class="bl-contentsList_txt"><?php echo $list["short-description"]; ?></p>
+                    </div>
+                </li>
+                <li class="bl-contentsList_menu">
+                    <ul>
+                        <?php foreach($list["pages"] as $value){ ?>
+                        <li>
+                            <a href="<?php echo $value["html"]; ?>" class="">
+                                <div class=""><?php echo $value["title"]; ?></div>
+                            </a>
+                        </li>
+                        <?php } ?>
+                    </ul>
+                </li>
+                <?php } ?>
+            </ul>
         <nav>  
             <ul class="bl-contentsList">
-                <li class="bl-contentsList__cnt">
+                <!-- 
+                    
+                    <li class="bl-contentsList__cnt">
                     <a href="/code-html/index.html" class="bl-contentsList__link">
-                        <h2 class="bl-contentsList__ttl">htmlの理解</h2>
-                        <p class="bl-contentsList__txt">コンテンツ・モデルから分類するカテゴリー分けやセマンティックなhtmlで書くなどの基本的ルールの理解。実際にタグの設定したほうがいいと思うものまとめ。</p>
+                        <h2 class="bl-contentsList__ttl">htmlの基本概要</h2>
+                        <p class="bl-contentsList__txt">コンテンツ・モデルを把握。セマンティックなコーディング。</p>
                     </a>
                 </li>
-                <li class="bl-contentsList__cnt">
-                    <a href="/code-css/index.html" class="bl-contentsList__link">
-                        <h2 class="bl-contentsList__ttl">cssの理解</h2>
-                        <p class="bl-contentsList__txt">論理立ててcssを理解して使えるようになるように、情報や基準をまとめて今後の参考にするのが目的。</p>
-                    </a>
-                </li>
-                <li class="bl-contentsList__cnt">
-                    <a href="/code-parts/index.html" class="bl-contentsList__link">
-                        <h2 class="bl-contentsList__ttl">パーツの概念</h2>
-                        <p class="bl-contentsList__txt">明確なルールがないが実際にやってみると定義が必要になってくるもののメモ</p>
-                    </a>
-                </li>
-                <li class="bl-contentsList__cnt">
-                    <a href="/system/index.html" class="bl-contentsList__link">
-                        <h2 class="bl-contentsList__ttl">作業効率を高める環境設定</h2>
-                        <p class="bl-contentsList__txt">gulpfile.js package.json、ローカルサーバnginx バーチャルホスト,scss</p>
-                    </a>
-                </li>
-                <!-- <li class="home__menu__cnt">
+                    
+                    <li class="home__menu__cnt">
                     <a href="" class="home__menu__cnt__box">
                         <h2 class="home__menu__cnt__box__ttl">イラストとか4コマ漫画とか</h2>
                         <p class="home__menu__cnt__box__txt">個人の自由は権利で保障されていますが、社会や人間関係のルールの中でいつの間にやら窮屈に生きてしまうのがこの世界。絵を描くことは描きたいものも色も自由に選べれるし、この「自分で決める」という行為は当たり前のようで大事なことなんだと思う私。なにかしら人にコントロールされて疲れがちなひとは芸術活動とかどうでしょう。</p>
@@ -173,6 +180,7 @@
                 </li> -->
             </ul>
         </nav>
+        <p class="ly-homeProfile">ウェブのフロントエンドエンジニアです。html, css, php, javascript,gulp、adobe XD, Illustrator, phptoshopなどを使います。作ること全般が好きで、イラストやレタッチ、動画、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。<b>このサイトはまだ制作中です。</b></p>
         <section>
             <h3>参考</h3>
             <cite><a href="https://murashun.jp" <?php echo $targetBlank ?>>murashun.jp</a></cite>

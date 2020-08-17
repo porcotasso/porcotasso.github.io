@@ -10,8 +10,8 @@ $contentsModel = array(
 	"html" => "/code-html/contents-model.html"
 );
 $semanticTags = array(
-	"title" => "セマンティックなタグの各意味まとめ",
-	"description" => "セマンティックなタグの各意味まとめ。クローラーや読み上げソフトが、タグから各コンテンツの役割がわかるように。",
+	"title" => "セマンティックhtml",
+	"description" => "セマンティックhtmlまとめ。クローラーや読み上げソフトが、タグから各コンテンツの役割がわかるように。",
 	"html" => "/code-html/semantic-tags.html"
 );
 $aboutTags = array(
@@ -20,7 +20,8 @@ $aboutTags = array(
 	"html" => "/code-html/about-tags.html"
 );
 $codeHtml = array(
-	"title" => "htmlコーディング",
+	"title" => "htmlの把握しておいたほうがいい基本概要",
+	"short-description" => "コンテンツ・モデル。セマンティックなコーディング。",
 	"description" => "HTML5では「要素内にどんな要素を置くか」が決められています。このルールをコンテンツ・モデル（Content models）といいます。「コンテンツ（Content）」はここでは「要素の中身」、「モデル（models）」は「型式」といった意味です。コンテンツ・モデルはすべての要素に定義されていて、そのとおりに使わないとNG。コンテンツ・モデルには、前回の7つのカテゴリーが使われることが多いですが、カテゴリーに関係ない定義もあります。",
 	"html" => "/code-html/index.html",
 	"pages" => array($contentsModel, $semanticTags, $aboutTags)
@@ -39,6 +40,7 @@ $namingRule = array(
 );
 $codeCss = array(
 	"title" => "cssコーディング",
+	"short-description" => "論理立ててcssを理解して使えるようになるように、情報や基準をまとめて今後の参考にするのが目的。",
 	"description" => "cssについての説明",
 	"html" => "/code-css/index.html",
 	"pages" => array($categorizedCSS, $namingRule)
@@ -57,13 +59,32 @@ $elementEmStrongMarkB = array(
 	"html" => "/code-parts/element-em-strong-mark-b-difference.html"
 );
 $codeParts = array(
-	"title" => "html,cssなどの部分について",
+	"title" => "パーツのポイント",
+	"short-description" => "明確なルールがないが実際にやってみると定義が必要になってくるもののメモ",
 	"description" => "パーツについてのせつめい",
 	"html" => "/code-parts/index.html",
 	"pages" => array($elementEmStrongMarkB, $button)
 );
 
-$pageLists = array($codeHtml, $codeCss, $codeParts);
+// /code-environment
+$codeEnv = array(
+	"title" => "作業効率を高める環境設定",
+	"short-description" => "gulpfile.js package.json、ローカルサーバnginx バーチャルホスト,scss",
+	"description" => "gulpfile.js package.json、ローカルサーバnginx バーチャルホスト,scss",
+	"html" => "/code-parts/index.html",
+	"pages" => array()
+);
+
+// /code-environment
+$workSite = array(
+	"title" => "現実的な問題点",
+	"short-description" => "ルールを完璧に満たしたコーディングが理想だけど、現実的にはいろんな問題が起きるのでメモと考察",
+	"description" => "ルールを完璧に満たしたコーディングが理想だけど、現実的にはいろんな問題が起きるのでメモと考察",
+	"html" => "/code-parts/index.html",
+	"pages" => array()
+);
+
+$pageLists = array($codeHtml, $codeCss, $codeParts, $codeEnv, $workSite);
 
 $targetBlank = 'target="_blank" rel="noopener noreferrer"';
 ?>
