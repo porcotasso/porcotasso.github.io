@@ -1,17 +1,12 @@
 
-// id:menu-triggerをクリックしたらid:js-headerTriggerがオンオフ
+// header menu --> id:menu-triggerをクリックしたらid:js-headerTriggerがオンオフ
 var menuTrigger = document.getElementById("menu-trigger");
 var headerTrigger = document.getElementById("js-headerTrigger");
 menuTrigger.onclick = function() {
   headerTrigger.classList.toggle("active");
 };
 
-// 次の要素を取得
-// var elements = document.getElementById("menuTrigger0");
-// var menu = elements.nextElementSibling;
-// elements.onclick = function() {
-//   menu.classList.toggle("active");
-// };
+// home menu --> id:menu-triggerをクリックしたらid:js-headerTriggerがオンオフ
 
 document.addEventListener("DOMContentLoaded",() => {
   const title = document.querySelectorAll('.js-accordionTrigger');
@@ -26,6 +21,16 @@ document.addEventListener("DOMContentLoaded",() => {
   }
 
 });
+
+
+// 次の要素を取得
+// var elements = document.getElementById("menuTrigger0");
+// var menu = elements.nextElementSibling;
+// elements.onclick = function() {
+//   menu.classList.toggle("active");
+// };
+
+
 // for(i=0; i < elements.length; i++){
 //   console.log("bbb");
 //   var aaa = document.getElementById("menu-trigger");
