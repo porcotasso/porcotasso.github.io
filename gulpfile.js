@@ -19,6 +19,8 @@ const cleanCSS = require("gulp-clean-css") //minify
 const rename = require('gulp-rename') //rename
 // const ejs = require('gulp-ejs') // ejs - compile html
 const php2html = require('gulp-php2html');
+
+const htmlhint = require('gulp-htmlhint');
  
 // compile ejs
 // gulp.task('ejs', () => {
@@ -35,6 +37,36 @@ gulp.task('php', () => {
     .pipe(rename({ extname: '.html' }))
     .pipe(gulp.dest('./'))
 })
+
+gulp.task('html', function() {
+  return gulp.src('./index.html','./code-*/*.html')
+  .pipe(htmlhint({
+    "tagname-lowercase": true,
+    "attr-lowercase": false,
+    "attr-value-double-quotes": true,
+    "attr-value-not-empty": false,
+    "attr-no-duplication": true,
+    "doctype-first": true,
+    "tag-pair": true,
+    "empty-tag-not-self-closed": true,
+    "spec-char-escape": true,
+    "id-unique": true,
+    "src-not-empty": true,
+    "title-require": true,
+    "alt-require": true,
+    "doctype-html5": true,
+    // "id-class-value": "dash",
+    "style-disabled": false,
+    "inline-style-disabled": false,
+    "inline-script-disabled": false,
+    "space-tab-mixed-disabled": "space",
+    "id-class-ad-disabled": false,
+    "href-abs-or-rel": false,
+    "attr-unsafe-chars": true,
+    "head-script-disabled": true
+  }))
+  .pipe(htmlhint.reporter());
+});
 
 const autoprefixerOption = {
     grid: true
@@ -68,7 +100,7 @@ gulp.task('sass', () => {
 })
 
 gulp.task('watch', () => {
-    return gulp.watch(['./scss/*.scss', './scss/**/*.scss', './php/pages/*.php', './php/pages/**/*.php'], gulp.series('sass', 'php'))
+    return gulp.watch(['./scss/*.scss', './scss/**/*.scss', './php/pages/*.php', './php/pages/**/*.php'], gulp.series('sass', 'php', 'html'))
 })
 
 //create default task  -> 'npm run dev' -> run

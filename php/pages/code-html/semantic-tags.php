@@ -17,7 +17,7 @@ Webにおいて、みなさんが特に気にするのは検索エンジン最�
                 </ol>
             </nav>
         </header>
-        <section>
+        <section class="ly-section">
         コンテンツ・モデル'セクショニング・コンテンツ'の役割と使う場所
             <h2>header</h2>
             <p>ページ全体のヘッダーや、セクション内のヘッダーを表します。イントロダクション、ナビゲーション等のグループを表す。</p>
@@ -34,16 +34,16 @@ Webにおいて、みなさんが特に気にするのは検索エンジン最�
             <h2>aside</h2>
             <p> 補足情報や余談的なブロックを表します。メインコンテンツとの関連性が希薄で、メインコンテンツから切り離すことが可能なセクションを表す。</p>
         </section>
-        <section>
+        <section class="ly-section">
             <h2>header要素</h2>
             <p>タイトル導入部。ナビゲーションなどが含まれる。ページ内で複数使える。</p>
             <p>ページ全体のheader</p>
         </section>
 
-        <section>
+        <section class="ly-section">
             <h3>参考</h3>
-            <cite><a href="http://www.tohoho-web.com/html/memo/html5.htm#flow" <?php echo $targetBlank ?>>とほほのWWW入門</a></cite>
-            <cite><a href="https://wunderstand.net/1417/" <?php echo $targetBlank ?>>html5のarticle・section等、まとめる要素まとめ</a></cite>
+            <cite class="ly-cite"><a href="http://www.tohoho-web.com/html/memo/html5.htm#flow" <?php echo $targetBlank ?>>とほほのWWW入門</a></cite>
+            <cite class="ly-cite"><a href="https://wunderstand.net/1417/" <?php echo $targetBlank ?>>html5のarticle・section等、まとめる要素まとめ</a></cite>
         </section>
     </article>
 </main>

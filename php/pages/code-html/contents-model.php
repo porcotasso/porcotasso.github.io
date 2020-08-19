@@ -12,7 +12,7 @@
                 </ol>
             </nav>
         </header>
-        <section>
+        <section class="ly-section">
             <h2>コンテンツ・モデル</h2>
             <p>「〇〇要素の中には、△△要素が配置できる」といった、各要素ごとに中に配置できる要素を定義した配置ルールの事です。HTML5では「要素内にどんな要素を置くか」が決められています。このルールをコンテンツ・モデル（Content models）といいます。</p>
             <p>段落を表すp要素のコンテンツ・モデルは「フレージング・コンテンツ」になります。つまり、p要素の中に入れるのは、フレージング・コンテンツというカテゴリーに属した要素のみということです。「コンテンツ・モデルは〜」というのはなかに「〜」を入れられるということ</p>
@@ -21,14 +21,14 @@
             <p>例：spanタグはフレージング・コンテンツしか内包できない。</p>
             <p>コンテンツ・モデルが「空（Nothing）」とされているものは、その要素の中に何もコンテンツを入れられないというルール。</p>
 
-            <cite><a href="https://yoshikawaweb.com/element/" <?php echo $targetBlank ?>>HTML5 入れ子チートシート</a></cite>
+            <cite class="ly-cite"><a href="https://yoshikawaweb.com/element/" <?php echo $targetBlank ?>>HTML5 入れ子チートシート</a></cite>
         </section>
-        <section>
+        <section class="ly-section">
             <h2>カテゴリー</h2>
             <p>HTML5では、類似する特性を持った要素が以下の7つの「カテゴリー」に大別され、図のような包含関係にあります。それぞれの要素は、0個以上のカテゴリーに分類されます。つまり、どこのカテゴリーにも属していない要素や、複数のカテゴリーに属する要素も存在します。</p>
-            <cite><a href="https://webgoto.net/html5/" <?php echo $targetBlank ?>>HTML5 コンテンツモデル ガイド</a></cite>
+            <cite class="ly-cite"><a href="https://webgoto.net/html5/" <?php echo $targetBlank ?>>HTML5 コンテンツモデル ガイド</a></cite>
         </section>
-        <section>
+        <section class="ly-section">
             <h2 id="id1">1.HTML5のコンテンツモデルの種類と説明</h2><p>HTML5は全部で7つのコンテンツの種類で定義されています。</p>
             <ul>
                 <li>メタデータ</li>
@@ -78,10 +78,10 @@
             <p>a、audio、canvas、del、ins、map、noscript、video</p>
         </section> 
 
-        <section>
+        <section class="ly-section">
             <h3>参考</h3>
-            <cite><a href="http://honttoni.blog74.fc2.com/blog-entry-107.html?sp" <?php echo $targetBlank ?>>ほんっとにはじめてのHTML5とCSS3</a></cite>
-            <cite><a href="https://www.w3.org/TR/html51/grouping-content.html#the-p-element" <?php echo $targetBlank ?>>w3.org p element</a></cite>
+            <cite class="ly-cite"><a href="http://honttoni.blog74.fc2.com/blog-entry-107.html?sp" <?php echo $targetBlank ?>>ほんっとにはじめてのHTML5とCSS3</a></cite>
+            <cite class="ly-cite"><a href="https://www.w3.org/TR/html51/grouping-content.html#the-p-element" <?php echo $targetBlank ?>>w3.org p element</a></cite>
         </section>
     </article>
 </main>

@@ -3,11 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- ファビコン -->
+    <link rel="icon" href="/image/favicon/favicon.ico">             
+    <!-- スマホ用アイコン -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/favicon/apple-touch-icon.png">
     <link rel="stylesheet" href="/css/common.css">
       
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title><br />
-<b>Notice</b>:  Undefined variable: title in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php</b> on line <b>12</b><br />
+<b>Notice</b>:  Undefined variable: title in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php</b> on line <b>16</b><br />
 </title>
 </head>
 <body>
@@ -58,24 +62,34 @@
                                             </ul>
                 </li>
                                 <li class="headerNav_list"><a href="<br />
-<b>Notice</b>:  Undefined index: html in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php</b> on line <b>31</b><br />
+<b>Notice</b>:  Undefined index: html in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php</b> on line <b>35</b><br />
 ">パーツのポイント</a></li>
                 <li>
                     <ul class="headerNav_subNav">
+                                                <li class="headerNav_subList">
+                            <a href="/code-parts/button.html" class="">
+                                <div class="">ボタンは&lt;a&gt;か&lt;button&gt;か&lt;input&gt;か</div>
+                            </a>
+                        </li>
+                                                <li class="headerNav_subList">
+                            <a href="/code-parts/break-word.html" class="">
+                                <div class="">break-word</div>
+                            </a>
+                        </li>
                                                 <li class="headerNav_subList">
                             <a href="/code-parts/element-em-strong-mark-b-difference.html" class="">
                                 <div class="">em・strong・mark・b要素の違い</div>
                             </a>
                         </li>
                                                 <li class="headerNav_subList">
-                            <a href="/code-parts/button.html" class="">
-                                <div class="">ボタンは&lt;a&gt;か&lt;button&gt;か&lt;input&gt;か</div>
+                            <a href="/code-parts/favicon.html" class="">
+                                <div class="">favicon</div>
                             </a>
                         </li>
                                             </ul>
                 </li>
                                 <li class="headerNav_list"><a href="<br />
-<b>Notice</b>:  Undefined index: html in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php</b> on line <b>31</b><br />
+<b>Notice</b>:  Undefined index: html in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php</b> on line <b>35</b><br />
 ">javascript</a></li>
                 <li>
                     <ul class="headerNav_subNav">
@@ -87,14 +101,31 @@
                                             </ul>
                 </li>
                                 <li class="headerNav_list"><a href="<br />
-<b>Notice</b>:  Undefined index: html in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php</b> on line <b>31</b><br />
+<b>Notice</b>:  Undefined index: html in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php</b> on line <b>35</b><br />
 ">作業効率を高める環境設定</a></li>
                 <li>
                     <ul class="headerNav_subNav">
+                                                <li class="headerNav_subList">
+                            <a href="/code-env/gulpfile.html" class="">
+                                <div class="">gulpfile</div>
+                            </a>
+                        </li>
                                             </ul>
                 </li>
                                 <li class="headerNav_list"><a href="<br />
-<b>Notice</b>:  Undefined index: html in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php</b> on line <b>31</b><br />
+<b>Notice</b>:  Undefined index: html in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php</b> on line <b>35</b><br />
+">svg</a></li>
+                <li>
+                    <ul class="headerNav_subNav">
+                                                <li class="headerNav_subList">
+                            <a href="/code-svg/svg.html" class="">
+                                <div class="">svg</div>
+                            </a>
+                        </li>
+                                            </ul>
+                </li>
+                                <li class="headerNav_list"><a href="<br />
+<b>Notice</b>:  Undefined index: html in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php</b> on line <b>35</b><br />
 ">現実的な問題点</a></li>
                 <li>
                     <ul class="headerNav_subNav">
@@ -109,22 +140,74 @@
             <p></p>
             <nav>
                 <div>目次</div>
+                <div>脱Jquery</div>
                 <ol>
                     <li>アコーディオン</li>
                 </ol>
             </nav>
         </header>
-		<section>
+		<section class="ly-section">
 			<h2>アコーディオン</h2>
-			<!-- <p>アコーディオン</p> -->
-            <cite><a href="https://flex-box.net/js-accordion/" target="_blank" rel="noopener noreferrer">ブログの設置 アコーディオン</a></cite>
+            <cite class="ly-cite"><a href="https://flex-box.net/js-accordion/" target="_blank" rel="noopener noreferrer">ブログの設置 アコーディオン</a></cite>
 		</section>
+        <section class="ly-section">
+			<h2>脱Jquery</h2>
+            <pre>
+            //ID名で取得
+$('#id-name');
+//クラス名で取得
+$('.class-name');
+//タグ名で取得
+$('tag-name');
+//クラス名の追加
+$('#element').addClass('active');
+//クラス名の削除
+$('#element').removeClass('active');
+//トグル
+$('#element').toggleClass('active');
+//要素が指定したクラス名を持っているか
+$('#element').hasClass('active');
+
+
+//ID名で取得
+document.getElementById('element');
+//クラス名で取得
+document.getElementsByClassName('element');
+//タグ名で取得
+document.getElementsByTagName('element');
+//クラス名の追加
+document.getElementById('element').classList.add('active');
+//クラス名の削除
+document.getElementById('element').classList.remove('active');
+//トグル
+document.getElementById('element').classList.toggle('active');
+//要素が指定したクラス名を持っているか
+document.getElementById('element').classList.contains('active');
+</pre>
+<cite class="ly-cite"><a href="https://www.aura-office.co.jp/blog/js-native/" target="_blank" rel="noopener noreferrer">アウラ 脱Jquery</a></cite>
+<cite class="ly-cite"><a href="https://q-az.net/without-jquery-height-width-offset-scrolltop/" target="_blank" rel="noopener noreferrer">脱Jquery</a></cite>
+<cite class="ly-cite"><a href="https://www.willstyle.co.jp/blog/1025/" target="_blank" rel="noopener noreferrer">will style.</a></cite>
+<pre>
+<p>
+    HTMLCollection element 違い
+    getElementsByClassName()が返すのは、HTMLCollectionであってElementではない
+</p>
+</pre>
+<cite class="ly-cite"><a href="https://teratail.com/questions/231849" target="_blank" rel="noopener noreferrer">getElementsByClassName()が返す</a></cite>
+
+<p>次の要素を取得する</p>
+<cite class="ly-cite"><a href="https://syncer.jp/javascript-reference/element/scrolltop" target="_blank" rel="noopener noreferrer">次の要素を取得する</a></cite>
+
+
+           
+		</section>
+        
 
 
 
-        <section>
+        <section class="ly-section">
             <h3>参考</h3>
-            <cite><a href="https://flex-box.net/js-accordion/" target="_blank" rel="noopener noreferrer">ブログの設置 アコーディオン</a></cite>
+            <cite class="ly-cite"><a href="https://flex-box.net/js-accordion/" target="_blank" rel="noopener noreferrer">ブログの設置 アコーディオン</a></cite>
         </section>
     </article>
 </main>
@@ -132,14 +215,13 @@
         porco tasso footer
     </footer>
         
-        <script src="/js/jquery.slim.min.js"></script>
+        <!-- <script src="/js/jquery.slim.min.js"></script> -->
         <!-- <script src="/js/bootstrap.bundle.min.js"></script> -->
         <!-- <script src="js/src/util.js"></script>
         <script src="js/src/index.js"></script>
         <script src="js/src/tooltip.js"></script>
         <script src="js/src/modal.js"></script> -->
-        <script src="/js/smaller.js"></script>
-        <script src="/js/trigger.js"></script>
+        <script src="/js/common.js"></script>
     </body>
 
 </html>

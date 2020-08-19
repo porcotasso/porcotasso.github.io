@@ -45,14 +45,14 @@ hr {
   overflow: visible;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  font-weight: normal;
+// h1以外はコンテンツの途中で使用されると想定し上のスペースを保証する。
+h2, h3, h4, h5, h6 {
+  margin-top: 1em;
 }
 h1{
   font-size: $font-size-19;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin:0 0 30px;
 }
 h2{
   font-size: $font-size-16;
@@ -68,11 +68,14 @@ h3{
   // padding: 2px 10px;
   // display: inline-block;
 }
-p {
+p{
+  margin: 0 0 2rem;
+}
+// p と li　が文章中で同じような見せ方で利用されることを基本として文字スタイルを合わせる。
+p, li{
   font-size: $font-size-15;
   letter-spacing: 0.06em;
   line-height: 1.9;
-  margin: 0 0 2rem;
 }
 img{
   max-width: 100%;
@@ -110,7 +113,11 @@ img{
  }
  ul{
   //  フォントサイズに比例して幅を変える
-   padding-left: 2em;
+   padding-left: 1.8em;
+ }
+ li{
+  //  各listの間を空ける。上下にスペースをつけることで最後の余計なスペースをなくす。
+   padding: 0.1em 0;
  }
  dt {
    font-weight: 700;

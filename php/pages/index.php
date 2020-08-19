@@ -143,8 +143,7 @@
                 </li>
                 <?php } ?>
             </ul>
-        <nav>  
-            <ul class="bl-contentsList">
+        </nav>  
                 <!-- 
                     
                     <li class="bl-contentsList__cnt">
@@ -178,9 +177,6 @@
                         <p class="home__menu__cnt__box__txt">ルールがあるものですが、それにしては人によって書き方はなかなか違ったりします。きっと構築するための哲学といっては大げさかもしれないですが、そんな風にコーディングした理由がなにかしらどのサイトにも存在しているのだと思います。私の（とりあえず今）思う居心地がいいと思うコーディングについて</p>
                     </a>
                 </li> -->
-            </ul>
-        </nav>
-
         <!-- <h2>よく起きる問題</h2>
     <p>CSSは管理が不十分だとカオスになりやすい。サイトの全体構成や運用、メンテナンスの考えが不十分だと、すぐカオスになります。それがわかった上で何が難しいかというと、サイト自体の内容や機能、大枠さえも予想を超えた変更がされていくものなので、未来が見える能力でもない限り「話が違う」ことが起こります。家で例えると、間仕切りをとったり、部屋をわけたりくらいまでは建てる前でも想像できますが、２階建を１０階建にしたり、大黒柱を切ったり、和風を洋風にしたり、建ぺい率や構造計算無視の素敵なアイデアがでてくると、なかなか大変な作業になるわけです。<br>
     また仕事では他のひとと共同作業をするわけで、初見でも理解しやすく、その時の気分で書き方が変わらないような状態が理想です。</p>
@@ -217,12 +213,16 @@
     <h2>SVG</h2> -->
 
         <p class="ly-homeProfile">ウェブのフロントエンドエンジニアです。html, css, php, javascript,gulp、adobe XD, Illustrator, phptoshopなどを使います。作ること全般が好きで、イラストやレタッチ、動画、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。<b>このサイトはまだ制作中です。</b></p>
-        <section>
+        <section class="ly-section">
             <h3>参考</h3>
-            <cite><a href="https://murashun.jp" <?php echo $targetBlank ?>>murashun.jp</a></cite>
-            <cite><a href="https://www.ameamelog.com/category/web-design/css/" <?php echo $targetBlank ?>>ameamelogコーディング</a></cite>
-            <cite><a href="http://honttoni.blog74.fc2.com/blog-entry-107.html?sp" <?php echo $targetBlank ?>>ほんっとにはじめてのHTML5とCSS3</a></cite>
-            <cite><a href="https://www.w3.org/TR/html51/grouping-content.html#the-p-element" <?php echo $targetBlank ?>>w3.org p element</a></cite>
+            <cite class="ly-cite"><a href="https://murashun.jp" <?php echo $targetBlank ?>>murashun.jp</a></cite>
+            <cite class="ly-cite"><a href="https://www.ameamelog.com/category/web-design/css/" <?php echo $targetBlank ?>>ameamelogコーディング</a></cite>
+            <cite class="ly-cite"><a href="http://honttoni.blog74.fc2.com/blog-entry-107.html?sp" <?php echo $targetBlank ?>>ほんっとにはじめてのHTML5とCSS3</a></cite>
+            <cite class="ly-cite"><a href="https://www.w3.org/TR/html51/grouping-content.html#the-p-element" <?php echo $targetBlank ?>>w3.org p element</a></cite>
+            <cite class="ly-cite"><a href="https://liginc.co.jp/" <?php echo $targetBlank ?>>lig</a></cite>
+            <cite class="ly-cite"><a href="https://baigie.me/menu/" <?php echo $targetBlank ?>>baigie</a></cite>
+
+            
         </section>
     </article>
 </main>

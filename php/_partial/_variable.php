@@ -53,16 +53,26 @@ $button = array(
 	"description" => "タグの使い分けを明確にボタンを作成する。",
 	"html" => "/code-parts/button.html"
 );
+$breakWord = array(
+	"title" => "break-word",
+	"description" => "break-word",
+	"html" => "/code-parts/break-word.html"
+);
 $elementEmStrongMarkB = array(
 	"title" => "em・strong・mark・b要素の違い",
 	"description" => "em・strong・mark・b要素の違いと使い方のメモ",
 	"html" => "/code-parts/element-em-strong-mark-b-difference.html"
 );
+$favicon = array(
+	"title" => "favicon",
+	"description" => "favicon",
+	"html" => "/code-parts/favicon.html"
+);
 $codeParts = array(
 	"title" => "パーツのポイント",
 	"short-description" => "明確なルールがないが実際にやってみると定義が必要になってくるもののメモ",
 	"description" => "パーツについてのせつめい",
-	"pages" => array($elementEmStrongMarkB, $button)
+	"pages" => array($button, $breakWord, $elementEmStrongMarkB, $favicon)
 );
 
 // /javascript memo
@@ -79,11 +89,28 @@ $codeJs = array(
 );
 
 // /code-environment
+$gulpfile = array(
+	"title" => "gulpfile",
+	"description" => "メモ",
+	"html" => "/code-env/gulpfile.html"
+);
 $codeEnv = array(
 	"title" => "作業効率を高める環境設定",
 	"short-description" => "gulpfile.js package.json、ローカルサーバnginx バーチャルホスト,scss",
 	"description" => "gulpfile.js package.json、ローカルサーバnginx バーチャルホスト,scss",
-	"pages" => array()
+	"pages" => array($gulpfile)
+);
+// /code-svg
+$svg = array(
+	"title" => "svg",
+	"description" => "メモ",
+	"html" => "/code-svg/svg.html"
+);
+$codeSvg = array(
+	"title" => "svg",
+	"short-description" => "svg",
+	"description" => "svg",
+	"pages" => array($svg)
 );
 
 // /work-site
@@ -94,7 +121,7 @@ $workSite = array(
 	"pages" => array()
 );
 
-$pageLists = array($codeHtml, $codeCss, $codeParts, $codeJs, $codeEnv, $workSite);
+$pageLists = array($codeHtml, $codeCss, $codeParts, $codeJs, $codeEnv, $codeSvg, $workSite);
 
 $targetBlank = 'target="_blank" rel="noopener noreferrer"';
 ?>

@@ -80,7 +80,7 @@
                 <li>
                     <ul class="headerNav_subNav">
                                                 <li class="headerNav_subList">
-                            <a href="/code-parts/javascript-memo.html" class="">
+                            <a href="/code-js/javascript-memo.html" class="">
                                 <div class="">javascriptmemo</div>
                             </a>
                         </li>
@@ -88,10 +88,24 @@
                 </li>
                                 <li class="headerNav_list"><a href="<br />
 <b>Notice</b>:  Undefined index: html in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php</b> on line <b>31</b><br />
-">作業効率を高める環境設定</a></li>
+">svg</a></li>
                 <li>
                     <ul class="headerNav_subNav">
+                                                <li class="headerNav_subList">
+                            <a href="/code-svg/svg.html" class="">
+                                <div class="">svg</div>
+                            </a>
+                        </li>
                                             </ul>
+                </li>
+                                <li class="headerNav_list"><a href="/code-svg/svg.html">svg</a></li>
+                <li>
+                    <ul class="headerNav_subNav">
+                        <br />
+<b>Notice</b>:  Undefined index: pages in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php</b> on line <b>34</b><br />
+<br />
+<b>Warning</b>:  Invalid argument supplied for foreach() in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php</b> on line <b>34</b><br />
+                    </ul>
                 </li>
                                 <li class="headerNav_list"><a href="<br />
 <b>Notice</b>:  Undefined index: html in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php</b> on line <b>31</b><br />
@@ -105,45 +119,23 @@
     </header><main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article>
         <header>
-            <h1>ボタンは&lt;a&gt;か&lt;button&gt;か&lt;input&gt;か</h1>
-            <p>ボタンを作る際 &lt;a&gt;か&lt;button&gt;か&lt;input&gt;か迷わないように違いを理解する。</p>
-            <nav>
-                <div>目次</div>
+            <h1>gulpfile</h1>
+            <p>aaaa</p>
+            <nav class="ly-mainNav">
+                <div class="el-mainNavTtl">目次</div>
                 <ol>
-                    <li>aタグ</li>
-                    <li>buttonタグ</li>
-                    <li>inputタグ</li>
+                <li>gulp-htmlhint</li>
                 </ol>
             </nav>
         </header>
         <section class="ly-section">
-        	<h2>aタグ</h2>
-            <p>汎用的なボタンはaタグを使用する。理由として、一般的に浸透していること。buttonが推奨されているわけでもないということで、よく使われているaを使うのが無難。大手web会社もaを使っている様子。</p>
+            <h2>gulp-htmlhint</h2>
+            <p>gulp-htmlhintでHTMLのバリデーションを行う</p>
+            <cite class="ly-cite"><a href="http://cly7796.net/wp/css/html-validation-with-gulp-htmlhint/" target="_blank" rel="noopener noreferrer">gulp-htmlhintでHTMLのバリデーションを行う</a></cite> 
         </section>
         <section class="ly-section">
-            <h2>buttonタグ</h2>
-			<p>フォームの送信ボタンとして使用する。aタグは送信ボタンとして使えない。buttonは擬似要素が使えて、inputの上位互換となるので。</p>
-			<p>htmlに「type=""」の指定が必要。<br>cssにデフォルトのデザインを打ち消す指定が必要<br>リンクが「onclick="location.href='aa.html'"」となる</p>
-			<p>一方でbuttonを汎用ボタンに押すひとの意見。<br>フォーカスが当たる。フォーカスしてenterキーでclickイベントが発火する。音声読み上げで「ボタン」と読まれる。aは「リンク」。フォームと連動することでbuttonを嫌がる人もいるが、type="button"にすればフォームに対しなにもしない。</p>
-		</section>
-		<section class="ly-section">
-            <h2>inputタグ</h2>
-            <p>可能な限り使用しない。</p>
-		</section>
-		<section class="ly-section">
-			<h2>やってはいけないこと</h2>
-			<p>aタグの中にインタラクティブコンテンツを入れてはいけない。button をaで囲むなど。
-				インタラクティブコンテンツとはselect, button, a, input, textarea などユーザー操作に対し反応するタグ。</p>
-		</section>
-		<section class="ly-section">
-			<h2>サンプル</h2>
-			<a href="/" class="el-btn el-btn--center el-btn--angle">ボタンサンプル</a>
-		</section>
-
-
-        <section class="ly-section">
             <h3>参考</h3>
-            <cite class="ly-cite"><a href="https://www.ameamelog.com/html-a-button/" target="_blank" rel="noopener noreferrer">ameamelog.com</a></cite>
+                   
         </section>
     </article>
 </main>
@@ -151,14 +143,13 @@
         porco tasso footer
     </footer>
         
-        <script src="/js/jquery.slim.min.js"></script>
+        <!-- <script src="/js/jquery.slim.min.js"></script> -->
         <!-- <script src="/js/bootstrap.bundle.min.js"></script> -->
         <!-- <script src="js/src/util.js"></script>
         <script src="js/src/index.js"></script>
         <script src="js/src/tooltip.js"></script>
         <script src="js/src/modal.js"></script> -->
-        <script src="/js/smaller.js"></script>
-        <script src="/js/trigger.js"></script>
+        <script src="/js/common.js"></script>
     </body>
 
 </html>

@@ -19,35 +19,35 @@
                 </ol>
             </nav>
         </header>
-        <section>
+        <section class="ly-section">
             <h2>ベースグループ</h2>
             <p>ノーマライズCSS，リセットCSS、プロジェクトの標準となるスタイリング</p>
             <p>cssの種類ーベースグループ。normarize.scss。ブラウザ、デバイス間の不一致を修正。bootstrap-reboot.css をコピーしてカスタマイズなのでリセットではなくノーマライズcss。リセットCSSーuser agent stylesheetを無効化する</p>
         </section>
-        <section>
+        <section class="ly-section">
             <h2>レイアウトグループ</h2>
             <p>位置調整を担当。header, footer, main, nav, aside, article, section</p>
             <p>position, z-index, top/right/left/bottom, float, width, margin</p>
         </section>
-        <section>
+        <section class="ly-section">
             <h2>ブロックモジュールグループ</h2>
             <p>いろんな場所で使える。子要素を持つ。bl-</p>
         </section>
-        <section>
+        <section class="ly-section">
             <h2>エレメントモジュールグループ</h2>
             <p>最小単位のモジュール、どこにでも使える、ボタン、ラベル el-</p>
         </section>
-        <section>
+        <section class="ly-section">
             <h2>エレメントモジュールモディファイヤーグループ</h2>
             <p>--name</p>
         </section>
-        <section><h2>ヘルパーグループ</h2></section>
-        <section><h2>ユニークグループ</h2></section>
-        <section><h2>プログラムグループ</h2></section>
-        <section>
+        <section class="ly-section"><h2>ヘルパーグループ</h2></section>
+        <section class="ly-section"><h2>ユニークグループ</h2></section>
+        <section class="ly-section"><h2>プログラムグループ</h2></section>
+        <section class="ly-section">
             <h3>参考</h3>
-            <cite><a href="https://qiita.com/pugiemonn/items/964203782e1fcb3d02c3" <?php echo $targetBlank ?>>こんなHTMLとCSSのコーディング規約で書きたい</a></cite>
-            <cite><a href="https://www.amazon.co.jp/CSS設計完全ガイド-詳細解説-実践的モジュール集-半田-惇志/dp/429711173X" <?php echo $targetBlank ?>>CSS設計完全ガイド</a></cite>
+            <cite class="ly-cite"><a href="https://qiita.com/pugiemonn/items/964203782e1fcb3d02c3" <?php echo $targetBlank ?>>こんなHTMLとCSSのコーディング規約で書きたい</a></cite>
+            <cite class="ly-cite"><a href="https://www.amazon.co.jp/CSS設計完全ガイド-詳細解説-実践的モジュール集-半田-惇志/dp/429711173X" <?php echo $targetBlank ?>>CSS設計完全ガイド</a></cite>
         </section>
     </article>
 </main>

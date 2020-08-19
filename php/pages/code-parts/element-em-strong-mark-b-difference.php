@@ -37,10 +37,10 @@
 </p>
         </section>
 
-        <section>
+        <section class="ly-section">
             <h3>参考</h3>
-            <cite><a href="https://yoshikawaweb.com/element-em-strong-mark-b-difference.html" <?php echo $targetBlank ?>>em・strong・mark・b要素の違いを本気出して調べてみた</a></cite>
-            <cite><a href="https://seolaboratory.jp/52093/#:~:text=strong%E3%82%BF%E3%82%B0%E3%81%A8%E3%81%AF%E3%80%81%20%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88,%E9%87%8D%E8%A6%81%E6%80%A7%E3%82%92%E7%A4%BA%E3%81%97%E3%81%BE%E3%81%99%E3%80%82" <?php echo $targetBlank ?>>seoラボ</a></cite>
+            <cite class="ly-cite"><a href="https://yoshikawaweb.com/element-em-strong-mark-b-difference.html" <?php echo $targetBlank ?>>em・strong・mark・b要素の違いを本気出して調べてみた</a></cite>
+            <cite class="ly-cite"><a href="https://seolaboratory.jp/52093/#:~:text=strong%E3%82%BF%E3%82%B0%E3%81%A8%E3%81%AF%E3%80%81%20%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88,%E9%87%8D%E8%A6%81%E6%80%A7%E3%82%92%E7%A4%BA%E3%81%97%E3%81%BE%E3%81%99%E3%80%82" <?php echo $targetBlank ?>>seoラボ</a></cite>
             
         </section>
     </article>

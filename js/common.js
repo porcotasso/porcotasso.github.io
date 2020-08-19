@@ -1,16 +1,13 @@
-
-// header menu --> id:menu-triggerをクリックしたらid:js-headerTriggerがオンオフ
+// HEADER MENU OPEN/CLOSE #menu-triggerをクリックで#js-headerTriggerがオンオフ
 var menuTrigger = document.getElementById("menu-trigger");
 var headerTrigger = document.getElementById("js-headerTrigger");
 menuTrigger.onclick = function() {
   headerTrigger.classList.toggle("active");
 };
 
-// home menu --> id:menu-triggerをクリックしたらid:js-headerTriggerがオンオフ
-
+// HOME MENU OPEN/CLOSE #menu-triggerをクリックで#js-headerTriggerがオンオフ
 document.addEventListener("DOMContentLoaded",() => {
   const title = document.querySelectorAll('.js-accordionTrigger');
-  
   for (let i = 0; i < title.length; i++){
     let titleEach = title[i];
     let content = titleEach.nextElementSibling;
@@ -19,9 +16,34 @@ document.addEventListener("DOMContentLoaded",() => {
       content.classList.toggle('is-open');
     });
   }
-
 });
 
+// HEADER SMALL
+function init() {
+	var px_change = 80;
+	let header = document.getElementsByClassName('js-headerSmaller');
+	window.addEventListener('scroll', function (e) {
+		if (document.documentElement.scrollTop || document.body.scrollTop > px_change) {
+			header[0].classList.add('smaller');
+		} else if (header[0].classList.contains('smaller')) {
+			header[0].classList.remove('smaller');
+		}
+	});
+}
+window.onload = init();
+
+// HEADER SMALL jQuery
+// function init() {
+// 	var px_change = 80;
+// 	window.addEventListener('scroll', function (e) {
+// 		if ($(window).scrollTop() > px_change) {
+// 			$(".js-headerSmaller").addClass("smaller");
+// 		} else if ($(".js-headerSmaller").hasClass("smaller")) {
+// 			$(".js-headerSmaller").removeClass("smaller");
+// 		}
+// 	});
+// }
+// window.onload = init();
 
 // 次の要素を取得
 // var elements = document.getElementById("menuTrigger0");
@@ -30,7 +52,6 @@ document.addEventListener("DOMContentLoaded",() => {
 //   menu.classList.toggle("active");
 // };
 
-
 // for(i=0; i < elements.length; i++){
 //   console.log("bbb");
 //   var aaa = document.getElementById("menu-trigger");
@@ -38,17 +59,16 @@ document.addEventListener("DOMContentLoaded",() => {
 //   elements[i].onclick = function() {
 //     nextElementSibling[i].classList.toggle("active");
 //   console.log("ccc");
-
 //   };
 // }
 
 
-console.log(nextElementSibling);
-elements.onclick = function() {
-  nextElementSibling.classList.toggle("active");
-};
+// console.log(nextElementSibling);
+// elements.onclick = function() {
+//   nextElementSibling.classList.toggle("active");
+// };
 
-// jquery ver
+// HEADER MENU OPEN/CLOSE jquery ver
 // $(function () {
 //   $('.menu-trigger').on('click', function () {
 //     $(this).toggleClass('active');

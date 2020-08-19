@@ -13,7 +13,7 @@
                 </ol>
             </nav>
         </header>
-        <section>
+        <section class="ly-section">
         <h2>命名ルール</h2>
         <ul>
             <li>ローワーキャメル</li>
@@ -36,9 +36,9 @@
         </ul>
         </section>
 
-        <section>
+        <section class="ly-section">
             <h3>参考</h3>https://qiita.com/manabuyasuda/items/dbb76ed36970bec95470
-            <cite><a href="https://wunderstand.net/1417/" <?php echo $targetBlank ?>>html5のarticle・section等、まとめる要素まとめ</a></cite>
+            <cite class="ly-cite"><a href="https://wunderstand.net/1417/" <?php echo $targetBlank ?>>html5のarticle・section等、まとめる要素まとめ</a></cite>
         </section>
     </article>
 </main>

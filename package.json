@@ -18,6 +18,7 @@
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-ejs": "^5.1.0",
+    "gulp-htmlhint": "^3.0.1",
     "gulp-if": "^3.0.0",
     "gulp-notify": "^3.2.0",
     "gulp-php2html": "^1.0.0",
