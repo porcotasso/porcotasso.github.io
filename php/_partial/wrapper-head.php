@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- ファビコン -->
-    <link rel="icon" href="/image/favicon/favicon.ico">             
+    <link rel="icon" href="/favicon.ico">             
     <!-- スマホ用アイコン -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/image/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="stylesheet" href="/css/common.css">
     <?php if($_SERVER['REQUEST_URI'] == "/php/pages/index.php"){ ?>
         <link rel="stylesheet" href="/css/home.css">
