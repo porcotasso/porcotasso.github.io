@@ -1,2 +1,10 @@
-.ly-homeIco{text-align:center}.ly-homeIco_image{width:50%;max-width:160px;margin:0 auto 24px}.ly-homeProfile{margin-bottom:16px}
+.ly-homeIco {
+  text-align: center; }
+  .ly-homeIco_image {
+    width: 50%;
+    max-width: 160px;
+    margin: 0 auto 24px; }
+
+.ly-homeProfile {
+  margin-bottom: 16px; }
 /*# sourceMappingURL=maps/home.css.map */
