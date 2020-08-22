@@ -18,18 +18,20 @@
     <!-- google font Pacifico for title -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>
-        <?php foreach($pageLists as $list){ ?>
-            <?php foreach($list["pages"] as $value){
-                echo $value["html"]; ?>
-                <br>
-                <?php echo $_SERVER['REQUEST_URI']; ?>
-                <br><br>
-                <?php if($value["html"] == $_SERVER['REQUEST_URI']){
-                    echo $value["title"];
-                    break; 
+        <?php if($_SERVER['REQUEST_URI'] == "/php/pages/index.php"){ ?>
+            porco tasso:フロントエンドエンジニアのお仕事まとめ中
+            <?php } else {
+                foreach($pageLists as $list){
+                    foreach($list["pages"] as $value){
+                        if($value["file"] == $_SERVER['REQUEST_URI']){
+                            echo $value["title"];
+                            $title = $value["title"];
+                            break;
+                        }
+                    }
                 }
             }
-        } ?>
+        ?>
     </title>
 </head>
 <body>

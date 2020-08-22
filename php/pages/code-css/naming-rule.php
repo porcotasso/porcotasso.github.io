@@ -1,5 +1,4 @@
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
-<?php $title = $namingRule["title"] ?>
 <main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article>
         <header>
