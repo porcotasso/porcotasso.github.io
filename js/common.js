@@ -23,7 +23,8 @@ function init() {
 	var px_change = 80;
 	let header = document.getElementsByClassName('js-headerSmaller');
 	window.addEventListener('scroll', function (e) {
-		if (document.documentElement.scrollTop || document.body.scrollTop > px_change) {
+    var y = document.documentElement.scrollTop || document.body.scrollTop;
+		if ( y > px_change) {
 			header[0].classList.add('smaller');
 		} else if (header[0].classList.contains('smaller')) {
 			header[0].classList.remove('smaller');
@@ -31,6 +32,20 @@ function init() {
 	});
 }
 window.onload = init();
+
+// HEADER SMALL jQuery
+// function init() {
+// 	var px_change = 80;
+// 	window.addEventListener('scroll', function (e) {
+// 		if ($(window).scrollTop() > px_change) {
+// 			$(".js-headerSmaller").addClass("smaller");
+// 		} else if ($(".js-headerSmaller").hasClass("smaller")) {
+// 			$(".js-headerSmaller").removeClass("smaller");
+// 		}
+// 	});
+// }
+// window.onload = init();
+
 
 // escape code in pre tag
 var escapeHtml = (function (String) {
@@ -46,7 +61,7 @@ var escapeHtml = (function (String) {
   var reg;
   for (var p in escapeMap) {
     if (escapeMap.hasOwnProperty(p)) {
-      escapeReg += p;
+      escapeReg += p; 
     }
   }
   escapeReg += ']';
@@ -65,18 +80,7 @@ for(var i = 0; i < pre.length; i++) {
 
 
 
-// HEADER SMALL jQuery
-// function init() {
-// 	var px_change = 80;
-// 	window.addEventListener('scroll', function (e) {
-// 		if ($(window).scrollTop() > px_change) {
-// 			$(".js-headerSmaller").addClass("smaller");
-// 		} else if ($(".js-headerSmaller").hasClass("smaller")) {
-// 			$(".js-headerSmaller").removeClass("smaller");
-// 		}
-// 	});
-// }
-// window.onload = init();
+
 
 // 次の要素を取得
 // var elements = document.getElementById("menuTrigger0");

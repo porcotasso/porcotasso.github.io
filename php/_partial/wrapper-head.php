@@ -3,7 +3,6 @@
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/_variable.php"); ?>
 <!-- code-prettify -->
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=css&skin=desert"></script> -->
 
 <head>
     <meta charset="utf-8">
@@ -16,10 +15,25 @@
     <?php if($_SERVER['REQUEST_URI'] == "/php/pages/index.php"){ ?>
         <link rel="stylesheet" href="/css/home.css">
     <?php } ?>  
+    <!-- google font Pacifico for title -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <title><?php echo $title ?></title>
+    <title>
+        <?php foreach($pageLists as $list){ ?>
+            <?php foreach($list["pages"] as $value){
+                echo $value["html"]; ?>
+                <br>
+                <?php echo $_SERVER['REQUEST_URI']; ?>
+                <br><br>
+                <?php if($value["html"] == $_SERVER['REQUEST_URI']){
+                    echo $value["title"];
+                    break; 
+                }
+            }
+        } ?>
+    </title>
 </head>
 <body>
+
     <header class="ly-header js-headerSmaller" id="js-headerTrigger">  
         <nav class="ly-header__inner">
             <?php if($_SERVER['REQUEST_URI'] == "/php/pages/index.php"){ ?>

@@ -5,20 +5,21 @@
     <article>
         <header>
             <h1><?php echo $title ?></h1>
-            <p>ファビコン、アイコンを設置する</p>
+            <p>Favicon、アイコンを設置する方法</p>
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                 <ol>
-                    <li>ファビコン、アイコンの種類</li>
-                    <li>フォーマットとコード</li>
+                    <li>Favicon、アイコンの種類</li>
+                    <li>フォーマット</li>
+                    <li>コード</li>
                 </ol>
             </nav>
         </header>
         <section class="ly-section">
-            <h2>ファビコン、アイコンの種類</h2>
-            <p>faviconはfavorite icon”の略語でウェブサイトのシンボルマーク・イメージとして、サイトに配置するアイコンの俗称です。閲覧中のタブなどに表示し潜在層にサイトを認知させる目的があります。現在は様々なサイズのデバイスがありサイズも20以上。ただ最大のサイズで画像を用意しておけば自動で縮小されるので全種類用意する必要はない。</p>
-            <p>ファビコン、アイコンは主に４つに分けられます。</p>
-            <h3>favicon</h3>
+            <h2>Favicon、アイコンの種類</h2>
+            <p>faviconはfavorite icon”の略語でウェブサイトのシンボルマーク・イメージとして、サイトに配置するアイコンの俗称です。閲覧中のタブなどに表示し潜在層にサイトを認知させる目的があります。現在は様々なサイズのデバイスがあり全サイズを準備するのは大変ですが、最大のサイズで画像を用意しておけば自動で縮小されるので全種類用意する必要はないでしょう。</p>
+            <p>Favicon、アイコンは主に４つに分けられます。</p>
+            <h3>Favicon</h3>
             <p>ブラウザのタブ、ブックマークしたページタイトルの左に表示されるもの</p>
             <h3>apple-touch-icon</h3>
             <p>iPhoneやiPadのsafariでWebサイトのショートカットをホーム画面に作成した時に表示されるアイコン。</p>
@@ -44,48 +45,41 @@
             <h3>実際に必要なもの</h3>     
         </section>
         <section class="ly-section">
-            <h2>フォーマットとコード</h2>
-            <p>faviconはico形式、apple-touch-iconとandroid-touch-iconはpng形式で作ります。画像をルートディレクトリに置く場合はheadタグに特に記述がなくともクローラーがfaviconと認識する。画像をルートディレクトリ以外に置く場合はhaedタグ内の画像の場所を指定する。</p>
-            <h3>favicon</h3>
-            <p>ico形式</p>
+            <h2>画像フォーマット</h2>
+            <p>faviconはico形式、apple-touch-icon、android-touch-icon、Windows用アイコンはpng形式で作ります。画像をルートディレクトリに置く場合はheadタグに特に記述がなくともクローラーがfaviconと認識します。画像をルートディレクトリ以外に置く場合はhaedタグ内などに画像の場所を指定します。ファビコン、アイコン用フォルダを作ってまとめた方がわかりやすいです。</p>
+            <h3>ico形式</h3>
+            <p>元となる大きめの高画質画像を準備します。Faviconは基本表示サイズが小さいので小さく表示されてもちゃんと見えるようにする必要があります。元画像ができたらFaviconジェネレーターでicoファイルを作成します。</p>
             <cite class="ly-cite"><a href="https://favicon-generator.mintsu-dev.com/" <?php echo $targetBlank ?>>Favicon ジェネレーター</a></cite>
-            <link rel="icon" href="/images/favicon/favicon.ico"> 
-            
+            <h3>png画像</h3>
+            <p>使う場所の用途を理解して実寸サイズでそれぞれ制作します。</p>
+            <p>apple-touch-icon：180x180pxのpng画像</p>
+            <p>android-touch-icon：192x192pxのpng画像</p>
+            <p>Windows用アイコン：70x70px、150x150、310x150、310x310のpng画像</p>
+
+            <h2>コード</h2>
+            <h3>Favicon、apple-touch-icon、android-touch-ico用コード</h3>
+            <p>この３つの設定はheadタグでコードを追加します。</p>
             <pre class="prettyprint linenums">
-            <link rel="icon" href="/images/favicon/favicon.ico">
+                <link rel="icon" href="/image/favicon/favicon.ico">
+                <link rel="apple-touch-icon" sizes="180x180" href="/image/favicon/apple-touch-icon.png">
+                <link rel="android-touch-icon" sizes="192x192" href="/image/favicon/android-touch-icon.png">
             </pre>
-
-            <pre><link rel="icon" href="/images/favicon/favicon.ico"></pre>
-
-            <h3>apple-touch-icon</h3>
-            <p>180x180pxのpng画像</p>
-
-            <pre class="prettyprint linenums">
-            &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;180x180&quot; href=&quot;/images/favicon/apple-touch-icon.png&quot;&gt;
-            </pre>
-  
-            <pre class="code prettyprint linenums" contenteditable="true" soellcheck="false" style="">
-            <ol class="linenums">
-            <li class="L0"><span class="tag">&lt;pre&gt;&lt;code</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"prettyprint lang-css"</span><span class="tag">&gt;</span></li>
-            <li class="L1"><span class="com">&lt;!-- ここにソースコードを貼り付ける --&gt;</span></li>
-            <li class="L2"><span class="tag">&lt;/code&gt;&lt;/pre&gt;</span></li>
-            </ol>
-            </pre>
-
-            <h3>android-touch-icon</h3>
-            <p>192x192pxのpng画像</p>
-            <code>link rel="android-touch-icon" sizes="192x192" href="/images/favicon/android-touch-icon.png"</code>
             <h3>Windows用アイコン</h3>
-            <p></p>
-            <code>
-                <!-- Windows用アイコン -->
-                <meta name="application-name" content="{サイト名}"/>
-                <meta name="msapplication-square70x70logo" content="small.jpg"/>
-                <meta name="msapplication-square150x150logo" content="medium.jpg"/>
-                <meta name="msapplication-wide310x150logo" content="wide.jpg"/>
-                <meta name="msapplication-square310x310logo" content="large.jpg"/>
-                <meta name="msapplication-TileColor" content="#FAA500"/>
-            </code>
+            <p>browserconfig.xmlファイルをルートディレクトリにファイル作成して、それぞれの画像を指定します。</p>
+            <pre>
+                <?xml version="1.0" encoding="utf-8"?>
+                <browserconfig>
+                <msapplication>
+                <tile>
+                <square70x70logo src="image/favicon/tileImg-70x70.png"/>
+                <square150x150logo src="image/favicon/tileImg-150x150.png"/>
+                <square310x310logo src="image/favicon/tileImg-310x310.png"/>
+                <wide310x150logo src="image/favicon/tileImg-310x150.png"/>
+                <TileColor>#ffffff</TileColor>
+                </tile>
+                </msapplication>
+                </browserconfig> 
+            </pre>
         </section>
         <section class="ly-section">
             <h3>参考</h3>
