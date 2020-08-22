@@ -12,7 +12,7 @@ ul.noListStyle{
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-// 複数行でテキスト切り捨て
+// 複数行でテキスト切り捨て 3行
 .threeLinesTruncate{
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
@@ -70,4 +70,16 @@ ul.noListStyle{
 			}
 		}
 	}
+}
+
+// コード表示で自動で閉じタグがつく特殊問題の対処。pre ではなく div　で囲いスタイルを追加する。favicon.php で使用
+.displayCode{
+	word-break: break-all;
+    background: #333;
+    color: #ececec;
+    font-size: $font-size-14;
+    overflow: auto;
+	white-space: nowrap;
+	padding: 10px;
+	margin-bottom: 2rem;
 }

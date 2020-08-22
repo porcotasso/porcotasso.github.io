@@ -26,6 +26,7 @@
                         if($value["file"] == $_SERVER['REQUEST_URI']){
                             echo $value["title"];
                             $title = $value["title"];
+                            $lead = $value["lead"];
                             break;
                         }
                     }
@@ -52,7 +53,7 @@
             
             <ul class="headerNav" id="header-nav">
                 <?php foreach($pageLists as $list){ ?>
-                <li class="headerNav_list"><a href="<?php echo $list["html"]; ?>"><?php echo $list["title"]; ?></a></li>
+                <li class="headerNav_list"><?php echo $list["title"]; ?></li>
                 <li>
                     <ul class="headerNav_subNav">
                         <?php foreach($list["pages"] as $value){ ?>

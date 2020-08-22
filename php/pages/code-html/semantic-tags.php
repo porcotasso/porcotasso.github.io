@@ -1,8 +1,9 @@
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
 <main class="ly-baseWrap ly-UnderheaderSpace"> 
-    <article>
+    <article class="articleCnt">
         <header>
             <h1><?php echo $title ?></h1>
+            <p><?php echo $lead ?></p>
             <p>クローラーや読み上げソフトが、タグから各コンテンツの役割がわかるように。記述するコンテンツの意味に合ったタグを使ってマークアップすることをセマンティックHTMLと呼びます。検索エンジン最適化
 Webにおいて、みなさんが特に気にするのは検索エンジン最適化（SEO）の部分かと思います。Googleで検索した際に上位に表示されてほしい、という話はよく聞きますが、そういった部分にセマンティックHTMLは関わってきます。
 検索エンジンは「機械」です。HTMLコンテンツをスキャンする際に、検索エンジンが理解しやすいように作っておくことでSEOにおいて優位になります。GoogleもセマンティックHTMLを推奨しています。

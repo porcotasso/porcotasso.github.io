@@ -1,8 +1,9 @@
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
 <main class="ly-baseWrap ly-UnderheaderSpace"> 
-    <article>
+    <article class="articleCnt">
         <header>
             <h1><?php echo $title ?></h1>
+            <p><?php echo $lead ?></p>
             <p>名前からクラスの目的やスコープがわかりやすいようにする。</p>
             <nav>
                 <div>目次</div>

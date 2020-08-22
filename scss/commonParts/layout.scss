@@ -91,12 +91,11 @@
 		&_list{
 			margin: 0;
 			border-top: 1px solid $gray-200;
-			a{
-				display: block;
-				padding: 20px 16px 12px 20px;
-				font-size: $font-size-16;
-				color: $font-black;
-			}
+			display: block;
+			padding: 8px 16px;
+			font-size: $font-size-16;
+			font-weight: bold;
+			color: $font-black;
 		}
 		&_subNav{
 			list-style: none;
@@ -174,9 +173,10 @@
 .ly-cite{
 	padding: 16px;
     display: block;
-    border: 1px solid $border-gyay;
+    // border: 1px solid $border-gyay;
     border-radius: 4px;
-    margin: 16px 0 24px;
+	margin: 16px 0 24px;
+	background: $gray-200;
 }
 
   

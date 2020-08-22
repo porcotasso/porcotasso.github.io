@@ -48,6 +48,7 @@ hr {
 // h1以外はコンテンツの途中で使用されると想定し上のスペースを保証する。
 h2, h3, h4, h5, h6 {
   margin-top: 1em;
+  margin-bottom:1em;
 }
 h1{
   font-size: $font-size-19;
@@ -55,15 +56,15 @@ h1{
   margin:0 0 30px;
 }
 h2{
-  font-size: $font-size-16;
+  font-size: $font-size-17;
   font-weight: bold;
   // border-left: 2px solid $font-black;
   // padding:2px 2px 2px 4px;
   // line-height: 1;
 }
 h3{
-  font-size: $font-size-15;
-  font-weight: bold;
+  font-size: $font-size-16;
+  // font-weight: bold;
   // border: 1px solid $font-black;
   // padding: 2px 10px;
   // display: inline-block;
@@ -187,7 +188,7 @@ img{
  
  pre {
    margin-top: 0;
-   margin-bottom: 1rem;
+   margin-bottom: 2rem;
    overflow: auto;
  }
  

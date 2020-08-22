@@ -127,7 +127,7 @@
                 <li class="bl-contentsList_cnt js-accordionTrigger">
                     <div class="bl-contentsList_index">
                        <h2 class="bl-contentsList_ttl"><?php echo $list["title"]; ?></h2>
-                       <p class="bl-contentsList_txt"><?php echo $list["short-description"]; ?></p>
+                       <p class="bl-contentsList_txt"><?php echo $list["lead"]; ?></p>
                     </div>
                 </li>
                 <li class="bl-contentsList_menu">

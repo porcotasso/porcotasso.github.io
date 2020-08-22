@@ -1,9 +1,9 @@
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
 <main class="ly-baseWrap ly-UnderheaderSpace"> 
-    <article>
+    <article class="articleCnt">
         <header>
             <h1><?php echo $title ?></h1>
-            <p>クローラーや読み上げソフトが、タグから各コンテンツの役割がわかるように。</p>
+            <p><?php echo $lead ?></p>
             <nav>
                 <div>目次</div>
                 <ol>

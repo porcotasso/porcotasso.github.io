@@ -1,10 +1,10 @@
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
 <?php $title = $gulpfile["title"] ?>
 <main class="ly-baseWrap ly-UnderheaderSpace"> 
-    <article>
+    <article class="articleCnt">
         <header>
             <h1><?php echo $title ?></h1>
-            <p>aaaa</p>
+            <p><?php echo $lead ?></p>
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                 <ol>

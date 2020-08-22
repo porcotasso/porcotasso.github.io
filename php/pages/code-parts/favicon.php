@@ -1,9 +1,9 @@
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
 <main class="ly-baseWrap ly-UnderheaderSpace"> 
-    <article>
+    <article class="articleCnt">
         <header>
             <h1><?php echo $title ?></h1>
-            <p>favicon、アイコンを設置する方法</p>
+            <p><?php echo $lead ?></p>
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                 <ol>
@@ -15,7 +15,7 @@
         </header>
         <section class="ly-section">
             <h2>favicon、アイコンの種類</h2>
-            <p>faviconはfavorite icon”の略語でウェブサイトのシンボルマーク・イメージとして、サイトに配置するアイコンの俗称です。閲覧中のタブなどに表示し潜在層にサイトを認知させる目的があります。現在は様々なサイズのデバイスがあり表示されるサイズの種類数は多いですが、最大のサイズで画像を用意しておけば自動で縮小されるので全種類用意する必要はないでしょう。</p>
+            <p>現在は様々なサイズのデバイスがあり表示されるサイズの種類数は多いですが、最大のサイズで画像を用意しておけば自動で縮小されるので全種類用意する必要はないでしょう。</p>
             <p>favicon、アイコンは主に４つに分けられます。</p>
             <h3>favicon</h3>
             <p>ブラウザのタブ、ブックマークしたページタイトルの左に表示されるもの</p>
@@ -57,7 +57,7 @@
             <h3>favicon、apple-touch-icon、android-touch-ico用コード</h3>
             <p>この３つの設定はheadタグでコードを追加します。</p>
 
-<pre class="prettyprint linenums">
+<pre class="prettyprint">
 <link rel="icon" href="/image/favicon/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="/image/favicon/apple-touch-icon.png">
 <link rel="android-touch-icon" sizes="192x192" href="/image/favicon/android-touch-icon.png">
@@ -65,22 +65,20 @@
 
             <h3>Windows用アイコン</h3>
             <p>browserconfig.xmlファイルをルートディレクトリにファイル作成して、それぞれの画像を指定します。</p>
-
-<pre class="prettyprint linenums">
-<?xml version="1.0" encoding="utf-8"?>
-<browserconfig>
-　<msapplication>
-　　<tile>
-　　　<square70x70logo src="/image/favicon/tileImg-70x70.png"/>
-　　　<square150x150logo src="/image/favicon/tileImg-150x150.png"/>
-　　　<square310x310logo src="/image/favicon/tileImg-310x310.png"/>
-　　　<wide310x150logo src="/image/favicon/tileImg-310x150.png"/>
-　　　<TileColor>#ffffff</TileColor>
-　　</tile>
-　</msapplication>
-</browserconfig> 
-</pre>
-
+<div class="displayCode">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;browserconfig&gt;<br>
+　&lt;msapplication&gt;<br>
+　　&lt;tile&gt;<br>
+　　　&lt;square70x70logo src=&quot;/image/favicon/tileImg-70x70.png&quot;/&gt;<br>
+　　　&lt;square150x150logo src=&quot;/image/favicon/tileImg-150x150.png&quot;/&gt;<br>
+　　　&lt;square310x310logo src=&quot;/image/favicon/tileImg-310x310.png&quot;/&gt;<br>
+　　　&lt;wide310x150logo src=&quot;/image/favicon/tileImg-310x150.png&quot;/&gt;<br>
+　　　&lt;TileColor&gt;#ffffff&lt;/TileColor&gt;<br>
+　　&lt;/tile&gt;<br>
+　&lt;/msapplication&gt;<br>
+&lt;/browserconfig&gt; 
+</div>
         </section>
         <section class="ly-section">
             <h3>参考</h3>

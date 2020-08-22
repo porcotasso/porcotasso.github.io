@@ -1,5 +1,5 @@
 @import "variables";
-
+// home
 .bl-contentsList{
     list-style: none;
     padding: 0;
@@ -58,4 +58,27 @@
         }
       }
     }
+}
+
+// コンテンツのページのarticle タグに追加し、hタグなどのスタイルを統一させる
+.articleCnt{
+  h1{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px dotted #f76eb5;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+  h2{
+    // font-size: $font-size-17;
+    border-left: 2px solid #f76eb5;
+    padding: 0 2px 0 6px;
+    margin: 3em 0 2em;
+  }
+  h3{
+    border: 1px solid $font-black;
+    padding: 1px 10px;
+    display: inline-block;
+    font-weight: normal;
+  }
 }

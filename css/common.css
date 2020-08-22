@@ -35,7 +35,8 @@ hr {
   overflow: visible; }
 
 h2, h3, h4, h5, h6 {
-  margin-top: 1em; }
+  margin-top: 1em;
+  margin-bottom: 1em; }
 
 h1 {
   margin: 0 0 30px;
@@ -43,12 +44,11 @@ h1 {
   font-weight: bold; }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: bold; }
 
 h3 {
-  font-size: 1.5rem;
-  font-weight: bold; }
+  font-size: 1.6rem; }
 
 p {
   margin: 0 0 2rem; }
@@ -151,7 +151,7 @@ samp {
 
 pre {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   overflow: auto; }
 
 figure {
@@ -374,13 +374,13 @@ template {
       opacity: 0;
       transition: 0.25s; }
       .ly-header__inner .headerNav_list {
+        display: block;
         margin: 0;
-        border-top: 1px solid #e9ecef; }
-        .ly-header__inner .headerNav_list a {
-          display: block;
-          padding: 20px 16px 12px 20px;
-          color: #222;
-          font-size: 1.6rem; }
+        padding: 8px 16px;
+        border-top: 1px solid #e9ecef;
+        color: #222;
+        font-size: 1.6rem;
+        font-weight: bold; }
       .ly-header__inner .headerNav_subNav {
         padding: 0;
         list-style: none; }
@@ -433,8 +433,8 @@ template {
   display: block;
   margin: 16px 0 24px;
   padding: 16px;
-  border: 1px solid #dee2eb;
-  border-radius: 4px; }
+  border-radius: 4px;
+  background: #e9ecef; }
 
 .bl-contentsList {
   padding: 0;
@@ -478,6 +478,24 @@ template {
       opacity: 1; }
       .bl-contentsList_menu.is-open ul li {
         padding: 10px; }
+
+.articleCnt h1 {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px dotted #f76eb5;
+  letter-spacing: 0.1em;
+  text-align: center; }
+
+.articleCnt h2 {
+  margin: 3em 0 2em;
+  padding: 0 2px 0 6px;
+  border-left: 2px solid #f76eb5; }
+
+.articleCnt h3 {
+  display: inline-block;
+  padding: 1px 10px;
+  border: 1px solid #222;
+  font-weight: normal; }
 
 ul.noListStyle {
   margin-bottom: 0;
@@ -531,10 +549,23 @@ ul.noListStyle {
       transform: translate(3px, -50%) rotate(45deg);
       border-color: #fff; }
 
+.displayCode {
+  margin-bottom: 2rem;
+  padding: 10px;
+  overflow: auto;
+  background: #333;
+  color: #ececec;
+  font-size: 1.4rem;
+  white-space: nowrap;
+  word-break: break-all; }
+
 /* desert scheme ported from vim to google prettify */
 pre.prettyprint {
   display: block;
-  background-color: #333; }
+  padding: 10px;
+  background-color: #333;
+  font-size: 1.3rem;
+  word-break: break-all; }
 
 pre .nocode {
   background-color: none;
@@ -595,7 +626,10 @@ ol.linenums {
 /* IE indents via margin-left */
 li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
   background-color: #333;
-  list-style-type: none; }
+  font-size: 1.3rem;
+  list-style-type: none;
+  white-space: pre-wrap;
+  word-break: break-all; }
 
 /* Alternate shading for lines */
 @media print {

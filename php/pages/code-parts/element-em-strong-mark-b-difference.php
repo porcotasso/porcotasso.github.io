@@ -1,9 +1,9 @@
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
 <main class="ly-baseWrap ly-UnderheaderSpace"> 
-    <article>
+    <article class="articleCnt">
         <header>
             <h1><?php echo $title ?></h1>
-            <p>「em要素」「strong要素」「mark要素」「b要素」の違いが理解して明確に使い分けよう。<br>基本的にはセマンティックマークアップとして利用するのが目的で装飾を前提に使用しない。</p>
+            <p><?php echo $lead ?></p>
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                 <ol>
