@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded",() => {
   }
 });
 
-// HEADER SMALL
+// HEADER SMALL after scroll
 function init() {
 	var px_change = 80;
 	let header = document.getElementsByClassName('js-headerSmaller');
@@ -31,6 +31,39 @@ function init() {
 	});
 }
 window.onload = init();
+
+// escape code in pre tag
+var escapeHtml = (function (String) {
+  var escapeMap = {
+    '&': '&amp;',
+    "'": '&#x27;',
+    '`': '&#x60;',
+    '"': '&quot;',
+    '<': '&lt;',
+    '>': '&gt;'
+  };
+  var escapeReg = '[';
+  var reg;
+  for (var p in escapeMap) {
+    if (escapeMap.hasOwnProperty(p)) {
+      escapeReg += p;
+    }
+  }
+  escapeReg += ']';
+  reg = new RegExp(escapeReg, 'g');
+  return function escapeHtml (str) {
+    str = (str === null || str === undefined) ? '' : '' + str;
+    return str.replace(reg, function (match) {
+      return escapeMap[match];
+    });
+  };
+}(String));
+var pre = document.querySelectorAll('pre');
+for(var i = 0; i < pre.length; i++) {
+  pre[i].innerHTML = escapeHtml(pre[i].innerHTML);
+}
+
+
 
 // HEADER SMALL jQuery
 // function init() {

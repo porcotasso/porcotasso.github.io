@@ -1,10 +1,11 @@
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
 <?php $title = $favicon["title"] ?>
+
 <main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article>
         <header>
             <h1><?php echo $title ?></h1>
-            <p>ファビコン、アイコンを準備する</p>
+            <p>ファビコン、アイコンを設置する</p>
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                 <ol>
@@ -15,8 +16,8 @@
         </header>
         <section class="ly-section">
             <h2>ファビコン、アイコンの種類</h2>
-            <p>faviconはfavorite icon”の略語でウェブサイトのシンボルマーク・イメージとして、サイトに配置するアイコンの俗称です。閲覧中のタブなどに表示し潜在層にサイトを認知させる目的があります。</p>
-            <p>ファビコン、アイコンは４つに分けられます。</p>
+            <p>faviconはfavorite icon”の略語でウェブサイトのシンボルマーク・イメージとして、サイトに配置するアイコンの俗称です。閲覧中のタブなどに表示し潜在層にサイトを認知させる目的があります。現在は様々なサイズのデバイスがありサイズも20以上。ただ最大のサイズで画像を用意しておけば自動で縮小されるので全種類用意する必要はない。</p>
+            <p>ファビコン、アイコンは主に４つに分けられます。</p>
             <h3>favicon</h3>
             <p>ブラウザのタブ、ブックマークしたページタイトルの左に表示されるもの</p>
             <h3>apple-touch-icon</h3>
@@ -40,8 +41,7 @@
             </blockquote>
             <h3>Windows用アイコン</h3>
             <p>Windows8やWindows10のスタート画面にWebサイトをピン留めした時の表示をリッチにしたい場合は、Windows用アイコンの設定を行いましょう。</p>
-            <h3>実際に必要なもの</h3>
-            <p>現在は様々なサイズのデバイスがありサイズも20以上。ただ最大のサイズで画像を用意しておけば自動で縮小されるので全種類用意する必要はない。パ特殊な例としてWindowsのスタートメニューに表示されるパネル、タスクバーにピン留めした際に表示される画像もあるが、どこまで対応するのかをまず確認したほうが良い。サイトを目立たせる・ブランディング効果が目的なら最低限上記の2パターン用意で良い。</p>      
+            <h3>実際に必要なもの</h3>     
         </section>
         <section class="ly-section">
             <h2>フォーマットとコード</h2>
@@ -50,10 +50,28 @@
             <p>ico形式</p>
             <cite class="ly-cite"><a href="https://favicon-generator.mintsu-dev.com/" <?php echo $targetBlank ?>>Favicon ジェネレーター</a></cite>
             <link rel="icon" href="/images/favicon/favicon.ico"> 
-            <code>link rel="icon" href="/images/favicon/favicon.ico"</code>
+            
+            <pre class="prettyprint linenums">
+            <link rel="icon" href="/images/favicon/favicon.ico">
+            </pre>
+
+            <pre><link rel="icon" href="/images/favicon/favicon.ico"></pre>
+
             <h3>apple-touch-icon</h3>
             <p>180x180pxのpng画像</p>
-            <code>link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png"</code>
+
+            <pre class="prettyprint linenums">
+            &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;180x180&quot; href=&quot;/images/favicon/apple-touch-icon.png&quot;&gt;
+            </pre>
+  
+            <pre class="code prettyprint linenums" contenteditable="true" soellcheck="false" style="">
+            <ol class="linenums">
+            <li class="L0"><span class="tag">&lt;pre&gt;&lt;code</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"prettyprint lang-css"</span><span class="tag">&gt;</span></li>
+            <li class="L1"><span class="com">&lt;!-- ここにソースコードを貼り付ける --&gt;</span></li>
+            <li class="L2"><span class="tag">&lt;/code&gt;&lt;/pre&gt;</span></li>
+            </ol>
+            </pre>
+
             <h3>android-touch-icon</h3>
             <p>192x192pxのpng画像</p>
             <code>link rel="android-touch-icon" sizes="192x192" href="/images/favicon/android-touch-icon.png"</code>
@@ -76,4 +94,8 @@
         </section>
     </article>
 </main>
+<script>
+
+
+</script>
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-foot.php"); ?>

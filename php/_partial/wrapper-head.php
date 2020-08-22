@@ -1,9 +1,14 @@
 <!doctype html>
 <html lang="ja">
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/_variable.php"); ?>
+<!-- code-prettify -->
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=css&skin=desert"></script> -->
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- favicon and App icon -->
     <link rel="icon" href="/images/favicon/favicon.ico">             
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
     <link rel="android-touch-icon" sizes="192x192" href="/images/favicon/android-touch-icon.png" >
