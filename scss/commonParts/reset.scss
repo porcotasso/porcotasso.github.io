@@ -131,6 +131,8 @@ img{
  
  blockquote {
    margin: 0 0 1rem;
+   background:$bg-light-gray;
+   padding:16px;
  }
  
  b,
@@ -191,7 +193,9 @@ img{
    margin-bottom: 2rem;
    overflow: auto;
  }
- 
+ code{
+   word-break: break-all;// defaultだとコードの途中で単語で改行されて読みにくいので、文字で改行に変更
+ }
  figure {
    margin: 0 0 1rem;
  }

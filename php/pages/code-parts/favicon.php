@@ -6,15 +6,21 @@
             <p><?php echo $lead ?></p>
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
+
+                <?php $navList = array("favicon、アイコンの種類", "画像フォーマット", "コード"); ?>
                 <ol>
-                    <li>favicon、アイコンの種類</li>
-                    <li>フォーマット</li>
-                    <li>コード</li>
+                    <?php for($i = 0; $i < count($navList); $i++){ ?>
+                    <li>
+                        <a href="#<?php echo $i + 1; ?>" class="">
+                            <div class=""><?php echo $navList[$i]; ?></div>
+                        </a>
+                    </li>
+                    <?php } ?>
                 </ol>
             </nav>
         </header>
-        <section class="ly-section">
-            <h2>favicon、アイコンの種類</h2>
+        <section class="ly-section" id="1">
+            <h2 >favicon、アイコンの種類</h2>
             <p>現在は様々なサイズのデバイスがあり表示されるサイズの種類数は多いですが、最大のサイズで画像を用意しておけば自動で縮小されるので全種類用意する必要はないでしょう。</p>
             <p>favicon、アイコンは主に４つに分けられます。</p>
             <h3>favicon</h3>
@@ -26,7 +32,7 @@
             <h3>android-touch-icon</h3>
             <p>AndroidでWebサイトのショートカットをホーム画面に作成した時に表示されるアイコン。</p>
             <p>Google公式ページガイドライン</p>
-            <blockquote cite="https://support.google.com/webmasters/answer/9290858?hl=ja">
+            <blockquote>
                 <p>検索結果の横にファビコンを表示するには、次のガイドラインに準拠する必要があります。なお、すべてのガイドラインが満たされても、ファビコンが検索結果に表示されるかは保証されません。</p>
                 <ul>
                     <li>Googleがファビコンのファイルとホームページをクロールできること（Googleをブロックしないこと）。</li>
@@ -41,7 +47,7 @@
             <h3>Windows用アイコン</h3>
             <p>Windows8やWindows10のスタート画面にWebサイトをピン留めした時の表示をリッチにしたい場合は、Windows用アイコンの設定を行いましょう。</p>  
         </section>
-        <section class="ly-section">
+        <section class="ly-section" id="2">
             <h2>画像フォーマット</h2>
             <p>faviconはico形式、apple-touch-icon、android-touch-icon、Windows用アイコンはpng形式で作ります。画像をルートディレクトリに置く場合はheadタグに特に記述がなくともクローラーがfaviconと認識します。画像をルートディレクトリ以外に置く場合はhaedタグ内などに画像の場所を指定します。ファビコン、アイコン用フォルダを作ってまとめた方がわかりやすいです。</p>
             <h3>ico形式</h3>
@@ -52,7 +58,8 @@
             <p>apple-touch-icon：180x180pxのpng画像</p>
             <p>android-touch-icon：192x192pxのpng画像</p>
             <p>Windows用アイコン：70x70px、150x150、310x150、310x310のpng画像</p>
-
+        </section>
+        <section class="ly-section" id="3">
             <h2>コード</h2>
             <h3>favicon、apple-touch-icon、android-touch-ico用コード</h3>
             <p>この３つの設定はheadタグでコードを追加します。</p>
@@ -65,7 +72,7 @@
 
             <h3>Windows用アイコン</h3>
             <p>browserconfig.xmlファイルをルートディレクトリにファイル作成して、それぞれの画像を指定します。</p>
-<div class="displayCode">
+<code class="displayCode">
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;browserconfig&gt;<br>
 　&lt;msapplication&gt;<br>
@@ -78,7 +85,7 @@
 　　&lt;/tile&gt;<br>
 　&lt;/msapplication&gt;<br>
 &lt;/browserconfig&gt; 
-</div>
+</code>
         </section>
         <section class="ly-section">
             <h3>参考</h3>

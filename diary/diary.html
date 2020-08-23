@@ -15,7 +15,7 @@
     <!-- google font Pacifico for title -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>
-        各タグ要素について    </title>
+            </title>
 </head>
 <body>
 
@@ -130,58 +130,27 @@
     </header><main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
-            <h1>各タグ要素について</h1>
-            <p>各タグのスタイルをどうするかは、考え方やサイトのないようによりますが、できるだけなぜそうしたかを明確にしておくことで修正がしやすくなるのでメモ。</p>
-            <nav>
-                <div>目次</div>
-                <ol>
-                    <li>Pタグ</li>
-                    <li>リストタグ</li>
-                </ol>
-            </nav>
+            <h1>制作日記</h1>
+            <p>やってることをメモ的に書いています。</p>
         </header>
         <section class="ly-section">
-            <h2>Pタグ</h2>
-            <p>pタグは「Paragraph」の略です。文章のひとかたまりだけでなく、テキストを使う用途でいろんな使われ方をするので、スタイルの指定が難しいです。ただ、個人的には、複数行にわたる文章を基本として設定するのがいいと思うので、長文が読みやすいスタイルを指定します。具体的にはline-heightを1.8~2 letter-space0.05em など通常よりスペースを開けています。フォントサイズは大きければいいというものでないので、mobileで1.4rem、PCで1.6remあたりを基本に考えています。</p>
-        </section>
-        <section class="ly-section">
-            <h2>aタグ</h2>
-<pre class="prettyprint">
-a{
-    outline: 0;
-    cursor: pointer;
-    text-decoration:none;
-    color: #222;
-}
-</pre>
-        </section>
-        <section class="ly-section">
-            <h2>リストタグ</h2>
-            <p>文章中のリストだけでなく、メニュー、パンくずリストなどでも使われるので、list-styleの設定をnoneにするかどうか、サイトの内容によって変えます。</p>
-        </section>
-        <section class="ly-section">
-            <h2>モバイルの左右幅。ガターについて</h2>
-            <p>機種によってモバイルの幅が違い、狭いものと広いものの差は、かなり大きいので、端の幅はピクセル固定せずに425px 20px 320px 16pxのように比率で変えたほうが見やすいと考えています。</p>
-        </section>
-        <section class="ly-section">
-            <h2>preタグとcodeタグ</h2>
-            <h3>pre</h3>
-            <p>Preformatted Text（整形済テキスト）という意味で、入力したソースのまま表示することができます。不要な空欄、タブもそのまま表示されるので使用できません。特殊文字は表示できないので、記号を使ってエスケープする必要があります。</p>
-            <cite class="ly-cite"><a href="https://webtools.dounokouno.com/htmlescape/" target="_blank" rel="noopener noreferrer">Web制作小物ツール</a></cite>
-            <h3>code</h3>
-            Computer Codeの略。codeタグで囲んだ文字列がソースコードであることを示します。等幅フォントで表示される。改行やインデントなどはcodeでは反映されない（サイトによってはされると書いてあるようですが）。
-        </section>
-        <section>
-            <h2>timeタグ</h2>
-            <p>timeタグはコンピュータやブラウザが日付や時刻を理解できるようにするのを目的に、グレゴリオ暦による時刻で正確に示す際に使用します。日時を記述するのに必ずtimeタグを使用しなくてはならないわけではないです。datetime属性は日付や時刻を指定します。datetime属性を省略する場合には、timeタグの中に記述します。</p>
-        </section>
-        <section>
-            <h2>blockquote・q・citeタグ</h2>
-            <cite class="ly-cite"><a href="https://nandemo-nobiru.com/2159/" target="_blank" rel="noopener noreferrer">なんでものびるWEB</a></cite>
-        </section>
-        <section class="ly-section">
-            <h3>参考</h3>
-            <cite class="ly-cite"><a href="https://wunderstand.net/1417/" target="_blank" rel="noopener noreferrer">html5のarticle・section等、まとめる要素まとめ</a></cite>
+            <h2><time>2020年</time></h2>
+            <time class="dairyTime" datetime="2020-08-23">8月23日</time>
+            <p>日記ページ作成。timeタグを調べる。</p>
+            <p>preタグとcodeタグの違いを調べる。改行やインデントなどはcodeは反映されない。</p>
+            <p>faviconページに目次と内部リンクを追加。使った時に、ヘッダーの下に表示される問題が解決。これまで使ってた方法よりかなり楽になった。htmlタグにscroll-padding-top: 80px;を入れる。</p>
+            <time class="dairyTime" datetime="2020-08-22">8月22日</time>
+            <p>
+                faviconページでコードを表示させようとしたところ、勝手に閉じタグが挿入される問題。原因不明。対処方不明。
+                <code>　&lt;square70x70logo src=&quot;/image/favicon/tileImg-70x70.png&quot;/&gt;</code>php->htmlの変換では問題ない。
+                .htmlファイルをブラウザで表示させる段階で勝手に追加される。例えば上のコード一行だけ書いたhtmlファイルをブラウザで表示させると、勝手に閉じタグがつく。chrome, safari両方同じ。jsでpre内の特殊文字の自動エスケープをしていたので、codeタグに変更してエスケープして表示させ、それ用のスタイルを追加して対応。
+            </p>
+            <p>各ページのheadタグ内のtitleタグの中を自動にしたい。wrapper-head.php内でどのページで利用するのか判別できてなかったので、<code>$_SERVER['REQUEST_URI']</code>とvariable内のurlで、判別。ついでにtitle leadも各ページで読み込めるようにしておいた。</p>
+            <time class="dairyTime" datetime="2020-08-21">8月21日</time>
+            <p>code pretty を導入。そのうちcode penも追加したい</p>
+            <time class="dairyTime" datetime="2020-08-20">8月20日</time>
+            <p>ファビコンの使い方があいまいだったので調べて実行。各情報も結構あいまいなものもある。明確にわけれたと思う。</p>
+
         </section>
     </article>
 </main>

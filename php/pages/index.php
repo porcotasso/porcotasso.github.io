@@ -121,6 +121,7 @@
             <!-- <img class="ly-homeIco_image" src="/images/common/icon.jpg" alt="porco tasso"> -->
         </div>
         <p class="ly-homeProfile"><b>このサイトはまだ制作中です。</b></p>
+        <a href="diary/diary.html">制作日記、メモ</a>
         <nav>
             <ul class="bl-contentsList">
                 <?php foreach($pageLists as $list){ ?>

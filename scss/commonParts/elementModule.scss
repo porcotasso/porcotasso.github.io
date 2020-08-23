@@ -1,5 +1,16 @@
 @import "variables";
 
+html{
+	scroll-padding-top: 80px;
+}
+
+.blockquote{
+    margin: 0 0 28px;
+    padding: 30px 20px 35px 55px;
+    position: relative;
+    border: 1px #eee solid;
+}
+
 // menuなどで使うリスト
 ul.noListStyle{
 	list-style: none;
@@ -82,4 +93,5 @@ ul.noListStyle{
 	white-space: nowrap;
 	padding: 10px;
 	margin-bottom: 2rem;
+	display: block;
 }
