@@ -39,7 +39,7 @@ $categorizedCSS = array(
 $namingRule = array(
 	"file" => "/php/pages/code-css/naming-rule.php",
 	"title" => "命名ルール",
-	"lead" => "クラスの名前でスコープや役割が判断できるのが理想なので、",
+	"lead" => "クラス名からクラスの目的やスコープがわかるようにしておき、正確なコーディングに役立てる。",
 	"html" => "/code-css/naming-rule.html"
 );
 $codeCss = array(
@@ -65,8 +65,8 @@ $breakWord = array(
 );
 $elementEmStrongMarkB = array(
 	"file" => "/php/pages/code-parts/element-em-strong-mark-b-difference.php",
-	"title" => "em・strong・mark・b要素の違い",
-	"lead" => "「em要素」「strong要素」「mark要素」「b要素」の違いが理解して明確に使い分けよう。<br>基本的にはセマンティックマークアップとして利用するのが目的で装飾を前提に使用しない。",
+	"title" => "em,strong,mark,b,dfn,iの違い",
+	"lead" => "文字を目立たせるタグの違いが曖昧になりがちなので明確に使い分けたい。基本的にはセマンティックマークアップとして利用するのが目的で装飾を前提に使用しないこと。",
 	"html" => "/code-parts/element-em-strong-mark-b-difference.html"
 );
 $favicon = array(
@@ -93,7 +93,18 @@ $codeJs = array(
 	"lead" => "javascriptメモ",
 	"pages" => array($javascriptMemo)
 );
-
+// /php memo
+$phpMemo = array(
+	"file" => "/php/pages/code-php/php-memo.php",
+	"title" => "phpmemo",
+	"lead" => "メモ",
+	"html" => "/code-php/php-memo.html"
+);
+$codePhp = array(
+	"title" => "php",
+	"lead" => "phpメモ",
+	"pages" => array($phpMemo)
+);
 // /code-environment
 $gulpfile = array(
 	"file" => "/php/pages/code-env/gulpfile.php",
@@ -126,7 +137,7 @@ $workSite = array(
 	"pages" => array()
 );
 
-$pageLists = array($codeHtml, $codeCss, $codeParts, $codeJs, $codeEnv, $codeSvg, $workSite);
+$pageLists = array($codeHtml, $codeCss, $codeParts, $codeJs, $codePhp, $codeEnv, $codeSvg, $workSite);
 
 $targetBlank = 'target="_blank" rel="noopener noreferrer"';
 ?>
