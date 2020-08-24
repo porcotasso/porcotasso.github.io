@@ -1,8 +1,10 @@
 // HEADER MENU OPEN/CLOSE #menu-triggerをクリックで#js-headerTriggerがオンオフ
 var menuTrigger = document.getElementById("menu-trigger");
 var headerTrigger = document.getElementById("js-headerTrigger");
+var htmlTag = document.getElementsByTagName("html");
 menuTrigger.onclick = function() {
   headerTrigger.classList.toggle("active");
+  htmlTag[0].classList.toggle("scroll-prevent");
 };
 
 // HOME MENU OPEN/CLOSE #menu-triggerをクリックで#js-headerTriggerがオンオフ

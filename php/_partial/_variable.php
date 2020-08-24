@@ -24,7 +24,7 @@ $aboutTags = array(
 );
 $codeHtml = array(
 	"title" => "html",
-	"lead" => "html概要理解のためのメモ",
+	"lead" => "",
 	"html" => "/code-html/index.html",
 	"pages" => array($contentsModel, $semanticTags, $aboutTags)
 );
@@ -44,7 +44,7 @@ $namingRule = array(
 );
 $codeCss = array(
 	"file" => "/php/pages/code-html/contents-model.php",
-	"title" => "cssコーディング",
+	"title" => "css",
 	"lead" => "cssについての説明",
 	"html" => "/code-css/index.html",
 	"pages" => array($categorizedCSS, $namingRule)

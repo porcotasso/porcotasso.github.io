@@ -307,6 +307,15 @@ template {
 .ly-UnderheaderSpace {
   padding-top: 24px; }
 
+html.scroll-prevent {
+  /*奥行きを管理*/
+  z-index: -1;
+  /*動き固定*/
+  position: fixed;
+  /*下2つで背景を元のサイズのまま表示することができる*/
+  width: 100%;
+  height: 100%; }
+
 .ly-header {
   display: flex;
   z-index: 100;
@@ -363,6 +372,7 @@ template {
           bottom: 0; }
     .ly-header__inner .headerNav {
       display: none;
+      z-index: 102;
       position: absolute;
       top: 55px;
       width: 100vw;
