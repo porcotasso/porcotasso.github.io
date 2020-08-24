@@ -141,79 +141,114 @@
     <article class="articleCnt">
         <header>
             <h1>コンテンツ・モデル</h1>
-            <p>コンテンツ・モデルは要素内に置ける要素のルールです。</p>
-            <nav>
-            <div>目次</div>
-                <ol>
-                    <li>コンテンツ・モデルとは</li>
-                    <li>カテゴリーの種類</li>
-                </ol>
+            <p>HTML5では、このタグの中にはこのタグが配置できる、といった配置ルールが決められており、これをコンテンツ・モデル（Content models）といいます。</p>
+            <nav class="ly-mainNav">
+                <div class="el-mainNavTtl">目次</div>
+                                <ol>
+                                        <li>
+                        <a href="#1" class="">
+                            <div class="">コンテンツ・モデルとは</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#2" class="">
+                            <div class="">７つのカテゴリー</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#3" class="">
+                            <div class="">７つのカテゴリーに分類されない３つのルール</div>
+                        </a>
+                    </li>
+                                    </ol>
             </nav>
         </header>
-        <section class="ly-section">
-            <h2>コンテンツ・モデル</h2>
-            <p>「〇〇要素の中には、△△要素が配置できる」といった、各要素ごとに中に配置できる要素を定義した配置ルールの事です。HTML5では「要素内にどんな要素を置くか」が決められています。このルールをコンテンツ・モデル（Content models）といいます。</p>
-            <p>段落を表すp要素のコンテンツ・モデルは「フレージング・コンテンツ」になります。つまり、p要素の中に入れるのは、フレージング・コンテンツというカテゴリーに属した要素のみということです。「コンテンツ・モデルは〜」というのはなかに「〜」を入れられるということ</p>
-            <p>例：pタグはフレージング・コンテンツしか内包できない。</p>
+        <section class="ly-section" id="1">
+            <h2>コンテンツ・モデルとは</h2>
+            <p>例えば段落を表すpタグのコンテンツ・モデルは「フレージング・コンテンツ」になります。これは、pタグの中に入れるのは、フレージング・コンテンツというカテゴリーに属したタグのみということを表します。</p>
+            <p>コンテンツ・モデルが”Nothing”とされているものは、そのタグの中に何もコンテンツを入れられないというルールです。</p>
             <p>例：divタグはフロー・コンテンツしか内包できない。</p>
             <p>例：spanタグはフレージング・コンテンツしか内包できない。</p>
-            <p>コンテンツ・モデルが「空（Nothing）」とされているものは、その要素の中に何もコンテンツを入れられないというルール。</p>
-
             <cite class="ly-cite"><a href="https://yoshikawaweb.com/element/" target="_blank" rel="noopener noreferrer">HTML5 入れ子チートシート</a></cite>
         </section>
-        <section class="ly-section">
-            <h2>カテゴリー</h2>
-            <p>HTML5では、類似する特性を持った要素が以下の7つの「カテゴリー」に大別され、図のような包含関係にあります。それぞれの要素は、0個以上のカテゴリーに分類されます。つまり、どこのカテゴリーにも属していない要素や、複数のカテゴリーに属する要素も存在します。</p>
+        <section class="ly-section" id="2">
+            <h2>７つのカテゴリー</h2>
+            <p>HTML5では類似する特性を持ったタグが7つの「カテゴリー」に分類されます。タグによってはどこのカテゴリーにも属していないものや、複数のカテゴリーに属するタグも存在します。</p>
             <cite class="ly-cite"><a href="https://webgoto.net/html5/" target="_blank" rel="noopener noreferrer">HTML5 コンテンツモデル ガイド</a></cite>
-        </section>
-        <section class="ly-section">
-            <h2 id="id1">1.HTML5のコンテンツモデルの種類と説明</h2><p>HTML5は全部で7つのコンテンツの種類で定義されています。</p>
             <ul>
-                <li>メタデータ</li>
-                <li>フロー</li>
-                <li>セクショニング</li>
-                <li>ヘディング</li>
-                <li>フレージング</li>
-                <li>エンベディッド</li>
-                <li>インタラクティブ</li>
+                <li>メタデータ・コンテンツ</li>
+                <li>フロー・コンテンツ</li>
+                <li>セクショニング・コンテンツ</li>
+                <li>ヘディング・コンテンツ</li>
+                <li>フレージング・コンテンツ</li>
+                <li>エンベディッド・コンテンツ</li>
+                <li>インタラクティブ・コンテンツ</li>
             </ul>
             <h3>メタデータ・コンテンツ</h3>
-            <p>ブラウザ上で表示される情報ではない、文章情報や現在のページや関連するページの付加情報などを定義する要素。基本的にはhead要素内に配置。</p>
-            <p>head要素内で使用される要素</p>
+            <p>ブラウザ上では表示されず、文章情報や現在のページや関連するページの付加情報などを定義するタグ。基本的にはheadタグ内に配置されます。</p>
             <p>&lt;base&gt; &lt;command&gt; &lt;link&gt; &lt;meta&gt; &lt;noscript&gt; &lt;script&gt; &lt;style&gt; &lt;title&gt;</p>
             
             <h3>フロー・コンテンツ</h3>
-            <p>ブラウザ上に表示される一般的な要素。子孫にテキストなどを持つもの<br>
-            body要素内で使用される要素のほとんど。セクショニング、ヘディング、フレージング、エンベディッド、インタラクティブを含む</p>
+            <p>ブラウザ上に表示される一般的なタグで子孫にテキストなどを持つもの<br>
+            bodyタグ内で使用されるタグのほとんどがこれに当てはまります。セクショニング、ヘディング、フレージング、エンベディッド、インタラクティブ・コンテンツを含みます。</p>
             
             <h3>セクショニング・コンテンツ</h3>
-            <p>文章をセクションごとに区切る要素。見出しと概要を付けられるもの</p>
+            <p>文章をセクションごとに区切るタグです。見出しと概要を付けられるものになります。</p>
             <p>&lt;article&gt; &lt;aside&gt; &lt;nav&gt; &lt;section&gt;</p>
             
             <h3>ヘディング・コンテンツ</h3>
-            <p>見出しを表す要素。セクショニング・コンテンツの中にある場合はそのセクションの見出し、そうでない場合は文書の見出し</p>
+            <p>見出しを表すタグです。セクショニング・コンテンツの中にある場合はそのセクションの見出し、そうでない場合は文書の見出しの役割があります。</p>
             <p>&lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;h4&gt; &lt;h5&gt; &lt;h6&gt;</p>
             
             <h3>フレージング・コンテンツ</h3>
-            <p>段落やテキストの中で使われる文節・語句など。エンベディッドを含む</p>
+            <p>段落やテキストの中で使われる文節・語句などのタグです。エンベディッド・コンテンツを含みます。</p>
             <p>&lt;abbr&gt; &lt;audio&gt; &lt;b&gt; &lt;bdo&gt; &lt;br&gt; &lt;button&gt; &lt;canvas&gt; &lt;cite&gt; &lt;code&gt; &lt;command&gt; &lt;datalist&gt; &lt;dfn&gt; &lt;em&gt; &lt;embed&gt; &lt;i&gt; &lt;iframe&gt; &lt;img&gt; &lt;input&gt; &lt;kbd&gt; &lt;keygen&gt; &lt;label&gt; &lt;mark&gt; &lt;math&gt; &lt;meter&gt; &lt;noscript&gt; &lt;object&gt; &lt;output&gt; &lt;progress&gt; &lt;q&gt; &lt;ruby&gt; &lt;samp&gt; &lt;script&gt; &lt;select&gt; &lt;small&gt; &lt;span&gt; &lt;strong&gt; &lt;sub&gt; &lt;sup&gt; &lt;svg&gt; &lt;textarea&gt; &lt;time&gt; &lt;var&gt; &lt;video&gt; &lt;wbr&gt;</p>
             
             <h3>エンベディッド・コンテンツ</h3>
-            <p>メディア・ファイルや外部コンテンツを埋め込める要素</p>
+            <p>メディア・ファイルや外部コンテンツを埋め込めるタグです。</p>
             <p>&lt;audio&gt; &lt;canvas&gt; &lt;embed&gt; &lt;iframe&gt; &lt;img&gt; &lt;math&gt; &lt;object&gt; &lt;svg&gt; &lt;video&gt;</p>
             
             <h3>インタラクティブ・コンテンツ</h3>
-            <p>ユーザーが操作可能な要素</p>
+            <p>ユーザーが操作可能なタグです。</p>
             <p>&lt;a&gt; &lt;button&gt; &lt;details&gt; &lt;embed&gt; &lt;iframe&gt; &lt;keygen&gt; &lt;label&gt; &lt;select&gt; &lt;textarea&gt;</p>
+        </section>
+        <section class="ly-section" id="3">
+            <h2>７つのカテゴリーに分類されない３つのルール</h2>
+            <ul>
+                <li>トランスペアレント・コンテンツ</li>
+                <li>パルパブル・コンテンツ</li>
+                <li>セクショニング・ルート</li>
+            </ul>
 
-            <h3>パルパブル・コンテンツ（Palpable）</h3>
-            <p>明瞭なコンテンツ aやbutton　コンテンツモデルがフローコンテンツ、もしくはフレージングコンテンツとなる要素は「パルパブルコンテンツ」となります。パルパブルコンテンツに分類される要素は、hidden属性が指定されていない内容を最低でも1つは持つ必要があります。</p>
-            <h3>トランスペアレントコンテンツ　Transparent</h3>
-            <p>親要素の属性を引き継ぐ</p>
-            <p>ok: div -> a -> h1</p>
-            <p>ng: p -> a -> h1</p>
-            <p>aの親要素がpなのでpのコンテンツモデルを継承する。pは「フレージングコンテンツ」しか子要素にできないコンテンツモデルなので、このaはh1を内包できない</p>
-            <p>a、audio、canvas、del、ins、map、noscript、video</p>
+            <h3>トランスペアレント・コンテンツ</h3>
+            <p>親タグのコンテンツモデルを引き継ぐタグです。</p>
+            <p>OKな例</p>
+<pre class="prettyprint">
+<div>
+    <a>
+        <h1>
+        </h1>
+    </a>
+</div>
+</pre>
+            <p>aの親タグがdivなのでdivのコンテンツモデルを継承する。 divは「フロー・コンテンツ」を子タグにできるコンテンツモデルなので、このaはh1を内包できます。</pre>
+            <p>NGの例</p>
+<code class="displayCode">
+&lt;p&gt;<br>
+&nbsp;&nbsp;&lt;a&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h1&gt;<br>
+&nbsp;&nbsp;&lt;/a&gt;<br>
+&lt;/p&gt;
+</code>
+            <p>aの親タグがpなのでpのコンテンツモデルを継承する。pは「フレージングコンテンツ」しか子タグにできないコンテンツモデルなので、このaはh1（ヘディング・コンテンツ）を内包できないので記述が間違っている。</p>
+            <p>&lt;a&gt;&lt;audio&gt;&lt;canvas&gt;&lt;del&gt;&lt;ins&gt;&lt;map&gt;&lt;noscript&gt;&lt;video&gt;</p>
+
+            <h3>パルパブル・コンテンツ</h3>
+            <p>明瞭なコンテンツ、を意味します。hidden属性が指定されていない内容を最低でも1つは持つタグのことをいいます。コンテンツモデルがフロー・コンテンツ、もしくはフレージング・コンテンツとなるタグはパルパブル・コンテンツとなります。しかし、場合によっては内容が空であっても問題ないとされおり、そこまで厳密ではありません。</p>
+            <h3>セクショニング・ルート</h3>
+            <p>セクションのルートとして扱われるタグのことで独自のアウトライン（階層構造）を持つことができるため、内包されるタグは、文書全体への影響を与えません。</p>
+            <p>&lt;blockquote&gt;&lt;body&gt;&lt;details&gt;&lt;dialog&gt;&lt;fieldset&gt;&lt;figure&gt;&lt;td&gt;</p>
         </section> 
 
         <section class="ly-section">

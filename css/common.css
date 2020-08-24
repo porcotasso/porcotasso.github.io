@@ -456,8 +456,15 @@ template {
     display: block;
     color: #222; }
   .bl-contentsList_ttl {
-    font-size: 1.7rem;
-    font-weight: bold; }
+    display: flex;
+    align-items: baseline; }
+    .bl-contentsList_ttl h2 {
+      padding-right: 4px;
+      font-size: 1.7rem;
+      font-weight: bold; }
+    .bl-contentsList_ttl span {
+      color: #666;
+      font-size: 1.4rem; }
   .bl-contentsList_txt {
     margin-bottom: 0;
     font-size: 1.5rem; }

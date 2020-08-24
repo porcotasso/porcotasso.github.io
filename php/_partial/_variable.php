@@ -7,7 +7,7 @@
 $contentsModel = array(
 	"file" => "/php/pages/code-html/contents-model.php",
 	"title" => "コンテンツ・モデル",
-	"lead" => "コンテンツ・モデルは要素内に置ける要素のルールです。",
+	"lead" => "HTML5では、このタグの中にはこのタグが配置できる、といった配置ルールが決められており、これをコンテンツ・モデル（Content models）といいます。",
 	"html" => "/code-html/contents-model.html"
 );
 $semanticTags = array(

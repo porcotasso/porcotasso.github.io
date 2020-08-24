@@ -127,7 +127,7 @@
                 <?php foreach($pageLists as $list){ ?>
                 <li class="bl-contentsList_cnt js-accordionTrigger">
                     <div class="bl-contentsList_index">
-                       <h2 class="bl-contentsList_ttl"><?php echo $list["title"]; ?></h2>
+                       <div class="bl-contentsList_ttl"><h2><?php echo $list["title"]; ?></h2><span>(<?php echo count($list["pages"]) ?>)</span></div>
                        <p class="bl-contentsList_txt"><?php echo $list["lead"]; ?></p>
                     </div>
                 </li>

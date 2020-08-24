@@ -19,8 +19,17 @@
       // }
     }
     &_ttl{
-      font-size: $font-size-17;
-      font-weight: bold;
+        display: flex;
+        align-items: baseline;
+      h2{
+        font-size: $font-size-17;
+        font-weight: bold;
+        padding-right: 4px;
+      }
+      span{
+        font-size: $font-size-14;
+        color: $font-gray;
+      }
     }
     &_txt{
       font-size: $font-size-15;
