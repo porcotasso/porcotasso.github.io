@@ -123,16 +123,16 @@
         <p class="ly-homeProfile"><b>このサイトはまだ制作中です。</b></p>
         <a href="diary/diary.html">制作日記、メモ</a>
         <nav>
-            <ul class="bl-contentsList">
+            <ul class="bl-categoryList">
                 <?php foreach($pageLists as $list){ ?>
-                <li class="bl-contentsList_cnt js-accordionTrigger">
-                    <div class="bl-contentsList_index">
-                       <div class="bl-contentsList_ttl"><h2><?php echo $list["title"]; ?></h2><span>(<?php echo count($list["pages"]) ?>)</span></div>
-                       <p class="bl-contentsList_txt"><?php echo $list["lead"]; ?></p>
+                <li class="bl-categoryList_cnt js-accordionTrigger">
+                    <div class="bl-categoryList_index">
+                       <div class="bl-categoryList_ttl"><h2><?php echo $list["title"]; ?></h2><span>(<?php echo count($list["pages"]) ?>)</span></div>
+                       <p class="bl-categoryList_txt"><?php echo $list["lead"]; ?></p>
                     </div>
                 </li>
-                <li class="bl-contentsList_menu">
-                    <ul>
+                <li class="bl-categoryList_menu">
+                    <ul  class="bl-categoryList_menuList">
                         <?php foreach($list["pages"] as $value){ ?>
                         <li>
                             <a href="<?php echo $value["html"]; ?>" class="">
@@ -147,10 +147,10 @@
         </nav>  
                 <!-- 
                     
-                    <li class="bl-contentsList__cnt">
-                    <a href="/code-html/index.html" class="bl-contentsList__link">
-                        <h2 class="bl-contentsList__ttl">htmlの基本概要</h2>
-                        <p class="bl-contentsList__txt">コンテンツ・モデルを把握。セマンティックなコーディング。</p>
+                    <li class="bl-categoryList__cnt">
+                    <a href="/code-html/index.html" class="bl-categoryList__link">
+                        <h2 class="bl-categoryList__ttl">htmlの基本概要</h2>
+                        <p class="bl-categoryList__txt">コンテンツ・モデルを把握。セマンティックなコーディング。</p>
                     </a>
                 </li>
                     

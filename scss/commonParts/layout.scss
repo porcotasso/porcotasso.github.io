@@ -80,7 +80,7 @@
 		opacity: 0;
 		top: 55px;
 		width: 100vw;
-		height: 100vh; //これがないと縦にスクロールせず、画面からはみ出たメニューが見れない
+		height:calc(100vh - 80px); //これがないと縦にスクロールせず、画面からはみ出たメニューが見れない
 		padding: 0 0 32px;
 		text-align: left;
 		background: #fff;
@@ -121,6 +121,7 @@
 		}
 		.headerNav{
 		  top: 41px;
+		  height:calc(100vh - 46px);
 		}
 	  }
 	  &.active{
@@ -163,8 +164,8 @@
   }
 
 .ly-mainNav{
-	border-top: 1px dotted $border-gyay;
-	border-bottom: 1px dotted $border-gyay;
+	border-top: 1px dotted $border-gray;
+	border-bottom: 1px dotted $border-gray;
 	padding: 24px 8px;
 	margin:16px $gutter-width 80px;
 	.el-mainNavTtl{
@@ -177,7 +178,7 @@
 .ly-cite{
 	padding: 16px;
     display: block;
-    // border: 1px solid $border-gyay;
+    // border: 1px solid $border-gray;
     border-radius: 4px;
 	margin: 16px 0 24px;
 	background: $bg-light-gray;

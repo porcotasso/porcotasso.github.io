@@ -4,22 +4,28 @@
         <header>
             <h1><?php echo $title ?></h1>
             <p><?php echo $lead ?></p>
-            <nav>
-                <div>目次</div>
-                <div>脱Jquery</div>
+            <nav class="ly-mainNav">
+                <div class="el-mainNavTtl">目次</div>
+                <?php $navList = array("アコーディオン", "脱Jquery"); ?>
                 <ol>
-                    <li>アコーディオン</li>
+                    <?php for($i = 0; $i < count($navList); $i++){ ?>
+                    <li>
+                        <a href="#<?php echo $i + 1; ?>" class="">
+                            <div class=""><?php echo $navList[$i]; ?></div>
+                        </a>
+                    </li>
+                    <?php } ?>
                 </ol>
             </nav>
         </header>
-		<section class="ly-section">
+		<section class="ly-section" id="1">
 			<h2>アコーディオン</h2>
             <cite class="ly-cite"><a href="https://flex-box.net/js-accordion/" <?php echo $targetBlank ?>>ブログの設置 アコーディオン</a></cite>
 		</section>
         <section class="ly-section">
-			<h2>脱Jquery</h2>
-            <pre>
-            //ID名で取得
+			<h2>脱Jquery</h2 id="2">
+<pre class="prettyprint">
+//ID名で取得
 $('#id-name');
 //クラス名で取得
 $('.class-name');
@@ -53,12 +59,12 @@ document.getElementById('element').classList.contains('active');
 <cite class="ly-cite"><a href="https://www.aura-office.co.jp/blog/js-native/" <?php echo $targetBlank ?>>アウラ 脱Jquery</a></cite>
 <cite class="ly-cite"><a href="https://q-az.net/without-jquery-height-width-offset-scrolltop/" <?php echo $targetBlank ?>>脱Jquery</a></cite>
 <cite class="ly-cite"><a href="https://www.willstyle.co.jp/blog/1025/" <?php echo $targetBlank ?>>will style.</a></cite>
-<pre>
+
 <p>
-    HTMLCollection element 違い
+    HTMLCollection element 違い:
     getElementsByClassName()が返すのは、HTMLCollectionであってElementではない
 </p>
-</pre>
+
 <cite class="ly-cite"><a href="https://teratail.com/questions/231849" <?php echo $targetBlank ?>>getElementsByClassName()が返す</a></cite>
 
 <p>次の要素を取得する</p>
@@ -67,6 +73,12 @@ document.getElementById('element').classList.contains('active');
 
            
 		</section>
+        <section class="ly-section" id="3">
+            <h2>「Magnific Popup」</h2>
+            <p>jQueryプラグイン,レスポンシブ対応モーダル・ポップアップ</p>
+            <p>Magnific Popupは、インライン、ギャラリー、Youtube、GoogleMap、フォーム、Ajax、アニメーション、など様々なタイプのポップアップを簡単に実装することができます。さらにRetinaにも対応。</p>
+            <p><a href="http://dimsemenov.com/plugins/magnific-popup/" <?php echo $targetBlank ?>>公式サイト</a></p>
+        </section>
         
 
 

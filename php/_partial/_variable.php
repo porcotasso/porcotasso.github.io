@@ -13,7 +13,7 @@ $contentsModel = array(
 $semanticTags = array(
 	"file" => "/php/pages/code-html/semantic-tags.php",
 	"title" => "セマンティックhtml",
-	"lead" => "セマンティックhtmlまとめ。クローラーや読み上げソフトが、タグから各コンテンツの役割がわかるように。",
+	"lead" => "クローラーや読み上げソフトがタグから各コンテンツの役割がわかるように記述するコンテンツの意味に合ったタグを使ってマークアップすることをセマンティックHTMLと呼びます。",
 	"html" => "/code-html/semantic-tags.html"
 );
 $aboutTags = array(

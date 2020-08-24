@@ -11,13 +11,15 @@
                 <li>ホームレイアウト</li>
                 <li>PCデザイン</li>
                 <li>ロゴ作成</li>
-                <li>コンテンツモデルまとめ</li>
+                <li>ぱんくずリスト</li>
+                <li>目次の開閉</li>
                 <li>CSSカテゴライズまとめ</li>
                 <li>ボタンまとめ</li>
                 <li>break-wordなどテキストまとめ</li>
                 <li>guipfileまとめ</li>
                 <li>エスケープのjsまとめ</li>
                 <li>svgまとめ</li>
+                <li>prettyまとめ</li>
                 <li>現実的問題まとめ</li>
                 <li>フッター</li>
                 <li>コンテンツページ同士のリンク、タイトル左右に矢印</li>
@@ -29,8 +31,16 @@
                 <li>typescriptまとめ</li>
                 <li>UXまとめ</li>
                 <li>UIまとめ</li>
+                <li>カルーセル</li>
+                <li>スライダー</li>
+                <li>ポップ</li>
+                <li>全タグ確認</li>
             </ul>
             <h2><time>2020年</time></h2>
+            <time class="dairyTime" datetime="2020-08-24">8月24日</time>
+            <p>コンテンツモデルページまとめ</p>
+            <p>セマンティックHTML</p>
+            <p>ホームメニューカテゴリーに矢印追加</p>
             <time class="dairyTime" datetime="2020-08-23">8月23日</time>
             <p>スーパーグローバル関数を調べる。</p>
             <p>gulpfileのphp2htmlをまとめる。</p>
