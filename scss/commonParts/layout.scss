@@ -12,16 +12,17 @@
 	padding-top: 24px;
 }
 
-html.scroll-prevent {
-	/*動き固定*/
-	position: fixed;
-	/*奥行きを管理*/
-	z-index: -1;
-	/*下2つで背景を元のサイズのまま表示することができる*/
-	width: 100%;
-	height: 100%;
-	top: auto;
-  }
+// html.scroll-prevent {
+// 	/*動き固定*/
+// 	position: fixed;
+// 	/*奥行きを管理*/
+// 	z-index: -1;
+// 	/*下2つで背景を元のサイズのまま表示することができる*/
+// 	width: 100%;
+// 	height: 100%;
+// 	top: auto;
+//   }
+
 // headerタグに追加するスタイル
 .ly-header {
 	width: 100%;
@@ -38,7 +39,7 @@ html.scroll-prevent {
 	transition: $transition;
 	&__inner{
 		width: 100%;
-		max-width: 1140px;
+		// max-width: 1140px;
 		margin-right: auto;
 		margin-left: auto;
 		transform: translateY(0px);
@@ -52,15 +53,13 @@ html.scroll-prevent {
 			margin-bottom: 4px;
 			a{
 				transition: $transition;
+				color: #333;
 			}
 	  	}
-		.menu-trigger, .menu-trigger span {
+		.menu-trigger{
 			display: inline-block;
-			transition: all .4s;
 			box-sizing: border-box;
 			float: right;
-		}
-		.menu-trigger{
 			position: relative;
 			top: -6px;
 			margin: -24px $gutter-width 0 0;
@@ -73,6 +72,7 @@ html.scroll-prevent {
 				height: 2px;
 				background-color: #333;
 				border-radius: 4px;
+				transition: all .4s;
 				&:nth-of-type(1) {
 				top: 0;
 				}
@@ -88,9 +88,9 @@ html.scroll-prevent {
 			display: none;
 			position: absolute;
 			opacity: 0;
-			top: 55px;
-			width: 100vw;
-			height:calc(60vh - 80px); //これがないと縦にスクロールせず、画面からはみ出たメニューが見れない
+			top: 57px;
+			width: 84vw;
+			height:calc(100vh - 80px); //これがないと縦にスクロールせず、画面からはみ出たメニューが見れない
 			padding: 0 0 32px;
 			text-align: left;
 			background: #fff;
@@ -103,7 +103,7 @@ html.scroll-prevent {
 				margin: 0;
 				border-top: 1px solid $gray-200;
 				display: block;
-				padding: 3px 16px;
+				padding: 3px 16px 3px 20px;
 				font-size: $font-size-14;
 				font-weight: bold;
 				color: $font-black;
@@ -117,40 +117,50 @@ html.scroll-prevent {
 				border-top: 1px solid $gray-200;
 				a{
 					display: block;
-					padding: 12px 16px 12px 26px;
+					padding: 12px 16px 12px 20px;
 					font-size: $font-size-13;
 					color: $font-black;
 				}
 			}
 		}
-		&.active{
-			background: #fff;
-			.web-ttl{
-				a{
-					color: $gray-400;
+	}
+	&.active{
+		background: #d1dae4;
+		.web-ttl{
+			a{
+				color: #fff;
+			}
+		}
+		.menu-trigger{
+			span{
+				background:#fff;
+				&:nth-of-type(1) {
+					transform:rotate(-45deg);
+					top: 12px;
+				}
+				&:nth-of-type(2) {
+				//   opacity: 0;
+					width: 0;
+					left: 15px;
+				}
+				&:nth-of-type(3) {
+					transform:rotate(45deg);
+					top: 12px;
 				}
 			}
-			.menu-trigger{
-				span{
-					&:nth-of-type(1) {
-						transform:rotate(-45deg);
-						top: 12px;
-					}
-					&:nth-of-type(2) {
-					//   opacity: 0;
-						width: 0;
-						left: 15px;
-					}
-					&:nth-of-type(3) {
-						transform:rotate(45deg);
-						top: 12px;
-					}
-				}
+		}
+		@keyframes headerMenu {
+			0% {
+				opacity: 0;    
 			}
-			.headerMenu{
-				display: block;
-				opacity: 1;
+			100% {
+				opacity: 100;
 			}
+		}
+		.headerMenu{
+			display: block;
+			opacity: 1;
+			animation: headerMenu .3s ease-out both;
 		}
 	}
 	&.smaller {
@@ -158,6 +168,10 @@ html.scroll-prevent {
 		box-shadow: $box-shadow;
 		.ly-header__inner{
 			transform: translateY(16px);
+			.headerMenu{
+				top: 41px;
+				height:calc(100vh - 48px);
+			}
 		}
 		.hamburger{
 			top: 41px;
@@ -205,7 +219,7 @@ html.scroll-prevent {
 		width: 100%;
 		height: 100vh;
 		opacity: 0;
-		background-color: rgba(0, 0, 0, 0.7);
+		background-color: rgba(0, 0, 0, 0.86);
 		@keyframes cover-show {
 			0% {
 				opacity: 0;    

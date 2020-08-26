@@ -1,23 +1,31 @@
 // HEADER MENU 
   // hamburgerクリックで
-  // メニューをアニメーションで開閉
-  // 黒透過背景を追加
-  // 下層コンテンツのスクロールを止める
+  // •メニューをアニメーションで開閉
+  // •黒透過背景を追加
+  // •下層コンテンツのスクロールを止める
 
 var hamburger = document.getElementById("js-hamburger");
-var headerNav = document.getElementById("js-headerNav"); //親要素にクラスを追加して子要素を操作する
+var headerNav = document.getElementById("js-headerNav");
 var blackCover = document.getElementById("js-blackCover");
 var bodyOverflow = document.getElementsByTagName("body");
 // var wrapPosFix = document.getElementById("js-wrapPosFix");
 hamburger.onclick = function() {
+  // メニューのトグル
   headerNav.classList.toggle("active");
-  blackCover.classList.toggle("active");
+  // 背景のスクロールを止める
   if(bodyOverflow[0].style.overflow == 'hidden'){
     bodyOverflow[0].style.overflow = '';
   } else {
     bodyOverflow[0].style.overflow = 'hidden';
   }
-
+  // 黒背景のトグル
+  blackCover.classList.toggle("active");
+  // 黒背景のクリックでメニュー閉じる
+  blackCover.onclick = function() {
+    headerNav.classList.remove("active");
+    blackCover.classList.remove("active");
+    bodyOverflow[0].style.overflow = '';
+  }
 
   // var clientRect = wrapPosFix.getBoundingClientRect();　　//背景の位置を取得
   // var posY = String( clientRect.top)  + 'px';　　　　//背景のY値を取得
@@ -34,13 +42,13 @@ hamburger.onclick = function() {
 // HEADER SMALL after scroll
 function init() {
 	var px_change = 80;
-	let header = document.getElementById('js-header');
+	let headerSmaller = document.getElementsByClassName('js-headerSmaller');
 	window.addEventListener('scroll', function (e) {
     var y = document.documentElement.scrollTop || document.body.scrollTop;
 		if ( y > px_change) {
-			header.classList.add('smaller');
-		} else if (header.classList.contains('smaller')) {
-			header.classList.remove('smaller');
+			headerSmaller[0].classList.add('smaller');
+		} else if (headerSmaller[0].classList.contains('smaller')) {
+			headerSmaller[0].classList.remove('smaller');
 		}
 	});
 }

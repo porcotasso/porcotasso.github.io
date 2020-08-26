@@ -37,8 +37,8 @@
 </head>
 <body>
 
-    <header class="ly-header" id="js-header">  
-        <nav class="ly-header__inner" id="js-headerNav">
+    <header class="ly-header js-headerSmaller" id="js-headerNav">  
+        <nav class="ly-header__inner">
             <?php if($_SERVER['REQUEST_URI'] == "/php/pages/index.php"){ ?>
                 <h1 class="web-ttl"><a href="/">porco tasso</a></h1>
             <?php }else{ ?>

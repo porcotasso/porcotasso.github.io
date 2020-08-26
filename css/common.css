@@ -307,16 +307,6 @@ template {
 .ly-UnderheaderSpace {
   padding-top: 24px; }
 
-html.scroll-prevent {
-  /*奥行きを管理*/
-  z-index: -1;
-  /*動き固定*/
-  position: fixed;
-  top: auto;
-  /*下2つで背景を元のサイズのまま表示することができる*/
-  width: 100%;
-  height: 100%; }
-
 .ly-header {
   display: flex;
   z-index: 100;
@@ -333,7 +323,6 @@ html.scroll-prevent {
   transition: 0.25s; }
   .ly-header__inner {
     width: 100%;
-    max-width: 1140px;
     margin-right: auto;
     margin-left: auto;
     transform: translateY(0px);
@@ -346,25 +335,25 @@ html.scroll-prevent {
       letter-spacing: 0.14rem;
       text-align: center; }
       .ly-header__inner .web-ttl a {
+        color: #333;
         transition: 0.25s; }
-    .ly-header__inner .menu-trigger, .ly-header__inner .menu-trigger span {
+    .ly-header__inner .menu-trigger {
       box-sizing: border-box;
       display: inline-block;
-      float: right;
-      transition: all .4s; }
-    .ly-header__inner .menu-trigger {
       position: relative;
       top: -6px;
       width: 34px;
       height: 24px;
-      margin: -24px 5% 0 0; }
+      margin: -24px 5% 0 0;
+      float: right; }
       .ly-header__inner .menu-trigger span {
         position: absolute;
         left: 0;
         width: 100%;
         height: 2px;
         border-radius: 4px;
-        background-color: #333; }
+        background-color: #333;
+        transition: all .4s; }
         .ly-header__inner .menu-trigger span:nth-of-type(1) {
           top: 0; }
         .ly-header__inner .menu-trigger span:nth-of-type(2) {
@@ -375,9 +364,9 @@ html.scroll-prevent {
       display: none;
       z-index: 102;
       position: absolute;
-      top: 55px;
-      width: 100vw;
-      height: calc(60vh - 80px);
+      top: 57px;
+      width: 84vw;
+      height: calc(100vh - 80px);
       padding: 0 0 32px;
       overflow: scroll;
       background: #fff;
@@ -389,7 +378,7 @@ html.scroll-prevent {
       .ly-header__inner .headerMenu_list {
         display: block;
         margin: 0;
-        padding: 3px 16px;
+        padding: 3px 16px 3px 20px;
         border-top: 1px solid #f5f5f5;
         background: #f5f7f8;
         color: #222;
@@ -402,30 +391,49 @@ html.scroll-prevent {
         border-top: 1px solid #f5f5f5; }
         .ly-header__inner .headerMenu_subList a {
           display: block;
-          padding: 12px 16px 12px 26px;
+          padding: 12px 16px 12px 20px;
           color: #222;
           font-size: 1.3rem; }
-    .ly-header__inner.active {
+  .ly-header.active {
+    background: #d1dae4; }
+    .ly-header.active .web-ttl a {
+      color: #fff; }
+    .ly-header.active .menu-trigger span {
       background: #fff; }
-      .ly-header__inner.active .web-ttl a {
-        color: #ced4da; }
-      .ly-header__inner.active .menu-trigger span:nth-of-type(1) {
+      .ly-header.active .menu-trigger span:nth-of-type(1) {
         top: 12px;
         transform: rotate(-45deg); }
-      .ly-header__inner.active .menu-trigger span:nth-of-type(2) {
+      .ly-header.active .menu-trigger span:nth-of-type(2) {
         left: 15px;
         width: 0; }
-      .ly-header__inner.active .menu-trigger span:nth-of-type(3) {
+      .ly-header.active .menu-trigger span:nth-of-type(3) {
         top: 12px;
         transform: rotate(45deg); }
-      .ly-header__inner.active .headerMenu {
-        display: block;
-        opacity: 1; }
+
+@-webkit-keyframes headerMenu {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 100; } }
+
+@keyframes headerMenu {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 100; } }
+    .ly-header.active .headerMenu {
+      display: block;
+      -webkit-animation: headerMenu .3s ease-out both;
+              animation: headerMenu .3s ease-out both;
+      opacity: 1; }
   .ly-header.smaller {
     transform: translateY(-32px);
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08); }
     .ly-header.smaller .ly-header__inner {
       transform: translateY(16px); }
+      .ly-header.smaller .ly-header__inner .headerMenu {
+        top: 41px;
+        height: calc(100vh - 48px); }
     .ly-header.smaller .hamburger {
       top: 41px;
       height: calc(60vh - 46px); }
@@ -438,7 +446,7 @@ html.scroll-prevent {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.86);
   opacity: 0; }
 
 @-webkit-keyframes cover-show {

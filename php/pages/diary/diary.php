@@ -40,6 +40,10 @@
                 <li>@keyframes使い方まとめ　メニューで背景黒く</li>
             </ul>
             <h2><time>2020年</time></h2>
+            <time class="dairyTime" datetime="2020-08-26">8月26日</time>
+            <p>背景位置固定は、bodyタグにoverflow:hidden をつけることで対応。</p>
+            <time class="dairyTime" datetime="2020-08-25">8月25日</time>
+            <p>メニューをだした時に黒透過背景を追加。メニューの開閉で背景の位置が変わる。position:fixed;と.getBoundingClientRect()で位置を取得での位置固定と解除した時の static の変更でできるとかいてあったけど、できない。</p>
             <time class="dairyTime" datetime="2020-08-24">8月24日</time>
             <p>コンテンツモデルページまとめ</p>
             <p>セマンティックHTML</p>
