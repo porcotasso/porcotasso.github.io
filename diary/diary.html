@@ -19,125 +19,129 @@
 </head>
 <body>
 
-    <header class="ly-header js-headerSmaller" id="js-headerTrigger">  
-        <nav class="ly-header__inner">
+    <header class="ly-header" id="js-header">  
+        <nav class="ly-header__inner" id="js-headerNav">
                             <div class="web-ttl"><a href="/">porco tasso</a></div>
             
-            <a class="menu-trigger pc-header-none" id="menu-trigger">
+            <a class="menu-trigger pc-header-none" id="js-hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
             
-            <ul class="headerNav" id="header-nav">
-                                <li class="headerNav_list">html</li>
+            <ul class="headerMenu" id="header-menu">
+                                <li class="headerMenu_list">html</li>
                 <li>
-                    <ul class="headerNav_subNav">
-                                                <li class="headerNav_subList">
+                    <ul class="headerMenu_subNav">
+                                                <li class="headerMenu_subList">
                             <a href="/code-html/contents-model.html" class="">
                                 <div class="">コンテンツ・モデル</div>
                             </a>
                         </li>
-                                                <li class="headerNav_subList">
+                                                <li class="headerMenu_subList">
                             <a href="/code-html/semantic-tags.html" class="">
                                 <div class="">セマンティックhtml</div>
                             </a>
                         </li>
-                                                <li class="headerNav_subList">
+                                                <li class="headerMenu_subList">
                             <a href="/code-html/about-tags.html" class="">
                                 <div class="">各タグ要素について</div>
                             </a>
                         </li>
                                             </ul>
                 </li>
-                                <li class="headerNav_list">css</li>
+                                <li class="headerMenu_list">css</li>
                 <li>
-                    <ul class="headerNav_subNav">
-                                                <li class="headerNav_subList">
+                    <ul class="headerMenu_subNav">
+                                                <li class="headerMenu_subList">
                             <a href="/code-css/categorized-css.html" class="">
                                 <div class="">CSSを役割ごとにカテゴライズする</div>
                             </a>
                         </li>
-                                                <li class="headerNav_subList">
+                                                <li class="headerMenu_subList">
                             <a href="/code-css/naming-rule.html" class="">
                                 <div class="">命名ルール</div>
                             </a>
                         </li>
                                             </ul>
                 </li>
-                                <li class="headerNav_list">パーツ</li>
+                                <li class="headerMenu_list">パーツ</li>
                 <li>
-                    <ul class="headerNav_subNav">
-                                                <li class="headerNav_subList">
+                    <ul class="headerMenu_subNav">
+                                                <li class="headerMenu_subList">
                             <a href="/code-parts/button.html" class="">
                                 <div class="">ボタン作成</div>
                             </a>
                         </li>
-                                                <li class="headerNav_subList">
+                                                <li class="headerMenu_subList">
                             <a href="/code-parts/break-word.html" class="">
                                 <div class="">break-word</div>
                             </a>
                         </li>
-                                                <li class="headerNav_subList">
+                                                <li class="headerMenu_subList">
                             <a href="/code-parts/element-em-strong-mark-b-difference.html" class="">
                                 <div class="">em,strong,mark,b,dfn,iの違い</div>
                             </a>
                         </li>
-                                                <li class="headerNav_subList">
+                                                <li class="headerMenu_subList">
                             <a href="/code-parts/favicon.html" class="">
                                 <div class="">favicon</div>
                             </a>
                         </li>
                                             </ul>
                 </li>
-                                <li class="headerNav_list">javascript</li>
+                                <li class="headerMenu_list">javascript</li>
                 <li>
-                    <ul class="headerNav_subNav">
-                                                <li class="headerNav_subList">
+                    <ul class="headerMenu_subNav">
+                                                <li class="headerMenu_subList">
                             <a href="/code-js/javascript-memo.html" class="">
                                 <div class="">javascriptmemo</div>
                             </a>
                         </li>
                                             </ul>
                 </li>
-                                <li class="headerNav_list">php</li>
+                                <li class="headerMenu_list">php</li>
                 <li>
-                    <ul class="headerNav_subNav">
-                                                <li class="headerNav_subList">
+                    <ul class="headerMenu_subNav">
+                                                <li class="headerMenu_subList">
                             <a href="/code-php/php-memo.html" class="">
                                 <div class="">phpmemo</div>
                             </a>
                         </li>
                                             </ul>
                 </li>
-                                <li class="headerNav_list">作業効率を高める環境設定</li>
+                                <li class="headerMenu_list">作業効率を高める環境設定</li>
                 <li>
-                    <ul class="headerNav_subNav">
-                                                <li class="headerNav_subList">
+                    <ul class="headerMenu_subNav">
+                                                <li class="headerMenu_subList">
                             <a href="/code-env/gulpfile.html" class="">
                                 <div class="">gulpfile</div>
                             </a>
                         </li>
                                             </ul>
                 </li>
-                                <li class="headerNav_list">svg</li>
+                                <li class="headerMenu_list">svg</li>
                 <li>
-                    <ul class="headerNav_subNav">
-                                                <li class="headerNav_subList">
+                    <ul class="headerMenu_subNav">
+                                                <li class="headerMenu_subList">
                             <a href="/code-svg/svg.html" class="">
                                 <div class="">svg</div>
                             </a>
                         </li>
                                             </ul>
                 </li>
-                                <li class="headerNav_list">現実的な問題点</li>
+                                <li class="headerMenu_list">現実的な問題点</li>
                 <li>
-                    <ul class="headerNav_subNav">
+                    <ul class="headerMenu_subNav">
                                             </ul>
                 </li>
                             </ul>
         </nav>
-    </header><main class="ly-baseWrap ly-UnderheaderSpace"> 
+    </header>
+    <!-- メニューを出した時に出る黒背景 -->
+    <div class="el-blackCover" id="js-blackCover"></div>
+    <!-- hamburgerメニューを押した時に背景スクロールさせないためのタグ -->
+    <div class="el-wrapPosFix" id="js-wrapPosFix"> <main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
             <h1>制作日記</h1>
@@ -173,6 +177,9 @@
                 <li>スライダー</li>
                 <li>ポップ</li>
                 <li>全タグ確認</li>
+                <li>background-attachment は、背景画像の固定表示を指定するプロパティ https://www.tagindex.com/stylesheet/page/background_attachment.htmls</li>
+                <li>モーダルやメニューを表示したときに背景をスクロールさせない方法メモ</li>
+                <li>@keyframes使い方まとめ　メニューで背景黒く</li>
             </ul>
             <h2><time>2020年</time></h2>
             <time class="dairyTime" datetime="2020-08-24">8月24日</time>
@@ -205,10 +212,11 @@
         </section>
     </article>
 </main>
-    <footer class="footer">
-        porco tasso footer
-    </footer>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+            <footer class="footer">
+                <p>Copyright © 2020 porco tasso All rights reserved.</p>
+            </footer>
+        </div>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
         <script src="/js/common.js"></script>
         
     </body>

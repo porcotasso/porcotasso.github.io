@@ -312,6 +312,7 @@ html.scroll-prevent {
   z-index: -1;
   /*動き固定*/
   position: fixed;
+  top: auto;
   /*下2つで背景を元のサイズのまま表示することができる*/
   width: 100%;
   height: 100%; }
@@ -370,13 +371,13 @@ html.scroll-prevent {
           top: 11px; }
         .ly-header__inner .menu-trigger span:nth-of-type(3) {
           bottom: 0; }
-    .ly-header__inner .headerNav {
+    .ly-header__inner .headerMenu {
       display: none;
       z-index: 102;
       position: absolute;
       top: 55px;
       width: 100vw;
-      height: calc(100vh - 80px);
+      height: calc(60vh - 80px);
       padding: 0 0 32px;
       overflow: scroll;
       background: #fff;
@@ -385,7 +386,7 @@ html.scroll-prevent {
       text-align: left;
       opacity: 0;
       transition: 0.25s; }
-      .ly-header__inner .headerNav_list {
+      .ly-header__inner .headerMenu_list {
         display: block;
         margin: 0;
         padding: 3px 16px;
@@ -394,40 +395,72 @@ html.scroll-prevent {
         color: #222;
         font-size: 1.4rem;
         font-weight: bold; }
-      .ly-header__inner .headerNav_subNav {
+      .ly-header__inner .headerMenu_subNav {
         padding: 0;
         list-style: none; }
-      .ly-header__inner .headerNav_subList {
+      .ly-header__inner .headerMenu_subList {
         border-top: 1px solid #f5f5f5; }
-        .ly-header__inner .headerNav_subList a {
+        .ly-header__inner .headerMenu_subList a {
           display: block;
           padding: 12px 16px 12px 26px;
           color: #222;
           font-size: 1.3rem; }
+    .ly-header__inner.active {
+      background: #fff; }
+      .ly-header__inner.active .web-ttl a {
+        color: #ced4da; }
+      .ly-header__inner.active .menu-trigger span:nth-of-type(1) {
+        top: 12px;
+        transform: rotate(-45deg); }
+      .ly-header__inner.active .menu-trigger span:nth-of-type(2) {
+        left: 15px;
+        width: 0; }
+      .ly-header__inner.active .menu-trigger span:nth-of-type(3) {
+        top: 12px;
+        transform: rotate(45deg); }
+      .ly-header__inner.active .headerMenu {
+        display: block;
+        opacity: 1; }
   .ly-header.smaller {
     transform: translateY(-32px);
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08); }
     .ly-header.smaller .ly-header__inner {
       transform: translateY(16px); }
-    .ly-header.smaller .headerNav {
+    .ly-header.smaller .hamburger {
       top: 41px;
-      height: calc(100vh - 46px); }
-  .ly-header.active {
-    background: #fff; }
-    .ly-header.active .ly-header__inner .web-ttl a {
-      color: #ced4da; }
-    .ly-header.active .ly-header__inner .menu-trigger span:nth-of-type(1) {
-      top: 12px;
-      transform: rotate(-45deg); }
-    .ly-header.active .ly-header__inner .menu-trigger span:nth-of-type(2) {
-      left: 15px;
-      width: 0; }
-    .ly-header.active .ly-header__inner .menu-trigger span:nth-of-type(3) {
-      top: 12px;
-      transform: rotate(45deg); }
-    .ly-header.active .ly-header__inner .headerNav {
-      display: block;
-      opacity: 1; }
+      height: calc(60vh - 46px); }
+
+.el-blackCover {
+  display: none;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0; }
+
+@-webkit-keyframes cover-show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 100; } }
+
+@keyframes cover-show {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 100; } }
+  .el-blackCover.active {
+    display: block;
+    -webkit-animation: cover-show .3s ease-out both;
+            animation: cover-show .3s ease-out both; }
+
+.el-wrapPosFix {
+  width: 100%;
+  min-width: 320px;
+  overflow: hidden; }
 
 .footer {
   bottom: 0;

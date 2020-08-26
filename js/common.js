@@ -1,13 +1,53 @@
-// HEADER MENU OPEN/CLOSE #menu-triggerをクリックで#js-headerTriggerがオンオフ
-var menuTrigger = document.getElementById("menu-trigger");
-var headerTrigger = document.getElementById("js-headerTrigger");
-var htmlTag = document.getElementsByTagName("html");
-menuTrigger.onclick = function() {
-  headerTrigger.classList.toggle("active");
-  htmlTag[0].classList.toggle("scroll-prevent");
+// HEADER MENU 
+  // hamburgerクリックで
+  // メニューをアニメーションで開閉
+  // 黒透過背景を追加
+  // 下層コンテンツのスクロールを止める
+
+var hamburger = document.getElementById("js-hamburger");
+var headerNav = document.getElementById("js-headerNav"); //親要素にクラスを追加して子要素を操作する
+var blackCover = document.getElementById("js-blackCover");
+var bodyOverflow = document.getElementsByTagName("body");
+// var wrapPosFix = document.getElementById("js-wrapPosFix");
+hamburger.onclick = function() {
+  headerNav.classList.toggle("active");
+  blackCover.classList.toggle("active");
+  if(bodyOverflow[0].style.overflow == 'hidden'){
+    bodyOverflow[0].style.overflow = '';
+  } else {
+    bodyOverflow[0].style.overflow = 'hidden';
+  }
+
+
+  // var clientRect = wrapPosFix.getBoundingClientRect();　　//背景の位置を取得
+  // var posY = String( clientRect.top)  + 'px';　　　　//背景のY値を取得
+  // if(wrapPosFix.style.position == 'fixed'){
+  //   wrapPosFix.style.position = 'static';
+  //   wrapPosFix.style.top = 0;
+    
+  // } else {
+  //   wrapPosFix.style.position = 'fixed';　                //背景のY値のまま固定
+  //   wrapPosFix.style.top = posY;
+  // }
 };
 
-// HOME MENU OPEN/CLOSE #menu-triggerをクリックで#js-headerTriggerがオンオフ
+// HEADER SMALL after scroll
+function init() {
+	var px_change = 80;
+	let header = document.getElementById('js-header');
+	window.addEventListener('scroll', function (e) {
+    var y = document.documentElement.scrollTop || document.body.scrollTop;
+		if ( y > px_change) {
+			header.classList.add('smaller');
+		} else if (header.classList.contains('smaller')) {
+			header.classList.remove('smaller');
+		}
+	});
+}
+window.onload = init();
+
+
+// HOME MENU OPEN/CLOSE #menu-triggerをクリックで#js-headerがオンオフ
 document.addEventListener("DOMContentLoaded",() => {
   const title = document.querySelectorAll('.js-accordionTrigger');
   for (let i = 0; i < title.length; i++){
@@ -20,20 +60,7 @@ document.addEventListener("DOMContentLoaded",() => {
   }
 });
 
-// HEADER SMALL after scroll
-function init() {
-	var px_change = 80;
-	let header = document.getElementsByClassName('js-headerSmaller');
-	window.addEventListener('scroll', function (e) {
-    var y = document.documentElement.scrollTop || document.body.scrollTop;
-		if ( y > px_change) {
-			header[0].classList.add('smaller');
-		} else if (header[0].classList.contains('smaller')) {
-			header[0].classList.remove('smaller');
-		}
-	});
-}
-window.onload = init();
+
 
 // HEADER SMALL jQuery
 // function init() {
@@ -85,7 +112,7 @@ for(var i = 0; i < pre.length; i++) {
 
 
 // 次の要素を取得
-// var elements = document.getElementById("menuTrigger0");
+// var elements = document.getElementById("hamburger0");
 // var menu = elements.nextElementSibling;
 // elements.onclick = function() {
 //   menu.classList.toggle("active");
@@ -111,6 +138,6 @@ for(var i = 0; i < pre.length; i++) {
 // $(function () {
 //   $('.menu-trigger').on('click', function () {
 //     $(this).toggleClass('active');
-//     $('.header-nav').toggleClass('active');
+//     $('.header-menu').toggleClass('active');
 //     $('.menu-tel-box').removeClass('active');
 //   });

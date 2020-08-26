@@ -37,27 +37,27 @@
 </head>
 <body>
 
-    <header class="ly-header js-headerSmaller" id="js-headerTrigger">  
-        <nav class="ly-header__inner">
+    <header class="ly-header" id="js-header">  
+        <nav class="ly-header__inner" id="js-headerNav">
             <?php if($_SERVER['REQUEST_URI'] == "/php/pages/index.php"){ ?>
                 <h1 class="web-ttl"><a href="/">porco tasso</a></h1>
             <?php }else{ ?>
                 <div class="web-ttl"><a href="/">porco tasso</a></div>
             <?php } ?>
 
-            <a class="menu-trigger pc-header-none" id="menu-trigger">
+            <a class="menu-trigger pc-header-none" id="js-hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
             
-            <ul class="headerNav" id="header-nav">
+            <ul class="headerMenu" id="header-menu">
                 <?php foreach($pageLists as $list){ ?>
-                <li class="headerNav_list"><?php echo $list["title"]; ?></li>
+                <li class="headerMenu_list"><?php echo $list["title"]; ?></li>
                 <li>
-                    <ul class="headerNav_subNav">
+                    <ul class="headerMenu_subNav">
                         <?php foreach($list["pages"] as $value){ ?>
-                        <li class="headerNav_subList">
+                        <li class="headerMenu_subList">
                             <a href="<?php echo $value["html"]; ?>" class="">
                                 <div class=""><?php echo $value["title"]; ?></div>
                             </a>
@@ -69,3 +69,7 @@
             </ul>
         </nav>
     </header>
+    <!-- メニューを出した時に出る黒背景 -->
+    <div class="el-blackCover" id="js-blackCover"></div>
+    <!-- hamburgerメニューを押した時に背景スクロールさせないためのタグ -->
+    <div class="el-wrapPosFix" id="js-wrapPosFix"> 

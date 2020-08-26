@@ -35,6 +35,9 @@
                 <li>スライダー</li>
                 <li>ポップ</li>
                 <li>全タグ確認</li>
+                <li>background-attachment は、背景画像の固定表示を指定するプロパティ https://www.tagindex.com/stylesheet/page/background_attachment.htmls</li>
+                <li>モーダルやメニューを表示したときに背景をスクロールさせない方法メモ</li>
+                <li>@keyframes使い方まとめ　メニューで背景黒く</li>
             </ul>
             <h2><time>2020年</time></h2>
             <time class="dairyTime" datetime="2020-08-24">8月24日</time>
