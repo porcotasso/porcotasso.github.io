@@ -85,20 +85,20 @@
 			}
 		}
 		.headerMenu{
-			display: none;
+			// display: none;
 			position: absolute;
 			opacity: 0;
 			top: 57px;
-			width: 84vw;
+			width: 0%;
 			height:calc(100vh - 80px); //これがないと縦にスクロールせず、画面からはみ出たメニューが見れない
-			padding: 0 0 32px;
+			padding: 0 0 64px;
 			text-align: left;
 			background: #fff;
 			overflow: scroll;
 			list-style: none;
 			box-shadow: $box-shadow;
 			transition: $transition;
-			z-index: 102;
+			z-index: 101;
 			&_list{
 				margin: 0;
 				border-top: 1px solid $gray-200;
@@ -151,15 +151,18 @@
 		}
 		@keyframes headerMenu {
 			0% {
-				opacity: 0;    
+				width: 96%;
+				opacity: 0;				   
 			}
 			100% {
 				opacity: 100;
+				width: 84%;
 			}
 		}
 		.headerMenu{
 			display: block;
 			opacity: 1;
+			width: 84%;
 			animation: headerMenu .3s ease-out both;
 		}
 	}
@@ -209,41 +212,37 @@
 	// 		}
 	// 	}
 	// }
-  }
-  .el-blackCover {
-		display: none;
-		position: fixed;
-		left: 0;
-		top: 0;
-		z-index: 99;
-		width: 100%;
-		height: 100vh;
-		opacity: 0;
-		background-color: rgba(0, 0, 0, 0.86);
-		@keyframes cover-show {
-			0% {
-				opacity: 0;    
-			}
-			100% {
-				opacity: 100;
-			}
+}
+.el-blackCover {
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 99;
+	width: 0;
+	height: 100vh;
+	opacity: 0;
+	background-color: rgba(0, 0, 0, 0.86);
+	@keyframes cover-show {
+		0% {
+			opacity: 0;    
 		}
-		&.active{
-			display: block;
-			animation: cover-show .3s ease-out both;
+		100% {
+			opacity: 100;
 		}
 	}
-	.el-wrapPosFix{
+	&.active{
+		display: block;
 		width: 100%;
-		min-width: 320px;
-		overflow: hidden;
+		animation: cover-show .3s ease-out both;
 	}
-  .footer{
+}
+.footer{
 	bottom: 0;
 	height: 100px;
 	background: $gray-200;
 	padding: $space-unit *2 $gutter-width;
-  }
+}
 
 .ly-mainNav{
 	border-top: 1px dotted $border-gray;

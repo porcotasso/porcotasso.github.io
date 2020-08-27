@@ -14,7 +14,7 @@
         </header>
         <section class="ly-section">
             <h2>Pタグ</h2>
-            <p>pタグは「Paragraph」の略です。文章のひとかたまりだけでなく、テキストを使う用途でいろんな使われ方をするので、スタイルの指定が難しいです。ただ、個人的には、複数行にわたる文章を基本として設定するのがいいと思うので、長文が読みやすいスタイルを指定します。具体的にはline-heightを1.8~2 letter-space0.05em など通常よりスペースを開けています。フォントサイズは大きければいいというものでないので、mobileで1.4rem、PCで1.6remあたりを基本に考えています。</p>
+            <p>pタグは「Paragraph」の略です。長いひとかたまりの文章だけでなく、テキストを使ういろいろな場所で使われるので、用途ごとに対応できるスタイルの指定が必要になります。このサイトでの考え方では、pタグを複数行にわたる文章を基本として設定するので、長文が読みやすいスタイルを基本に指定します。具体的にはline-heightを1.8~2 letter-space0.05em など通常よりスペースを開けています。フォントサイズは長文が読みやすいサイズを目的とします。mobileで14px、PCで16pxあたりを基本に考えています。</p><p>ラベルなどで使う際には余計なスタイルをリセットして使用します。</p>
         </section>
         <section class="ly-section">
             <h2>aタグ</h2>
@@ -41,7 +41,7 @@ a{
             <p>Preformatted Text（整形済テキスト）という意味で、入力したソースのまま表示することができます。不要な空欄、タブもそのまま表示されるので使用できません。特殊文字は表示できないので、記号を使ってエスケープする必要があります。</p>
             <cite class="ly-cite"><a href="https://webtools.dounokouno.com/htmlescape/" <?php echo $targetBlank ?>>Web制作小物ツール</a></cite>
             <h3>code</h3>
-            Computer Codeの略。codeタグで囲んだ文字列がソースコードであることを示します。等幅フォントで表示される。改行やインデントなどはcodeでは反映されない（サイトによってはされると書いてあるようですが）。
+            <p>Computer Codeの略。codeタグで囲んだ文字列がソースコードであることを示します。等幅フォントで表示される。改行やインデントなどはcodeでは反映されない（サイトによってはされると書いてあるようですが）。</p>
         </section>
         <section>
             <h2>timeタグ</h2>
@@ -50,10 +50,6 @@ a{
         <section>
             <h2>blockquote・q・citeタグ</h2>
             <cite class="ly-cite"><a href="https://nandemo-nobiru.com/2159/" <?php echo $targetBlank ?>>なんでものびるWEB</a></cite>
-        </section>
-        <section class="ly-section">
-            <h3>参考</h3>
-            <cite class="ly-cite"><a href="https://wunderstand.net/1417/" <?php echo $targetBlank ?>>html5のarticle・section等、まとめる要素まとめ</a></cite>
         </section>
     </article>
 </main>

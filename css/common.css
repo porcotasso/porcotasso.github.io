@@ -361,13 +361,12 @@ template {
         .ly-header__inner .menu-trigger span:nth-of-type(3) {
           bottom: 0; }
     .ly-header__inner .headerMenu {
-      display: none;
-      z-index: 102;
+      z-index: 101;
       position: absolute;
       top: 57px;
-      width: 84vw;
+      width: 0%;
       height: calc(100vh - 80px);
-      padding: 0 0 32px;
+      padding: 0 0 64px;
       overflow: scroll;
       background: #fff;
       box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
@@ -412,17 +411,22 @@ template {
 
 @-webkit-keyframes headerMenu {
   0% {
+    width: 96%;
     opacity: 0; }
   100% {
+    width: 84%;
     opacity: 100; } }
 
 @keyframes headerMenu {
   0% {
+    width: 96%;
     opacity: 0; }
   100% {
+    width: 84%;
     opacity: 100; } }
     .ly-header.active .headerMenu {
       display: block;
+      width: 84%;
       -webkit-animation: headerMenu .3s ease-out both;
               animation: headerMenu .3s ease-out both;
       opacity: 1; }
@@ -439,12 +443,12 @@ template {
       height: calc(60vh - 46px); }
 
 .el-blackCover {
-  display: none;
+  display: block;
   z-index: 99;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 0;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.86);
   opacity: 0; }
@@ -462,13 +466,9 @@ template {
     opacity: 100; } }
   .el-blackCover.active {
     display: block;
+    width: 100%;
     -webkit-animation: cover-show .3s ease-out both;
             animation: cover-show .3s ease-out both; }
-
-.el-wrapPosFix {
-  width: 100%;
-  min-width: 320px;
-  overflow: hidden; }
 
 .footer {
   bottom: 0;
@@ -579,14 +579,8 @@ template {
   border: 1px solid #222;
   font-weight: normal; }
 
-html {
+html, body {
   scroll-padding-top: 80px; }
-
-.blockquote {
-  position: relative;
-  margin: 0 0 28px;
-  padding: 30px 20px 35px 55px;
-  border: 1px #eee solid; }
 
 ul.noListStyle {
   margin-bottom: 0;

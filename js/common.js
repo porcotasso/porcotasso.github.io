@@ -26,17 +26,6 @@ hamburger.onclick = function() {
     blackCover.classList.remove("active");
     bodyOverflow[0].style.overflow = '';
   }
-
-  // var clientRect = wrapPosFix.getBoundingClientRect();　　//背景の位置を取得
-  // var posY = String( clientRect.top)  + 'px';　　　　//背景のY値を取得
-  // if(wrapPosFix.style.position == 'fixed'){
-  //   wrapPosFix.style.position = 'static';
-  //   wrapPosFix.style.top = 0;
-    
-  // } else {
-  //   wrapPosFix.style.position = 'fixed';　                //背景のY値のまま固定
-  //   wrapPosFix.style.top = posY;
-  // }
 };
 
 // HEADER SMALL after scroll

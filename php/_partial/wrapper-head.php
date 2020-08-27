@@ -71,5 +71,3 @@
     </header>
     <!-- メニューを出した時に出る黒背景 -->
     <div class="el-blackCover" id="js-blackCover"></div>
-    <!-- hamburgerメニューを押した時に背景スクロールさせないためのタグ -->
-    <div class="el-wrapPosFix" id="js-wrapPosFix"> 

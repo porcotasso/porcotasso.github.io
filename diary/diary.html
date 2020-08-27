@@ -88,6 +88,11 @@
                                 <div class="">favicon</div>
                             </a>
                         </li>
+                                                <li class="headerMenu_subList">
+                            <a href="/code-parts/hamburger-menu.html" class="">
+                                <div class="">hamburger-menu</div>
+                            </a>
+                        </li>
                                             </ul>
                 </li>
                                 <li class="headerMenu_list">javascript</li>
@@ -139,9 +144,7 @@
         </nav>
     </header>
     <!-- メニューを出した時に出る黒背景 -->
-    <div class="el-blackCover" id="js-blackCover"></div>
-    <!-- hamburgerメニューを押した時に背景スクロールさせないためのタグ -->
-    <div class="el-wrapPosFix" id="js-wrapPosFix"> <main class="ly-baseWrap ly-UnderheaderSpace"> 
+    <div class="el-blackCover" id="js-blackCover"></div><main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
             <h1>制作日記</h1>
@@ -157,6 +160,7 @@
                 <li>目次の開閉</li>
                 <li>CSSカテゴライズまとめ</li>
                 <li>ボタンまとめ</li>
+                <li>メニュー作成までのまとめ</li>
                 <li>break-wordなどテキストまとめ</li>
                 <li>guipfileまとめ</li>
                 <li>エスケープのjsまとめ</li>
@@ -182,8 +186,12 @@
                 <li>@keyframes使い方まとめ　メニューで背景黒く</li>
             </ul>
             <h2><time>2020年</time></h2>
+            <h2><time>2020年</time></h2>
+            <time class="dairyTime" datetime="2020-08-27">8月27日</time>
+            <p>ハンバーガーメニューの機能について</p>
             <time class="dairyTime" datetime="2020-08-26">8月26日</time>
             <p>背景位置固定は、bodyタグにoverflow:hidden をつけることで対応。</p>
+            <p>https://tech.arms-soft.co.jp/ レイアウトがきれい</p>
             <time class="dairyTime" datetime="2020-08-25">8月25日</time>
             <p>メニューをだした時に黒透過背景を追加。メニューの開閉で背景の位置が変わる。position:fixed;と.getBoundingClientRect()で位置を取得での位置固定と解除した時の static の変更でできるとかいてあったけど、できない。</p>
             <time class="dairyTime" datetime="2020-08-24">8月24日</time>
@@ -198,7 +206,7 @@
             <p>iタグ、dfnタグ追加。目立たすタグページ修正。</p>
             <p>日記ページ作成。timeタグを調べる。</p>
             <p>preタグとcodeタグの違いを調べる。改行やインデントなどはcodeは反映されない。</p>
-            <p>faviconページに目次と内部リンクを追加。使った時に、ヘッダーの下に表示される問題が解決。これまで使ってた方法よりかなり楽になった。htmlタグにscroll-padding-top: 80px;を入れる。</p>
+            <p>faviconページに目次と内部リンクを追加。使った時に、ヘッダーの下に表示される問題が解決。これまで使ってた方法よりかなり楽になった。</p><p>内部リンクでコンテンツがヘッダー下に隠れる問題。htmlタグにscroll-padding-top: 80px;を入れる。</p>
             <time class="dairyTime" datetime="2020-08-22">8月22日</time>
             <p>
                 faviconページでコードを表示させようとしたところ、勝手に閉じタグが挿入される問題。原因不明。対処方不明。
@@ -216,10 +224,9 @@
         </section>
     </article>
 </main>
-            <footer class="footer">
-                <p>Copyright © 2020 porco tasso All rights reserved.</p>
-            </footer>
-        </div>
+        <footer class="footer">
+            <p>Copyright © 2020 porco tasso All rights reserved.</p>
+        </footer>
         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
         <script src="/js/common.js"></script>
         

@@ -25,6 +25,7 @@
                 <li>ly- レイアウトグループ</li>
                 <li>bl- ブロックモジュール</li>
                 <li>el- エレメントモジュール</li>
+                <li>js- javascriptに利用するクラスもしくはidにつける</li>
                 <li>--　モディファイヤーの区切り</li>
                 <li>_ block element を繋ぐ</li>
             </ul>

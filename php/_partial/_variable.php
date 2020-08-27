@@ -75,10 +75,16 @@ $favicon = array(
 	"lead" => "faviconはfavorite icon”の略語でウェブサイトのシンボルマーク・イメージとして、サイトに配置するアイコンの俗称です。閲覧中のタブなどに表示し潜在層にサイトを認知させる目的があります。",
 	"html" => "/code-parts/favicon.html"
 );
+$hamburgerMenu = array(
+	"file" => "/php/pages/code-parts/hamburger-menu.php",
+	"title" => "hamburger-menu",
+	"lead" => "hamburger-menuを作る際に必要な要素がいくつかあるので、分解して説明します。",
+	"html" => "/code-parts/hamburger-menu.html"
+);
 $codeParts = array(
 	"title" => "パーツ",
 	"lead" => "明確なルールがないが実際にやってみると定義が必要になってくるもののメモ",
-	"pages" => array($button, $breakWord, $elementEmStrongMarkB, $favicon)
+	"pages" => array($button, $breakWord, $elementEmStrongMarkB, $favicon, $hamburgerMenu)
 );
 
 // /javascript memo

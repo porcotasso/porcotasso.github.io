@@ -15,7 +15,7 @@
     <!-- google font Pacifico for title -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>
-        命名ルール    </title>
+        hamburger-menu    </title>
 </head>
 <body>
 
@@ -147,52 +147,162 @@
     <div class="el-blackCover" id="js-blackCover"></div><main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
-            <h1>命名ルール</h1>
-            <p>クラス名からクラスの目的やスコープがわかるようにしておき、正確なコーディングに役立てる。</p>
+            <h1>hamburger-menu</h1>
+            <p>hamburger-menuを作る際に必要な要素がいくつかあるので、分解して説明します。</p>
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                                 <ol>
                                         <li>
+                        <a href="#0" class="">
+                            <div class="">hamburgerのデザイン</div>
+                        </a>
+                    </li>
+                                        <li>
                         <a href="#1" class="">
-                            <div class="">命名ルール</div>
+                            <div class="">クリックしたらクラスをつける</div>
                         </a>
                     </li>
                                         <li>
                         <a href="#2" class="">
-                            <div class="">略語</div>
+                            <div class="">クラスを利用して変形</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#3" class="">
+                            <div class="">メニューを出す</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#4" class="">
+                            <div class="">背景のコンテンツを固定する</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#5" class="">
+                            <div class="">黒透過背景をつける</div>
                         </a>
                     </li>
                                     </ol>
             </nav>
         </header>
-        <section class="ly-section"  id="1">
-            <h2>命名ルール</h2>
-            <ul>
-                <li>ローワーキャメル</li>
-                <li>ly- レイアウトグループ</li>
-                <li>bl- ブロックモジュール</li>
-                <li>el- エレメントモジュール</li>
-                <li>js- javascriptに利用するクラスもしくはidにつける</li>
-                <li>--　モディファイヤーの区切り</li>
-                <li>_ block element を繋ぐ</li>
-            </ul>
-        </section>
-        <section class="ly-section"  id="2">
-            <h2>略語</h2>
-            <ul>
-                <li>container　単体のブロックを囲う時に使う　主にレイアウト的な入れ物　レイアウトに関するスタイルをつける </li>
-                <li>wrapper　単体のブロックを囲う時に使う　意味的な入れ物　レイアウト以外に関するスタイルをつける</li>
-                <li>_inner 複数のブロックを囲う時に使う　の下で使う入れ物　</li>
-                <li>btn ーbutton</li>
-                <li>txt ーtext</li>
-                <li>cnt ーcontent</li>
-                <li>ico ーicon</li>
-                <li>cat ーcategory</li>
-            </ul>
-        </section>
-        <section class="ly-section">
-            <h3>参考</h3>
-            <cite class="ly-cite"><a href="https://wunderstand.net/1417/" target="_blank" rel="noopener noreferrer">html5のarticle・section等、まとめる要素まとめ</a></cite>
+        <section class="ly-section" id="0">
+            <h2>hamburgerのデザイン</h2>
+            <p>ハンバーガーのラインは3つのspanでラインをつくり、親タグで全体の位置とサイズを調整します。floatを使っているのはロゴを中心にしたかったからで、レイアウトによっては必要ありません。</p>
+<pre class="prettyprint">
+.menu-trigger{
+	display: inline-block;
+	box-sizing: border-box;
+	float: right;
+	position: relative;
+	top: -6px;
+	margin: -24px $gutter-width 0 0;
+	width: 34px;
+	height: 24px;
+	span{
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: #333;
+		border-radius: 4px;
+		transition: all .4s;
+		&:nth-of-type(1) {
+			top: 0;
+		}
+		&:nth-of-type(2) {
+			top: 11px;
+		}
+		&:nth-of-type(3) {
+			bottom: 0;
+		}
+	}
+}
+</pre>
+		</section>
+		<section class="ly-section" id="1">
+            <h2>クリックしたらクラスをつける</h2>
+			<p>ハンバーガー（js-hamburger）をクリックしたらメニュー（js-headerNav）にactiveクラスをつけて表示させます。今回は大枠にクラスをつけることで下層のいろんな部分にスタイルを追加します。ハンバーガーを×印に変更し、ロゴや背景を変更してメニューを表示します。</p>
+			<ul>
+				ハンバーガーを×印に変更
+				ロゴや背景を変更
+			</ul>
+<pre class="prettyprint">
+var hamburger = document.getElementById("js-hamburger");
+var headerNav = document.getElementById("js-headerNav");
+hamburger.onclick = function() {
+  // メニューのトグル
+  headerNav.classList.toggle("active");
+};
+</pre>
+		</section>
+		<section class="ly-section" id="2">
+            <h2>クラスを利用して変形</h2>
+            <p>各ラインをそれぞれのスタイルを追加して変形をします。</p>
+<pre class="prettyprint">
+.menu-trigger{
+	span{
+		background:#fff;
+		&:nth-of-type(1) {
+			transform:rotate(-45deg);
+			top: 12px;
+		}
+		&:nth-of-type(2) {
+			width: 0;
+			left: 15px;
+		}
+		&:nth-of-type(3) {
+			transform:rotate(45deg);
+			top: 12px;
+		}
+	}
+}
+</pre>
+		</section>
+		<section class="ly-section" id="3">
+            <h2>メニューを出す</h2>
+            <p>display:none; からblockもしくはwidth:0; から100%などの変更をしてメニューを表示させます。</p>
+		</section>
+		<section class="ly-section" id="4">
+            <h2>背景のコンテンツを固定する</h2>
+			<p>背景のコンテンツを固定をするのにbodyにoverflowをhiddenにします。背景のタグにposition:fixed;にして、.getBoundingClientRect()でY位置を取得して固定する方法もあるようですが、解除した際にposition:static;にしてもトップに戻ってしまい解決しなかったです。</p>
+<pre class="prettyprint">
+var bodyOverflow = document.getElementsByTagName("body");
+// 背景のスクロールを止める
+if(bodyOverflow[0].style.overflow == 'hidden'){
+bodyOverflow[0].style.overflow = '';
+} else {
+bodyOverflow[0].style.overflow = 'hidden';
+}
+
+//positionにステータスを追加し背景の位置を取得追加するパターン（うまくいかなかった）
+var clientRect = wrapPosFix.getBoundingClientRect();　　
+var posY = String( clientRect.top)  + 'px';
+if(wrapPosFix.style.position == 'fixed'){
+	wrapPosFix.style.position = 'static';
+	wrapPosFix.style.top = 0;   
+} else {
+	wrapPosFix.style.position = 'fixed';
+	wrapPosFix.style.top = posY;
+}
+</pre>			
+		</section>
+		<section class="ly-section" id="5">
+            <h2>黒透過背景をつける</h2>
+			<p>黒透過背景用のタグを追加し、トグルで表示非表示させます。黒背景をクリックした際に、メニューを閉じるスクリプトも追加。</p>
+<pre class="prettyprint">
+<!-- メニューを出した時に出る黒背景 -->
+<div class="el-blackCover" id="js-blackCover"></div>
+
+var blackCover = document.getElementById("js-blackCover");
+// 黒背景のトグル
+blackCover.classList.toggle("active");
+// 黒背景のクリックでメニュー閉じる
+blackCover.onclick = function() {
+	headerNav.classList.remove("active");
+	blackCover.classList.remove("active");
+	bodyOverflow[0].style.overflow = '';
+}
+</pre>			
         </section>
     </article>
 </main>
