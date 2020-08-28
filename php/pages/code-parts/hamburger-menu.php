@@ -6,7 +6,7 @@
             <p><?php echo $lead ?></p>
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
-                <?php $navList = array("hamburgerのデザイン", "クリックしたらクラスをつける", "クラスを利用して変形", "メニューを出す", "背景のコンテンツを固定する", "黒透過背景をつける"); ?>
+                <?php $navList = array("hamburgerのデザイン", "クリックしたらクラスをつける", "背景のコンテンツを固定する", "黒透過背景をつける"); ?>
                 <ol>
                     <?php for($i = 0; $i < count($navList); $i++){ ?>
                     <li>
@@ -54,22 +54,16 @@
 		</section>
 		<section class="ly-section" id="1">
             <h2><?php echo $navList[1]; ?></h2>
-			<p>ハンバーガー（js-hamburger）をクリックしたらメニュー（js-headerNav）にactiveクラスをつけて表示させます。今回は大枠にクラスをつけることで下層のいろんな部分にスタイルを追加します。ハンバーガーを×印に変更し、ロゴや背景を変更してメニューを表示します。</p>
-			<ul>
-				ハンバーガーを×印に変更
-				ロゴや背景を変更
-			</ul>
+			<p>ハンバーガー（js-hamburger）をクリックしたらメニュー（js-headerNav）にactiveクラスをつけます。今回は大枠にクラスをつけることで下層のいろんな部分にスタイルを追加します。ハンバーガーを×印に変更し、メニューを表示しロゴや背景を変更します。</p>
 <pre class="prettyprint">
 var hamburger = document.getElementById("js-hamburger");
 var headerNav = document.getElementById("js-headerNav");
 hamburger.onclick = function() {
-  // メニューのトグル
   headerNav.classList.toggle("active");
 };
 </pre>
-		</section>
-		<section class="ly-section" id="2">
-            <h2><?php echo $navList[2]; ?></h2>
+
+            <h3>ハンバーガーを×印に変更</h3>
             <p>各ラインをそれぞれのスタイルを追加して変形をします。</p>
 <pre class="prettyprint">
 .menu-trigger{
@@ -90,13 +84,30 @@ hamburger.onclick = function() {
 	}
 }
 </pre>
+			<h3>メニューを表示</h3>
+			<p>display:none; からblockもしくはwidth:0; から100%などの変更をしてメニューを表示させます。</p>
+<pre class="prettyprint">
+.headerMenu{
+	display: block;
+	opacity: 1;
+	width: 84%;
+	animation: headerMenu .3s ease-out both;
+}
+</pre>
+
+			<h3>ロゴと背景の色を変更</h3>
+<pre class="prettyprint">
+&.active{
+	background: #d1dae4;
+	.web-ttl{
+		a{
+			color: #fff;
+		}
+	}
+</pre>
 		</section>
-		<section class="ly-section" id="3">
-            <h2><?php echo $navList[3]; ?></h2>
-            <p>display:none; からblockもしくはwidth:0; から100%などの変更をしてメニューを表示させます。</p>
-		</section>
-		<section class="ly-section" id="4">
-            <h2><?php echo $navList[4]; ?></h2>
+		<section class="ly-section" id="2">
+            <h2><?php echo $navList[2]; ?></h2>
 			<p>背景のコンテンツを固定をするのにbodyにoverflowをhiddenにします。背景のタグにposition:fixed;にして、.getBoundingClientRect()でY位置を取得して固定する方法もあるようですが、解除した際にposition:static;にしてもトップに戻ってしまい解決しなかったです。</p>
 <pre class="prettyprint">
 var bodyOverflow = document.getElementsByTagName("body");
@@ -107,9 +118,10 @@ bodyOverflow[0].style.overflow = '';
 bodyOverflow[0].style.overflow = 'hidden';
 }
 
-//positionにステータスを追加し背景の位置を取得追加するパターン（うまくいかなかった）
+//positionにステータスを追加し背景(js-wrapPosFix)の位置を取得追加するパターン（うまくいかなかった）
+var wrapPosFix = document.getElementById("js-wrapPosFix");
 var clientRect = wrapPosFix.getBoundingClientRect();　　
-var posY = String( clientRect.top)  + 'px';
+var posY = String(clientRect.top)  + 'px'; //スタイルのステータス用に文字列に変更
 if(wrapPosFix.style.position == 'fixed'){
 	wrapPosFix.style.position = 'static';
 	wrapPosFix.style.top = 0;   
@@ -119,8 +131,8 @@ if(wrapPosFix.style.position == 'fixed'){
 }
 </pre>			
 		</section>
-		<section class="ly-section" id="5">
-            <h2><?php echo $navList[5]; ?></h2>
+		<section class="ly-section" id="3">
+            <h2><?php echo $navList[3]; ?></h2>
 			<p>黒透過背景用のタグを追加し、トグルで表示非表示させます。黒背景をクリックした際に、メニューを閉じるスクリプトも追加。</p>
 <pre class="prettyprint">
 <!-- メニューを出した時に出る黒背景 -->

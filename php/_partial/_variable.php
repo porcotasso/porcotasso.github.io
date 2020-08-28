@@ -81,10 +81,16 @@ $hamburgerMenu = array(
 	"lead" => "hamburger-menuを作る際に必要な要素がいくつかあるので、分解して説明します。",
 	"html" => "/code-parts/hamburger-menu.html"
 );
+$headerSmaller = array(
+	"file" => "/php/pages/code-parts/header-smaller.php",
+	"title" => "header-smaller",
+	"lead" => "画面をスクロールした時に高さを変えるjavascriptについての説明です。",
+	"html" => "/code-parts/header-smaller.html"
+);
 $codeParts = array(
 	"title" => "パーツ",
 	"lead" => "明確なルールがないが実際にやってみると定義が必要になってくるもののメモ",
-	"pages" => array($button, $breakWord, $elementEmStrongMarkB, $favicon, $hamburgerMenu)
+	"pages" => array($button, $breakWord, $elementEmStrongMarkB, $favicon, $hamburgerMenu, $headerSmaller)
 );
 
 // /javascript memo

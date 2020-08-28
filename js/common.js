@@ -1,14 +1,9 @@
-// HEADER MENU 
-  // hamburgerクリックで
-  // •メニューをアニメーションで開閉
-  // •黒透過背景を追加
-  // •下層コンテンツのスクロールを止める
-
+// HEADER HAMBURGER MENU 
 var hamburger = document.getElementById("js-hamburger");
 var headerNav = document.getElementById("js-headerNav");
 var blackCover = document.getElementById("js-blackCover");
 var bodyOverflow = document.getElementsByTagName("body");
-// var wrapPosFix = document.getElementById("js-wrapPosFix");
+
 hamburger.onclick = function() {
   // メニューのトグル
   headerNav.classList.toggle("active");
@@ -76,7 +71,7 @@ document.addEventListener("DOMContentLoaded",() => {
 // escape code in pre tag
 var escapeHtml = (function (String) {
   var escapeMap = {
-    '&': '&amp;',
+    // '&': '&amp;',
     "'": '&#x27;',
     '`': '&#x60;',
     '"': '&quot;',
@@ -126,7 +121,6 @@ for(var i = 0; i < pre.length; i++) {
 // }
 
 
-// console.log(nextElementSibling);
 // elements.onclick = function() {
 //   nextElementSibling.classList.toggle("active");
 // };
