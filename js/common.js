@@ -24,10 +24,10 @@ hamburger.onclick = function() {
 };
 
 // HEADER SMALL after scroll
-function init() {
+function headerSmaller() {
 	var px_change = 80;
 	let headerSmaller = document.getElementsByClassName('js-headerSmaller');
-	window.addEventListener('scroll', function (e) {
+	window.addEventListener('scroll', () => {
     var y = document.documentElement.scrollTop || document.body.scrollTop;
 		if ( y > px_change) {
 			headerSmaller[0].classList.add('smaller');
@@ -36,7 +36,7 @@ function init() {
 		}
 	});
 }
-window.onload = init();
+window.onload = headerSmaller();
 
 
 // HOME MENU OPEN/CLOSE #menu-triggerをクリックで#js-headerがオンオフ

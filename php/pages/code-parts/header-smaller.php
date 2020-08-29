@@ -6,7 +6,7 @@
             <p><?php echo $lead ?></p>
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
-                <?php $navList = array("javascript", "init, loadについて"); ?>
+                <?php $navList = array("javascript"); ?>
                 <ol>
                     <?php for($i = 0; $i < count($navList); $i++){ ?>
                     <li>
@@ -20,13 +20,14 @@
         </header>
         <section class="ly-section" id="0">
             <h2><?php echo $navList[0]; ?></h2>
-            <p>上部から80pxの位置を超えたときに、ヘッダーの高さが変わるようにします。ハンバーガーメニューのためにidを使っているのでクラスで要素を取得しています。ちなみにgetElementsByClassName()が返すのは、HTMLCollectionであってElementではないので、[番号]でどの要素を選ぶのか指定が必要です。
-			</p>
+
 <pre class="prettyprint">
-function init() {
+<header class="js-headerSmaller"> 
+
+function headerSmaller() {
 	var px_change = 80;
 	let headerSmaller = document.getElementsByClassName('js-headerSmaller');
-	window.addEventListener('scroll', function (e) {
+	window.addEventListener('scroll', () => {
     var y = document.documentElement.scrollTop || document.body.scrollTop;
 		if ( y > px_change) {
 			headerSmaller[0].classList.add('smaller');
@@ -35,14 +36,39 @@ function init() {
 		}
 	});
 }
-window.onload = init();
+window.onload = headerSmaller();
 </pre>
-		</section>
-		<section class="ly-section" id="1">
-			<h2><?php echo $navList[1]; ?></h2>
-function init() はパッケージ変数の初期化に使われます。ここでの意味合いはY値の初期化が目的になりますが、別の適当な関数名にしても動いたので、ここでは必要ないのかも。。。window.onload　windowオブジェクトが読み込まれたタイミングで処理が実行されている　画像が読み込まれたタイミングで処理を実行する例　複数の「onloadイベント」書いてしまうと上書きされてしまい、最後に書いたイベントだけが実行される　その場合はwindow.addEventListener('load', function() {
-  console.log('リンゴ');をつかう。
+
+<p>上部から80pxの位置を超えたときに、ヘッダーの高さが変わるようにします。ハンバーガーメニューのためにidを使っているのでクラスで要素を取得しています。</p>
+<h3>コードの流れ</h3>
+<p>windowオブジェクトでscrollイベントが発生を取得</p>
+<pre class="prettyprint">
+window.addEventListener('scroll', () => {}
+</pre>
+<p>Element.scrollTop プロパティで、要素の内容が垂直にスクロールするピクセル数を取得</p>
+<pre class="prettyprint">
+var y = document.documentElement.scrollTop || document.body.scrollTop;
+</pre>
+<p>垂直にスクロールするピクセル数がpx_change変数を超えた時はsmallerクラスを追加し、超えてなくてsmallerクラスがついている時はクラスをはずします。</p>
+<pre class="prettyprint">
+if ( y > px_change) {
+    headerSmaller[0].classList.add('smaller');
+} else if (headerSmaller[0].classList.contains('smaller')) {
+    headerSmaller[0].classList.remove('smaller');
+}
+</pre>
+<p>windowオブジェクトが読み込まれたタイミングでheaderSmallerを作動させます</p>
+<pre class="prettyprint">
+window.onload = headerSmaller();
+</pre>
+
+<p>onloadはページや画像などを読み込んでから処理を実行するときに利用するイベントハンドラーです。データを読み込んでから処理を実行したいときなどに使用します。複数の「onloadイベント」書いてしまうと上書きされてしまい最後に書いたイベントだけが実行されます。その場合はaddEventListenerを使います。</p>
+<pre class="prettyprint">
+window.addEventListener('load', function() {
+    console.log('hello');
 })
+</pre>
+<p>ちなみにgetElementsByClassName()が返すのは、HTMLCollectionであってElementではないので、[番号]でどの要素を選ぶのか指定が必要です。</p>
 		</section>
     </article>
 </main>

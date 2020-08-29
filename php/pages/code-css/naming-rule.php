@@ -43,10 +43,6 @@
                 <li>cat ーcategory</li>
             </ul>
         </section>
-        <section class="ly-section">
-            <h3>参考</h3>
-            <cite class="ly-cite"><a href="https://wunderstand.net/1417/" <?php echo $targetBlank ?>>html5のarticle・section等、まとめる要素まとめ</a></cite>
-        </section>
     </article>
 </main>
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-foot.php"); ?>

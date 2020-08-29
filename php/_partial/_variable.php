@@ -100,10 +100,16 @@ $javascriptMemo = array(
 	"lead" => "メモ",
 	"html" => "/code-js/javascript-memo.html"
 );
+$eventHandler = array(
+	"file" => "/php/pages/code-js/event-handler.php",
+	"title" => "event-handler",
+	"lead" => "event、event-handler、addEventListenerについての説明です。",
+	"html" => "/code-js/event-handler.html"
+);
 $codeJs = array(
 	"title" => "javascript",
 	"lead" => "javascriptメモ",
-	"pages" => array($javascriptMemo)
+	"pages" => array($javascriptMemo, $eventHandler)
 );
 // /php memo
 $phpMemo = array(

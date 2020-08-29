@@ -14,7 +14,6 @@
                 <li>ぱんくずリスト</li>
                 <li>目次の開閉</li>
                 <li>CSSカテゴライズまとめ</li>
-                <li>ボタンまとめ</li>
                 <li>メニュー作成までのまとめ</li>
                 <li>break-wordなどテキストまとめ</li>
                 <li>guipfileまとめ</li>
@@ -41,7 +40,8 @@
                 <li>@keyframes使い方まとめ　メニューで背景黒く</li>
             </ul>
             <h2><time>2020年</time></h2>
-            <h2><time>2020年</time></h2>
+            <time class="dairyTime" datetime="2020-08-27">8月29日</time>
+            <p>event-handler, header-smallerページの追加。eventlisnerの使い方があいまいだったのでメモ。ボタンまとめ</p>
             <time class="dairyTime" datetime="2020-08-27">8月27日</time>
             <p>ハンバーガーメニューの機能について</p>
             <time class="dairyTime" datetime="2020-08-26">8月26日</time>
