@@ -8,20 +8,15 @@
         <section class="ly-section">
             <h2>これからやることリスト</h2>
             <ul>
-                <li>ホームレイアウト</li>
+                <li>ホームレイアウト　homeにスライダーをつける</li>
                 <li>PCデザイン</li>
                 <li>ロゴ作成</li>
                 <li>ぱんくずリスト</li>
                 <li>目次の開閉</li>
-                <li>CSSカテゴライズまとめ</li>
-                <li>メニュー作成までのまとめ</li>
-                <li>break-wordなどテキストまとめ</li>
                 <li>guipfileまとめ</li>
                 <li>エスケープのjsまとめ</li>
-                <li>svgまとめ</li>
                 <li>prettyまとめ</li>
                 <li>現実的問題まとめ</li>
-                <li>フッター</li>
                 <li>コンテンツページ同士のリンク、タイトル左右に矢印</li>
                 <li>nginxまとめバーチャルホスト</li>
                 <li>githubまとめ</li>
@@ -32,15 +27,16 @@
                 <li>UXまとめ</li>
                 <li>UIまとめ</li>
                 <li>カルーセル</li>
-                <li>スライダー</li>
                 <li>ポップ</li>
                 <li>全タグ確認</li>
                 <li>background-attachment は、背景画像の固定表示を指定するプロパティ https://www.tagindex.com/stylesheet/page/background_attachment.htmls</li>
-                <li>モーダルやメニューを表示したときに背景をスクロールさせない方法メモ</li>
-                <li>@keyframes使い方まとめ　メニューで背景黒く</li>
+                <li>@keyframes使い方まとめ　https://www.atmarkit.co.jp/fwcr/design/benkyo/webgraphics01/sample.html　</li>
+                <li>-CSSカテゴライズまとめ、break-wordなどテキスト、svgまとめ</li>
             </ul>
             <h2><time>2020年</time></h2>
-            <time class="dairyTime" datetime="2020-08-27">8月29日</time>
+            <time class="dairyTime" datetime="2020-08-30">8月30日</time>
+            <p>改行について、SVGについてまとめ。フッター追加</p>
+            <time class="dairyTime" datetime="2020-08-29">8月29日</time>
             <p>event-handler, header-smallerページの追加。eventlisnerの使い方があいまいだったのでメモ。ボタンまとめ</p>
             <time class="dairyTime" datetime="2020-08-27">8月27日</time>
             <p>ハンバーガーメニューの機能について</p>

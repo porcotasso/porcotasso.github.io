@@ -24,7 +24,8 @@ body {
   font-weight: normal;
   letter-spacing: 0.04em;
   line-height: 1.5;
-  text-align: left; }
+  text-align: left;
+  word-break: break-word; }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important; }
@@ -470,11 +471,15 @@ template {
     -webkit-animation: cover-show .3s ease-out both;
             animation: cover-show .3s ease-out both; }
 
-.footer {
+.ly-footer {
   bottom: 0;
-  height: 100px;
+  height: 60px;
   padding: 16px 5%;
-  background: #f5f5f5; }
+  background: #adb5bd; }
+  .ly-footer .el-copyright {
+    color: #fff;
+    font-size: 1.4rem;
+    text-align: center; }
 
 .ly-mainNav {
   margin: 16px 5% 80px;
@@ -526,12 +531,13 @@ template {
     align-items: baseline; }
     .bl-categoryList_ttl h2 {
       margin: 0;
-      padding-right: 4px;
-      font-size: 1.7rem;
-      font-weight: bold; }
+      padding-right: 6px;
+      font-size: 1.5rem;
+      font-weight: normal; }
     .bl-categoryList_ttl span {
+      align-items: center;
       color: #666;
-      font-size: 1.4rem; }
+      font-size: 1.3rem; }
   .bl-categoryList_txt {
     margin-bottom: 0;
     font-size: 1.5rem; }

@@ -49,7 +49,7 @@ gulp.task('html', function() {
     "doctype-first": true,
     "tag-pair": true,
     "empty-tag-not-self-closed": true,
-    "spec-char-escape": true,
+    "spec-char-escape": false, //true -> false
     "id-unique": true,
     "src-not-empty": true,
     "title-require": true,
@@ -59,7 +59,7 @@ gulp.task('html', function() {
     "style-disabled": false,
     "inline-style-disabled": false,
     "inline-script-disabled": false,
-    "space-tab-mixed-disabled": "space",
+    // "space-tab-mixed-disabled": "space",
     "id-class-ad-disabled": false,
     "href-abs-or-rel": false,
     "attr-unsafe-chars": true,

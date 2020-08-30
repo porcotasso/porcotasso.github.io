@@ -40,11 +40,18 @@
     <header class="ly-header js-headerSmaller" id="js-headerNav">  
         <nav class="ly-header__inner">
             <?php if($_SERVER['REQUEST_URI'] == "/php/pages/index.php"){ ?>
-                <h1 class="web-ttl"><a href="/">porco tasso</a></h1>
+                <h1 class="web-ttl">
+                    <a href="/">
+                        <?php include("/Users/porcokafuka/projects/porcotasso.github.io/images/common/logo.svg"); ?>
+                    </a>
+                </h1>
             <?php }else{ ?>
-                <div class="web-ttl"><a href="/">porco tasso</a></div>
+                <div class="web-ttl">
+                    <a href="/">
+                        <?php include("/Users/porcokafuka/projects/porcotasso.github.io/images/common/logo.svg"); ?>
+                    </a>
+                </div>
             <?php } ?>
-
             <a class="menu-trigger pc-header-none" id="js-hamburger">
                 <span></span>
                 <span></span>

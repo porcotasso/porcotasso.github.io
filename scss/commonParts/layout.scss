@@ -237,11 +237,17 @@
 		animation: cover-show .3s ease-out both;
 	}
 }
-.footer{
+.ly-footer{
 	bottom: 0;
-	height: 100px;
-	background: $gray-200;
+	height: 60px;
+	background: $gray-500;
 	padding: $space-unit *2 $gutter-width;
+	.el-copyright{
+		text-align: center;
+		color: #fff;
+		font-size: $font-size-14;
+	}
+
 }
 
 .ly-mainNav{

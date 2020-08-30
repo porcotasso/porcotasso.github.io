@@ -33,6 +33,7 @@ body {
   letter-spacing: 0.04em;
   text-align: left;
   background-color: $bg-white;
+  word-break:break-word;
 }
  
 [tabindex="-1"]:focus:not(:focus-visible) {

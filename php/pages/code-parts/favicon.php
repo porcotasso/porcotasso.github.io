@@ -6,7 +6,6 @@
             <p><?php echo $lead ?></p>
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
-
                 <?php $navList = array("favicon、アイコンの種類", "画像フォーマット", "コード"); ?>
                 <ol>
                     <?php for($i = 0; $i < count($navList); $i++){ ?>
