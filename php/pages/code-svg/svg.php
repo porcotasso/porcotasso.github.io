@@ -66,6 +66,7 @@
             <p>SVGのuse要素を使ってSVGファイルの任意のid属性を持つ要素だけ読み込み</p>
             <cite class="ly-cite"><a href="https://lopan.jp/about-svg/" <?php echo $targetBlank ?>>SVGでやることのまとめ</a></cite>
             <cite class="ly-cite"><a href="https://lopan.jp/about-svg-sprites/" <?php echo $targetBlank ?>>使いまわせるSVG</a></cite>
+            <cite class="ly-cite"><a href="https://blog.webico.work/lottie-sample" <?php echo $targetBlank ?>>Lottieでウェブアニメーションを作ってみた　SVG+JSのウェブアニメーション</a></cite>
         </section>
     </article>
 </main>

@@ -106,10 +106,23 @@ $eventHandler = array(
 	"lead" => "event、event-handler、addEventListenerについての説明です。",
 	"html" => "/code-js/event-handler.html"
 );
+$eventPropagation = array(
+	"file" => "/php/pages/code-js/event-propagation.php",
+	"title" => "イベント伝搬とは",
+	"lead" => "イベントハンドラーが呼ばれる順番について",
+	"html" => "/code-js/event-propagation.html"
+);
+$scrollJunk = array(
+	"file" => "/php/pages/code-js/scroll-junk.php",
+	"title" => "スクロールジャンクとは",
+	"lead" => "スクロールジャンクとその防ぎ方について",
+	"html" => "/code-js/scroll-junk.html"
+);
+
 $codeJs = array(
 	"title" => "javascript",
 	"lead" => "javascriptメモ",
-	"pages" => array($javascriptMemo, $eventHandler)
+	"pages" => array($javascriptMemo, $eventHandler, $eventPropagation,$scrollJunk)
 );
 // /php memo
 $phpMemo = array(

@@ -10,10 +10,12 @@
             <ul>
                 <li>ホームレイアウト　homeにスライダーをつける</li>
                 <li>PCデザイン</li>
+                <li>swiper, slick, Preload.js,Cookie判定にはjquery-cookie.js</li>
                 <li>ロゴ作成</li>
                 <li>ぱんくずリスト</li>
                 <li>目次の開閉</li>
                 <li>guipfileまとめ</li>
+                <li>スクロールジャンク</li>
                 <li>エスケープのjsまとめ</li>
                 <li>prettyまとめ</li>
                 <li>現実的問題まとめ</li>
@@ -34,6 +36,8 @@
                 <li>-CSSカテゴライズまとめ、break-wordなどテキスト、svgまとめ</li>
             </ul>
             <h2><time>2020年</time></h2>
+            <time class="dairyTime" datetime="2020-08-31">8月31日</time>
+            <p>イベント伝搬とはまとめ</p>
             <time class="dairyTime" datetime="2020-08-30">8月30日</time>
             <p>改行について、SVGについてまとめ。フッター追加</p>
             <time class="dairyTime" datetime="2020-08-29">8月29日</time>

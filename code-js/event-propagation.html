@@ -15,7 +15,7 @@
     <!-- google font Pacifico for title -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>
-        各タグ要素について    </title>
+        イベント伝搬とは    </title>
 </head>
 <body>
 
@@ -347,54 +347,143 @@
     <div class="el-blackCover" id="js-blackCover"></div><main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
-            <h1>各タグ要素について</h1>
-            <p>各タグのスタイルをどうするかは、考え方やサイトのないようによりますが、できるだけなぜそうしたかを明確にしておくことで修正がしやすくなるのでメモ。</p>
-            <nav>
-                <div>目次</div>
-                <ol>
-                    <li>Pタグ</li>
-                    <li>リストタグ</li>
-                </ol>
+            <h1>イベント伝搬とは</h1>
+            <p>イベントハンドラーが呼ばれる順番について</p>
+            <nav class="ly-mainNav">
+                <div class="el-mainNavTtl">目次</div>
+                                <ol>
+                                        <li>
+                        <a href="#0" class="">
+                            <div class="">イベント伝搬とは</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#1" class="">
+                            <div class="">イベントフェーズ</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#2" class="">
+                            <div class="">発火のタイミングをコントロール</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#3" class="">
+                            <div class="">イベント伝播の停止</div>
+                        </a>
+                    </li>
+                                    </ol>
             </nav>
         </header>
-        <section class="ly-section">
-            <h2>Pタグ</h2>
-            <p>pタグは「Paragraph」の略です。長いひとかたまりの文章だけでなく、テキストを使ういろいろな場所で使われるので、用途ごとに対応できるスタイルの指定が必要になります。このサイトでの考え方では、pタグを複数行にわたる文章を基本として設定するので、長文が読みやすいスタイルを基本に指定します。具体的にはline-heightを1.8~2 letter-space0.05em など通常よりスペースを開けています。フォントサイズは長文が読みやすいサイズを目的とします。mobileで14px、PCで16pxあたりを基本に考えています。</p><p>ラベルなどで使う際には余計なスタイルをリセットして使用します。</p>
-        </section>
-        <section class="ly-section">
-            <h2>aタグ</h2>
+        <section class="ly-section" id="0">
+			<h2>イベント伝搬とは</h2>
+            <p>親子関係のようなネストされた二つの要素の両方の要素にクリックなど同じ「イベント」リスナーがついているときに子をクリックをすると親のイベントも一緒に発動します。イベント伝搬とはイベントハンドラーが呼ばれる順番についての概念、ルールです。</p>
+		</section>
+        <section class="ly-section" id="1">
+			<h2>イベントフェーズ</h2>
+			<p>例えば下記のようにネストされた２つのイベントターゲット（イベントの対象の要素のこと）両方にイベントリスナーがついている場合、イベントの順番はどうなるでしょうか。</p>
+			<p>答えば、good evening　→　good morning　となります。</p>
 <pre class="prettyprint">
-a{
-    outline: 0;
-    cursor: pointer;
-    text-decoration:none;
-    color: #222;
-}
+<div id="parent">
+	<div id="child">
+	</div>
+</div>
+
+<script>
+	document.getElementById('parent').addEventListener('click',()=>{
+		alert('good morning');
+	});
+	document.getElementById('child').addEventListener('click',()=>{
+		alert('good evening');
+	});
+</script> 
 </pre>
+
+			<p>イベントは、次の3つの段階 (フェーズ) を経て伝播されます。</p>
+			<ol>
+				<li>
+					<dl>
+						<dt>キャプチャフェーズ</dt>
+						<dd>ウィンドウからイベントターゲットの親までの段階</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>ターゲットフェーズ</dt>
+						<dd>イベントターゲットの段階</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>バブルフェーズ</dt>
+						<dd>イベントターゲットの親から戻ってウィンドウまでの段階。<br>*イベントによってはバブリング (bubbling) しないものもあります。</dd>
+					</dl>
+				</li>
+			</ol>
+			<p>つまり上から下、下から上と往復して同じ場所を２回辿っていることになります。</p>
+
+
+			
         </section>
-        <section class="ly-section">
-            <h2>リストタグ</h2>
-            <p>文章中のリストだけでなく、メニュー、パンくずリストなどでも使われるので、list-styleの設定をnoneにするかどうか、サイトの内容によって変えます。</p>
-        </section>
-        <section class="ly-section">
-            <h2>モバイルの左右幅。ガターについて</h2>
-            <p>機種によってモバイルの幅が違い、狭いものと広いものの差は、かなり大きいので、端の幅はピクセル固定せずに425px 20px 320px 16pxのように比率で変えたほうが見やすいと考えています。</p>
-        </section>
-        <section class="ly-section">
-            <h2>preタグとcodeタグ</h2>
-            <h3>pre</h3>
-            <p>Preformatted Text（整形済テキスト）という意味で、入力したソースのまま表示することができます。不要な空欄、タブもそのまま表示されるので使用できません。特殊文字は表示できないので、記号を使ってエスケープする必要があります。</p>
-            <cite class="ly-cite"><a href="https://webtools.dounokouno.com/htmlescape/" target="_blank" rel="noopener noreferrer">Web制作小物ツール</a></cite>
-            <h3>code</h3>
-            <p>Computer Codeの略。codeタグで囲んだ文字列がソースコードであることを示します。等幅フォントで表示される。改行やインデントなどはcodeでは反映されない（サイトによってはされると書いてあるようですが）。</p>
-        </section>
-        <section>
-            <h2>timeタグ</h2>
-            <p>timeタグはコンピュータやブラウザが日付や時刻を理解できるようにするのを目的に、グレゴリオ暦による時刻で正確に示す際に使用します。日時を記述するのに必ずtimeタグを使用しなくてはならないわけではないです。datetime属性は日付や時刻を指定します。datetime属性を省略する場合には、timeタグの中に記述します。</p>
-        </section>
-        <section>
-            <h2>blockquote・q・citeタグ</h2>
-            <cite class="ly-cite"><a href="https://nandemo-nobiru.com/2159/" target="_blank" rel="noopener noreferrer">なんでものびるWEB</a></cite>
+        <section class="ly-section" id="2">
+			<h2>発火のタイミングをコントロール</h2>
+            <p>addEventListener()の第3引数（true/false）で発火のタイミングをコントロールします。</p>
+            <ul>
+                <li>ture・・・キャプチャーフェーズ時に発火（親から先に発火）</li>
+				<li>false・・・バブリングフェーズ時に発火（子から先に発火）←初期値</li>
+            </ul>
+			<p>trueにした例。good morning　→　good eveningとなります。</p>
+<pre class="prettyprint">
+<div id="parent2">
+	<div id="child2">
+	</div>
+</div>
+
+<script>
+	function morning(){
+        alert('good morning');
+    }
+	document.getElementById('parent2').addEventListener('click', morning, true);
+
+	function evening(){
+        alert('good evening');
+    }
+	document.getElementById('child2').addEventListener('click', evening, true);
+</script>
+</pre>
+
+        <p>ちなみにaddEventListener()の第3引数は元々は発火のタイミングをコントロールするuseCaptureのみの設定だったみたいですが、現在は拡張され、イベントハンドラを一度だけの処理とする設定や、preventDefault()を実行するかどうかの設定も追加できます。</p>
+<pre class="prettyprint">
+element.addEventListener('click', function,{
+   once: true,
+   passive: true,
+   capture: true
+});
+</pre>
+			<h3>once</h3>
+			<p>イベントハンドラが一度だけの処理となり、一度しか読み込まないイベントを明示することでメモリの節約になり、毎回removeEventListenerを使うより楽。</p>
+		</section>
+        <section class="ly-section" id="3">
+			<h2>イベント伝播の停止</h2>
+			<p><code>stopPropagation();</code>でイベント伝播の停止をすることができます。</p>
+<pre class="prettyprint">
+<div id="parent3">
+	<div id="child3">
+	</div>
+</div>
+
+<script>
+	document.getElementById('parent3').addEventListener('click',()=>{		
+		alert('good morning');
+	});
+	document.getElementById('child3').addEventListener('click',(e)=>{
+		e.stopPropagation();
+		alert('good evening');	
+	});
+</script>
+</pre>
+
+
         </section>
     </article>
 </main>
