@@ -329,7 +329,7 @@ template {
     transform: translateY(0px);
     transition: 0.25s; }
     .ly-header__inner .web-ttl {
-      margin-bottom: 4px;
+      margin-bottom: 0;
       font-family: 'Pacifico', cursive;
       font-size: 2.1rem;
       font-weight: normal;
@@ -364,16 +364,16 @@ template {
     .ly-header__inner .headerMenu {
       z-index: 101;
       position: absolute;
-      top: 57px;
+      top: 59px;
+      left: 100%;
       width: 0%;
       height: calc(100vh - 80px);
-      padding: 0 0 64px;
+      padding: 0 0 164px;
       overflow: scroll;
       background: #fff;
       box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
       list-style: none;
       text-align: left;
-      opacity: 0;
       transition: 0.25s; }
       .ly-header__inner .headerMenu_list {
         display: block;
@@ -409,27 +409,10 @@ template {
       .ly-header.active .menu-trigger span:nth-of-type(3) {
         top: 12px;
         transform: rotate(45deg); }
-
-@-webkit-keyframes headerMenu {
-  0% {
-    width: 96%;
-    opacity: 0; }
-  100% {
-    width: 84%;
-    opacity: 100; } }
-
-@keyframes headerMenu {
-  0% {
-    width: 96%;
-    opacity: 0; }
-  100% {
-    width: 84%;
-    opacity: 100; } }
     .ly-header.active .headerMenu {
       display: block;
-      width: 84%;
-      -webkit-animation: headerMenu .3s ease-out both;
-              animation: headerMenu .3s ease-out both;
+      left: 14%;
+      width: 86%;
       opacity: 1; }
   .ly-header.smaller {
     transform: translateY(-32px);
@@ -437,7 +420,7 @@ template {
     .ly-header.smaller .ly-header__inner {
       transform: translateY(16px); }
       .ly-header.smaller .ly-header__inner .headerMenu {
-        top: 41px;
+        top: 43px;
         height: calc(100vh - 48px); }
     .ly-header.smaller .hamburger {
       top: 41px;
@@ -451,7 +434,7 @@ template {
   left: 0;
   width: 0;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.86);
+  background-color: rgba(0, 0, 0, 0.7);
   opacity: 0; }
 
 @-webkit-keyframes cover-show {

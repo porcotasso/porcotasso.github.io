@@ -36,6 +36,10 @@
                 <li>-CSSカテゴライズまとめ、break-wordなどテキスト、svgまとめ</li>
             </ul>
             <h2><time>2020年</time></h2>
+            <time class="dairyTime" datetime="2020-09-02">9月2日</time>
+            <p>各ページを並列化続き。jsで効率化。２重ループを試すも、最後のとろこで各タグ変数に代入ができない。固有の変数名でしかarray_pushで変数を追加していけないっぽい現象。</p>
+            <time class="dairyTime" datetime="2020-09-01">9月1日</time>
+            <p>各ページを並列化。タグを使ってカテゴライズする。</p>
             <time class="dairyTime" datetime="2020-08-31">8月31日</time>
             <p>イベント伝搬とはまとめ</p>
             <time class="dairyTime" datetime="2020-08-30">8月30日</time>

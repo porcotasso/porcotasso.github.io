@@ -100,7 +100,7 @@ gulp.task('sass', () => {
 })
 
 gulp.task('watch', () => {
-    return gulp.watch(['./scss/*.scss', './scss/**/*.scss', './php/pages/*.php', './php/pages/**/*.php'], gulp.series('sass', 'php', 'html'))
+    return gulp.watch(['./scss/*.scss', './scss/**/*.scss', './php/pages/*.php', './php/_partial/*.php'], gulp.series('sass', 'php', 'html'))
 })
 
 //create default task  -> 'npm run dev' -> run

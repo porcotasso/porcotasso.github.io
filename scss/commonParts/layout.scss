@@ -50,7 +50,7 @@
 			letter-spacing: 0.14rem;
 			font-size: $font-size-21;
 			font-weight: normal;
-			margin-bottom: 4px;
+			margin-bottom: 0;
 			a{
 				transition: $transition;
 				color: #333;
@@ -87,11 +87,12 @@
 		.headerMenu{
 			// display: none;
 			position: absolute;
-			opacity: 0;
-			top: 57px;
+			// opacity: 0;
+			top: 59px;
 			width: 0%;
+			left: 100%;
 			height:calc(100vh - 80px); //これがないと縦にスクロールせず、画面からはみ出たメニューが見れない
-			padding: 0 0 64px;
+			padding: 0 0 164px;
 			text-align: left;
 			background: #fff;
 			overflow: scroll;
@@ -149,21 +150,23 @@
 				}
 			}
 		}
-		@keyframes headerMenu {
-			0% {
-				width: 96%;
-				opacity: 0;				   
-			}
-			100% {
-				opacity: 100;
-				width: 84%;
-			}
-		}
+		// @keyframes headerMenu {
+		// 	0% {
+		// 		// width: 0%;		   
+		// 	}
+		// 	20% {
+		// 		width: 86%;	   
+		// 	}
+		// 	100% {
+		// 		width: 86%;
+		// 	}
+		// }
 		.headerMenu{
 			display: block;
 			opacity: 1;
-			width: 84%;
-			animation: headerMenu .3s ease-out both;
+			width: 86%;
+			left: 14%;
+			// animation: headerMenu .3s ease-out both;
 		}
 	}
 	&.smaller {
@@ -172,7 +175,7 @@
 		.ly-header__inner{
 			transform: translateY(16px);
 			.headerMenu{
-				top: 41px;
+				top: 43px;
 				height:calc(100vh - 48px);
 			}
 		}
@@ -222,7 +225,7 @@
 	width: 0;
 	height: 100vh;
 	opacity: 0;
-	background-color: rgba(0, 0, 0, 0.86);
+	background-color: rgba(0, 0, 0, 0.7);
 	@keyframes cover-show {
 		0% {
 			opacity: 0;    
