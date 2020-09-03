@@ -1,3 +1,11 @@
+function handleTouchMove(event) {
+  event.preventDefault();
+}
+//スクロール禁止
+document.addEventListener('touchmove', handleTouchMove, { passive: false });
+//スクロール復帰
+document.removeEventListener('touchmove', handleTouchMove, { passive: false });
+
 // HEADER HAMBURGER MENU 
 var hamburger = document.getElementById("js-hamburger");
 var headerNav = document.getElementById("js-headerNav");
