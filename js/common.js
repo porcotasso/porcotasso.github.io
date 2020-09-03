@@ -31,10 +31,16 @@ hamburger.onclick = function() {
   // 黒背景のトグル
   blackCover.classList.toggle("active");
   // 黒背景のクリックでメニュー閉じる
+  if (blackCover.classList.contains('active')) {
+    blackCover.addEventListener('touchstart', () => {
+      headerNav.classList.remove("active");
+      blackCover.classList.remove("active");
+    })
+  };
   blackCover.onclick = function() {
-    headerNav.classList.remove("active");
-    blackCover.classList.remove("active");
-    bodyOverflow[0].style.overflow = '';
+    // headerNav.classList.remove("active");
+    // blackCover.classList.remove("active");
+    // bodyOverflow[0].style.overflow = '';
   }
 };
 
