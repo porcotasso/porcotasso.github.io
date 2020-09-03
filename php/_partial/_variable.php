@@ -108,6 +108,13 @@ $scrollJunk = array(
 	"lead" => "スクロールジャンクとその防ぎ方について",
 	"html" => "/scroll-junk.html"
 );
+$touchEvent = array(
+	"file" => "/php/pages/touch-event.php",
+	"tag" => array("js"),
+	"title" => "touch-event",
+	"lead" => "touch-eventメモ",
+	"html" => "/touch-event.html"
+);
 //php
 $phpMemo = array(
 	"file" => "/php/pages/php-memo.php",
@@ -146,7 +153,7 @@ $allPages = array(
 	$contentsModel, $semanticTags, $aboutTags, 
 	$categorizedCSS, $namingRule, 
 	$button, $breakWord, $elementEmStrongMarkB, $favicon, $hamburgerMenu, $headerSmaller,
-	$javascriptMemo, $eventHandler, $eventPropagation, $scrollJunk,
+	$javascriptMemo, $eventHandler, $eventPropagation, $scrollJunk, $touchEvent,
 	$phpMemo,
 	$gulpfile,
 	$svg,

@@ -1,26 +1,33 @@
 function handleTouchMove(event) {
   event.preventDefault();
 }
-//スクロール禁止
-document.addEventListener('touchmove', handleTouchMove, { passive: false });
-//スクロール復帰
-document.removeEventListener('touchmove', handleTouchMove, { passive: false });
 
 // HEADER HAMBURGER MENU 
 var hamburger = document.getElementById("js-hamburger");
 var headerNav = document.getElementById("js-headerNav");
 var blackCover = document.getElementById("js-blackCover");
-var bodyOverflow = document.getElementsByTagName("body");
-
+var bodyOverflow = document.getElementsByTagName("main");
+console.log(bodyOverflow[0]);
 hamburger.onclick = function() {
   // メニューのトグル
   headerNav.classList.toggle("active");
-  // 背景のスクロールを止める
-  if(bodyOverflow[0].style.overflow == 'hidden'){
-    bodyOverflow[0].style.overflow = '';
+  if (headerNav.classList.contains('active')) {
+      //スクロール禁止
+      bodyOverflow[0].addEventListener('touchmove', handleTouchMove, { passive: false });
+      blackCover.addEventListener('touchmove', handleTouchMove, { passive: false });
   } else {
-    bodyOverflow[0].style.overflow = 'hidden';
+      //スクロール復帰
+      bodyOverflow[0].removeEventListener('touchmove', handleTouchMove, { passive: false });
+      blackCover.removeEventListener('touchmove', handleTouchMove, { passive: false });
   }
+
+  // 背景のスクロールを止める
+  // if(bodyOverflow[0].style.overflow == 'hidden'){
+  //   bodyOverflow[0].style.overflow = '';
+  // } else {
+  //   bodyOverflow[0].style.overflow = 'hidden';
+  // }
+
   // 黒背景のトグル
   blackCover.classList.toggle("active");
   // 黒背景のクリックでメニュー閉じる
