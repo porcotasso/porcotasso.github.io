@@ -20,7 +20,7 @@ hamburger.onclick = function() {
       //スクロール復帰
       bodyOverflow[0].removeEventListener('touchmove', handleTouchMove, { passive: false });
       blackCover.removeEventListener('touchmove', handleTouchMove, { passive: false });
-      bodyOverflow[0].style.pointerevents = 'auto';
+      // bodyOverflow[0].style.pointerevents = 'auto';
   }
 
   // 背景のスクロールを止める
