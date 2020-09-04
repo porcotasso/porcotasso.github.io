@@ -7,6 +7,7 @@ var hamburger = document.getElementById("js-hamburger");
 var headerNav = document.getElementById("js-headerNav");
 var blackCover = document.getElementById("js-blackCover");
 var bodyOverflow = document.getElementsByTagName("main");
+var footer = document.getElementsByTagName("footer");
 console.log(bodyOverflow[0]);
 hamburger.onclick = function() {
   // メニューのトグル
@@ -15,10 +16,12 @@ hamburger.onclick = function() {
       //スクロール禁止
       bodyOverflow[0].addEventListener('touchmove', handleTouchMove, { passive: false });
       blackCover.addEventListener('touchmove', handleTouchMove, { passive: false });
+      footer[0].addEventListener('touchmove', handleTouchMove, { passive: false });
   } else {
       //スクロール復帰
       bodyOverflow[0].removeEventListener('touchmove', handleTouchMove, { passive: false });
       blackCover.removeEventListener('touchmove', handleTouchMove, { passive: false });
+      footer[0].removeEventListener('touchmove', handleTouchMove, { passive: false });
   }
 
   // 背景のスクロールを止める
@@ -37,11 +40,11 @@ hamburger.onclick = function() {
       blackCover.classList.remove("active");
     })
   };
-  blackCover.onclick = function() {
+  // blackCover.onclick = function() {
     // headerNav.classList.remove("active");
     // blackCover.classList.remove("active");
     // bodyOverflow[0].style.overflow = '';
-  }
+  // }
 };
 
 // HEADER SMALL after scroll
