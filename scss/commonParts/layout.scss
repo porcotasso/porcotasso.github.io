@@ -11,7 +11,12 @@
 .ly-UnderheaderSpace{
 	padding-top: 24px;
 }
-
+body{
+	overscroll-behavior: contain;
+	&.aaa{
+		overscroll-behavior: contain;
+	}
+}
 // html.scroll-prevent {
 // 	/*動き固定*/
 // 	position: fixed;

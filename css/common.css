@@ -308,6 +308,13 @@ template {
 .ly-UnderheaderSpace {
   padding-top: 24px; }
 
+body {
+  -ms-scroll-chaining: none;
+      overscroll-behavior: contain; }
+  body.aaa {
+    -ms-scroll-chaining: none;
+        overscroll-behavior: contain; }
+
 .ly-header {
   display: flex;
   z-index: 100;

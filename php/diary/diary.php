@@ -8,6 +8,8 @@
         <section class="ly-section">
             <h2>これからやることリスト</h2>
             <ul>
+            <li>overscroll-behavior プロパティ</li> 
+            <li>pointer-events</li>
                 <li>ホームレイアウト　homeにスライダーをつける</li>
                 <li>「スクロールチェーン」の挙動を無効化https://necomesi.jp/blog/tsmd/posts/180</li>
                 <li>「スクロールジャンク」https://blog.webico.work/passive-event-listeber01</li>

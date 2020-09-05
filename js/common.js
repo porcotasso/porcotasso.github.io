@@ -1,12 +1,10 @@
-function handleTouchMove(event) {
-  event.preventDefault();
-}
+
 
 // HEADER HAMBURGER MENU 
 var hamburger = document.getElementById("js-hamburger");
 var headerNav = document.getElementById("js-headerNav");
 var blackCover = document.getElementById("js-blackCover");
-var bodyOverflow = document.getElementsByTagName("main");
+var bodyOverflow = document.getElementsByTagName("body");
 console.log(bodyOverflow[0]);
 hamburger.onclick = function() {
   // メニューのトグル
@@ -15,15 +13,28 @@ hamburger.onclick = function() {
       //スクロール禁止
       bodyOverflow[0].addEventListener('touchmove', handleTouchMove, { passive: false });
       blackCover.addEventListener('touchmove', handleTouchMove, { passive: false });
-      bodyOverflow[0].style.pointerevents = 'none';
+      console.log('active');
   } else {
       //スクロール復帰
       bodyOverflow[0].removeEventListener('touchmove', handleTouchMove, { passive: false });
       blackCover.removeEventListener('touchmove', handleTouchMove, { passive: false });
-      // bodyOverflow[0].style.pointerevents = 'auto';
-  }
+      console.log('none-active');
 
-  // 背景のスクロールを止める
+  }
+  // function handleTouchMove(event) {
+  //   event.preventDefault();
+  // }
+
+   // add/removeEventListenerでアロー関数として定義するとイベントが削除されない
+   var handleTouchMove = function(event) {
+    if ($(event.target).closest('.header-menu').length > 0) {
+        event.stopPropagation();
+    } else {
+        event.preventDefault();
+    }
+};
+
+  // 背景のスクロールを止める android
   // if(bodyOverflow[0].style.overflow == 'hidden'){
   //   bodyOverflow[0].style.overflow = '';
   // } else {
