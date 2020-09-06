@@ -95,6 +95,14 @@ $dayJs = array(
 	"lead" => "メモ",
 	"html" => "/day-js.html"
 );
+//js-date
+$jsDate = array(
+	"file" => "/php/pages/js-date.php",
+	"tag" => array("js"),
+	"title" => "js-date",
+	"lead" => "メモ",
+	"html" => "/js-date.html"
+);
 $eventHandler = array(
 	"file" => "/php/pages/event-handler.php",
 	"tag" => array("js"),
@@ -161,7 +169,7 @@ $allPages = array(
 	$contentsModel, $semanticTags, $aboutTags, 
 	$categorizedCSS, $namingRule, 
 	$button, $breakWord, $elementEmStrongMarkB, $favicon, $hamburgerMenu, $headerSmaller,
-	$javascriptMemo, $eventHandler, $eventPropagation, $scrollJunk, $touchEvent, $dayJs,
+	$javascriptMemo, $eventHandler, $eventPropagation, $scrollJunk, $touchEvent, $dayJs, $jsDate,
 	$phpMemo,
 	$gulpfile,
 	$svg,
