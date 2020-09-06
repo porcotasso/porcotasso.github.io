@@ -108,7 +108,19 @@ hamburger.onclick = function() {
 		</section>
 		<section class="ly-section" id="2">
             <h2><?php echo $navList[2]; ?></h2>
-			<p>背景のコンテンツを固定をするのにbodyにoverflowをhiddenにします。背景のタグにposition:fixed;にして、.getBoundingClientRect()でY位置を取得して固定する方法もあるようですが、解除した際にposition:static;にしてもトップに戻ってしまい解決しなかったです。</p>
+			<h3>試したこと1:overflow:hiddenを使う</h3>
+			<p>背景のコンテンツを固定をするのにbodyにoverflowをhiddenにします。が、これはandoroidだけ効いて、iOSには効かないようです。この時は深く考えてませんでしたが、すでにデスマーチが流れていた模様。♪</p>
+<pre class="prettyprint">
+var bodyOverflow = document.getElementsByTagName("body");
+// 背景のスクロールを止める
+if(bodyOverflow[0].style.overflow == 'hidden'){
+bodyOverflow[0].style.overflow = '';
+} else {
+bodyOverflow[0].style.overflow = 'hidden';
+}
+</pre>
+			<h3>試したこと2:position:fixed;を使う</h3>
+			<p>背景のタグにposition:fixed;にして、.getBoundingClientRect()でY位置を取得して固定する方法もあるようですが、解除した際にposition:static;にしてもトップに戻ってしまい解決しなかったです。</p>
 <pre class="prettyprint">
 var bodyOverflow = document.getElementsByTagName("body");
 // 背景のスクロールを止める
@@ -129,8 +141,55 @@ if(wrapPosFix.style.position == 'fixed'){
 	wrapPosFix.style.position = 'fixed';
 	wrapPosFix.style.top = posY;
 }
-</pre>			
+</pre>
+			<p>その際、スクロールしたY値をwindow.pageYOffset ; で取得してstyleに追加しようとしてみましたが、これは値をあてはめれなかったです。</p>
+<pre class="prettyprint">
+var scrollTop = window.pageYOffset ;
+console.log(scrollTop);　//認識されている
+console.log(-scrollTop);　//認識されている
+element.style.top = -scrollTop;　//代入できない
+</pre>
+			<h3>試したこと3:preventDefault();を使う</h3>
+			<p>preventDefaultは「イベントのデフォルト動作（例：aタグクリック）を発生させない」ということです。イベントのデフォルト動作の中に「touchmove」があり、これを指定のタグ（今回の場合、背景のコンテンツ）につけイベントのデフォルト動作（touchmove）を発生させないことでスクロールを防ぐ、ということになります。結果としてこれも問題があります。bodyにつけるとすべてに効いてしまい、メニューのスクロールが効かなくなる。次にbodyから階層を下げて背景のコンテンツにpreventDefaultのある'handleTouchMove' functionをつけてみたが、クリックしても反応していない。メニューが「もうこれ以上スクロールができない」状態になった時に背景が動きだしてしまうという、つまりスクロールが親要素に伝わる「スクロールチェーン」という現象がおきてしまうようです。</p>
+			<cite class="ly-cite"><a href="https://qiita.com/tochiji/items/4e9e64cabc0a1cd7a1ae" <?php echo $targetBlank ?>>「preventDefault()を使うための前提知識</a></cite>
+			<cite class="ly-cite"><a href="https://necomesi.jp/blog/tsmd/posts/180" <?php echo $targetBlank ?>>「端っこ」におけるスクロールの挙動を制御する overscroll-behavior プロパティ </a></cite>
+<pre class="prettyprint">
+function handleTouchMove(event) {
+	event.preventDefault();
+	console.log('preventDefault');
+}
+//もしくは
+var handleTouchMove = function(event) {
+	if ($(event.target).closest('.header-menu').length > 0) {
+		event.stopPropagation();
+		console.log('stopPropagation');
+	} else {
+		event.preventDefault();
+		console.log('preventDefault');
+	}
+};
+
+//スクロール禁止
+element.addEventListener('touchmove', handleTouchMove, { passive: false });
+//スクロール復帰
+element.removeEventListener('touchmove', handleTouchMove, { passive: false });
+</pre>
+			<p>それならと、スクロール境界（端っこ）におけるブラウザデフォルトの挙動をコントロールできる overscroll-behavior: contain を試しましたが、これも効かない。canIuse で調べると、iOSはまだ対応していない模様（2020.9.5時点）。この対応を待つのも現実的な判断かも。。</p>
+<pre class="prettyprint">
+overscroll-behavior: contain; // 親要素にスクロールが伝わらないようにする。「スクロールチェーン」の挙動を無効化
+</pre>
+
+<h3>試したこと4:pointer-eventsを使う</h3>
+<p>z-indexで後ろの要素が操作できないことを利用できないかと思い調べると、pointer-eventsというプロパティがありました。pointer-eventsは、要素に対するホバーやクリックなどのマウスイベントをキャンセルできるプロパティです。初期値は「auto」で通常通りホバーやクリックのイベントを受け取りますが、「none」を指定するとイベントを受け取りません。しかしこれもダメでした。今回の問題はスマホでのタッチイベントがターゲットなので、クリックイベントの操作ではコントロールできないと予想。</p>
+
+
+<p>次試すこと：https://www.imuza.com/entry/2018/06/12/172357</p>
 		</section>
+
+
+
+
+
 		<section class="ly-section" id="3">
             <h2><?php echo $navList[3]; ?></h2>
 			<p>黒透過背景用のタグを追加し、トグルで表示非表示させます。黒背景をクリックした際に、メニューを閉じるスクリプトも追加。</p>
@@ -149,6 +208,9 @@ blackCover.onclick = function() {
 }
 </pre>			
         </section>
+		<section class="ly-section" id="3">
+            <h2><?php echo $navList[3]; ?></h2>
+		</section>
     </article>
 </main>
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-foot.php"); ?>

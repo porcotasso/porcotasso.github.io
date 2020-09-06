@@ -1,45 +1,48 @@
-
+function handleTouchMove(e) {
+  // event.preventDefault();
+  console.log('preventDefault');
+  var elem = document.getElementById("header-menu");
+  var scroll = elem.scrollTop;
+  var range = elem.scrollHeight - elem.offsetHeight - 1;
+  console.log('scroll');
+  if (scroll < 1) {
+      e.preventDefault();
+      elem.scrollTop = 1;
+      console.log('<1');
+  } else if(scroll > range) {
+      e.preventDefault();
+      elem.scrollTop = range;
+      console.log('>range');
+  }
+}
 
 // HEADER HAMBURGER MENU 
 var hamburger = document.getElementById("js-hamburger");
 var headerNav = document.getElementById("js-headerNav");
+
 var blackCover = document.getElementById("js-blackCover");
 var bodyOverflow = document.getElementsByTagName("body");
-console.log(bodyOverflow[0]);
 hamburger.onclick = function() {
   // メニューのトグル
   headerNav.classList.toggle("active");
   if (headerNav.classList.contains('active')) {
       //スクロール禁止
       bodyOverflow[0].addEventListener('touchmove', handleTouchMove, { passive: false });
-      blackCover.addEventListener('touchmove', handleTouchMove, { passive: false });
-      console.log('active');
+      console.log('click');
+
+
   } else {
       //スクロール復帰
       bodyOverflow[0].removeEventListener('touchmove', handleTouchMove, { passive: false });
-      blackCover.removeEventListener('touchmove', handleTouchMove, { passive: false });
-      console.log('none-active');
-
+      console.log('close');
   }
-  // function handleTouchMove(event) {
-  //   event.preventDefault();
-  // }
 
-   // add/removeEventListenerでアロー関数として定義するとイベントが削除されない
-   var handleTouchMove = function(event) {
-    if ($(event.target).closest('.header-menu').length > 0) {
-        event.stopPropagation();
-    } else {
-        event.preventDefault();
-    }
-};
-
-  // 背景のスクロールを止める android
-  // if(bodyOverflow[0].style.overflow == 'hidden'){
-  //   bodyOverflow[0].style.overflow = '';
-  // } else {
-  //   bodyOverflow[0].style.overflow = 'hidden';
-  // }
+  //背景のスクロールを止める android
+  if(bodyOverflow[0].style.overflow == 'hidden'){
+    bodyOverflow[0].style.overflow = '';
+  } else {
+    bodyOverflow[0].style.overflow = 'hidden';
+  }
 
   // 黒背景のトグル
   blackCover.classList.toggle("active");
