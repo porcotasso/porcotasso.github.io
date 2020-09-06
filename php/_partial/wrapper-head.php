@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>
         <?php if($_SERVER['REQUEST_URI'] == "/php/pages/index.php"){ ?>
-            porco tasso:フロントエンドエンジニアのお仕事まとめ中
+            porco tasso:フロントエンドエンジニアのスキルノート　※まとめ中
             <?php } else {
                 foreach($pageLists as $list){
                     foreach($list["pages"] as $value){

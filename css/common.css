@@ -492,6 +492,10 @@ body {
   border-radius: 4px;
   background: #f5f7f8; }
 
+.important-marker {
+  background: linear-gradient(to right, #fded06 50%, transparent 50%) 100% 0%/200% auto no-repeat;
+  transition: background-position .8s ease-out; }
+
 .bl-categoryList {
   padding: 0;
   list-style: none; }

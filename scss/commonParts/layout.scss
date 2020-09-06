@@ -281,7 +281,11 @@ body{
 	border-left: 4px solid $gray-400;
 }
 
-  
+// inview用
+.important-marker {
+    background: linear-gradient(to right, #fded06 50%, transparent 50%) 100% 0% / 200% auto no-repeat;
+    transition: background-position .8s ease-out;
+}
 //   @media only screen and (min-width: 1050px){
 // 	.header {
 // 	  height: 180px;

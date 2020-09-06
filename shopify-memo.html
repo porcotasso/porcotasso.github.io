@@ -377,67 +377,74 @@
                             <div class="">shopifyとは</div>
                         </a>
                     </li>
+                                        <li>
+                        <a href="#1" class="">
+                            <div class="">現在の時間を基準にif文をつくる</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#2" class="">
+                            <div class="">jsを利用する</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#3" class="">
+                            <div class="">新しいcssファイルを利用する</div>
+                        </a>
+                    </li>
                                     </ol>
             </nav>
         </header>
         <section class="ly-section" id="0">
             <h2>shopifyとは</h2>
+            <p>2004年にカナダで創業。世界最大のECサイト制作プラットフォームです。</p>
+            
+        </section>
+        <section class="ly-section" id="1">
+            <h2>現在の時間を基準にif文をつくる</h2>
+            <p>月曜の12時の前か後かを分ける。</p>
+<pre class="prettyprint">
+{% assign wday = 'now' | date: "%A" %} //今の曜日をwday変数に代入
+{% assign hour = 'now' | date: "%H" %}　//今の時間をhour変数に代入
+{% if wday == 'Monday' and hour <= '12' %}
+<p>月曜の午前です</p>
+{% else %}
+<p>月曜の午前以外です</p>
+{% endif %}
 
-<pre class="prettyprint">
-<header class="js-headerSmaller"> 
+//%Y yesar 2020
+//%m month 09
+//%b month Jul
+//%d day 04
+//%H hour 16
+//%M minutes 05
+//%A weekday Friday
 
-function headerSmaller() {
-	var px_change = 80;
-	let headerSmaller = document.getElementsByClassName('js-headerSmaller');
-	window.addEventListener('scroll', () => {
-    var y = document.documentElement.scrollTop || document.body.scrollTop;
-		if ( y > px_change) {
-			headerSmaller[0].classList.add('smaller');
-		} else if (headerSmaller[0].classList.contains('smaller')) {
-			headerSmaller[0].classList.remove('smaller');
-		}
-	});
-}
-window.onload = headerSmaller();
+//"%Y-%m-%d %H:%M" 2020-09-04 16:05
 </pre>
-
-<p>上部から80pxの位置を超えたときに、ヘッダーの高さが変わるようにします。ハンバーガーメニューのためにidを使っているのでクラスで要素を取得しています。</p>
-<h3>コードの流れ</h3>
-<p>windowオブジェクトでscrollイベントが発生を取得</p>
+        </section>
+        <section class="ly-section" id="2">
+            <h2>jsを利用する</h2>
+            <p>Assetsで、新しいassetを追加し、javascriptを選ぶ。そのファイル内にjavascriptを書く。CDNを使う方法がわからない。使えないのかも。その場合、コードをコピーすれば使える。使いたいliquidファイル内で、</p>
 <pre class="prettyprint">
-window.addEventListener('scroll', () => {}
+{{ 'file-name.js' | asset_url | script_tag}}
 </pre>
-<p>Element.scrollTop プロパティで、要素の内容が垂直にスクロールするピクセル数を取得</p>
+            <p>と書けば使える。</p>
+        </section>
+        <section class="ly-section" id="3">
+            <h2>新しいcssファイルを利用する</h2>
+            <p>Assetsで、新しいassetを追加し、cssを選ぶ。そのファイル内にstyleを書く。使いたいliquidファイル内で、</p>
 <pre class="prettyprint">
-var y = document.documentElement.scrollTop || document.body.scrollTop;
-</pre>
-<p>垂直にスクロールするピクセル数がpx_change変数を超えた時はsmallerクラスを追加し、超えてなくてsmallerクラスがついている時はクラスをはずします。</p>
-<pre class="prettyprint">
-if ( y > px_change) {
-    headerSmaller[0].classList.add('smaller');
-} else if (headerSmaller[0].classList.contains('smaller')) {
-    headerSmaller[0].classList.remove('smaller');
-}
-</pre>
-<p>windowオブジェクトが読み込まれたタイミングでheaderSmallerを作動させます</p>
-<pre class="prettyprint">
-window.onload = headerSmaller();
-</pre>
-
-<p>onloadはページや画像などを読み込んでから処理を実行するときに利用するイベントハンドラーです。データを読み込んでから処理を実行したいときなどに使用します。複数の「onloadイベント」書いてしまうと上書きされてしまい最後に書いたイベントだけが実行されます。その場合はaddEventListenerを使います。</p>
-<pre class="prettyprint">
-window.addEventListener('load', function() {
-    console.log('hello');
-})
-</pre>
-<p>ちなみにgetElementsByClassName()が返すのは、HTMLCollectionであってElementではないので、[番号]でどの要素を選ぶのか指定が必要です。</p>
-		</section>
+{{ 'file-name.css' | asset_url | stylesheet_tag}}
+</pre>    
+            <p>と書けば使える。</p>
+        </section>
     </article>
 </main>
         <footer class="ly-footer">
             <p class="el-copyright">&copy; 2019-2020 porco tasso</p>
         </footer>
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="/js/common.js"></script>
         
     </body>

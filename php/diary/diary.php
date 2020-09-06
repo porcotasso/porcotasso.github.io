@@ -10,6 +10,8 @@
             <ul>
             <li>overscroll-behavior プロパティ</li> 
             <li>pointer-events</li>
+            <li>標準の日時書式指定 ローカル時間</li>
+            <li>inviewテストhttps://ec-recipe.com/what-is-shopify-2018/</li>
                 <li>ホームレイアウト　homeにスライダーをつける</li>
                 <li>「スクロールチェーン」の挙動を無効化https://necomesi.jp/blog/tsmd/posts/180</li>
                 <li>「スクロールジャンク」https://blog.webico.work/passive-event-listeber01</li>
@@ -40,6 +42,14 @@
                 <li>-CSSカテゴライズまとめ、break-wordなどテキスト、svgまとめ</li>
             </ul>
             <h2><time>2020年</time></h2>
+            <time class="dairyTime" datetime="2020-09-06">9月6日</time>
+            <p>スマホスクロールの停止について。スクロールしきったら１ピクセルずらす方法を試す。これまでのエラーは解消するが、あらたなエラーがでる。メニューの1度目のクリックではメニューが動かない。スクロールしきった時に少し戻る動きが変。使えないっぽい。shopifyの今週の水曜、来週の水曜を取得する方法のテスト。liquid のif文内で　jsが動かない。day.jsを調べてまとめる。</p>
+            <time class="dairyTime" datetime="2020-09-05">9月5日</time>
+            <p>スマホスクロールの停止について。とりあえずこれまでのことをまとめる。</p>
+            <time class="dairyTime" datetime="2020-09-04">9月4日</time>
+            <p>スマホスクロールの停止について。スマホのタッチイベントについて。</p>
+            <time class="dairyTime" datetime="2020-09-03">9月3日</time>
+            <p>スマホスクロールの停止について。</p>
             <time class="dairyTime" datetime="2020-09-02">9月2日</time>
             <p>各ページを並列化続き。jsで効率化。２重ループを試すも、最後のとろこで各タグ変数に代入ができない。固有の変数名でしかarray_pushで変数を追加していけないっぽい現象。</p>
             <time class="dairyTime" datetime="2020-09-01">9月1日</time>
