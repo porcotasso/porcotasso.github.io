@@ -15,7 +15,7 @@
     <!-- google font Pacifico for title -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>
-        event-handler    </title>
+        day-js    </title>
 </head>
 <body>
 
@@ -367,139 +367,91 @@
     <div class="el-blackCover" id="js-blackCover"></div><main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
-            <h1>event-handler</h1>
-            <p>event、event-handler、addEventListenerについての説明です。</p>
+            <h1>day-js</h1>
+            <p>メモ</p>
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                                 <ol>
                                         <li>
                         <a href="#0" class="">
-                            <div class="">イベントとは</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">イベントハンドラーとは</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#2" class="">
-                            <div class="">HTML属性のイベントハンドラ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#3" class="">
-                            <div class="">DOM要素プロパティのイベントハンドラ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#4" class="">
-                            <div class="">イベントリスナーのイベントハンドラ３つの方法</div>
+                            <div class="">day.jsの使い方</div>
                         </a>
                     </li>
                                     </ol>
             </nav>
         </header>
         <section class="ly-section" id="0">
-			<h2>イベントとは</h2>
-
-            <p>ウェブページ上で発生するアクションの総称。アクションには、例えばボタンのクリック、フォームへの入力、ページの読み込み、マウスポインタを要素の上に合わせるなどが含まれます。</p>
-        </section>
-        <section class="ly-section" id="1">
-			<h2>イベントハンドラーとは</h2>
-            <p>イベントの処理を行うコードのこと。方法は大きく３つに分けられます。</p>
-            <ul>
-                <li>HTML属性のイベントハンドラ</li>
-                <li>DOM要素プロパティのイベントハンドラ</li>
-                <li>イベントリスナーのイベントハンドラ</li>
-            </ul>
-        </section>
-        <section class="ly-section" id="2">
-			<h2>HTML属性のイベントハンドラ</h2>
+            <h2>day.jsの使い方</h2>
+            <p>JavaScriptの日付操作ライブラリで軽量（2KB）で多くのブラウザをサポートしたDay.jsをご紹介します。</p>
 <pre class="prettyprint">
-<input type="text" onchange="sample1()">
+<!-- <div id="js-thisSun"></div>//2020-09-06 Sun
+<div id="js-thisWed"></div>//2020-09-09 Wed
+<div id="js-nextWed"></div>//2020-09-16 Wed -->
 
-<script>
-function sample1() {
-    console.log("Hello world");
-}
-</script>
-</pre>
-        </section>
-        <section class="ly-section" id="3">
-			<h2>DOM要素プロパティのイベントハンドラ</h2>
-<pre class="prettyprint">
-<p id="sample2">クリックでコンソールログにHello</p>
+<!-- <script src="https://unpkg.com/dayjs"></script> -->
+<!-- <script>
+	dayjs.locale('sn');
+	let thisSunday = dayjs().startOf('week')
+	let thisWednesday = thisSunday.add(3, 'day')
+	let nextWednesday = thisWednesday.add(7, 'day')
+	//formatDateファンクションを使ってtimeZoneに合わせて日付を取得
+	let thisSundayText = formatDate(thisSunday.toDate());
+	let thisWednesdayText = formatDate(thisWednesday.toDate());
+	let nextWednesdayText = formatDate(nextWednesday.toDate());
 
-<script>
-    var sample2 = document.getElementById('sample2');
-    sample2.onclick = function() {
-        console.log("Hello");
-    }
-</script> 
-</pre>   
-        </section>
-        <section class="ly-section" id="4">
-			<h2>イベントリスナーのイベントハンドラ３つの方法</h2>
-            <p>複数の処理の登録が可能になります。</p>
-            <h3>addEventListenerの基本的な使い方</h3>
-<pre class="prettyprint">
-要素.addEventListener(イベント, 関数, オプション);
-</pre>
-            <p>
-                第1引数：イベントの種類を指定<br>
-                第2引数：関数を指定。任意のイベントが発生時に関数内に書かれた処理を実行。<br>
-                第3引数は：イベント伝搬の方式（true / false）。通常はfalse。
-            </p>
-            <h3>方法1 外部に関数を設定</h3>
-            <p>処理やファイルが複雑な場合に使用</p>
-<pre class="prettyprint">
-<p id="sample3">クリックでコンソールログにHello</p>
+	document.getElementById('js-thisSun').textContent = thisSundayText ;
+	document.getElementById('js-thisWed').textContent = thisWednesdayText ;
+	document.getElementById('js-nextWed').textContent = nextWednesdayText ;
 
-<script>
-    var sample3 = document.getElementById('sample3');
-
-    function sayHello(){
-        console.log("Hello");
-    }
-    sample3.addEventListener('click', sayHello, false);
-</script>
+	function formatDate(date){
+		const option ={ year: 'numeric', month:'numeric', day:'numeric', weekday:'short', timezone:'Asia/Singapore'} //weekday:'long' は完全表記、'short'は短縮系
+		const res = new Intl.DateTimeFormat('en-GB', option).formatToParts(date)
+		const year = (res.find(r => r.type === 'year')).value
+		const month = (res.find(r => r.type === 'month')).value
+		const day = (res.find(r => r.type === 'day')).value
+		const weekday = (res.find(r => r.type === 'weekday')).value
+		return `${year}-${month}-${day} ${weekday}`
+	}
+</script> -->
 </pre>
 
-            <h3>方法2 無名関数で書く</h3>
-            <p>よく使われる書き方で第2引数へそのまま関数を記述。単純な処理しか記述しないようなケースは、関数をわざわざ用意するよりコードが分かりやすい。</p>
-<pre class="prettyprint">
-<p id="sample4">クリックでコンソールログにHello</p>
- 
-<script>
-    var sample4 = document.getElementById('sample4');
-    
-    sample4.addEventListener('click', function() {
-    console.log("Hello");
-    }, false);
-</script>
-</pre>
+<div id="js-thisSun"></div>
+<div id="js-thisWed"></div>
+<div id="js-nextWed"></div>
 
-            <h3>方法3 アロー関数を使う</h3>
-            <p>無名関数をES2015の書き方にしただけ</p>
-<pre class="prettyprint">
-<p id="sample5">クリックでコンソールログにHello</p>
- 
-<script>
-    var sample5 = document.getElementById('sample5');
+<cite class="ly-cite"><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat" target="_blank" rel="noopener noreferrer">sdfgh</a></cite>
+<cite class="ly-cite"><a href="https://docs.microsoft.com/ja-jp/dotnet/standard/base-types/standard-date-and-time-format-strings" target="_blank" rel="noopener noreferrer">sdfg</a></cite>
 
-    sample5.addEventListener('click', () => {
-    console.log("Hello");
-});
-</script>
-</pre>      
-            <cite class="ly-cite"><a href="https://phpjavascriptroom.com/?t=js&p=event" target="_blank" rel="noopener noreferrer">PHP & JavaScript Room JavaScriptのイベントハンドラ一覧</a></cite>
-            <cite class="ly-cite"><a href="http://www.tohoho-web.com/js/onevent.htm" target="_blank" rel="noopener noreferrer">tohoho-web イベントハンドラ</a></cite>  
-  
-        </section>
-
+		</section>
     </article>
 </main>
+
+<script src="https://unpkg.com/dayjs"></script>
+<script>
+	dayjs.locale('sn');
+	let thisSunday = dayjs().startOf('week')
+	let thisWednesday = thisSunday.add(3, 'day')
+	let nextWednesday = thisWednesday.add(7, 'day')
+	//formatDateファンクションを使ってtimeZoneに合わせて日付を取得
+	let thisSundayText = formatDate(thisSunday.toDate());
+	let thisWednesdayText = formatDate(thisWednesday.toDate());
+	let nextWednesdayText = formatDate(nextWednesday.toDate());
+
+	document.getElementById('js-thisSun').textContent = thisSundayText ;
+	document.getElementById('js-thisWed').textContent = thisWednesdayText ;
+	document.getElementById('js-nextWed').textContent = nextWednesdayText ;
+
+	function formatDate(date){
+		const option ={ year: 'numeric', month:'numeric', day:'numeric', weekday:'short', timezone:'Asia/Singapore'} //weekday:'long' は完全表記、'short'は短縮系
+		const res = new Intl.DateTimeFormat('en-GB', option).formatToParts(date)
+		const year = (res.find(r => r.type === 'year')).value
+		const month = (res.find(r => r.type === 'month')).value
+		const day = (res.find(r => r.type === 'day')).value
+		const weekday = (res.find(r => r.type === 'weekday')).value
+		return `${year}-${month}-${day} ${weekday}`
+	}
+</script>
+
         <footer class="ly-footer">
             <p class="el-copyright">&copy; 2019-2020 porco tasso</p>
         </footer>

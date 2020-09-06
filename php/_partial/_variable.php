@@ -87,6 +87,14 @@ $javascriptMemo = array(
 	"lead" => "メモ",
 	"html" => "/javascript-memo.html"
 );
+//day-js
+$dayJs = array(
+	"file" => "/php/pages/day-js.php",
+	"tag" => array("js"),
+	"title" => "day-js",
+	"lead" => "メモ",
+	"html" => "/day-js.html"
+);
 $eventHandler = array(
 	"file" => "/php/pages/event-handler.php",
 	"tag" => array("js"),
@@ -139,7 +147,7 @@ $svg = array(
 	"lead" => "メモ",
 	"html" => "/svg.html"
 );
-//svg
+//shopify-memo
 $shopifyMemo = array(
 	"file" => "/php/pages/shopify-memo.php",
 	"tag" => array("shopify"),
@@ -153,7 +161,7 @@ $allPages = array(
 	$contentsModel, $semanticTags, $aboutTags, 
 	$categorizedCSS, $namingRule, 
 	$button, $breakWord, $elementEmStrongMarkB, $favicon, $hamburgerMenu, $headerSmaller,
-	$javascriptMemo, $eventHandler, $eventPropagation, $scrollJunk, $touchEvent,
+	$javascriptMemo, $eventHandler, $eventPropagation, $scrollJunk, $touchEvent, $dayJs,
 	$phpMemo,
 	$gulpfile,
 	$svg,

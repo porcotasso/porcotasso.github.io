@@ -5,7 +5,7 @@ function handleTouchMove(e) {
   var scroll = elem.scrollTop;
   var range = elem.scrollHeight - elem.offsetHeight - 1;
   console.log(scroll);
-  if (scroll < 1) {
+  if (scroll <= 0) {
       e.preventDefault();
       elem.scrollTop = 1;
       console.log('<1');
