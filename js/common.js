@@ -4,7 +4,7 @@ function handleTouchMove(e) {
   var elem = document.getElementById("header-menu");
   var scroll = elem.scrollTop;
   var range = elem.scrollHeight - elem.offsetHeight - 1;
-  console.log('scroll');
+  console.log(scroll);
   if (scroll < 1) {
       e.preventDefault();
       elem.scrollTop = 1;
@@ -29,8 +29,6 @@ hamburger.onclick = function() {
       //スクロール禁止
       bodyOverflow[0].addEventListener('touchmove', handleTouchMove, { passive: false });
       console.log('click');
-
-
   } else {
       //スクロール復帰
       bodyOverflow[0].removeEventListener('touchmove', handleTouchMove, { passive: false });
@@ -38,11 +36,11 @@ hamburger.onclick = function() {
   }
 
   //背景のスクロールを止める android
-  if(bodyOverflow[0].style.overflow == 'hidden'){
-    bodyOverflow[0].style.overflow = '';
-  } else {
-    bodyOverflow[0].style.overflow = 'hidden';
-  }
+  // if(bodyOverflow[0].style.overflow == 'hidden'){
+  //   bodyOverflow[0].style.overflow = '';
+  // } else {
+  //   bodyOverflow[0].style.overflow = 'hidden';
+  // }
 
   // 黒背景のトグル
   blackCover.classList.toggle("active");
