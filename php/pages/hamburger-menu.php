@@ -3,10 +3,11 @@
     <article class="articleCnt">
         <header>
             <h1><?php echo $title ?></h1>
-            <p><?php echo $lead ?></p>
-            <p><?php echo $path ?></p>
-            <p><?php echo filemtime($path) ?></p>
-            <p><?php echo date( "Y-m-d H:i:s", filemtime('/pages'.$path)); ?></p>
+			<?php if (file_exists($filename)) { ?>
+				<p class="el-updateDate"><?php echo date ("Y.m.d", filemtime($filename)).' updated'; ?></p>
+			<?php } ?>
+            <p><?php echo $lead ?></p>          
+            
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                 <?php $navList = array("hamburgerのデザイン", "クリックしたらクラスをつける", "背景のコンテンツを固定する", "黒透過背景をつける"); ?>

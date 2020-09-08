@@ -9,7 +9,7 @@
             <p><?php echo $lead ?></p>  
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
-                <?php $navList = array("スクロールジャンク"); ?>
+                <?php $navList = array("ファイルの更新時刻を取得する"); ?>
                 <ol>
                     <?php for($i = 0; $i < count($navList); $i++){ ?>
                     <li>
@@ -22,14 +22,22 @@
             </nav>
         </header>
         <section class="ly-section" id="0">
-			<h2><?php echo $navList[0]; ?></h2>
-            <p></p>
-            <cite class="ly-cite"><a href="https://blog.webico.work/passive-event-listeber01" <?php echo $targetBlank ?>>スクロールジャンク</a></cite>  
-            <cite class="ly-cite"><a href="https://qiita.com/yukiTTT/items/773356c2483b96c9d4e0" <?php echo $targetBlank ?>>スクロールジャンク</a></cite>  
-            <cite class="ly-cite"><a href="https://qiita.com/yukiTTT/items/773356c2483b96c9d4e0" <?php echo $targetBlank ?>>スクロールジャンク</a></cite>  
+            <h2><?php echo $navList[0]; ?></h2>
+			<p></p>
+<pre class="prettyprint">
+&lt;?php if (file_exists($filename)) { ?&gt;
+	&lt;?php echo date (&quot;Y.m.d&quot;, filemtime($filename)).&#039; updated&#039;; ?&gt;
+&lt;?php } ?&gt;
+//出力例: 2020.09.08 updated
 
+&lt;?php if (file_exists($filename)) { ?&gt;
+	&lt;?php echo date (&quot;F d Y H:i:s.&quot;, filemtime($filename)).&#039; updated&#039;; ?&gt;
+&lt;?php } ?&gt;
+//出力例: September 08 2020 22:10:11. updated
+</pre>
+
+<cite class="ly-cite"><a href="https://www.php.net/manual/ja/function.filemtime.php" <?php echo $targetBlank ?>>PHP マニュアル</a></cite>
 		</section>
-
     </article>
 </main>
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-foot.php"); ?>

@@ -3,7 +3,10 @@
     <article class="articleCnt">
         <header>
             <h1><?php echo $title ?></h1>
-            <p><?php echo $lead ?></p>
+			<?php if (file_exists($filename)) { ?>
+				<p class="el-updateDate"><?php echo date ("Y.m.d", filemtime($filename)).' updated'; ?></p>
+			<?php } ?>
+            <p><?php echo $lead ?></p>  
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                 <?php $navList = array("day.jsの使い方"); ?>
@@ -20,7 +23,6 @@
         </header>
         <section class="ly-section" id="0">
             <h2><?php echo $navList[0]; ?></h2>
-			<p>Day.jsは軽量（2KB）で多くのブラウザでサポートされているJavaScriptの日付操作ライブラリです。</p>
 			<p>下記コードでhtml内に<br>
 				2020-09-06 Sun<br>
 				2020-09-09 Wed<br>
@@ -58,6 +60,14 @@
 		return `${year}-${month}-${day} ${weekday}`
 	}
 </script>
+</pre>
+<p>日曜の午前かどうか判別するif文</p>
+<pre class="prettyprint">
+let today = new Date();
+if(today.getDay() == 0 && today.get.getHours() < 12 ){
+	console.log('日曜の午前');
+}
+//　0 sun, 1 mon, 2 tue, 3 wed, 4 thu, 5 fri, 6 sat
 </pre>
 
 <cite class="ly-cite"><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat" <?php echo $targetBlank ?>>Intl.DateTimeFormat</a></cite>

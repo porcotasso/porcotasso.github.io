@@ -5,21 +5,21 @@ $contentsModel = array(
 	"tag" => array("html"),
 	"title" => "コンテンツ・モデル",
 	"lead" => "HTML5では、このタグの中にはこのタグが配置できる、といった配置ルールが決められており、これをコンテンツ・モデル（Content models）といいます。",
-	"html" => "/contents-model.html"
+	"html" => "contents-model.html"
 );
 $semanticTags = array(
 	"file" => "/php/pages/semantic-tags.php",
 	"tag" => array("html"),
 	"title" => "セマンティックhtml",
 	"lead" => "クローラーや読み上げソフトがタグから各コンテンツの役割がわかるように記述するコンテンツの意味に合ったタグを使ってマークアップすることをセマンティックHTMLと呼びます。",
-	"html" => "/semantic-tags.html"
+	"html" => "semantic-tags.html"
 );
 $aboutTags = array(
 	"file" => "/php/pages/about-tags.php",
 	"tag" => array("html"),
 	"title" => "各タグ要素について",
 	"lead" => "各タグのスタイルをどうするかは、考え方やサイトのないようによりますが、できるだけなぜそうしたかを明確にしておくことで修正がしやすくなるのでメモ。",
-	"html" => "/about-tags.html"
+	"html" => "about-tags.html"
 );
 //css
 $categorizedCSS = array(
@@ -27,14 +27,14 @@ $categorizedCSS = array(
 	"tag" => array("css"),
 	"title" => "CSSを役割ごとにカテゴライズする",
 	"lead" => "全てのCSSを目的ごとに分けることで、使い方を明確にするカテゴライズする。",
-	"html" => "/categorized-css.html"
+	"html" => "categorized-css.html"
 );
 $namingRule = array(
 	"file" => "/php/pages/naming-rule.php",
 	"tag" => array("css"),
 	"title" => "命名ルール",
 	"lead" => "クラス名からクラスの目的やスコープがわかるようにしておき、正確なコーディングに役立てる。",
-	"html" => "/naming-rule.html"
+	"html" => "naming-rule.html"
 );
 //parts
 $button = array(
@@ -42,42 +42,42 @@ $button = array(
 	"tag" => array("parts"),
 	"title" => "ボタン作成",
 	"lead" => "ボタンを作る際 &lt;a&gt;か&lt;button&gt;か&lt;input&gt;か迷わないように違いを理解する。",
-	"html" => "/button.html"
+	"html" => "button.html"
 );
 $breakWord = array(
 	"file" => "/php/pages/break-word.php",
 	"tag" => array("parts"),
 	"title" => "break-word",
 	"lead" => "break-word",
-	"html" => "/break-word.html"
+	"html" => "break-word.html"
 );
 $elementEmStrongMarkB = array(
 	"file" => "/php/pages/element-em-strong-mark-b-difference.php",
 	"tag" => array("parts"),
 	"title" => "em,strong,mark,b,dfn,iの違い",
 	"lead" => "文字を目立たせるタグの違いが曖昧になりがちなので明確に使い分けたい。基本的にはセマンティックマークアップとして利用するのが目的で装飾を前提に使用しないこと。",
-	"html" => "/element-em-strong-mark-b-difference.html"
+	"html" => "element-em-strong-mark-b-difference.html"
 );
 $favicon = array(
 	"file" => "/php/pages/favicon.php",
 	"tag" => array("parts"),
 	"title" => "favicon",
 	"lead" => "faviconはfavorite icon”の略語でウェブサイトのシンボルマーク・イメージとして、サイトに配置するアイコンの俗称です。閲覧中のタブなどに表示し潜在層にサイトを認知させる目的があります。",
-	"html" => "/favicon.html"
+	"html" => "favicon.html"
 );
 $hamburgerMenu = array(
 	"file" => "/php/pages/hamburger-menu.php",
 	"tag" => array("parts"),
 	"title" => "hamburger-menu",
 	"lead" => "hamburger-menuを作る際に必要な要素がいくつかあるので、分解して説明します。",
-	"html" => "/hamburger-menu.html"
+	"html" => "hamburger-menu.html"
 );
 $headerSmaller = array(
 	"file" => "/php/pages/header-smaller.php",
 	"tag" => array("parts"),
 	"title" => "header-smaller",
 	"lead" => "画面をスクロールした時に高さを変えるjavascriptについての説明です。",
-	"html" => "/header-smaller.html"
+	"html" => "header-smaller.html"
 );
 //javascript memo
 $javascriptMemo = array(
@@ -85,15 +85,15 @@ $javascriptMemo = array(
 	"tag" => array("js"),
 	"title" => "javascriptmemo",
 	"lead" => "メモ",
-	"html" => "/javascript-memo.html"
+	"html" => "javascript-memo.html"
 );
 //day-js
 $dayJs = array(
 	"file" => "/php/pages/day-js.php",
 	"tag" => array("js"),
 	"title" => "day-js",
-	"lead" => "メモ",
-	"html" => "/day-js.html"
+	"lead" => "Day.jsは軽量（2KB）で多くのブラウザでサポートされているJavaScriptの日付操作ライブラリです。",
+	"html" => "day-js.html"
 );
 //js-date
 $jsDate = array(
@@ -101,7 +101,7 @@ $jsDate = array(
 	"tag" => array("js"),
 	"title" => "js-date",
 	"lead" => "メモ",
-	"html" => "/js-date.html"
+	"html" => "js-date.html"
 );
 //js-scroll
 $jsScroll = array(
@@ -109,35 +109,35 @@ $jsScroll = array(
 	"tag" => array("js"),
 	"title" => "js-scroll",
 	"lead" => "メモ",
-	"html" => "/js-scroll.html"
+	"html" => "js-scroll.html"
 );
 $eventHandler = array(
 	"file" => "/php/pages/event-handler.php",
 	"tag" => array("js"),
 	"title" => "event-handler",
 	"lead" => "event、event-handler、addEventListenerについての説明です。",
-	"html" => "/event-handler.html"
+	"html" => "event-handler.html"
 );
 $eventPropagation = array(
 	"file" => "/php/pages/event-propagation.php",
 	"tag" => array("js"),
 	"title" => "イベント伝搬とは",
 	"lead" => "イベントハンドラーが呼ばれる順番について",
-	"html" => "/event-propagation.html"
+	"html" => "event-propagation.html"
 );
 $scrollJunk = array(
 	"file" => "/php/pages/scroll-junk.php",
 	"tag" => array("js"),
 	"title" => "スクロールジャンクとは",
 	"lead" => "スクロールジャンクとその防ぎ方について",
-	"html" => "/scroll-junk.html"
+	"html" => "scroll-junk.html"
 );
 $touchEvent = array(
 	"file" => "/php/pages/touch-event.php",
 	"tag" => array("js"),
 	"title" => "touch-event",
-	"lead" => "touch-eventメモ",
-	"html" => "/touch-event.html"
+	"lead" => "touch-event",
+	"html" => "touch-event.html"
 );
 //php
 $phpMemo = array(
@@ -145,7 +145,14 @@ $phpMemo = array(
 	"tag" => array("php"),
 	"title" => "phpmemo",
 	"lead" => "メモ",
-	"html" => "/php-memo.html"
+	"html" => "php-memo.html"
+);
+$phpFilemtime = array(
+	"file" => "/php/pages/php-filemtime.php",
+	"tag" => array("php"),
+	"title" => "filemtime",
+	"lead" => "filemtime()でファイルの更新時間を取得できます。",
+	"html" => "php-filemtime.html"
 );
 //environment
 $gulpfile = array(
@@ -153,7 +160,7 @@ $gulpfile = array(
 	"tag" => array("environment"),
 	"title" => "gulpfile",
 	"lead" => "メモ",
-	"html" => "/gulpfile.html"
+	"html" => "gulpfile.html"
 );
 //svg
 $svg = array(
@@ -161,7 +168,7 @@ $svg = array(
 	"tag" => array("svg"),
 	"title" => "svg",
 	"lead" => "メモ",
-	"html" => "/svg.html"
+	"html" => "svg.html"
 );
 //shopify-memo
 $shopifyMemo = array(
@@ -169,7 +176,7 @@ $shopifyMemo = array(
 	"tag" => array("shopify"),
 	"title" => "shopify-memo",
 	"lead" => "shopify-memo",
-	"html" => "/shopify-memo.html"
+	"html" => "shopify-memo.html"
 );
 
 // 1.新規ページを作ったら全てのページの配列に追加
@@ -178,7 +185,7 @@ $allPages = array(
 	$categorizedCSS, $namingRule, 
 	$button, $breakWord, $elementEmStrongMarkB, $favicon, $hamburgerMenu, $headerSmaller,
 	$javascriptMemo, $eventHandler, $eventPropagation, $scrollJunk, $touchEvent, $dayJs, $jsDate,
-	$phpMemo,
+	$phpMemo,$phpFilemtime,
 	$gulpfile,
 	$svg,
 	$shopifyMemo

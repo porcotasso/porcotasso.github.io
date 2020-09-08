@@ -17,28 +17,27 @@
     <?php } ?>  
     <!-- google font Pacifico for title -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <title>
         <?php date_default_timezone_set('Asia/Tokyo'); ?>
-        <?php if($_SERVER['REQUEST_URI'] == "/php/pages/index.php"){ ?>
-            porco tasso:フロントエンドエンジニアのスキルノート　※まとめ中
-            <?php } else {
-                foreach($allPages as $list){
-                    if($list["file"] == $_SERVER['REQUEST_URI']){
-                        $title = $list["title"];
-                        $lead = $list["lead"];
-                        $path = $list["html"];
-                        break;
-                    }
+        <?php if($_SERVER['REQUEST_URI'] == "/"){ ?>
+            <title>porco tasso:フロントエンドエンジニアのスキルノート　※まとめ中</title>
+        <?php } else {
+            foreach($allPages as $list){
+                if($list["file"] == $_SERVER['REQUEST_URI']){
+                    $title = $list["title"];
+                    $lead = $list["lead"];
+                    $filename = '/Users/porcokafuka/projects/porcotasso.github.io'.$list["file"];
+                    break;
                 }
-            }
-        ?>
-    </title>
+            } ?>
+            <title><?php echo ($title); ?></title>
+        <?php } ?>
+    
 </head>
 <body>
 
     <header class="ly-header js-headerSmaller" id="js-headerNav">  
         <nav class="ly-header__inner">
-            <?php if($_SERVER['REQUEST_URI'] == "/php/pages/index.php"){ ?>
+            <?php if($_SERVER['REQUEST_URI'] == "/"){ ?>
                 <h1 class="web-ttl">
                     <a href="/">
                         <?php include("/Users/porcokafuka/projects/porcotasso.github.io/images/common/logo.svg"); ?>

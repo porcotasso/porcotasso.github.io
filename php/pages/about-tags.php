@@ -3,7 +3,10 @@
     <article class="articleCnt">
         <header>
             <h1><?php echo $title ?></h1>
-            <p><?php echo $lead ?></p>
+			<?php if (file_exists($filename)) { ?>
+				<p class="el-updateDate"><?php echo date ("Y.m.d", filemtime($filename)).' updated'; ?></p>
+			<?php } ?>
+            <p><?php echo $lead ?></p>  
             <nav>
                 <div>目次</div>
                 <ol>
@@ -14,7 +17,7 @@
         </header>
         <section class="ly-section">
             <h2>Pタグ</h2>
-            <p>pタグは「Paragraph」の略です。長いひとかたまりの文章だけでなく、テキストを使ういろいろな場所で使われるので、用途ごとに対応できるスタイルの指定が必要になります。このサイトでの考え方では、pタグを複数行にわたる文章を基本として設定するので、長文が読みやすいスタイルを基本に指定します。具体的にはline-heightを1.8~2 letter-space0.05em など通常よりスペースを開けています。フォントサイズは長文が読みやすいサイズを目的とします。mobileで14px、PCで16pxあたりを基本に考えています。</p><p>ラベルなどで使う際には余計なスタイルをリセットして使用します。</p>
+            <p>pタグは「Paragraph」の略です。長いひとかたまりの文章だけでなく、テキストを使ういろいろな場所で使われるので、用途ごとに対応できるスタイルの指定が必要になります。<br>このサイトでの考え方では、複数行にわたる文章にpタグを使用して、長文が読みやすいスタイルを指定するのを優先します。具体的にはline-heightを1.8~2 letter-space0.05em など通常よりスペースを開けています。フォントサイズは長文が読みやすいサイズを目的とします。mobileで14px、PCで16pxあたりを基本に考えています。</p><p>ラベルなどで使う際には余計なスタイルをリセットして使用します。</p>
         </section>
         <section class="ly-section">
             <h2>aタグ</h2>

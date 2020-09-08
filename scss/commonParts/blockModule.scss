@@ -94,13 +94,18 @@
   h1{
     padding-top: 1em;
     padding-bottom: 1em;
-    border-bottom: 1px dotted #f76eb5;
+    margin-bottom: 1em;
+    border-bottom: 1px dotted $opera;
     text-align: center;
     letter-spacing: 0.1em;
   }
+  .el-updateDate{
+    font-size: $font-size-13;
+    text-align: right;
+  }
   h2{
     // font-size: $font-size-17;
-    border-left: 2px solid #f76eb5;
+    border-left: 2px solid $opera;
     padding: 0 2px 0 6px;
     margin: 3em 0 2em;
   }

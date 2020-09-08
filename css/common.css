@@ -564,11 +564,16 @@ body {
         border-bottom: none; }
 
 .articleCnt h1 {
+  margin-bottom: 1em;
   padding-top: 1em;
   padding-bottom: 1em;
   border-bottom: 1px dotted #f76eb5;
   letter-spacing: 0.1em;
   text-align: center; }
+
+.articleCnt .el-updateDate {
+  font-size: 1.3rem;
+  text-align: right; }
 
 .articleCnt h2 {
   margin: 3em 0 2em;

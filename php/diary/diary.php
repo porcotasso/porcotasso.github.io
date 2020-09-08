@@ -44,6 +44,10 @@
                 <li>-CSSカテゴライズまとめ、break-wordなどテキスト、svgまとめ</li>
             </ul>
             <h2><time>2020年</time></h2>
+            <time class="dairyTime" datetime="2020-09-08">9月8日</time>
+            <p>php filemtimeでファイルのupdated日を取得。</p>
+            <time class="dairyTime" datetime="2020-09-07">9月7日</time>
+            <p>day.jsのif文。曜日で分ける。</p>
             <time class="dairyTime" datetime="2020-09-06">9月6日</time>
             <p>スマホスクロールの停止について。スクロールしきったら１ピクセルずらす方法を試す。これまでのエラーは解消するが、あらたなエラーがでる。メニューの1度目のクリックではメニューが動かない。スクロールしきった時に少し戻る動きが変。使えないっぽい。shopifyの今週の水曜、来週の水曜を取得する方法のテスト。liquid のif文内で　jsが動かない。day.jsを調べてまとめる。</p>
             <time class="dairyTime" datetime="2020-09-05">9月5日</time>

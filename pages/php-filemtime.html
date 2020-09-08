@@ -14,7 +14,7 @@
       
     <!-- google font Pacifico for title -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-                            <title>js-date</title>
+                            <title>filemtime</title>
             
 </head>
 <body>
@@ -377,72 +377,37 @@
     <div class="el-blackCover" id="js-blackCover"></div><main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
-            <h1>js-date</h1>
-							<p class="el-updateDate">2020.09.08 updated</p>
-			            <p>メモ</p>  
+            <h1>filemtime</h1>
+							<p class="el-updateDate">2020.09.09 updated</p>
+			            <p>filemtime()でファイルの更新時間を取得できます。</p>  
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                                 <ol>
                                         <li>
                         <a href="#0" class="">
-                            <div class="">今日の日付を取得する</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">日時とif文</div>
+                            <div class="">ファイルの更新時刻を取得する</div>
                         </a>
                     </li>
                                     </ol>
             </nav>
         </header>
-		<section class="ly-section" id="0">
-			<h2>今日の日付を取得する</h2>
-			<p>Dateクラスをnew演算子で指定して、新しいオブジェクトを生成した際に、そのインスタンスはデフォルトで今日がセットされた状態で初期化されます。そのまま変数に入れると、以後、今日の日を示すDateオブジェクトとして使用できます。下記コードのようにDateオブジェクトから、年、月、日、時、分、秒をそれぞれ単独でメソッドで取得できます。</p>
-
+        <section class="ly-section" id="0">
+            <h2>ファイルの更新時刻を取得する</h2>
+			<p></p>
 <pre class="prettyprint">
+&lt;?php if (file_exists($filename)) { ?&gt;
+	&lt;?php echo date (&quot;Y.m.d&quot;, filemtime($filename)).&#039; updated&#039;; ?&gt;
+&lt;?php } ?&gt;
+//出力例: 2020.09.08 updated
 
-   var today = new Date();
-    console.log(today);
- 	console.log(today.getDay()); //曜日
-    console.log("年=" + today.getFullYear());
-    console.log("月=" + (today.getMonth()+1));
-    console.log("日=" + today.getDate());
-    console.log("時=" + today.getHours());
-    console.log("分=" + today.getMinutes());
-	console.log("秒=" + today.getSeconds());
-	
+&lt;?php if (file_exists($filename)) { ?&gt;
+	&lt;?php echo date (&quot;F d Y H:i:s.&quot;, filemtime($filename)).&#039; updated&#039;; ?&gt;
+&lt;?php } ?&gt;
+//出力例: September 08 2020 22:10:11. updated
 </pre>
-<p>Date#getMonth()だけは0～11の月数を返すため、これを1～12にするには、「+1」する必要があります。</p>
-		<section class="ly-section" id="1">
-			<h2>日時とif文</h2>
-			<p>日曜で12時前か、それ以外かの判定。</p>
-<pre class="prettyprint">
-var today = new Date();
-if(today.getDay() == 0 && today.getHours() < 12 ){
-	console.log(today.getDay());
-} else {
-	console.log('sss');
-}
-</pre>
-				<ul>
-					<li>
-						<dl>
-							<dt>協定世界時:UTC(Coordinated Universal Time)</dt>
-							<dd>世界各地の標準時は協定世界時（UTC）を基準として定められている。</dd>
-						</dl>
-					</li>
-					<li>
-						<dl>
-							<dt>日本標準時：JST(Japan Standard Time)</dt>
-							<dd>東経135度分の時差で協定世界時より9時間進んでいます。日本標準時は「+0900（JST）」と表記されます。</dd>
-						</dl>
-					</li>
-				</ul>
-				<cite class="ly-cite"><a href="https://www.sejuku.net/blog/22867" target="_blank" rel="noopener noreferrer">日付の取得と比較の方法まとめ</a></cite>
 
-				
-        </section>
+<cite class="ly-cite"><a href="https://www.php.net/manual/ja/function.filemtime.php" target="_blank" rel="noopener noreferrer">PHP マニュアル</a></cite>
+		</section>
     </article>
 </main>
         <footer class="ly-footer">
