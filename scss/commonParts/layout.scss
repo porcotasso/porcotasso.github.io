@@ -104,7 +104,7 @@ body{
 			box-shadow: $box-shadow;
 			transition: $transition;
 			z-index: 101;
-			overscroll-behavior: contain; // 親要素にスクロールが伝わらないようにする。「スクロールチェーン」の挙動を無効化
+			// overscroll-behavior: contain; // 親要素にスクロールが伝わらないようにする。「スクロールチェーン」の挙動を無効化
 			&_list{
 				margin: 0;
 				border-top: 1px solid $gray-200;

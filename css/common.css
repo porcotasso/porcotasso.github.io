@@ -369,8 +369,6 @@ body {
         .ly-header__inner .menu-trigger span:nth-of-type(3) {
           bottom: 0; }
     .ly-header__inner .headerMenu {
-      -ms-scroll-chaining: none;
-          overscroll-behavior: contain;
       z-index: 101;
       position: absolute;
       top: 59px;
