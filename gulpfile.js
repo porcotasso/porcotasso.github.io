@@ -32,14 +32,20 @@ const htmlhint = require('gulp-htmlhint');
 
 // compile php
 gulp.task('php', () => {
-  return gulp.src(['index.php', './php/pages/*.php', './php/pages/**/*.php'])
+  return gulp.src(['./php/index.php'])
+    .pipe(php2html({}))
+    .pipe(rename({ extname: '.html' }))
+    .pipe(gulp.dest('./'))
+})
+gulp.task('php2', () => {
+  return gulp.src(['./php/pages/*.php', './php/diary/diary.php'])
     .pipe(php2html({}))
     .pipe(rename({ extname: '.html' }))
     .pipe(gulp.dest('./pages/'))
 })
 
 gulp.task('html', function() {
-  return gulp.src('./index.html','./code-*/*.html')
+  return gulp.src('index.html','./code-*/*.html')
   .pipe(htmlhint({
     "tagname-lowercase": true,
     "attr-lowercase": false,
@@ -100,7 +106,7 @@ gulp.task('sass', () => {
 })
 
 gulp.task('watch', () => {
-    return gulp.watch(['./scss/*.scss', './scss/**/*.scss', './php/pages/*.php', './php/_partial/*.php'], gulp.series('sass', 'php', 'html'))
+    return gulp.watch(['./scss/*.scss', './scss/**/*.scss', './php/pages/*.php', './php/_partial/*.php'], gulp.series('sass', 'php', 'php2', 'html'))
 })
 
 //create default task  -> 'npm run dev' -> run

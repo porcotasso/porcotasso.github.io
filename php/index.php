@@ -4,7 +4,7 @@
     <article>
 
         <p class="ly-homeProfile"><b>このサイトはまだ制作中です</b></p>
-        <a href="diary/diary.html">制作日記、メモ</a>
+        <a href="pages/diary/diary.html">制作日記、メモ</a>
         <nav>
             <ul class="bl-categoryList">
                 <?php foreach($pageLists as $list){ ?>
