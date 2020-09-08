@@ -22,11 +22,11 @@ hamburger.onclick = function() {
   }
 
   //背景のスクロールを止める android
-  if(bodyOverflow[0].style.overflow == 'hidden'){
-    bodyOverflow[0].style.overflow = '';
-  } else {
-    bodyOverflow[0].style.overflow = 'hidden';
-  }
+  // if(bodyOverflow[0].style.overflow == 'hidden'){
+  //   bodyOverflow[0].style.overflow = '';
+  // } else {
+  //   bodyOverflow[0].style.overflow = 'hidden';
+  // }
 
   // 黒背景のトグル
   blackCover.classList.toggle("active");
