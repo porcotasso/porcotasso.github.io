@@ -10,7 +10,6 @@
             <ul>
                 <li>scroll</li> 
                 <li>pointer-events</li>
-                
                 <li>inviewテストhttps://ec-recipe.com/what-is-shopify-2018/</li>
                 <li>ホームレイアウト　homeにスライダーをつける</li>
                 <li>「スクロールチェーン」の挙動を無効化https://necomesi.jp/blog/tsmd/posts/180</li>
