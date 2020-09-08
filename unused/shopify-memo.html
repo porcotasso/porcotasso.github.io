@@ -15,7 +15,7 @@
     <!-- google font Pacifico for title -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>
-        ボタン作成    </title>
+                    </title>
 </head>
 <body>
 
@@ -372,57 +372,77 @@
     <div class="el-blackCover" id="js-blackCover"></div><main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
-            <h1>ボタン作成</h1>
-            <p>ボタンを作る際 &lt;a&gt;か&lt;button&gt;か&lt;input&gt;か迷わないように違いを理解する。</p>
+            <h1>shopify-memo</h1>
+            <p>shopify-memo</p>
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                                 <ol>
                                         <li>
                         <a href="#0" class="">
-                            <div class="">aタグ</div>
+                            <div class="">shopifyとは</div>
                         </a>
                     </li>
                                         <li>
                         <a href="#1" class="">
-                            <div class="">buttonタグ</div>
+                            <div class="">現在の時間を基準にif文をつくる</div>
                         </a>
                     </li>
                                         <li>
                         <a href="#2" class="">
-                            <div class="">inputタグ</div>
+                            <div class="">jsを利用する</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#3" class="">
+                            <div class="">新しいcssファイルを利用する</div>
                         </a>
                     </li>
                                     </ol>
             </nav>
         </header>
         <section class="ly-section" id="0">
-            <h2>aタグ</h2>
-            <p>汎用的なボタンはaタグを使用する。理由として、一般的に浸透していること。buttonが推奨されているわけでもないということで、よく使われているaを使うのが無難。大手web会社もaを使っている様子。</p>
-            <section class="ly-section">
-			<h2>サンプル</h2>
-			<a href="/" class="el-btn el-btn--center el-btn--angle">ボタンサンプル</a>
+            <h2>shopifyとは</h2>
+            <p>2004年にカナダで創業。世界最大のECサイト制作プラットフォームです。</p>
+            
         </section>
         <section class="ly-section" id="1">
-            <h2>buttonタグ</h2>
-			<p>フォームの送信ボタンとして使用する。aタグは送信ボタンとして使えない。buttonは擬似要素が使えて、inputの上位互換となるので。</p>
-			<p>htmlに「type=""」の指定が必要。<br>cssにデフォルトのデザインを打ち消す指定が必要<br>リンクが「onclick="location.href='aa.html'"」となる</p>
-			<p>一方でbuttonを汎用ボタンに押すひとの意見。<br>フォーカスが当たる。フォーカスしてenterキーでclickイベントが発火する。音声読み上げで「ボタン」と読まれる。aは「リンク」。フォームと連動することでbuttonを嫌がる人もいるが、type="button"にすればフォームに対しなにもしない。</p>
+            <h2>現在の時間を基準にif文をつくる</h2>
+            <p>月曜の12時の前か後かを分ける。</p>
 <pre class="prettyprint">
-<button type="button" onclick="location.href='aaa.html'">ボタン</button>
-</pre>
-		</section>
-		<section class="ly-section" id="2">
-            <h2>inputタグ</h2>
-            <p>可能な限り使用しない。</p>
-		</section>
-		<section class="ly-section">
-			<h2>やってはいけないこと</h2>
-			<p>aタグの中にインタラクティブコンテンツを入れてはいけない。button をaで囲むなど。インタラクティブコンテンツとはselect, button, a, input, textarea などユーザー操作に対し反応するタグ。</p>
-		</section>
+{% assign wday = 'now' | date: "%A" %} //今の曜日をwday変数に代入
+{% assign hour = 'now' | date: "%H" %}　//今の時間をhour変数に代入
+{% if wday == 'Monday' and hour <= '12' %}
+<p>月曜の午前です</p>
+{% else %}
+<p>月曜の午前以外です</p>
+{% endif %}
 
-        <section class="ly-section">
-            <h3>参考</h3>
-            <cite class="ly-cite"><a href="https://www.ameamelog.com/html-a-button/" target="_blank" rel="noopener noreferrer">ameamelog.com</a></cite>
+//%Y yesar 2020
+//%m month 09
+//%b month Jul
+//%d day 04
+//%H hour 16
+//%M minutes 05
+//%A weekday Friday
+
+//"%Y-%m-%d %H:%M" 2020-09-04 16:05
+</pre>
+        </section>
+        <section class="ly-section" id="2">
+            <h2>jsを利用する</h2>
+            <p>Assetsで、新しいassetを追加し、javascriptを選ぶ。そのファイル内にjavascriptを書く。CDNを使う方法がわからない。使えないのかも。その場合、コードをコピーすれば使える。使いたいliquidファイル内で、</p>
+<pre class="prettyprint">
+{{ 'file-name.js' | asset_url | script_tag}}
+</pre>
+            <p>と書けば使える。</p>
+        </section>
+        <section class="ly-section" id="3">
+            <h2>新しいcssファイルを利用する</h2>
+            <p>Assetsで、新しいassetを追加し、cssを選ぶ。そのファイル内にstyleを書く。使いたいliquidファイル内で、</p>
+<pre class="prettyprint">
+{{ 'file-name.css' | asset_url | stylesheet_tag}}
+</pre>    
+            <p>と書けば使える。</p>
         </section>
     </article>
 </main>

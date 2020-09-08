@@ -1,25 +1,11 @@
-function handleTouchMove(e) {
-  // event.preventDefault();
-  console.log('preventDefault');
-  var elem = document.getElementById("header-menu");
-  var scroll = elem.scrollTop;
-  var range = elem.scrollHeight - elem.offsetHeight - 1;
-  console.log(scroll);
-  if (scroll <= 0) {
-      e.preventDefault();
-      elem.scrollTop = 1;
-      console.log('<1');
-  } else if(scroll > range) {
-      e.preventDefault();
-      elem.scrollTop = range;
-      console.log('>range');
-  }
-}
+//bodyにイベントをつけてると反応するが、下層のタグだと反応しない
+// function handleTouchMove(event) {
+// 	event.preventDefault();
+// }
 
 // HEADER HAMBURGER MENU 
 var hamburger = document.getElementById("js-hamburger");
 var headerNav = document.getElementById("js-headerNav");
-
 var blackCover = document.getElementById("js-blackCover");
 var bodyOverflow = document.getElementsByTagName("body");
 hamburger.onclick = function() {
@@ -27,20 +13,20 @@ hamburger.onclick = function() {
   headerNav.classList.toggle("active");
   if (headerNav.classList.contains('active')) {
       //スクロール禁止
-      bodyOverflow[0].addEventListener('touchmove', handleTouchMove, { passive: false });
+      // bodyOverflow[0].addEventListener('touchmove', handleTouchMove, { passive: false });
       console.log('click');
   } else {
       //スクロール復帰
-      bodyOverflow[0].removeEventListener('touchmove', handleTouchMove, { passive: false });
+      // bodyOverflow[0].removeEventListener('touchmove', handleTouchMove, { passive: false });
       console.log('close');
   }
 
   //背景のスクロールを止める android
-  // if(bodyOverflow[0].style.overflow == 'hidden'){
-  //   bodyOverflow[0].style.overflow = '';
-  // } else {
-  //   bodyOverflow[0].style.overflow = 'hidden';
-  // }
+  if(bodyOverflow[0].style.overflow == 'hidden'){
+    bodyOverflow[0].style.overflow = '';
+  } else {
+    bodyOverflow[0].style.overflow = 'hidden';
+  }
 
   // 黒背景のトグル
   blackCover.classList.toggle("active");

@@ -103,6 +103,14 @@ $jsDate = array(
 	"lead" => "メモ",
 	"html" => "/js-date.html"
 );
+//js-scroll
+$jsScroll = array(
+	"file" => "/php/pages/js-scroll.php",
+	"tag" => array("js"),
+	"title" => "js-scroll",
+	"lead" => "メモ",
+	"html" => "/js-scroll.html"
+);
 $eventHandler = array(
 	"file" => "/php/pages/event-handler.php",
 	"tag" => array("js"),

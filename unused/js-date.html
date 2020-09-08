@@ -15,7 +15,7 @@
     <!-- google font Pacifico for title -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>
-        CSSを役割ごとにカテゴライズする    </title>
+                    </title>
 </head>
 <body>
 
@@ -372,96 +372,70 @@
     <div class="el-blackCover" id="js-blackCover"></div><main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
-            <h1>CSSを役割ごとにカテゴライズする</h1>
-            <p>全てのCSSを目的ごとに分けることで、使い方を明確にするカテゴライズする。</p>
+            <h1>js-date</h1>
+            <p>メモ</p>
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                                 <ol>
                                         <li>
                         <a href="#0" class="">
-                            <div class="">ベースグループ</div>
+                            <div class="">今日の日付を取得する</div>
                         </a>
                     </li>
                                         <li>
                         <a href="#1" class="">
-                            <div class="">レイアウトグループ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#2" class="">
-                            <div class="">ブロックモジュールグループ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#3" class="">
-                            <div class="">エレメントモジュールグループ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#4" class="">
-                            <div class="">エレメントモジュールモディファイヤーグループ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#5" class="">
-                            <div class="">ヘルパーグループ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#6" class="">
-                            <div class="">ユニークグループ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#7" class="">
-                            <div class="">プログラムグループ</div>
+                            <div class="">日時とif文</div>
                         </a>
                     </li>
                                     </ol>
             </nav>
         </header>
-        <section class="ly-section" id="0">
-            <h2>ベースグループ</h2>
-            <p>CSS設計の大元となるCSSのグループ。各ブラウザ上にデフォルトで指定されているuser agent stylesheetを初期化するリセットCSS、または初期化ではなくブラウザ、デバイス間の不一致を修正するノーマライズCSSを始めに適用し、そこからプロジェクトの標準となるスタイリングをしていきます。</p>
-            <h3>ノーマライズCSS</h3>
-            <p>ブラウザ、デバイス間の不一致を修正するCSS</p>
-            <h3>リセットCSS</h3>
-            <p>user agent stylesheetを無効化するCSS</p>
-            <h3>bootstrap-reboot.css</h3>
-            <p>適度にuser agent stylesheetを無効化、正常化したCSS</p>
-            <p>このサイトでは、bootstrap-reboot.css をコピーして、サイト用にカスタマイズしています。</p>
-        </section>
-        <section class="ly-section" id="1">
-            <h2>レイアウトグループ</h2>
-            <p>位置調整を担当するCSS</p>
-            <p>position, z-index, top/right/left/bottom, float, width, marginなどです。</p>
-        </section>
-        <section class="ly-section" id="2">
-            <h2>ブロックモジュールグループ</h2>
-            <p>いろんな場所で使えて子要素を持つCSS。基本的にはレイアウトグループに属するスタイルを持たない。bl-</p>
-        </section>
-        <section class="ly-section" id="3">
-            <h2>エレメントモジュールグループ</h2>
-            <p>最小単位のモジュールです。子要素を持ちません。どこにでも使える、ボタン、ラベル el-</p>
-        </section>
-        <section class="ly-section" id="4">
-            <h2>エレメントモジュールモディファイヤーグループ</h2>
-            <p>エレメントモジュールグループを少しだけ変更したい際に使います。エレメントモジュールグループと同時に追加します。--name</p>
-        </section>
-        <section class="ly-section" id="5">
-            <h2>ヘルパーグループ</h2>
-        </section>
-        <section class="ly-section" id="6">
-            <h2>ユニークグループ</h2>
-        </section>
-        <section class="ly-section" id="7">
-            <h2>プログラムグループ</h2>
-            <p>js-</p>
-        </section>
-        <section class="ly-section">
-            <h3>参考</h3>
-            <cite class="ly-cite"><a href="https://qiita.com/pugiemonn/items/964203782e1fcb3d02c3" target="_blank" rel="noopener noreferrer">こんなHTMLとCSSのコーディング規約で書きたい</a></cite>
-            <cite class="ly-cite"><a href="https://www.amazon.co.jp/CSS設計完全ガイド-詳細解説-実践的モジュール集-半田-惇志/dp/429711173X" target="_blank" rel="noopener noreferrer">CSS設計完全ガイド</a></cite>
+		<section class="ly-section" id="0">
+			<h2>今日の日付を取得する</h2>
+			<p>Dateクラスをnew演算子で指定して、新しいオブジェクトを生成した際に、そのインスタンスはデフォルトで今日がセットされた状態で初期化されます。そのまま変数に入れると、以後、今日の日を示すDateオブジェクトとして使用できます。下記コードのようにDateオブジェクトから、年、月、日、時、分、秒をそれぞれ単独でメソッドで取得できます。</p>
+
+<pre class="prettyprint">
+
+   var today = new Date();
+    console.log(today);
+ 	console.log(today.getDay()); //曜日
+    console.log("年=" + today.getFullYear());
+    console.log("月=" + (today.getMonth()+1));
+    console.log("日=" + today.getDate());
+    console.log("時=" + today.getHours());
+    console.log("分=" + today.getMinutes());
+	console.log("秒=" + today.getSeconds());
+	
+</pre>
+<p>Date#getMonth()だけは0～11の月数を返すため、これを1～12にするには、「+1」する必要があります。</p>
+		<section class="ly-section" id="1">
+			<h2>日時とif文</h2>
+			<p>日曜で12時前か、それ以外かの判定。</p>
+<pre class="prettyprint">
+var today = new Date();
+if(today.getDay() == 0 && today.getHours() < 12 ){
+	console.log(today.getDay());
+} else {
+	console.log('sss');
+}
+</pre>
+				<ul>
+					<li>
+						<dl>
+							<dt>協定世界時:UTC(Coordinated Universal Time)</dt>
+							<dd>世界各地の標準時は協定世界時（UTC）を基準として定められている。</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>日本標準時：JST(Japan Standard Time)</dt>
+							<dd>東経135度分の時差で協定世界時より9時間進んでいます。日本標準時は「+0900（JST）」と表記されます。</dd>
+						</dl>
+					</li>
+				</ul>
+				<cite class="ly-cite"><a href="https://www.sejuku.net/blog/22867" target="_blank" rel="noopener noreferrer">日付の取得と比較の方法まとめ</a></cite>
+
+				
         </section>
     </article>
 </main>

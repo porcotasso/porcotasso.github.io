@@ -18,17 +18,16 @@
     <!-- google font Pacifico for title -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>
+        <?php date_default_timezone_set('Asia/Tokyo'); ?>
         <?php if($_SERVER['REQUEST_URI'] == "/php/pages/index.php"){ ?>
             porco tasso:フロントエンドエンジニアのスキルノート　※まとめ中
             <?php } else {
-                foreach($pageLists as $list){
-                    foreach($list["pages"] as $value){
-                        if($value["file"] == $_SERVER['REQUEST_URI']){
-                            echo $value["title"];
-                            $title = $value["title"];
-                            $lead = $value["lead"];
-                            break;
-                        }
+                foreach($allPages as $list){
+                    if($list["file"] == $_SERVER['REQUEST_URI']){
+                        $title = $list["title"];
+                        $lead = $list["lead"];
+                        $path = $list["html"];
+                        break;
                     }
                 }
             }
@@ -65,7 +64,7 @@
                     <ul class="headerMenu_subNav">
                         <?php foreach($list["pages"] as $value){ ?>
                         <li class="headerMenu_subList">
-                            <a href="<?php echo $value["html"]; ?>" class="">
+                            <a href="<?php echo '/pages/'.$value["html"]; ?>" class="">
                                 <div class=""><?php echo $value["title"]; ?></div>
                             </a>
                         </li>

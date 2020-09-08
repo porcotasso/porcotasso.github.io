@@ -15,7 +15,7 @@
     <!-- google font Pacifico for title -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>
-        em,strong,mark,b,dfn,iの違い    </title>
+                    </title>
 </head>
 <body>
 
@@ -372,75 +372,112 @@
     <div class="el-blackCover" id="js-blackCover"></div><main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
-            <h1>em,strong,mark,b,dfn,iの違い</h1>
-            <p>文字を目立たせるタグの違いが曖昧になりがちなので明確に使い分けたい。基本的にはセマンティックマークアップとして利用するのが目的で装飾を前提に使用しないこと。</p>
+            <h1>touch-event</h1>
+            <p>touch-eventメモ</p>
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                                 <ol>
                                         <li>
+                        <a href="#0" class="">
+                            <div class="">touchEventとは</div>
+                        </a>
+                    </li>
+                                        <li>
                         <a href="#1" class="">
-                            <div class="">emタグ</div>
+                            <div class="">touchEventの種類</div>
                         </a>
                     </li>
                                         <li>
                         <a href="#2" class="">
-                            <div class="">strongタグ</div>
+                            <div class="">TouchListの種類</div>
                         </a>
                     </li>
                                         <li>
                         <a href="#3" class="">
-                            <div class="">markタグ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#4" class="">
-                            <div class="">bタグ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#5" class="">
-                            <div class="">dfnタグ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#6" class="">
-                            <div class="">iタグ</div>
+                            <div class="">Touchオブジェクト</div>
                         </a>
                     </li>
                                     </ol>
             </nav>
         </header>
-        <section class="ly-section" id="1">
-            <h2>emタグ</h2>
-            <p>文脈的に強調する部分によって文の意味が変更される場合に使います。</p>
+        <section class="ly-section" id="0">
+            <h2>touchEventとは</h2>
+			<p>iOSやAndroidなどのモバイルデバイスに実装されている、JavaScriptで扱えるイベントのことを指します。タッチイベントを使えば、ユーザーがスクリーンに触れたときの動作を取得することができます。</p>
+            <p>4つのtouchEventにはそれぞれ３つのTouchListがあり、各TouchListには触った指ごとにTouchオブジェクトの情報（idや座標値）が格納されます。</p>
+            <dl>
+                <dt>touchEvent</dt>
+                <dd>画面を触るとき、どのタイミングでプログラムを発火させるかを決める４種類</dd>
+            </dl>
+            <dl>
+                <dt>TouchList</dt>
+                <dd>画面に何度もふれるときに、タイミングや場所によって、TouchListに格納するTouchオブジェクトを選別する。そのタイミングや場所の分類方法３種類</dd>
+            </dl>
+            <dl>
+                <dt>Touchオブジェクト</dt>
+                <dd>画面に触れたときに触った指ごとに発生する。idや座標のデータを含むオブジェクト</dd>
+            </dl>
+		</section>
+		<section class="ly-section" id="1">
+            <h2>touchEventの種類</h2>
+			<p>ユーザーが、画面をタッチで操作すると、操作の内容によって、以下のようなイベントが発生します。</p>
+			<table>
+				<thead>
+					<tr><th>イベント</th><th>発生するタイミング</th></tr>
+				</thead>
+				<tbody>
+					<tr><td>touchstart</td><td>タッチ面に指が触れた時</td></tr>
+					<tr><td>touchend</td><td>タッチしていた指を離した時</td></tr>
+					<tr><td>touchmove</td><td>タッチしながら指を移動させた時</td></tr>
+					<tr><td>touchcancel</td><td>何らかの理由でタッチが取り消された時</td></tr>
+				</tbody>
+			</table>
+<pre class="prettyprint">
+// touchstartイベント
+	touchArea1.addEventListener("touchstart", () => {
+})
+// touchendイベント
+	touchArea1.addEventListener("touchend", () => {
+})
+// touchmoveイベント
+touchArea1.addEventListener("touchmove", () => {
+	event.preventDefault();  // 画面スクロールを防止
+})
+// touchcancelイベント
+	touchArea1.addEventListener("touchcancel", () => {
+})
+</pre>
         </section>
-        <section class="ly-section" id="2">
-            <h2>strongタグ</h2>
-            <p>strongタグは、強い重要性、深刻性、緊急性を表し大事な部分を強調するときに使います。前述のemタグは、文の意味が変更されるのに対して、strongタグは、文の意味が変更されません。emタグ、bタグより強い重要性を示します。HTML4.01からHTML5に移行で廃止されると言及もありましたが、そのまま使われています。特定のキーワードだけstrongタグを乱用するといった不適切な使用を繰り返せば、ペナルティのリスクを高める原因にもなりかねません。</p>
+		<section class="ly-section" id="2">
+            <h2>TouchListの種類</h2>
+            <p>TouchEventは３種のTouchListをもっています。</p>
+            <table>
+                <tbody>
+                <tr><td>touches</td><td>すべてのTouchオブジェクトを格納</td></tr>
+                <tr><td>changedTouches</td><td>変更されたTouchオブジェクトを格納</td></tr>
+                <tr><td>targetTouches</td><td>イベントのターゲットと同じ要素でタッチを始めたTouchオブジェクトを格納</tr>
+                </tbody>
+            </table>
         </section>
         <section class="ly-section" id="3">
-            <h2>markタグ</h2>
-            <p>重要性とは関係なく注目させたい場合に使用します。検索結果をハイライトしたいときにも使えます。</p>
-        </section>
-        <section class="ly-section" id="4">
-            <h2>bタグ</h2>
-            <p>目立たせたいけど、emタグ、strongタグ、markタグ、iタグではないと思ったときに最後の手段で使用します。見栄えを定義するタグとして、HTML4.01 では「非推奨(deprecated)」とされましたが、HTML5 では「特に付加的な重要性を与えるわけでも、異なるトーンや雰囲気を表現するわけでもないが、実利的な理由から注意を引きつける箇所」を示すタグとして、非推奨が解除されており、b は「太字」と理解するのは間違いのようです。単に太字にしたいのならfont-weightを使用すべきだそう。</p>
-        </section>
-        <section class="ly-section" id="5">
-            <h2>dfnタグ</h2>
-            <p>definitionの略で、用語の意味を定義する際に使用します。定義用語が何度も出る場合には最初の用語だけdfnタグで囲むのが一般的ですがあまり使用されていません。</p>
-        </section>
-        <section class="ly-section" id="6">
-            <h2>iタグ</h2>
-            <p>iタグを使用すると文字が斜めに表現されますが、イタリック体、斜体、標準フォントを強引に傾斜の３つパターンがあります。指定フォントにイタリック体があればイタリック体、ない場合は斜体、イタリック体も斜体もなければ標準フォントを斜めにして表示されます。日本語フォントの多くは標準フォントを斜めに傾けた表示になります。iタグ使用は非推奨ではないですができるだけスタイルシート<code>{font-style:italic;}</code>で指定しましょう。
-            </p>
-        </section>
-        <section class="ly-section">
-            <h3>参考</h3>
-            <cite class="ly-cite"><a href="https://yoshikawaweb.com/element-em-strong-mark-b-difference.html" target="_blank" rel="noopener noreferrer">吉川ウェブ</a></cite>
-            <cite class="ly-cite"><a href="https://html-coding.co.jp/annex/dictionary/html/i/" target="_blank" rel="noopener noreferrer">クロノドライブのHTML辞典</a></cite>
-            <cite class="ly-cite"><a href="https://seolaboratory.jp/52093/#:~:text=strong%E3%82%BF%E3%82%B0%E3%81%A8%E3%81%AF%E3%80%81%20%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88,%E9%87%8D%E8%A6%81%E6%80%A7%E3%82%92%E7%A4%BA%E3%81%97%E3%81%BE%E3%81%99%E3%80%82" target="_blank" rel="noopener noreferrer">seoラボ</a></cite>
-        </section>
+            <h2>Touchオブジェクト</h2>
+            <p>各タッチの情報は、Touchオブジェクトから取得することができます。Touchオブジェクトは触った指ごとに発生し、もし４本の指でタッチしたら４つのTouchオブジェクトが発生します。Touchオブジェクトから取得できる主な情報は下表のとおり。</p>
+            <table>
+                <tbody>
+                    <tr><td>identifier</td><td>各タッチに付与される番号。<br>指のIDのようなもので、指を離すまではidentifierは変わりません</td></tr>
+                    <tr><td>screenX</td><td>端末のスクリーンの左端からの距離（px）</td></tr>
+                    <tr><td>screenY</td><td>端末のスクリーンの上端からの距離（px）</td></tr>
+                    <tr><td>clientX</td><td>ブラウザのビューポートの左端からの距離（px）</td></tr>
+                    <tr><td>clientY</td><td>ブラウザのビューポートの上端からの距離（px）</td></tr>
+                    <tr><td>pageX</td><td>ドキュメントの上端からの距離（px）</td></tr>
+                    <tr><td>pageY</td><td>ドキュメントの上端からの距離（px）</td></tr>
+                    <tr><td>target</td><td>その指をタッチ開始した位置にあるElement<br>*指を移動しても、targetはタッチ開始時の位置のElementのまま</td></tr>
+                </tbody>
+            </table>
+            <cite class="ly-cite"><a href="https://web-breeze.net/js-touch-event/" target="_blank" rel="noopener noreferrer">https://web-breeze.net/js-touch-event/</a></cite>
+
+            <cite class="ly-cite"><a href="https://webtools.dounokouno.com/htmlescape/" target="_blank" rel="noopener noreferrer">Web制作小物ツール</a></cite>
+
+		</section>
     </article>
 </main>
         <footer class="ly-footer">

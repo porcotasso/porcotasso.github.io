@@ -15,7 +15,7 @@
     <!-- google font Pacifico for title -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>
-        header-smaller    </title>
+                    </title>
 </head>
 <body>
 
@@ -372,71 +372,75 @@
     <div class="el-blackCover" id="js-blackCover"></div><main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
-            <h1>header-smaller</h1>
-            <p>画面をスクロールした時に高さを変えるjavascriptについての説明です。</p>
+            <h1>em,strong,mark,b,dfn,iの違い</h1>
+            <p>文字を目立たせるタグの違いが曖昧になりがちなので明確に使い分けたい。基本的にはセマンティックマークアップとして利用するのが目的で装飾を前提に使用しないこと。</p>
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                                 <ol>
                                         <li>
-                        <a href="#0" class="">
-                            <div class="">javascript</div>
+                        <a href="#1" class="">
+                            <div class="">emタグ</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#2" class="">
+                            <div class="">strongタグ</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#3" class="">
+                            <div class="">markタグ</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#4" class="">
+                            <div class="">bタグ</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#5" class="">
+                            <div class="">dfnタグ</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#6" class="">
+                            <div class="">iタグ</div>
                         </a>
                     </li>
                                     </ol>
             </nav>
         </header>
-        <section class="ly-section" id="0">
-            <h2>javascript</h2>
-
-<pre class="prettyprint">
-<header class="js-headerSmaller"> 
-
-function headerSmaller() {
-	var px_change = 80;
-	let headerSmaller = document.getElementsByClassName('js-headerSmaller');
-	window.addEventListener('scroll', () => {
-    var y = document.documentElement.scrollTop || document.body.scrollTop;
-		if ( y > px_change) {
-			headerSmaller[0].classList.add('smaller');
-		} else if (headerSmaller[0].classList.contains('smaller')) {
-			headerSmaller[0].classList.remove('smaller');
-		}
-	});
-}
-window.onload = headerSmaller();
-</pre>
-
-<p>上部から80pxの位置を超えたときに、ヘッダーの高さが変わるようにします。ハンバーガーメニューのためにidを使っているのでクラスで要素を取得しています。</p>
-<h3>コードの流れ</h3>
-<p>windowオブジェクトでscrollイベントが発生を取得</p>
-<pre class="prettyprint">
-window.addEventListener('scroll', () => {}
-</pre>
-<p>Element.scrollTop プロパティで、要素の内容が垂直にスクロールするピクセル数を取得</p>
-<pre class="prettyprint">
-var y = document.documentElement.scrollTop || document.body.scrollTop;
-</pre>
-<p>垂直にスクロールするピクセル数がpx_change変数を超えた時はsmallerクラスを追加し、超えてなくてsmallerクラスがついている時はクラスをはずします。</p>
-<pre class="prettyprint">
-if ( y > px_change) {
-    headerSmaller[0].classList.add('smaller');
-} else if (headerSmaller[0].classList.contains('smaller')) {
-    headerSmaller[0].classList.remove('smaller');
-}
-</pre>
-<p>windowオブジェクトが読み込まれたタイミングでheaderSmallerを作動させます</p>
-<pre class="prettyprint">
-window.onload = headerSmaller();
-</pre>
-
-<p>onloadはページや画像などを読み込んでから処理を実行するときに利用するイベントハンドラーです。データを読み込んでから処理を実行したいときなどに使用します。複数の「onloadイベント」書いてしまうと上書きされてしまい最後に書いたイベントだけが実行されます。その場合はaddEventListenerを使います。</p>
-<pre class="prettyprint">
-window.addEventListener('load', function() {
-    console.log('hello');
-})
-</pre>
-<p>ちなみにgetElementsByClassName()が返すのは、HTMLCollectionであってElementではないので、[番号]でどの要素を選ぶのか指定が必要です。</p>
-		</section>
+        <section class="ly-section" id="1">
+            <h2>emタグ</h2>
+            <p>文脈的に強調する部分によって文の意味が変更される場合に使います。</p>
+        </section>
+        <section class="ly-section" id="2">
+            <h2>strongタグ</h2>
+            <p>strongタグは、強い重要性、深刻性、緊急性を表し大事な部分を強調するときに使います。前述のemタグは、文の意味が変更されるのに対して、strongタグは、文の意味が変更されません。emタグ、bタグより強い重要性を示します。HTML4.01からHTML5に移行で廃止されると言及もありましたが、そのまま使われています。特定のキーワードだけstrongタグを乱用するといった不適切な使用を繰り返せば、ペナルティのリスクを高める原因にもなりかねません。</p>
+        </section>
+        <section class="ly-section" id="3">
+            <h2>markタグ</h2>
+            <p>重要性とは関係なく注目させたい場合に使用します。検索結果をハイライトしたいときにも使えます。</p>
+        </section>
+        <section class="ly-section" id="4">
+            <h2>bタグ</h2>
+            <p>目立たせたいけど、emタグ、strongタグ、markタグ、iタグではないと思ったときに最後の手段で使用します。見栄えを定義するタグとして、HTML4.01 では「非推奨(deprecated)」とされましたが、HTML5 では「特に付加的な重要性を与えるわけでも、異なるトーンや雰囲気を表現するわけでもないが、実利的な理由から注意を引きつける箇所」を示すタグとして、非推奨が解除されており、b は「太字」と理解するのは間違いのようです。単に太字にしたいのならfont-weightを使用すべきだそう。</p>
+        </section>
+        <section class="ly-section" id="5">
+            <h2>dfnタグ</h2>
+            <p>definitionの略で、用語の意味を定義する際に使用します。定義用語が何度も出る場合には最初の用語だけdfnタグで囲むのが一般的ですがあまり使用されていません。</p>
+        </section>
+        <section class="ly-section" id="6">
+            <h2>iタグ</h2>
+            <p>iタグを使用すると文字が斜めに表現されますが、イタリック体、斜体、標準フォントを強引に傾斜の３つパターンがあります。指定フォントにイタリック体があればイタリック体、ない場合は斜体、イタリック体も斜体もなければ標準フォントを斜めにして表示されます。日本語フォントの多くは標準フォントを斜めに傾けた表示になります。iタグ使用は非推奨ではないですができるだけスタイルシート<code>{font-style:italic;}</code>で指定しましょう。
+            </p>
+        </section>
+        <section class="ly-section">
+            <h3>参考</h3>
+            <cite class="ly-cite"><a href="https://yoshikawaweb.com/element-em-strong-mark-b-difference.html" target="_blank" rel="noopener noreferrer">吉川ウェブ</a></cite>
+            <cite class="ly-cite"><a href="https://html-coding.co.jp/annex/dictionary/html/i/" target="_blank" rel="noopener noreferrer">クロノドライブのHTML辞典</a></cite>
+            <cite class="ly-cite"><a href="https://seolaboratory.jp/52093/#:~:text=strong%E3%82%BF%E3%82%B0%E3%81%A8%E3%81%AF%E3%80%81%20%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88,%E9%87%8D%E8%A6%81%E6%80%A7%E3%82%92%E7%A4%BA%E3%81%97%E3%81%BE%E3%81%99%E3%80%82" target="_blank" rel="noopener noreferrer">seoラボ</a></cite>
+        </section>
     </article>
 </main>
         <footer class="ly-footer">

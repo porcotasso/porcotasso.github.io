@@ -32,10 +32,10 @@ const htmlhint = require('gulp-htmlhint');
 
 // compile php
 gulp.task('php', () => {
-  return gulp.src(['./php/pages/*.php', './php/pages/**/*.php'])
+  return gulp.src(['index.php', './php/pages/*.php', './php/pages/**/*.php'])
     .pipe(php2html({}))
     .pipe(rename({ extname: '.html' }))
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./pages/'))
 })
 
 gulp.task('html', function() {
