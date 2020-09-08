@@ -216,7 +216,6 @@ for($i = 0; $i < $count; $i++){
 		array_push($tagShopify, $variable);
 	}
 }
-
 // 上のコードを効率化してみたけど、最後の$tagArray[$n]が各タグの変数として認識せず各タグにどのページが入っているかを追加できない
 // $tagArray = array($tagHtml, $tagCss, $tagParts, $tagJs, $tagPhp, $tagEnvironment, $tagSvg);
 // $tagWord = array("html", "css", "parts", "js", "php", "environment", "svg");

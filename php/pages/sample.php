@@ -26,7 +26,7 @@
 			<p></p>
 			<h3></h3>
 <pre class="prettyprint">
-aaaaaaa
+aaaaa
 </pre>
 <cite class="ly-cite"><a href="0" <?php echo $targetBlank ?>>aaaaaaaaaa</a></cite>
 		</section>
