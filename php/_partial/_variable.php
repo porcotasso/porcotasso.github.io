@@ -139,6 +139,13 @@ $touchEvent = array(
 	"lead" => "touch-event",
 	"html" => "touch-event.html"
 );
+$jsMarker = array(
+	"file" => "/php/pages/js-marker.php",
+	"tag" => array("js"),
+	"title" => "js-marker",
+	"lead" => "スクロールしたら重要なテキストに黄色いマーカーをひくjavascriptです",
+	"html" => "js-marker.html"
+);
 //php
 $phpMemo = array(
 	"file" => "/php/pages/php-memo.php",
@@ -184,7 +191,7 @@ $allPages = array(
 	$contentsModel, $semanticTags, $aboutTags, 
 	$categorizedCSS, $namingRule, 
 	$button, $breakWord, $elementEmStrongMarkB, $favicon, $hamburgerMenu, $headerSmaller,
-	$javascriptMemo, $eventHandler, $eventPropagation, $scrollJunk, $touchEvent, $dayJs, $jsDate,
+	$javascriptMemo, $eventHandler, $eventPropagation, $scrollJunk, $touchEvent, $dayJs, $jsDate, $jsMarker,
 	$phpMemo,$phpFilemtime,
 	$gulpfile,
 	$svg,

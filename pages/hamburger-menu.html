@@ -318,6 +318,11 @@
                                 <div class="">js-date</div>
                             </a>
                         </li>
+                                                <li class="headerMenu_subList">
+                            <a href="/pages/js-marker.html" class="">
+                                <div class="">js-marker</div>
+                            </a>
+                        </li>
                                             </ul>
                 </li>
                                 <li class="headerMenu_list">php</li>
@@ -378,7 +383,7 @@
     <article class="articleCnt">
         <header>
             <h1>hamburger-menu</h1>
-							<p class="el-updateDate">2020.09.09 updated</p>
+							<p class="el-updateDate">2020.09.10 updated</p>
 			            <p>hamburger-menuを作る際に必要な要素がいくつかあるので、分解して説明します。</p>          
             
             <nav class="ly-mainNav">
@@ -588,7 +593,8 @@ function handleTouchMove(e) {
 </pre>
 
 			<h3>現状</h3>
-			<p>bodyにpreventDefault()をつけるとメニューもスクロールがとまってしまい、また背景（mainなど）につけると、そもそもイベントが反応しないので、とりあえずpreventDefault()ははずしておく。style.overflow = 'hidden';でandoroid の対応だけしておく。</p>
+			<p>bodyにpreventDefault()をつけるとメニューもスクロールがとまってしまい、また背景（mainなど）につけると、そもそもイベントが反応しないので、とりあえずpreventDefault()ははずしておく。style.overflow = 'hidden';でandoroid の対応だけしておく。と、していたが、メニューを隠したあとで背景が止まる挙動がある。ただ、再現パターンの特定が難しい。同じ動作で起きるときと起きない時がある。予想では、メニューを隠す方法が、黒背景クリックと、ハンバーガークリックに二つあるのが.style.overflow = 'hiddenのトグルが効かないことがあるのでは。なのでandroid用の背景のスクロールを止める.style.overflow = 'hiddenも削除。あと黒背景の色の透明度を下げて、背景の動きをみせない。実操作では問題なさそう。ただ課題が残ってることを忘れないために0.9で、ちらっと見える状態にしておく。</p>
+			<p></p>
 			<p>今後の対応としては、psition:fixed;を使うか、背景を見せないか、overscroll-behavior: containがiOSで使えるようになるのを待つか、スクロール時にヘッダーメニューをそもそも見せないか、どれか。</p>
 		</section>
 

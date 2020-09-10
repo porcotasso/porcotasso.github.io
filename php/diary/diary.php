@@ -43,6 +43,9 @@
                 <li>-CSSカテゴライズまとめ、break-wordなどテキスト、svgまとめ</li>
             </ul>
             <h2><time>2020年</time></h2>
+
+            <time class="dairyTime" datetime="2020-09-10">9月10日</time>
+            <p>スクロールしたら重要なテキストに黄色いマーカーをひくjavascript</p>
             <time class="dairyTime" datetime="2020-09-08">9月8日</time>
             <p>php filemtimeでファイルのupdated日を取得。</p>
             <time class="dairyTime" datetime="2020-09-07">9月7日</time>
@@ -101,5 +104,6 @@
             <p>脱jQueryをする。ヘッダーのsmallerのコードを変更。</p>
         </section>
     </article>
+    
 </main>
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-foot.php"); ?>

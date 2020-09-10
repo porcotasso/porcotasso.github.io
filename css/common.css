@@ -441,7 +441,7 @@ body {
   left: 0;
   width: 0;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(20, 20, 40, 0.9);
   opacity: 0; }
 
 @-webkit-keyframes cover-show {
@@ -583,6 +583,13 @@ body {
   padding: 1px 10px;
   border: 1px solid #222;
   font-weight: normal; }
+
+.el-marker {
+  background: linear-gradient(to right, #fded06 50%, transparent 50%) 100% 0%/200% auto no-repeat;
+  transition: background-position .8s ease-out; }
+
+.el-marker.show {
+  background-position: 0% 0%; }
 
 html, body {
   scroll-padding-top: 80px; }

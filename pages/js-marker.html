@@ -14,7 +14,7 @@
       
     <!-- google font Pacifico for title -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-                            <title>header-smaller</title>
+                            <title>js-marker</title>
             
 </head>
 <body>
@@ -382,71 +382,59 @@
     <div class="el-blackCover" id="js-blackCover"></div><main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
-            <h1>header-smaller</h1>
-							<p class="el-updateDate">2020.09.08 updated</p>
-			            <p>画面をスクロールした時に高さを変えるjavascriptについての説明です。</p>  
+            <h1>js-marker</h1>
+							<p class="el-updateDate">2020.09.10 updated</p>
+			            <p>スクロールしたら重要なテキストに黄色いマーカーをひくjavascriptです</p>  
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                                 <ol>
                                         <li>
                         <a href="#0" class="">
-                            <div class="">javascript</div>
+                            <div class="">黄色いマーカー</div>
                         </a>
                     </li>
                                     </ol>
             </nav>
         </header>
         <section class="ly-section" id="0">
-            <h2>javascript</h2>
-
+            <h2>黄色いマーカー</h2>
+			<p>スクロールしたタイミングで黄色いマーカーを引く<span class="el-marker">javascript</span>です。</p>
 <pre class="prettyprint">
-<header class="js-headerSmaller"> 
+マーカーを引きたいとこに<span class="el-marker">クラス</span>をつける
 
-function headerSmaller() {
-	var px_change = 80;
-	let headerSmaller = document.getElementsByClassName('js-headerSmaller');
-	window.addEventListener('scroll', () => {
-    var y = document.documentElement.scrollTop || document.body.scrollTop;
-		if ( y > px_change) {
-			headerSmaller[0].classList.add('smaller');
-		} else if (headerSmaller[0].classList.contains('smaller')) {
-			headerSmaller[0].classList.remove('smaller');
-		}
-	});
+var saClass = 'el-marker';
+var saShowClass = 'show';
+var triggerMarginDefault = 200;
+ 
+var saElm = document.querySelectorAll('.' + saClass); //.showがついたelement のオブジェクト
+var saFunc = function() {
+  var dataMargin = saClass + '_margin'; //sa_magin
+  var dataTrigger = saClass + '_trigger'; //sa_trigger
+  var dataDelay = saClass + '_delay'; //sa_delay
+  for(var i = 0; i < saElm.length; i++) {  //
+    var triggerMargin = triggerMarginDefault;　//200
+    var elm = saElm[i];//各saElm
+    var showPos = 0; //変数作成
+    if(elm.dataset[dataMargin] != null) {
+      triggerMargin = parseInt(elm.dataset[dataMargin]);　//文字列を整数に変換
+    }
+    if(elm.dataset[dataTrigger]) {
+      showPos = document.querySelector(elm.dataset[dataTrigger]).getBoundingClientRect().top + triggerMargin; //全体の矩形を取得　上から200px
+    } else {
+      showPos = elm.getBoundingClientRect().top + triggerMargin;
+    }
+    if (window.innerHeight > showPos) { //windowのviewportの高さが格納
+      var delay = (elm.dataset[dataDelay])? elm.dataset[dataDelay] : 0;
+      setTimeout(function(index) {
+        saElm[index].classList.add('show');
+      }.bind(null, i), delay);
+    }
+  }
 }
-window.onload = headerSmaller();
+window.addEventListener('load', saFunc);
+window.addEventListener('scroll', saFunc);
 </pre>
-
-<p>上部から80pxの位置を超えたときに、ヘッダーの高さが変わるようにします。ハンバーガーメニューのためにidを使っているのでクラスで要素を取得しています。</p>
-<h3>コードの流れ</h3>
-<p>windowオブジェクトでscrollイベントが発生を取得</p>
-<pre class="prettyprint">
-window.addEventListener('scroll', () => {}
-</pre>
-<p>Element.scrollTop プロパティで、要素の内容が垂直にスクロールするピクセル数を取得</p>
-<pre class="prettyprint">
-var y = document.documentElement.scrollTop || document.body.scrollTop;
-</pre>
-<p>垂直にスクロールするピクセル数がpx_change変数を超えた時はsmallerクラスを追加し、超えてなくてsmallerクラスがついている時はクラスをはずします。</p>
-<pre class="prettyprint">
-if ( y > px_change) {
-    headerSmaller[0].classList.add('smaller');
-} else if (headerSmaller[0].classList.contains('smaller')) {
-    headerSmaller[0].classList.remove('smaller');
-}
-</pre>
-<p>windowオブジェクトが読み込まれたタイミングでheaderSmallerを作動させます</p>
-<pre class="prettyprint">
-window.onload = headerSmaller();
-</pre>
-
-<p>onloadはページや画像などを読み込んでから処理を実行するときに利用するイベントハンドラーです。データを読み込んでから処理を実行したいときなどに使用します。複数の「onloadイベント」書いてしまうと上書きされてしまい最後に書いたイベントだけが実行されます。その場合はaddEventListenerを使います。</p>
-<pre class="prettyprint">
-window.addEventListener('load', function() {
-    console.log('hello');
-})
-</pre>
-<p>ちなみにgetElementsByClassName()が返すのは、HTMLCollectionであってElementではないので、[番号]でどの要素を選ぶのか指定が必要です。</p>
+<cite class="ly-cite"><a href="http://noze.space/archives/415" target="_blank" rel="noopener noreferrer">スクロールしたらフワッと要素を表示させるスクリプトの使い勝手を良くしてみる</a></cite>
 		</section>
     </article>
 </main>

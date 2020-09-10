@@ -116,3 +116,12 @@
     font-weight: normal;
   }
 }
+
+// marker design
+.el-marker {
+  background: linear-gradient(to right, #fded06 50%, transparent 50%) 100% 0% / 200% auto no-repeat;
+  transition: background-position .8s ease-out;
+}
+.el-marker.show {
+  background-position: 0% 0%;
+}
