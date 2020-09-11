@@ -23,7 +23,8 @@
         </header>
         <section class="ly-section" id="0">
             <h2><?php echo $navList[0]; ?></h2>
-			<p>スクロールしたタイミングで黄色いマーカーを引く<span class="el-marker">javascript</span>です。</p>
+			<p>スクロールしたタイミングで<span class="el-marker">黄色いマーカー</span>を引くjavascriptです。</p>
+ 
 <pre class="prettyprint">
 マーカーを引きたいとこに<span class="el-marker">クラス</span>をつける
 
@@ -59,6 +60,15 @@ var saFunc = function() {
 window.addEventListener('load', saFunc);
 window.addEventListener('scroll', saFunc);
 </pre>
+
+<pre class="prettyprint">
+window.innerHeight
+</pre>
+<p>今のブラウザの表示されている高さ。PCで高さを変えると数値が変わる。</p>
+
+.getBoundingClientRect().top
+<p>ブラウザの表示の中で、その要素の上からの高さ。要素が一番上までいくと0になる。</p>
+
 <cite class="ly-cite"><a href="http://noze.space/archives/415" <?php echo $targetBlank ?>>スクロールしたらフワッと要素を表示させるスクリプトの使い勝手を良くしてみる</a></cite>
 		</section>
     </article>

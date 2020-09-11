@@ -383,7 +383,7 @@
     <article class="articleCnt">
         <header>
             <h1>js-marker</h1>
-							<p class="el-updateDate">2020.09.10 updated</p>
+							<p class="el-updateDate">2020.09.11 updated</p>
 			            <p>スクロールしたら重要なテキストに黄色いマーカーをひくjavascriptです</p>  
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
@@ -398,7 +398,8 @@
         </header>
         <section class="ly-section" id="0">
             <h2>黄色いマーカー</h2>
-			<p>スクロールしたタイミングで黄色いマーカーを引く<span class="el-marker">javascript</span>です。</p>
+			<p>スクロールしたタイミングで<span class="el-marker">黄色いマーカー</span>を引くjavascriptです。</p>
+ 
 <pre class="prettyprint">
 マーカーを引きたいとこに<span class="el-marker">クラス</span>をつける
 
@@ -434,6 +435,15 @@ var saFunc = function() {
 window.addEventListener('load', saFunc);
 window.addEventListener('scroll', saFunc);
 </pre>
+
+<pre class="prettyprint">
+window.innerHeight
+</pre>
+<p>今のブラウザの表示されている高さ。PCで高さを変えると数値が変わる。</p>
+
+.getBoundingClientRect().top
+<p>ブラウザの表示の中で、その要素の上からの高さ。要素が一番上までいくと0になる。</p>
+
 <cite class="ly-cite"><a href="http://noze.space/archives/415" target="_blank" rel="noopener noreferrer">スクロールしたらフワッと要素を表示させるスクリプトの使い勝手を良くしてみる</a></cite>
 		</section>
     </article>
@@ -441,7 +451,7 @@ window.addEventListener('scroll', saFunc);
         <footer class="ly-footer">
             <p class="el-copyright">&copy; 2019-2020 porco tasso</p>
         </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
         <script src="/js/common.js"></script>
         
     </body>

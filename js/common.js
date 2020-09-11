@@ -128,9 +128,9 @@ var triggerMarginDefault = 200;
  
 var saElm = document.querySelectorAll('.' + saClass); //.showがついたelement のオブジェクト
 var saFunc = function() {
-  var dataMargin = saClass + '_margin'; //sa_magin
-  var dataTrigger = saClass + '_trigger'; //sa_trigger
-  var dataDelay = saClass + '_delay'; //sa_delay
+  var dataMargin = saClass + '_margin'; //el-marker_margin
+  var dataTrigger = saClass + '_trigger'; //el-marker_trigger
+  var dataDelay = saClass + '_delay'; //el-marker_delay
   for(var i = 0; i < saElm.length; i++) {  //
     var triggerMargin = triggerMarginDefault;　//200
     var elm = saElm[i];//各saElm
@@ -139,11 +139,11 @@ var saFunc = function() {
       triggerMargin = parseInt(elm.dataset[dataMargin]);　//文字列を整数に変換
     }
     if(elm.dataset[dataTrigger]) {
-      showPos = document.querySelector(elm.dataset[dataTrigger]).getBoundingClientRect().top + triggerMargin; //全体の矩形を取得　上から200px
+      showPos = document.querySelector(elm.dataset[dataTrigger]).getBoundingClientRect().top + triggerMargin; //指定の要素の上からの高さ＋200px
     } else {
       showPos = elm.getBoundingClientRect().top + triggerMargin;
     }
-    if (window.innerHeight > showPos) { //windowのviewportの高さが格納
+    if (window.innerHeight > showPos) { //windowのviewportの高さが、指定の要素のviewportの上からの高さ＋200pxを超えたらー＞要素が下から200pxより上に行ったら
       var delay = (elm.dataset[dataDelay])? elm.dataset[dataDelay] : 0;
       setTimeout(function(index) {
         saElm[index].classList.add('show');
