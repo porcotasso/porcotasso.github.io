@@ -383,7 +383,7 @@
     <article class="articleCnt">
         <header>
             <h1>js-marker</h1>
-							<p class="el-updateDate">2020.09.11 updated</p>
+							<p class="el-updateDate">2020.09.13 updated</p>
 			            <p>スクロールしたら重要なテキストに黄色いマーカーをひくjavascriptです</p>  
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
@@ -403,11 +403,17 @@
 <pre class="prettyprint">
 マーカーを引きたいとこに<span class="el-marker">クラス</span>をつける
 
-var saClass = 'el-marker';
+//指定のクラスの要素の変数をつくり、その複数要素をNodeLIst(saElm)として取得。saElmをループでまわし、各要素をelmに代入。
+//NodeLIstから要素のdataset[dataMargin]をtriggerMarginとして数値で取得。
+//要素の上からの位置に200px足し、それが現在のブラウザの高さより少なくなったら、showクラスを追加。
+//setTimeout,  
+//.bind
+
+var saClass = 'el-marker'; 
 var saShowClass = 'show';
 var triggerMarginDefault = 200;
  
-var saElm = document.querySelectorAll('.' + saClass); //.showがついたelement のオブジェクト
+var saElm = document.querySelectorAll('.' + saClass); //.saClassの要素をNodelistとして取得
 var saFunc = function() {
   var dataMargin = saClass + '_margin'; //sa_magin
   var dataTrigger = saClass + '_trigger'; //sa_trigger
@@ -420,7 +426,7 @@ var saFunc = function() {
       triggerMargin = parseInt(elm.dataset[dataMargin]);　//文字列を整数に変換
     }
     if(elm.dataset[dataTrigger]) {
-      showPos = document.querySelector(elm.dataset[dataTrigger]).getBoundingClientRect().top + triggerMargin; //全体の矩形を取得　上から200px
+      showPos = document.querySelector(elm.dataset[dataTrigger]).getBoundingClientRect().top + triggerMargin; 
     } else {
       showPos = elm.getBoundingClientRect().top + triggerMargin;
     }
@@ -436,18 +442,95 @@ window.addEventListener('load', saFunc);
 window.addEventListener('scroll', saFunc);
 </pre>
 
+<h3>querySelector()</h3>
+<p>「querySelector()」を使うとid属性値・class属性値などを意識せずにjQuery感覚でHTML要素をセレクタ指定することができます。簡単に言うと「querySelector()」だけであらゆるHTML要素を取得することができる。最初に合致したHTML要素を取得した時点でプログラムは終了するので複数の要素を取得するには自作のループ処理を作成するか、「querySelectorAll()」を使う</p>
 <pre class="prettyprint">
-window.innerHeight
+const elm = document.querySelector('.elem');
 </pre>
-<p>今のブラウザの表示されている高さ。PCで高さを変えると数値が変わる。</p>
 
-.getBoundingClientRect().top
+
+<h3>querySelectorAll()</h3>
+<p>querySelectorAll()で取得した要素はNodeListと言って、配列によく似たデータ構造が格納されています。そこで、配列を効率よく繰り返し処理できる「forEach」を使って各要素を1つずつ処理</p>
+<p>NodeList:配列とは異なります。メソッドとしてforEach()をもっているので反復処理が可能</p>
+<p>HTMLCollection:NodeListと同様、やはり配列風オブジェクトですが、加えて名前（ id や name ）によるアクセスも可能。</p>
+<pre class="prettyprint">
+const elm = document.querySelectorAll('.element');
+elm.forEach(function(value) {
+    console.log(value);
+})
+</pre>
+
+
+<h3>screen.height, screen.width</h3>
+<p>モニタサイズ(解像度)</p>
+<p>screen.height: <span id="screenHeightElm"></span></p>
+<p>screen.width: <span id="screenWidthElm"></span></p>
+<pre class="prettyprint">
+document.getElementById('screenHeightElm').textContent = screen.height;
+document.getElementById('screenWidthElm').textContent = screen.width;
+</pre>
+
+
+<h3>screen.availHeight, screen.availWidth</h3>
+<p>タスクバーなどを除くモニタ有効域の高さ</p>
+<p>screen.availheight: <span id="screenAvailHeightElm"></span></p>
+<p>screen.availwidth: <span id="screenAvailWidthElm"></span></p>
+<pre class="prettyprint">
+document.getElementById('screenAvailHeightElm').textContent = screen.availHeight;
+document.getElementById('screenAvailWidthElm').textContent = screen.availWidth;
+</pre>
+
+
+<h3>window.innerHeight, window.innerWidth</h3>
+<p>ブラウザ内の表示域(スクロールバーを含む)。今、表示されているブラウザの幅。PCでブラウザの幅を変えると数値が変わる。</p>
+<p>window.innerHeight: <span id="windowInnerHeightElm"></span></p>
+<p>window.innerWidth: <span id="windowInnerWidthElm"></span></p>
+<pre class="prettyprint">
+document.getElementById('windowInnerHeightElm').textContent = window.innerHeight;
+document.getElementById('windowInnerWidthElm').textContent = window.innerWidth;
+</pre>
+
+
+<h3>window.outerHeight, window.outerWidth</h3>
+<p>ブラウザ表示域(ブラウザ全体の外周)</p>
+<p>window.outerHeight: <span id="windowOuterHeightElm"></span></p>
+<p>window.outerWidth: <span id="windowOuterWidthElm"></span></p>
+<pre class="prettyprint">
+document.getElementById('windowOuterHeightElm').textContent = window.outerHeight;
+document.getElementById('windowOuterWidthElm').textContent = window.outerWidth;
+</pre>
+
+<h3>.getBoundingClientRect()</h3>
 <p>ブラウザの表示の中で、その要素の上からの高さ。要素が一番上までいくと0になる。</p>
+<p>.getBoundingClientRect().top: <span id="getBoundingClientRectTopElm"></span></p>
+<p>.getBoundingClientRect().left: <span id="getBoundingClientRectLeftElm"></span></p>
+<pre class="prettyprint">
+document.getElementById('getBoundingClientRectTopElm').textContent = document.getElementById('getBoundingClientRectTopElm').getBoundingClientRect().top;
+document.getElementById('getBoundingClientRectLeftElm').textContent = document.getElementById('getBoundingClientRectLeftElm').getBoundingClientRect().left;
+</pre>
 
-<cite class="ly-cite"><a href="http://noze.space/archives/415" target="_blank" rel="noopener noreferrer">スクロールしたらフワッと要素を表示させるスクリプトの使い勝手を良くしてみる</a></cite>
+
+
+
+
+<cite class="ly-cite"><a href="https://murashun.jp/blog/20191110-33.html" target="_blank" rel="noopener noreferrer">ウィンドウのサイズを調べる</a></cite>
+<cite class="ly-cite"><a href="https://web-designer.cman.jp/javascript_ref/window/size/" target="_blank" rel="noopener noreferrer">JavaScriptでウインドウサイズを取得</a></cite>
 		</section>
     </article>
 </main>
+<script>
+document.getElementById('screenHeightElm').textContent = screen.height;
+document.getElementById('screenWidthElm').textContent = screen.width;
+document.getElementById('screenAvailHeightElm').textContent = screen.availHeight;
+document.getElementById('screenAvailWidthElm').textContent = screen.availWidth;
+document.getElementById('windowInnerHeightElm').textContent = window.innerHeight;
+document.getElementById('windowInnerWidthElm').textContent = window.innerWidth;
+document.getElementById('windowOuterHeightElm').textContent = window.outerHeight;
+document.getElementById('windowOuterWidthElm').textContent = window.outerWidth;
+document.getElementById('getBoundingClientRectTopElm').textContent = document.getElementById('getBoundingClientRectTopElm').getBoundingClientRect().top;
+document.getElementById('getBoundingClientRectLeftElm').textContent = document.getElementById('getBoundingClientRectLeftElm').getBoundingClientRect().left;
+
+</script>
         <footer class="ly-footer">
             <p class="el-copyright">&copy; 2019-2020 porco tasso</p>
         </footer>
