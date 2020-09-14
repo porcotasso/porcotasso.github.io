@@ -14,9 +14,7 @@
       
     <!-- google font Pacifico for title -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-                            <title><br />
-<b>Notice</b>:  Undefined variable: title in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php</b> on line <b>32</b><br />
-</title>
+                            <title>nodelist</title>
             
 </head>
 <body>
@@ -389,75 +387,293 @@
     <div class="el-blackCover" id="js-blackCover"></div><main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
-            <h1><br />
-<b>Notice</b>:  Undefined variable: title in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/pages/js-scroll.php</b> on line <b>5</b><br />
-</h1>
-			<br />
-<b>Notice</b>:  Undefined variable: filename in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/pages/js-scroll.php</b> on line <b>6</b><br />
-            <p><br />
-<b>Notice</b>:  Undefined variable: lead in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/pages/js-scroll.php</b> on line <b>9</b><br />
-</p>  
+            <h1>nodelist</h1>
+							<p class="el-updateDate">2020.09.15 updated</p>
+			            <p>ノードリストにはliveとstaticがあります</p>  
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                                 <ol>
                                         <li>
                         <a href="#0" class="">
-                            <div class="">scroll</div>
+                            <div class="">Nodeとは</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#1" class="">
+                            <div class="">主なノードの種類</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#2" class="">
+                            <div class="">属性ノード</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#3" class="">
+                            <div class="">HTMLコレクション</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#4" class="">
+                            <div class="">Nodelist</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#5" class="">
+                            <div class="">要素の探し方</div>
                         </a>
                     </li>
                                     </ol>
             </nav>
         </header>
         <section class="ly-section" id="0">
-            <h2>scroll</h2>
-            <p></p>
+            <h2>Nodeとは</h2>
+            <p>DOMでは文書を木構造(tree)としてとらえ、枝分かれの部分や枝の先端をノード(node)と呼びます。タグやその中の属性、テキストがそれぞれノードになります。ノードとは各要素(HTMLではエレメントやタグという)自体のことを表す。特定のノードを基準としたときに、その上にあるノードを「親:parent」ノードと表現し、その下にあるノードを「子:childまたはchildren」ノードと表現する。また同一階層にあるノードのことを「兄弟姉妹:siblings」ノードと表現する。例えば「そのタグの子ノード全体を取得して、その親ノードから削除する」のような使い方をする。 </p>
+            <h3>DOMとは</h3>
+            <p>Document Object Model の略で、javascriptなどのプログラムからxmlやhtmlで書かれた文書を扱うための仕組みの標準。xml,html同様W3C(World Wide Web Consortium ダブリュースリーシー)が標準の策定をしています。DOMは「WEBページとプログラミング言語を繋ぐ役割を持つ」</p>
+        </section>
+        <section class="ly-section" id="1">
+            <h2>主なノードの種類</h2>
+<table>
+<thead>
+<tr>
+<th>ノードの種類</th>
+<th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ドキュメントノード</td>
+<td>ドキュメント全体を表すDocumentオブジェクト</td>
+</tr>
+<tr>
+<td>要素ノード</td>
+<td>要素を表すオブジェクト</td>
+</tr>
+<tr>
+<td>テキストノード</td>
+<td>テキストを表すオブジェクト</td>
+</tr>
+<tr>
+<td>コメントノード</td>
+<td>コメントを表すオブジェクト</td>
+</tr>
+<tr>
+<td>属性ノード</td>
+<td>属性を表すオブジェクト</td>
+</tr>
+</tbody>
+</table>
+
+
+            <p>例えば以下のようなリストではulタグやliタグがエレメントノードになります。ulタグの中に3つのliタグがありますからulで枝分かれしていると見るわけです。liタグの中の「りんご」「みかん」といった文字列はテキストノードといいます。</p>
 <pre class="prettyprint">
-
-
+<ul>
+<li>りんご</li>
+<li>みかん</li>
+<li>バナナ</li>
+</ul>
 </pre>
-		
-
-<p>
-scrollTop
-JavaScriptの、ElementオブジェクトのscrollTopは、要素内の垂直方向のスクロール量を取得、変更するプロパティです。
-
-.offsetHeight
-垂直方向のパディングとボーダーを含む要素の高さをピクセル数で表す、読み取り専用のプロパティです。
-一般的に要素のoffsetHeightは、 要素のボーダー、要素の垂直方向のパディング、要素の水平スクロールバー(もし、描画されていれば)と要素のCSSのheightを含めて計測されます。
+          </sction>
+          <section class="ly-section" id="2">
+            <h2>属性ノード</h2>
 
 
-scrollHeight
-JavaScriptの、ElementオブジェクトのscrollHeightはスクロール分を含めた全体の高さを取得するプロパティです。scrollHeightプロパティはスクロール分を含めた全体の高さです。スクロールバーがあるかないかで計算方法が変わります。スクロールバーが表示されていない場合、heightとpaddingとborderの合計で、marginを含まない値となります。さて、scrollHeightの特徴はここからです。要素がスクロール可能な状態になっている時、考え方が全く変わってきます。例えば上記のように青い枠線を持った要素のscrollHeightを考えてみましょう。この青い要素は自身よりも大きいサイズの画像を内包していて、スクロール表示させています。
-この時、scrollHeightの起点はborderの左上ではなく、paddingの左上となります。そして、スクロールできる分の高さがscrollHeightの数値となるのです。もう1つ例を見ておきます。内包するコンテンツが小さく、スクロールをする必要がなくても、スクロールバーが表示されている状態の場合、scrollHeightの起点はpaddingの左上となり、そして、スクロールバーを含めない、paddingとheightの合計がscrollHeightの値となります。
+<h3>属性ノード</h3>
+<p>属性は Attribute の訳語です。
+属性とはタグ内に「属性名="値"」という形で書かれるものです。src="images/hoge.png" では、src が属性名で images/hoge.png が値です。属性ノードには src の他に class, id, title, href, alt, for, colspan, rowspan, type などたくさんあります。</p>
+<h3>属性ノードの値の変更</h3>
+<p>属性ノードの値の変更には2つの方法があります。</p>
+<p>属性名="値" を使う方法</p>
+<pre class="prettyprint">
+<img src="image/motogazou.png" alt="" id="n1" />
+document.getElementById("n1").src = "images/example.png";
+</pre>
 
-さて、ChromeやSafariと、Firefoxで取得できるscrollHeightの値が違うことがあります。これの原因は、paddingとスクロールバーの関係です。まずはFirefoxの例を見て下さい。下部にスクロールバーがある時、padding-bottomの幅が削られてしまいます。一方、Chromeの例を見て下さい。下部にスクロールバーがある時、padding-bottomの幅は削られません。Safariも同様です。この削られるか、削られないかの分の幅が、scrollHeightで取得できる値のズレとなって表れます。ブラウザ間で異なる値になる可能性が高いscrollHeightは、プログラムに組み込みにくいということが言えますね。</p>
+<p> setAttribute("属性名","値") を使う方法</p>
+<pre class="prettyprint">
+<img src="image/motogazou.png" alt="" id="n1" />
+document.getElementById("n1").setAttribute("src","images/example.png");
+</pre>
 
-scrollToメソッドとscrollByメソッドは、指定した位置にスクロールして移動することができるメソッドです。例えばclickイベントと組み合わせて、クリックしたら指定した位置にスクロールさせる、ということができるわけですね。
+<p>classだけは、classがプログラムで別の意味を持つためclassNameにしなければなりません。</p>
+<pre class="prettyprint">
+document.getElementById("n1").setAttribute("class","mushi");
+document.getElementById("n1").className = "mushi";
+</pre>
 
-絶対位置を指定してスクロール/scrollTo
-scrollToメソッドでは、絶対位置を指定してスクロールをさせることができます。絶対位置とは、全体に対してどの位置なのか、という指定の方法です。scrollToメソッドは第一引数にx座標、第二引数にy座標のスクロール量を指定します。このスクロール量は、ピクセル単位で指定します。次のプログラムで確認してみましょう。
-scrollTo(100, 200);プログラムを実行すると、右に100px、下に200px画面がスクロールします。
+<h3>属性ノードの値の読み取り</h3>
+<pre class="prettyprint">
+document.getElementById("area01").getAttribute("src");
+</pre>
 
-相対位置で指定してスクロール/scrollBy
-scrollByを使う場合は、相対位置で指定してスクロールさせることができます。相対位置とは現在のスクロール位置を基準として、そこからどれだけの量をスクロールするのか指定することです
-scrollBy(100, 200);
-このプログラムを実行すると、現在の画面位置から右に100px、下に200px画面がスクロールします。最初の位置が右に50px、下に100px動いた位置だとすると、最終的な位置は右から150px、下に300px動いた位置になるということですね。
+<h3>属性ノードの設定</h3>
+<pre class="prettyprint">
+element.setAttribute('属性名', '属性値');
+</pre>
+
+<h3>属性があるかないか</h3>
+<pre class="prettyprint">
+element.hasAttribute('属性名');
+</pre>
+
+<h3>属性の削除</h3>
+<pre class="prettyprint">
+element.removeAttribute('属性名');
+</pre>
+
+<h3>要素ノードを取り出すためのプロパティ</h3>
+<table>
+<thead>
+<tr>
+<th>プロパティ名</th>
+<th>概要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>parentElement</td>
+<td>親要素ノードへの参照。（親要素ノードがない場合はnull）</td>
+</tr>
+<tr>
+<td>children</td>
+<td>子要素ノードへの参照を格納するHTMLCollection</td>
+</tr>
+<tr>
+<td>firstElementChild</td>
+<td>最初の子要素ノード。（子要素ノードがない場合はnull）</td>
+</tr>
+<tr>
+<td>lastElementChild</td>
+<td>最後の子要素ノード。（子要素ノードがない場合はnull）</td>
+</tr>
+<tr>
+<td>nextElementSibling</td>
+<td>兄弟要素ノードの中で次の要素ノード。（次の兄弟要素ノードをもたない場合はnull）</td>
+</tr>
+<tr>
+<td>previousElementSibling</td>
+<td>兄弟要素ノードの中で1つ前の要素ノード。（前の兄弟要素ノードをもたない場合はnull）</td>
+</tr>
+<tr>
+<td>childElementCount</td>
+<td>子要素ノードの数。（= children.length）</td>
+</tr>
+</tbody>
+</table>
+
+<h3>子ノードを取得して、操作する</h3>
+<pre class="prettyprint">
+var nodeList = elementNodeReference.childNodes;
+</pre>
+<h3>親ノードを取得して、操作する</h3>
+<pre class="prettyprint">
+var parentNode = elementNodeReference.parentNode
+</pre>
+          </sction>
+          <section class="ly-section" id="3">
+            <h2>HTMLコレクション</h2>
+
+            <p>DOMを取得するにあたって、複数のものを習得した場合の戻り値の１つがHTMLCollectionです。HTMLCollectionでは「id」と「name」から要素の抽出が可能です。</p>
+            <p>戻すメソッド:document.getElementsByTagName()
+            document.getElementsByClassName()</p>
+            <p>使えるメソッド  HTMLCollection.item()
+            HTMLCollection.namedItem()</p>
+            <h3>NodeList</h3>
+            <p>戻すメソッド: document.getElementsByName(), document.querySelectorAll()</p>
+            <p>使えるメソッド: NodeList.item()
+            NodeList.entries()
+            NodeList.forEach()
+            NodeList.keys()
+            NodeList.values()</p>
+          </sction>
+          <section class="ly-section" id="4">
+            <h2>Nodelist</h2>
 
 
-TOPへ戻るボタン
-最近は縦長のサイトも増えてきて、ページのTOPに戻るボタンの有る無しは結構重要ですよね。そんなページトップへ戻るボタンは、下記のように書くことで実装可能です。
-<div class="btn" onclick="scrollToTop()"></div>
-<br>
+			<p>javascriptでDOM要素をとる方法には、getElementシリーズと、querySelector系とがあります。getElementsByの方がquerySelectorAllよりも速い。しかしセレクタ指定ができない。</p>
+      <p>違い2つ。<br>
+      静的に取得するか動的に取得するか、と速度
+      </p>
+      <h3>動的なNodeList</h3>
+      <p>ページを表現するDOMにリアルタイムに接続したオブジェクト。このオブジェクトを経由して行われた変更はほかのすべての動的なNodeListにも反映されることになる。つまり、単一のDOMへのリンクになっている。getElementsByClassName, getElementsByTagNames で返ってくるNodeListはLive NodeListなので、取得した後に追加したDOMも反映されます。</p>
+      <h3>静的なNodeList</h3>
+      <p>動的ではないNodeList。生成した段階のDOMがコピーされるもので、このNodeList経由でデータを変更しても、ほかのNodeListには影響を与えない。まったく独立している。
+静的なNoteListが、生成した段階のROMをごっそり別のものとしてディープコピーします。
+querySelectorAll, jQueryで取得したNodeListはStatic NodeListなので、取得した瞬間にdocument上にあるDOMを取得し、更新はされません。
+</p>
+<h3>ディープコピー(deep copy)</h3>はなく、オブジェクトとメモリ上のデータの両方をコピーします。コピー元のプロパティを変更しても、コピー先のプロパティは変更されません。例えば、変更前後の値を比較する際に、ディープコピーが使われる。</p>
+              <p>ディープコピーとは、オブジェクトのみのコピーで
+              <h3>シャローコピー(shallow copy)</h3>
+<p>シャローコピーはざっくり言うと参照元のオブジェクトとコピー先のオブジェクトどちらも同じメモリを参照していることをいいます。</p>
+<h3>ちがい</h3>
+<p>実装的にみてディープコピーはシャローコピーよりもコストのかかる処理となる。実装を工夫することで改善は可能だろうが、本質的に静的なNodeListを生成するquerySelectorAll()はgetElementsByTagName()よりも処理時間がかかることになる。</p>
+<h3>使い分け</h3>
+<ul>
+  <li>要素のリストがほしいだけなら高速に動作するgetElementsByTagName()を使う。</li>
+  <li>複雑なCSSクエリを発行する必要がある場合にはquerySelectorAll()を使う。</li>
+  <li>その時点での要素のスナップショットがほしいならquerySelectorAll()を使う。</li>
+</ul>
 
-function scrollToTop() {
-  scrollTo(0, 0);
- }
+          </sction>
+          <section class="ly-section" id="5">
+            <h2>要素の探し方</h2>
 
+<h3>querySelector()</h3>
+<p>「querySelector()」を使うとid属性値・class属性値などを意識せずにjQuery感覚でHTML要素をセレクタ指定することができます。簡単に言うと「querySelector()」だけであらゆるHTML要素を取得することができる。最初に合致したHTML要素を取得した時点でプログラムは終了するので複数の要素を取得するには自作のループ処理を作成するか、「querySelectorAll()」を使う</p>
+<pre class="prettyprint">
+const elm = document.querySelector('.elem');
+</pre>
 
- https://www.sejuku.net/blog/62930
+<h3>querySelectorAll()</h3>
+<p>querySelectorAll()で取得した要素はNodeListと言って、配列によく似たデータ構造が格納されています。そこで、配列を効率よく繰り返し処理できる「forEach」を使って各要素を1つずつ処理</p>
+<p>NodeList:配列とは異なります。メソッドとしてforEach()をもっているので反復処理が可能</p>
+<p>HTMLCollection:NodeListと同様、やはり配列風オブジェクトですが、加えて名前（ id や name ）によるアクセスも可能。</p>
+<pre class="prettyprint">
+const elm = document.querySelectorAll('.element');
+elm.forEach(function(value) {
+    console.log(value);
+})
+</pre>
+
+<p>idを使ってエレメント(要素)ノードを探します</p>
+<pre class="prettyprint">
+<div id="main">aaaa</div>
+document.getElementById("main");
+</pre>
+<p>クラス名を使ってエレメントノードを探します</p>
+<pre class="prettyprint">
+<div class="main">aaaa</div>
+document.getElementsByClassName('main');
+document.getElementsByClassName('color orange'); // -> [.color.orange]
+</pre>
+
+<p>タグ名を使ってエレメントノードを探します。</p>
+<pre class="prettyprint">
+<h2>aaaa</h2>
+document.getElementsByTagName("h2");
+</pre>
+
+</sction>
+
+<cite class="ly-cite"><a href="https://seiai.ed.jp/sys/text/htm4/chp09/h09a36.html" target="_blank" rel="noopener noreferrer">class属性の変更でスタイルを変える</a></cite>
+<cite class="ly-cite"><a href="https://qiita.com/KDE_SPACE/items/e21bb31dd4d9c162c4a6" target="_blank" rel="noopener noreferrer">ノードの取得／属性の取得・設定</a></cite>
+
 		</section>
     </article>
 </main>
+<script>
+document.getElementById('screenHeightElm').textContent = screen.height;
+document.getElementById('screenWidthElm').textContent = screen.width;
+document.getElementById('screenAvailHeightElm').textContent = screen.availHeight;
+document.getElementById('screenAvailWidthElm').textContent = screen.availWidth;
+document.getElementById('windowInnerHeightElm').textContent = window.innerHeight;
+document.getElementById('windowInnerWidthElm').textContent = window.innerWidth;
+document.getElementById('windowOuterHeightElm').textContent = window.outerHeight;
+document.getElementById('windowOuterWidthElm').textContent = window.outerWidth;
+document.getElementById('getBoundingClientRectTopElm').textContent = document.getElementById('getBoundingClientRectTopElm').getBoundingClientRect().top;
+document.getElementById('getBoundingClientRectLeftElm').textContent = document.getElementById('getBoundingClientRectLeftElm').getBoundingClientRect().left;
+</script>
         <footer class="ly-footer">
             <p class="el-copyright">&copy; 2019-2020 porco tasso</p>
         </footer>

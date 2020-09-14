@@ -8,6 +8,8 @@
         <section class="ly-section">
             <h2>これからやることリスト</h2>
             <ul>
+                <li>クロスサイトスクリプティング（XSS）のセキュリティ対策</li>
+                <li>エンコード</li>
                 <li>スクロールについてまとめる　https://lab.syncer.jp/Web/JavaScript/Snippet/46/</li>
                 <li>scroll スムーズスクロール　内部リンク </li> 
                 <li>scroll したまでいったらコンテンツを読み込む</li> 

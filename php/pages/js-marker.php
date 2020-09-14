@@ -9,7 +9,7 @@
             <p><?php echo $lead ?></p>  
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
-                <?php $navList = array("黄色いマーカー"); ?>
+                <?php $navList = array("黄色いマーカー", "関連コード:サイズと位置を取得"); ?>
                 <ol>
                     <?php for($i = 0; $i < count($navList); $i++){ ?>
                     <li>
@@ -28,63 +28,42 @@
 <pre class="prettyprint">
 マーカーを引きたいとこに<span class="el-marker">クラス</span>をつける
 
-//指定のクラスの要素の変数をつくり、その複数要素をNodeLIst(saElm)として取得。saElmをループでまわし、各要素をelmに代入。
-//NodeLIstから要素のdataset[dataMargin]をtriggerMarginとして数値で取得。
-//要素の上からの位置に200px足し、それが現在のブラウザの高さより少なくなったら、showクラスを追加。
-//setTimeout,  
-//.bind
-
-var saClass = 'el-marker'; 
+var saClass = 'el-marker'; //1.DOM内の指定のクラスの要素の変数をつくり
 var saShowClass = 'show';
 var triggerMarginDefault = 200;
  
-var saElm = document.querySelectorAll('.' + saClass); //.saClassの要素をNodelistとして取得
+var saElm = document.querySelectorAll('.' + saClass); //2. 複数あるsaClassの要素をNodelistとして取得
 var saFunc = function() {
   var dataMargin = saClass + '_margin'; //sa_magin
   var dataTrigger = saClass + '_trigger'; //sa_trigger
   var dataDelay = saClass + '_delay'; //sa_delay
-  for(var i = 0; i < saElm.length; i++) {  //
+  for(var i = 0; i < saElm.length; i++) {  //3. saElmをループでまわし、各要素をelmに代入。
     var triggerMargin = triggerMarginDefault;　//200
     var elm = saElm[i];//各saElm
     var showPos = 0; //変数作成
     if(elm.dataset[dataMargin] != null) {
-      triggerMargin = parseInt(elm.dataset[dataMargin]);　//文字列を整数に変換
+      triggerMargin = parseInt(elm.dataset[dataMargin]);　//4.NodeLIstから要素のdataset[dataMargin]をtriggerMarginとして数値で取得。
     }
     if(elm.dataset[dataTrigger]) {
-      showPos = document.querySelector(elm.dataset[dataTrigger]).getBoundingClientRect().top + triggerMargin; 
+      showPos = document.querySelector(elm.dataset[dataTrigger]).getBoundingClientRect().top + triggerMargin; //5.要素の上からの位置に200px追加
     } else {
       showPos = elm.getBoundingClientRect().top + triggerMargin;
     }
-    if (window.innerHeight > showPos) { //windowのviewportの高さが格納
-      var delay = (elm.dataset[dataDelay])? elm.dataset[dataDelay] : 0;
+    if (window.innerHeight > showPos) { //6.それが現在のブラウザの高さより少なくなったら、setTimeoutで0.1秒後にshowクラスを追加。
+      var delay = (elm.dataset[dataDelay])? elm.dataset[dataDelay] : 100;
       setTimeout(function(index) {
         saElm[index].classList.add('show');
-      }.bind(null, i), delay);
+      }.bind(null, i), delay);//bindメソッドで関数に対してthisや引数を指定している。indexってどこからでてきたん？ということですが、ここのiがindex部分の引数に代入されます。.bindメソッドに使われるthisを指定しない場合、bindの第一引数に null を設定します。
     }
   }
 }
 window.addEventListener('load', saFunc);
 window.addEventListener('scroll', saFunc);
 </pre>
-
-<h3>querySelector()</h3>
-<p>「querySelector()」を使うとid属性値・class属性値などを意識せずにjQuery感覚でHTML要素をセレクタ指定することができます。簡単に言うと「querySelector()」だけであらゆるHTML要素を取得することができる。最初に合致したHTML要素を取得した時点でプログラムは終了するので複数の要素を取得するには自作のループ処理を作成するか、「querySelectorAll()」を使う</p>
-<pre class="prettyprint">
-const elm = document.querySelector('.elem');
-</pre>
-
-
-<h3>querySelectorAll()</h3>
-<p>querySelectorAll()で取得した要素はNodeListと言って、配列によく似たデータ構造が格納されています。そこで、配列を効率よく繰り返し処理できる「forEach」を使って各要素を1つずつ処理</p>
-<p>NodeList:配列とは異なります。メソッドとしてforEach()をもっているので反復処理が可能</p>
-<p>HTMLCollection:NodeListと同様、やはり配列風オブジェクトですが、加えて名前（ id や name ）によるアクセスも可能。</p>
-<pre class="prettyprint">
-const elm = document.querySelectorAll('.element');
-elm.forEach(function(value) {
-    console.log(value);
-})
-</pre>
-
+</sction>
+<section class="ly-section" id="1">
+            <h2><?php echo $navList[1]; ?></h2>
+			<p>モニター、ブラウザ、要素などのサイズと位置を取得。</p>
 
 <h3>screen.height, screen.width</h3>
 <p>モニタサイズ(解像度)</p>
@@ -134,12 +113,10 @@ document.getElementById('getBoundingClientRectTopElm').textContent = document.ge
 document.getElementById('getBoundingClientRectLeftElm').textContent = document.getElementById('getBoundingClientRectLeftElm').getBoundingClientRect().left;
 </pre>
 
-
-
-
-
 <cite class="ly-cite"><a href="https://murashun.jp/blog/20191110-33.html" <?php echo $targetBlank ?>>ウィンドウのサイズを調べる</a></cite>
 <cite class="ly-cite"><a href="https://web-designer.cman.jp/javascript_ref/window/size/" <?php echo $targetBlank ?>>JavaScriptでウインドウサイズを取得</a></cite>
+<cite class="ly-cite"><a href="https://techacademy.jp/magazine/14652" <?php echo $targetBlank ?>>JavaScriptでbindメソッドを使う方法</a></cite>
+<cite class="ly-cite"><a href="https://techacademy.jp/magazine/14652" <?php echo $targetBlank ?>>JavaScriptでbindメソッドを使う方法</a></cite>
 		</section>
     </article>
 </main>
@@ -154,6 +131,5 @@ document.getElementById('windowOuterHeightElm').textContent = window.outerHeight
 document.getElementById('windowOuterWidthElm').textContent = window.outerWidth;
 document.getElementById('getBoundingClientRectTopElm').textContent = document.getElementById('getBoundingClientRectTopElm').getBoundingClientRect().top;
 document.getElementById('getBoundingClientRectLeftElm').textContent = document.getElementById('getBoundingClientRectLeftElm').getBoundingClientRect().left;
-
 </script>
 <?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-foot.php"); ?>

@@ -144,7 +144,7 @@ var saFunc = function() {
       showPos = elm.getBoundingClientRect().top + triggerMargin;
     }
     if (window.innerHeight > showPos) { //windowのviewportの高さが、指定の要素のviewportの上からの高さ＋200pxを超えたらー＞要素が下から200pxより上に行ったら
-      var delay = (elm.dataset[dataDelay])? elm.dataset[dataDelay] : 0;
+      var delay = (elm.dataset[dataDelay])? elm.dataset[dataDelay] : 100;
       setTimeout(function(index) {
         saElm[index].classList.add('show');
       }.bind(null, i), delay);

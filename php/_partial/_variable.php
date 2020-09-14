@@ -111,6 +111,7 @@ $jsScroll = array(
 	"lead" => "メモ",
 	"html" => "js-scroll.html"
 );
+
 $eventHandler = array(
 	"file" => "/php/pages/event-handler.php",
 	"tag" => array("js"),
@@ -142,9 +143,17 @@ $touchEvent = array(
 $jsMarker = array(
 	"file" => "/php/pages/js-marker.php",
 	"tag" => array("js"),
-	"title" => "js-marker",
-	"lead" => "スクロールしたら重要なテキストに黄色いマーカーをひくjavascriptです",
+	"title" => "黄色いmarkerアニメーション",
+	"lead" => "黄色いmarkerを引くアニメーションをjavascriptで作りました",
 	"html" => "js-marker.html"
+);
+//js-nodelist
+$jsNodelist = array(
+	"file" => "/php/pages/js-nodelist.php",
+	"tag" => array("js"),
+	"title" => "nodelist",
+	"lead" => "ノードリストにはliveとstaticがあります",
+	"html" => "js-nodelist.html"
 );
 //php
 $phpMemo = array(
@@ -191,7 +200,7 @@ $allPages = array(
 	$contentsModel, $semanticTags, $aboutTags, 
 	$categorizedCSS, $namingRule, 
 	$button, $breakWord, $elementEmStrongMarkB, $favicon, $hamburgerMenu, $headerSmaller,
-	$javascriptMemo, $eventHandler, $eventPropagation, $scrollJunk, $touchEvent, $dayJs, $jsDate, $jsMarker,
+	$javascriptMemo, $eventHandler, $eventPropagation, $scrollJunk, $touchEvent, $dayJs, $jsDate, $jsMarker, $jsNodelist,
 	$phpMemo,$phpFilemtime,
 	$gulpfile,
 	$svg,
