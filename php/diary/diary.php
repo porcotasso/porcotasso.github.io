@@ -14,13 +14,14 @@
                 <li>scroll スムーズスクロール　内部リンク </li> 
                 <li>scroll したまでいったらコンテンツを読み込む</li> 
                 <li>scroll トップに戻る</li> 
-                <li>scroll　スクロールに応じてイベントをトリガーしてくれるライブラリ「ScrollTrigger」　https://www.willstyle.co.jp/blog/2869/</li> 
+                <!-- <li>scroll　スクロールに応じてイベントをトリガーしてくれるライブラリ「ScrollTrigger」　https://www.willstyle.co.jp/blog/2869/</li>  -->
                 <li>pointer-events</li>
-                <li>inviewテストhttps://ec-recipe.com/what-is-shopify-2018/</li>
+                <!-- <li>inviewテストhttps://ec-recipe.com/what-is-shopify-2018/</li> -->
                 <li>ホームレイアウト　homeにスライダーをつける</li>
                 <li>「スクロールチェーン」の挙動を無効化https://necomesi.jp/blog/tsmd/posts/180</li>
                 <li>「スクロールジャンク」https://blog.webico.work/passive-event-listeber01</li>
                 <li>PCデザイン</li>
+                <li>docker</li>
                 <li>swiper, slick, Preload.js,Cookie判定にはjquery-cookie.js</li>
                 <li>ロゴ作成</li>
                 <li>ぱんくずリスト</li>
@@ -42,6 +43,7 @@
                 <li>カルーセル</li>
                 <li>データベースを作りそこからデータを呼びだす</li>
                 <li>ポップ</li>
+
                 <li>全タグ確認</li>
                 <li>標準の日時書式指定 ローカル時間</li>
                 <li>background-attachment は、背景画像の固定表示を指定するプロパティ https://www.tagindex.com/stylesheet/page/background_attachment.htmls</li>

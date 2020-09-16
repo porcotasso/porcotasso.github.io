@@ -40,13 +40,13 @@
             <?php if($_SERVER['REQUEST_URI'] == "/"){ ?>
                 <h1 class="web-ttl">
                     <a href="/">
-                        <?php include("/Users/porcokafuka/projects/porcotasso.github.io/images/common/logo.svg"); ?>
+                        <?php $str = file_get_contents('/Users/porcokafuka/projects/porcotasso.github.io/images/common/logo.svg'); echo $str; ?>
                     </a>
                 </h1>
             <?php }else{ ?>
                 <div class="web-ttl">
                     <a href="/">
-                        <?php include("/Users/porcokafuka/projects/porcotasso.github.io/images/common/logo.svg"); ?>
+                        <?php $str = file_get_contents('/Users/porcokafuka/projects/porcotasso.github.io/images/common/logo.svg'); echo $str; ?>
                     </a>
                 </div>
             <?php } ?>
@@ -74,5 +74,8 @@
             </ul>
         </nav>
     </header>
+
+    <a href="#top" id="btn-backtotop"><span class="arrow arrow_up"></span></a>
+    
     <!-- メニューを出した時に出る黒背景 -->
     <div class="el-blackCover" id="js-blackCover"></div>

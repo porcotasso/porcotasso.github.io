@@ -87,6 +87,8 @@ document.getElementById("n1").src = "images/example.png";
 
 <p> setAttribute("属性名","値") を使う方法</p>
 <pre class="prettyprint">
+element.setAttribute('属性名', '属性値');
+
 <img src="image/motogazou.png" alt="" id="n1" />
 document.getElementById("n1").setAttribute("src","images/example.png");
 </pre>
@@ -100,11 +102,6 @@ document.getElementById("n1").className = "mushi";
 <h3>属性ノードの値の読み取り</h3>
 <pre class="prettyprint">
 document.getElementById("area01").getAttribute("src");
-</pre>
-
-<h3>属性ノードの設定</h3>
-<pre class="prettyprint">
-element.setAttribute('属性名', '属性値');
 </pre>
 
 <h3>属性があるかないか</h3>

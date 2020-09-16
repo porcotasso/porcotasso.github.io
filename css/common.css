@@ -591,6 +591,28 @@ body {
 .el-marker.show {
   background-position: 0% 0%; }
 
+/* ========================================================
+矢印アイコン
+=========================================================*/
+/* ========================================================
+ページトップに戻るボタン
+=========================================================*/
+#btn-backtotop {
+  z-index: 1000;
+  position: fixed; }
+  @media screen and (max-width: 767px) {
+    #btn-backtotop {
+      right: 5px;
+      bottom: 10px; } }
+  #btn-backtotop::after {
+    display: block;
+    background-color: #000;
+    content: ""; }
+    @media screen and (max-width: 767px) {
+      #btn-backtotop::after {
+        width: 40px;
+        height: 40px; } }
+
 html, body {
   scroll-padding-top: 80px; }
 

@@ -383,12 +383,15 @@
                             </ul>
         </nav>
     </header>
+
+    <a href="#top" id="btn-backtotop"><span class="arrow arrow_up"></span></a>
+    
     <!-- メニューを出した時に出る黒背景 -->
     <div class="el-blackCover" id="js-blackCover"></div><main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
             <h1>svg</h1>
-							<p class="el-updateDate">2020.09.08 updated</p>
+							<p class="el-updateDate">2020.09.17 updated</p>
 			            <p>メモ</p>  
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
@@ -460,8 +463,14 @@
             <p>CSSのbackgroundプロパティを使って背景画像として表示</p>
             <h3>svg要素を直接書き込む</h3>
             <p>SVGファイル内のsvg要素をHTMLにコピペして画像を表示</p>
+            <h3>file_get_contentsを使う</h3>
+            <p>php file_get_contents を使ってsvgのmarkup language を読み込む。</p>
+<pre class="prettyprint">
+$str = file_get_contents('/aaa.png'); echo $str;
+</pre>
             <h3>use要素で設置する</h3>
             <p>SVGのuse要素を使ってSVGファイルの任意のid属性を持つ要素だけ読み込み</p>
+            <cite class="ly-cite"><a href="https://css-tricks.com/using-svg/" target="_blank" rel="noopener noreferrer">css tricks</a></cite>
             <cite class="ly-cite"><a href="https://lopan.jp/about-svg/" target="_blank" rel="noopener noreferrer">SVGでやることのまとめ</a></cite>
             <cite class="ly-cite"><a href="https://lopan.jp/about-svg-sprites/" target="_blank" rel="noopener noreferrer">使いまわせるSVG</a></cite>
             <cite class="ly-cite"><a href="https://blog.webico.work/lottie-sample" target="_blank" rel="noopener noreferrer">Lottieでウェブアニメーションを作ってみた　SVG+JSのウェブアニメーション</a></cite>

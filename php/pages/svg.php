@@ -65,8 +65,14 @@
             <p>CSSのbackgroundプロパティを使って背景画像として表示</p>
             <h3>svg要素を直接書き込む</h3>
             <p>SVGファイル内のsvg要素をHTMLにコピペして画像を表示</p>
+            <h3>file_get_contentsを使う</h3>
+            <p>php file_get_contents を使ってsvgのmarkup language を読み込む。</p>
+<pre class="prettyprint">
+$str = file_get_contents('/aaa.png'); echo $str;
+</pre>
             <h3>use要素で設置する</h3>
             <p>SVGのuse要素を使ってSVGファイルの任意のid属性を持つ要素だけ読み込み</p>
+            <cite class="ly-cite"><a href="https://css-tricks.com/using-svg/" <?php echo $targetBlank ?>>css tricks</a></cite>
             <cite class="ly-cite"><a href="https://lopan.jp/about-svg/" <?php echo $targetBlank ?>>SVGでやることのまとめ</a></cite>
             <cite class="ly-cite"><a href="https://lopan.jp/about-svg-sprites/" <?php echo $targetBlank ?>>使いまわせるSVG</a></cite>
             <cite class="ly-cite"><a href="https://blog.webico.work/lottie-sample" <?php echo $targetBlank ?>>Lottieでウェブアニメーションを作ってみた　SVG+JSのウェブアニメーション</a></cite>
