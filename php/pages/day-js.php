@@ -1,4 +1,4 @@
-<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
+<?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
@@ -82,5 +82,5 @@ if(today.getDay() == 0 && today.get.getHours() < 12 ){
 </main>
 
 
-<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-foot.php"); ?>
+<?php include("../_partial/wrapper-foot.php"); ?>
 

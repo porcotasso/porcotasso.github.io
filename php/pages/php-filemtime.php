@@ -1,4 +1,4 @@
-<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
+<?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
@@ -69,4 +69,4 @@ echo date_format($date, 'Y/m/d g:ia l F'); //2017/04/01 12:00am Saturday April
         https://techplay.jp/column/596
     </article>
 </main>
-<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-foot.php"); ?>
+<?php include("../_partial/wrapper-foot.php"); ?>

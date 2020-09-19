@@ -1,9 +1,44 @@
-<?php $title = "Porco Tassoのフロントエンドエンジニアまとめ"?>
-<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
-<main class="ly-baseWrap">
-    <article>
+<?php include("_partial/wrapper-head.php"); ?>
+<main>
+    <p class="ly-homeProfile"><b>このサイトはまだ制作中です</b></p>
+<div class="ly-homeNews">
+<?php 
+/// 更新日時順で並び替える関数
+$sort_by_lastmod = function($a, $b) {
+  return filemtime($b) - filemtime($a);
+};
+//要約：ファイルのupdate日はファイル自体にアクセスしないと取得できないのに対し、サイトで表示させたいのは$allPages内の変数なので、その違う情報をどう正確に結びつけるかがポイント
+//allPages内にある変数の各パスをとって$stack配列内で並べる。
+//ファイル自体にアクセスして、ファイルの更新日で並び替える。$stack変数はupdateの新しい順
+//スライダー内に表示する数の分だけを$latestUpdate変数に入れる
+//新しい配列$latestContentを作り$allPages内の各ファイルパスと$latestUpdateのパスが一致する変数だけif文で見つけ配列内に並べる。
+$stack = array();
+foreach($allPages as $list){
+    $filename = $baseUrl.$list["file"]; 
+    array_push($stack,$filename);   
+}
+usort( $stack, $sort_by_lastmod );
+$n = 5;
+$latestUpdate = array_slice($stack, 0, $n);
 
-        <p class="ly-homeProfile"><b>このサイトはまだ制作中です</b></p>
+$latestContent = array();
+foreach($allPages as $list){
+    $filename = $baseUrl.$list["file"];
+    if(in_array($filename, (array)$latestUpdate)) {
+        array_push($latestContent,$list);
+    }
+}
+?>
+<?php foreach($latestContent as $value){ ?>
+    <a href="<?php echo '/pages/'. $value["html"]; ?>" class="ly-homeNews_cnt">
+        <h2><?php echo $value["title"];?></h2>
+        <p class="ly-homeNews_lead"><?php echo $value["lead"];?></p>
+    </a>
+<?php } ?>
+
+</div>
+
+    <article class="ly-baseWrap">
         <a href="pages/diary.html">制作日記、メモ</a>
         <nav>
             <ul class="bl-categoryList">
@@ -62,22 +97,18 @@
     <h2>タグのmargin-bottomについて</h2>
     <p>hタグ、p、ulにセクションのスペースを任せるべきでない。hタグ、p、ulのmargin-bottomはあくまで並列のコンテンツ同士のスペースについてを目的とする</p>
     <p>セクションにクラスをつけ、内容ごとにみやすいようにスペースをつける、という目的で</p>
-
-
     <h2>cssファイルの構成</h2>
     <p>cssの構成と優先順位<br>
         user agent stylesheet ＜ reset ＜ common ＜ each page<br>
         基本こんなイメージです。リセット(ノーマライズ、サニタイズ)CSSはいろいろあるようですが、bootstrap-reboot.cssを参考にサイト用にカスタマイズしています。<br>
         bootstrap.cssはお世話になったときもありますが、結果そのままは使わないようになりました。
         最初に予想してない変更に対応できる変化に強いCSSを重要と考えているので、BEMでクラスのスコープを限定するやり方をよく使ってます。SMACCSも少しだけ</p>
-
     <h2>技法</h2>
     <p>smacss htmlとscssの階層を同じにしたBEMがとてもわかりやすい。最近はアジャイル方法で徐々に質を高めていく方法があるので、美しいより変更に強いコードのほうがいいんじゃないかなと思ってます。cssの階層がとにかくながったらしくなるわけですが、基本cssを確認することはないです。</p>
     <h2>body</h2>
     <p>font-feature-settings: "palt" 1;カーニング　読みやすいのかどうか判断が難しい</p>
     <h2>フォントサイズ</h2>
-    <p>フォントサイズの単位はremを使う。htmlにfont-size:62.5% にすることで、をかけて、単位remで指定します。bodyだけはchrome対策に1.6emにします。バランスを考えたときつい小さい文字を使いがちになるのですが、可読性を重視するため、モバイルで1.4rem, PCで1.6rem以上を出来るだけ守りたいと思いつつ、よく悩んでいます。</p>
-    
+    <p>フォントサイズの単位はremを使う。htmlにfont-size:62.5% にすることで、をかけて、単位remで指定します。bodyだけはchrome対策に1.6emにします。バランスを考えたときつい小さい文字を使いがちになるのですが、可読性を重視するため、モバイルで1.4rem, PCで1.6rem以上を出来るだけ守りたいと思いつつ、よく悩んでいます。</p>  
     <h2>モバイルファーストについて</h2>
     <p>時代のながれでそうしないといけないで、モバイルから作るという方法をしています。</p>
     <h2>ejsついて</h2>
@@ -88,7 +119,6 @@
     <h2>全部にクラスをつけるかどうか</h2>
     <h2>本</h2>
     <h2>SVG</h2> -->
-
         <p class="ly-homeProfile">ウェブのフロントエンドエンジニアです。html, css, php, javascript,gulp、adobe XD, Illustrator, phptoshopなどを使います。作ること全般が好きで、イラストやレタッチ、動画、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。</p>
         <section class="ly-section">
             <h3>参考</h3>
@@ -98,9 +128,7 @@
             <cite class="ly-cite"><a href="https://www.w3.org/TR/html51/grouping-content.html#the-p-element" <?php echo $targetBlank ?>>w3.org p element</a></cite>
             <cite class="ly-cite"><a href="https://liginc.co.jp/" <?php echo $targetBlank ?>>lig</a></cite>
             <cite class="ly-cite"><a href="https://baigie.me/menu/" <?php echo $targetBlank ?>>baigie</a></cite>
-
-            
         </section>
     </article>
 </main>
-<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-foot.php"); ?>
+<?php include("_partial/wrapper-foot.php"); ?>

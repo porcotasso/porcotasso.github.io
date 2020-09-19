@@ -1,4 +1,4 @@
-<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
+<?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
@@ -60,21 +60,20 @@
             <h3>javascript</h3>
             <p>2つイベントがあります。上のscrollイベントは、下にスクロールするほど透明度が低くなってはっきり表示されるイベントです。下のクリックイベントでトップにスクロールしながら戻ります。</p>
 <pre class="prettyprint">
-//スクロールでトップに戻るボタン
 let btnScrollTop = document.getElementById( "js-scrollTop" );
 window.addEventListener('scroll', () => {
   let pageOffsetY = window.pageYOffset || document.documentElement.btnScrollTop;
-  if(pageOffsetY < 400){
-    btnScrollTop.style.opacity = pageOffsetY/1000;
-  } else{
+  if(pageOffsetY > 400){
     btnScrollTop.style.opacity = 0.4 ;
+  } else{
+    btnScrollTop.style.opacity = pageOffsetY/1000;
   }
 });
 
-scrollTop(btnScrollTop, 150); // 遅すぎるとガクガクになるので注意
+scrollTop(btnScrollTop, 180);
 function scrollTop(el, duration) {
   el.addEventListener('click', function() {
-    let currentY = window.pageYOffset; // 現在のスクロール位置を取得
+    let currentY = window.pageYOffset; 
     let step = duration/currentY > 1 ? 10 : 100; // 三項演算子
     let timeStep = duration/currentY * step; // スクロール時間
     let intervalId = setInterval(scrollUp, timeStep);
@@ -91,9 +90,14 @@ function scrollTop(el, duration) {
   });
 }
 </pre>
+        <p>ちなみに画面のトップからの高さを測る<code>window.pageYOffset || document.documentElement.btnScrollTop</code>はスクロールが一番上にいくと値が<code>0</code>ではなく、<code>undefined</code>になる模様。</p>
 
+<pre class="prettyprint">
+let pageOffsetY = window.pageYOffset || document.documentElement.btnScrollTop;
+</pre>
 
-<cite class="ly-cite"><a href="https://flex-box.net/js-scrolltop/#co-index-4" <?php echo $targetBlank ?>>Javascriptのみでトップへ戻るボタンを実装</a></cite>
+          <p>ほぼこちらを参考にさせていただいてます。もっとシンプルなコードも書かれてますがそちらはsafariで動かなかったので複雑な方を使用。（2020.09.18）。</p>
+          <cite class="ly-cite"><a href="https://flex-box.net/js-scrolltop/#co-index-4" <?php echo $targetBlank ?>>Javascriptのみでトップへ戻るボタンを実装</a></cite>
 		</section>
         <section class="ly-section" id="1">
             <h2><?php echo $navList[1]; ?></h2>
@@ -104,4 +108,4 @@ function scrollTop(el, duration) {
             </section>
     </article>
 </main>
-<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-foot.php"); ?>
+<?php include("../_partial/wrapper-foot.php") ?>

@@ -13,9 +13,8 @@
     <link rel="stylesheet" href="/css/common.css">
       
     <!-- google font Pacifico for title -->
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-                            <title>スクロールでトップに戻るボタン</title>
-            
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
+            <title>スクロールでトップに戻るボタン</title>
 </head>
 <body>
 
@@ -396,7 +395,7 @@
     <article class="articleCnt">
         <header>
             <h1>スクロールでトップに戻るボタン</h1>
-							<p class="el-updateDate">2020.09.19 updated</p>
+							<p class="el-updateDate">2020.09.20 updated</p>
 			            <p>スクロールでトップに戻るボタンを右下に追加します。最初は表示せず、下にスクロールすると徐々に表示するようにします。</p>  
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
@@ -453,21 +452,20 @@
             <h3>javascript</h3>
             <p>2つイベントがあります。上のscrollイベントは、下にスクロールするほど透明度が低くなってはっきり表示されるイベントです。下のクリックイベントでトップにスクロールしながら戻ります。</p>
 <pre class="prettyprint">
-//スクロールでトップに戻るボタン
 let btnScrollTop = document.getElementById( "js-scrollTop" );
 window.addEventListener('scroll', () => {
   let pageOffsetY = window.pageYOffset || document.documentElement.btnScrollTop;
-  if(pageOffsetY < 400){
-    btnScrollTop.style.opacity = pageOffsetY/1000;
-  } else{
+  if(pageOffsetY > 400){
     btnScrollTop.style.opacity = 0.4 ;
+  } else{
+    btnScrollTop.style.opacity = pageOffsetY/1000;
   }
 });
 
-scrollTop(btnScrollTop, 150); // 遅すぎるとガクガクになるので注意
+scrollTop(btnScrollTop, 180);
 function scrollTop(el, duration) {
   el.addEventListener('click', function() {
-    let currentY = window.pageYOffset; // 現在のスクロール位置を取得
+    let currentY = window.pageYOffset; 
     let step = duration/currentY > 1 ? 10 : 100; // 三項演算子
     let timeStep = duration/currentY * step; // スクロール時間
     let intervalId = setInterval(scrollUp, timeStep);
@@ -484,9 +482,14 @@ function scrollTop(el, duration) {
   });
 }
 </pre>
+        <p>ちなみに画面のトップからの高さを測る<code>window.pageYOffset || document.documentElement.btnScrollTop</code>はスクロールが一番上にいくと値が<code>0</code>ではなく、<code>undefined</code>になる模様。</p>
 
+<pre class="prettyprint">
+let pageOffsetY = window.pageYOffset || document.documentElement.btnScrollTop;
+</pre>
 
-<cite class="ly-cite"><a href="https://flex-box.net/js-scrolltop/#co-index-4" target="_blank" rel="noopener noreferrer">Javascriptのみでトップへ戻るボタンを実装</a></cite>
+          <p>ほぼこちらを参考にさせていただいてます。もっとシンプルなコードも書かれてますがそちらはsafariで動かなかったので複雑な方を使用。（2020.09.18）。</p>
+          <cite class="ly-cite"><a href="https://flex-box.net/js-scrolltop/#co-index-4" target="_blank" rel="noopener noreferrer">Javascriptのみでトップへ戻るボタンを実装</a></cite>
 		</section>
         <section class="ly-section" id="1">
             <h2>シンプルなパターン</h2>

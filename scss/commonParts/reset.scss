@@ -196,6 +196,9 @@ img{
  }
  code{
    word-break: break-all;// defaultだとコードの途中で単語で改行されて読みにくいので、文字で改行に変更
+   background: $bg-light-gray;
+   padding: 2px 4px;
+   margin: 0 4px;
  }
  figure {
    margin: 0 0 1rem;

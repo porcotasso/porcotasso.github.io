@@ -1,4 +1,4 @@
-<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
+<?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
@@ -266,4 +266,4 @@ document.getElementById('windowOuterWidthElm').textContent = window.outerWidth;
 document.getElementById('getBoundingClientRectTopElm').textContent = document.getElementById('getBoundingClientRectTopElm').getBoundingClientRect().top;
 document.getElementById('getBoundingClientRectLeftElm').textContent = document.getElementById('getBoundingClientRectLeftElm').getBoundingClientRect().left;
 </script>
-<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-foot.php"); ?>
+<?php include("../_partial/wrapper-foot.php"); ?>

@@ -7,4 +7,24 @@
 
 .ly-homeProfile {
   margin-bottom: 16px; }
+
+.ly-homeNews {
+  display: flex;
+  margin: 16px 0;
+  overflow: hidden;
+  overflow-x: scroll; }
+  .ly-homeNews_cnt {
+    display: table;
+    width: 260px;
+    height: 260px;
+    margin: 16px 6px;
+    padding: 16px;
+    background: #fff;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08); }
+    .ly-homeNews_cnt:first-of-type {
+      margin-left: 10%; }
+    .ly-homeNews_cnt:last-of-type {
+      margin-right: 60px; }
+  .ly-homeNews_lead {
+    font-size: 1.3rem; }
 /*# sourceMappingURL=maps/home.css.map */

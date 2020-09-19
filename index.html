@@ -11,11 +11,11 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
     <link rel="android-touch-icon" sizes="192x192" href="/images/favicon/android-touch-icon.png" >
     <link rel="stylesheet" href="/css/common.css">
+            <link rel="stylesheet" href="/css/home.css">
       
     <!-- google font Pacifico for title -->
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-                            <title>Porco Tassoのフロントエンドエンジニアまとめ</title>
-            
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
+            <title>Porco Tassoのフロントエンドエンジニアまとめ</title>
 </head>
 <body>
 
@@ -392,10 +392,33 @@
     <a id="js-scrollTop" class="el-scrollTop"></a>
     
     <!-- メニューを出した時に出る黒背景 -->
-    <div class="el-blackCover" id="js-blackCover"></div><main class="ly-baseWrap">
-    <article>
+    <div class="el-blackCover" id="js-blackCover"></div><main>
+    <p class="ly-homeProfile"><b>このサイトはまだ制作中です</b></p>
+<div class="ly-homeNews">
+    <a href="/pages/contents-model.html" class="ly-homeNews_cnt">
+        <h2>コンテンツ・モデル</h2>
+        <p class="ly-homeNews_lead">HTML5では、このタグの中にはこのタグが配置できる、といった配置ルールが決められており、これをコンテンツ・モデル（Content models）といいます。</p>
+    </a>
+    <a href="/pages/scroll-junk.html" class="ly-homeNews_cnt">
+        <h2>スクロールジャンクとは</h2>
+        <p class="ly-homeNews_lead">スクロールジャンクとその防ぎ方について</p>
+    </a>
+    <a href="/pages/day-js.html" class="ly-homeNews_cnt">
+        <h2>day-js</h2>
+        <p class="ly-homeNews_lead">Day.jsは軽量（2KB）で多くのブラウザでサポートされているJavaScriptの日付操作ライブラリです。</p>
+    </a>
+    <a href="/pages/js-scrolltop.html" class="ly-homeNews_cnt">
+        <h2>スクロールでトップに戻るボタン</h2>
+        <p class="ly-homeNews_lead">スクロールでトップに戻るボタンを右下に追加します。最初は表示せず、下にスクロールすると徐々に表示するようにします。</p>
+    </a>
+    <a href="/pages/svg.html" class="ly-homeNews_cnt">
+        <h2>svg</h2>
+        <p class="ly-homeNews_lead">メモ</p>
+    </a>
 
-        <p class="ly-homeProfile"><b>このサイトはまだ制作中です</b></p>
+</div>
+
+    <article class="ly-baseWrap">
         <a href="pages/diary.html">制作日記、メモ</a>
         <nav>
             <ul class="bl-categoryList">
@@ -646,22 +669,18 @@
     <h2>タグのmargin-bottomについて</h2>
     <p>hタグ、p、ulにセクションのスペースを任せるべきでない。hタグ、p、ulのmargin-bottomはあくまで並列のコンテンツ同士のスペースについてを目的とする</p>
     <p>セクションにクラスをつけ、内容ごとにみやすいようにスペースをつける、という目的で</p>
-
-
     <h2>cssファイルの構成</h2>
     <p>cssの構成と優先順位<br>
         user agent stylesheet ＜ reset ＜ common ＜ each page<br>
         基本こんなイメージです。リセット(ノーマライズ、サニタイズ)CSSはいろいろあるようですが、bootstrap-reboot.cssを参考にサイト用にカスタマイズしています。<br>
         bootstrap.cssはお世話になったときもありますが、結果そのままは使わないようになりました。
         最初に予想してない変更に対応できる変化に強いCSSを重要と考えているので、BEMでクラスのスコープを限定するやり方をよく使ってます。SMACCSも少しだけ</p>
-
     <h2>技法</h2>
     <p>smacss htmlとscssの階層を同じにしたBEMがとてもわかりやすい。最近はアジャイル方法で徐々に質を高めていく方法があるので、美しいより変更に強いコードのほうがいいんじゃないかなと思ってます。cssの階層がとにかくながったらしくなるわけですが、基本cssを確認することはないです。</p>
     <h2>body</h2>
     <p>font-feature-settings: "palt" 1;カーニング　読みやすいのかどうか判断が難しい</p>
     <h2>フォントサイズ</h2>
-    <p>フォントサイズの単位はremを使う。htmlにfont-size:62.5% にすることで、をかけて、単位remで指定します。bodyだけはchrome対策に1.6emにします。バランスを考えたときつい小さい文字を使いがちになるのですが、可読性を重視するため、モバイルで1.4rem, PCで1.6rem以上を出来るだけ守りたいと思いつつ、よく悩んでいます。</p>
-    
+    <p>フォントサイズの単位はremを使う。htmlにfont-size:62.5% にすることで、をかけて、単位remで指定します。bodyだけはchrome対策に1.6emにします。バランスを考えたときつい小さい文字を使いがちになるのですが、可読性を重視するため、モバイルで1.4rem, PCで1.6rem以上を出来るだけ守りたいと思いつつ、よく悩んでいます。</p>  
     <h2>モバイルファーストについて</h2>
     <p>時代のながれでそうしないといけないで、モバイルから作るという方法をしています。</p>
     <h2>ejsついて</h2>
@@ -672,7 +691,6 @@
     <h2>全部にクラスをつけるかどうか</h2>
     <h2>本</h2>
     <h2>SVG</h2> -->
-
         <p class="ly-homeProfile">ウェブのフロントエンドエンジニアです。html, css, php, javascript,gulp、adobe XD, Illustrator, phptoshopなどを使います。作ること全般が好きで、イラストやレタッチ、動画、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。</p>
         <section class="ly-section">
             <h3>参考</h3>
@@ -682,8 +700,6 @@
             <cite class="ly-cite"><a href="https://www.w3.org/TR/html51/grouping-content.html#the-p-element" target="_blank" rel="noopener noreferrer">w3.org p element</a></cite>
             <cite class="ly-cite"><a href="https://liginc.co.jp/" target="_blank" rel="noopener noreferrer">lig</a></cite>
             <cite class="ly-cite"><a href="https://baigie.me/menu/" target="_blank" rel="noopener noreferrer">baigie</a></cite>
-
-            
         </section>
     </article>
 </main>

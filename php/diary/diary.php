@@ -1,4 +1,4 @@
-<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php"); ?>
+<?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
@@ -27,7 +27,6 @@
                 <li>ぱんくずリスト</li>
                 <li>目次の開閉</li>
                 <li>guipfileまとめ</li>
-                <li>スクロールジャンク</li>
                 <li>エスケープのjsまとめ</li>
                 <li>prettyまとめ</li>
                 <li>現実的問題まとめ</li>
@@ -51,6 +50,8 @@
                 <li>-CSSカテゴライズまとめ、break-wordなどテキスト、svgまとめ</li>
             </ul>
             <h2><time>2020年</time></h2>
+            <time class="dairyTime" datetime="2020-09-19">9月19日</time>
+            <p>スクロールでトップに戻るボタンを右下に追加してまとめる。</p>
             <time class="dairyTime" datetime="2020-09-16">9月16日</time>
             <p>HTML5では a href="#top">TOP でページトップへジャンプするようになった。</p>
             <time class="dairyTime" datetime="2020-09-10">9月10日</time>
@@ -115,4 +116,4 @@
     </article>
     
 </main>
-<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-foot.php"); ?>
+<?php include("../_partial/wrapper-foot.php"); ?>

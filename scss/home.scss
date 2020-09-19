@@ -11,3 +11,27 @@
 .ly-homeProfile{
   margin-bottom: $space-unit * 2;
 }
+.ly-homeNews{
+  margin: 16px 0;
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+  &_cnt{
+    height: 260px;
+    width: 260px;
+    display: table;
+    box-shadow: $box-shadow;
+    margin: 16px 6px;
+    padding: 16px;
+    background: #fff;
+    &:first-of-type{
+      margin-left: 10%;
+    }
+    &:last-of-type{
+      margin-right: 60px;
+    }
+  }
+  &_lead{
+    font-size: $font-size-13;
+  }
+}

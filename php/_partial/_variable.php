@@ -1,4 +1,7 @@
 <?php
+
+$baseUrl = '/Users/porcokafuka/projects/porcotasso.github.io';
+
 //html
 $contentsModel = array(
 	"file" => "/php/pages/contents-model.php",

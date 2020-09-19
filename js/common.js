@@ -194,17 +194,17 @@ window.addEventListener('scroll', saFunc);
 let btnScrollTop = document.getElementById( "js-scrollTop" );
 window.addEventListener('scroll', () => {
   let pageOffsetY = window.pageYOffset || document.documentElement.btnScrollTop;
-  if(pageOffsetY < 400){
-    btnScrollTop.style.opacity = pageOffsetY/1000;
-  } else{
+  if(pageOffsetY > 400){
     btnScrollTop.style.opacity = 0.4 ;
+  } else{
+    btnScrollTop.style.opacity = pageOffsetY/1000;
   }
 });
 
-scrollTop(btnScrollTop, 150); // 遅すぎるとガクガクになるので注意
+scrollTop(btnScrollTop, 180);
 function scrollTop(el, duration) {
   el.addEventListener('click', function() {
-    let currentY = window.pageYOffset; // 現在のスクロール位置を取得
+    let currentY = window.pageYOffset; 
     let step = duration/currentY > 1 ? 10 : 100; // 三項演算子
     let timeStep = duration/currentY * step; // スクロール時間
     let intervalId = setInterval(scrollUp, timeStep);

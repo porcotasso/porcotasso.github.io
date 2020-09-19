@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ja">
-<?php include("/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/_variable.php"); ?>
+<?php include("_variable.php"); ?>
 <!-- code-prettify -->
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
@@ -12,26 +12,27 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
     <link rel="android-touch-icon" sizes="192x192" href="/images/favicon/android-touch-icon.png" >
     <link rel="stylesheet" href="/css/common.css">
-    <?php if($_SERVER['REQUEST_URI'] == "/php/pages/index.php"){ ?>
+    <?php if($_SERVER['REQUEST_URI'] == "/php/index.php"){ ?>
         <link rel="stylesheet" href="/css/home.css">
     <?php } ?>  
     <!-- google font Pacifico for title -->
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-        <?php date_default_timezone_set('Asia/Tokyo'); ?>
-        <?php if($_SERVER['REQUEST_URI'] == "/"){ ?>
-            <title>porco tasso:フロントエンドエンジニアのスキルノート　※まとめ中</title>
-        <?php } else {
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
+    <?php date_default_timezone_set('Asia/Tokyo'); ?>
+    <?php if($_SERVER['REQUEST_URI'] == "/php/index.php"){
+        $title = "Porco Tassoのフロントエンドエンジニアまとめ";
+        } elseif($_SERVER['REQUEST_URI'] == "/php/diary/diary.php"){
+            $title = "制作メモ、日記";
+        } else {
             foreach($allPages as $list){
                 if($list["file"] == $_SERVER['REQUEST_URI']){
                     $title = $list["title"];
                     $lead = $list["lead"];
-                    $filename = '/Users/porcokafuka/projects/porcotasso.github.io'.$list["file"];
+                    $filename = $baseUrl.$list["file"];
                     break;
                 }
-            } ?>
-            <title><?php echo ($title); ?></title>
-        <?php } ?>
-    
+            } 
+        } ?>
+    <title><?php echo ($title); ?></title>
 </head>
 <body>
 
@@ -40,13 +41,13 @@
             <?php if($_SERVER['REQUEST_URI'] == "/"){ ?>
                 <h1 class="web-ttl">
                     <a href="/">
-                        <?php $str = file_get_contents('/Users/porcokafuka/projects/porcotasso.github.io/images/common/logo.svg'); echo $str; ?>
+                        <?php $str = file_get_contents($baseUrl.'/images/common/logo.svg'); echo $str; ?>
                     </a>
                 </h1>
             <?php }else{ ?>
                 <div class="web-ttl">
                     <a href="/">
-                        <?php $str = file_get_contents('/Users/porcokafuka/projects/porcotasso.github.io/images/common/logo.svg'); echo $str; ?>
+                        <?php $str = file_get_contents($baseUrl.'/images/common/logo.svg'); echo $str; ?>
                     </a>
                 </div>
             <?php } ?>
