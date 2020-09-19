@@ -10,8 +10,8 @@ $sort_by_lastmod = function($a, $b) {
 };
 //要約：ファイルのupdate日はファイル自体にアクセスしないと取得できないのに対し、サイトで表示させたいのは$allPages内の変数なので、その違う情報をどう正確に結びつけるかがポイント
 //allPages内にある変数の各パスをとって$stack配列内で並べる。
-//ファイル自体にアクセスして、ファイルの更新日で並び替える。$stack変数はupdateの新しい順
-//スライダー内に表示する数の分だけを$latestUpdate変数に入れる
+//allPagesから取得したファイルパスからファイル自体にアクセスして、ファイルの更新日で並び替える。$stack変数はupdateの新しい順
+//スライダー内に表示する数の分だけを$stackから$latestUpdate変数に入れる
 //新しい配列$latestContentを作り$allPages内の各ファイルパスと$latestUpdateのパスが一致する変数だけif文で見つけ配列内に並べる。その際新しい順になるよう２重のループを使用する。
 $stack = array();
 foreach($allPages as $list){
@@ -32,7 +32,6 @@ for($i = 0; $i < $n; $i++){
         }
     }
 }
-
 ?>
 <?php foreach($latestContent as $value){ ?>
     <a href="<?php echo '/pages/'. $value["html"]; ?>" class="ly-homeNews_cnt">
