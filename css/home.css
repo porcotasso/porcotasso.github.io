@@ -26,5 +26,7 @@
     .ly-homeNews_cnt:last-of-type {
       margin-right: 60px; }
   .ly-homeNews_lead {
-    font-size: 1.3rem; }
+    color: #222;
+    font-size: 1.3rem;
+    line-height: 1.6; }
 /*# sourceMappingURL=maps/home.css.map */

@@ -1,6 +1,7 @@
 <?php include("_partial/wrapper-head.php"); ?>
 <main>
     <p class="ly-homeProfile"><b>このサイトはまだ制作中です</b></p>
+    <p>最近の変更ページ</p>
 <div class="ly-homeNews">
 <?php 
 /// 更新日時順で並び替える関数
@@ -11,7 +12,7 @@ $sort_by_lastmod = function($a, $b) {
 //allPages内にある変数の各パスをとって$stack配列内で並べる。
 //ファイル自体にアクセスして、ファイルの更新日で並び替える。$stack変数はupdateの新しい順
 //スライダー内に表示する数の分だけを$latestUpdate変数に入れる
-//新しい配列$latestContentを作り$allPages内の各ファイルパスと$latestUpdateのパスが一致する変数だけif文で見つけ配列内に並べる。
+//新しい配列$latestContentを作り$allPages内の各ファイルパスと$latestUpdateのパスが一致する変数だけif文で見つけ配列内に並べる。その際新しい順になるよう２重のループを使用する。
 $stack = array();
 foreach($allPages as $list){
     $filename = $baseUrl.$list["file"]; 
@@ -22,12 +23,16 @@ $n = 5;
 $latestUpdate = array_slice($stack, 0, $n);
 
 $latestContent = array();
-foreach($allPages as $list){
-    $filename = $baseUrl.$list["file"];
-    if(in_array($filename, (array)$latestUpdate)) {
-        array_push($latestContent,$list);
+
+for($i = 0; $i < $n; $i++){
+    foreach($allPages as $list){
+        $filename = $baseUrl.$list["file"];
+        if(in_array($filename, (array)$latestUpdate[$i])){
+            array_push($latestContent,$list);
+        }
     }
 }
+
 ?>
 <?php foreach($latestContent as $value){ ?>
     <a href="<?php echo '/pages/'. $value["html"]; ?>" class="ly-homeNews_cnt">
