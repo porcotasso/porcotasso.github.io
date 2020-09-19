@@ -75,7 +75,7 @@
         </nav>
     </header>
 
-    <a href="#top" id="btn-backtotop"><span class="arrow arrow_up"></span></a>
+    <a id="js-scrollTop" class="el-scrollTop"></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <div class="el-blackCover" id="js-blackCover"></div>

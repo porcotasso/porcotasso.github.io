@@ -111,6 +111,14 @@ $jsScroll = array(
 	"lead" => "メモ",
 	"html" => "js-scroll.html"
 );
+//js-scrollTop
+$jsScrollTop = array(
+	"file" => "/php/pages/js-scrolltop.php",
+	"tag" => array("js"),
+	"title" => "スクロールでトップに戻るボタン",
+	"lead" => "スクロールでトップに戻るボタンを右下に追加します。最初は表示せず、下にスクロールすると徐々に表示するようにします。",
+	"html" => "js-scrolltop.html"
+);
 
 $eventHandler = array(
 	"file" => "/php/pages/event-handler.php",
@@ -200,7 +208,7 @@ $allPages = array(
 	$contentsModel, $semanticTags, $aboutTags, 
 	$categorizedCSS, $namingRule, 
 	$button, $breakWord, $elementEmStrongMarkB, $favicon, $hamburgerMenu, $headerSmaller,
-	$javascriptMemo, $eventHandler, $eventPropagation, $scrollJunk, $touchEvent, $dayJs, $jsDate, $jsMarker, $jsNodelist,
+	$javascriptMemo, $eventHandler, $eventPropagation, $scrollJunk, $touchEvent, $dayJs, $jsDate, $jsMarker, $jsNodelist, $jsScrollTop,
 	$phpMemo,$phpFilemtime,
 	$gulpfile,
 	$svg,

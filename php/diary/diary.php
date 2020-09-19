@@ -51,7 +51,8 @@
                 <li>-CSSカテゴライズまとめ、break-wordなどテキスト、svgまとめ</li>
             </ul>
             <h2><time>2020年</time></h2>
-
+            <time class="dairyTime" datetime="2020-09-16">9月16日</time>
+            <p>HTML5では a href="#top">TOP でページトップへジャンプするようになった。</p>
             <time class="dairyTime" datetime="2020-09-10">9月10日</time>
             <p>スクロールしたら重要なテキストに黄色いマーカーをひくjavascript</p>
             <time class="dairyTime" datetime="2020-09-08">9月8日</time>
