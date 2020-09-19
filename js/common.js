@@ -191,19 +191,32 @@ window.addEventListener('scroll', saFunc);
  
 
 //スクロールでトップに戻るボタン
-let scrollTop = document.getElementById( "js-scrollTop" );
+let btnScrollTop = document.getElementById( "js-scrollTop" );
 window.addEventListener('scroll', () => {
-  let pageOffsetY = window.pageYOffset || document.documentElement.scrollTop;
-  console.log(scrollTop);
+  let pageOffsetY = window.pageYOffset || document.documentElement.btnScrollTop;
   if(pageOffsetY < 400){
-    scrollTop.style.opacity = pageOffsetY/1000;
+    btnScrollTop.style.opacity = pageOffsetY/1000;
   } else{
-    scrollTop.style.opacity = 0.4 ;
+    btnScrollTop.style.opacity = 0.4 ;
   }
 });
-scrollTop.addEventListener('click', () =>{
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
+
+scrollTop(btnScrollTop, 150); // 遅すぎるとガクガクになるので注意
+function scrollTop(el, duration) {
+  el.addEventListener('click', function() {
+    let currentY = window.pageYOffset; // 現在のスクロール位置を取得
+    let step = duration/currentY > 1 ? 10 : 100; // 三項演算子
+    let timeStep = duration/currentY * step; // スクロール時間
+    let intervalId = setInterval(scrollUp, timeStep);
+    // timeStepの間隔でscrollUpを繰り返す。
+    // clearItervalのために返り値intervalIDを定義する。
+    function scrollUp(){
+      currentY = window.pageYOffset;
+      if(currentY === 0) {
+          clearInterval(intervalId); // ページ最上部に来たら終了
+      } else {
+          scrollBy( 0, -step ); // step分上へスクロール
+      }
+    }
   });
-});
+}

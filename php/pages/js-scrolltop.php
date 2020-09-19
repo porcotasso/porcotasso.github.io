@@ -33,11 +33,13 @@
 <pre class="prettyprint">
 .el-scrollTop{
 	position: fixed;
-	bottom: 24px;
+	bottom: 64px;
 	right: 0;
 	width: 40px;
 	height: 40px;
-	background: $gray-300;
+	background: $bg-white;
+	border: 1px solid $border-gray;
+	border-right: none;
 	border-radius: 4px 0 0 4px;
 	opacity: 0;
 	&:after{
@@ -58,22 +60,36 @@
             <h3>javascript</h3>
             <p>2つイベントがあります。上のscrollイベントは、下にスクロールするほど透明度が低くなってはっきり表示されるイベントです。下のクリックイベントでトップにスクロールしながら戻ります。</p>
 <pre class="prettyprint">
-let scrollTop = document.getElementById( "js-scrollTop" );
+//スクロールでトップに戻るボタン
+let btnScrollTop = document.getElementById( "js-scrollTop" );
 window.addEventListener('scroll', () => {
-  let pageOffsetY = window.pageYOffset || document.documentElement.scrollTop;
-  console.log(scrollTop);
-  if(pageOffsetY < 500){
-    scrollTop.style.opacity = pageOffsetY/500;
+  let pageOffsetY = window.pageYOffset || document.documentElement.btnScrollTop;
+  if(pageOffsetY < 400){
+    btnScrollTop.style.opacity = pageOffsetY/1000;
   } else{
-    scrollTop.style.opacity = 100;
+    btnScrollTop.style.opacity = 0.4 ;
   }
 });
-scrollTop.addEventListener('click', () =>{
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
+
+scrollTop(btnScrollTop, 150); // 遅すぎるとガクガクになるので注意
+function scrollTop(el, duration) {
+  el.addEventListener('click', function() {
+    let currentY = window.pageYOffset; // 現在のスクロール位置を取得
+    let step = duration/currentY > 1 ? 10 : 100; // 三項演算子
+    let timeStep = duration/currentY * step; // スクロール時間
+    let intervalId = setInterval(scrollUp, timeStep);
+    // timeStepの間隔でscrollUpを繰り返す。
+    // clearItervalのために返り値intervalIDを定義する。
+    function scrollUp(){
+      currentY = window.pageYOffset;
+      if(currentY === 0) {
+          clearInterval(intervalId); // ページ最上部に来たら終了
+      } else {
+          scrollBy( 0, -step ); // step分上へスクロール
+      }
+    }
   });
-});
+}
 </pre>
 
 
