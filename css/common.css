@@ -497,11 +497,13 @@ body {
 .el-scrollTop {
   position: fixed;
   right: 0;
-  bottom: 24px;
+  bottom: 80px;
   width: 40px;
   height: 40px;
+  border: 1px solid #dee2eb;
+  border-right: none;
   border-radius: 4px 0 0 4px;
-  background: #e8e8e8;
+  background: #fcfcfc;
   opacity: 0; }
   .el-scrollTop:after {
     display: inline-block;

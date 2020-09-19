@@ -195,10 +195,10 @@ let scrollTop = document.getElementById( "js-scrollTop" );
 window.addEventListener('scroll', () => {
   let pageOffsetY = window.pageYOffset || document.documentElement.scrollTop;
   console.log(scrollTop);
-  if(pageOffsetY < 500){
-    scrollTop.style.opacity = pageOffsetY/500;
+  if(pageOffsetY < 400){
+    scrollTop.style.opacity = pageOffsetY/1000;
   } else{
-    scrollTop.style.opacity = 100;
+    scrollTop.style.opacity = 0.4 ;
   }
 });
 scrollTop.addEventListener('click', () =>{
