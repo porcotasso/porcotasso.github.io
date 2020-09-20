@@ -13,7 +13,6 @@
                 <li>スクロールについてまとめる　https://lab.syncer.jp/Web/JavaScript/Snippet/46/</li>
                 <li>scroll スムーズスクロール　内部リンク </li> 
                 <li>scroll したまでいったらコンテンツを読み込む</li> 
-                <li>scroll トップに戻る</li> 
                 <!-- <li>scroll　スクロールに応じてイベントをトリガーしてくれるライブラリ「ScrollTrigger」　https://www.willstyle.co.jp/blog/2869/</li>  -->
                 <li>pointer-events</li>
                 <!-- <li>inviewテストhttps://ec-recipe.com/what-is-shopify-2018/</li> -->

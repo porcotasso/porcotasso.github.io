@@ -166,6 +166,14 @@ $jsNodelist = array(
 	"lead" => "ノードリストにはliveとstaticがあります",
 	"html" => "js-nodelist.html"
 );
+//js-swiper
+$jsSwiper = array(
+	"file" => "/php/pages/js-swiper.php",
+	"tag" => array("js"),
+	"title" => "js-swiper",
+	"lead" => "スクロールにswiper.jsを使って動きを追加。swiper便利。",
+	"html" => "js-swiper.html"
+);
 //php
 $phpMemo = array(
 	"file" => "/php/pages/php-memo.php",
@@ -211,7 +219,7 @@ $allPages = array(
 	$contentsModel, $semanticTags, $aboutTags, 
 	$categorizedCSS, $namingRule, 
 	$button, $breakWord, $elementEmStrongMarkB, $favicon, $hamburgerMenu, $headerSmaller,
-	$javascriptMemo, $eventHandler, $eventPropagation, $scrollJunk, $touchEvent, $dayJs, $jsDate, $jsMarker, $jsNodelist, $jsScrollTop,
+	$javascriptMemo, $eventHandler, $eventPropagation, $scrollJunk, $touchEvent, $dayJs, $jsDate, $jsMarker, $jsNodelist, $jsScrollTop, $jsSwiper,
 	$phpMemo,$phpFilemtime,
 	$gulpfile,
 	$svg,

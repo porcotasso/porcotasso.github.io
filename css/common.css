@@ -468,7 +468,7 @@ body {
   bottom: 0;
   height: 60px;
   padding: 16px 5%;
-  background: #adb5bd; }
+  background: #222; }
   .ly-footer .el-copyright {
     color: #fff;
     font-size: 1.2rem;
@@ -520,73 +520,6 @@ body {
     border-bottom: 1px solid #666;
     content: "";
     transition-duration: .3s; }
-
-.bl-categoryList {
-  padding: 0;
-  list-style: none; }
-  .bl-categoryList_cnt {
-    position: relative;
-    width: 100%;
-    margin-top: 16px;
-    padding: 8px 8px;
-    border-bottom: 1px solid #dee2eb; }
-    .bl-categoryList_cnt:after {
-      display: inline-block;
-      position: absolute;
-      right: 10px;
-      bottom: 20px;
-      width: 8px;
-      height: 8px;
-      transform: rotate(45deg);
-      border-right: 1px solid #666;
-      border-bottom: 1px solid #666;
-      content: "";
-      transition-duration: .3s; }
-    .bl-categoryList_cnt.is-active:after {
-      transform: rotate(-135deg); }
-  .bl-categoryList_index {
-    display: block;
-    color: #222; }
-  .bl-categoryList_ttl {
-    display: flex;
-    align-items: baseline; }
-    .bl-categoryList_ttl h2 {
-      margin: 0;
-      padding-right: 6px;
-      font-size: 1.5rem;
-      font-weight: normal; }
-    .bl-categoryList_ttl span {
-      align-items: center;
-      color: #666;
-      font-size: 1.3rem; }
-  .bl-categoryList_txt {
-    margin-bottom: 0;
-    font-size: 1.5rem; }
-  .bl-categoryList_menu {
-    height: 0;
-    padding: 0 20px;
-    overflow: hidden;
-    background: #f5f5f5;
-    line-height: 0;
-    opacity: 0.3;
-    transition-duration: .3s; }
-    .bl-categoryList_menu.is-open {
-      /* numberに書き換える*/
-      height: auto;
-      padding: 10px 20px;
-      line-height: normal;
-      opacity: 1; }
-      .bl-categoryList_menu.is-open ul li {
-        padding: 10px; }
-  .bl-categoryList_menuList {
-    padding-left: 0;
-    list-style: none; }
-    .bl-categoryList_menuList li {
-      padding: 0 10px;
-      border-bottom: 1px solid #fff;
-      transition-duration: .3s; }
-      .bl-categoryList_menuList li:last-of-type {
-        border-bottom: none; }
 
 .articleCnt h1 {
   margin-bottom: 1em;
