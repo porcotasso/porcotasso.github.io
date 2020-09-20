@@ -1,56 +1,78 @@
 <?php include("_partial/wrapper-head.php"); ?>
 <main>
-    <p class="ly-homeProfile"><b>このサイトはまだ制作中です</b></p>
-    <p>最近の変更ページ</p>
-<div class="ly-homeNews">
-<?php 
-/// 更新日時順で並び替える関数
-$sort_by_lastmod = function($a, $b) {
-  return filemtime($b) - filemtime($a);
-};
-//要約：ファイルのupdate日はファイル自体にアクセスしないと取得できないのに対し、サイトで表示させたいのは$allPages内の変数なので、その違う情報をどう正確に結びつけるかがポイント
-//allPages内にある変数の各パスをとって$stack配列内で並べる。
-//allPagesから取得したファイルパスからファイル自体にアクセスして、ファイルの更新日で並び替える。$stack変数はupdateの新しい順
-//スライダー内に表示する数の分だけを$stackから$latestUpdate変数に入れる
-//新しい配列$latestContentを作り$allPages内の各ファイルパスと$latestUpdateのパスが一致する変数だけif文で見つけ配列内に並べる。その際新しい順になるよう２重のループを使用する。
-$stack = array();
-foreach($allPages as $list){
-    $filename = $baseUrl.$list["file"]; 
-    array_push($stack,$filename);   
-}
-usort( $stack, $sort_by_lastmod );
-$n = 5;
-$latestUpdate = array_slice($stack, 0, $n);
+    <?php echo $contentsModel["update"] ?>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
 
-$latestContent = array();
-
-for($i = 0; $i < $n; $i++){
-    foreach($allPages as $list){
-        $filename = $baseUrl.$list["file"];
-        if(in_array($filename, (array)$latestUpdate[$i])){
-            array_push($latestContent,$list);
+        <?php 
+        /// 更新日時順で並び替える関数
+        $sort_by_lastmod = function($a, $b) {
+        return filemtime($b) - filemtime($a);
+        };
+        //要約：ファイルのupdate日はファイル自体にアクセスしないと取得できないのに対し、サイトで表示させたいのは$allPages内の変数なので、その違う情報をどう正確に結びつけるかがポイント
+        //allPages内にある変数の各パスをとって$stack配列内で並べる。
+        //allPagesから取得したファイルパスからファイル自体にアクセスして、ファイルの更新日で並び替える。$stack変数はupdateの新しい順
+        //スライダー内に表示する数の分だけを$stackから$latestUpdate変数に入れる
+        //新しい配列$latestContentを作り$allPages内の各ファイルパスと$latestUpdateのパスが一致する変数だけif文で見つけ配列内に並べる。その際新しい順になるよう２重のループを使用する。
+        $stack = array();
+        foreach($allPages as $list){
+            $filename = $baseUrl.$list["file"]; 
+            array_push($stack,$filename);   
         }
-    }
-}
-?>
-<?php foreach($latestContent as $value){ ?>
-    <a href="<?php echo '/pages/'. $value["html"]; ?>" class="ly-homeNews_cnt">
-        <h2><?php echo $value["title"];?></h2>
-        <p class="ly-homeNews_lead"><?php echo $value["lead"];?></p>
-    </a>
-<?php } ?>
-
+        usort( $stack, $sort_by_lastmod );
+        $n = 5;
+        $latestUpdate = array_slice($stack, 0, $n);
+        $latestContent = array();
+        for($i = 0; $i < $n; $i++){
+            foreach($allPages as $list){
+                $filename = $baseUrl.$list["file"];
+                if(in_array($filename, (array)$latestUpdate[$i])){
+                    array_push($latestContent,$list);
+                }
+            }
+        }
+        ?>
+        <?php foreach($latestContent as $value){ ?>
+            <a href="<?php echo '/pages/'. $value["html"]; ?>" class="swiper-slide">
+                <div class="swiper-slide_cnt">
+                    <ul class="swiper-slide_tag">
+                        <?php foreach ( $value["tag"] as $name) { ?>
+                        <li class="swiper-slide_tag_list">
+                            <?php echo $name; ?>
+                        </li>
+                        <?php } ?>   
+                    </ul>
+                    <h2 class="swiper-slide_title"><?php echo $value["title"];?></h2>
+                    <p class="swiper-slide_lead"><?php echo $value["lead"];?></p>
+                    <p class="swiper-slide_updateDate"><?php echo date ("Y.m.d", filemtime($baseUrl.$value["file"])).' updated'; ?></p>
+                </div>
+            </a>
+         <?php } ?>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div> 
+    <div class="swiper-button-next"></div>
 </div>
 
+
+ 
     <article class="ly-baseWrap">
-        <a href="pages/diary.html">制作日記、メモ</a>
+        <a href="pages/diary.html">
+        <div class="ly-diary">
+            <h2 class="ly-diary_title">制作日記</h2>
+            <p>このサイトはまだ制作中です<br>
+            早く人に見てもらいたいけど、できてない部分が多すぎるので地道に毎日編集中。</p>
+
+        </div>
+    </a>
+        
+        <p class="ly-homeProfile">ウェブのフロントエンドエンジニアです。html, css, php, javascript,gulp、adobe XD, Illustrator, phptoshopなどを使います。作ること全般が好きで、イラストやレタッチ、動画、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。</p>
         <nav>
             <ul class="bl-categoryList">
                 <?php foreach($pageLists as $list){ ?>
                 <li class="bl-categoryList_cnt js-accordionTrigger">
                     <div class="bl-categoryList_index">
                        <div class="bl-categoryList_ttl"><h2><?php echo $list["title"]; ?></h2><span>(<?php echo count($list["pages"]) ?>)</span></div>
-                       <?php /* <p class="bl-categoryList_txt"><?php echo $list["lead"]; ?></p> */ ?>
                     </div>
                 </li>
                 <li class="bl-categoryList_menu">
@@ -123,16 +145,39 @@ for($i = 0; $i < $n; $i++){
     <h2>全部にクラスをつけるかどうか</h2>
     <h2>本</h2>
     <h2>SVG</h2> -->
-        <p class="ly-homeProfile">ウェブのフロントエンドエンジニアです。html, css, php, javascript,gulp、adobe XD, Illustrator, phptoshopなどを使います。作ること全般が好きで、イラストやレタッチ、動画、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。</p>
-        <section class="ly-section">
-            <h3>参考</h3>
-            <cite class="ly-cite"><a href="https://murashun.jp" <?php echo $targetBlank ?>>murashun.jp</a></cite>
-            <cite class="ly-cite"><a href="https://www.ameamelog.com/category/web-design/css/" <?php echo $targetBlank ?>>ameamelogコーディング</a></cite>
-            <cite class="ly-cite"><a href="http://honttoni.blog74.fc2.com/blog-entry-107.html?sp" <?php echo $targetBlank ?>>ほんっとにはじめてのHTML5とCSS3</a></cite>
-            <cite class="ly-cite"><a href="https://www.w3.org/TR/html51/grouping-content.html#the-p-element" <?php echo $targetBlank ?>>w3.org p element</a></cite>
-            <cite class="ly-cite"><a href="https://liginc.co.jp/" <?php echo $targetBlank ?>>lig</a></cite>
-            <cite class="ly-cite"><a href="https://baigie.me/menu/" <?php echo $targetBlank ?>>baigie</a></cite>
-        </section>
+
     </article>
 </main>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+<script>
+var mySwiper = new Swiper ('.swiper-container', {
+    autoplay: {
+        delay: 2500,
+    },
+    loop: true,
+    speed: 500,
+    // ここから
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    // ここまでを追加
+    slidesPerView: 3,    // 追加...1度に表示するスライド枚数
+    spaceBetween: 4,    // 追加...スライド間の余白
+    // ブレイクポイントを設定
+    breakpoints: {
+        767: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        }
+    }
+});
+
+</script>
 <?php include("_partial/wrapper-foot.php"); ?>

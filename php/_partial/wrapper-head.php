@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/common.css">
     <?php if($_SERVER['REQUEST_URI'] == "/php/index.php"){ ?>
         <link rel="stylesheet" href="/css/home.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" rel="stylesheet">
     <?php } ?>  
     <!-- google font Pacifico for title -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->

@@ -8,7 +8,8 @@ $contentsModel = array(
 	"tag" => array("html"),
 	"title" => "コンテンツ・モデル",
 	"lead" => "HTML5では、このタグの中にはこのタグが配置できる、といった配置ルールが決められており、これをコンテンツ・モデル（Content models）といいます。",
-	"html" => "contents-model.html"
+	"html" => "contents-model.html",
+	"update" => filemtime($baseUrl."/php/pages/contents-model.php")
 );
 $semanticTags = array(
 	"file" => "/php/pages/semantic-tags.php",
@@ -117,7 +118,7 @@ $jsScroll = array(
 //js-scrollTop
 $jsScrollTop = array(
 	"file" => "/php/pages/js-scrolltop.php",
-	"tag" => array("js"),
+	"tag" => array("js", "parts"),
 	"title" => "スクロールでトップに戻るボタン",
 	"lead" => "スクロールでトップに戻るボタンを右下に追加します。最初は表示せず、下にスクロールすると徐々に表示するようにします。",
 	"html" => "js-scrolltop.html"

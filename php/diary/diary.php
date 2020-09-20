@@ -22,7 +22,7 @@
                 <li>「スクロールジャンク」https://blog.webico.work/passive-event-listeber01</li>
                 <li>PCデザイン</li>
                 <li>docker</li>
-                <li>swiper, slick, Preload.js,Cookie判定にはjquery-cookie.js</li>
+                <li>slick, Preload.js,Cookie判定にはjquery-cookie.js</li>
                 <li>ロゴ作成</li>
                 <li>ぱんくずリスト</li>
                 <li>目次の開閉</li>
@@ -39,7 +39,6 @@
                 <li>typescriptまとめ</li>
                 <li>UXまとめ</li>
                 <li>UIまとめ</li>
-                <li>カルーセル</li>
                 <li>データベースを作りそこからデータを呼びだす</li>
                 <li>ポップ</li>
 
@@ -50,8 +49,10 @@
                 <li>-CSSカテゴライズまとめ、break-wordなどテキスト、svgまとめ</li>
             </ul>
             <h2><time>2020年</time></h2>
+            <time class="dairyTime" datetime="2020-09-20">9月20日</time>
+            <p>スクロールにswiper.jsを使って動きを追加。swiper便利。表示するコンテンツも色々追加。タグから検索ができるようにしたい。</p>
             <time class="dairyTime" datetime="2020-09-19">9月19日</time>
-            <p>スクロールでトップに戻るボタンを右下に追加してまとめる。</p>
+            <p>スクロールでトップに戻るボタンを右下に追加してまとめる。ホームのスライダーで新しいページだけをリストに並べる。ファイルのupdate日はファイル自体にアクセスしないと取得できないのに対し、サイトで表示させたいのは$allPages内の変数なので、その違う情報をどう正確に結びつけるかがポイント</p>
             <time class="dairyTime" datetime="2020-09-16">9月16日</time>
             <p>HTML5では a href="#top">TOP でページトップへジャンプするようになった。</p>
             <time class="dairyTime" datetime="2020-09-10">9月10日</time>
@@ -112,6 +113,15 @@
             <p>ファビコンの使い方があいまいだったので調べて実行。各情報も結構あいまいなものもある。明確にわけれたと思う。</p>
             <time class="dairyTime" datetime="2020-08-19">8月19日</time>
             <p>脱jQueryをする。ヘッダーのsmallerのコードを変更。</p>
+        </section>
+        <section class="ly-section">
+            <h3>参考</h3>
+            <cite class="ly-cite"><a href="https://murashun.jp" <?php echo $targetBlank ?>>murashun.jp</a></cite>
+            <cite class="ly-cite"><a href="https://www.ameamelog.com/category/web-design/css/" <?php echo $targetBlank ?>>ameamelogコーディング</a></cite>
+            <cite class="ly-cite"><a href="http://honttoni.blog74.fc2.com/blog-entry-107.html?sp" <?php echo $targetBlank ?>>ほんっとにはじめてのHTML5とCSS3</a></cite>
+            <cite class="ly-cite"><a href="https://www.w3.org/TR/html51/grouping-content.html#the-p-element" <?php echo $targetBlank ?>>w3.org p element</a></cite>
+            <cite class="ly-cite"><a href="https://liginc.co.jp/" <?php echo $targetBlank ?>>lig</a></cite>
+            <cite class="ly-cite"><a href="https://baigie.me/menu/" <?php echo $targetBlank ?>>baigie</a></cite>
         </section>
     </article>
     
