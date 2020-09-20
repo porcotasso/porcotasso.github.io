@@ -3,13 +3,38 @@
 
 // コンテンツのページのarticle タグに追加し、hタグなどのスタイルを統一させる
 .articleCnt{
-  h1{
+  &_ttl{
+    // display: flex;
+    // justify-content: space-between;
     padding-top: 1em;
     padding-bottom: 1em;
     margin-bottom: 1em;
     border-bottom: 1px dotted $opera;
     text-align: center;
     letter-spacing: 0.1em;
+    position: relative;
+    &_pre, &_nxt{
+      position: absolute;
+      top: 24px;
+      content: "";
+      position: absolute;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-bottom: 1px solid $font-gray;
+      border-right: 1px solid $font-gray;
+    }
+    &_pre{
+      left: 12px;
+      transform: rotate(135deg);
+    }
+    &_nxt{
+      right: 12px;
+      transform: rotate(-45deg);
+    }
+    h1{
+      margin: 0 30px;
+    }
   }
   .el-updateDate{
     font-size: $font-size-13;

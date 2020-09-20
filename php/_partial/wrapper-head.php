@@ -24,13 +24,21 @@
         } elseif($_SERVER['REQUEST_URI'] == "/php/diary/diary.php"){
             $title = "制作メモ、日記";
         } else {
+            $i = 0;
             foreach($allPages as $list){
                 if($list["file"] == $_SERVER['REQUEST_URI']){
                     $title = $list["title"];
                     $lead = $list["lead"];
                     $filename = $baseUrl.$list["file"];
+                    if($i != 0){
+                        $pagePre = "/pages/".$allPages[$i - 1]["html"];
+                    }
+                    if($i != count($allPages) -1 ){
+                        $pageNext = "/pages/".$allPages[$i + 1]["html"];
+                    }                   
                     break;
                 }
+                $i ++;
             } 
         } ?>
     <title><?php echo ($title); ?></title>

@@ -1,36 +1,28 @@
 <?php include("_partial/wrapper-head.php"); ?>
 <main>
+    <?php 
+    $sort_by_lastmod = function($a, $b) {
+    return filemtime($b) - filemtime($a);
+    };
+    $stack = array();
+    foreach($allPages as $list){
+        $filename = $baseUrl.$list["file"]; 
+        array_push($stack,$filename);   
+    }
+    usort( $stack, $sort_by_lastmod );
+    $n = 5;
+    $latestUpdate = array_slice($stack, 0, $n);
+    $latestContent = array();
+    for($i = 0; $i < $n; $i++){
+        foreach($allPages as $list){
+            $filename = $baseUrl.$list["file"];
+            if(in_array($filename, (array)$latestUpdate[$i])){
+                array_push($latestContent,$list);
+            }
+        }
+    } ?>
     <div class="swiper-container">
         <div class="swiper-wrapper">
-
-            <?php 
-            /// 更新日時順で並び替える関数
-            $sort_by_lastmod = function($a, $b) {
-            return filemtime($b) - filemtime($a);
-            };
-            //要約：ファイルのupdate日はファイル自体にアクセスしないと取得できないのに対し、サイトで表示させたいのは$allPages内の変数なので、その違う情報をどう正確に結びつけるかがポイント
-            //allPages内にある変数の各パスをとって$stack配列内で並べる。
-            //allPagesから取得したファイルパスからファイル自体にアクセスして、ファイルの更新日で並び替える。$stack変数はupdateの新しい順
-            //スライダー内に表示する数の分だけを$stackから$latestUpdate変数に入れる
-            //新しい配列$latestContentを作り$allPages内の各ファイルパスと$latestUpdateのパスが一致する変数だけif文で見つけ配列内に並べる。その際新しい順になるよう２重のループを使用する。
-            $stack = array();
-            foreach($allPages as $list){
-                $filename = $baseUrl.$list["file"]; 
-                array_push($stack,$filename);   
-            }
-            usort( $stack, $sort_by_lastmod );
-            $n = 5;
-            $latestUpdate = array_slice($stack, 0, $n);
-            $latestContent = array();
-            for($i = 0; $i < $n; $i++){
-                foreach($allPages as $list){
-                    $filename = $baseUrl.$list["file"];
-                    if(in_array($filename, (array)$latestUpdate[$i])){
-                        array_push($latestContent,$list);
-                    }
-                }
-            }
-            ?>
             <?php foreach($latestContent as $value){ ?>
                 <a href="<?php echo '/pages/'. $value["html"]; ?>" class="swiper-slide">
                     <div class="swiper-slide_cnt">
@@ -148,32 +140,5 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
-<script>
-    var mySwiper = new Swiper ('.swiper-container', {
-        autoplay: {
-            delay: 2500,
-        },
-        loop: true,
-        speed: 500,
-        // ここから
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        // ここまでを追加
-        slidesPerView: 3,    // 追加...1度に表示するスライド枚数
-        spaceBetween: 4,    // 追加...スライド間の余白
-        // ブレイクポイントを設定
-        breakpoints: {
-            767: {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            }
-        }
-    });
-
-</script>
-<?php include("_partial/wrapper-foot.php"); ?>
+<script src="/js/home.js"></script>
+<?php include("_partial/wrapper-foot.php"); ?>s

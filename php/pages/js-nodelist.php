@@ -2,11 +2,7 @@
 <main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
-            <h1><?php echo $title ?></h1>
-			<?php if (file_exists($filename)) { ?>
-				<p class="el-updateDate"><?php echo date ("Y.m.d", filemtime($filename)).' updated'; ?></p>
-			<?php } ?>
-            <p><?php echo $lead ?></p>  
+            <?php include("../_partial/pages-title.php"); ?>
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                 <?php $navList = array("Nodeとは", "主なノードの種類", "属性ノード", "HTMLコレクション", "Nodelist", "要素の探し方"); ?>

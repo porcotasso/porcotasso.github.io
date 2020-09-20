@@ -16,7 +16,7 @@
                 <!-- <li>scroll　スクロールに応じてイベントをトリガーしてくれるライブラリ「ScrollTrigger」　https://www.willstyle.co.jp/blog/2869/</li>  -->
                 <li>pointer-events</li>
                 <!-- <li>inviewテストhttps://ec-recipe.com/what-is-shopify-2018/</li> -->
-                <li>ホームレイアウト　homeにスライダーをつける</li>
+                <li>タグから検索ができるようにしたい。</li>
                 <li>「スクロールチェーン」の挙動を無効化https://necomesi.jp/blog/tsmd/posts/180</li>
                 <li>「スクロールジャンク」https://blog.webico.work/passive-event-listeber01</li>
                 <li>PCデザイン</li>
@@ -25,11 +25,10 @@
                 <li>ロゴ作成</li>
                 <li>ぱんくずリスト</li>
                 <li>目次の開閉</li>
-                <li>guipfileまとめ</li>
+                <li>gulpfileまとめ</li>
                 <li>エスケープのjsまとめ</li>
                 <li>prettyまとめ</li>
                 <li>現実的問題まとめ</li>
-                <li>コンテンツページ同士のリンク、タイトル左右に矢印</li>
                 <li>nginxまとめバーチャルホスト</li>
                 <li>githubまとめ</li>
                 <li>fishまとめ</li>
@@ -49,7 +48,7 @@
             </ul>
             <h2><time>2020年</time></h2>
             <time class="dairyTime" datetime="2020-09-20">9月20日</time>
-            <p>スクロールにswiper.jsを使って動きを追加。swiper便利。表示するコンテンツも色々追加。タグから検索ができるようにしたい。</p>
+            <p>スクロールにswiper.jsを使って動きを追加。swiper便利。表示するコンテンツも色々追加。スクロールカルーセルまとめ。各ページのタイトルの左右に前後のページのリンクを追加。</p>
             <time class="dairyTime" datetime="2020-09-19">9月19日</time>
             <p>スクロールでトップに戻るボタンを右下に追加してまとめる。ホームのスライダーで新しいページだけをリストに並べる。ファイルのupdate日はファイル自体にアクセスしないと取得できないのに対し、サイトで表示させたいのは$allPages内の変数なので、その違う情報をどう正確に結びつけるかがポイント</p>
             <time class="dairyTime" datetime="2020-09-16">9月16日</time>

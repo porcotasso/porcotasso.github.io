@@ -125,7 +125,6 @@ for(var i = 0; i < pre.length; i++) {
 var saClass = 'el-marker';
 var saShowClass = 'show';
 var triggerMarginDefault = 200;
- 
 var saElm = document.querySelectorAll('.' + saClass); //.showがついたelement のオブジェクト
 var saFunc = function() {
   var dataMargin = saClass + '_margin'; //el-marker_margin
@@ -200,7 +199,6 @@ window.addEventListener('scroll', () => {
     btnScrollTop.style.opacity = pageOffsetY/1000;
   }
 });
-
 scrollTop(btnScrollTop, 180);
 function scrollTop(el, duration) {
   el.addEventListener('click', function() {

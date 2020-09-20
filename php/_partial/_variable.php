@@ -170,8 +170,8 @@ $jsNodelist = array(
 $jsSwiper = array(
 	"file" => "/php/pages/js-swiper.php",
 	"tag" => array("js"),
-	"title" => "js-swiper",
-	"lead" => "スクロールにswiper.jsを使って動きを追加。swiper便利。",
+	"title" => "カルーセルスライダー",
+	"lead" => "ホームのカルーセルスライダーにupdateの新しい順にコンテンツを並べ、swiper.jsを使って動きを追加します。",
 	"html" => "js-swiper.html"
 );
 //php
