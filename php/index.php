@@ -1,6 +1,5 @@
 <?php include("_partial/wrapper-head.php"); ?>
 <main>
-    <?php echo $contentsModel["update"] ?>
 <div class="swiper-container">
     <div class="swiper-wrapper">
 
@@ -58,15 +57,16 @@
  
     <article class="ly-baseWrap">
         <a href="pages/diary.html">
-        <div class="ly-diary">
-            <h2 class="ly-diary_title">制作日記</h2>
-            <p>このサイトはまだ制作中です<br>
-            早く人に見てもらいたいけど、できてない部分が多すぎるので地道に毎日編集中。</p>
-
-        </div>
-    </a>
+            <div class="ly-diary">
+                <h2 class="ly-diary_title">制作日記</h2>
+                <p>このサイトはまだ制作中です<br>
+                早く人に見てもらいたいけど、できてない部分が多すぎるので地道に毎日編集中。</p>
+            </div>
+        </a>
         
-        <p class="ly-homeProfile">ウェブのフロントエンドエンジニアです。html, css, php, javascript,gulp、adobe XD, Illustrator, phptoshopなどを使います。作ること全般が好きで、イラストやレタッチ、動画、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。</p>
+        <div class="ly-homeProfile">
+            <h2>profile</h2>
+            <p>ウェブのフロントエンドエンジニアです。html, css, php, javascript,gulp、adobe XD, Illustrator, phptoshopなどを使います。作ること全般が好きで、イラストやレタッチ、動画、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。</p></div>
         <nav>
             <ul class="bl-categoryList">
                 <?php foreach($pageLists as $list){ ?>

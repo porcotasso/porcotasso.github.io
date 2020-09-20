@@ -8,8 +8,7 @@ $contentsModel = array(
 	"tag" => array("html"),
 	"title" => "コンテンツ・モデル",
 	"lead" => "HTML5では、このタグの中にはこのタグが配置できる、といった配置ルールが決められており、これをコンテンツ・モデル（Content models）といいます。",
-	"html" => "contents-model.html",
-	"update" => filemtime($baseUrl."/php/pages/contents-model.php")
+	"html" => "contents-model.html"
 );
 $semanticTags = array(
 	"file" => "/php/pages/semantic-tags.php",
