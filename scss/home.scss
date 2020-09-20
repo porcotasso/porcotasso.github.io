@@ -53,13 +53,13 @@
 //   }
 // }
 .swiper-container{
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   .swiper-wrapper{
     .swiper-slide{
       &_cnt{
         box-shadow: $box-shadow;
         margin: 10px $gutter-width;
-        padding: 42px 24px 16px;
+        padding: 42px 36px 16px;
         background: #fff;
         border-radius: 4px;
         height: 240px;
@@ -73,10 +73,9 @@
         background: #8a8a8a;
         position: absolute;
         left: 0px;
-        top: 0px;
+        top: -6px;
         &_list{
           font-size: $font-size-13;
-          font-weight: bold;
           padding: 0 3px 3px;
           line-height: 1.2;
           // margin-right: 6px;
@@ -94,8 +93,8 @@
         }
       }
       &_title{
-        font-size: $font-size-19;
-        margin:0 0 8px;
+        font-size: $font-size-18;
+        margin:0 0 12px;
       } 
       &_lead{
         font-size: $font-size-14;
@@ -109,7 +108,7 @@
         position: absolute;
         right: 24px;
         margin: 0;
-        bottom: 24px;
+        bottom: 32px;
       }
     }
   }
@@ -144,6 +143,9 @@
   }
   .swiper-button-next {
     transform: rotate(-45deg);
+  }
+  &.swiper-container-horizontal > .swiper-pagination-bullets{
+    bottom: 18px;
   }
 }
 

@@ -43,7 +43,7 @@
                     </ul>
                     <h2 class="swiper-slide_title"><?php echo $value["title"];?></h2>
                     <p class="swiper-slide_lead"><?php echo $value["lead"];?></p>
-                    <p class="swiper-slide_updateDate"><?php echo date ("Y.m.d", filemtime($baseUrl.$value["file"])).' updated'; ?></p>
+                    <p class="swiper-slide_updateDate"><?php echo date ("Y.m.d", filemtime($baseUrl.$value["file"])); ?></p>
                 </div>
             </a>
          <?php } ?>
@@ -65,7 +65,7 @@
         </a>
         
         <div class="ly-homeProfile">
-            <h2>profile</h2>
+            <h2>プロフィール</h2>
             <p>ウェブのフロントエンドエンジニアです。html, css, php, javascript,gulp、adobe XD, Illustrator, phptoshopなどを使います。作ること全般が好きで、イラストやレタッチ、動画、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。</p></div>
         <nav>
             <ul class="bl-categoryList">

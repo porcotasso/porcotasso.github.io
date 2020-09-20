@@ -9,19 +9,19 @@
   margin-bottom: 16px; }
 
 .swiper-container {
-  margin-bottom: 16px; }
+  margin-bottom: 24px; }
   .swiper-container .swiper-wrapper .swiper-slide_cnt {
     position: relative;
     height: 240px;
     margin: 10px 5%;
-    padding: 42px 24px 16px;
+    padding: 42px 36px 16px;
     border-radius: 4px;
     background: #fff;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08); }
   .swiper-container .swiper-wrapper .swiper-slide_tag {
     display: flex;
     position: absolute;
-    top: 0px;
+    top: -6px;
     left: 0px;
     padding: 0 10px;
     background: #8a8a8a;
@@ -30,7 +30,6 @@
     .swiper-container .swiper-wrapper .swiper-slide_tag_list {
       padding: 0 3px 3px;
       font-size: 1.3rem;
-      font-weight: bold;
       line-height: 1.2; }
       .swiper-container .swiper-wrapper .swiper-slide_tag_list:after {
         position: relative;
@@ -40,8 +39,8 @@
       .swiper-container .swiper-wrapper .swiper-slide_tag_list:last-of-type::after {
         content: ""; }
   .swiper-container .swiper-wrapper .swiper-slide_title {
-    margin: 0 0 8px;
-    font-size: 1.9rem; }
+    margin: 0 0 12px;
+    font-size: 1.8rem; }
   .swiper-container .swiper-wrapper .swiper-slide_lead {
     margin: 0 0 6px;
     color: #222;
@@ -50,7 +49,7 @@
   .swiper-container .swiper-wrapper .swiper-slide_updateDate {
     position: absolute;
     right: 24px;
-    bottom: 24px;
+    bottom: 32px;
     margin: 0;
     color: #888;
     font-size: 1.3rem; }
@@ -77,6 +76,8 @@
     transform: rotate(135deg); }
   .swiper-container .swiper-button-next {
     transform: rotate(-45deg); }
+  .swiper-container.swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 18px; }
 
 .ly-diary {
   margin: 16px 0 48px;
