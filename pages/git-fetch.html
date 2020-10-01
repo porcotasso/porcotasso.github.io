@@ -14,7 +14,7 @@
       
     <!-- google font Pacifico for title -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
-            <title>命名ルール</title>
+            <title>git-fetch</title>
 </head>
 <body>
 
@@ -409,55 +409,47 @@
     <div class="el-blackCover" id="js-blackCover"></div><main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
-            <div class="articleCnt_ttl">
-			<a href="/pages/categorized-css.html" class="articleCnt_ttl_pre"></a>
+			<div class="articleCnt_ttl">
+			<a href="/pages/gulpfile.html" class="articleCnt_ttl_pre"></a>
 		
-	<h1>命名ルール</h1>
-			<a href="/pages/button.html" class="articleCnt_ttl_nxt"></a>
+	<h1>git-fetch</h1>
+			<a href="/pages/svg.html" class="articleCnt_ttl_nxt"></a>
 		
 </div>
-	<p class="el-updateDate">2020.09.20 updated</p>
-<p>クラス名からクラスの目的やスコープがわかるようにしておき、正確なコーディングに役立てる。</p>              <nav class="ly-mainNav">
+	<p class="el-updateDate">2020.10.01 updated</p>
+<p>リモートブランチをローカルにコピーしたいけどできない時のメモ。</p>              <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                                 <ol>
                                         <li>
-                        <a href="#1" class="">
-                            <div class="">命名ルール</div>
+                        <a href="#0" class="">
+                            <div class="">リモートブランチのコピー</div>
                         </a>
                     </li>
                                         <li>
-                        <a href="#2" class="">
-                            <div class="">略語</div>
+                        <a href="#1" class="">
+                            <div class="">できない場合の原因</div>
                         </a>
                     </li>
                                     </ol>
             </nav>
         </header>
-        <section class="ly-section"  id="1">
-            <h2>命名ルール</h2>
-            <ul>
-                <li>ローワーキャメル</li>
-                <li>ly- レイアウトグループ</li>
-                <li>bl- ブロックモジュール</li>
-                <li>el- エレメントモジュール</li>
-                <li>js- javascriptに利用するクラスもしくはidにつける</li>
-                <li>--　モディファイヤーの区切り</li>
-                <li>_ block element を繋ぐ</li>
-            </ul>
-        </section>
-        <section class="ly-section"  id="2">
-            <h2>略語</h2>
-            <ul>
-                <li>container　単体のブロックを囲う時に使う　主にレイアウト的な入れ物　レイアウトに関するスタイルをつける </li>
-                <li>wrapper　単体のブロックを囲う時に使う　意味的な入れ物　レイアウト以外に関するスタイルをつける</li>
-                <li>_inner 複数のブロックを囲う時に使う　の下で使う入れ物　</li>
-                <li>btn ーbutton</li>
-                <li>txt ーtext</li>
-                <li>cnt ーcontent</li>
-                <li>ico ーicon</li>
-                <li>cat ーcategory</li>
-            </ul>
-        </section>
+        <section class="ly-section" id="0">
+            <h2>リモートブランチのコピー</h2>
+
+			<h3>html、php</h3>
+			<p>リモートブランチのコピーをしたい場合の書き方。</p>
+<pre class="prettyprint">
+git checkout -b branch-name origin/branch-name	
+</pre>
+		</section>
+        <section class="ly-section" id="1">
+            <h2>できない場合の原因</h2>
+            <p>上の書き方でエラーが出ることがある。何が問題かとういうと、ローカルにリモートにどんなブランチがあるかの情報が古くて、データが欲しいブランチをローカルが認識できてない。それを解決するのが</p>
+<pre class="prettyprint">
+git fetch
+</pre>
+			<p>これをした後なら、最初の書き方でデータがひっぱってこれる。あくまでリストのデータなので、中身はコピーされない。</p>
+            </section>
     </article>
 </main>
         <footer class="ly-footer">

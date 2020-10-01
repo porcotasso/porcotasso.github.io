@@ -190,12 +190,26 @@ $phpFilemtime = array(
 	"html" => "php-filemtime.html"
 );
 //environment
+$environmentSummary = array(
+	"file" => "/php/pages/environment-summary.php",
+	"tag" => array("environment"),
+	"title" => "制作環境設定全般",
+	"lead" => "例えば一から環境を整える場合、何からすればいいかというメモ。",
+	"html" => "environment-summary.html"
+);
 $gulpfile = array(
 	"file" => "/php/pages/gulpfile.php",
 	"tag" => array("environment"),
 	"title" => "gulpfile",
 	"lead" => "メモ",
 	"html" => "gulpfile.html"
+);
+$gitFetch = array(
+	"file" => "/php/pages/git-fetch.php",
+	"tag" => array("environment", "git"),
+	"title" => "git-fetch",
+	"lead" => "リモートブランチをローカルにコピーしたいけどできない時のメモ。",
+	"html" => "git-fetch.html"
 );
 //svg
 $svg = array(
@@ -221,7 +235,7 @@ $allPages = array(
 	$button, $breakWord, $elementEmStrongMarkB, $favicon, $hamburgerMenu, $headerSmaller,
 	$javascriptMemo, $eventHandler, $eventPropagation, $scrollJunk, $touchEvent, $dayJs, $jsDate, $jsMarker, $jsNodelist, $jsScrollTop, $jsSwiper,
 	$phpMemo,$phpFilemtime,
-	$gulpfile,
+	$environmentSummary, $gulpfile, $gitFetch,
 	$svg,
 	$shopifyMemo
 );

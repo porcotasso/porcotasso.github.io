@@ -14,7 +14,7 @@
       
     <!-- google font Pacifico for title -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
-            <title>命名ルール</title>
+            <title>制作環境設定全般</title>
 </head>
 <body>
 
@@ -409,55 +409,81 @@
     <div class="el-blackCover" id="js-blackCover"></div><main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
-            <div class="articleCnt_ttl">
-			<a href="/pages/categorized-css.html" class="articleCnt_ttl_pre"></a>
+			<div class="articleCnt_ttl">
+			<a href="/pages/php-filemtime.html" class="articleCnt_ttl_pre"></a>
 		
-	<h1>命名ルール</h1>
-			<a href="/pages/button.html" class="articleCnt_ttl_nxt"></a>
+	<h1>制作環境設定全般</h1>
+			<a href="/pages/gulpfile.html" class="articleCnt_ttl_nxt"></a>
 		
 </div>
-	<p class="el-updateDate">2020.09.20 updated</p>
-<p>クラス名からクラスの目的やスコープがわかるようにしておき、正確なコーディングに役立てる。</p>              <nav class="ly-mainNav">
+	<p class="el-updateDate">2020.10.02 updated</p>
+<p>例えば一から環境を整える場合、何からすればいいかというメモ。</p>              <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                                 <ol>
                                         <li>
+                        <a href="#0" class="">
+                            <div class="">何をしたいかを明確にする</div>
+                        </a>
+                    </li>
+                                        <li>
                         <a href="#1" class="">
-                            <div class="">命名ルール</div>
+                            <div class="">管理と構成と流れ</div>
                         </a>
                     </li>
                                         <li>
                         <a href="#2" class="">
-                            <div class="">略語</div>
+                            <div class="">homebrewをインストール</div>
                         </a>
                     </li>
                                     </ol>
             </nav>
         </header>
-        <section class="ly-section"  id="1">
-            <h2>命名ルール</h2>
-            <ul>
-                <li>ローワーキャメル</li>
-                <li>ly- レイアウトグループ</li>
-                <li>bl- ブロックモジュール</li>
-                <li>el- エレメントモジュール</li>
-                <li>js- javascriptに利用するクラスもしくはidにつける</li>
-                <li>--　モディファイヤーの区切り</li>
-                <li>_ block element を繋ぐ</li>
-            </ul>
-        </section>
-        <section class="ly-section"  id="2">
-            <h2>略語</h2>
-            <ul>
-                <li>container　単体のブロックを囲う時に使う　主にレイアウト的な入れ物　レイアウトに関するスタイルをつける </li>
-                <li>wrapper　単体のブロックを囲う時に使う　意味的な入れ物　レイアウト以外に関するスタイルをつける</li>
-                <li>_inner 複数のブロックを囲う時に使う　の下で使う入れ物　</li>
-                <li>btn ーbutton</li>
-                <li>txt ーtext</li>
-                <li>cnt ーcontent</li>
-                <li>ico ーicon</li>
-                <li>cat ーcategory</li>
-            </ul>
-        </section>
+        <section class="ly-section" id="0">
+            <h2>何をしたいかを明確にする</h2>
+			<h3>sass→css、php→htmlの自動コンパイル</h3>
+			<p>スタイルをcssでいちいち書きたくないからscssを使いたい。それとコンパイルも自動でできるようにしたい。</p>
+			<p>それをするには、タスクランナーのgulpが必要。gulpを使うにはNode.jsが必要。Node.jsはanyenvで管理するのが便利。</p>
+			<h3>phpを使いたい</h3>
+			<p>htmlで全部書くとか無理。php使って楽したい。</p>
+			<p>phpを使うには、homebrewを使ってインストールするのがいい。</p>
+			<h3>ローカルサーバでバーチャルホストをたてる</h3>
+			<p>MAMPは使わない。nginxを使う。homebrewを使ってインストールするのがいい。</p>
+			<h3>コマンド打ちを楽したい</h3>
+			<p>fishを入れる。</p>
+		</section>
+        <section class="ly-section" id="1">
+            <h2>管理と構成と流れ</h2>
+			<p>何かを使おうとした時、方法が色々あってあとでどうインストールしたか忘れてしまう。基本的には、homebrewとnpmで大まかに管理して、Node.jsはanyenvを利用。</p>
+			<h3>流れ</h3>
+			<ol>
+				<li>なにはともあれvisual Studio Codeをインストール</li>
+				<li>homebrewをインストール</li>
+				<li>gitをインストール</li>
+				<li>anyenvをインストール</li>
+				<li>gulpをインストール</li>
+				<li>phpをインストール</li>
+				<li>fishをインストール</li>
+			</ol>
+		</section>
+        <section class="ly-section" id="2">
+            <h2>homebrewをインストール</h2>
+			<p>homebrewはMac OSにおいてプログラミング上必要となるパッケージをインストールしたりアンインストールしたりする「パッケージ管理システム」です。</p>
+			<p><a href="https://brew.sh/index_ja">ここから</a>コードをコピペする。</p>
+			<p>※$curl というのはURLにアクセスしてデータを取得するコマンド。</p>
+		</section>
+		<section class="ly-section" id="2">
+            <h2>homebrewをインストール</h2>
+			<p>gitもhomebrewで管理しちゃいます。</p>
+			<p><a href="https://brew.sh/index_ja">ここから</a>コードをコピペする。</p>
+			<p>※$curl というのはURLにアクセスしてデータを取得するコマンド。</p>
+		</section>
+        <section class="ly-section" id="2">
+            
+<pre class="prettyprint">
+git fetch
+</pre>
+			<p>これをした後なら、最初の書き方でデータがひっぱってこれる。</p>
+            </section>
     </article>
 </main>
         <footer class="ly-footer">
