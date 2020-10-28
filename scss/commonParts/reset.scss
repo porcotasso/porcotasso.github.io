@@ -7,12 +7,10 @@
  }
  
  html {
-   font-family: sans-serif;
-   line-height: 1.15;
    -webkit-text-size-adjust: 100%;
    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
      // ルートのフォントサイズを10pxに設定しておく
- font-size: 62.5%;
+  font-size: 62.5%;
  }
 
  article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -21,15 +19,12 @@
  
 body {
   margin: 0;
-  //  font-family: 'Montserrat', "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
   font-family:"游ゴシック Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,sans-serif;
-  // 基本のフォントサイズをpc16px. モバイル14pxにする。chrome対策にbodyの単位はemに設定 
-  font-size: 1.5em; 
+  font-size: 1.6em; 
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
   color: $font-black;
-  // フォントサイズを基準にするようにemを使う。
   letter-spacing: 0.04em;
   text-align: left;
   background-color: $bg-white;
@@ -59,23 +54,16 @@ h1{
 h2{
   font-size: $font-size-17;
   font-weight: bold;
-  // border-left: 2px solid $font-black;
-  // padding:2px 2px 2px 4px;
-  // line-height: 1;
 }
 h3{
   font-size: $font-size-16;
-  // font-weight: bold;
-  // border: 1px solid $font-black;
-  // padding: 2px 10px;
-  // display: inline-block;
 }
 p{
   margin: 0 0 2rem;
+  letter-spacing: 0.05em;
 }
 // p と li　が文章中で同じような見せ方で利用されることを基本として文字スタイルを合わせる。
 p, li{
-  font-size: $font-size-15;
   letter-spacing: 0.06em;
   line-height: 1.9;
 }
