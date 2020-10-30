@@ -58,21 +58,22 @@ h2{
 h3{
   font-size: $font-size-16;
 }
-p{
-  margin: 0 0 2rem;
-  letter-spacing: 0.05em;
-}
+
 // p と li　が文章中で同じような見せ方で利用されることを基本として文字スタイルを合わせる。
 p, li{
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   line-height: 1.9;
 }
-img{
+// p{
+//   margin: 0 0 2rem;
+// }
+img {
+  vertical-align: middle;
+  border-style: none;
   max-width: 100%;
   height: auto;
 }
- abbr[title],
- abbr[data-original-title] {
+ abbr[title]{
    text-decoration: underline;
    -webkit-text-decoration: underline dotted;
    text-decoration: underline dotted;
@@ -88,6 +89,7 @@ img{
    line-height: inherit;
  }
  
+ p,
  ol,
  ul,
  dl {
@@ -110,9 +112,8 @@ img{
   //  padding: 0.1em 0; <- メニューでリストを使用する際に邪魔になるので削除
  }
  dt {
-   font-weight: 700;
+   font-weight: bold;
  }
- 
  dd {
    margin-bottom: .5rem;
    margin-left: 0;
@@ -124,9 +125,11 @@ img{
    padding:16px;
  }
  
+ em,
+ mark,
  b,
  strong {
-   font-weight: bolder;
+   font-weight: bold;
  }
  
  small {
@@ -192,12 +195,7 @@ img{
    margin: 0 0 1rem;
  }
  
- img {
-   vertical-align: middle;
-   border-style: none;
-   max-width: 100%;
-   height: auto;
- }
+ 
 
  svg {
    overflow: hidden;

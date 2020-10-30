@@ -416,7 +416,7 @@
 			<a href="/pages/categorized-css.html" class="articleCnt_ttl_nxt"></a>
 		
 </div>
-	<p class="el-updateDate">2020.10.28 updated</p>
+	<p class="el-updateDate">2020.10.29 updated</p>
 <p>各タグのスタイルをどうするかは、考え方やサイトのないようによりますが、できるだけなぜそうしたかを明確にしておくことで修正がしやすくなるのでメモ。</p>              <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                                 <ol>
@@ -437,17 +437,27 @@
                     </li>
                                         <li>
                         <a href="#3" class="">
-                            <div class="">homebrewでgitをインストール</div>
+                            <div class="">p, liタグ</div>
                         </a>
                     </li>
                                         <li>
                         <a href="#4" class="">
-                            <div class="">anyenvをインストール</div>
+                            <div class="">pタグ</div>
                         </a>
                     </li>
                                         <li>
                         <a href="#5" class="">
-                            <div class="">nodenvをインストール</div>
+                            <div class="">img</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#6" class="">
+                            <div class="">abbr</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#7" class="">
+                            <div class="">address</div>
                         </a>
                     </li>
                                     </ol>
@@ -471,9 +481,11 @@ box-sizing: border-box;
         <section class="ly-section" id="1">
             <h2>html</h2>
             <p>htmlはルートとなるトップレベル要素なのでルート要素と呼ばれる。</p>
-            <p><code>-webkit-text-size-adjust: 100%;</code>スマホを横向きにすると文字サイズが勝手に大きくなることがあるのですが、それを防ぐことができます。</p>
-            <p><code>-webkit-tap-highlight-color: rgba(0, 0, 0, 0);</code>スマートフォンやタブレットなどのタッチデバイスでタップした時のハイライトする色を設定。ブラウザの方で親切でやってくれているものではあるのですが、そもそもボタンの方にタップされたら凹ませるなどのデザインをしている場合は、それだけでフィードバックが事足りているのでかえってハイライトが邪魔だったりします。 なので、透明にして無効にする。</p>
-            <code>font-size: 62.5%;</code>
+            <p><code>-webkit-text-size-adjust: 100%;</code></p>
+            <p>スマホを横向きにすると文字サイズが勝手に大きくなることがあるのですが、それを防ぐことができます。</p>
+            <p><code>-webkit-tap-highlight-color: rgba(0, 0, 0, 0);</code></p>
+            <p>スマートフォンやタブレットなどのタッチデバイスでタップした時のハイライトする色を設定。ブラウザの方で親切でやってくれているものではあるのですが、そもそもボタンの方にタップされたら凹ませるなどのデザインをしている場合は、それだけでフィードバックが事足りているのでかえってハイライトが邪魔だったりします。 なので、透明にして無効にする。</p>
+            <p><code>font-size: 62.5%;</code></p>
             <p>基本的にブラウザではルート要素のフォントサイズが16px。いろんなデバイス、画面サイズでサイトを表示することを考えた時、フォントサイズの単位はremを使ったほうがいい。なので、ブラウザ設定の16pxに62.5%をかけて、ルート要素のフォントサイズをまず10pxにする。数値計算がわかりやすいように10pxにする。</p>        
 <pre class="prettyprint">
 -webkit-text-size-adjust: 100%;
@@ -528,15 +540,83 @@ body {
 }
 </pre>
         </section>
-        <section class="ly-section">
-            <h2>Pタグ</h2>
-            <p>pタグは「Paragraph」の略です。長いひとかたまりの文章だけでなく、テキストを使ういろいろな場所で使われるので、用途ごとに対応できるスタイルの指定が必要になります。<br>このサイトでの考え方では、複数行にわたる文章にpタグを使用して、長文が読みやすいスタイルを指定するのを優先します。具体的にはline-heightを1.8~2 letter-space0.05em など通常よりスペースを開けています。フォントサイズは長文が読みやすいサイズを目的とします。mobileで14px、PCで16pxあたりを基本に考えています。</p><p>ラベルなどで使う際には余計なスタイルをリセットして使用します。</p>
+        <!-- p li -->
+        <section class="ly-section" id="3">
+            <h2>p, liタグ</h2>
+            <p>p と li　が文章中で同じような見せ方で利用されることを基本として文字スタイルを合わせる。</p>
+            <p>大きなコンテナの中でpやliを繰り返し使った時、最後のpやliの下のスペースが邪魔になることがある。ここではliは下のスペースを作らず、line-heightのみで、バランスを調整する。pは別途margin-bottomを追加する。</p>
+            <p>またリストタグのlist-styleをどうしておくかについて、文章中のリストだけでなく、メニュー、パンくずリストなどでも使われるので、list-styleの設定をnoneにするかどうかはサイトの内容によって変えます。ここではdefaultのままで、いらない場合にはclassを追加するようにする。</p>
 <pre class="prettyprint">
-p{
-    margin: 0 0 2rem;
+p, li{
+  letter-spacing: 0.05em;
+  line-height: 1.9;
 }
 </pre>
         </section>
+        <!-- p -->
+        <section class="ly-section" id="4">
+            <h2>pタグ</h2>
+            <p>pタグは「Paragraph」の略です。長いひとかたまりの文章だけでなく、テキストを使ういろいろな場所で使われるので、用途ごとに対応できるスタイルの指定が必要になります。<br>このサイトでの考え方では、複数行にわたる文章にpタグを使用して、長文が読みやすいスタイルを指定するのを優先します。具体的にはline-heightを1.8~2 letter-space0.05em など通常よりスペースを開けています。フォントサイズは長文が読みやすいサイズを目的とします。mobileで14px、PCで16pxあたり？を基本に考えています。</p>
+            <p>listなどと一緒にmargin-bottomを追加します。</p>
+            <p>ラベルなどで使う際には余計なスタイルをリセットして使用します。</p>
+<pre class="prettyprint">
+p,
+ ol,
+ ul,
+ dl {
+   margin-top: 0;
+   margin-bottom: 2rem;
+ }
+</pre>
+        </section>
+        <!-- img -->
+        <section class="ly-section" id="5">
+            <h2>img</h2>
+            <p>経験上、画面幅を超えて表示させたいことは基本なかったので、先にmax-width: 100%;を追加しておく。そのほかの設定はbootstrap-rebootから</p>
+<pre class="prettyprint">
+img{
+    vertical-align: middle;
+    border-style: none;
+    max-width: 100%;
+    height: auto;
+}
+</pre>
+        </section>
+        <!-- abbr -->
+        <section class="ly-section" id="6">
+            <h2>abbr</h2>
+            <p>「ABBR」とは、「abbreviation」の略で、略語を示すタグです。例えばWWW（World Wide Web）やInc.（incorporated）、HTTP（HyperText Transfer Protocol）、HTML(Hypertext Markup Language)、XML(Extensible Markup Language)、Ltd.（Limited）などの言葉を略す際に使用されます。
+同様の意味を持つタグに <code>acronym</code> があり、LAN(Local Area Network)やSOHO(Small Office Home Office)など、略語が頭字語（省略される各単語の頭文字から成るもの）である場合に使用します。
+なお、title属性を指定することで、省略する前の言葉を示すことが可能です。</p>
+<pre class="prettyprint"><p><abbr title="World Wide Web">WWW</abbr></p></pre>
+<p>abbr[data-original-title]のツールチップ用なのでいらないかも？なので削除、cursor: help;　はホバー時のマウスカーソルの形状を？マークにする。text-decoration-skip-ink: none;は上線や下線が文字のアセンダーやディセンダーを通過するときにどのように引くのかを指定。noneはgやhでも気にせずそのまま上に線を引く。</p>
+
+<pre class="prettyprint">
+abbr[title]{
+   text-decoration: underline;
+   -webkit-text-decoration: underline dotted;
+   text-decoration: underline dotted;
+   cursor: help;
+   border-bottom: 0;
+   -webkit-text-decoration-skip-ink: none;
+   text-decoration-skip-ink: none;
+ }
+</pre>
+        </section>
+        <!-- address -->
+        <section class="ly-section" id="7">
+            <h2>address</h2>
+            <p><address>タグはページとサイトに書いてある連絡先情報を示すときに使います。作者の名前、メールアドレス、住所、電話番号、ファックス番号、フォームへのリンクなど</p>
+<pre class="prettyprint">
+address {
+   margin-bottom: 1rem;
+   font-style: normal;
+   line-height: inherit;
+ }
+</pre>
+        </section>
+
+
         <section class="ly-section">
             <h2>aタグ</h2>
 <pre class="prettyprint">
@@ -548,8 +628,12 @@ a{
 }
 </pre>
         </section>
+
+
+
+
         <section class="ly-section">
-            <h2>リストタグ</h2>
+            <h2>リストタグのlist-styleクラス作る</h2>
             <p>文章中のリストだけでなく、メニュー、パンくずリストなどでも使われるので、list-styleの設定をnoneにするかどうか、サイトの内容によって変えます。</p>
         </section>
         <section class="ly-section">

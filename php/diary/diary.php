@@ -47,6 +47,8 @@
                 <li>-CSSカテゴライズまとめ、break-wordなどテキスト、svgまとめ</li>
             </ul>
             <h2><time>2020年</time></h2>
+            <time class="dairyTime" datetime="2020-09-20">10月28日</time>
+            <p>reset css の内容説明を作成中。bodyのcssを調べて書く</p>
             <time class="dairyTime" datetime="2020-09-20">10月1日</time>
             <p>ずっと仕事が忙しくて勉強する時間の仕事にあてた。勉強時間をとられるのはあまり精神衛生によろしくない。仕事の時間を増やして仕事した気にならないように。</p>
             <time class="dairyTime" datetime="2020-09-20">9月20日</time>

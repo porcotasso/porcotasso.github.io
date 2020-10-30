@@ -49,20 +49,17 @@ h2 {
 h3 {
   font-size: 1.6rem; }
 
-p {
-  margin: 0 0 2rem;
-  letter-spacing: 0.05em; }
-
 p, li {
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   line-height: 1.9; }
 
 img {
   max-width: 100%;
-  height: auto; }
+  height: auto;
+  border-style: none;
+  vertical-align: middle; }
 
-abbr[title],
-abbr[data-original-title] {
+abbr[title] {
   -webkit-text-decoration: underline dotted;
   -webkit-text-decoration-skip-ink: none;
   border-bottom: 0;
@@ -76,6 +73,7 @@ address {
   font-style: normal;
   line-height: inherit; }
 
+p,
 ol,
 ul,
 dl {
@@ -160,12 +158,6 @@ code {
 
 figure {
   margin: 0 0 1rem; }
-
-img {
-  max-width: 100%;
-  height: auto;
-  border-style: none;
-  vertical-align: middle; }
 
 svg {
   overflow: hidden;
