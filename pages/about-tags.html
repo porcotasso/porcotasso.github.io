@@ -416,7 +416,7 @@
 			<a href="/pages/categorized-css.html" class="articleCnt_ttl_nxt"></a>
 		
 </div>
-	<p class="el-updateDate">2020.10.29 updated</p>
+	<p class="el-updateDate">2020.10.30 updated</p>
 <p>各タグのスタイルをどうするかは、考え方やサイトのないようによりますが、できるだけなぜそうしたかを明確にしておくことで修正がしやすくなるのでメモ。</p>              <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                                 <ol>
@@ -458,6 +458,36 @@
                                         <li>
                         <a href="#7" class="">
                             <div class="">address</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#8" class="">
+                            <div class="">a</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#9" class="">
+                            <div class="">dl,dt,dd</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#10" class="">
+                            <div class="">blockqoute</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#11" class="">
+                            <div class="">強調系タグ</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#12" class="">
+                            <div class="">sub,sup</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#13" class="">
+                            <div class=""> pre,code,kbd,samp</div>
                         </a>
                     </li>
                                     </ol>
@@ -545,19 +575,22 @@ body {
             <h2>p, liタグ</h2>
             <p>p と li　が文章中で同じような見せ方で利用されることを基本として文字スタイルを合わせる。</p>
             <p>大きなコンテナの中でpやliを繰り返し使った時、最後のpやliの下のスペースが邪魔になることがある。ここではliは下のスペースを作らず、line-heightのみで、バランスを調整する。pは別途margin-bottomを追加する。</p>
-            <p>またリストタグのlist-styleをどうしておくかについて、文章中のリストだけでなく、メニュー、パンくずリストなどでも使われるので、list-styleの設定をnoneにするかどうかはサイトの内容によって変えます。ここではdefaultのままで、いらない場合にはclassを追加するようにする。</p>
+            <p>またリストタグのlist-styleをどうしておくかについて、文章中のリストだけでなく、メニュー、パンくずリストなどでも使われるので、list-styleの設定をnoneにするかどうかはサイトの内容によって変えます。ここではdefaultのままで、いらない場合にはclassを追加するようにする。  list-style分のスペースを作るためにフォントサイズに比例して幅を変える</p>
 <pre class="prettyprint">
 p, li{
   letter-spacing: 0.05em;
   line-height: 1.9;
 }
+ul{
+   padding-left: 1.8em;
+ }
 </pre>
         </section>
         <!-- p -->
         <section class="ly-section" id="4">
             <h2>pタグ</h2>
             <p>pタグは「Paragraph」の略です。長いひとかたまりの文章だけでなく、テキストを使ういろいろな場所で使われるので、用途ごとに対応できるスタイルの指定が必要になります。<br>このサイトでの考え方では、複数行にわたる文章にpタグを使用して、長文が読みやすいスタイルを指定するのを優先します。具体的にはline-heightを1.8~2 letter-space0.05em など通常よりスペースを開けています。フォントサイズは長文が読みやすいサイズを目的とします。mobileで14px、PCで16pxあたり？を基本に考えています。</p>
-            <p>listなどと一緒にmargin-bottomを追加します。</p>
+            <p>listなどと一緒にmargin-bottomを追加します。listの中のlistにはmargin-bottom を使いません。</p>
             <p>ラベルなどで使う際には余計なスタイルをリセットして使用します。</p>
 <pre class="prettyprint">
 p,
@@ -606,7 +639,7 @@ abbr[title]{
         <!-- address -->
         <section class="ly-section" id="7">
             <h2>address</h2>
-            <p><address>タグはページとサイトに書いてある連絡先情報を示すときに使います。作者の名前、メールアドレス、住所、電話番号、ファックス番号、フォームへのリンクなど</p>
+            <p>addressタグはページとサイトに書いてある連絡先情報を示すときに使います。作者の名前、メールアドレス、住所、電話番号、ファックス番号、フォームへのリンクなど</p>
 <pre class="prettyprint">
 address {
    margin-bottom: 1rem;
@@ -615,17 +648,113 @@ address {
  }
 </pre>
         </section>
-
-
-        <section class="ly-section">
-            <h2>aタグ</h2>
+        <section class="ly-section" id="8">
+            <h2>a</h2>
+            <p>aタグでhrefがないものは、スタイル省略</p>
 <pre class="prettyprint">
 a{
-    outline: 0;
-    cursor: pointer;
-    text-decoration:none;
-    color: #222;
+    color: $link-blue;
+    text-decoration: none;
+    background-color: transparent;
 }
+a:hover {
+    color: $hover-blue;
+    text-decoration: none;
+}
+a:not([href]) {
+   color: inherit;
+   text-decoration: none;
+ }
+ 
+ a:not([href]):hover {
+   color: inherit;
+   text-decoration: none;
+ }
+</pre>
+        </section>
+        <section class="ly-section" id="9">
+            <h2>dl,dt,dd</h2>
+            <p>dl要素はdt要素（用語）,dd要素（その用語に対する説明）をともなう記述型リスト。</p>
+<pre class="prettyprint">
+dt {
+   font-weight: bold;
+ }
+ dd {
+   margin-bottom: .5rem;
+   margin-left: 0;
+ }
+</pre>
+        </section>
+        <section class="ly-section" id="10">
+            <h2>blockqoute</h2>
+            <p>「BLOCKQUOTE」とは、引用・転載文であることを示すタグです。比較的長いテキストを段落ごと引用する際に使用されます。短いテキストの場合はblockquoteタグではなく、qタグを使用して引用・抜粋を行います。</p>
+<pre class="prettyprint">
+blockquote {
+   margin: 0 0 1rem;
+   background:$bg-light-gray;
+   padding:16px;
+ }
+</pre>
+        </section>
+        <section class="ly-section" id="12">
+            <h2>sub,sup</h2>
+            <p>強調系タグ</p>
+<pre class="prettyprint">
+em,
+ mark,
+ b,
+ strong {
+   font-weight: bold;
+ }
+</pre>
+        </section>
+        <section class="ly-section" id="13">
+            <h2> pre,code,kbd,samp</h2>
+            <p>「SUB」とは、「Subscript」の略で下付き文字で表示するタグです。化学記号を表す際などに便利です。「SUP」とは、「Superscript」の略で上付き文字で表示するタグです。乗算を表す際などに便利sub、supで指定された上付き文字と下付き文字は、通常の文字サイズよりも少し小さいサイズで表示されます。</p>
+<pre class="prettyprint">
+sub,
+sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+sub {
+    bottom: -.25em;
+}
+sup {
+    top: -.5em;
+}
+</pre>
+        </section>
+        <section class="ly-section" id="14">
+            <h2><br />
+<b>Notice</b>:  Undefined offset: 14 in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/pages/about-tags.php</b> on line <b>255</b><br />
+</h2>
+            <p></p>
+<pre class="prettyprint">
+pre,
+ code,
+ kbd,
+ samp {
+   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+   font-size: 1em;
+ }
+ 
+ pre {
+   margin-top: 3rems;
+   margin-bottom: 3rem;
+   overflow: auto;
+ }
+ code{
+   word-break: break-all;// defaultだとコードの途中で単語で改行されて読みにくいので、文字で改行に変更
+   background: $bg-light-gray;
+   padding: 2px 4px;
+   margin: 0 4px;
+ }
+ figure {
+   margin: 0 0 1rem;
+ }
 </pre>
         </section>
 
