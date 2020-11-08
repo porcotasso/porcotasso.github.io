@@ -24,9 +24,9 @@
 				<tr>
 					<th>ブラウザ</th>
 					<th>ベース</th>
-					<th>レンダリングエンジン</th>
-					<th>javascript エンジン</th>
-					<th>ベンダープレフィックス</th>
+					<th>rendering engine</th>
+					<th>javascript engine</th>
+					<th>bender prefix</th>
 				</tr>
 				<tr>
 					<td>chrome</td>
