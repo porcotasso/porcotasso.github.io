@@ -14,7 +14,7 @@
       
     <!-- google font Pacifico for title -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
-            <title>javascriptmemo</title>
+            <title>browser-rendering-engine</title>
 </head>
 <body>
 
@@ -411,101 +411,74 @@
     <a id="js-scrollTop" class="el-scrollTop"></a>
     
     <!-- メニューを出した時に出る黒背景 -->
-    <div class="el-blackCover" id="js-blackCover"></div><main class="ly-baseWrap ly-UnderheaderSpace"> 
+    <div class="el-blackCover" id="js-blackCover"></div><main class="ly-baseWrap ly-UnderheaderSpace browserRenderingEngine"> 
     <article class="articleCnt">
         <header>
             <div class="articleCnt_ttl">
-			<a href="/pages/header-smaller.html" class="articleCnt_ttl_pre"></a>
+			<a href="/pages/git-fetch.html" class="articleCnt_ttl_pre"></a>
 		
-	<h1>javascriptmemo</h1>
-			<a href="/pages/event-handler.html" class="articleCnt_ttl_nxt"></a>
+	<h1>browser-rendering-engine</h1>
+			<a href="/pages/svg.html" class="articleCnt_ttl_nxt"></a>
 		
 </div>
-	<p class="el-updateDate">2020.11.08 updated</p>
-<p>メモ</p>              <nav class="ly-mainNav">
+	<p class="el-updateDate">2020.11.09 updated</p>
+<p>ブラウザーのレンダリングエンジンとjavascriptエンジンとベンダープレフィックスについて</p>              <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                                 <ol>
                                         <li>
                         <a href="#0" class="">
-                            <div class="">アコーディオン</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">脱Jquery</div>
+                            <div class="">グラフ</div>
                         </a>
                     </li>
                                     </ol>
             </nav>
         </header>
-		<section class="ly-section" id="1">
-			<h2>アコーディオン</h2>
-            <cite class="ly-cite"><a href="https://flex-box.net/js-accordion/" target="_blank" rel="noopener noreferrer">ブログの設置 アコーディオン</a></cite>
-		</section>
-        <section class="ly-section">
-			<h2>脱Jquery</h2 id="2">
-<pre class="prettyprint">
-//ID名で取得
-$('#id-name');
-//クラス名で取得
-$('.class-name');
-//タグ名で取得
-$('tag-name');
-//クラス名の追加
-$('#element').addClass('active');
-//クラス名の削除
-$('#element').removeClass('active');
-//トグル
-$('#element').toggleClass('active');
-//要素が指定したクラス名を持っているか
-$('#element').hasClass('active');
-
-
-//ID名で取得
-document.getElementById('element');
-//クラス名で取得
-document.getElementsByClassName('element');
-//タグ名で取得
-document.getElementsByTagName('element');
-//クラス名の追加
-document.getElementById('element').classList.add('active');
-//クラス名の削除
-document.getElementById('element').classList.remove('active');
-//トグル
-document.getElementById('element').classList.toggle('active');
-//要素が指定したクラス名を持っているか
-document.getElementById('element').classList.contains('active');
-</pre>
-<cite class="ly-cite"><a href="https://www.aura-office.co.jp/blog/js-native/" target="_blank" rel="noopener noreferrer">アウラ 脱Jquery</a></cite>
-<cite class="ly-cite"><a href="https://q-az.net/without-jquery-height-width-offset-scrolltop/" target="_blank" rel="noopener noreferrer">脱Jquery</a></cite>
-<cite class="ly-cite"><a href="https://www.willstyle.co.jp/blog/1025/" target="_blank" rel="noopener noreferrer">will style.</a></cite>
-
-<p>
-    HTMLCollection element 違い:
-    getElementsByClassName()が返すのは、HTMLCollectionであってElementではない
-</p>
-
-<cite class="ly-cite"><a href="https://teratail.com/questions/231849" target="_blank" rel="noopener noreferrer">getElementsByClassName()が返す</a></cite>
-
-<p>次の要素を取得する</p>
-<cite class="ly-cite"><a href="https://syncer.jp/javascript-reference/element/scrolltop" target="_blank" rel="noopener noreferrer">次の要素を取得する</a></cite>
-
-
-           
-		</section>
-        <section class="ly-section" id="3">
-            <h2>「Magnific Popup」</h2>
-            <p>jQueryプラグイン,レスポンシブ対応モーダル・ポップアップ</p>
-            <p>Magnific Popupは、インライン、ギャラリー、Youtube、GoogleMap、フォーム、Ajax、アニメーション、など様々なタイプのポップアップを簡単に実装することができます。さらにRetinaにも対応。</p>
-            <p><a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank" rel="noopener noreferrer">公式サイト</a></p>
-        </section>
-        
-
-
-
-        <section class="ly-section">
-            <h3>参考</h3>
-            <cite class="ly-cite"><a href="https://flex-box.net/js-accordion/" target="_blank" rel="noopener noreferrer">ブログの設置 アコーディオン</a></cite>
+        <section class="ly-section" id="0">
+		<h2>グラフ</h2>
+            <p>文脈的に強調する部分によって文の意味が変更される場合に使います。</p>
+			<table class="browserTable">
+				<tr>
+					<th>ブラウザ</th>
+					<th>ベース</th>
+					<th>レンダリングエンジン</th>
+					<th>javascript エンジン</th>
+					<th>ベンダープレフィックス</th>
+				</tr>
+				<tr>
+					<td>chrome</td>
+					<td rowspan="3">Chromium<br>(open source)</td>
+					<td rowspan="3">Blink<br>←webkit<br>←KHTML</td>
+					<td rowspan="3">V8 JavaScript engine</td>
+					<td rowspan="3">-webkit</td>
+				</tr>
+				<tr>
+					<td>Opera</td>
+				</tr>
+				<tr>
+					<td>Edge</td>
+				</tr>
+				<tr>
+					<td>Safari</td>
+					<td rowspan="2">独自</td>
+					<td>webkit<br>←KHTML</td>
+					<td>JavaScript Cove</td>
+					<td>-webkit</td>
+				</tr>
+				<tr>
+					<td>FireFox<br>(open source)</td>
+					<td>Servo Gecko</td>
+					<td>Spider Monkey</td>
+					<td>-moz</td>
+				</tr>
+			</table>
+			<dl>
+				<dt>Chromium</dt>
+				<dd>Google開発のオープンソースWebブラウザ</dd>
+			</dl>
+			<dl>
+				<dt>iOSのレンダリングエンジン</dt>
+				<dd>全てのブラウザで強制的にWebkitが使われる。ChromeのBlinkも、FireFoxのServo Geckoも使われない。</dd>
+			</dl>
         </section>
     </article>
 </main>

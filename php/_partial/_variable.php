@@ -211,6 +211,13 @@ $gitFetch = array(
 	"lead" => "リモートブランチをローカルにコピーしたいけどできない時のメモ。",
 	"html" => "git-fetch.html"
 );
+$browserRenderingEngine = array(
+	"file" => "/php/pages/browser-rendering-engine.php",
+	"tag" => array("environment"),
+	"title" => "browser-rendering-engine",
+	"lead" => "ブラウザーのレンダリングエンジンとjavascriptエンジンとベンダープレフィックスについて",
+	"html" => "browser-rendering-engine.html"
+);
 //svg
 $svg = array(
 	"file" => "/php/pages/svg.php",
@@ -235,7 +242,7 @@ $allPages = array(
 	$button, $breakWord, $elementEmStrongMarkB, $favicon, $hamburgerMenu, $headerSmaller,
 	$javascriptMemo, $eventHandler, $eventPropagation, $scrollJunk, $touchEvent, $dayJs, $jsDate, $jsMarker, $jsNodelist, $jsScrollTop, $jsSwiper,
 	$phpMemo,$phpFilemtime,
-	$environmentSummary, $gulpfile, $gitFetch,
+	$environmentSummary, $gulpfile, $gitFetch, $browserRenderingEngine,
 	$svg,
 	$shopifyMemo
 );

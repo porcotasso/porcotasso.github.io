@@ -9,3 +9,22 @@
 .dairyTime{
 font-weight: bold;
 }
+
+// browser rendering engine
+.browserRenderingEngine{
+	.browserTable{
+		overflow: hidden;
+		overflow-x: visible;
+		white-space: nowrap;
+		display: block;
+		border-top: 1px solid $border-gray;
+		border-left: 1px solid $border-gray;
+		margin-bottom: 32px;
+		th,td{
+			padding: 16px 8px;
+			width: 100px;
+			border-right: 1px solid $border-gray;
+			border-bottom: 1px solid $border-gray;
+		}
+	}
+}

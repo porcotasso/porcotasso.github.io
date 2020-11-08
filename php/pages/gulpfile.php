@@ -10,7 +10,7 @@
                 <ol>
                     <?php for($i = 0; $i < count($navList); $i++){ ?>
                     <li>
-                        <a href="#<?php echo $i + 1; ?>" class="">
+                        <a href="#<?php echo $i; ?>" class="">
                             <div class=""><?php echo $navList[$i]; ?></div>
                         </a>
                     </li>

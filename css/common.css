@@ -20,7 +20,7 @@ body {
   font-family: "游ゴシック Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,sans-serif;
   font-size: 1.6em;
   font-weight: normal;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   line-height: 1.5;
   text-align: left;
   word-break: break-word; }
@@ -90,7 +90,8 @@ ul {
   padding-left: 1.8em; }
 
 dt {
-  font-weight: bold; }
+  font-weight: bold;
+  line-height: 1.8; }
 
 dd {
   margin-bottom: .5rem;
@@ -736,4 +737,18 @@ li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
 
 .dairyTime {
   font-weight: bold; }
+
+.browserRenderingEngine .browserTable {
+  display: block;
+  margin-bottom: 32px;
+  overflow: hidden;
+  overflow-x: visible;
+  border-top: 1px solid #dee2eb;
+  border-left: 1px solid #dee2eb;
+  white-space: nowrap; }
+  .browserRenderingEngine .browserTable th, .browserRenderingEngine .browserTable td {
+    width: 100px;
+    padding: 16px 8px;
+    border-right: 1px solid #dee2eb;
+    border-bottom: 1px solid #dee2eb; }
 /*# sourceMappingURL=maps/common.css.map */

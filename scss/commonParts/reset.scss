@@ -25,7 +25,7 @@ body {
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
   color: $font-black;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-align: left;
   background-color: $bg-white;
   word-break:break-word;
@@ -113,6 +113,7 @@ img {
  }
  dt {
    font-weight: bold;
+   line-height: 1.8;
  }
  dd {
    margin-bottom: .5rem;
