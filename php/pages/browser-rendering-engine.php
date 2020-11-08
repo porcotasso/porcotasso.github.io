@@ -19,7 +19,6 @@
         </header>
         <section class="ly-section" id="0">
 		<h2><?php echo $navList[0]; ?></h2>
-            <p>文脈的に強調する部分によって文の意味が変更される場合に使います。</p>
 			<table class="browserTable">
 				<tr>
 					<th>ブラウザ</th>
