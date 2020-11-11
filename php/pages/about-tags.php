@@ -5,7 +5,7 @@
 			<?php include("../_partial/pages-title.php"); ?>
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
-                <?php $navList = array("box-sizingを全体に使う", "html", "body", "p, liタグ", "pタグ", "img", "abbr", "address", "a", "dl,dt,dd","blockqoute", "強調系タグ", "sub,sup", " pre,code,kbd,samp"); ?>
+                <?php $navList = array("box-sizingを全体に使う", "html", "body", "p, liタグ", "pタグ", "img", "abbr", "address", "a", "dl,dt,dd","blockqoute", "強調系タグ", "sub,sup", " pre,code,kbd,samp", "figure", "svg"); ?>
                 <ol>
                     <?php for($i = 0; $i < count($navList); $i++){ ?>
                     <li>
@@ -253,7 +253,11 @@ sup {
         </section>
         <section class="ly-section" id="14">
             <h2><?php echo $navList[14]; ?></h2>
-            <p></p>
+            <p>preタグは、半角スペースや改行をそのまま表示。プログラムのコードを表示する場合に使用。
+プログラムのコードを表示する場合は、codeと組み合わせて使用されます。</p>
+<p>codeコードタグは、ソースコードの文字列を表示して見せるときに使います。defaultだとコードの途中で単語で改行されて読みにくいので、word-break: break-all;で文字で改行に変更</p>
+<p>kbdキーボードタグは、ユーザーによる入力（キーボード入力や音声入力など）を表します。kbdは「keyboard」の略です。</p>
+<p>sampサンプルタグは、プログラムやコンピューターからの出力内容を表すために使います。</p>
 <pre class="prettyprint">
 pre,
  code,
@@ -269,13 +273,29 @@ pre,
    overflow: auto;
  }
  code{
-   word-break: break-all;// defaultだとコードの途中で単語で改行されて読みにくいので、文字で改行に変更
+   word-break: break-all;
    background: $bg-light-gray;
    padding: 2px 4px;
    margin: 0 4px;
  }
+</pre>
+        </section>
+        <section class="ly-section" id="15">
+            <h2><?php echo $navList[15]; ?></h2>
+            <p><figure>フィギュアはHTML5から登場したタグで「自己完結するコンテンツ」を表します。その部分だけを抜き出しても意味が成り立つようなものに対して使います。図表やイラスト、写真などに対してよく使われる。無くても本文は成り立つが、あると嬉しい図表や、補足情報、説明を載せるときに使います。多くの場合、図表やイラスト、写真、コードなどにキャプション（注釈）を付けた形で使われます。figcaptionと合わせて使われることが多い</p>
+<pre class="prettyprint">
  figure {
    margin: 0 0 1rem;
+ }
+</pre>
+        </section>
+        <section class="ly-section" id="16">
+            <h2><?php echo $navList[16]; ?></h2>
+            <p><figure>svgタグ</p>
+<pre class="prettyprint">
+svg {
+   overflow: hidden;
+   vertical-align: middle;
  }
 </pre>
         </section>
