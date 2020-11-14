@@ -5,7 +5,7 @@
             <?php include("../_partial/pages-title.php"); ?>
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
-                <?php $navList = array("SVGファイルとは", "イラレからの書き出し設定", "書き出したコードについて", "SVG表示方法"); ?>
+                <?php $navList = array("SVGファイルとは", "イラレからの書き出し設定", "書き出したコードについて", "SVG表示方法", "SVGスプライトとは", "SVGスプライトの使い方"); ?>
                 <ol>
                     <?php for($i = 0; $i < count($navList); $i++){ ?>
                     <li>
@@ -54,20 +54,92 @@
         </section>
         <section class="ly-section" id="3">
 			<h2><?php echo $navList[3]; ?></h2>
-            <p>SVGファイルをHTMLで表示する方法は以下の4種類。</p>
-            <h3>img/object要素で設置</h3>
+            <p>SVGファイルをHTMLで表示する方法は以下の6種類。</p>
+            <h3>img要素で設置</h3>
             <p>他のフォーマットの画像と同じようにimg要素で画像を表示</p>
+<pre class="prettyprint">
+<img src="logomark.svg" width="32" height="32">
+</pre>
+            <h3>object要素で設置</h3>
+            <p>object要素で画像を表示</p>
+<pre class="prettyprint">
+<object type="image/svg+xml" data="logomark.svg" width="256" height="256"></object>
+</pre>
             <h3>背景画像として表示する</h3>
             <p>CSSのbackgroundプロパティを使って背景画像として表示</p>
+<pre class="prettyprint">
+<div style="width:32px; height:32px; background-image:url(logomark.svg); background-size:100%;"></div>
+</pre>
             <h3>svg要素を直接書き込む</h3>
             <p>SVGファイル内のsvg要素をHTMLにコピペして画像を表示</p>
+<pre class="prettyprint">
+<svg id="logomark" x="0px" y="0px" width="155px" height="155px" viewBox="0 0 155 155" enable-background="new 0 0 155 155">
+  <polygon id="logomark-polyline" fill-rule="evenodd" clip-rule="evenodd" fill="#0CB9C7" points="128.25,26 147.19,96.69 95.44,148.44 24.75,129.5 5.81,58.81 57.56,7.06 "/>
+</svg>
+</pre>
             <h3>file_get_contentsを使う</h3>
-            <p>php file_get_contents を使ってsvgのmarkup language を読み込む。</p>
+            <p>php file_get_contents を使ってsvgのmarkup language を読み込む。これはSVGスプライトとして使える。</p>
 <pre class="prettyprint">
 $str = file_get_contents('/aaa.png'); echo $str;
 </pre>
             <h3>use要素で設置する</h3>
             <p>SVGのuse要素を使ってSVGファイルの任意のid属性を持つ要素だけ読み込み</p>
+        </section>
+        <section class="ly-section" id="4">
+			<h2><?php echo $navList[4]; ?></h2>
+            <p>複数SVGオブジェクトの記述を１つのファイルの中にまとめる。任意の場所で任意のSVGオブジェクトを呼び出す。</p>
+<pre class="prettyprint">
+<svg>
+    <defs>
+        <symbol id="name01">
+            <path></path>
+        </symbol>
+        <symbol id="name02">
+            <path></path>
+        </symbol>
+    </defs>
+</svg>
+</pre>
+        </section>
+        <section class="ly-section" id="5">
+			<h2><?php echo $navList[5]; ?></h2>
+            <h3>1.SVG読み込み</h3>
+            <p>bodyの下にsvgを読み込むコードを書く</p>
+<pre class="prettyprint">
+< ?php include_once('/'); ? >
+</pre>
+            <h3>2.svgタグを書く</h3>
+            <p>svgを表示したい場所に記述</p>
+<pre class="prettyprint">
+<svg>
+    <use xlink:href = "#name01"></use>
+</svg>
+</pre>
+            <h3>3.スタイル追加</h3>
+            <p>svgにもuseにもclassをつけられる</p>
+<pre class="prettyprint">
+<svg class="style">
+    <use xlink:href = "#name01" class="style01"></use>
+    <use xlink:href = "#name02" class="style02"></use>
+</svg>
+</pre>
+            <h3>4.スタイルの種類</h3>
+            <p>追加できるスタイルの種類</p>
+<pre class="prettyprint">
+.style{
+    fill: transparent; <!--  わかりやすくするために塗りを透明にしています。  -->
+    stroke: pink; <!--  線の色を指定します。  -->
+    stroke-width: 5px; <!--  線の太さを指定します。  -->
+    stroke-opacity: .5; <!--  線の透明度を指定します。  -->
+    stroke-dasharray: 15 5; <!--  線の間隔を指定します。点線や破線といったパターンにすることが可能です。  -->
+    stroke-linecap: パスの端の部分の形状を指定
+    stroke-linejoin パスのつなぎ目の部分の形状を指定
+    stroke-dashoffset 線の始まりの位置を指定
+}
+</pre>
+        </section>
+        
+            <cite class="ly-cite"><a href="https://www.e-webseisaku.com/column/web/6544/" <?php echo $targetBlank ?>>SVGスプライトの利用② 「使い方」</a></cite>
             <cite class="ly-cite"><a href="https://css-tricks.com/using-svg/" <?php echo $targetBlank ?>>css tricks</a></cite>
             <cite class="ly-cite"><a href="https://lopan.jp/about-svg/" <?php echo $targetBlank ?>>SVGでやることのまとめ</a></cite>
             <cite class="ly-cite"><a href="https://lopan.jp/about-svg-sprites/" <?php echo $targetBlank ?>>使いまわせるSVG</a></cite>
