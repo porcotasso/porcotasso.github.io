@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg aria-hidden="true" style="position: absolute; overflow: hidden;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	 <defs>
 		<symbol id="svg-logo">
 			<path d="M56.488,29.357c-5.871,0-10.631,4.76-10.631,10.631s4.76,10.631,10.631,10.631c5.871,0,10.631-4.76,10.631-10.631
@@ -34,6 +34,7 @@
 				c-4.152,4.152-4.152,10.883,0,15.035c4.152,4.152,10.883,4.152,15.035,0c4.152-4.152,4.152-10.883,0-15.035
 				C129.605,28.319,122.873,28.319,118.721,32.471z M129.817,43.566c-1.976,1.976-5.18,1.976-7.156,0c-1.976-1.976-1.976-5.18,0-7.156
 				c1.976-1.976,5.18-1.976,7.156,0C131.793,38.386,131.793,41.59,129.817,43.566z"/>
+
 		</symbol>
 	</defs>
 </svg>
