@@ -5,7 +5,7 @@
             <?php include("../_partial/pages-title.php"); ?>
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
-                <?php $navList = array("SVGファイルとは", "イラレからの書き出し設定", "書き出したコードについて", "SVG表示方法", "SVGスプライトとは", "SVGスプライトの使い方"); ?>
+                <?php $navList = array("SVGファイルとは", "イラレからの書き出し設定", "書き出したコードについて", "SVG表示方法", "SVGスプライトとは", "SVGスプライトの使い方", "SVGスプライトファイル作成時のコツ"); ?>
                 <ol>
                     <?php for($i = 0; $i < count($navList); $i++){ ?>
                     <li>
@@ -137,6 +137,14 @@ $str = file_get_contents('/aaa.png'); echo $str;
     stroke-dashoffset 線の始まりの位置を指定
 }
 </pre>
+        </section>
+        <section class="ly-section" id="6">
+			<h2><?php echo $navList[6]; ?></h2>
+            <h3>必要なファイルは２つ</h3>
+            <p>必要なファイルは２つあります。１つは、サイトに使用する.svgファイル。２つ目は画像内容を把握してpathを書き出す為のファイルでこちらはサイトには使わない。</p>
+            <p>サイトに使用するファイルでは、イラレで編集する為のコードを削除したり細かい設定変更をしているので、イラレで新たにこのファイル全体を上書きすることなどはせず、コードの部分部分を必要に応じて、編集する。例えば新たにアイコンが追加されたら、symbolタグをそのファイルに追加していく。</p>
+            <p>２つ目のファイルは、実際のデータをイラレで開いて把握し、pathコードを作るためのファイル。アイコンごとにアートボードを作成してポジションの基準を常にx=0, y= 0で書き出すようにする。</p>
+            <p>１つ目のファイルでは、全ての画像のポジションをx=0, y= 0にした方が、コード編集が楽になる。データ的には複数の画像が重なっている状態だが、このファイルでイメージ内容を把握することはないので問題ない。</p>
         </section>
         
             <cite class="ly-cite"><a href="https://www.e-webseisaku.com/column/web/6544/" <?php echo $targetBlank ?>>SVGスプライトの利用② 「使い方」</a></cite>
