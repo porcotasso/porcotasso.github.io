@@ -61,6 +61,9 @@ body{
 				color: #333;
 				position: relative;
 				top: 0;
+				.svg-logo{
+					width: 180px;
+				}
 			}
 	  	}
 		.menu-trigger{
@@ -72,6 +75,7 @@ body{
 			margin: -24px $gutter-width 0 0;
 			width: 34px;
 			height: 24px;
+			z-index: 102;
 			span{
 				position: absolute;
 				left: 0;
@@ -180,7 +184,7 @@ body{
 	&.smaller {
 		transform: translateY(-32px);
 		// box-shadow: $box-shadow;
-		// background-color: rgba(255, 255, 255, 0);
+		background-color: rgba(255, 255, 255, 0);
 		.ly-header__inner{
 			transform: translateY(16px);
 			.web-ttl{
@@ -191,8 +195,8 @@ body{
 				}
 			}
 			.headerMenu{
-				top: 42px;
-				height:calc(100vh - 48px);
+				top: 0;
+				height:100vh;
 			}
 		}
 		.hamburger{

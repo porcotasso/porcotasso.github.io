@@ -44,19 +44,25 @@
     <title><?php echo ($title); ?></title>
 </head>
 <body>
-
+<?php include_once($baseUrl.'/images/common/logo.svg'); ?>
     <header class="ly-header js-headerSmaller" id="js-headerNav">  
         <nav class="ly-header__inner">
             <?php if($_SERVER['REQUEST_URI'] == "/"){ ?>
                 <h1 class="web-ttl">
                     <a href="/">
-                        <?php $str = file_get_contents($baseUrl.'/images/common/logo.svg'); echo $str; ?>
+                        <svg class="svg-logo" viewBox="0 0 247 54">
+                            <use xlink:href="#svg-logo"></use>
+                        </svg>
+                        <?php /* $str = file_get_contents($baseUrl.'/images/common/logo.svg'); echo $str; */ ?>
                     </a>
                 </h1>
             <?php }else{ ?>
                 <div class="web-ttl">
                     <a href="/">
-                        <?php $str = file_get_contents($baseUrl.'/images/common/logo.svg'); echo $str; ?>
+                        <svg class="svg-logo" viewBox="0 0 247 54">
+                            <use xlink:href="#svg-logo"></use>
+                        </svg>
+                        <?php /* $str = file_get_contents($baseUrl.'/images/common/logo.svg'); echo $str; */ ?>
                     </a>
                 </div>
             <?php } ?>

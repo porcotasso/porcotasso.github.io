@@ -89,7 +89,7 @@ $str = file_get_contents('/aaa.png'); echo $str;
 			<h2><?php echo $navList[4]; ?></h2>
             <p>複数SVGオブジェクトの記述を１つのファイルの中にまとめる。任意の場所で任意のSVGオブジェクトを呼び出す。</p>
 <pre class="prettyprint">
-<svg>
+<svg aria-hidden="true" style="position: absolute; overflow: hidden;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
         <symbol id="name01">
             <path></path>
@@ -109,9 +109,9 @@ $str = file_get_contents('/aaa.png'); echo $str;
 < ?php include_once('/'); ? >
 </pre>
             <h3>2.svgタグを書く</h3>
-            <p>svgを表示したい場所に記述</p>
+            <p>svgを表示したい場所に記述。重要な点として、ここにclassとviewBoxを追加して、cssからサイズを調整すること。viewBoxがここにないとcssが動かない。</p>
 <pre class="prettyprint">
-<svg>
+<svg class="svg-logo" viewBox="0 0 247 54">
     <use xlink:href = "#name01"></use>
 </svg>
 </pre>
