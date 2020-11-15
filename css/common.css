@@ -344,7 +344,8 @@ body {
         color: #333;
         transition: 0.25s; }
         .ly-header__inner .web-ttl a .svg-logo {
-          width: 180px; }
+          width: 180px;
+          max-width: 50%; }
     .ly-header__inner .menu-trigger {
       box-sizing: border-box;
       display: inline-block;
