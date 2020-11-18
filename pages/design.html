@@ -14,7 +14,7 @@
       
     <!-- google font Pacifico for title -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
-            <title>イベント伝搬とは</title>
+            <title>design-memo</title>
 </head>
 <body>
 <?xml version="1.0" encoding="utf-8"?>
@@ -268,150 +268,53 @@
     <div class="el-blackCover" id="js-blackCover"></div><main class="ly-baseWrap ly-UnderheaderSpace"> 
     <article class="articleCnt">
         <header>
-            <div class="articleCnt_ttl">
-			<a href="/pages/event-handler.html" class="articleCnt_ttl_pre"></a>
+			<div class="articleCnt_ttl">
+			<a href="/pages/svg.html" class="articleCnt_ttl_pre"></a>
 		
-	<h1>イベント伝搬とは</h1>
-			<a href="/pages/scroll-junk.html" class="articleCnt_ttl_nxt"></a>
+	<h1>design-memo</h1>
+			<a href="/pages/shopify-memo.html" class="articleCnt_ttl_nxt"></a>
 		
 </div>
-	<p class="el-updateDate">2020.11.08 updated</p>
-<p>イベントハンドラーが呼ばれる順番について</p>              <nav class="ly-mainNav">
+	<p class="el-updateDate">2020.11.19 updated</p>
+<p>design-memo</p>              <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                                 <ol>
                                         <li>
                         <a href="#0" class="">
-                            <div class="">イベント伝搬とは</div>
+                            <div class="">レイアウトの基本の４つのルール</div>
                         </a>
                     </li>
                                         <li>
                         <a href="#1" class="">
-                            <div class="">イベントフェーズ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#2" class="">
-                            <div class="">発火のタイミングをコントロール</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#3" class="">
-                            <div class="">イベント伝播の停止</div>
+                            <div class="">反転</div>
                         </a>
                     </li>
                                     </ol>
             </nav>
         </header>
         <section class="ly-section" id="0">
-			<h2>イベント伝搬とは</h2>
-            <p>親子関係のようなネストされた二つの要素の両方の要素にクリックなど同じ「イベント」リスナーがついているときに子をクリックをすると親のイベントも一緒に発動します。イベント伝搬とはイベントハンドラーが呼ばれる順番についての概念、ルールです。</p>
-		</section>
+			<h2>レイアウトの基本の４つのルール</h2>
+			<h3>Proximity（近接）</h3>
+            <p>位置が近いもの同時はなんらか関係性があると認識する。</p>
+			<h3>Alignment（整列）</h3>
+            <p>端が揃っているものは同一グループと認識する</p>
+			<h3>Contrast（強弱）</h3>
+            <p>強弱の差があるものは強い方が優位性が高いと感じる</p>
+			<h3>Repitition（反復）</h3>
+            <p>一定のルールに沿って繰り返されたものは、同じことについて表現していると感じる</p>
+        </section>
         <section class="ly-section" id="1">
-			<h2>イベントフェーズ</h2>
-			<p>例えば下記のようにネストされた２つのイベントターゲット（イベントの対象の要素のこと）両方にイベントリスナーがついている場合、イベントの順番はどうなるでしょうか。</p>
-			<p>答えば、good evening　→　good morning　となります。</p>
-<pre class="prettyprint">
-<div id="parent">
-	<div id="child">
-	</div>
-</div>
-
-<script>
-	document.getElementById('parent').addEventListener('click',()=>{
-		alert('good morning');
-	});
-	document.getElementById('child').addEventListener('click',()=>{
-		alert('good evening');
-	});
-</script> 
-</pre>
-
-			<p>イベントは、次の3つの段階 (フェーズ) を経て伝播されます。</p>
-			<ol>
-				<li>
-					<dl>
-						<dt>キャプチャフェーズ</dt>
-						<dd>ウィンドウからイベントターゲットの親までの段階</dd>
-					</dl>
-				</li>
-				<li>
-					<dl>
-						<dt>ターゲットフェーズ</dt>
-						<dd>イベントターゲットの段階</dd>
-					</dl>
-				</li>
-				<li>
-					<dl>
-						<dt>バブルフェーズ</dt>
-						<dd>イベントターゲットの親から戻ってウィンドウまでの段階。<br>*イベントによってはバブリング (bubbling) しないものもあります。</dd>
-					</dl>
-				</li>
-			</ol>
-			<p>つまり上から下、下から上と往復して同じ場所を２回辿っていることになります。</p>
-
-
-			
+			<h2>反転</h2>
+			<h3>基本的な概念</h3>
+			<p>背景が暗く文字が明るいデザインは</p>
+			<ul>
+				<li>人間の目は白地に濃い色をみるようにできているので目が疲れやすい</li>
+				<li>読みにくい。文字の視認性が低くなる。</li>
+				<li>目立つので、アクセントとして利用をする。</li>
+			</ul>
         </section>
-        <section class="ly-section" id="2">
-			<h2>発火のタイミングをコントロール</h2>
-            <p>addEventListener()の第3引数（true/false）で発火のタイミングをコントロールします。</p>
-            <ul>
-                <li>ture・・・キャプチャーフェーズ時に発火（親から先に発火）</li>
-				<li>false・・・バブリングフェーズ時に発火（子から先に発火）←初期値</li>
-            </ul>
-			<p>trueにした例。good morning　→　good eveningとなります。</p>
-<pre class="prettyprint">
-<div id="parent2">
-	<div id="child2">
-	</div>
-</div>
-
-<script>
-	function morning(){
-        alert('good morning');
-    }
-	document.getElementById('parent2').addEventListener('click', morning, true);
-
-	function evening(){
-        alert('good evening');
-    }
-	document.getElementById('child2').addEventListener('click', evening, true);
-</script>
-</pre>
-
-        <p>ちなみにaddEventListener()の第3引数は元々は発火のタイミングをコントロールするuseCaptureのみの設定だったみたいですが、現在は拡張され、イベントハンドラを一度だけの処理とする設定や、preventDefault()を実行するかどうかの設定も追加できます。</p>
-<pre class="prettyprint">
-element.addEventListener('click', function,{
-   once: true,
-   passive: true,
-   capture: true
-});
-</pre>
-			<h3>once</h3>
-			<p>イベントハンドラが一度だけの処理となり、一度しか読み込まないイベントを明示することでメモリの節約になり、毎回removeEventListenerを使うより楽。</p>
-		</section>
-        <section class="ly-section" id="3">
-			<h2>イベント伝播の停止</h2>
-			<p><code>stopPropagation();</code>でイベント伝播の停止をすることができます。</p>
-<pre class="prettyprint">
-<div id="parent3">
-	<div id="child3">
-	</div>
-</div>
-
-<script>
-	document.getElementById('parent3').addEventListener('click',()=>{		
-		alert('good morning');
-	});
-	document.getElementById('child3').addEventListener('click',(e)=>{
-		e.stopPropagation();
-		alert('good evening');	
-	});
-</script>
-</pre>
 
 
-        </section>
     </article>
 </main>
         <footer class="ly-footer">

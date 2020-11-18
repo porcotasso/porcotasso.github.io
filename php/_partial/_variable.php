@@ -234,6 +234,14 @@ $shopifyMemo = array(
 	"lead" => "shopify-memo",
 	"html" => "shopify-memo.html"
 );
+//design
+$design = array(
+	"file" => "/php/pages/design.php",
+	"tag" => array("design"),
+	"title" => "design-memo",
+	"lead" => "design-memo",
+	"html" => "design.html"
+);
 
 // 1.新規ページを作ったら全てのページの配列に追加
 $allPages = array(
@@ -243,7 +251,7 @@ $allPages = array(
 	$javascriptMemo, $eventHandler, $eventPropagation, $scrollJunk, $touchEvent, $dayJs, $jsDate, $jsMarker, $jsNodelist, $jsScrollTop, $jsSwiper,
 	$phpMemo,$phpFilemtime,
 	$environmentSummary, $gulpfile, $gitFetch, $browserRenderingEngine,
-	$svg,
+	$svg, $design,
 	$shopifyMemo
 );
 
