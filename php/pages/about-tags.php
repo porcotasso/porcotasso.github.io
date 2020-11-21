@@ -5,7 +5,7 @@
 			<?php include("../_partial/pages-title.php"); ?>
             <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
-                <?php $navList = array("box-sizingを全体に使う", "html", "body", "p, liタグ", "pタグ", "img", "abbr", "address", "a", "dl,dt,dd","blockqoute", "強調系タグ", "sub,sup", " pre,code,kbd,samp", "figure", "svg"); ?>
+                <?php $navList = array("box-sizingを全体に使う", "html", "body", "p, liタグ", "pタグ", "img", "abbr", "address", "a", "dl,dt,dd","blockqoute", "強調系タグ", "sub,sup", " pre,code,kbd,samp", "figure", "svg", "table", "form"); ?>
                 <ol>
                     <?php for($i = 0; $i < count($navList); $i++){ ?>
                     <li>
@@ -220,8 +220,8 @@ blockquote {
  }
 </pre>
         </section>
-        <section class="ly-section" id="12">
-            <h2><?php echo $navList[12]; ?></h2>
+        <section class="ly-section" id="11">
+            <h2><?php echo $navList[11]; ?></h2>
             <p>強調系タグ</p>
 <pre class="prettyprint">
 em,
@@ -232,8 +232,8 @@ em,
  }
 </pre>
         </section>
-        <section class="ly-section" id="13">
-            <h2><?php echo $navList[13]; ?></h2>
+        <section class="ly-section" id="12">
+            <h2><?php echo $navList[12]; ?></h2>
             <p>「SUB」とは、「Subscript」の略で下付き文字で表示するタグです。化学記号を表す際などに便利です。「SUP」とは、「Superscript」の略で上付き文字で表示するタグです。乗算を表す際などに便利sub、supで指定された上付き文字と下付き文字は、通常の文字サイズよりも少し小さいサイズで表示されます。</p>
 <pre class="prettyprint">
 sub,
@@ -251,8 +251,8 @@ sup {
 }
 </pre>
         </section>
-        <section class="ly-section" id="14">
-            <h2><?php echo $navList[14]; ?></h2>
+        <section class="ly-section" id="13">
+            <h2><?php echo $navList[13]; ?></h2>
             <p>preタグは、半角スペースや改行をそのまま表示。プログラムのコードを表示する場合に使用。
 プログラムのコードを表示する場合は、codeと組み合わせて使用されます。</p>
 <p>codeコードタグは、ソースコードの文字列を表示して見せるときに使います。defaultだとコードの途中で単語で改行されて読みにくいので、word-break: break-all;で文字で改行に変更</p>
@@ -280,18 +280,18 @@ pre,
  }
 </pre>
         </section>
-        <section class="ly-section" id="15">
-            <h2><?php echo $navList[15]; ?></h2>
-            <p><figure>フィギュアはHTML5から登場したタグで「自己完結するコンテンツ」を表します。その部分だけを抜き出しても意味が成り立つようなものに対して使います。図表やイラスト、写真などに対してよく使われる。無くても本文は成り立つが、あると嬉しい図表や、補足情報、説明を載せるときに使います。多くの場合、図表やイラスト、写真、コードなどにキャプション（注釈）を付けた形で使われます。figcaptionと合わせて使われることが多い</p>
+        <section class="ly-section" id="14">
+            <h2><?php echo $navList[14]; ?></h2>
+            <p>figureフィギュアはHTML5から登場したタグで「自己完結するコンテンツ」を表します。その部分だけを抜き出しても意味が成り立つようなものに対して使います。図表やイラスト、写真などに対してよく使われる。無くても本文は成り立つが、あると嬉しい図表や、補足情報、説明を載せるときに使います。多くの場合、図表やイラスト、写真、コードなどにキャプション（注釈）を付けた形で使われます。figcaptionと合わせて使われることが多い</p>
 <pre class="prettyprint">
  figure {
    margin: 0 0 1rem;
  }
 </pre>
         </section>
-        <section class="ly-section" id="16">
-            <h2><?php echo $navList[16]; ?></h2>
-            <p><figure>svgタグ</p>
+        <section class="ly-section" id="15">
+            <h2><?php echo $navList[15]; ?></h2>
+            <p>svgタグ</p>
 <pre class="prettyprint">
 svg {
    overflow: hidden;
@@ -299,33 +299,205 @@ svg {
  }
 </pre>
         </section>
-
-
-
-
-        <section class="ly-section">
-            <h2>リストタグのlist-styleクラス作る</h2>
-            <p>文章中のリストだけでなく、メニュー、パンくずリストなどでも使われるので、list-styleの設定をnoneにするかどうか、サイトの内容によって変えます。</p>
+        <section class="ly-section" id="16">
+            <h2><?php echo $navList[16]; ?></h2>
+            <h3>table</h3>
+            <p>border-collapseは隣り合ったテーブルセルの間隔を指定するプロパティ。collapse->隣接するボーダーラインを重ねあわせて表示するよう指定。テーブルで表を作るときにラインがきれいに収まるように。</p>
+            <h3>caption</h3>
+            <p>CAPTIONはテーブルのタイトルを指定するタグ。table開始タグの直後に1つだけ記述します。</p>
+            <h3>th</h3>
+            <p>inherit は CSS のキーワードで、要素のプロパティの計算値を親要素から取得するよう指定します。 CSS の一括指定 all を含め、すべての CSS プロパティに適用することができます。</p>
+<pre class="prettyprint">
+table {
+  border-collapse: collapse;
+}
+caption {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  color: #6c757d;
+  text-align: left;
+  caption-side: bottom;
+}
+th {
+  text-align: inherit;
+}
+</pre>
         </section>
-        <section class="ly-section">
-            <h2>モバイルの左右幅。ガターについて</h2>
-            <p>機種によってモバイルの幅が違い、狭いものと広いものの差は、かなり大きいので、端の幅はピクセル固定せずに425px 20px 320px 16pxのように比率で変えたほうが見やすいと考えています。</p>
+        <section class="ly-section" id="16">
+            <h2><?php echo $navList[16]; ?></h2>
+            <h3>LABEL</h3>
+            <p>フォームの中でフォームの項目名と構成部品（チェックボックス、ラジオボタンなど）を関連付けるためのタグです。関連付けを行うことにより、ブラウザでラベル（もしくはラベルのアクセスキー）をクリックした際に、その構成部品をクリックしたのと同じ動作が可能になります。</p>
+            <h3>outline</h3>
+            <p>輪郭線のスタイルや色、太さをまとめて指定するプロパティです。input要素、textarea要素、select要素に使用すると、リンクやフォーム部分がフォーカス状態になった時の輪郭線を指定することができます。borderとは違い、outlineはボックスのサイズに影響しません。また、outline-topやoutline-leftのようなプロパティはなく、上下左右を個別に設定することはできません。</p>
+            <h3>OPTGROUP</h3>
+            <p>セレクトボックスの選択肢（OPTION～OPTION）をグループ化するタグ。</p>
+            <h3>overflow: visible;</h3>
+            <p>overflowは「要素のボックスからはみ出た部分をどう扱うか」を指定します。visible->初期値。はみ出た部分が、はみ出たままの状態で表示される場合あり。button,inputはテキストを折り返さない</p>
+            <h3>text-transform: none;</h3>
+            <p>テキストにおける英数字の大文字、小文字の表示を指定するプロパティです。button,selectは値をnone（初期値）にして変換を行わない。</p>
+            <h3>word-wrap: normal;</h3>
+            <p>word-wrapプロパティは、W3Cで審議中の仕様をInternet Explorerが独自に採用したもの。なので削除。</p>
+            <h3>type属性について</h3>
+            <p>
+              type属性は、フォーム部品の種類を指定する際に使用します。input要素は、type属性にどのような値を指定するかによって、 一行テキストボックス・チェックボックス・ラジオボタン・送信ボタン・リセットボタン等、 フォーム部品の種類を指定し分けることができます。 type属性の初期値は、type="text"（一行テキストボックス）です。<br>
+              type="submit"送信ボタンを作成する<br>type="reset"リセットボタンを作成する<br>type="button"汎用ボタンを作成する<br>
+              この３つのtypeの形状を、-webkitでボタンにするということ。
+            </p>
+            <h3>appearanceプロパティ</h3>
+            <p>appearanceプロパティとは、OS（オペレーティングシステム）によって異なる標準的な部品（ユーザーインタフェース）のスタイルを解除するためのプロパティです。主にinputタグに対する既定の装飾を解除することに使用できます。</p>
+            <h3>:not</h3>
+            <p>「指定したもの以外」を指定する時に使う擬似クラス。</p>
+            <h3>:disabled</h3>
+            <p>:disabled 疑似クラスセレクターは、無効な要素を表します。無効な要素とは、アクティブ化（選択、クリック、入力など）したりフォーカスを得たりすることができないものです。要素には有効な状態、つまりアクティブ化したりフォーカスを得たりすることができる状態もあります。</p>
+            <p>ex:input type="text" placeholder="名前" disabled</p>
+            <h3>:not(:disable)</h3>
+            <p>inputが無効な要素ではないものは、カーソルをポインターにする、ということ。</p>
+            <h3>type="radio" type="checkbox" box-sizing: border-box;</h3>
+            <p>ラジオボタンとチェックボックスのborderとpaddingをwidthに含めること</p>
+            <p>input[type="date"], inputフォームでカレンダーから日付を選べる。<br>
+            input[type="time"], inputフォームで時刻を選択。<br>
+            input[type="datetime-local"], HTML5 で使えるようになった。ユーザーが簡単に日付と時刻、つまり年、月、日と時、分を入力することができる入力コントロールを生成します。ユーザーのローカルタイムゾーンが使用されます。<br>
+            input[type="month"] ユーザーが年と月を入力できるようにする入力フィールドを作成し、年と月を簡単に入力できるようにします。<br>
+            date,time,datetime-local,monthのレイアウトをlistbox;にするということ</p>
+            <h3>textarea</h3>
+            <p>overflow: auto;要素の内容が多すぎてブロック整形コンテキストに収まらない場合にどうするか。auto->ユーザーエージェントに依存。 <br>resize: vertical;ユーザーが要素の高さのリサイズできる</p>
+            <h3>fieldset</h3>
+            <p>formタグで定義するフォームの入力項目をグループ化するためのタグです。グループ化を行うことにより、グループの間をtabキーで簡単に移動することが可能になります。</p>
+            <h3>legend</h3>
+            <p>fieldsetタグでグループ化されたフォームにlegendでタイトルを付けることが可能です。</p>
+<pre class="prettyprint">
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+button {
+  border-radius: 0;
+}
+button:focus {
+  outline: 1px dotted;
+  outline: 1px auto -webkit-focus-ring-color;
+}
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+button,
+ [type="button"],
+ [type="reset"],
+ [type="submit"] {
+   -webkit-appearance: button;
+}
+button:not(:disabled),
+ [type="button"]:not(:disabled),
+ [type="reset"]:not(:disabled),
+ [type="submit"]:not(:disabled) {
+   cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+ 
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  -webkit-appearance: listbox;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+  color: inherit;
+  white-space: normal;
+}
+</pre>
         </section>
-        <section class="ly-section">
-            <h2>preタグとcodeタグ</h2>
-            <h3>pre</h3>
-            <p>Preformatted Text（整形済テキスト）という意味で、入力したソースのまま表示することができます。不要な空欄、タブもそのまま表示されるので使用できません。特殊文字は表示できないので、記号を使ってエスケープする必要があります。</p>
-            <cite class="ly-cite"><a href="https://webtools.dounokouno.com/htmlescape/" <?php echo $targetBlank ?>>Web制作小物ツール</a></cite>
-            <h3>code</h3>
-            <p>Computer Codeの略。codeタグで囲んだ文字列がソースコードであることを示します。等幅フォントで表示される。改行やインデントなどはcodeでは反映されない（サイトによってはされると書いてあるようですが）。</p>
-        </section>
-        <section>
-            <h2>timeタグ</h2>
-            <p>timeタグはコンピュータやブラウザが日付や時刻を理解できるようにするのを目的に、グレゴリオ暦による時刻で正確に示す際に使用します。日時を記述するのに必ずtimeタグを使用しなくてはならないわけではないです。datetime属性は日付や時刻を指定します。datetime属性を省略する場合には、timeタグの中に記述します。</p>
-        </section>
-        <section>
-            <h2>blockquote・q・citeタグ</h2>
-            <cite class="ly-cite"><a href="https://nandemo-nobiru.com/2159/" <?php echo $targetBlank ?>>なんでものびるWEB</a></cite>
+        <section class="ly-section" id="17">
+            <h2><?php echo $navList[17]; ?></h2>
+            <h3>progress</h3>
+            <p>タスクの進捗状況をプログレスバーで表示。</p>
+            <h3>type="number"</h3>
+            <p>数値の入力欄を作成<br>inner-spin-button:数値を上下させる右にあるボタン</p>
+            <h3>type="search"</h3>
+            <p>検索テキスト入力欄を作成<br>outline-offsetプロパティは、アウトラインのオフセット値を指定する際に使用します。アウトラインは、デフォルトではボーダーのすぐ外側に描かれますが、 outline-offsetプロパティを使用すると、ボーダーから離してオフセット表示することができます。-2pxなので内側にボーダーを表示する。</p>
+            <h3>appearance: none; </h3>
+            <p>ブラウザ別に設定されているデフォルトスタイルを無効にできる。</p>
+            <h3>output</h3>
+            <p>outputは、サイトやアプリが計算結果やユーザー操作の結果を挿入することができるコンテナー要素。</p>
+            <h3>summary</h3>
+            <p>HTML5から追加された要素。キャプションで説明を開閉表示できるdetails要素によって設置された「ディスクロージャー・ウィジェット」のサマリーを指定するために使用するタグ</p>
+            <h3>template</h3>
+            <p>テンプレの元のデータを非表示に。</p>
+            <h3>[hidden]</h3>
+            <p>input の属性値がhiddenの場合、非表示。</p>
+<pre class="prettyprint">
+progress {
+  vertical-align: baseline;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  outline-offset: -2px;
+  -webkit-appearance: none;
+}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+output {
+  display: inline-block;
+}
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+template {
+  display: none;
+}
+[hidden] {
+  display: none !important;
+}
+</pre>
         </section>
     </article>
 </main>

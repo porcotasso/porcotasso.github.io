@@ -80,7 +80,6 @@
           line-height: 1.2;
           // margin-right: 6px;
           // border: 1px solid $border-gray;
-          // border-radius: 50px;
           &:after{
             content: "/";
               font-size: $font-size-16;
@@ -97,7 +96,7 @@
         margin:0 0 12px;
       } 
       &_lead{
-        font-size: $font-size-15;
+        font-size: $font-size-16;
         color: $font-black;
         line-height: 1.6;
         margin: 0 0 6px;

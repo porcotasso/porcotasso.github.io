@@ -228,7 +228,7 @@ img {
  
  button:focus {
    outline: 1px dotted;
-   outline: 5px auto -webkit-focus-ring-color;
+   outline: 1px auto -webkit-focus-ring-color;
  }
  
  input,
@@ -251,10 +251,10 @@ img {
  select {
    text-transform: none;
  }
- 
- select {
-   word-wrap: normal;
- }
+//  word-wrapプロパティは、W3Cで審議中の仕様をInternet Explorerが独自に採用したもので、 表示範囲内に収まりきらない単語がある場合に、単語の途中で改行するかどうかを指定するに使用します。
+//  select {
+//    word-wrap: normal;
+//  }
  
  button,
  [type="button"],

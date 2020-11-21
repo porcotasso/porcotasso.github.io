@@ -275,7 +275,7 @@
 			<a href="/pages/categorized-css.html" class="articleCnt_ttl_nxt"></a>
 		
 </div>
-	<p class="el-updateDate">2020.11.15 updated</p>
+	<p class="el-updateDate">2020.11.20 updated</p>
 <p>各タグのスタイルをどうするかは、考え方やサイトのないようによりますが、できるだけなぜそうしたかを明確にしておくことで修正がしやすくなるのでメモ。</p>              <nav class="ly-mainNav">
                 <div class="el-mainNavTtl">目次</div>
                                 <ol>
@@ -357,6 +357,16 @@
                                         <li>
                         <a href="#15" class="">
                             <div class="">svg</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#16" class="">
+                            <div class="">table</div>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#17" class="">
+                            <div class="">form</div>
                         </a>
                     </li>
                                     </ol>
@@ -565,8 +575,8 @@ blockquote {
  }
 </pre>
         </section>
-        <section class="ly-section" id="12">
-            <h2>sub,sup</h2>
+        <section class="ly-section" id="11">
+            <h2>強調系タグ</h2>
             <p>強調系タグ</p>
 <pre class="prettyprint">
 em,
@@ -577,8 +587,8 @@ em,
  }
 </pre>
         </section>
-        <section class="ly-section" id="13">
-            <h2> pre,code,kbd,samp</h2>
+        <section class="ly-section" id="12">
+            <h2>sub,sup</h2>
             <p>「SUB」とは、「Subscript」の略で下付き文字で表示するタグです。化学記号を表す際などに便利です。「SUP」とは、「Superscript」の略で上付き文字で表示するタグです。乗算を表す際などに便利sub、supで指定された上付き文字と下付き文字は、通常の文字サイズよりも少し小さいサイズで表示されます。</p>
 <pre class="prettyprint">
 sub,
@@ -596,8 +606,8 @@ sup {
 }
 </pre>
         </section>
-        <section class="ly-section" id="14">
-            <h2>figure</h2>
+        <section class="ly-section" id="13">
+            <h2> pre,code,kbd,samp</h2>
             <p>preタグは、半角スペースや改行をそのまま表示。プログラムのコードを表示する場合に使用。
 プログラムのコードを表示する場合は、codeと組み合わせて使用されます。</p>
 <p>codeコードタグは、ソースコードの文字列を表示して見せるときに使います。defaultだとコードの途中で単語で改行されて読みにくいので、word-break: break-all;で文字で改行に変更</p>
@@ -625,24 +635,121 @@ pre,
  }
 </pre>
         </section>
-        <section class="ly-section" id="15">
-            <h2>svg</h2>
-            <p><figure>フィギュアはHTML5から登場したタグで「自己完結するコンテンツ」を表します。その部分だけを抜き出しても意味が成り立つようなものに対して使います。図表やイラスト、写真などに対してよく使われる。無くても本文は成り立つが、あると嬉しい図表や、補足情報、説明を載せるときに使います。多くの場合、図表やイラスト、写真、コードなどにキャプション（注釈）を付けた形で使われます。figcaptionと合わせて使われることが多い</p>
+        <section class="ly-section" id="14">
+            <h2>figure</h2>
+            <p>figureフィギュアはHTML5から登場したタグで「自己完結するコンテンツ」を表します。その部分だけを抜き出しても意味が成り立つようなものに対して使います。図表やイラスト、写真などに対してよく使われる。無くても本文は成り立つが、あると嬉しい図表や、補足情報、説明を載せるときに使います。多くの場合、図表やイラスト、写真、コードなどにキャプション（注釈）を付けた形で使われます。figcaptionと合わせて使われることが多い</p>
 <pre class="prettyprint">
  figure {
    margin: 0 0 1rem;
  }
 </pre>
         </section>
-        <section class="ly-section" id="16">
-            <h2><br />
-<b>Notice</b>:  Undefined offset: 16 in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/pages/about-tags.php</b> on line <b>293</b><br />
-</h2>
-            <p><figure>svgタグ</p>
+        <section class="ly-section" id="15">
+            <h2>svg</h2>
+            <p>svgタグ</p>
 <pre class="prettyprint">
 svg {
    overflow: hidden;
    vertical-align: middle;
+ }
+</pre>
+        </section>
+        <section class="ly-section" id="16">
+            <h2>table</h2>
+            <h3>table</h3>
+            <p>border-collapseは隣り合ったテーブルセルの間隔を指定するプロパティ。collapse->隣接するボーダーラインを重ねあわせて表示するよう指定。テーブルで表を作るときにラインがきれいに収まるように。</p>
+            <h3>caption</h3>
+            <p>CAPTIONはテーブルのタイトルを指定するタグ。table開始タグの直後に1つだけ記述します。</p>
+            <h3>th</h3>
+            <p>inherit は CSS のキーワードで、要素のプロパティの計算値を親要素から取得するよう指定します。 CSS の一括指定 all を含め、すべての CSS プロパティに適用することができます。</p>
+<pre class="prettyprint">
+table {
+  border-collapse: collapse;
+}
+caption {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  color: #6c757d;
+  text-align: left;
+  caption-side: bottom;
+}
+th {
+  text-align: inherit;
+}
+</pre>
+        </section>
+        <section class="ly-section" id="16">
+            <h2>table</h2>
+            <h3>LABEL</h3>
+            <p>フォームの中でフォームの項目名と構成部品（チェックボックス、ラジオボタンなど）を関連付けるためのタグです。関連付けを行うことにより、ブラウザでラベル（もしくはラベルのアクセスキー）をクリックした際に、その構成部品をクリックしたのと同じ動作が可能になります。</p>
+            <h3>outline</h3>
+            <p>輪郭線のスタイルや色、太さをまとめて指定するプロパティです。input要素、textarea要素、select要素に使用すると、リンクやフォーム部分がフォーカス状態になった時の輪郭線を指定することができます。borderとは違い、outlineはボックスのサイズに影響しません。また、outline-topやoutline-leftのようなプロパティはなく、上下左右を個別に設定することはできません。</p>
+            <h3>OPTGROUP</h3>
+            <p>セレクトボックスの選択肢（OPTION～OPTION）をグループ化するタグ。</p>
+            <h3>overflow: visible;</h3>
+            <p>overflowは「要素のボックスからはみ出た部分をどう扱うか」を指定します。visible->初期値。はみ出た部分が、はみ出たままの状態で表示される場合あり。button,inputはテキストを折り返さない</p>
+            <h3>text-transform: none;</h3>
+            <p>テキストにおける英数字の大文字、小文字の表示を指定するプロパティです。button,selectは値をnone（初期値）にして変換を行わない。</p>
+            <h3>word-wrap: normal;</h3>
+            <p>word-wrapプロパティは、W3Cで審議中の仕様をInternet Explorerが独自に採用したもの。なので削除。</p>
+            <h3>type属性について</h3>
+            <p>
+              type属性は、フォーム部品の種類を指定する際に使用します。input要素は、type属性にどのような値を指定するかによって、 一行テキストボックス・チェックボックス・ラジオボタン・送信ボタン・リセットボタン等、 フォーム部品の種類を指定し分けることができます。 type属性の初期値は、type="text"（一行テキストボックス）です。<br>
+              type="submit"送信ボタンを作成する<br>type="reset"リセットボタンを作成する<br>type="button"汎用ボタンを作成する<br>
+              この３つのtypeの形状を、-webkitでボタンにするということ。
+            </p>
+            <h3>appearanceプロパティ</h3>
+            <p>appearanceプロパティとは、OS（オペレーティングシステム）によって異なる標準的な部品（ユーザーインタフェース）のスタイルを解除するためのプロパティです。主にinputタグに対する既定の装飾を解除することに使用できます。</p>
+            <h3>:not</h3>
+            <p>「指定したもの以外」を指定する時に使う擬似クラス。</p>
+            <h3>:disabled</h3>
+            <p>:disabled 疑似クラスセレクターは、無効な要素を表します。無効な要素とは、アクティブ化（選択、クリック、入力など）したりフォーカスを得たりすることができないものです。要素には有効な状態、つまりアクティブ化したりフォーカスを得たりすることができる状態もあります。</p>
+            <p>ex:input type="text" placeholder="名前" disabled</p>
+            <h3>:not(:disable)</h3>
+            <p>inputが無効な要素ではないものは、カーソルをポインターにする、ということ。</p>
+
+<pre class="prettyprint">
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+button {
+  border-radius: 0;
+}
+button:focus {
+  outline: 1px dotted;
+  outline: 1px auto -webkit-focus-ring-color;
+}
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+button,
+ [type="button"],
+ [type="reset"],
+ [type="submit"] {
+   -webkit-appearance: button;
+}
+button:not(:disabled),
+ [type="button"]:not(:disabled),
+ [type="reset"]:not(:disabled),
+ [type="submit"]:not(:disabled) {
+   cursor: pointer;
  }
 </pre>
         </section>

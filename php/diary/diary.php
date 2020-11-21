@@ -47,6 +47,8 @@
                 <li>-CSSカテゴライズまとめ、break-wordなどテキスト、svgまとめ</li>
             </ul>
             <h2><time>2020年</time></h2>
+            <time class="dairyTime" datetime="2020-11-21">11月21日</time>
+            <p>reset.cssの全てのコードをチェック終了。</p>
             <time class="dairyTime" datetime="2020-11-08">11月8日</time>
             <p>ブラウザーのレンダリングエンジンとjavascriptエンジンとベンダープレフィックスについて</p>
             <time class="dairyTime" datetime="2020-10-28">10月28日</time>
