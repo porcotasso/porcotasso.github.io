@@ -74,18 +74,20 @@
             
             <ul class="headerMenu" id="header-menu">
                 <?php foreach($pageLists as $list){ ?>
-                <li class="headerMenu_list"><?php echo $list["title"]; ?></li>
-                <li>
-                    <ul class="headerMenu_subNav">
-                        <?php foreach($list["pages"] as $value){ ?>
-                        <li class="headerMenu_subList">
-                            <a href="<?php echo '/pages/'.$value["html"]; ?>" class="">
-                                <div class=""><?php echo $value["title"]; ?></div>
-                            </a>
-                        </li>
-                        <?php } ?>
-                    </ul>
-                </li>
+                <details>
+                    <summary class="headerMenu_list"><?php echo $list["title"]; ?></summary>
+                    <li>
+                        <ul class="headerMenu_subNav">
+                            <?php foreach($list["pages"] as $value){ ?>
+                            <li class="headerMenu_subList">
+                                <a href="<?php echo '/pages/'.$value["html"]; ?>" class="">
+                                    <div class=""><?php echo $value["title"]; ?></div>
+                                </a>
+                            </li>
+                            <?php } ?>
+                        </ul>
+                    </li>
+                </details>
                 <?php } ?>
             </ul>
         </nav>
