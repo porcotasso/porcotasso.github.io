@@ -56,6 +56,11 @@
         <div class="ly-homeProfile">
             <h2>プロフィール</h2>
             <p>ウェブのフロントエンドエンジニアです。html, css, php, javascript,gulp、adobe XD, Illustrator, phptoshopなどを使います。作ること全般が好きで、イラストやレタッチ、動画、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。</p>
+            <ul>
+                <li>スプライトsvgファイルの利用ができる。</li>
+                <li>bootstrap-rebootを全て確認。reset.cssを把握。</li>
+                <li></li>
+            </ul>
         </div>
     </article>
 </main>
