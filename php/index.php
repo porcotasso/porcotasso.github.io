@@ -44,7 +44,7 @@
         <div class="swiper-button-prev"></div> 
         <div class="swiper-button-next"></div>
     </div>
-    <article class="ly-baseWrap">
+    <article class="articleCnt ly-innnerWidth">
         <a href="pages/diary.html">
             <div class="ly-diary">
                 <h2 class="ly-diary_title">制作日記</h2>
@@ -146,4 +146,4 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 <script src="/js/home.js"></script>
-<?php include("_partial/wrapper-foot.php"); ?>s
+<?php include("_partial/wrapper-foot.php"); ?>

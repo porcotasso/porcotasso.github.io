@@ -26,5 +26,8 @@
 	C172.7,34.4,168.3,29.8,162.7,29.5z"/>
 
 		</symbol>
+		<symbol id="svg-arrowCite">
+			<path d="M3.4,3v3.1h12.2L2.3,19.4l2.2,2.2L17.8,8.2v12.2h3.1V3H3.4z"/>
+		</symbol>
 	</defs>
 </svg>

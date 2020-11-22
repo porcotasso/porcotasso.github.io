@@ -17,12 +17,12 @@ $semanticTags = array(
 	"lead" => "クローラーや読み上げソフトがタグから各コンテンツの役割がわかるように記述するコンテンツの意味に合ったタグを使ってマークアップすることをセマンティックHTMLと呼びます。",
 	"html" => "semantic-tags.html"
 );
-$aboutTags = array(
-	"file" => "/php/pages/about-tags.php",
-	"tag" => array("html"),
-	"title" => "各タグ要素について",
+$resetCss = array(
+	"file" => "/php/pages/reset-css.php",
+	"tag" => array("css"),
+	"title" => "リセットCSSについて",
 	"lead" => "各タグのスタイルをどうするかは、考え方やサイトのないようによりますが、できるだけなぜそうしたかを明確にしておくことで修正がしやすくなるのでメモ。",
-	"html" => "about-tags.html"
+	"html" => "reset-css.html"
 );
 //css
 $categorizedCSS = array(
@@ -38,6 +38,13 @@ $namingRule = array(
 	"title" => "命名ルール",
 	"lead" => "クラス名からクラスの目的やスコープがわかるようにしておき、正確なコーディングに役立てる。",
 	"html" => "naming-rule.html"
+);
+$basicLayoutStyle = array(
+	"file" => "/php/pages/basic-layout-style.php",
+	"tag" => array("css"),
+	"title" => "resetcss以外のスタイルルール",
+	"lead" => "レイアウトの基本ルールとして把握、作成しておいたほうがいいスタイルについて。",
+	"html" => "basic-layout-style.html"
 );
 //parts
 $button = array(
@@ -245,8 +252,8 @@ $design = array(
 
 // 1.新規ページを作ったら全てのページの配列に追加
 $allPages = array(
-	$contentsModel, $semanticTags, $aboutTags, 
-	$categorizedCSS, $namingRule, 
+	$contentsModel, $semanticTags, $resetCss, 
+	$categorizedCSS, $namingRule, $basicLayoutStyle,
 	$button, $breakWord, $elementEmStrongMarkB, $favicon, $hamburgerMenu, $headerSmaller,
 	$javascriptMemo, $eventHandler, $eventPropagation, $scrollJunk, $touchEvent, $dayJs, $jsDate, $jsMarker, $jsNodelist, $jsScrollTop, $jsSwiper,
 	$phpMemo,$phpFilemtime,

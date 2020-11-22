@@ -1,7 +1,7 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <?php $title = $gulpfile["title"] ?>
-<main class="ly-baseWrap ly-UnderheaderSpace"> 
-    <article class="articleCnt">
+<main class="ly-main"> 
+    <article class="articleCnt ly-innnerWidth">
         <header>
             <?php include("../_partial/pages-title.php"); ?>
             <nav class="ly-mainNav">

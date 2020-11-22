@@ -1,6 +1,6 @@
 <?php include("../_partial/wrapper-head.php"); ?>
-<main class="ly-baseWrap ly-UnderheaderSpace"> 
-    <article class="articleCnt">
+<main class="ly-main"> 
+    <article class="articleCnt ly-innnerWidth">
         <header>
 			<?php include("../_partial/pages-title.php"); ?>
             <nav class="ly-mainNav">
@@ -212,6 +212,7 @@ dt {
         <section class="ly-section" id="10">
             <h2><?php echo $navList[10]; ?></h2>
             <p>「BLOCKQUOTE」とは、引用・転載文であることを示すタグです。比較的長いテキストを段落ごと引用する際に使用されます。短いテキストの場合はblockquoteタグではなく、qタグを使用して引用・抜粋を行います。</p>
+            <cite class="ly-cite"><a href="https://nandemo-nobiru.com/2159/" <?php echo $targetBlank ?>>なんでものびるWEB</a></cite>
 <pre class="prettyprint">
 blockquote {
    margin: 0 0 1rem;
@@ -253,11 +254,13 @@ sup {
         </section>
         <section class="ly-section" id="13">
             <h2><?php echo $navList[13]; ?></h2>
-            <p>preタグは、半角スペースや改行をそのまま表示。プログラムのコードを表示する場合に使用。
-プログラムのコードを表示する場合は、codeと組み合わせて使用されます。</p>
-<p>codeコードタグは、ソースコードの文字列を表示して見せるときに使います。defaultだとコードの途中で単語で改行されて読みにくいので、word-break: break-all;で文字で改行に変更</p>
-<p>kbdキーボードタグは、ユーザーによる入力（キーボード入力や音声入力など）を表します。kbdは「keyboard」の略です。</p>
-<p>sampサンプルタグは、プログラムやコンピューターからの出力内容を表すために使います。</p>
+            <h3>pre</h3>
+            <p>Preformatted Text（整形済テキスト）という意味で、入力したソースのまま表示することができます。不要な空欄、タブもそのまま表示されるので使用できません。特殊文字は表示できないので、記号を使ってエスケープする必要があります。半角スペースや改行をそのまま表示。プログラムのコードを表示する場合に使用。プログラムのコードを表示する場合は、codeと組み合わせて使用されます。</p>
+            <cite class="ly-cite"><a href="https://webtools.dounokouno.com/htmlescape/" <?php echo $targetBlank ?>>Web制作小物ツール</a></cite>
+            <h3>code</h3>
+            <p>Computer Codeの略。codeタグで囲んだ文字列がソースコードであることを示します。等幅フォントで表示される。改行やインデントなどはcodeでは反映されない（サイトによってはされると書いてあるようですが）。ソースコードの文字列を表示して見せるときに使います。defaultだとコードの途中で単語で改行されて読みにくいので、word-break: break-all;で文字で改行に変更</p>
+            <p>kbdキーボードタグは、ユーザーによる入力（キーボード入力や音声入力など）を表します。kbdは「keyboard」の略です。</p>
+            <p>sampサンプルタグは、プログラムやコンピューターからの出力内容を表すために使います。</p>
 <pre class="prettyprint">
 pre,
  code,
@@ -356,6 +359,7 @@ th {
             <p>ラジオボタンとチェックボックスのborderとpaddingをwidthに含めること</p>
             <p>input[type="date"], inputフォームでカレンダーから日付を選べる。<br>
             input[type="time"], inputフォームで時刻を選択。<br>
+            timeタグはコンピュータやブラウザが日付や時刻を理解できるようにするのを目的に、グレゴリオ暦による時刻で正確に示す際に使用します。日時を記述するのに必ずtimeタグを使用しなくてはならないわけではないです。datetime属性は日付や時刻を指定します。datetime属性を省略する場合には、timeタグの中に記述します。<br> 
             input[type="datetime-local"], HTML5 で使えるようになった。ユーザーが簡単に日付と時刻、つまり年、月、日と時、分を入力することができる入力コントロールを生成します。ユーザーのローカルタイムゾーンが使用されます。<br>
             input[type="month"] ユーザーが年と月を入力できるようにする入力フィールドを作成し、年と月を簡単に入力できるようにします。<br>
             date,time,datetime-local,monthのレイアウトをlistbox;にするということ</p>

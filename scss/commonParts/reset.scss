@@ -342,11 +342,15 @@ img {
    display: inline-block;
  }
  
- summary {
-   display: list-item;
-   cursor: pointer;
- }
- 
+// summaryのデフォルトの矢印を消す
+summary {
+  //  display: list-item;
+  display: block; /* 矢印を消す */
+  cursor: pointer;
+}
+summary::-webkit-details-marker {
+  display: none; /* 矢印を消す */
+}
  template {
    display: none;
  }

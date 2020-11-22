@@ -229,7 +229,7 @@
     opacity: 0.3;
     transition-duration: .3s;
     padding: 0 20px;
-    background: $gray-200;
+    background: $bg-light-gray;
     &.is-open{
       line-height: normal; /* numberに書き換える*/
       height: auto;

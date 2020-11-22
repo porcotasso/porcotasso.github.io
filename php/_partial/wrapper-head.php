@@ -44,7 +44,7 @@
     <title><?php echo ($title); ?></title>
 </head>
 <body>
-<?php include_once($baseUrl.'/images/common/logo.svg'); ?>
+<?php include_once($baseUrl.'/images/common/sprite.svg'); ?>
     <header class="ly-header js-headerSmaller" id="js-headerNav">  
         <nav class="ly-header__inner">
             <?php if($_SERVER['REQUEST_URI'] == "/"){ ?>
@@ -76,17 +76,15 @@
                 <?php foreach($pageLists as $list){ ?>
                 <details>
                     <summary class="headerMenu_list"><?php echo $list["title"]; ?></summary>
-                    <li>
-                        <ul class="headerMenu_subNav">
-                            <?php foreach($list["pages"] as $value){ ?>
-                            <li class="headerMenu_subList">
-                                <a href="<?php echo '/pages/'.$value["html"]; ?>" class="">
-                                    <div class=""><?php echo $value["title"]; ?></div>
-                                </a>
-                            </li>
-                            <?php } ?>
-                        </ul>
-                    </li>
+                    <ul class="headerMenu_subNav">
+                        <?php foreach($list["pages"] as $value){ ?>
+                        <li class="headerMenu_subList">
+                            <a href="<?php echo '/pages/'.$value["html"]; ?>" class="">
+                                <div class=""><?php echo $value["title"]; ?></div>
+                            </a>
+                        </li>
+                        <?php } ?>
+                    </ul>
                 </details>
                 <?php } ?>
             </ul>
