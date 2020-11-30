@@ -112,11 +112,12 @@ body{
 			box-shadow: $box-shadow;
 			transition: $transition;
 			z-index: 101;
+			background: $bg-light-gray;
 			// overscroll-behavior: contain; // 親要素にスクロールが伝わらないようにする。「スクロールチェーン」の挙動を無効化
 			&_list{
 				margin: 0;
 				border-top: 1px solid $border-gray;
-				padding: 8px 16px 8px 30px;
+				padding: 16px 16px 16px 30px;
 				font-size: $font-size-16;
 				font-weight: bold;
 				background: $bg-light-gray;
@@ -140,14 +141,14 @@ body{
 					transition: .1s;
 				}
 				&:focus{
-					outline: 1px solid $hover-blue;
+					outline: 1px solid $border-gray;
 					outline-offset: -1px;
 				}
 			}
 			/* オープン時 */
 			details[open] .headerMenu_list{
 				// color: $font-gray;
-				outline: 1px solid $hover-blue;
+				outline: 1px solid $border-gray;
 				outline-offset: -1px;
 				&:after {
 					transform: rotate(90deg);
@@ -160,6 +161,7 @@ body{
 				list-style: none;
 				padding: 0;
 				animation: fadeIn 0.2s ease;
+				background: $bg-white;
 			}
 			@keyframes fadeIn {
 				0% {
@@ -327,7 +329,7 @@ body{
 	.el-mainNavTtl{
 		// margin-bottom: $space-unit*2;
 		text-align: center;
-		color: $font-light-gray;
+		color: $font-gray;
 		font-weight: bold;
 		padding: 16px 0;
 		background: $bg-light-gray;
@@ -353,8 +355,8 @@ body{
 }
 .ly-cite{
 	padding: 16px;
-    display: block;
-    // border: 1px solid $border-gray;
+	display: block;
+	position: relative;
     border-radius: 4px;
 	margin: 24px 0 24px;
 	border: 1px solid $border-gray;
@@ -362,6 +364,12 @@ body{
 	font-weight: bold;
 	font-style: normal;
 	box-shadow: 0 3px 5px -1px rgba(24,44,84,.1);
+	&:after{
+		content: url(/images/common/cite-arrow.svg);
+		position: absolute;
+		right: 8px;
+		top: 8px;
+	}
 	a{
 		color: $font-black;
 	}

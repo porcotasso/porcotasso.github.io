@@ -60,8 +60,8 @@
         box-shadow: $box-shadow;
         margin: 10px 0;
         padding: 42px 48px 16px;
-        background: #fff;
-        border-radius: 4px;
+        background: $bg-black;
+        // border-radius: 4px;
         height: 240px;
         position: relative;
       }
@@ -72,8 +72,8 @@
         color: #ffffff;
         background: #8a8a8a;
         position: absolute;
-        left: 0px;
-        top: -6px;
+        left: 0;
+        top: 0;
         &_list{
           font-size: $font-size-13;
           padding: 0 3px 3px;
@@ -97,7 +97,7 @@
       } 
       &_lead{
         font-size: $font-size-16;
-        color: $font-black;
+        color: $font-light-gray;
         line-height: 1.6;
         margin: 0 0 6px;
       }
@@ -107,19 +107,22 @@
         position: absolute;
         right: 24px;
         margin: 0;
-        bottom: 32px;
+        bottom: 36px;
       }
     }
   }
   .swiper-button-next, .swiper-button-prev {
     // top: 50%;
-    width: 36px;
+    width: 60px;
     height: 36px;
-    border-radius: 50%;
-    border: 1px solid $border-gray;
+    bottom: 10px;
+    top: auto;
+    // border-radius: 50%;
+    // background: $bg-light-gray;
+    // border: 1px solid $border-gray;
     // background-size: 13px 22px;
     background: none;
-    background-color: rgba(255, 255, 255, 0.5);
+    // background-color: rgba(255, 255, 255, 0.5);
 
     &:after{
       content: "";
@@ -127,10 +130,10 @@
       display: inline-block;
       width: 10px;
       height: 10px;
-      right: 13px;
+      right: 25px;
       bottom: 13px;
-      border-bottom: 1px solid $font-gray;
-      border-right: 1px solid $font-gray;
+      border-bottom: 1px solid $font-light-gray;
+      border-right: 1px solid $font-light-gray;
       // transition-duration: .3s;
     }
     &:focus{
@@ -138,13 +141,23 @@
     }
   }
   .swiper-button-prev {
-    transform: rotate(135deg);
+    &:after{
+      transform: rotate(135deg);
+    }
   }
   .swiper-button-next {
+    &:after{
     transform: rotate(-45deg);
+    }
   }
   &.swiper-container-horizontal > .swiper-pagination-bullets{
     bottom: 18px;
+    .swiper-pagination-bullet{
+      background: $bg-light-gray;
+      &.swiper-pagination-bullet-active{
+        background: $primary-pink;
+      }
+    }
   }
 }
 

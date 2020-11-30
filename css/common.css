@@ -382,6 +382,7 @@ body {
       padding: 0 0 164px;
       overflow: scroll;
       background: #fff;
+      background: #eff1f3;
       box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
       list-style: none;
       text-align: left;
@@ -391,7 +392,7 @@ body {
       .ly-header__inner .headerMenu_list {
         position: relative;
         margin: 0;
-        padding: 8px 16px 8px 30px;
+        padding: 16px 16px 16px 30px;
         border-top: 1px solid #d4d9e6;
         background: #eff1f3;
         font-size: 1.6rem;
@@ -410,14 +411,14 @@ body {
           height: 5px;
           margin: auto;
           border: 4px solid transparent;
-          border-left: 5px solid #888;
+          border-left: 5px solid #d8d8d8;
           content: "";
           transition: .1s; }
         .ly-header__inner .headerMenu_list:focus {
-          outline: 1px solid #0056b3;
+          outline: 1px solid #d4d9e6;
           outline-offset: -1px; }
       .ly-header__inner .headerMenu details[open] .headerMenu_list {
-        outline: 1px solid #0056b3;
+        outline: 1px solid #d4d9e6;
         outline-offset: -1px; }
         .ly-header__inner .headerMenu details[open] .headerMenu_list:after {
           top: 5px;
@@ -425,6 +426,7 @@ body {
           transform: rotate(90deg); }
       .ly-header__inner .headerMenu_subNav {
         padding: 0;
+        background: #fcfcfc;
         list-style: none;
         -webkit-animation: fadeIn 0.2s ease;
                 animation: fadeIn 0.2s ease; }
@@ -553,6 +555,7 @@ body {
 
 .ly-cite {
   display: block;
+  position: relative;
   margin: 24px 0 24px;
   padding: 16px;
   border: 1px solid #d4d9e6;
@@ -561,6 +564,11 @@ body {
   font-size: 1.4rem;
   font-style: normal;
   font-weight: bold; }
+  .ly-cite:after {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    content: url(/images/common/cite-arrow.svg); }
   .ly-cite a {
     color: #181818; }
 
@@ -588,8 +596,8 @@ body {
     width: 8px;
     height: 8px;
     transform: rotate(-135deg);
-    border-right: 1px solid #666;
-    border-bottom: 1px solid #666;
+    border-right: 1px solid #888;
+    border-bottom: 1px solid #888;
     content: "";
     transition-duration: .3s; }
 
@@ -776,8 +784,8 @@ li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
     top: 24px;
     width: 10px;
     height: 10px;
-    border-right: 1px solid #666;
-    border-bottom: 1px solid #666;
+    border-right: 1px solid #888;
+    border-bottom: 1px solid #888;
     content: ""; }
   .articleCnt_ttl_pre {
     left: 12px;
