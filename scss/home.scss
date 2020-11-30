@@ -59,7 +59,7 @@
       &_cnt{
         box-shadow: $box-shadow;
         margin: 10px 0;
-        padding: 42px 48px 16px;
+        padding: 36px 24px 16px;
         background: $bg-black;
         // border-radius: 4px;
         height: 240px;
@@ -92,8 +92,9 @@
         }
       }
       &_title{
-        font-size: $font-size-18;
+        font-size: $font-size-19;
         margin:0 0 12px;
+        color: #0088ff;
       } 
       &_lead{
         font-size: $font-size-16;
