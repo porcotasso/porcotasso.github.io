@@ -14,7 +14,8 @@
 	padding-bottom: 1em;
 	margin-top: 1em;
 	margin-bottom: 1em;
-	border-bottom: 1px dotted $primary-pink;
+	border-bottom: 2px dotted $primary-pink;
+	// border-bottom: 1px dotted $primary-pink;
 	text-align: center;
 	letter-spacing: 0.1em;
 	position: relative;
@@ -44,19 +45,24 @@
 	.el-updateDate{
 		font-size: $font-size-13;
 		text-align: right;
+		margin-bottom: 48px;
+		color: $font-gray;
 	}
 	h2{
 		// font-size: $font-size-17;
-		border-left: 3px solid $primary-pink;
-		padding: 0 2px 0 6px;
-		margin: 3em 0 2em;
-		font-size:1.8rem;
+		padding: 4px 8px 8px;
+		margin: 0 auto 40px;
+		display: table;
+		font-size:$font-size-19;
+		text-align: center;
+		border-bottom: 2px dotted $primary-pink;
 	}
 	h3{
-		border: 1px solid $font-black;
-		padding: 1px 10px;
-		display: inline-block;
-		font-weight: normal;
+		border-left: 3px solid $font-black;
+		// border: 1px solid $font-black;
+		padding: 3px 10px;
+		font-weight: bold;
+		margin: 58px 0 16px;
 	}
 }
   

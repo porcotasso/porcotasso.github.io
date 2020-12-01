@@ -110,8 +110,8 @@ function sample1() {
 });
 </script>
 </pre>      
-            <cite class="ly-cite"><a href="https://phpjavascriptroom.com/?t=js&p=event" <?php echo $targetBlank ?>>PHP & JavaScript Room JavaScriptのイベントハンドラ一覧</a></cite>
-            <cite class="ly-cite"><a href="http://www.tohoho-web.com/js/onevent.htm" <?php echo $targetBlank ?>>tohoho-web イベントハンドラ</a></cite>  
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://phpjavascriptroom.com/?t=js&p=event" <?php echo $targetBlank ?>>PHP & JavaScript Room JavaScriptのイベントハンドラ一覧</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="http://www.tohoho-web.com/js/onevent.htm" <?php echo $targetBlank ?>>tohoho-web イベントハンドラ</a></cite>  
   
         </section>
 

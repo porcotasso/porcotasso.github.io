@@ -45,8 +45,8 @@
 
         <section class="ly-section">
             <h3>参考</h3>
-            <cite class="ly-cite"><a href="http://www.tohoho-web.com/html/memo/html5.htm#flow" <?php echo $targetBlank ?>>とほほのWWW入門</a></cite>
-            <cite class="ly-cite"><a href="https://wunderstand.net/1417/" <?php echo $targetBlank ?>>html5のarticle・section等、まとめる要素まとめ</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="http://www.tohoho-web.com/html/memo/html5.htm#flow" <?php echo $targetBlank ?>>とほほのWWW入門</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://wunderstand.net/1417/" <?php echo $targetBlank ?>>html5のarticle・section等、まとめる要素まとめ</a></cite>
         </section>
     </article>
 </main>

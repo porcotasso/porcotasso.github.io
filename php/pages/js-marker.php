@@ -109,10 +109,10 @@ document.getElementById('getBoundingClientRectTopElm').textContent = document.ge
 document.getElementById('getBoundingClientRectLeftElm').textContent = document.getElementById('getBoundingClientRectLeftElm').getBoundingClientRect().left;
 </pre>
 
-<cite class="ly-cite"><a href="https://murashun.jp/blog/20191110-33.html" <?php echo $targetBlank ?>>ウィンドウのサイズを調べる</a></cite>
-<cite class="ly-cite"><a href="https://web-designer.cman.jp/javascript_ref/window/size/" <?php echo $targetBlank ?>>JavaScriptでウインドウサイズを取得</a></cite>
-<cite class="ly-cite"><a href="https://techacademy.jp/magazine/14652" <?php echo $targetBlank ?>>JavaScriptでbindメソッドを使う方法</a></cite>
-<cite class="ly-cite"><a href="https://techacademy.jp/magazine/14652" <?php echo $targetBlank ?>>JavaScriptでbindメソッドを使う方法</a></cite>
+<cite class="ly-cite"><a class="ly-cite_link" href="https://murashun.jp/blog/20191110-33.html" <?php echo $targetBlank ?>>ウィンドウのサイズを調べる</a></cite>
+<cite class="ly-cite"><a class="ly-cite_link" href="https://web-designer.cman.jp/javascript_ref/window/size/" <?php echo $targetBlank ?>>JavaScriptでウインドウサイズを取得</a></cite>
+<cite class="ly-cite"><a class="ly-cite_link" href="https://techacademy.jp/magazine/14652" <?php echo $targetBlank ?>>JavaScriptでbindメソッドを使う方法</a></cite>
+<cite class="ly-cite"><a class="ly-cite_link" href="https://techacademy.jp/magazine/14652" <?php echo $targetBlank ?>>JavaScriptでbindメソッドを使う方法</a></cite>
 		</section>
     </article>
 </main>

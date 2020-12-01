@@ -72,9 +72,9 @@
                 <li>英単語：Mississippiなど</li>
                 <li>グループルビ</li>
             </ul>
-            <cite class="ly-cite"><a href="https://www.tairapromote.co.jp/column/284/" <?php echo $targetBlank ?>>禁則処理とは何か 株式会社平プロモート</a></cite>
-            <cite class="ly-cite"><a href="https://qiita.com/akane_kato/items/2b1385574e1a1babdde1" <?php echo $targetBlank ?>>Qiita overflow-wrap: break-word; や word-break: break-all; が万能の改行処理だったなら、こんなに苦労していない</a></cite>
-            <cite class="ly-cite"><a href="https://w3g.jp/blog/confusing_word-break_word-wrap" <?php echo $targetBlank ?>>W3C word-breakとword-wrapはややこしい</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://www.tairapromote.co.jp/column/284/" <?php echo $targetBlank ?>>禁則処理とは何か 株式会社平プロモート</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://qiita.com/akane_kato/items/2b1385574e1a1babdde1" <?php echo $targetBlank ?>>Qiita overflow-wrap: break-word; や word-break: break-all; が万能の改行処理だったなら、こんなに苦労していない</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://w3g.jp/blog/confusing_word-break_word-wrap" <?php echo $targetBlank ?>>W3C word-breakとword-wrapはややこしい</a></cite>
         </section>
     </article>
 </main>

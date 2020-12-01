@@ -32,7 +32,7 @@
 //出力例: September 08 2020 22:10:11. updated
 </pre>
 
-<cite class="ly-cite"><a href="https://www.php.net/manual/ja/function.filemtime.php" <?php echo $targetBlank ?>>PHP マニュアル</a></cite>
+<cite class="ly-cite"><a class="ly-cite_link" href="https://www.php.net/manual/ja/function.filemtime.php" <?php echo $targetBlank ?>>PHP マニュアル</a></cite>
 		</section>
         <section class="ly-section" id="1">
             <h2><?php echo $navList[1]; ?></h2>

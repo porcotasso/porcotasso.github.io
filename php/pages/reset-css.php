@@ -22,7 +22,7 @@
             <p>box-sizingは「要素の幅（width）と高さ（height）の中にpaddingとborderを含めるかどうか」という設定</p>
             <p>値をcontent-boxにすると、幅や余白を%指定したいときには不向き（親要素からはみ出てしまったりしやすい）</p>
             <p>値をborder-boxにして、borderとpaddingをwidthに含めることができるので幅と余白の%指定が楽になる。border-boxを指定するときは「*」を使って全ての要素に対してborder-boxを指定しておくと楽</p>
-            <cite class="ly-cite"><a href="https://saruwakakun.com/html-css/reference/box-sizing" <?php echo $targetBlank ?>>box-sizing:border-boxの使い方</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://saruwakakun.com/html-css/reference/box-sizing" <?php echo $targetBlank ?>>box-sizing:border-boxの使い方</a></cite>
 <pre class="prettyprint">
 *,
 *::before,
@@ -72,7 +72,7 @@ font-size: 62.5%;
             <h3>アンチエイリアス</h3>
             <p>コンピュータでの文字表示はピクセル単位より細かく描画することができません。このため、物体の輪郭にジャギーと呼ばれるギザギザが発生してしまいます。このジャギーを軽減し少しでも目立たなくするために、文字の輪郭を背景となじませるように、色を滑らかに変化させることをアンチエイリアスといい、その処理をアンチエイリアシングといいます。黒い文字を表現する場合でも、黒だけではギザギザのジャギーがでてしまうので文字の黒と背景との中間色も境界線に配置し滑らかに見せることができるのです。font-smoothingではこのアンチエイリアスをコントロールするCSSプロパティになります。</p>
             <h4>Webkit系（Chrome, Safari, Microsoft Edge, Opera）</h4>
-            <cite class="ly-cite"><a href="https://qiita.com/umashiba/items/8cb47825624c5cb043d6" <?php echo $targetBlank ?>>ベンダープレフィックス</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://qiita.com/umashiba/items/8cb47825624c5cb043d6" <?php echo $targetBlank ?>>ベンダープレフィックス</a></cite>
             <p><code>-webkit-font-smoothing: antialiased; //なめらか</code></p>
             <h4>Firefox</h4>
             <p><code>-moz-osx-font-smoothing: grayscale; //なめらか</code></p>
@@ -100,10 +100,11 @@ body {
             <p>p と li　が文章中で同じような見せ方で利用されることを基本として文字スタイルを合わせる。</p>
             <p>大きなコンテナの中でpやliを繰り返し使った時、最後のpやliの下のスペースが邪魔になることがある。ここではliは下のスペースを作らず、line-heightのみで、バランスを調整する。pは別途margin-bottomを追加する。</p>
             <p>またリストタグのlist-styleをどうしておくかについて、文章中のリストだけでなく、メニュー、パンくずリストなどでも使われるので、list-styleの設定をnoneにするかどうかはサイトの内容によって変えます。ここではdefaultのままで、いらない場合にはclassを追加するようにする。  list-style分のスペースを作るためにフォントサイズに比例して幅を変える</p>
+            <p>p文章のフォントサイズとline-heightはよく迷う。読みやすいよう16pxを保ちたいが、幅が狭いデバイスだと一行の文字数が少なく、逆に読みにくい。line-heightについて、font-sizeが16pxなら文字同士の相互干渉が強くなるので、2くらい離させたい。</p>
 <pre class="prettyprint">
 p, li{
   letter-spacing: 0.05em;
-  line-height: 1.9;
+  line-height: 2;
 }
 ul{
    padding-left: 1.8em;
@@ -212,7 +213,7 @@ dt {
         <section class="ly-section" id="10">
             <h2><?php echo $navList[10]; ?></h2>
             <p>「BLOCKQUOTE」とは、引用・転載文であることを示すタグです。比較的長いテキストを段落ごと引用する際に使用されます。短いテキストの場合はblockquoteタグではなく、qタグを使用して引用・抜粋を行います。</p>
-            <cite class="ly-cite"><a href="https://nandemo-nobiru.com/2159/" <?php echo $targetBlank ?>>なんでものびるWEB</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://nandemo-nobiru.com/2159/" <?php echo $targetBlank ?>>なんでものびるWEB</a></cite>
 <pre class="prettyprint">
 blockquote {
    margin: 0 0 1rem;
@@ -256,7 +257,7 @@ sup {
             <h2><?php echo $navList[13]; ?></h2>
             <h3>pre</h3>
             <p>Preformatted Text（整形済テキスト）という意味で、入力したソースのまま表示することができます。不要な空欄、タブもそのまま表示されるので使用できません。特殊文字は表示できないので、記号を使ってエスケープする必要があります。半角スペースや改行をそのまま表示。プログラムのコードを表示する場合に使用。プログラムのコードを表示する場合は、codeと組み合わせて使用されます。</p>
-            <cite class="ly-cite"><a href="https://webtools.dounokouno.com/htmlescape/" <?php echo $targetBlank ?>>Web制作小物ツール</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://webtools.dounokouno.com/htmlescape/" <?php echo $targetBlank ?>>Web制作小物ツール</a></cite>
             <h3>code</h3>
             <p>Computer Codeの略。codeタグで囲んだ文字列がソースコードであることを示します。等幅フォントで表示される。改行やインデントなどはcodeでは反映されない（サイトによってはされると書いてあるようですが）。ソースコードの文字列を表示して見せるときに使います。defaultだとコードの途中で単語で改行されて読みにくいので、word-break: break-all;で文字で改行に変更</p>
             <p>kbdキーボードタグは、ユーザーによる入力（キーボード入力や音声入力など）を表します。kbdは「keyboard」の略です。</p>

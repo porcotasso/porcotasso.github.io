@@ -124,8 +124,8 @@ for($i = 0; $i < $n; $i++){
 <div class="swiper-button-prev"></div> 
 <div class="swiper-button-next"></div>
 </pre>
-          <cite class="ly-cite"><a href="https://tech.playground.style/javascript/carousel-slider/" <?php echo $targetBlank ?>>カルーセルスライダーの実装に便利なSwiper.jsの使い方</a></cite>
-          <cite class="ly-cite"><a href="https://cooen.jp/archives/510" <?php echo $targetBlank ?>>スライダーSwiper.js 基本の使い方解説</a></cite>
+          <cite class="ly-cite"><a class="ly-cite_link" href="https://tech.playground.style/javascript/carousel-slider/" <?php echo $targetBlank ?>>カルーセルスライダーの実装に便利なSwiper.jsの使い方</a></cite>
+          <cite class="ly-cite"><a class="ly-cite_link" href="https://cooen.jp/archives/510" <?php echo $targetBlank ?>>スライダーSwiper.js 基本の使い方解説</a></cite>
 		</section>
         <section class="ly-section" id="1">
             <h2><?php echo $navList[1]; ?></h2>

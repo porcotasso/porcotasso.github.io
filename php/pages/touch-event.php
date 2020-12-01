@@ -90,9 +90,9 @@ touchArea1.addEventListener("touchmove", () => {
                     <tr><td>target</td><td>その指をタッチ開始した位置にあるElement<br>*指を移動しても、targetはタッチ開始時の位置のElementのまま</td></tr>
                 </tbody>
             </table>
-            <cite class="ly-cite"><a href="https://web-breeze.net/js-touch-event/" <?php echo $targetBlank ?>>https://web-breeze.net/js-touch-event/</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://web-breeze.net/js-touch-event/" <?php echo $targetBlank ?>>https://web-breeze.net/js-touch-event/</a></cite>
 
-            <cite class="ly-cite"><a href="https://webtools.dounokouno.com/htmlescape/" <?php echo $targetBlank ?>>Web制作小物ツール</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://webtools.dounokouno.com/htmlescape/" <?php echo $targetBlank ?>>Web制作小物ツール</a></cite>
 
 		</section>
     </article>

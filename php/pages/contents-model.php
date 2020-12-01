@@ -23,12 +23,12 @@
             <p>コンテンツ・モデルが”Nothing”とされているものは、そのタグの中に何もコンテンツを入れられないというルールです。</p>
             <p>例：divタグはフロー・コンテンツしか内包できない。</p>
             <p>例：spanタグはフレージング・コンテンツしか内包できない。</p>
-            <cite class="ly-cite"><a href="https://yoshikawaweb.com/element/" <?php echo $targetBlank ?>>HTML5 入れ子チートシート</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://yoshikawaweb.com/element/" <?php echo $targetBlank ?>>HTML5 入れ子チートシート</a></cite>
         </section>
         <section class="ly-section" id="2">
             <h2><?php echo $navList[2 - 1]; ?></h2>
             <p>HTML5では類似する特性を持ったタグが7つの「カテゴリー」に分類されます。タグによってはどこのカテゴリーにも属していないものや、複数のカテゴリーに属するタグも存在します。</p>
-            <cite class="ly-cite"><a href="https://webgoto.net/html5/" <?php echo $targetBlank ?>>HTML5 コンテンツモデル ガイド</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://webgoto.net/html5/" <?php echo $targetBlank ?>>HTML5 コンテンツモデル ガイド</a></cite>
             <ul>
                 <li>メタデータ・コンテンツ</li>
                 <li>フロー・コンテンツ</li>
@@ -107,8 +107,8 @@
 
         <section class="ly-section">
             <h3>参考</h3>
-            <cite class="ly-cite"><a href="http://honttoni.blog74.fc2.com/blog-entry-107.html?sp" <?php echo $targetBlank ?>>ほんっとにはじめてのHTML5とCSS3</a></cite>
-            <cite class="ly-cite"><a href="https://www.w3.org/TR/html51/grouping-content.html#the-p-element" <?php echo $targetBlank ?>>w3.org p element</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="http://honttoni.blog74.fc2.com/blog-entry-107.html?sp" <?php echo $targetBlank ?>>ほんっとにはじめてのHTML5とCSS3</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://www.w3.org/TR/html51/grouping-content.html#the-p-element" <?php echo $targetBlank ?>>w3.org p element</a></cite>
         </section>
     </article>
 </main>

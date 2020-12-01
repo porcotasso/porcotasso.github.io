@@ -244,8 +244,8 @@ document.getElementsByTagName("h2");
 
 </sction>
 
-<cite class="ly-cite"><a href="https://seiai.ed.jp/sys/text/htm4/chp09/h09a36.html" <?php echo $targetBlank ?>>class属性の変更でスタイルを変える</a></cite>
-<cite class="ly-cite"><a href="https://qiita.com/KDE_SPACE/items/e21bb31dd4d9c162c4a6" <?php echo $targetBlank ?>>ノードの取得／属性の取得・設定</a></cite>
+<cite class="ly-cite"><a class="ly-cite_link" href="https://seiai.ed.jp/sys/text/htm4/chp09/h09a36.html" <?php echo $targetBlank ?>>class属性の変更でスタイルを変える</a></cite>
+<cite class="ly-cite"><a class="ly-cite_link" href="https://qiita.com/KDE_SPACE/items/e21bb31dd4d9c162c4a6" <?php echo $targetBlank ?>>ノードの取得／属性の取得・設定</a></cite>
 
 		</section>
     </article>

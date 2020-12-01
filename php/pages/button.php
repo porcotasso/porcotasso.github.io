@@ -44,7 +44,7 @@
 
         <section class="ly-section">
             <h3>参考</h3>
-            <cite class="ly-cite"><a href="https://www.ameamelog.com/html-a-button/" <?php echo $targetBlank ?>>ameamelog.com</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://www.ameamelog.com/html-a-button/" <?php echo $targetBlank ?>>ameamelog.com</a></cite>
         </section>
     </article>
 </main>

@@ -57,8 +57,8 @@
         </section>
         <section class="ly-section">
             <h3>参考</h3>
-            <cite class="ly-cite"><a href="https://qiita.com/pugiemonn/items/964203782e1fcb3d02c3" <?php echo $targetBlank ?>>こんなHTMLとCSSのコーディング規約で書きたい</a></cite>
-            <cite class="ly-cite"><a href="https://www.amazon.co.jp/CSS設計完全ガイド-詳細解説-実践的モジュール集-半田-惇志/dp/429711173X" <?php echo $targetBlank ?>>CSS設計完全ガイド</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://qiita.com/pugiemonn/items/964203782e1fcb3d02c3" <?php echo $targetBlank ?>>こんなHTMLとCSSのコーディング規約で書きたい</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://www.amazon.co.jp/CSS設計完全ガイド-詳細解説-実践的モジュール集-半田-惇志/dp/429711173X" <?php echo $targetBlank ?>>CSS設計完全ガイド</a></cite>
         </section>
     </article>
 </main>

@@ -351,27 +351,42 @@ body{
 
 }
 .ly-section{
-	margin-bottom: $space-unit*8;
+	margin-bottom: $space-unit*12;
 }
 .ly-cite{
-	padding: 16px;
 	display: block;
 	position: relative;
     border-radius: 4px;
-	margin: 24px 0 24px;
-	border: 1px solid $border-gray;
-	font-size: $font-size-14;
-	font-weight: bold;
-	font-style: normal;
-	box-shadow: 0 3px 5px -1px rgba(24,44,84,.1);
+	margin: 42px 0;
+	border: 2px solid $border-gray;
+	box-shadow: 2px 2px 1px rgba(24,44,84,.2);
+	&:before{
+		content:"参考サイト";
+		top: -19px;
+		left: -1px;
+		display: block;
+		font-size: $font-size-12;
+		font-weight: bold;
+		color: $font-dark-gray;
+		background: $border-gray;
+		position: absolute;
+		padding: 0 8px;
+		border-radius: 2px 2px 0 0;
+	}
 	&:after{
 		content: url(/images/common/cite-arrow.svg);
 		position: absolute;
 		right: 8px;
 		top: 8px;
 	}
-	a{
+	&_link{
+		font-size: $font-size-14;
+		font-weight: bold;
+		font-style: normal;
+		padding: 16px;
+		background: #fff;
 		color: $font-black;
+		display: block;
 	}
 }
 

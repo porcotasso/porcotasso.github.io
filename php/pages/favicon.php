@@ -26,7 +26,7 @@
             <h3>apple-touch-icon</h3>
             <p>iPhoneやiPadのsafariでWebサイトのショートカットをホーム画面に作成した時に表示されるアイコン。</p>
             <p>App Iconについて</p>
-            <cite class="ly-cite"><a href="https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/" <?php echo $targetBlank ?>>App Icon – Icons and Images – iOS – Human Interface Guidelines – Apple Developer</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/" <?php echo $targetBlank ?>>App Icon – Icons and Images – iOS – Human Interface Guidelines – Apple Developer</a></cite>
             <h3>android-touch-icon</h3>
             <p>AndroidでWebサイトのショートカットをホーム画面に作成した時に表示されるアイコン。</p>
             <p>Google公式ページガイドライン</p>
@@ -39,7 +39,7 @@
                     <li>ファビコンの URL は固定されている必要があります（URL は頻繁に変更しないでください）。</li>
                     <li>わいせつな表現やヘイト表現に関連するシンボル（例: かぎ十字章）などの不適切なファビコンは表示されません。該当する表現がファビコン内で見つかった場合は、デフォルトのアイコンに置き換えられます。</li>
                 </ul>
-                <footer>引用元：<cite class="ly-cite"><a href="https://support.google.com/webmasters/answer/9290858?hl=ja" <?php echo $targetBlank ?>>検索結果に表示されるファビコンを定義する – Search Console ヘルプ</a></cite>
+                <footer>引用元：<cite class="ly-cite"><a class="ly-cite_link" href="https://support.google.com/webmasters/answer/9290858?hl=ja" <?php echo $targetBlank ?>>検索結果に表示されるファビコンを定義する – Search Console ヘルプ</a></cite>
                 </footer>
             </blockquote>
             <h3>Windows用アイコン</h3>
@@ -50,7 +50,7 @@
             <p>faviconはico形式、apple-touch-icon、android-touch-icon、Windows用アイコンはpng形式で作ります。画像をルートディレクトリに置く場合はheadタグに特に記述がなくともクローラーがfaviconと認識します。画像をルートディレクトリ以外に置く場合はhaedタグ内などに画像の場所を指定します。ファビコン、アイコン用フォルダを作ってまとめた方がわかりやすいです。</p>
             <h3>ico形式</h3>
             <p>元となる大きめの高画質画像を準備します。faviconは基本表示サイズが小さいので小さく表示されてもちゃんと見えるようにする必要があります。元画像ができたらfaviconジェネレーターでicoファイルを作成します。</p>
-            <cite class="ly-cite"><a href="https://favicon-generator.mintsu-dev.com/" <?php echo $targetBlank ?>>favicon ジェネレーター</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://favicon-generator.mintsu-dev.com/" <?php echo $targetBlank ?>>favicon ジェネレーター</a></cite>
             <h3>png画像</h3>
             <p>使う場所の用途を理解して実寸サイズでそれぞれ制作します。</p>
             <p>apple-touch-icon：180x180pxのpng画像</p>
@@ -87,8 +87,8 @@
         </section>
         <section class="ly-section">
             <h3>参考</h3>
-            <cite class="ly-cite"><a href="https://webdesign-trends.net/entry/7251" <?php echo $targetBlank ?>>Webに関わるすべての人のためのメディア</a></cite>        
-            <cite class="ly-cite"><a href="https://gray-code.com/html_css/setting-favicon-for-smartphone/" <?php echo $targetBlank ?>>スマホ向けのファビコンを設定する</a></cite>        
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://webdesign-trends.net/entry/7251" <?php echo $targetBlank ?>>Webに関わるすべての人のためのメディア</a></cite>        
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://gray-code.com/html_css/setting-favicon-for-smartphone/" <?php echo $targetBlank ?>>スマホ向けのファビコンを設定する</a></cite>        
         </section>
     </article>
 </main>

@@ -19,7 +19,7 @@
         </header>
 		<section class="ly-section" id="1">
 			<h2>アコーディオン</h2>
-            <cite class="ly-cite"><a href="https://flex-box.net/js-accordion/" <?php echo $targetBlank ?>>ブログの設置 アコーディオン</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://flex-box.net/js-accordion/" <?php echo $targetBlank ?>>ブログの設置 アコーディオン</a></cite>
 		</section>
         <section class="ly-section">
 			<h2>脱Jquery</h2 id="2">
@@ -55,19 +55,19 @@ document.getElementById('element').classList.toggle('active');
 //要素が指定したクラス名を持っているか
 document.getElementById('element').classList.contains('active');
 </pre>
-<cite class="ly-cite"><a href="https://www.aura-office.co.jp/blog/js-native/" <?php echo $targetBlank ?>>アウラ 脱Jquery</a></cite>
-<cite class="ly-cite"><a href="https://q-az.net/without-jquery-height-width-offset-scrolltop/" <?php echo $targetBlank ?>>脱Jquery</a></cite>
-<cite class="ly-cite"><a href="https://www.willstyle.co.jp/blog/1025/" <?php echo $targetBlank ?>>will style.</a></cite>
+<cite class="ly-cite"><a class="ly-cite_link" href="https://www.aura-office.co.jp/blog/js-native/" <?php echo $targetBlank ?>>アウラ 脱Jquery</a></cite>
+<cite class="ly-cite"><a class="ly-cite_link" href="https://q-az.net/without-jquery-height-width-offset-scrolltop/" <?php echo $targetBlank ?>>脱Jquery</a></cite>
+<cite class="ly-cite"><a class="ly-cite_link" href="https://www.willstyle.co.jp/blog/1025/" <?php echo $targetBlank ?>>will style.</a></cite>
 
 <p>
     HTMLCollection element 違い:
     getElementsByClassName()が返すのは、HTMLCollectionであってElementではない
 </p>
 
-<cite class="ly-cite"><a href="https://teratail.com/questions/231849" <?php echo $targetBlank ?>>getElementsByClassName()が返す</a></cite>
+<cite class="ly-cite"><a class="ly-cite_link" href="https://teratail.com/questions/231849" <?php echo $targetBlank ?>>getElementsByClassName()が返す</a></cite>
 
 <p>次の要素を取得する</p>
-<cite class="ly-cite"><a href="https://syncer.jp/javascript-reference/element/scrolltop" <?php echo $targetBlank ?>>次の要素を取得する</a></cite>
+<cite class="ly-cite"><a class="ly-cite_link" href="https://syncer.jp/javascript-reference/element/scrolltop" <?php echo $targetBlank ?>>次の要素を取得する</a></cite>
 
 
            
@@ -84,7 +84,7 @@ document.getElementById('element').classList.contains('active');
 
         <section class="ly-section">
             <h3>参考</h3>
-            <cite class="ly-cite"><a href="https://flex-box.net/js-accordion/" <?php echo $targetBlank ?>>ブログの設置 アコーディオン</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://flex-box.net/js-accordion/" <?php echo $targetBlank ?>>ブログの設置 アコーディオン</a></cite>
         </section>
     </article>
 </main>

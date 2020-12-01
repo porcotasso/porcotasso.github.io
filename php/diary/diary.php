@@ -122,12 +122,12 @@
         </section>
         <section class="ly-section">
             <h3>参考</h3>
-            <cite class="ly-cite"><a href="https://murashun.jp" <?php echo $targetBlank ?>>murashun.jp</a></cite>
-            <cite class="ly-cite"><a href="https://www.ameamelog.com/category/web-design/css/" <?php echo $targetBlank ?>>ameamelogコーディング</a></cite>
-            <cite class="ly-cite"><a href="http://honttoni.blog74.fc2.com/blog-entry-107.html?sp" <?php echo $targetBlank ?>>ほんっとにはじめてのHTML5とCSS3</a></cite>
-            <cite class="ly-cite"><a href="https://www.w3.org/TR/html51/grouping-content.html#the-p-element" <?php echo $targetBlank ?>>w3.org p element</a></cite>
-            <cite class="ly-cite"><a href="https://liginc.co.jp/" <?php echo $targetBlank ?>>lig</a></cite>
-            <cite class="ly-cite"><a href="https://baigie.me/menu/" <?php echo $targetBlank ?>>baigie</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://murashun.jp" <?php echo $targetBlank ?>>murashun.jp</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://www.ameamelog.com/category/web-design/css/" <?php echo $targetBlank ?>>ameamelogコーディング</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="http://honttoni.blog74.fc2.com/blog-entry-107.html?sp" <?php echo $targetBlank ?>>ほんっとにはじめてのHTML5とCSS3</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://www.w3.org/TR/html51/grouping-content.html#the-p-element" <?php echo $targetBlank ?>>w3.org p element</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://liginc.co.jp/" <?php echo $targetBlank ?>>lig</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://baigie.me/menu/" <?php echo $targetBlank ?>>baigie</a></cite>
         </section>
     </article>
     

@@ -66,10 +66,10 @@ if(today.getDay() == 0 && today.get.getHours() < 12 ){
 //　0 sun, 1 mon, 2 tue, 3 wed, 4 thu, 5 fri, 6 sat
 </pre>
 
-<cite class="ly-cite"><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat" <?php echo $targetBlank ?>>Intl.DateTimeFormat</a></cite>
-<cite class="ly-cite"><a href="https://docs.microsoft.com/ja-jp/dotnet/standard/base-types/standard-date-and-time-format-strings" <?php echo $targetBlank ?>>標準の日時書式指定文字列</a></cite>
-<cite class="ly-cite"><a href="https://maku77.github.io/js/time/other-country-time.html" <?php echo $targetBlank ?>>他の国のローカルタイム（現地時刻）を文字列形式で取得する</a></cite>
-<cite class="ly-cite"><a href="https://www.ultra-noob.com/blog/2020-05-11-Day.js%E3%81%A7%E7%B0%A1%E5%8D%98%E3%81%AB%E6%97%A5%E4%BB%98%E5%87%A6%E7%90%86%EF%BC%81/" <?php echo $targetBlank ?>>Day.jsで簡単に日付処理！</a></cite>
+<cite class="ly-cite"><a class="ly-cite_link" href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat" <?php echo $targetBlank ?>>Intl.DateTimeFormat</a></cite>
+<cite class="ly-cite"><a class="ly-cite_link" href="https://docs.microsoft.com/ja-jp/dotnet/standard/base-types/standard-date-and-time-format-strings" <?php echo $targetBlank ?>>標準の日時書式指定文字列</a></cite>
+<cite class="ly-cite"><a class="ly-cite_link" href="https://maku77.github.io/js/time/other-country-time.html" <?php echo $targetBlank ?>>他の国のローカルタイム（現地時刻）を文字列形式で取得する</a></cite>
+<cite class="ly-cite"><a class="ly-cite_link" href="https://www.ultra-noob.com/blog/2020-05-11-Day.js%E3%81%A7%E7%B0%A1%E5%8D%98%E3%81%AB%E6%97%A5%E4%BB%98%E5%87%A6%E7%90%86%EF%BC%81/" <?php echo $targetBlank ?>>Day.jsで簡単に日付処理！</a></cite>
 
 
 		</section>

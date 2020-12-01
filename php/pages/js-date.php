@@ -60,7 +60,7 @@ if(today.getDay() == 0 && today.getHours() < 12 ){
 						</dl>
 					</li>
 				</ul>
-				<cite class="ly-cite"><a href="https://www.sejuku.net/blog/22867" <?php echo $targetBlank ?>>日付の取得と比較の方法まとめ</a></cite>
+				<cite class="ly-cite"><a class="ly-cite_link" href="https://www.sejuku.net/blog/22867" <?php echo $targetBlank ?>>日付の取得と比較の方法まとめ</a></cite>
 
 				
         </section>

@@ -20,9 +20,9 @@
         <section class="ly-section" id="0">
 			<h2><?php echo $navList[0]; ?></h2>
             <p></p>
-            <cite class="ly-cite"><a href="https://blog.webico.work/passive-event-listeber01" <?php echo $targetBlank ?>>スクロールジャンク</a></cite>  
-            <cite class="ly-cite"><a href="https://qiita.com/yukiTTT/items/773356c2483b96c9d4e0" <?php echo $targetBlank ?>>スクロールジャンク</a></cite>  
-            <cite class="ly-cite"><a href="https://qiita.com/yukiTTT/items/773356c2483b96c9d4e0" <?php echo $targetBlank ?>>スクロールジャンク</a></cite>  
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://blog.webico.work/passive-event-listeber01" <?php echo $targetBlank ?>>スクロールジャンク</a></cite>  
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://qiita.com/yukiTTT/items/773356c2483b96c9d4e0" <?php echo $targetBlank ?>>スクロールジャンク</a></cite>  
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://qiita.com/yukiTTT/items/773356c2483b96c9d4e0" <?php echo $targetBlank ?>>スクロールジャンク</a></cite>  
 
 		</section>
 

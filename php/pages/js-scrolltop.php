@@ -93,7 +93,7 @@ let pageOffsetY = window.pageYOffset || document.documentElement.btnScrollTop;
 </pre>
 
           <p>ほぼこちらを参考にさせていただいてます。もっとシンプルなコードも書かれてますがそちらはsafariで動かなかったので複雑な方を使用。（2020.09.18）。</p>
-          <cite class="ly-cite"><a href="https://flex-box.net/js-scrolltop/#co-index-4" <?php echo $targetBlank ?>>Javascriptのみでトップへ戻るボタンを実装</a></cite>
+          <cite class="ly-cite"><a class="ly-cite_link" href="https://flex-box.net/js-scrolltop/#co-index-4" <?php echo $targetBlank ?>>Javascriptのみでトップへ戻るボタンを実装</a></cite>
 		</section>
         <section class="ly-section" id="1">
             <h2><?php echo $navList[1]; ?></h2>
