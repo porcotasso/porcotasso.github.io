@@ -7,7 +7,7 @@
 	margin-left: auto;
 	padding-right: $gutter-width;
 	padding-left: $gutter-width;
-}
+}	
 // header下とh1の間のスペース
 .ly-UnderheaderSpace{
 	padding-top: 24px;
@@ -56,14 +56,16 @@ body{
 			font-size: $font-size-21;
 			font-weight: normal;
 			margin-bottom: 0;
+			position: relative;
+			left: -2%;
 			a{
 				transition: $transition;
 				color: #333;
 				position: relative;
 				top: 0;
 				.svg-logo{
-					width: 180px;
-					max-width: 50%;
+					max-width: 300px;
+					width: 50%;
 				}
 			}
 	  	}
@@ -320,7 +322,9 @@ body{
 
 }
 .ly-mainNav{
-	// border-top: 1px dotted $border-gray;
+	background: #fff;
+	// position: sticky;
+	// top: 0;
 	border: 1px solid $border-gray;
 	border-radius: 4px;
 	padding: 0 0;
@@ -339,7 +343,8 @@ body{
 		padding-bottom: 16px;
 		padding-right: 16px;
 		margin-bottom: 0;
-		li{
+		.toc{
+			position: relative;
 			line-height: 1.5;
 			padding: 8px 0;
 			a{
@@ -347,6 +352,30 @@ body{
 				font-weight: bold;
 			}
 		}
+		.toc:hover {
+			background: whitesmoke;
+			color: royalblue;
+		  }
+		.toc:hover:not(.active)::before {
+			content: '';
+			position: absolute;
+			top: 0.5rem;
+			left: -3px;
+			border-radius: 50%;
+			width: 5px;
+			height: 5px;
+			background: silver;
+		  }
+		  .toc.active:before {
+			content: '';
+			position: absolute;
+			top: 0.5rem;
+			left: -3px;
+			border-radius: 50%;
+			width: 5px;
+			height: 5px;
+			background: skyblue;
+		  }
 	}
 
 }

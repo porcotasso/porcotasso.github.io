@@ -50,7 +50,7 @@
             <?php if($_SERVER['REQUEST_URI'] == "/"){ ?>
                 <h1 class="web-ttl">
                     <a href="/">
-                        <svg class="svg-logo" viewBox="0 0 252 54">
+                        <svg class="svg-logo" viewBox="0 0 252 36">
                             <use xlink:href="#svg-logo"></use>
                         </svg>
                         <?php /* $str = file_get_contents($baseUrl.'/images/common/logo.svg'); echo $str; */ ?>
@@ -59,7 +59,7 @@
             <?php }else{ ?>
                 <div class="web-ttl">
                     <a href="/">
-                        <svg class="svg-logo" viewBox="0 0 252 54">
+                        <svg class="svg-logo" viewBox="0 0 252 36">
                             <use xlink:href="#svg-logo"></use>
                         </svg>
                         <?php /* $str = file_get_contents($baseUrl.'/images/common/logo.svg'); echo $str; */ ?>

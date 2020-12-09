@@ -3,30 +3,31 @@
     <article class="articleCnt ly-innnerWidth">
         <header>
             <?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-mainNav">
-                <div class="el-mainNavTtl">目次</div>
-                <?php $navList = array("コンテンツ・モデルとは", "７つのカテゴリー", "７つのカテゴリーに分類されない３つのルール"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
         </header>
-        <section class="ly-section" id="1">
-            <h2><?php echo $navList[1 - 1]; ?></h2>
+        <nav class="ly-mainNav">
+            <div class="el-mainNavTtl">目次</div>
+            <?php $navList = array("コンテンツ・モデルとは", "７つのカテゴリー", "７つのカテゴリーに分類されない３つのルール"); ?>
+            <ol>
+                <?php for($i = 0; $i < count($navList); $i++){ ?>
+                <li>
+                    <div class="toc"><?php echo $navList[$i]; ?></div>
+                </li>
+                <?php } ?>
+            </ol>
+        </nav>
+
+
+
+        <section class="ly-section toc-cnt">
+            <h2><?php echo $navList[0]; ?></h2>
             <p>例えば段落を表すpタグのコンテンツ・モデルは「フレージング・コンテンツ」になります。これは、pタグの中に入れるのは、フレージング・コンテンツというカテゴリーに属したタグのみということを表します。</p>
             <p>コンテンツ・モデルが”Nothing”とされているものは、そのタグの中に何もコンテンツを入れられないというルールです。</p>
             <p>例：divタグはフロー・コンテンツしか内包できない。</p>
             <p>例：spanタグはフレージング・コンテンツしか内包できない。</p>
             <cite class="ly-cite"><a class="ly-cite_link" href="https://yoshikawaweb.com/element/" <?php echo $targetBlank ?>>HTML5 入れ子チートシート</a></cite>
         </section>
-        <section class="ly-section" id="2">
-            <h2><?php echo $navList[2 - 1]; ?></h2>
+        <section class="ly-section toc-cnt">
+            <h2><?php echo $navList[1]; ?></h2>
             <p>HTML5では類似する特性を持ったタグが7つの「カテゴリー」に分類されます。タグによってはどこのカテゴリーにも属していないものや、複数のカテゴリーに属するタグも存在します。</p>
             <cite class="ly-cite"><a class="ly-cite_link" href="https://webgoto.net/html5/" <?php echo $targetBlank ?>>HTML5 コンテンツモデル ガイド</a></cite>
             <ul>
@@ -66,8 +67,8 @@
             <p>ユーザーが操作可能なタグです。</p>
             <p>&lt;a&gt; &lt;button&gt; &lt;details&gt; &lt;embed&gt; &lt;iframe&gt; &lt;keygen&gt; &lt;label&gt; &lt;select&gt; &lt;textarea&gt;</p>
         </section>
-        <section class="ly-section" id="3">
-            <h2><?php echo $navList[3 - 1]; ?></h2>
+        <section class="ly-section toc-cnt">
+            <h2><?php echo $navList[2]; ?></h2>
             <ul>
                 <li>トランスペアレント・コンテンツ</li>
                 <li>パルパブル・コンテンツ</li>
@@ -113,3 +114,43 @@
     </article>
 </main>
 <?php include("../_partial/wrapper-foot.php"); ?>
+
+
+<script>
+window.onload = function() {
+  const tocContents = document.querySelectorAll('.toc-cnt');
+  const toc = document.querySelectorAll('.toc');
+  console.log(toc);
+  const tocMap = new Map();
+console.log(tocMap);
+  // IntersectionObserverでコンテンツの出入りを監視
+  const intersectCallback = (entries) => {
+    entries.forEach((element) => {
+      if (element.intersectionRatio) {
+        tocMap.get(element.target).classList.add('active');
+      } else {
+        tocMap.get(element.target).classList.remove('active');
+      }
+    });
+  };
+  // wrapperの上辺を現在地の基準点にしたいので、rootMarginで微調整
+//   const options = {
+//     root: document.querySelector('body'),
+//     rootMargin: '-1px 0px -99% 0px',
+//   };
+//   const observer = new IntersectionObserver(intersectCallback, options);
+
+  // コンテンツをIntersectionObserverに登録
+//   tocContents.forEach((content, i) => {
+//     observer.observe(content);
+//     tocMap.set(content, toc.item(i));
+//     tocMap.set(toc.item(i), content);
+//   });
+  // 目次にクリックイベントリスナを登録
+  toc.forEach((item) => {
+    item.addEventListener('click', (event) => {
+      tocMap.get(event.target).scrollIntoView();
+    });
+  });
+}
+</script>
