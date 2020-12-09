@@ -9,8 +9,8 @@
             <?php $navList = array("コンテンツ・モデルとは", "７つのカテゴリー", "７つのカテゴリーに分類されない３つのルール"); ?>
             <ol>
                 <?php for($i = 0; $i < count($navList); $i++){ ?>
-                <li>
-                    <div class="toc"><?php echo $navList[$i]; ?></div>
+                <li class="tocList">
+                    <div><?php echo $navList[$i]; ?></div>
                 </li>
                 <?php } ?>
             </ol>
@@ -18,7 +18,7 @@
 
 
 
-        <section class="ly-section toc-cnt">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[0]; ?></h2>
             <p>例えば段落を表すpタグのコンテンツ・モデルは「フレージング・コンテンツ」になります。これは、pタグの中に入れるのは、フレージング・コンテンツというカテゴリーに属したタグのみということを表します。</p>
             <p>コンテンツ・モデルが”Nothing”とされているものは、そのタグの中に何もコンテンツを入れられないというルールです。</p>
@@ -26,7 +26,7 @@
             <p>例：spanタグはフレージング・コンテンツしか内包できない。</p>
             <cite class="ly-cite"><a class="ly-cite_link" href="https://yoshikawaweb.com/element/" <?php echo $targetBlank ?>>HTML5 入れ子チートシート</a></cite>
         </section>
-        <section class="ly-section toc-cnt">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[1]; ?></h2>
             <p>HTML5では類似する特性を持ったタグが7つの「カテゴリー」に分類されます。タグによってはどこのカテゴリーにも属していないものや、複数のカテゴリーに属するタグも存在します。</p>
             <cite class="ly-cite"><a class="ly-cite_link" href="https://webgoto.net/html5/" <?php echo $targetBlank ?>>HTML5 コンテンツモデル ガイド</a></cite>
@@ -67,7 +67,7 @@
             <p>ユーザーが操作可能なタグです。</p>
             <p>&lt;a&gt; &lt;button&gt; &lt;details&gt; &lt;embed&gt; &lt;iframe&gt; &lt;keygen&gt; &lt;label&gt; &lt;select&gt; &lt;textarea&gt;</p>
         </section>
-        <section class="ly-section toc-cnt">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[2]; ?></h2>
             <ul>
                 <li>トランスペアレント・コンテンツ</li>
@@ -117,22 +117,32 @@
 
 
 <script>
-window.onload = function() {
-  const tocContents = document.querySelectorAll('.toc-cnt');
-  const toc = document.querySelectorAll('.toc');
-  console.log(toc);
+window.addEventListener('DOMContentLoaded', function() {
+  const tocList = document.querySelectorAll('.tocList');
+  const tocContent = document.querySelectorAll('.tocContent');
+  console.log(tocList);
+  console.log(tocContent);
   const tocMap = new Map();
-console.log(tocMap);
+  console.log(tocMap);
+
+  const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => console.log(entry));
+});
+
+// 監視したい要素をobserve
+observer.observe(document.querySelector('.tocContent'));
+
+
   // IntersectionObserverでコンテンツの出入りを監視
-  const intersectCallback = (entries) => {
-    entries.forEach((element) => {
-      if (element.intersectionRatio) {
-        tocMap.get(element.target).classList.add('active');
-      } else {
-        tocMap.get(element.target).classList.remove('active');
-      }
-    });
-  };
+  // const intersectCallback = (entries) => {
+  //   entries.forEach((element) => {
+  //     if (element.intersectionRatio) {
+  //       tocMap.get(element.target).classList.add('active');
+  //     } else {
+  //       tocMap.get(element.target).classList.remove('active');
+  //     }
+  //   });
+  // };
   // wrapperの上辺を現在地の基準点にしたいので、rootMarginで微調整
 //   const options = {
 //     root: document.querySelector('body'),
@@ -141,16 +151,16 @@ console.log(tocMap);
 //   const observer = new IntersectionObserver(intersectCallback, options);
 
   // コンテンツをIntersectionObserverに登録
-//   tocContents.forEach((content, i) => {
+//   tocContent.forEach((content, i) => {
 //     observer.observe(content);
-//     tocMap.set(content, toc.item(i));
-//     tocMap.set(toc.item(i), content);
+//     tocMap.set(content, tocList.item(i));
+//     tocMap.set(tocList.item(i), content);
 //   });
   // 目次にクリックイベントリスナを登録
-  toc.forEach((item) => {
-    item.addEventListener('click', (event) => {
-      tocMap.get(event.target).scrollIntoView();
-    });
-  });
-}
+  // tocList.forEach((item) => {
+  //   item.addEventListener('click', (event) => {
+  //     tocMap.get(event.currentTarget).scrollIntoView();
+  //   });
+  // });
+});
 </script>
