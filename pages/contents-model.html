@@ -420,39 +420,40 @@ window.addEventListener('DOMContentLoaded', function() {
   console.log(tocList);
   console.log(tocContent);
   const tocMap = new Map();
-  console.log(tocMap);
+  
 
-  const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => console.log(entry));
-});
+  //1. option設定
+  const option = {
+    root: null,
+    rootMargin: "-1px 0px -99% 0px",
+    threshold: 0.0,
+  };
+  // 2.実行するcallback関数作成
+  const callback = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio) {
+        tocMap.get(entry.target).classList.add('active');
+        console.log(tocMap);
+        console.log('active');
+      } else {
+        tocMap.get(entry.target).classList.remove('active');
+        console.log('notactive');
+      }
+      console.log(entry.intersectionRatio);
+      console.log(entry.target);
+    });
+  };
+  //3.初期化オブジェクト作成
+  const io = new IntersectionObserver(callback, option);
 
-// 監視したい要素をobserve
-observer.observe(document.querySelector('.tocContent'));
+  //4.監視
+  tocContent.forEach((content, i) => {
+    io.observe(content);
+    tocMap.set(content, tocList.item(i));
+    tocMap.set(tocList.item(i), content);
+  });
 
 
-  // IntersectionObserverでコンテンツの出入りを監視
-  // const intersectCallback = (entries) => {
-  //   entries.forEach((element) => {
-  //     if (element.intersectionRatio) {
-  //       tocMap.get(element.target).classList.add('active');
-  //     } else {
-  //       tocMap.get(element.target).classList.remove('active');
-  //     }
-  //   });
-  // };
-  // wrapperの上辺を現在地の基準点にしたいので、rootMarginで微調整
-//   const options = {
-//     root: document.querySelector('body'),
-//     rootMargin: '-1px 0px -99% 0px',
-//   };
-//   const observer = new IntersectionObserver(intersectCallback, options);
-
-  // コンテンツをIntersectionObserverに登録
-//   tocContent.forEach((content, i) => {
-//     observer.observe(content);
-//     tocMap.set(content, tocList.item(i));
-//     tocMap.set(tocList.item(i), content);
-//   });
   // 目次にクリックイベントリスナを登録
   // tocList.forEach((item) => {
   //   item.addEventListener('click', (event) => {

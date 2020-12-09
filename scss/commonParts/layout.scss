@@ -323,11 +323,12 @@ body{
 }
 .ly-mainNav{
 	background: #fff;
-	// position: sticky;
-	// top: 0;
+	position: sticky;
+	top: 0;
+	z-index: 10;
 	border: 1px solid $border-gray;
 	border-radius: 4px;
-	padding: 0 0;
+	padding: 0;
 	margin:24px 0 80px;
 	// background: $bg-light-gray;
 	.el-mainNavTtl{
@@ -343,7 +344,7 @@ body{
 		padding-bottom: 16px;
 		padding-right: 16px;
 		margin-bottom: 0;
-		.toc{
+		.tocList{
 			position: relative;
 			line-height: 1.5;
 			padding: 8px 0;
@@ -352,11 +353,11 @@ body{
 				font-weight: bold;
 			}
 		}
-		.toc:hover {
+		.tocList:hover {
 			background: whitesmoke;
 			color: royalblue;
 		  }
-		.toc:hover:not(.active)::before {
+		.tocList:hover:not(.active)::before {
 			content: '';
 			position: absolute;
 			top: 0.5rem;
@@ -366,7 +367,7 @@ body{
 			height: 5px;
 			background: silver;
 		  }
-		  .toc.active:before {
+		  .tocList.active:before {
 			content: '';
 			position: absolute;
 			top: 0.5rem;

@@ -530,8 +530,12 @@ body {
     text-align: center; }
 
 .ly-mainNav {
+  z-index: 10;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   margin: 24px 0 80px;
-  padding: 0 0;
+  padding: 0;
   border: 1px solid #d4d9e6;
   border-radius: 4px;
   background: #fff; }
@@ -546,17 +550,17 @@ body {
     padding-top: 16px;
     padding-right: 16px;
     padding-bottom: 16px; }
-    .ly-mainNav ol .toc {
+    .ly-mainNav ol .tocList {
       position: relative;
       padding: 8px 0;
       line-height: 1.5; }
-      .ly-mainNav ol .toc a {
+      .ly-mainNav ol .tocList a {
         color: #181818;
         font-weight: bold; }
-    .ly-mainNav ol .toc:hover {
+    .ly-mainNav ol .tocList:hover {
       background: whitesmoke;
       color: royalblue; }
-    .ly-mainNav ol .toc:hover:not(.active)::before {
+    .ly-mainNav ol .tocList:hover:not(.active)::before {
       position: absolute;
       top: 0.5rem;
       left: -3px;
@@ -565,7 +569,7 @@ body {
       border-radius: 50%;
       background: silver;
       content: ''; }
-    .ly-mainNav ol .toc.active:before {
+    .ly-mainNav ol .tocList.active:before {
       position: absolute;
       top: 0.5rem;
       left: -3px;
