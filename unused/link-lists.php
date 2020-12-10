@@ -1,4 +1,4 @@
-<article class="articleCnt ly-innnerWidth">
+<article class="articleCnt">
     <h1><?php echo $page["title"] ?></h1>
     <p><?php echo $page["lead"] ?></p>
     <nav>

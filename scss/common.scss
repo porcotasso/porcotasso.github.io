@@ -7,46 +7,98 @@
 
 // コンテンツのページのarticle タグに追加し、hタグなどのスタイルを統一させる
 .articleCnt{
-&_ttl{
-	// display: flex;
-	// justify-content: space-between;
-	padding-top: 1em;
-	padding-bottom: 1em;
-	margin-top: 1em;
-	margin-bottom: 1em;
-	border-bottom: 2px dotted $primary-pink;
-	// border-bottom: 1px dotted $primary-pink;
-	text-align: center;
-	letter-spacing: 0.1em;
-	position: relative;
-	&_pre, &_nxt{
-	position: absolute;
-	top: 24px;
-	content: "";
-	position: absolute;
-	display: inline-block;
-	width: 10px;
-	height: 10px;
-	border-bottom: 1px solid $font-gray;
-	border-right: 1px solid $font-gray;
+	&_headerBox{
+		background: #e9f4f7;
+		padding: 0;
+		// margin-top: 1em;
+		margin-bottom: 1em;
+		letter-spacing: 0.1em;
+		position: relative;
+		min-height: 200px;
+		h1{
+			padding: 32px $gutter-width;
+			margin: 0;
+		}
+		.tagLists{
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			padding:0 $gutter-width;
+			margin-bottom: 16px;
+			&_list{
+				font-size: $font-size-13;
+				// border: 1px solid #ccc;
+				border-radius: 40px;
+				padding: 4px 8px;
+				line-height: 1;
+				color: $font-gray;
+				background: #fff;
+			}
+		}
+		.el-updateDate{
+			font-size: $font-size-13;
+			text-align: right;
+			margin: 0 $gutter-width 16px;
+			color: $font-gray;
+		}
+		.otherCnt{
+			display: flex;
+			padding: 8px $gutter-width;
+			background: #e0eaec;
+			align-items: center;
+			// position: relative;
+			&_pre, &_nxt{
+				font-size: $font-size-13;
+				position: relative;
+				color: #0dabca;
+				// top: 0;
+				// content: "";
+				// position: absolute;
+				// display: inline-block;
+				width: 50%;
+				// height: 10px;
+				// border-bottom: 1px solid $font-gray;
+				// border-right: 1px solid $font-gray;
+			}
+			&_pre{
+				// padding-left: 32px;
+				left: 0;
+				text-align: left;
+				&:before{
+					content: "";
+					position: absolute;
+					display: inline-block;
+					width: 8px;
+					height: 8px;
+					left: -10px;
+					top: calc(50% - 4px);
+					border-bottom: 1px solid #0dabca;
+					border-right: 1px solid #0dabca;
+					transform: rotate(135deg);
+				}
+			}
+			&_nxt{
+				// padding-right: 32px;
+				right: 0;
+				text-align: right;
+				&:after{
+					content: "";
+					position: absolute;
+					display: inline-block;
+					width: 8px;
+					height: 8px;
+					top: calc(50% - 4px);
+					border-bottom: 1px solid #0dabca;
+					border-right: 1px solid #0dabca;
+					transform: rotate(-45deg);
+				}
+				// right: 12px;
+				
+			}
+		}
 	}
-	&_pre{
-	left: 12px;
-	transform: rotate(135deg);
-	}
-	&_nxt{
-	right: 12px;
-	transform: rotate(-45deg);
-	}
-	h1{
-	margin: 0 30px;
-	}
-	}
-	.el-updateDate{
-		font-size: $font-size-13;
-		text-align: right;
-		margin-bottom: 48px;
-		color: $font-gray;
+	&_summary{
+		padding: 16px $gutter-width;
 	}
 	h2{
 		// font-size: $font-size-17;

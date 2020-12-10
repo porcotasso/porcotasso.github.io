@@ -29,12 +29,15 @@
                 if($list["file"] == $_SERVER['REQUEST_URI']){
                     $title = $list["title"];
                     $lead = $list["lead"];
+                    $tag = $list["tag"];
                     $filename = $baseUrl.$list["file"];
                     if($i != 0){
                         $pagePre = "/pages/".$allPages[$i - 1]["html"];
+                        $pagePreTtl = $allPages[$i - 1]["title"];
                     }
                     if($i != count($allPages) -1 ){
                         $pageNext = "/pages/".$allPages[$i + 1]["html"];
+                        $pageNextTtl = $allPages[$i + 1]["title"];
                     }                   
                     break;
                 }

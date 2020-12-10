@@ -1,6 +1,6 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
-    <article class="articleCnt ly-innnerWidth">
+    <article class="articleCnt">
         <header>
             <h1>制作日記</h1>
             <p>やってることをメモ的に書いています。</p>

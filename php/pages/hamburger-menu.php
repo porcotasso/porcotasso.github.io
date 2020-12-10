@@ -1,11 +1,11 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
-    <article class="articleCnt ly-innnerWidth">
+    <article class="articleCnt">
         <header>
             <?php include("../_partial/pages-title.php"); ?>        
             
-            <nav class="ly-mainNav">
-                <div class="el-mainNavTtl">目次</div>
+            <nav class="ly-toc">
+                <div class="ly-toc_ttl">目次</div>
                 <?php $navList = array("hamburgerのデザイン", "クリックしたらクラスをつける", "背景のコンテンツを固定する", "黒透過背景をつける"); ?>
                 <ol>
                     <?php for($i = 0; $i < count($navList); $i++){ ?>

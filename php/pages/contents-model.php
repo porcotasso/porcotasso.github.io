@@ -1,23 +1,21 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
-    <article class="articleCnt ly-innnerWidth">
+    <article class="articleCnt">
         <header>
-            <?php include("../_partial/pages-title.php"); ?>
+          <?php include("../_partial/pages-title.php"); ?>
         </header>
-        <nav class="ly-mainNav">
-            <div class="el-mainNavTtl">目次</div>
+        <nav class="ly-toc">
+            <div class="ly-toc_ttl">目次</div>
             <?php $navList = array("コンテンツ・モデルとは", "７つのカテゴリー", "７つのカテゴリーに分類されない３つのルール"); ?>
-            <ol>
+            <ul class="ly-toc_lists">
                 <?php for($i = 0; $i < count($navList); $i++){ ?>
-                <li class="tocList">
+                <li class="tocList js-tocList">
                     <div><?php echo $navList[$i]; ?></div>
                 </li>
                 <?php } ?>
-            </ol>
+            </ul>
         </nav>
-
-
-
+        
         <section class="ly-section tocContent">
             <h2><?php echo $navList[0]; ?></h2>
             <p>例えば段落を表すpタグのコンテンツ・モデルは「フレージング・コンテンツ」になります。これは、pタグの中に入れるのは、フレージング・コンテンツというカテゴリーに属したタグのみということを表します。</p>
@@ -118,17 +116,14 @@
 
 <script>
 window.addEventListener('DOMContentLoaded', function() {
-  const tocList = document.querySelectorAll('.tocList');
+  const tocList = document.querySelectorAll('.js-tocList');
   const tocContent = document.querySelectorAll('.tocContent');
-  console.log(tocList);
-  console.log(tocContent);
   const tocMap = new Map();
   
-
-  //1. option設定
+  //1. option設定 
   const option = {
     root: null,
-    rootMargin: "-1px 0px -99% 0px",
+    rootMargin: "-74% 0px -20% 0px",
     threshold: 0.0,
   };
   // 2.実行するcallback関数作成
@@ -136,14 +131,9 @@ window.addEventListener('DOMContentLoaded', function() {
     entries.forEach((entry) => {
       if (entry.intersectionRatio) {
         tocMap.get(entry.target).classList.add('active');
-        console.log(tocMap);
-        console.log('active');
       } else {
         tocMap.get(entry.target).classList.remove('active');
-        console.log('notactive');
       }
-      console.log(entry.intersectionRatio);
-      console.log(entry.target);
     });
   };
   //3.初期化オブジェクト作成

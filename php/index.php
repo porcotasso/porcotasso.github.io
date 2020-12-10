@@ -44,7 +44,7 @@
         <div class="swiper-button-prev"></div> 
         <div class="swiper-button-next"></div>
     </div>
-    <article class="articleCnt ly-innnerWidth">
+    <article class="articleCnt">
         <a href="pages/diary.html">
             <div class="ly-diary">
                 <h2 class="ly-diary_title">制作日記</h2>

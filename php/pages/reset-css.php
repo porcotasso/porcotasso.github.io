@@ -1,10 +1,10 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
-    <article class="articleCnt ly-innnerWidth">
+    <article class="articleCnt">
         <header>
 			<?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-mainNav">
-                <div class="el-mainNavTtl">目次</div>
+            <nav class="ly-toc">
+                <div class="ly-toc_ttl">目次</div>
                 <?php $navList = array("box-sizingを全体に使う", "html", "body", "p, liタグ", "pタグ", "img", "abbr", "address", "a", "dl,dt,dd","blockqoute", "強調系タグ", "sub,sup", " pre,code,kbd,samp", "figure", "svg", "table", "form", "その他"); ?>
                 <ol>
                     <?php for($i = 0; $i < count($navList); $i++){ ?>

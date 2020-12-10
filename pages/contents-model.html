@@ -281,33 +281,39 @@
     
     <!-- メニューを出した時に出る黒背景 -->
     <div class="el-blackCover" id="js-blackCover"></div><main class="ly-main"> 
-    <article class="articleCnt ly-innnerWidth">
+    <article class="articleCnt">
         <header>
-            <div class="articleCnt_ttl">
-		
+          <div class="articleCnt_headerBox">
 	<h1>コンテンツ・モデル</h1>
-			<a href="/pages/semantic-tags.html" class="articleCnt_ttl_nxt"></a>
-		
+	<ul class="tagLists">
+				<li class="tagLists_list">
+			html		</li>
+		   
+	</ul>
+			<p class="el-updateDate">2020.12.11 updated</p>
+		<div class="otherCnt">
+			
+					<a href="/pages/semantic-tags.html" class="otherCnt_nxt">セマンティックhtml</a>
+			
+	</div>
 </div>
-	<p class="el-updateDate">2020.12.09 updated</p>
-<p>HTML5では、このタグの中にはこのタグが配置できる、といった配置ルールが決められており、これをコンテンツ・モデル（Content models）といいます。</p>          </header>
-        <nav class="ly-mainNav">
-            <div class="el-mainNavTtl">目次</div>
-                        <ol>
-                                <li class="tocList">
+
+<p class="articleCnt_summary">HTML5では、このタグの中にはこのタグが配置できる、といった配置ルールが決められており、これをコンテンツ・モデル（Content models）といいます。</p>          </header>
+        <nav class="ly-toc">
+            <div class="ly-toc_ttl">目次</div>
+                        <ul class="ly-toc_lists">
+                                <li class="tocList js-tocList">
                     <div>コンテンツ・モデルとは</div>
                 </li>
-                                <li class="tocList">
+                                <li class="tocList js-tocList">
                     <div>７つのカテゴリー</div>
                 </li>
-                                <li class="tocList">
+                                <li class="tocList js-tocList">
                     <div>７つのカテゴリーに分類されない３つのルール</div>
                 </li>
-                            </ol>
+                            </ul>
         </nav>
-
-
-
+        
         <section class="ly-section tocContent">
             <h2>コンテンツ・モデルとは</h2>
             <p>例えば段落を表すpタグのコンテンツ・モデルは「フレージング・コンテンツ」になります。これは、pタグの中に入れるのは、フレージング・コンテンツというカテゴリーに属したタグのみということを表します。</p>
@@ -415,17 +421,14 @@
 
 <script>
 window.addEventListener('DOMContentLoaded', function() {
-  const tocList = document.querySelectorAll('.tocList');
+  const tocList = document.querySelectorAll('.js-tocList');
   const tocContent = document.querySelectorAll('.tocContent');
-  console.log(tocList);
-  console.log(tocContent);
   const tocMap = new Map();
   
-
-  //1. option設定
+  //1. option設定 
   const option = {
     root: null,
-    rootMargin: "-1px 0px -99% 0px",
+    rootMargin: "-74% 0px -20% 0px",
     threshold: 0.0,
   };
   // 2.実行するcallback関数作成
@@ -433,14 +436,9 @@ window.addEventListener('DOMContentLoaded', function() {
     entries.forEach((entry) => {
       if (entry.intersectionRatio) {
         tocMap.get(entry.target).classList.add('active');
-        console.log(tocMap);
-        console.log('active');
       } else {
         tocMap.get(entry.target).classList.remove('active');
-        console.log('notactive');
       }
-      console.log(entry.intersectionRatio);
-      console.log(entry.target);
     });
   };
   //3.初期化オブジェクト作成

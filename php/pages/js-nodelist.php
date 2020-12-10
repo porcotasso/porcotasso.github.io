@@ -1,10 +1,10 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
-    <article class="articleCnt ly-innnerWidth">
+    <article class="articleCnt">
         <header>
             <?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-mainNav">
-                <div class="el-mainNavTtl">目次</div>
+            <nav class="ly-toc">
+                <div class="ly-toc_ttl">目次</div>
                 <?php $navList = array("Nodeとは", "主なノードの種類", "属性ノード", "HTMLコレクション", "Nodelist", "要素の探し方"); ?>
                 <ol>
                     <?php for($i = 0; $i < count($navList); $i++){ ?>

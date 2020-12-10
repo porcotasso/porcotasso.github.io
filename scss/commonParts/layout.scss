@@ -321,7 +321,7 @@ body{
 	}
 
 }
-.ly-mainNav{
+.ly-toc{
 	background: #fff;
 	position: sticky;
 	top: 0;
@@ -331,7 +331,7 @@ body{
 	padding: 0;
 	margin:24px 0 80px;
 	// background: $bg-light-gray;
-	.el-mainNavTtl{
+	.ly-toc_ttl{
 		// margin-bottom: $space-unit*2;
 		text-align: center;
 		color: $font-gray;
@@ -339,18 +339,33 @@ body{
 		padding: 16px 0;
 		background: $bg-light-gray;
 	}
-	ol{
+	.ly-toc_lists{
 		padding-top: 16px;
 		padding-bottom: 16px;
 		padding-right: 16px;
 		margin-bottom: 0;
+		list-style: none;
 		.tocList{
 			position: relative;
 			line-height: 1.5;
-			padding: 8px 0;
+			padding: 6px 0;
+			font-size: $font-size-14;
 			a{
 				color: $font-black;
 				font-weight: bold;
+			}
+			&.active{
+				font-weight: bold;
+				&:before {
+					content: '';
+					position: absolute;
+					top: calc(50% - 4px);
+					left: -12px;
+					border-radius: 50%;
+					width: 6px;
+					height: 6px;
+					background: skyblue;
+				}
 			}
 		}
 		.tocList:hover {
@@ -367,16 +382,7 @@ body{
 			height: 5px;
 			background: silver;
 		  }
-		  .tocList.active:before {
-			content: '';
-			position: absolute;
-			top: 0.5rem;
-			left: -3px;
-			border-radius: 50%;
-			width: 5px;
-			height: 5px;
-			background: skyblue;
-		  }
+
 	}
 
 }

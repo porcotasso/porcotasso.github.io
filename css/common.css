@@ -529,7 +529,7 @@ body {
     font-size: 1.2rem;
     text-align: center; }
 
-.ly-mainNav {
+.ly-toc {
   z-index: 10;
   position: -webkit-sticky;
   position: sticky;
@@ -539,28 +539,41 @@ body {
   border: 1px solid #d4d9e6;
   border-radius: 4px;
   background: #fff; }
-  .ly-mainNav .el-mainNavTtl {
+  .ly-toc .ly-toc_ttl {
     padding: 16px 0;
     background: #eff1f3;
     color: #888;
     font-weight: bold;
     text-align: center; }
-  .ly-mainNav ol {
+  .ly-toc .ly-toc_lists {
     margin-bottom: 0;
     padding-top: 16px;
     padding-right: 16px;
-    padding-bottom: 16px; }
-    .ly-mainNav ol .tocList {
+    padding-bottom: 16px;
+    list-style: none; }
+    .ly-toc .ly-toc_lists .tocList {
       position: relative;
-      padding: 8px 0;
+      padding: 6px 0;
+      font-size: 1.4rem;
       line-height: 1.5; }
-      .ly-mainNav ol .tocList a {
+      .ly-toc .ly-toc_lists .tocList a {
         color: #181818;
         font-weight: bold; }
-    .ly-mainNav ol .tocList:hover {
+      .ly-toc .ly-toc_lists .tocList.active {
+        font-weight: bold; }
+        .ly-toc .ly-toc_lists .tocList.active:before {
+          position: absolute;
+          top: calc(50% - 4px);
+          left: -12px;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: skyblue;
+          content: ''; }
+    .ly-toc .ly-toc_lists .tocList:hover {
       background: whitesmoke;
       color: royalblue; }
-    .ly-mainNav ol .tocList:hover:not(.active)::before {
+    .ly-toc .ly-toc_lists .tocList:hover:not(.active)::before {
       position: absolute;
       top: 0.5rem;
       left: -3px;
@@ -568,15 +581,6 @@ body {
       height: 5px;
       border-radius: 50%;
       background: silver;
-      content: ''; }
-    .ly-mainNav ol .tocList.active:before {
-      position: absolute;
-      top: 0.5rem;
-      left: -3px;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: skyblue;
       content: ''; }
 
 .ly-section {
@@ -811,39 +815,74 @@ li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
   pre .atv, code .atv {
     color: #060; } }
 
-.articleCnt_ttl {
+.articleCnt_headerBox {
   position: relative;
-  margin-top: 1em;
+  min-height: 200px;
   margin-bottom: 1em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  border-bottom: 2px dotted #f76eb5;
-  letter-spacing: 0.1em;
-  text-align: center; }
-  .articleCnt_ttl_pre, .articleCnt_ttl_nxt {
-    display: inline-block;
-    position: absolute;
-    position: absolute;
-    top: 24px;
-    width: 10px;
-    height: 10px;
-    border-right: 1px solid #888;
-    border-bottom: 1px solid #888;
-    content: ""; }
-  .articleCnt_ttl_pre {
-    left: 12px;
-    transform: rotate(135deg); }
-  .articleCnt_ttl_nxt {
-    right: 12px;
-    transform: rotate(-45deg); }
-  .articleCnt_ttl h1 {
-    margin: 0 30px; }
+  padding: 0;
+  background: #e9f4f7;
+  letter-spacing: 0.1em; }
+  .articleCnt_headerBox h1 {
+    margin: 0;
+    padding: 32px 5%; }
+  .articleCnt_headerBox .tagLists {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    padding: 0 5%;
+    list-style: none; }
+    .articleCnt_headerBox .tagLists_list {
+      padding: 4px 8px;
+      border-radius: 40px;
+      background: #fff;
+      color: #888;
+      font-size: 1.3rem;
+      line-height: 1; }
+  .articleCnt_headerBox .el-updateDate {
+    margin: 0 5% 16px;
+    color: #888;
+    font-size: 1.3rem;
+    text-align: right; }
+  .articleCnt_headerBox .otherCnt {
+    display: flex;
+    align-items: center;
+    padding: 8px 5%;
+    background: #e0eaec; }
+    .articleCnt_headerBox .otherCnt_pre, .articleCnt_headerBox .otherCnt_nxt {
+      position: relative;
+      width: 50%;
+      color: #0dabca;
+      font-size: 1.3rem; }
+    .articleCnt_headerBox .otherCnt_pre {
+      left: 0;
+      text-align: left; }
+      .articleCnt_headerBox .otherCnt_pre:before {
+        display: inline-block;
+        position: absolute;
+        top: calc(50% - 4px);
+        left: -10px;
+        width: 8px;
+        height: 8px;
+        transform: rotate(135deg);
+        border-right: 1px solid #0dabca;
+        border-bottom: 1px solid #0dabca;
+        content: ""; }
+    .articleCnt_headerBox .otherCnt_nxt {
+      right: 0;
+      text-align: right; }
+      .articleCnt_headerBox .otherCnt_nxt:after {
+        display: inline-block;
+        position: absolute;
+        top: calc(50% - 4px);
+        width: 8px;
+        height: 8px;
+        transform: rotate(-45deg);
+        border-right: 1px solid #0dabca;
+        border-bottom: 1px solid #0dabca;
+        content: ""; }
 
-.articleCnt .el-updateDate {
-  margin-bottom: 48px;
-  color: #888;
-  font-size: 1.3rem;
-  text-align: right; }
+.articleCnt_summary {
+  padding: 16px 5%; }
 
 .articleCnt h2 {
   display: table;
