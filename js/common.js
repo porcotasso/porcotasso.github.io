@@ -54,9 +54,9 @@ function headerScroll() {
     console.log(scrollTop);
     console.log(current_pos);
     console.log(start_pos);
-    if (current_pos - 40 > start_pos) {
+    if (current_pos - 10 > start_pos) {
       headerScroll[0].classList.add('scroll');
-    }else if(current_pos + 40 < start_pos){
+    }else if(current_pos + 10 < start_pos){
       headerScroll[0].classList.remove('scroll');
     }
     start_pos = current_pos;
