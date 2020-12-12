@@ -15,6 +15,7 @@
                 <?php } ?>
             </ul>
         </nav>
+        <p class="articleCnt_summary"><?php echo $lead ?></p>
         
         <section class="ly-section tocContent">
             <h2><?php echo $navList[0]; ?></h2>

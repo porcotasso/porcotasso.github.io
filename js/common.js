@@ -14,11 +14,11 @@ hamburger.onclick = function() {
   if (headerNav.classList.contains('active')) {
       //スクロール禁止
       // bodyOverflow[0].addEventListener('touchmove', handleTouchMove, { passive: false });
-      console.log('click');
+      // console.log('click');
   } else {
       //スクロール復帰
       // bodyOverflow[0].removeEventListener('touchmove', handleTouchMove, { passive: false });
-      console.log('close');
+      // console.log('close');
   }
 
   //背景のスクロールを止める android
@@ -46,7 +46,7 @@ hamburger.onclick = function() {
 
 // HEADER SMALL after scroll
 function headerSmaller() {
-	var px_change = 80;
+	var px_change = 20;
 	let headerSmaller = document.getElementsByClassName('js-headerSmaller');
 	window.addEventListener('scroll', () => {
     var y = document.documentElement.scrollTop || document.body.scrollTop;
@@ -97,7 +97,7 @@ var escapeHtml = (function (String) {
     '`': '&#x60;',
     '"': '&quot;',
     '<': '&lt;',
-    '>': '&gt;'
+    '>': '&gt;',
   };
   var escapeReg = '[';
   var reg;

@@ -25,6 +25,7 @@
             $title = "制作メモ、日記";
         } else {
             $i = 0;
+            $pageNumber = count($allPages);
             foreach($allPages as $list){
                 if($list["file"] == $_SERVER['REQUEST_URI']){
                     $title = $list["title"];
@@ -34,15 +35,22 @@
                     if($i != 0){
                         $pagePre = "/pages/".$allPages[$i - 1]["html"];
                         $pagePreTtl = $allPages[$i - 1]["title"];
+                    }else{
+                        $pagePre = "/pages/".$allPages[$pageNumber - 1]["html"];            
+                        $pagePreTtl = $allPages[$pageNumber - 1]["title"];
                     }
-                    if($i != count($allPages) -1 ){
+                    if($i != $pageNumber -1 ){
                         $pageNext = "/pages/".$allPages[$i + 1]["html"];
                         $pageNextTtl = $allPages[$i + 1]["title"];
-                    }                   
+                    } else {
+                        $pageNext = "/pages/".$allPages[0]["html"];             
+                        $pageNextTtl = $allPages[0]["title"];
+                    }       
                     break;
-                }
+                }       
                 $i ++;
-            } 
+            };
+
         } ?>
     <title><?php echo ($title); ?></title>
 </head>
