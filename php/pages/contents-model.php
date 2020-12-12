@@ -4,17 +4,18 @@
         <header>
           <?php include("../_partial/pages-title.php"); ?>
         </header>
-        <nav class="ly-toc">
+          <nav class="ly-toc" id="js-miniHeader">
+            <p class="miniHeaderTtl"><?php echo $title ?></p>
             <div class="ly-toc_ttl">目次</div>
             <?php $navList = array("コンテンツ・モデルとは", "７つのカテゴリー", "７つのカテゴリーに分類されない３つのルール"); ?>
             <ul class="ly-toc_lists">
-                <?php for($i = 0; $i < count($navList); $i++){ ?>
+              <?php for($i = 0; $i < count($navList); $i++){ ?>
                 <li class="tocList js-tocList">
-                    <div><?php echo $navList[$i]; ?></div>
+                  <div><?php echo $navList[$i]; ?></div>
                 </li>
-                <?php } ?>
+              <?php } ?>
             </ul>
-        </nav>
+          </nav>
         <p class="articleCnt_summary"><?php echo $lead ?></p>
         
         <section class="ly-section tocContent">

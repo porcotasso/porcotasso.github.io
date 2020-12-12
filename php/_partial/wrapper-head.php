@@ -56,7 +56,7 @@
 </head>
 <body>
 <?php include_once($baseUrl.'/images/common/sprite.svg'); ?>
-    <header class="ly-header js-headerSmaller" id="js-headerNav">  
+    <header class="ly-header js-headerScroll" id="js-headerNav">  
         <nav class="ly-header__inner">
             <?php if($_SERVER['REQUEST_URI'] == "/"){ ?>
                 <h1 class="web-ttl">

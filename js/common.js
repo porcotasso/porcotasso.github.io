@@ -44,20 +44,59 @@ hamburger.onclick = function() {
   // }
 };
 
-// HEADER SMALL after scroll
-function headerSmaller() {
-	var px_change = 20;
-	let headerSmaller = document.getElementsByClassName('js-headerSmaller');
+// HEADER scroll
+function headerScroll() {
+  var start_pos = 0;
+	let headerScroll = document.getElementsByClassName('js-headerScroll');
 	window.addEventListener('scroll', () => {
-    var y = document.documentElement.scrollTop || document.body.scrollTop;
-		if ( y > px_change) {
-			headerSmaller[0].classList.add('smaller');
-		} else if (headerSmaller[0].classList.contains('smaller')) {
-			headerSmaller[0].classList.remove('smaller');
-		}
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    var current_pos = scrollTop;
+    console.log(scrollTop);
+    console.log(current_pos);
+    console.log(start_pos);
+    if (current_pos - 40 > start_pos) {
+      headerScroll[0].classList.add('scroll');
+    }else if(current_pos + 40 < start_pos){
+      headerScroll[0].classList.remove('scroll');
+    }
+    start_pos = current_pos;
+    console.log(start_pos);
+    console.log('-------');
 	});
 }
-window.onload = headerSmaller();
+window.addEventListener('DOMContentLoaded', headerScroll());
+// window.onload = headerScroll();
+
+
+window.addEventListener('DOMContentLoaded', function() {
+  let headerScroll = document.getElementById('js-miniHeader');
+  console.log('aaa');
+  
+  //1. option設定 
+  const option = {
+    root: null,
+    rootMargin: "0px 0px -96% 0px",
+    threshold: 0.0,
+  };
+  //IntersectionObserverのcallback関数の作成
+  const callback1 = (entries) => {
+    entries.forEach( entry => {
+      if(entry.isIntersecting) {
+        // 要素が交差した際の動作
+        console.log('add show class');
+        headerScroll.classList.add('smaller');
+      } else {
+        // 要素が交差から外れた際の動作
+        console.log('remove show class');
+        headerScroll.classList.remove('smaller');
+      }
+    });
+  };
+  const observer1 = new IntersectionObserver(callback1, option);
+  // const el = document.querySelector('.ly-main');
+  observer1.observe(headerScroll);
+});
+
 
 
 // HOME MENU OPEN/CLOSE #menu-triggerをクリックで#js-headerがオンオフ
@@ -80,9 +119,9 @@ document.addEventListener("DOMContentLoaded",() => {
 // 	var px_change = 80;
 // 	window.addEventListener('scroll', function (e) {
 // 		if ($(window).scrollTop() > px_change) {
-// 			$(".js-headerSmaller").addClass("smaller");
-// 		} else if ($(".js-headerSmaller").hasClass("smaller")) {
-// 			$(".js-headerSmaller").removeClass("smaller");
+// 			$(".js-headerScroll").addClass("smaller");
+// 		} else if ($(".js-headerScroll").hasClass("smaller")) {
+// 			$(".js-headerScroll").removeClass("smaller");
 // 		}
 // 	});
 // }

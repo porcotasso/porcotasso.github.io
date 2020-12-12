@@ -309,13 +309,10 @@ template {
 body {
   -ms-scroll-chaining: none;
       overscroll-behavior: contain; }
-  body.aaa {
-    -ms-scroll-chaining: none;
-        overscroll-behavior: contain; }
 
 .ly-header {
   display: flex;
-  z-index: 100;
+  z-index: 110;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -326,13 +323,13 @@ body {
   margin-left: auto;
   transform: translateY(0);
   background: #fcfcfc;
-  transition: 0.25s; }
+  transition: 0.4s; }
   .ly-header__inner {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
     transform: translateY(0px);
-    transition: 0.25s; }
+    transition: 0.4s; }
     .ly-header__inner .web-ttl {
       position: relative;
       left: -2%;
@@ -346,7 +343,7 @@ body {
         position: relative;
         top: 0;
         color: #333;
-        transition: 0.25s; }
+        transition: 0.4s; }
         .ly-header__inner .web-ttl a .svg-logo {
           width: 50%;
           max-width: 300px; }
@@ -388,7 +385,7 @@ body {
       box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
       list-style: none;
       text-align: left;
-      transition: 0.25s;
+      transition: 0.4s;
       /* オープン時 */
       /* オープン時にアニメーションを設定 */ }
       .ly-header__inner .headerMenu_list {
@@ -475,21 +472,8 @@ body {
       left: 0;
       width: 100%;
       opacity: 1; }
-  .ly-header.smaller {
-    transform: translateY(-32px);
-    background-color: rgba(255, 255, 255, 0); }
-    .ly-header.smaller .ly-header__inner {
-      transform: translateY(16px); }
-      .ly-header.smaller .ly-header__inner .web-ttl a {
-        position: relative;
-        top: -40px;
-        opacity: 0; }
-      .ly-header.smaller .ly-header__inner .headerMenu {
-        top: 0;
-        height: 100vh; }
-    .ly-header.smaller .hamburger {
-      top: 41px;
-      height: calc(60vh - 46px); }
+  .ly-header.scroll {
+    transform: translateY(-80px); }
 
 .el-blackCover {
   display: block;
@@ -534,15 +518,14 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  margin: 24px 0 80px;
+  margin: 0 0 80px;
   padding: 0;
-  border: 1px solid #d4d9e6;
-  border-radius: 4px;
   background: #fff; }
   .ly-toc .ly-toc_ttl {
-    padding: 16px 0;
+    padding: 8px 0;
     background: #eff1f3;
     color: #888;
+    font-size: 1.2rem;
     font-weight: bold;
     text-align: center; }
   .ly-toc .ly-toc_lists {
@@ -582,6 +565,16 @@ body {
       border-radius: 50%;
       background: silver;
       content: ''; }
+  .ly-toc .miniHeaderTtl {
+    display: none;
+    position: absolute;
+    padding: 8px 32px 8px 16px;
+    font-size: 1.1rem; }
+  .ly-toc.smaller .ly-toc_ttl {
+    padding: 8px 16px;
+    text-align: right; }
+  .ly-toc.smaller .miniHeaderTtl {
+    display: block; }
 
 .ly-section {
   margin-bottom: 96px; }
@@ -817,19 +810,19 @@ li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
 
 .articleCnt_headerBox {
   position: relative;
-  min-height: 200px;
-  margin-bottom: 1em;
   padding: 0;
   background: #e9f4f7;
   letter-spacing: 0.1em; }
   .articleCnt_headerBox h1 {
     margin: 0;
-    padding: 32px 5%; }
+    padding: 32px 5%;
+    font-size: 1.9rem; }
   .articleCnt_headerBox .tagLists {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 16px;
     padding: 0 5%;
+    transform: translateY(0);
     list-style: none; }
     .articleCnt_headerBox .tagLists_list {
       padding: 4px 8px;
@@ -847,7 +840,7 @@ li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
     display: flex;
     align-items: center;
     padding: 8px 5%;
-    background: #e0eaec; }
+    border-top: 1px dashed #e0eaec; }
     .articleCnt_headerBox .otherCnt_pre, .articleCnt_headerBox .otherCnt_nxt {
       position: relative;
       width: 50%;

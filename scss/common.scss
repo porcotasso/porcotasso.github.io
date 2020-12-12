@@ -7,17 +7,24 @@
 
 // コンテンツのページのarticle タグに追加し、hタグなどのスタイルを統一させる
 .articleCnt{
+	&_header{
+		// position:sticky;
+		// top: 0;
+		// z-index: 100;
+	}
 	&_headerBox{
 		background: #e9f4f7;
 		padding: 0;
 		// margin-top: 1em;
-		margin-bottom: 1em;
+		// margin-bottom: 0;
 		letter-spacing: 0.1em;
 		position: relative;
-		min-height: 200px;
+		// min-height: 200px;
+		
 		h1{
 			padding: 32px $gutter-width;
 			margin: 0;
+			font-size: $font-size-19;
 		}
 		.tagLists{
 			list-style: none;
@@ -25,6 +32,7 @@
 			flex-wrap: wrap;
 			padding:0 $gutter-width;
 			margin-bottom: 16px;
+			transform: translateY(0);
 			&_list{
 				font-size: $font-size-13;
 				// border: 1px solid #ccc;
@@ -44,7 +52,8 @@
 		.otherCnt{
 			display: flex;
 			padding: 8px $gutter-width;
-			background: #e0eaec;
+			// background: #e0eaec;
+			border-top: 1px dashed #e0eaec;
 			align-items: center;
 			// position: relative;
 			&_pre, &_nxt{
@@ -95,6 +104,21 @@
 				// right: 12px;
 				
 			}
+		}
+	}
+	&_header.smaller{
+		.articleCnt_headerBox{
+			// h1{
+			// 	font-size: $font-size-11;
+			// }
+			// .tagLists, .el-updateDate, .otherCnt{
+			// 	transform: translateY(-100px);
+			// 	height: 0;
+			// 	font-size: 0;
+			// 	opacity: 0;
+			// 	margin: 0;
+			// 	padding: 0;
+			// }
 		}
 	}
 	&_summary{
