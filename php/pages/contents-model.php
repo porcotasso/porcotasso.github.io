@@ -6,9 +6,9 @@
         </header>
           <nav class="ly-toc" id="js-miniHeader">
             <p class="miniHeaderTtl"><?php echo $title ?></p>
-            <div class="ly-toc_ttl">目次</div>
+            <div class="ly-toc_ttl" id="js-tocTtl">目次</div>
             <?php $navList = array("コンテンツ・モデルとは", "７つのカテゴリー", "７つのカテゴリーに分類されない３つのルール"); ?>
-            <ul class="ly-toc_lists">
+            <ul class="ly-toc_lists active" id="js-tocLists">
               <?php for($i = 0; $i < count($navList); $i++){ ?>
                 <li class="tocList js-tocList">
                   <div><?php echo $navList[$i]; ?></div>

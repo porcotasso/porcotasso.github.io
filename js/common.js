@@ -68,10 +68,13 @@ window.addEventListener('DOMContentLoaded', headerScroll());
 // window.onload = headerScroll();
 
 
+//miniHeader - toc toggle
+let tocTtl = document.getElementById('js-tocTtl');
+let tocLists = document.getElementById('js-tocLists');
+tocTtl.addEventListener('click', () => tocLists.classList.toggle('active') );
+
 window.addEventListener('DOMContentLoaded', function() {
-  let headerScroll = document.getElementById('js-miniHeader');
-  console.log('aaa');
-  
+  let headerScroll = document.getElementById('js-miniHeader');  
   //1. option設定 
   const option = {
     root: null,
@@ -83,19 +86,18 @@ window.addEventListener('DOMContentLoaded', function() {
     entries.forEach( entry => {
       if(entry.isIntersecting) {
         // 要素が交差した際の動作
-        console.log('add show class');
         headerScroll.classList.add('smaller');
+        tocLists.classList.remove('active');
       } else {
         // 要素が交差から外れた際の動作
-        console.log('remove show class');
         headerScroll.classList.remove('smaller');
       }
     });
   };
   const observer1 = new IntersectionObserver(callback1, option);
-  // const el = document.querySelector('.ly-main');
   observer1.observe(headerScroll);
 });
+
 
 
 
