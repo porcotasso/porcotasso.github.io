@@ -68,11 +68,14 @@ window.addEventListener('DOMContentLoaded', headerScroll());
 // window.onload = headerScroll();
 
 
-//miniHeader - toc toggle
+// toc toggle & toc miniHeader
+  // -> toc toggle 
+let tocTgl = document.getElementsByClassName('js-tocToggle');
 let tocTtl = document.getElementById('js-tocTtl');
-let tocLists = document.getElementById('js-tocLists');
-tocTtl.addEventListener('click', () => tocLists.classList.toggle('active') );
 
+tocTtl.addEventListener('click', () => tocTgl[0].classList.toggle('active'));
+
+  // -> toc miniHeader
 window.addEventListener('DOMContentLoaded', function() {
   let headerScroll = document.getElementById('js-miniHeader');  
   //1. option設定 
@@ -87,7 +90,7 @@ window.addEventListener('DOMContentLoaded', function() {
       if(entry.isIntersecting) {
         // 要素が交差した際の動作
         headerScroll.classList.add('smaller');
-        tocLists.classList.remove('active');
+        tocTgl[0].classList.remove('active');
       } else {
         // 要素が交差から外れた際の動作
         headerScroll.classList.remove('smaller');

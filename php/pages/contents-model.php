@@ -4,11 +4,11 @@
         <header>
           <?php include("../_partial/pages-title.php"); ?>
         </header>
-          <nav class="ly-toc" id="js-miniHeader">
+          <nav class="ly-toc js-tocToggle active" id="js-miniHeader">
             <p class="miniHeaderTtl"><?php echo $title ?></p>
             <div class="ly-toc_ttl" id="js-tocTtl">目次</div>
             <?php $navList = array("コンテンツ・モデルとは", "７つのカテゴリー", "７つのカテゴリーに分類されない３つのルール"); ?>
-            <ul class="ly-toc_lists active" id="js-tocLists">
+            <ul class="ly-toc_lists">
               <?php for($i = 0; $i < count($navList); $i++){ ?>
                 <li class="tocList js-tocList">
                   <div><?php echo $navList[$i]; ?></div>

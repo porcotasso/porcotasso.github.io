@@ -33,7 +33,7 @@ body{
 	width: 100%;
 	margin-right: auto;
 	margin-left: auto;
-	height: 80px;
+	height: 64px;
 	background: rgba(255, 255, 255, 0.8);
 	align-items: center;
 	display: flex;
@@ -102,7 +102,7 @@ body{
 			// display: none;
 			position: absolute;
 			// opacity: 0;
-			top: 58px;
+			top: 48px;
 			width: 0%;
 			left: 100%;
 			height:calc(100vh - 80px); //これがないと縦にスクロールせず、画面からはみ出たメニューが見れない
@@ -329,32 +329,38 @@ body{
 	margin:0 0 32px;
 	// background: $bg-light-gray;
 	.ly-toc_ttl{
-		// margin-bottom: $space-unit*2;
 		text-align: center;
 		font-size: $font-size-12;
 		color: $font-gray;
 		font-weight: bold;
-		padding: 4px 8px;
-		border: 1px solid $border-gray;
-		border-radius: 4px;
+		// border-radius: 4px;
+		// border: 1px solid $border-gray;
+		padding: 0 0 12px 0;
 		display: table;
-		margin: 16px auto 0;
-		background: #fff;
+		margin: 0 auto;
+		border-bottom: 1px dashed $border-gray;
+		// background: #fff;
+		position: relative;
+		width: 90%;
+		line-height: 1;
+		&:after{
+			content: "[開く]";
+			position: absolute;
+			left: calc(50% + 24px);
+			font-size: $font-size-11;
+		}
 	}
 	.ly-toc_lists{
-		padding-top: 16px;
-		padding-bottom: 16px;
-		padding-right: 16px;
-		margin-bottom: 0;
+		padding: 16px 5% 16px 2em;
+		margin: 0 5% 16px;
+		// border-top: 1px dashed $border-gray;
+		border-bottom: 1px dashed $border-gray;
 		list-style: none;
 		display: none;
-		&.active{
-			display: block;
-		}
 		.tocList{
 			position: relative;
 			line-height: 1.5;
-			padding: 6px 0;
+			padding: 4px 0;
 			font-size: $font-size-13;
 			a{
 				color: $font-black;
@@ -390,6 +396,18 @@ body{
 		  }
 
 	}
+	&.active{
+		.ly-toc_ttl{
+			// border: none;
+			// background: none;
+			&:after{
+				content: "[閉じる]";
+			}
+		}
+		.ly-toc_lists{
+			display: block;
+		}
+	}
 	.miniHeaderTtl{
 		display: none;
 		position: absolute;
@@ -400,31 +418,40 @@ body{
 	&.smaller{
 		.ly-toc_ttl{
 			text-align: right;
-			padding: 8px 16px;
-			border: none;
+			padding: 12px 16px;
+			border-bottom:1px solid $border-gray;
 			background: #f8f8f8;
 			display: block;
 			margin: 0;
+			width: 100%;
+			&:after{
+				left: 4px;
+				position: relative;
+				width: initial;
+			}
 		}
 		.ly-toc_lists{
 			border: 1px solid $border-gray;
 			width: 90%;
-			right: 8px;
 			background: #eef7fb;
 			border-radius: 4px;
 			box-shadow: $box-shadow;
 			position: absolute;
-			transform: translateY(calc(-100% - 40px));
+			transform: translateY(calc(-100% - 60px));
 			display: block;
-			transition: all .4s;
-			&.active{
-				transform: translateY(0);
-				
-			}
-			
+			transition: all 0s;
+			z-index: 2;
 		}
 		.miniHeaderTtl{
 			display: block;
+			z-index: 1;
+		}
+		
+		&.active{
+			.ly-toc_lists{
+				transform: translateY(0);
+				transition: all .4s;
+			}
 		}
 	}
 
