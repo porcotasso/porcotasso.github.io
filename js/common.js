@@ -81,7 +81,7 @@ window.addEventListener('DOMContentLoaded', function() {
   //1. option設定 
   const option = {
     root: null,
-    rootMargin: "0px 0px -96% 0px",
+    rootMargin: "0px 0px -98% 0px",
     threshold: 0.0,
   };
   //IntersectionObserverのcallback関数の作成
