@@ -81,7 +81,7 @@ window.addEventListener('DOMContentLoaded', function() {
   //1. option設定 
   const option = {
     root: null,
-    rootMargin: "0px 0px -98% 0px",
+    rootMargin: "0px 0px -99% 0px",
     threshold: 0.0,
   };
   //IntersectionObserverのcallback関数の作成
@@ -90,7 +90,7 @@ window.addEventListener('DOMContentLoaded', function() {
       if(entry.isIntersecting) {
         // 要素が交差した際の動作
         headerScroll.classList.add('smaller');
-        tocTgl[0].classList.remove('active');
+        // tocTgl[0].classList.remove('active');
       } else {
         // 要素が交差から外れた際の動作
         headerScroll.classList.remove('smaller');

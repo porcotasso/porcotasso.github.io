@@ -4,7 +4,7 @@
         <header>
           <?php include("../_partial/pages-title.php"); ?>
         </header>
-          <nav class="ly-toc js-tocToggle active" id="js-miniHeader">
+          <nav class="ly-toc js-tocToggle" id="js-miniHeader">
             <p class="miniHeaderTtl"><?php echo $title ?></p>
             <div class="ly-toc_ttl" id="js-tocTtl">目次</div>
             <?php $navList = array("コンテンツ・モデルとは", "７つのカテゴリー", "７つのカテゴリーに分類されない３つのルール"); ?>

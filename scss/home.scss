@@ -8,50 +8,56 @@
     margin:0 auto $space-unit * 3;
   }
 }
+.ly-recentCnt{
+  padding-top: 32px;
+  &_ttl{
+    margin: 0 0 0 5%;
+    font-size: $font-size-14;
+  }
+  &_pages{
+    list-style: none;
+    margin: 0 0 32px;
+    padding: 0;
+
+  }
+  &_list{
+    width: 100%;
+    
+    border-bottom: 1px dashed $border-gray;
+  }
+  &_link{
+    color: $font-black;
+    padding: 12px 5%;
+    display: block;
+  }
+  &_pagettl{
+    font-size: $font-size-15;
+    margin: 0 0 2px;
+  }
+  &_tag{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2px;
+    &_list{
+      padding: 4px 8px;
+      border-radius: 40px;
+      background: $bg-light-blue;
+      color: $font-gray;
+      font-size: $font-size-13;
+      line-height: 1;
+    }
+  }
+  &_updateDate{
+    font-size: $font-size-13;
+    color: $font-gray;
+    margin: 0;
+  }
+}
 .ly-homeProfile{
   margin-bottom: $space-unit * 2;
 }
-// .ly-homeNews{
-//   margin: 16px 0;
-//   display: flex;
-//   overflow: hidden;
-//   overflow-x: scroll;
-//   &_cnt{
-//     height: 260px;
-//     width: 260px;
-//     display: table;
-//     box-shadow: $box-shadow;
-//     margin: 16px 6px;
-//     padding: 16px;
-//     background: #fff;
-//     &:first-of-type{
-//       margin-left: 10%;
-//     }
-//     &:last-of-type{
-//       margin-right: 60px;
-//     }
-//   }
-//   &_lead{
-//     font-size: $font-size-13;
-//     color: $font-black;
-//     line-height: 1.6;
-//   }
-// }
 
-// .slide-item{
-//   height: 200px;
-//   width: 500px;
-//   background: pink;
-//   color: #fff;
-//   font-size: 3rem;
-//   text-align: center;
-//   &:nth-child(2){
-//     background: skyblue;
-//   }
-//   &:nth-child(3){
-//     background: green;
-//   }
-// }
 .swiper-container{
   margin-bottom: 24px;
   .swiper-wrapper{

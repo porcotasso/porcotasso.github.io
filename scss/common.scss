@@ -13,14 +13,13 @@
 		// z-index: 100;
 	}
 	&_headerBox{
-		background: #e9f4f7;
+		background: $bg-light-blue;
 		padding: 0;
 		// margin-top: 1em;
-		margin-bottom: 32px;
+		// margin-bottom: 32px;
 		letter-spacing: 0.1em;
 		position: relative;
 		// min-height: 200px;
-		
 		h1{
 			padding: 32px $gutter-width;
 			margin: 0;

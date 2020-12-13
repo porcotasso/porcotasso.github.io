@@ -21,6 +21,32 @@
             }
         }
     } ?>
+    <div class="">
+        <h2>ウェブを楽しむ</h2>
+        <p>ウェブフロントエンドエンジニア、ポルコタッソのこつこつ技術まとめノートです。新しく理解した技術を、仕事の合間にざっとメモ的に書いて必要になったときに見返すのに役立ててます。読みやすさを考慮する時間がとれてないページはそのうち清書する予定です。多分。</p>
+    </div>
+    <div class="ly-recentCnt">
+        <h2 class="ly-recentCnt_ttl">最近更新したページ</h2>
+        <ul class="ly-recentCnt_pages">
+            <?php foreach($latestContent as $value){ ?>
+                <li class="ly-recentCnt_list">
+                    <a href="<?php echo '/pages/'. $value["html"]; ?>" class="ly-recentCnt_link">
+                        <h2 class="ly-recentCnt_pagettl"><?php echo $value["title"];?></h2>
+                        <ul class="ly-recentCnt_tag">
+                            <?php foreach ( $value["tag"] as $name) { ?>
+                            <li class="ly-recentCnt_tag_list">
+                                <?php echo $name; ?>
+                            </li>
+                            <?php } ?>   
+                        </ul>
+                        <p class="ly-recentCnt_updateDate"><?php echo date ("Y.m.d", filemtime($baseUrl.$value["file"])); ?></p>
+                    </a>
+                </li>
+            <?php } ?>
+        </ul>
+    </div>
+
+<?php /*
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <?php foreach($latestContent as $value){ ?>
@@ -44,6 +70,8 @@
         <div class="swiper-button-prev"></div> 
         <div class="swiper-button-next"></div>
     </div>
+*/ ?>
+
     <article class="articleCnt">
         <a href="pages/diary.html">
             <div class="ly-diary">
@@ -59,7 +87,23 @@
             <ul>
                 <li>スプライトsvgファイルの利用ができる。</li>
                 <li>bootstrap-rebootを全て確認。reset.cssを把握。</li>
-                <li></li>
+                <li>jsの変数、定数の宣言ができる</li>
+                <li>jsの変数、定数に値を定義できる</li>
+                <li>jsの変数、定数のUndifindがおこる原因がわかる</li>
+                <li>htmlの要素を取得してjsの変数、定数に代入</li>
+                <li>セレクタの違いがわかる</li>
+                <li>プロパティと値がわかる</li>
+                <li>メソッドと関数の違いがわかる</li>
+                <li>リテラルと関数リテラルがわかる</li>
+                <li>アロー関数と通常関数の違いがわかる</li>
+                <li>addEventListenerのクリック処理をアロー関数で書いたとき、event.target とevent.currentTargetで格納する要素が違う</li>
+                <li>API Intersector Observerが使える</li>
+                <li>Loadイベントの種類と違いがわかる</li>
+                <li>コールバック関数を理解している</li>
+                <li>関数の基本の作り方がわかる</li>
+                <li>関数を実行できる</li>
+                <li>イベントがわかる</li>
+                <li>変数、定数にあてがわれた要素のイベントをトリガーに関数を実行できる</li>
             </ul>
         </div>
     </article>
