@@ -133,16 +133,20 @@ document.addEventListener('DOMContentLoaded', function(){
   window.addEventListener('scroll', function(e){
        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
        var current_pos =scrollTop;
- 
-       if (current_pos > start_pos) {
-         //down
-         opacity = 0;
-       }else{
-         //up
-         opacity += 0.2;
-       }
-       start_pos = current_pos;
-       btnScrollTop.style.opacity = opacity;
+       if(scrollTop > 400){
+          if (current_pos > start_pos　&& opacity > 0) {
+            //down
+            opacity -= 0.5;
+          }else{
+            //up
+            opacity += 0.2;
+          }
+        } else {
+          opacity -= 0.1;
+        }
+        start_pos = current_pos;
+        btnScrollTop.style.opacity = opacity;
+        console.log(opacity);
    });
  });
 

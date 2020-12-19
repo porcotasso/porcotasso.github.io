@@ -69,11 +69,11 @@ body{
 		}
 		.headerMenu{
 			position: absolute;
-			top: 60px;
+			top: 58px;
 			width: 0%;
 			left: 100%;
-			height:calc(100vh - 60px); //これがないと縦にスクロールせず、画面からはみ出たメニューが見れない
-			padding: 0 0 164px;
+			height:calc(100vh - 58px); //これがないと縦にスクロールせず、画面からはみ出たメニューが見れない
+			padding: 0;
 			text-align: left;
 			background: #fff;
 			overflow: scroll;
@@ -234,7 +234,7 @@ body{
 		position: relative;
 		// min-height: 200px;
 		h1{
-			padding: 32px $gutter-width;
+			padding: 32px $gutter-width 16px;
 			margin: 0;
 			font-size: $font-size-19;
 		}
@@ -243,7 +243,7 @@ body{
 			display: flex;
 			flex-wrap: wrap;
 			padding:0 $gutter-width;
-			margin-bottom: 16px;
+			margin-bottom: 8px;
 			transform: translateY(0);
 			&_list{
 				font-size: $font-size-13;
@@ -258,7 +258,7 @@ body{
 		.el-updateDate{
 			font-size: $font-size-13;
 			text-align: right;
-			margin: 0 $gutter-width 16px;
+			margin: 0 $gutter-width 8px;
 			color: $font-gray;
 		}
 		.otherCnt{

@@ -8,7 +8,7 @@
 		<?php } ?>   
 	</ul>
 	<?php if (file_exists($filename)) { ?>
-		<p class="el-updateDate"><?php echo date ("Y.m.d", filemtime($filename)).' updated'; ?></p>
+		<p class="el-updateDate"><?php echo date ("Y.m.d", filemtime($filename)).' 更新'; ?></p>
 	<?php } ?>
 	<div class="otherCnt">
 		<?php if (isset($pageLast)) { ?>
