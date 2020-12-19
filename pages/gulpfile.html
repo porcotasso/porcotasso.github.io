@@ -16,7 +16,7 @@
     <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
             <title>gulpfile</title>
 </head>
-<body>
+<body class="" id="js-body">
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -57,22 +57,22 @@
 		</symbol>
 	</defs>
 </svg>
-    <header class="ly-header js-headerScroll" id="js-headerNav">  
-        <nav class="ly-header__inner">
-                            <div class="web-ttl">
+    <header class="bl-header">  
+        <nav class="headerNav" id="js-headerNav">
+                            <div class="headerNav_logo">
                     <a href="/">
                         <svg class="svg-logo" viewBox="0 0 252 36">
                             <use xlink:href="#svg-logo"></use>
                         </svg>
                                             </a>
                 </div>
-                        <a class="menu-trigger pc-header-none" id="js-hamburger">
+                        <a class="headerNav_burger" id="js-burger">
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
             
-            <ul class="headerMenu" id="header-menu">
+            <ul class="headerMenu">
                                 <details>
                     <summary class="headerMenu_list">html</summary>
                     <ul class="headerMenu_subNav">
@@ -280,7 +280,7 @@
     <a id="js-scrollTop" class="el-scrollTop"></a>
     
     <!-- メニューを出した時に出る黒背景 -->
-    <div class="el-blackCover" id="js-blackCover"></div><main class="ly-main"> 
+    <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
         <header>
             <div class="articleCnt_headerBox">
@@ -355,7 +355,7 @@ gulp.task('watch', () => {
         </section>
     </article>
 </main>
-        <footer class="ly-footer">
+        <footer class="bl-footer">
             <p class="el-copyright">&copy; 2019-2020 porco tasso</p>
         </footer>
         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->

@@ -21,25 +21,25 @@
             }
         }
     } ?>
-    <div class="">
-        <h2>ウェブを楽しむ</h2>
-        <p>ウェブフロントエンドエンジニア、ポルコタッソのこつこつ技術まとめノートです。新しく理解した技術を、仕事の合間にざっとメモ的に書いて必要になったときに見返すのに役立ててます。読みやすさを考慮する時間がとれてないページはそのうち清書する予定です。多分。</p>
+    <div class="bl-summary ly-innnerWidth">
+        <h2 class="bl-summary_ttl">ウェブを楽しむ</h2>
+        <p class="bl-summary_txt">ウェブフロントエンドエンジニア、ポルコのこつこつ技術メモです。そのうち清書予定。多分。</p>
     </div>
-    <div class="ly-recentCnt">
-        <h2 class="ly-recentCnt_ttl">最近更新したページ</h2>
-        <ul class="ly-recentCnt_pages">
+    <div class="bl-recentCnt ly-innnerWidth">
+        <h2 class="bl-recentCnt_ttl">最近更新したページ</h2>
+        <ul class="bl-recentCnt_pages">
             <?php foreach($latestContent as $value){ ?>
-                <li class="ly-recentCnt_list">
-                    <a href="<?php echo '/pages/'. $value["html"]; ?>" class="ly-recentCnt_link">
-                        <h2 class="ly-recentCnt_pagettl"><?php echo $value["title"];?></h2>
-                        <ul class="ly-recentCnt_tag">
+                <li class="bl-recentCnt_list">
+                    <a href="<?php echo '/pages/'. $value["html"]; ?>" class="bl-recentCnt_link">
+                        <h2 class="bl-recentCnt_pagettl"><?php echo $value["title"];?></h2>
+                        <ul class="bl-recentCnt_tag">
                             <?php foreach ( $value["tag"] as $name) { ?>
-                            <li class="ly-recentCnt_tag_list">
+                            <li class="bl-recentCnt_tag_list">
                                 <?php echo $name; ?>
                             </li>
                             <?php } ?>   
                         </ul>
-                        <p class="ly-recentCnt_updateDate"><?php echo date ("Y.m.d", filemtime($baseUrl.$value["file"])); ?></p>
+                        <p class="bl-recentCnt_updateDate"><?php echo date ("Y.m.d", filemtime($baseUrl.$value["file"])); ?></p>
                     </a>
                 </li>
             <?php } ?>
@@ -72,7 +72,7 @@
     </div>
 */ ?>
 
-    <article class="articleCnt">
+    <!-- <div class="ly-innnerWidth">
         <a href="pages/diary.html">
             <div class="ly-diary">
                 <h2 class="ly-diary_title">制作日記</h2>
@@ -80,8 +80,9 @@
                 早く人に見てもらいたいけど、できてない部分が多すぎるので地道に毎日編集中。</p>
             </div>
         </a>
+    </div> -->
         
-        <div class="ly-homeProfile">
+        <!-- <div class="ly-homeProfile">
             <h2>プロフィール</h2>
             <p>ウェブのフロントエンドエンジニアです。html, css, php, javascript,gulp、adobe XD, Illustrator, phptoshopなどを使います。作ること全般が好きで、イラストやレタッチ、動画、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。</p>
             <ul>
@@ -105,31 +106,34 @@
                 <li>イベントがわかる</li>
                 <li>変数、定数にあてがわれた要素のイベントをトリガーに関数を実行できる</li>
             </ul>
-        </div>
-    </article>
+        </div> -->
 </main>
-    <nav>
-        <ul class="bl-categoryList">
-            <?php foreach($pageLists as $list){ ?>
-            <li class="bl-categoryList_cnt js-accordionTrigger">
-                <div class="bl-categoryList_index">
-                    <div class="bl-categoryList_ttl"><h2><?php echo $list["title"]; ?></h2><span>(<?php echo count($list["pages"]) ?>)</span></div>
+<nav class="bl-pageNav ly-innnerWidth">
+    <h2 class="bl-pageNav_ttl">メニュー</h2>
+    <ul class="bl-pageNav_list">
+        <?php foreach($pageLists as $list){ ?>
+            <li class="bl-pageNav_cnt js-accordionTrigger">
+                <div class="bl-pageNav_index">
+                    <div class="bl-pageNav_ttl">
+                        <h3><?php echo $list["title"]; ?></h3>
+                        <span class="bl-pageNav_cntNumber"><?php echo count($list["pages"]) ?></span>
+                    </div>
                 </div>
             </li>
-            <li class="bl-categoryList_menu">
-                <ul  class="bl-categoryList_menuList">
+            <li class="bl-pageNav_menu">
+                <ul class="bl-pageNav_menuList">
                     <?php foreach($list["pages"] as $value){ ?>
                     <li>
-                        <a href="<?php echo '/pages/'. $value["html"]; ?>" class="">
-                            <div class=""><?php echo $value["title"]; ?></div>
+                        <a href="<?php echo '/pages/'. $value["html"]; ?>" class="bl-pageNav_link">
+                            <?php echo $value["title"]; ?>
                         </a>
                     </li>
                     <?php } ?>
                 </ul>
             </li>
-            <?php } ?>
-        </ul>
-    </nav>  
+        <?php } ?>
+    </ul>
+</nav>  
                 <!-- 
                 
                     <li class="home__menu__cnt">

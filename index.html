@@ -18,7 +18,7 @@
     <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
             <title>Porco Tassoのフロントエンドエンジニアまとめ</title>
 </head>
-<body>
+<body class="" id="js-body">
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -59,22 +59,22 @@
 		</symbol>
 	</defs>
 </svg>
-    <header class="ly-header js-headerScroll" id="js-headerNav">  
-        <nav class="ly-header__inner">
-                            <div class="web-ttl">
+    <header class="bl-header">  
+        <nav class="headerNav" id="js-headerNav">
+                            <div class="headerNav_logo">
                     <a href="/">
                         <svg class="svg-logo" viewBox="0 0 252 36">
                             <use xlink:href="#svg-logo"></use>
                         </svg>
                                             </a>
                 </div>
-                        <a class="menu-trigger pc-header-none" id="js-hamburger">
+                        <a class="headerNav_burger" id="js-burger">
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
             
-            <ul class="headerMenu" id="header-menu">
+            <ul class="headerMenu">
                                 <details>
                     <summary class="headerMenu_list">html</summary>
                     <ul class="headerMenu_subNav">
@@ -282,74 +282,74 @@
     <a id="js-scrollTop" class="el-scrollTop"></a>
     
     <!-- メニューを出した時に出る黒背景 -->
-    <div class="el-blackCover" id="js-blackCover"></div><main>
-        <div class="">
-        <h2>ウェブを楽しむ</h2>
-        <p>ウェブフロントエンドエンジニア、ポルコタッソのこつこつ技術まとめノートです。新しく理解した技術を、仕事の合間にざっとメモ的に書いて必要になったときに見返すのに役立ててます。読みやすさを考慮する時間がとれてないページはそのうち清書する予定です。多分。</p>
+    <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main>
+        <div class="bl-summary ly-innnerWidth">
+        <h2 class="bl-summary_ttl">ウェブを楽しむ</h2>
+        <p class="bl-summary_txt">ウェブフロントエンドエンジニア、ポルコのこつこつ技術メモです。そのうち清書予定。多分。</p>
     </div>
-    <div class="ly-recentCnt">
-        <h2 class="ly-recentCnt_ttl">最近更新したページ</h2>
-        <ul class="ly-recentCnt_pages">
-                            <li class="ly-recentCnt_list">
-                    <a href="/pages/contents-model.html" class="ly-recentCnt_link">
-                        <h2 class="ly-recentCnt_pagettl">コンテンツ・モデル</h2>
-                        <ul class="ly-recentCnt_tag">
-                                                        <li class="ly-recentCnt_tag_list">
+    <div class="bl-recentCnt ly-innnerWidth">
+        <h2 class="bl-recentCnt_ttl">最近更新したページ</h2>
+        <ul class="bl-recentCnt_pages">
+                            <li class="bl-recentCnt_list">
+                    <a href="/pages/contents-model.html" class="bl-recentCnt_link">
+                        <h2 class="bl-recentCnt_pagettl">コンテンツ・モデル</h2>
+                        <ul class="bl-recentCnt_tag">
+                                                        <li class="bl-recentCnt_tag_list">
                                 html                            </li>
                                
                         </ul>
-                        <p class="ly-recentCnt_updateDate">2020.12.13</p>
+                        <p class="bl-recentCnt_updateDate">2020.12.19</p>
                     </a>
                 </li>
-                            <li class="ly-recentCnt_list">
-                    <a href="/pages/hamburger-menu.html" class="ly-recentCnt_link">
-                        <h2 class="ly-recentCnt_pagettl">hamburger-menu</h2>
-                        <ul class="ly-recentCnt_tag">
-                                                        <li class="ly-recentCnt_tag_list">
+                            <li class="bl-recentCnt_list">
+                    <a href="/pages/browser-rendering-engine.html" class="bl-recentCnt_link">
+                        <h2 class="bl-recentCnt_pagettl">browser-rendering-engine</h2>
+                        <ul class="bl-recentCnt_tag">
+                                                        <li class="bl-recentCnt_tag_list">
+                                environment                            </li>
+                               
+                        </ul>
+                        <p class="bl-recentCnt_updateDate">2020.12.19</p>
+                    </a>
+                </li>
+                            <li class="bl-recentCnt_list">
+                    <a href="/pages/hamburger-menu.html" class="bl-recentCnt_link">
+                        <h2 class="bl-recentCnt_pagettl">hamburger-menu</h2>
+                        <ul class="bl-recentCnt_tag">
+                                                        <li class="bl-recentCnt_tag_list">
                                 parts                            </li>
                                
                         </ul>
-                        <p class="ly-recentCnt_updateDate">2020.12.12</p>
+                        <p class="bl-recentCnt_updateDate">2020.12.12</p>
                     </a>
                 </li>
-                            <li class="ly-recentCnt_list">
-                    <a href="/pages/day-js.html" class="ly-recentCnt_link">
-                        <h2 class="ly-recentCnt_pagettl">day-js</h2>
-                        <ul class="ly-recentCnt_tag">
-                                                        <li class="ly-recentCnt_tag_list">
+                            <li class="bl-recentCnt_list">
+                    <a href="/pages/day-js.html" class="bl-recentCnt_link">
+                        <h2 class="bl-recentCnt_pagettl">day-js</h2>
+                        <ul class="bl-recentCnt_tag">
+                                                        <li class="bl-recentCnt_tag_list">
                                 js                            </li>
                                
                         </ul>
-                        <p class="ly-recentCnt_updateDate">2020.12.10</p>
+                        <p class="bl-recentCnt_updateDate">2020.12.10</p>
                     </a>
                 </li>
-                            <li class="ly-recentCnt_list">
-                    <a href="/pages/design.html" class="ly-recentCnt_link">
-                        <h2 class="ly-recentCnt_pagettl">design-memo</h2>
-                        <ul class="ly-recentCnt_tag">
-                                                        <li class="ly-recentCnt_tag_list">
+                            <li class="bl-recentCnt_list">
+                    <a href="/pages/design.html" class="bl-recentCnt_link">
+                        <h2 class="bl-recentCnt_pagettl">design-memo</h2>
+                        <ul class="bl-recentCnt_tag">
+                                                        <li class="bl-recentCnt_tag_list">
                                 design                            </li>
                                
                         </ul>
-                        <p class="ly-recentCnt_updateDate">2020.12.10</p>
-                    </a>
-                </li>
-                            <li class="ly-recentCnt_list">
-                    <a href="/pages/svg.html" class="ly-recentCnt_link">
-                        <h2 class="ly-recentCnt_pagettl">svg</h2>
-                        <ul class="ly-recentCnt_tag">
-                                                        <li class="ly-recentCnt_tag_list">
-                                svg                            </li>
-                               
-                        </ul>
-                        <p class="ly-recentCnt_updateDate">2020.12.10</p>
+                        <p class="bl-recentCnt_updateDate">2020.12.10</p>
                     </a>
                 </li>
                     </ul>
     </div>
 
 
-    <article class="articleCnt">
+    <!-- <div class="ly-innnerWidth">
         <a href="pages/diary.html">
             <div class="ly-diary">
                 <h2 class="ly-diary_title">制作日記</h2>
@@ -357,8 +357,9 @@
                 早く人に見てもらいたいけど、できてない部分が多すぎるので地道に毎日編集中。</p>
             </div>
         </a>
+    </div> -->
         
-        <div class="ly-homeProfile">
+        <!-- <div class="ly-homeProfile">
             <h2>プロフィール</h2>
             <p>ウェブのフロントエンドエンジニアです。html, css, php, javascript,gulp、adobe XD, Illustrator, phptoshopなどを使います。作ること全般が好きで、イラストやレタッチ、動画、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。</p>
             <ul>
@@ -382,249 +383,245 @@
                 <li>イベントがわかる</li>
                 <li>変数、定数にあてがわれた要素のイベントをトリガーに関数を実行できる</li>
             </ul>
-        </div>
-    </article>
+        </div> -->
 </main>
-    <nav>
-        <ul class="bl-categoryList">
-                        <li class="bl-categoryList_cnt js-accordionTrigger">
-                <div class="bl-categoryList_index">
-                    <div class="bl-categoryList_ttl"><h2>html</h2><span>(2)</span></div>
+<nav class="bl-pageNav ly-innnerWidth">
+    <h2 class="bl-pageNav_ttl">メニュー</h2>
+    <ul class="bl-pageNav_list">
+                    <li class="bl-pageNav_cnt js-accordionTrigger">
+                <div class="bl-pageNav_index">
+                    <div class="bl-pageNav_ttl">
+                        <h3>html</h3>
+                        <span class="bl-pageNav_cntNumber">2</span>
+                    </div>
                 </div>
             </li>
-            <li class="bl-categoryList_menu">
-                <ul  class="bl-categoryList_menuList">
+            <li class="bl-pageNav_menu">
+                <ul class="bl-pageNav_menuList">
                                         <li>
-                        <a href="/pages/contents-model.html" class="">
-                            <div class="">コンテンツ・モデル</div>
-                        </a>
+                        <a href="/pages/contents-model.html" class="bl-pageNav_link">
+                            コンテンツ・モデル                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/semantic-tags.html" class="">
-                            <div class="">セマンティックhtml</div>
-                        </a>
+                        <a href="/pages/semantic-tags.html" class="bl-pageNav_link">
+                            セマンティックhtml                        </a>
                     </li>
                                     </ul>
             </li>
-                        <li class="bl-categoryList_cnt js-accordionTrigger">
-                <div class="bl-categoryList_index">
-                    <div class="bl-categoryList_ttl"><h2>css</h2><span>(4)</span></div>
+                    <li class="bl-pageNav_cnt js-accordionTrigger">
+                <div class="bl-pageNav_index">
+                    <div class="bl-pageNav_ttl">
+                        <h3>css</h3>
+                        <span class="bl-pageNav_cntNumber">4</span>
+                    </div>
                 </div>
             </li>
-            <li class="bl-categoryList_menu">
-                <ul  class="bl-categoryList_menuList">
+            <li class="bl-pageNav_menu">
+                <ul class="bl-pageNav_menuList">
                                         <li>
-                        <a href="/pages/reset-css.html" class="">
-                            <div class="">リセットCSSについて</div>
-                        </a>
+                        <a href="/pages/reset-css.html" class="bl-pageNav_link">
+                            リセットCSSについて                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/categorized-css.html" class="">
-                            <div class="">CSSを役割ごとにカテゴライズする</div>
-                        </a>
+                        <a href="/pages/categorized-css.html" class="bl-pageNav_link">
+                            CSSを役割ごとにカテゴライズする                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/naming-rule.html" class="">
-                            <div class="">命名ルール</div>
-                        </a>
+                        <a href="/pages/naming-rule.html" class="bl-pageNav_link">
+                            命名ルール                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/basic-layout-style.html" class="">
-                            <div class="">resetcss以外のスタイルルール</div>
-                        </a>
+                        <a href="/pages/basic-layout-style.html" class="bl-pageNav_link">
+                            resetcss以外のスタイルルール                        </a>
                     </li>
                                     </ul>
             </li>
-                        <li class="bl-categoryList_cnt js-accordionTrigger">
-                <div class="bl-categoryList_index">
-                    <div class="bl-categoryList_ttl"><h2>パーツ</h2><span>(7)</span></div>
+                    <li class="bl-pageNav_cnt js-accordionTrigger">
+                <div class="bl-pageNav_index">
+                    <div class="bl-pageNav_ttl">
+                        <h3>パーツ</h3>
+                        <span class="bl-pageNav_cntNumber">7</span>
+                    </div>
                 </div>
             </li>
-            <li class="bl-categoryList_menu">
-                <ul  class="bl-categoryList_menuList">
+            <li class="bl-pageNav_menu">
+                <ul class="bl-pageNav_menuList">
                                         <li>
-                        <a href="/pages/button.html" class="">
-                            <div class="">ボタン作成</div>
-                        </a>
+                        <a href="/pages/button.html" class="bl-pageNav_link">
+                            ボタン作成                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/break-word.html" class="">
-                            <div class="">break-word</div>
-                        </a>
+                        <a href="/pages/break-word.html" class="bl-pageNav_link">
+                            break-word                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/element-em-strong-mark-b-difference.html" class="">
-                            <div class="">em,strong,mark,b,dfn,iの違い</div>
-                        </a>
+                        <a href="/pages/element-em-strong-mark-b-difference.html" class="bl-pageNav_link">
+                            em,strong,mark,b,dfn,iの違い                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/favicon.html" class="">
-                            <div class="">favicon</div>
-                        </a>
+                        <a href="/pages/favicon.html" class="bl-pageNav_link">
+                            favicon                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/hamburger-menu.html" class="">
-                            <div class="">hamburger-menu</div>
-                        </a>
+                        <a href="/pages/hamburger-menu.html" class="bl-pageNav_link">
+                            hamburger-menu                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/header-smaller.html" class="">
-                            <div class="">header-smaller</div>
-                        </a>
+                        <a href="/pages/header-smaller.html" class="bl-pageNav_link">
+                            header-smaller                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/js-scrolltop.html" class="">
-                            <div class="">スクロールでトップに戻るボタン</div>
-                        </a>
+                        <a href="/pages/js-scrolltop.html" class="bl-pageNav_link">
+                            スクロールでトップに戻るボタン                        </a>
                     </li>
                                     </ul>
             </li>
-                        <li class="bl-categoryList_cnt js-accordionTrigger">
-                <div class="bl-categoryList_index">
-                    <div class="bl-categoryList_ttl"><h2>javascript</h2><span>(10)</span></div>
+                    <li class="bl-pageNav_cnt js-accordionTrigger">
+                <div class="bl-pageNav_index">
+                    <div class="bl-pageNav_ttl">
+                        <h3>javascript</h3>
+                        <span class="bl-pageNav_cntNumber">10</span>
+                    </div>
                 </div>
             </li>
-            <li class="bl-categoryList_menu">
-                <ul  class="bl-categoryList_menuList">
+            <li class="bl-pageNav_menu">
+                <ul class="bl-pageNav_menuList">
                                         <li>
-                        <a href="/pages/javascript-memo.html" class="">
-                            <div class="">javascriptmemo</div>
-                        </a>
+                        <a href="/pages/javascript-memo.html" class="bl-pageNav_link">
+                            javascriptmemo                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/event-handler.html" class="">
-                            <div class="">event-handler</div>
-                        </a>
+                        <a href="/pages/event-handler.html" class="bl-pageNav_link">
+                            event-handler                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/event-propagation.html" class="">
-                            <div class="">イベント伝搬とは</div>
-                        </a>
+                        <a href="/pages/event-propagation.html" class="bl-pageNav_link">
+                            イベント伝搬とは                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/scroll-junk.html" class="">
-                            <div class="">スクロールジャンクとは</div>
-                        </a>
+                        <a href="/pages/scroll-junk.html" class="bl-pageNav_link">
+                            スクロールジャンクとは                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/touch-event.html" class="">
-                            <div class="">touch-event</div>
-                        </a>
+                        <a href="/pages/touch-event.html" class="bl-pageNav_link">
+                            touch-event                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/day-js.html" class="">
-                            <div class="">day-js</div>
-                        </a>
+                        <a href="/pages/day-js.html" class="bl-pageNav_link">
+                            day-js                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/js-date.html" class="">
-                            <div class="">js-date</div>
-                        </a>
+                        <a href="/pages/js-date.html" class="bl-pageNav_link">
+                            js-date                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/js-marker.html" class="">
-                            <div class="">黄色いmarkerアニメーション</div>
-                        </a>
+                        <a href="/pages/js-marker.html" class="bl-pageNav_link">
+                            黄色いmarkerアニメーション                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/js-nodelist.html" class="">
-                            <div class="">nodelist</div>
-                        </a>
+                        <a href="/pages/js-nodelist.html" class="bl-pageNav_link">
+                            nodelist                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/js-swiper.html" class="">
-                            <div class="">カルーセルスライダー</div>
-                        </a>
+                        <a href="/pages/js-swiper.html" class="bl-pageNav_link">
+                            カルーセルスライダー                        </a>
                     </li>
                                     </ul>
             </li>
-                        <li class="bl-categoryList_cnt js-accordionTrigger">
-                <div class="bl-categoryList_index">
-                    <div class="bl-categoryList_ttl"><h2>php</h2><span>(2)</span></div>
+                    <li class="bl-pageNav_cnt js-accordionTrigger">
+                <div class="bl-pageNav_index">
+                    <div class="bl-pageNav_ttl">
+                        <h3>php</h3>
+                        <span class="bl-pageNav_cntNumber">2</span>
+                    </div>
                 </div>
             </li>
-            <li class="bl-categoryList_menu">
-                <ul  class="bl-categoryList_menuList">
+            <li class="bl-pageNav_menu">
+                <ul class="bl-pageNav_menuList">
                                         <li>
-                        <a href="/pages/php-memo.html" class="">
-                            <div class="">phpmemo</div>
-                        </a>
+                        <a href="/pages/php-memo.html" class="bl-pageNav_link">
+                            phpmemo                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/php-filemtime.html" class="">
-                            <div class="">filemtime</div>
-                        </a>
+                        <a href="/pages/php-filemtime.html" class="bl-pageNav_link">
+                            filemtime                        </a>
                     </li>
                                     </ul>
             </li>
-                        <li class="bl-categoryList_cnt js-accordionTrigger">
-                <div class="bl-categoryList_index">
-                    <div class="bl-categoryList_ttl"><h2>作業効率を高める環境設定</h2><span>(4)</span></div>
+                    <li class="bl-pageNav_cnt js-accordionTrigger">
+                <div class="bl-pageNav_index">
+                    <div class="bl-pageNav_ttl">
+                        <h3>作業効率を高める環境設定</h3>
+                        <span class="bl-pageNav_cntNumber">4</span>
+                    </div>
                 </div>
             </li>
-            <li class="bl-categoryList_menu">
-                <ul  class="bl-categoryList_menuList">
+            <li class="bl-pageNav_menu">
+                <ul class="bl-pageNav_menuList">
                                         <li>
-                        <a href="/pages/environment-summary.html" class="">
-                            <div class="">制作環境設定全般</div>
-                        </a>
+                        <a href="/pages/environment-summary.html" class="bl-pageNav_link">
+                            制作環境設定全般                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/gulpfile.html" class="">
-                            <div class="">gulpfile</div>
-                        </a>
+                        <a href="/pages/gulpfile.html" class="bl-pageNav_link">
+                            gulpfile                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/git-fetch.html" class="">
-                            <div class="">git-fetch</div>
-                        </a>
+                        <a href="/pages/git-fetch.html" class="bl-pageNav_link">
+                            git-fetch                        </a>
                     </li>
                                         <li>
-                        <a href="/pages/browser-rendering-engine.html" class="">
-                            <div class="">browser-rendering-engine</div>
-                        </a>
+                        <a href="/pages/browser-rendering-engine.html" class="bl-pageNav_link">
+                            browser-rendering-engine                        </a>
                     </li>
                                     </ul>
             </li>
-                        <li class="bl-categoryList_cnt js-accordionTrigger">
-                <div class="bl-categoryList_index">
-                    <div class="bl-categoryList_ttl"><h2>svg</h2><span>(1)</span></div>
+                    <li class="bl-pageNav_cnt js-accordionTrigger">
+                <div class="bl-pageNav_index">
+                    <div class="bl-pageNav_ttl">
+                        <h3>svg</h3>
+                        <span class="bl-pageNav_cntNumber">1</span>
+                    </div>
                 </div>
             </li>
-            <li class="bl-categoryList_menu">
-                <ul  class="bl-categoryList_menuList">
+            <li class="bl-pageNav_menu">
+                <ul class="bl-pageNav_menuList">
                                         <li>
-                        <a href="/pages/svg.html" class="">
-                            <div class="">svg</div>
-                        </a>
+                        <a href="/pages/svg.html" class="bl-pageNav_link">
+                            svg                        </a>
                     </li>
                                     </ul>
             </li>
-                        <li class="bl-categoryList_cnt js-accordionTrigger">
-                <div class="bl-categoryList_index">
-                    <div class="bl-categoryList_ttl"><h2>shopify</h2><span>(1)</span></div>
+                    <li class="bl-pageNav_cnt js-accordionTrigger">
+                <div class="bl-pageNav_index">
+                    <div class="bl-pageNav_ttl">
+                        <h3>shopify</h3>
+                        <span class="bl-pageNav_cntNumber">1</span>
+                    </div>
                 </div>
             </li>
-            <li class="bl-categoryList_menu">
-                <ul  class="bl-categoryList_menuList">
+            <li class="bl-pageNav_menu">
+                <ul class="bl-pageNav_menuList">
                                         <li>
-                        <a href="/pages/shopify-memo.html" class="">
-                            <div class="">shopify-memo</div>
-                        </a>
+                        <a href="/pages/shopify-memo.html" class="bl-pageNav_link">
+                            shopify-memo                        </a>
                     </li>
                                     </ul>
             </li>
-                        <li class="bl-categoryList_cnt js-accordionTrigger">
-                <div class="bl-categoryList_index">
-                    <div class="bl-categoryList_ttl"><h2>現実的な問題点</h2><span>(0)</span></div>
+                    <li class="bl-pageNav_cnt js-accordionTrigger">
+                <div class="bl-pageNav_index">
+                    <div class="bl-pageNav_ttl">
+                        <h3>現実的な問題点</h3>
+                        <span class="bl-pageNav_cntNumber">0</span>
+                    </div>
                 </div>
             </li>
-            <li class="bl-categoryList_menu">
-                <ul  class="bl-categoryList_menuList">
+            <li class="bl-pageNav_menu">
+                <ul class="bl-pageNav_menuList">
                                     </ul>
             </li>
-                    </ul>
-    </nav>  
+            </ul>
+</nav>  
                 <!-- 
                 
                     <li class="home__menu__cnt">
@@ -685,7 +682,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 <script src="/js/home.js"></script>
-        <footer class="ly-footer">
+        <footer class="bl-footer">
             <p class="el-copyright">&copy; 2019-2020 porco tasso</p>
         </footer>
         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->

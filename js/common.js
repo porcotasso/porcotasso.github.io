@@ -1,80 +1,34 @@
-//bodyにイベントをつけてると反応するが、下層のタグだと反応しない
-// function handleTouchMove(event) {
-// 	event.preventDefault();
-// }
-
 // HEADER HAMBURGER MENU 
-var hamburger = document.getElementById("js-hamburger");
-var headerNav = document.getElementById("js-headerNav");
-var blackCover = document.getElementById("js-blackCover");
-var bodyOverflow = document.getElementsByTagName("body");
-hamburger.onclick = function() {
-  // メニューのトグル
-  headerNav.classList.toggle("active");
-  if (headerNav.classList.contains('active')) {
-      //スクロール禁止
-      // bodyOverflow[0].addEventListener('touchmove', handleTouchMove, { passive: false });
-      // console.log('click');
-  } else {
-      //スクロール復帰
-      // bodyOverflow[0].removeEventListener('touchmove', handleTouchMove, { passive: false });
-      // console.log('close');
-  }
-
-  //背景のスクロールを止める android
-  // if(bodyOverflow[0].style.overflow == 'hidden'){
-  //   bodyOverflow[0].style.overflow = '';
-  // } else {
-  //   bodyOverflow[0].style.overflow = 'hidden';
-  // }
-
-  // 黒背景のトグル
-  blackCover.classList.toggle("active");
-  // 黒背景のクリックでメニュー閉じる
-  if (blackCover.classList.contains('active')) {
-    blackCover.addEventListener('touchstart', () => {
-      headerNav.classList.remove("active");
-      blackCover.classList.remove("active");
-    })
-  };
-  // blackCover.onclick = function() {
-    // headerNav.classList.remove("active");
-    // blackCover.classList.remove("active");
-    // bodyOverflow[0].style.overflow = '';
-  // }
+var burger = document.getElementById('js-burger');
+var headerNav = document.getElementById('js-headerNav');
+var body = document.getElementById('js-body');
+burger.onclick = function() {
+  headerNav.classList.toggle('active');
+  body.classList.toggle('active');
 };
 
-// HEADER scroll
-function headerScroll() {
-  var start_pos = 0;
-	let headerScroll = document.getElementsByClassName('js-headerScroll');
-	window.addEventListener('scroll', () => {
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    var current_pos = scrollTop;
-    console.log(scrollTop);
-    console.log(current_pos);
-    console.log(start_pos);
-    if (current_pos - 10 > start_pos) {
-      headerScroll[0].classList.add('scroll');
-    }else if(current_pos + 10 < start_pos){
-      headerScroll[0].classList.remove('scroll');
-    }
-    start_pos = current_pos;
-    console.log(start_pos);
-    console.log('-------');
-	});
-}
-window.addEventListener('DOMContentLoaded', headerScroll());
-// window.onload = headerScroll();
+// HOME MENU OPEN/CLOSE #menu-triggerをクリックで#js-headerがオンオフ
+document.addEventListener('DOMContentLoaded',() => {
+  const accordionTrigger = document.getElementsByClassName('js-accordionTrigger');
 
+  for (let i = 0; i < accordionTrigger.length; i++){
+    let titleEach = accordionTrigger[i];
+    let content = titleEach.nextElementSibling;
+    titleEach.addEventListener('click', () => {
+      titleEach.classList.toggle('is-active');
+      content.classList.toggle('is-open');
+      Array.prototype.forEach.call(accordionTrigger, function(element) {
+        element.classList.toggle('not-focus');
+      });
+    });
+  }
+});
 
-// toc toggle & toc miniHeader
+// toc toggle & toc miniHeaders
   // -> toc toggle 
 let tocTgl = document.getElementsByClassName('js-tocToggle');
 let tocTtl = document.getElementById('js-tocTtl');
-
 tocTtl.addEventListener('click', () => tocTgl[0].classList.toggle('active'));
-
   // -> toc miniHeader
 window.addEventListener('DOMContentLoaded', function() {
   let headerScroll = document.getElementById('js-miniHeader');  
@@ -104,33 +58,6 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 
-// HOME MENU OPEN/CLOSE #menu-triggerをクリックで#js-headerがオンオフ
-document.addEventListener("DOMContentLoaded",() => {
-  const title = document.querySelectorAll('.js-accordionTrigger');
-  for (let i = 0; i < title.length; i++){
-    let titleEach = title[i];
-    let content = titleEach.nextElementSibling;
-    titleEach.addEventListener('click', () => {
-      titleEach.classList.toggle('is-active');
-      content.classList.toggle('is-open');
-    });
-  }
-});
-
-
-
-// HEADER SMALL jQuery
-// function init() {
-// 	var px_change = 80;
-// 	window.addEventListener('scroll', function (e) {
-// 		if ($(window).scrollTop() > px_change) {
-// 			$(".js-headerScroll").addClass("smaller");
-// 		} else if ($(".js-headerScroll").hasClass("smaller")) {
-// 			$(".js-headerScroll").removeClass("smaller");
-// 		}
-// 	});
-// }
-// window.onload = init();
 
 
 // escape code in pre tag
@@ -198,51 +125,37 @@ window.addEventListener('load', saFunc);
 window.addEventListener('scroll', saFunc);
 
 
-// 次の要素を取得
-// var elements = document.getElementById("hamburger0");
-// var menu = elements.nextElementSibling;
-// elements.onclick = function() {
-//   menu.classList.toggle("active");
-// };
 
-// for(i=0; i < elements.length; i++){
-//   console.log("bbb");
-//   var aaa = document.getElementById("menu-trigger");
-//   var nextElementSibling = elements[i].nextElementSibling;
-//   elements[i].onclick = function() {
-//     nextElementSibling[i].classList.toggle("active");
-//   console.log("ccc");
-//   };
-// }
-
-
-// elements.onclick = function() {
-//   nextElementSibling.classList.toggle("active");
-// };
-
-// HEADER MENU OPEN/CLOSE jquery ver
-// $(function () {
-//   $('.menu-trigger').on('click', function () {
-//     $(this).toggleClass('active');
-//     $('.header-menu').toggleClass('active');
-//     $('.menu-tel-box').removeClass('active');
-//   });
-
-
-
-
+document.addEventListener('DOMContentLoaded', function(){
+  let start_pos = 0;
+  let opacity = 0;
+  const btnScrollTop = document.getElementById( "js-scrollTop" );
+  window.addEventListener('scroll', function(e){
+       var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+       var current_pos =scrollTop;
  
+       if (current_pos > start_pos) {
+         //down
+         opacity = 0;
+       }else{
+         //up
+         opacity += 0.2;
+       }
+       start_pos = current_pos;
+       btnScrollTop.style.opacity = opacity;
+   });
+ });
 
-//スクロールでトップに戻るボタン
+// スクロールでトップに戻るボタン
 let btnScrollTop = document.getElementById( "js-scrollTop" );
-window.addEventListener('scroll', () => {
-  let pageOffsetY = window.pageYOffset || document.documentElement.btnScrollTop;
-  if(pageOffsetY > 400){
-    btnScrollTop.style.opacity = 0.4 ;
-  } else{
-    btnScrollTop.style.opacity = pageOffsetY/1000;
-  }
-});
+// window.addEventListener('scroll', () => {
+//   let pageOffsetY = window.pageYOffset || document.documentElement.btnScrollTop;
+//   if(pageOffsetY > 400){
+//     btnScrollTop.style.opacity = 0.4;
+//   } else {
+//     btnScrollTop.style.opacity = pageOffsetY/1000;
+//   }
+// });
 scrollTop(btnScrollTop, 180);
 function scrollTop(el, duration) {
   el.addEventListener('click', function() {

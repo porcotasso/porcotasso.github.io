@@ -8,26 +8,41 @@
     margin:0 auto $space-unit * 3;
   }
 }
-.ly-recentCnt{
-  padding-top: 32px;
+.bl-summary{
+  border-bottom: 1px solid $font-black;
+  padding-bottom: 16px;
+  padding-top: 24px;
   &_ttl{
-    margin: 0 0 0 5%;
+    font-size: $font-size-17;
+  }
+  &_txt{
     font-size: $font-size-14;
+    margin-left: 2%;
+  }
+}
+.bl-recentCnt{
+  border-bottom: 1px solid $font-black;
+  padding-bottom: 16px;
+  margin-top: 64px;
+  &_ttl{
+    margin: 0 0 16px;
+    font-size: $font-size-17;
   }
   &_pages{
     list-style: none;
-    margin: 0 0 32px;
+    margin: 0 0 32px 2%;
     padding: 0;
-
   }
   &_list{
     width: 100%;
-    
     border-bottom: 1px dashed $border-gray;
+    &:last-of-type{
+      border: none;
+    }
   }
   &_link{
     color: $font-black;
-    padding: 12px 5%;
+    padding: 12px 4px;
     display: block;
   }
   &_pagettl{
@@ -54,148 +69,21 @@
     margin: 0;
   }
 }
-.ly-homeProfile{
-  margin-bottom: $space-unit * 2;
-}
 
-.swiper-container{
-  margin-bottom: 24px;
-  .swiper-wrapper{
-    .swiper-slide{
-      &_cnt{
-        box-shadow: $box-shadow;
-        margin: 10px 0;
-        padding: 36px 24px 16px;
-        background: $bg-black;
-        // border-radius: 4px;
-        height: 240px;
-        position: relative;
-      }
-      &_tag{
-        display: flex;
-        list-style: none;
-        padding: 0 10px;
-        color: #ffffff;
-        background: #8a8a8a;
-        position: absolute;
-        left: 0;
-        top: 0;
-        &_list{
-          font-size: $font-size-13;
-          padding: 0 3px 3px;
-          line-height: 1.2;
-          // margin-right: 6px;
-          // border: 1px solid $border-gray;
-          &:after{
-            content: "/";
-              font-size: $font-size-16;
-              position: relative;
-              top: 2px;
-          }
-          &:last-of-type::after{
-            content: "";
-          }
-        }
-      }
-      &_title{
-        font-size: $font-size-19;
-        margin:0 0 12px;
-        color: #0088ff;
-      } 
-      &_lead{
-        font-size: $font-size-16;
-        color: $font-light-gray;
-        line-height: 1.6;
-        margin: 0 0 6px;
-      }
-      &_updateDate{
-        font-size: $font-size-13;
-        color: $font-light-gray;
-        position: absolute;
-        right: 24px;
-        margin: 0;
-        bottom: 36px;
-      }
-    }
+.bl-pageNav{
+  padding-top: 64px;
+  padding-bottom: 64px;
+  &_list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background:$bg-white;
   }
-  .swiper-button-next, .swiper-button-prev {
-    // top: 50%;
-    width: 60px;
-    height: 36px;
-    bottom: 10px;
-    top: auto;
-    // border-radius: 50%;
-    // background: $bg-light-gray;
-    // border: 1px solid $border-gray;
-    // background-size: 13px 22px;
-    background: none;
-    // background-color: rgba(255, 255, 255, 0.5);
-
-    &:after{
-      content: "";
-      position: absolute;
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      right: 25px;
-      bottom: 13px;
-      border-bottom: 1px solid $font-light-gray;
-      border-right: 1px solid $font-light-gray;
-      // transition-duration: .3s;
-    }
-    &:focus{
-      outline: 0 !important;
-    }
-  }
-  .swiper-button-prev {
-    &:after{
-      transform: rotate(135deg);
-    }
-  }
-  .swiper-button-next {
-    &:after{
-    transform: rotate(-45deg);
-    }
-  }
-  &.swiper-container-horizontal > .swiper-pagination-bullets{
-    bottom: 18px;
-    .swiper-pagination-bullet{
-      background: $bg-light-gray;
-      &.swiper-pagination-bullet-active{
-        background: $primary-pink;
-      }
-    }
-  }
-}
-
-.ly-diary{
-  margin: 16px 0 48px;
-  padding: 16px $gutter-width;
-  background: #fff;
-  border-top: 1px dashed $border-gray;
-  border-bottom: 1px dashed $border-gray;
-  color: $font-black;
-  &_title{
-    font-size: $font-size-16;
-    font-weight: bold;
-    margin: 4px 0 12px;
-  }
-}
-.ly-homeProfile{
-  margin-bottom: 48px;
-  padding: 16px $gutter-width;
-}
-
-.bl-categoryList{
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background:$bg-black;
   &_cnt{
     // background: #fff;
     width: 100%;
-    padding: $space-unit * 1 $space-unit * 4;
-    border-bottom: 1px solid #555;
+    padding: $space-unit * 1 $space-unit * 2;
+    border-bottom: 1px solid $border-gray;
     position: relative;
     &:after{
       content: "";
@@ -203,15 +91,23 @@
       display: inline-block;
       width: 8px;
       height: 8px;
-      right: $space-unit * 5;
+      right: $space-unit * 2;
       bottom: 20px;
       border-bottom: 1px solid $font-gray;
       border-right: 1px solid $font-gray;
       transform: rotate(45deg);
-      transition-duration: .3s;
+      transition: $transition;
     }
     &.is-active:after{
       transform: rotate(-135deg);
+    }
+    &.not-focus{
+      h3{
+        color: $font-light-gray;
+      }
+      .bl-pageNav_cntNumber{
+        color: $font-light-gray;
+      }
     }
   }
   &_index{
@@ -225,18 +121,30 @@
   &_ttl{
       display: flex;
       align-items: baseline;
-    h2{
+    h3{
       font-size: $font-size-15;
       font-weight: normal;
-      padding-right: 6px;
+      padding-right: 12px;
       margin: 0;
-      color: #fff;
+      color: $font-black;
+      transition: $transition;
     }
-    span{
-      font-size: $font-size-13;
-      color: #fff;
-      align-items: center;
-    }
+  }
+  &_cntNumber{
+    font-size: $font-size-10;
+    align-items: center;
+    background: #eee;
+    width: 18px;
+    text-align: center;
+    height: 18px;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 1px;
+    color: $font-dark-gray;
+    transition: $transition;
   }
   &_txt{
     font-size: $font-size-15;
@@ -247,18 +155,21 @@
     height: 0;
     overflow: hidden;
     opacity: 0.3;
-    transition-duration: .3s;
-    padding: 0 20px;
-    background: $bg-light-gray;
+    transition: $transition;
+    padding: 0 0 0 5%;
+    // background: $bg-light-gray;
     &.is-open{
       line-height: normal; /* numberに書き換える*/
       height: auto;
       opacity: 1;
-      padding: 10px 20px;
+      padding: 4px 0 4px 5%;
       ul{
         li{
-          padding: 10px;
-          // border-bottom:1px solid #fff;
+          padding: 8px;
+          border-bottom:1px solid $border-gray;
+          &:last-of-type{
+            border-bottom: none;
+          }
         }
       }
     }
@@ -266,13 +177,144 @@
   &_menuList{
     list-style: none;
     padding-left: 0;
-    li{
-      padding: 0 10px;
-      border-bottom:1px solid #fff;
-      transition-duration: .3s;
-      &:last-of-type{
-        border-bottom: none;
-      }
-    }
+  }
+  &_link{
+    color: $font-black;
+    font-size: $font-size-14;
   }
 }
+
+
+// .ly-homeProfile{
+//   margin-bottom: $space-unit * 2;
+// }
+
+// .swiper-container{
+//   margin-bottom: 24px;
+//   .swiper-wrapper{
+//     .swiper-slide{
+//       &_cnt{
+//         box-shadow: $box-shadow;
+//         margin: 10px 0;
+//         padding: 36px 24px 16px;
+//         background: $bg-black;
+//         // border-radius: 4px;
+//         height: 240px;
+//         position: relative;
+//       }
+//       &_tag{
+//         display: flex;
+//         list-style: none;
+//         padding: 0 10px;
+//         color: #ffffff;
+//         background: #8a8a8a;
+//         position: absolute;
+//         left: 0;
+//         top: 0;
+//         &_list{
+//           font-size: $font-size-13;
+//           padding: 0 3px 3px;
+//           line-height: 1.2;
+//           // margin-right: 6px;
+//           // border: 1px solid $border-gray;
+//           &:after{
+//             content: "/";
+//               font-size: $font-size-16;
+//               position: relative;
+//               top: 2px;
+//           }
+//           &:last-of-type::after{
+//             content: "";
+//           }
+//         }
+//       }
+//       &_title{
+//         font-size: $font-size-19;
+//         margin:0 0 12px;
+//         color: #0088ff;
+//       } 
+//       &_lead{
+//         font-size: $font-size-16;
+//         color: $font-light-gray;
+//         line-height: 1.6;
+//         margin: 0 0 6px;
+//       }
+//       &_updateDate{
+//         font-size: $font-size-13;
+//         color: $font-light-gray;
+//         position: absolute;
+//         right: 24px;
+//         margin: 0;
+//         bottom: 36px;
+//       }
+//     }
+//   }
+//   .swiper-button-next, .swiper-button-prev {
+//     // top: 50%;
+//     width: 60px;
+//     height: 36px;
+//     bottom: 10px;
+//     top: auto;
+//     // border-radius: 50%;
+//     // background: $bg-light-gray;
+//     // border: 1px solid $border-gray;
+//     // background-size: 13px 22px;
+//     background: none;
+//     // background-color: rgba(255, 255, 255, 0.5);
+
+//     &:after{
+//       content: "";
+//       position: absolute;
+//       display: inline-block;
+//       width: 10px;
+//       height: 10px;
+//       right: 25px;
+//       bottom: 13px;
+//       border-bottom: 1px solid $font-light-gray;
+//       border-right: 1px solid $font-light-gray;
+//       // transition-duration: .3s;
+//     }
+//     &:focus{
+//       outline: 0 !important;
+//     }
+//   }
+//   .swiper-button-prev {
+//     &:after{
+//       transform: rotate(135deg);
+//     }
+//   }
+//   .swiper-button-next {
+//     &:after{
+//     transform: rotate(-45deg);
+//     }
+//   }
+//   &.swiper-container-horizontal > .swiper-pagination-bullets{
+//     bottom: 18px;
+//     .swiper-pagination-bullet{
+//       background: $bg-light-gray;
+//       &.swiper-pagination-bullet-active{
+//         background: $primary-pink;
+//       }
+//     }
+//   }
+// }
+
+// .ly-diary{
+//   margin: 16px 0 48px;
+//   padding: 16px $gutter-width;
+//   background: #fff;
+//   border-top: 1px dashed $border-gray;
+//   border-bottom: 1px dashed $border-gray;
+//   color: $font-black;
+//   &_title{
+//     font-size: $font-size-16;
+//     font-weight: bold;
+//     margin: 4px 0 12px;
+//   }
+// }
+// .ly-homeProfile{
+//   margin-bottom: 48px;
+//   padding: 16px $gutter-width;
+// }
+
+

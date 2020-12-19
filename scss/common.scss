@@ -1,16 +1,229 @@
 @import "variables";
 @import "commonParts/reset";
 @import "commonParts/layout";
-
 @import "commonParts/elementModule";
 @import "commonParts/prettifyTheme";
+
+// common
+// common_header
+// common_footer
+
+//common
+// 基本body直下で全画面幅の中で両端にスペースを追加
+.ly-innnerWidth{
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: $gutter-width;
+	padding-left: $gutter-width;
+}	
+body{
+	overscroll-behavior: contain;
+	&.active{
+		overflow: hidden;
+	}
+}
+
+// common_header
+.bl-header {
+	.headerNav{
+		padding: 16px 20px;
+		display: flex;
+		justify-content: space-between;
+		transition: $transition;
+		&_logo{
+			width: 100%;
+			opacity: 1;
+			position: relative;
+			left: 0;
+			transition: $transition;
+			.svg-logo{
+				max-width: 200px;
+				width: 56%;
+			}
+	  	}
+		&_burger{
+			position: relative;
+			top: 2px;
+			width: 34px;
+			height: 24px;
+			position: relative;
+			span{
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background-color:$font-black;
+				border-radius: 4px;
+				transition: $transition;
+				&:nth-of-type(1) {
+				top: 0;
+				}
+				&:nth-of-type(2) {
+				top: 11px;
+				}
+				&:nth-of-type(3) {
+				bottom: 0;
+				}
+			}
+		}
+		.headerMenu{
+			position: absolute;
+			top: 60px;
+			width: 0%;
+			left: 100%;
+			height:calc(100vh - 60px); //これがないと縦にスクロールせず、画面からはみ出たメニューが見れない
+			padding: 0 0 164px;
+			text-align: left;
+			background: #fff;
+			overflow: scroll;
+			list-style: none;
+			box-shadow: $box-shadow;
+			transition: $transition;
+			z-index: 101;
+			background: $bg-light-gray;
+			// overscroll-behavior: contain; // 親要素にスクロールが伝わらないようにする。「スクロールチェーン」の挙動を無効化
+			&_list{
+				margin: 0;
+				border-top: 1px solid $border-gray;
+				padding: 16px 16px 16px 30px;
+				font-size: $font-size-16;
+				font-weight: bold;
+				background: $bg-light-gray;
+				position: relative;
+				&:hover {
+					cursor: pointer; /* カーソルを指マークに */
+					background-color: #EFEFEF;
+				}
+				&:after {
+					content: "";
+					margin: auto;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 16px;
+					width: 5px;
+					height: 5px;
+					border: 4px solid transparent;
+					border-left: 5px solid $font-light-gray;
+					box-sizing: border-box;
+					transition: $transition;
+				}
+				&:focus{
+					outline: 1px solid $border-gray;
+					outline-offset: -1px;
+				}
+			}
+			/* オープン時 */
+			details[open] .headerMenu_list{
+				outline: 1px solid $border-gray;
+				outline-offset: -1px;
+				&:after {
+					transform: rotate(90deg);
+					left: 14px;
+					top: 5px;
+				}
+			}
+			/* オープン時にアニメーションを設定 */
+			&_subNav{
+				list-style: none;
+				padding: 0;
+				animation: fadeIn 0.2s ease;
+				background: $bg-white;
+			}
+			@keyframes fadeIn {
+				0% {
+				opacity: 0; /* 透明 */
+				transform: translateY(-10px); /* 上から表示 */
+				}
+				100% {
+				opacity: 1;
+				transform: none;
+				}
+			}
+			&_subList{
+				border-top: 1px solid $border-gray;
+				a{
+					display: block;
+					padding: 12px 16px 12px 20px;
+					font-size: $font-size-15;
+					color: $font-black;
+				}
+			}
+		}
+		&.active{
+			background: $bg-light-gray;
+			.headerNav_logo {
+				opacity: .2;
+				left: -2px;
+			  }
+			.headerNav_burger{
+				span{
+					&:nth-of-type(1) {
+						transform:rotate(-45deg);
+						top: 12px;
+					}
+					&:nth-of-type(2) {
+						width: 0;
+						left: 15px;
+					}
+					&:nth-of-type(3) {
+						transform:rotate(45deg);
+						top: 12px;
+					}
+				}
+			}
+			.headerMenu{
+				display: block;
+				opacity: 1;
+				width: 100%;
+				left: 0;
+			}
+		}
+	}
+}
+// .el-blackCover {
+// 	display: block;
+// 	position: fixed;
+// 	left: 0;
+// 	top: 0;
+// 	z-index: 99;
+// 	width: 0;
+// 	height: 100vh;
+// 	opacity: 0;
+// 	background-color: rgba(197, 197, 197, 0.9);
+// 	@keyframes cover-show {
+// 		0% {
+// 			opacity: 0;    
+// 		}
+// 		100% {
+// 			opacity: 100;
+// 		}
+// 	}
+// 	&.active{
+// 		display: block;
+// 		width: 100%;
+// 		animation: cover-show .3s ease-out both;
+// 	}
+// }
+
+// common_footer
+.bl-footer{
+	bottom: 0;
+	height: 60px;
+	background: $bg-black;
+	padding: $space-unit *2 $gutter-width;
+	.el-copyright{
+		text-align: center;
+		color: #fff;
+		font-size: $font-size-12;
+	}
+}
+
 
 // コンテンツのページのarticle タグに追加し、hタグなどのスタイルを統一させる
 .articleCnt{
 	&_header{
-		// position:sticky;
-		// top: 0;
-		// z-index: 100;
 	}
 	&_headerBox{
 		background: $bg-light-blue;

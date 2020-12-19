@@ -54,12 +54,12 @@
         } ?>
     <title><?php echo ($title); ?></title>
 </head>
-<body>
+<body class="" id="js-body">
 <?php include_once($baseUrl.'/images/common/sprite.svg'); ?>
-    <header class="ly-header js-headerScroll" id="js-headerNav">  
-        <nav class="ly-header__inner">
+    <header class="bl-header">  
+        <nav class="headerNav" id="js-headerNav">
             <?php if($_SERVER['REQUEST_URI'] == "/"){ ?>
-                <h1 class="web-ttl">
+                <h1 class="headerNav_logo">
                     <a href="/">
                         <svg class="svg-logo" viewBox="0 0 252 36">
                             <use xlink:href="#svg-logo"></use>
@@ -68,7 +68,7 @@
                     </a>
                 </h1>
             <?php }else{ ?>
-                <div class="web-ttl">
+                <div class="headerNav_logo">
                     <a href="/">
                         <svg class="svg-logo" viewBox="0 0 252 36">
                             <use xlink:href="#svg-logo"></use>
@@ -77,13 +77,13 @@
                     </a>
                 </div>
             <?php } ?>
-            <a class="menu-trigger pc-header-none" id="js-hamburger">
+            <a class="headerNav_burger" id="js-burger">
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
             
-            <ul class="headerMenu" id="header-menu">
+            <ul class="headerMenu">
                 <?php foreach($pageLists as $list){ ?>
                 <details>
                     <summary class="headerMenu_list"><?php echo $list["title"]; ?></summary>
@@ -105,4 +105,4 @@
     <a id="js-scrollTop" class="el-scrollTop"></a>
     
     <!-- メニューを出した時に出る黒背景 -->
-    <div class="el-blackCover" id="js-blackCover"></div>
+    <!-- <div class="el-blackCover" id="js-blackCover"></div> -->

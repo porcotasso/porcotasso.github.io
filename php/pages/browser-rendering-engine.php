@@ -1,5 +1,5 @@
 <?php include("../_partial/wrapper-head.php"); ?>
-<main class="ly-main ly-UnderheaderSpace browserRenderingEngine"> 
+<main class="ly-main browserRenderingEngine"> 
     <article class="articleCnt">
         <header>
             <?php include("../_partial/pages-title.php"); ?>
