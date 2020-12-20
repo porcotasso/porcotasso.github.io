@@ -433,7 +433,7 @@ template {
 .el-scrollTop {
   z-index: 20;
   position: fixed;
-  top: 64px;
+  top: 40%;
   right: 0;
   width: 64px;
   height: 40px;
