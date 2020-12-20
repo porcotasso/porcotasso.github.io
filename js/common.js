@@ -1,16 +1,14 @@
-// HEADER HAMBURGER MENU 
-var burger = document.getElementById('js-burger');
-var headerNav = document.getElementById('js-headerNav');
-var body = document.getElementById('js-body');
-burger.onclick = function() {
-  headerNav.classList.toggle('active');
-  body.classList.toggle('active');
-};
-
-// HOME MENU OPEN/CLOSE #menu-triggerをクリックで#js-headerがオンオフ
 document.addEventListener('DOMContentLoaded',() => {
+  // HEADER HAMBURGER MENU 
+  var burger = document.getElementById('js-burger');
+  var headerNav = document.getElementById('js-headerNav');
+  var body = document.getElementById('js-body');
+  burger.onclick = function() {
+    headerNav.classList.toggle('active');
+    body.classList.toggle('active');
+  };
+  // HOME MENU OPEN/CLOSE #menu-triggerをクリックで#js-headerがオンオフ
   const accordionTrigger = document.getElementsByClassName('js-accordionTrigger');
-
   for (let i = 0; i < accordionTrigger.length; i++){
     let titleEach = accordionTrigger[i];
     let content = titleEach.nextElementSibling;
@@ -24,37 +22,80 @@ document.addEventListener('DOMContentLoaded',() => {
   }
 });
 
-// toc toggle & toc miniHeaders
-  // -> toc toggle 
-let tocTgl = document.getElementsByClassName('js-tocToggle');
-let tocTtl = document.getElementById('js-tocTtl');
-tocTtl.addEventListener('click', () => tocTgl[0].classList.toggle('active'));
-  // -> toc miniHeader
+
+
+
+
 window.addEventListener('DOMContentLoaded', function() {
-  let headerScroll = document.getElementById('js-miniHeader');  
-  //1. option設定 
-  const option = {
+
+  //目次クリックで目次リスト開閉
+  let tocTgl = document.getElementsByClassName('js-tocTgl');
+  let tocTtl = document.getElementById('js-tocTtl');
+  tocTtl.addEventListener('click', () => tocTgl[0].classList.toggle('is-open'));
+
+
+  //目次が画面のトップについたらスタイル変更
+  let tocTop = document.getElementById('js-tocTop');  
+  const optionTocTop = {
     root: null,
     rootMargin: "0px 0px -99% 0px",
     threshold: 0.0,
   };
-  //IntersectionObserverのcallback関数の作成
   const callback1 = (entries) => {
     entries.forEach( entry => {
       if(entry.isIntersecting) {
-        // 要素が交差した際の動作
-        headerScroll.classList.add('smaller');
-        // tocTgl[0].classList.remove('active');
+        tocTop.classList.add('tocTop');
       } else {
-        // 要素が交差から外れた際の動作
-        headerScroll.classList.remove('smaller');
+        tocTop.classList.remove('tocTop');
       }
     });
   };
-  const observer1 = new IntersectionObserver(callback1, option);
-  observer1.observe(headerScroll);
-});
+  const observer1 = new IntersectionObserver(callback1, optionTocTop);
+  observer1.observe(tocTop);
 
+
+  //ページの位置に応じて目次に位置を示す表示 IntersectionObserver
+  const tocList = document.querySelectorAll('.js-tocList');
+  const tocContent = document.querySelectorAll('.tocContent');
+  const tocMap = new Map();
+  //1. option設定 
+  const option = {
+    root: null,
+    rootMargin: "-74% 0px -20% 0px",
+    threshold: 0.0,
+  };
+  // 2.実行するcallback関数作成
+  const callback = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio) {
+        tocMap.get(entry.target).classList.add('active');
+      } else {
+        tocMap.get(entry.target).classList.remove('active');
+      }
+    });
+  };
+  //3.初期化オブジェクト作成
+  const io = new IntersectionObserver(callback, option);
+  //4.監視
+  tocContent.forEach((content, i) => {
+    io.observe(content);
+    tocMap.set(content, tocList.item(i));
+    tocMap.set(tocList.item(i), content);
+  });
+
+
+  // 目次scrollIntoView
+  tocList.forEach((item) => {
+    item.addEventListener('click', (event) => {
+      console.log("aaaaaa");
+      tocMap.get(event.currentTarget).scrollIntoView({
+        behavior: "smooth"
+      });
+      tocTgl[0].classList.remove('is-open');
+    });
+  });
+
+});
 
 
 

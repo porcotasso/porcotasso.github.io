@@ -364,9 +364,9 @@ template {
       border-radius: 50%;
       background: silver;
       content: ''; }
-  .ly-toc.active .ly-toc_ttl:after {
+  .ly-toc.is-open .ly-toc_ttl:after {
     content: "[閉じる]"; }
-  .ly-toc.active .ly-toc_lists {
+  .ly-toc.is-open .ly-toc_lists {
     display: block; }
   .ly-toc .miniHeaderTtl {
     display: block;
@@ -377,10 +377,10 @@ template {
     font-size: 1.1rem;
     opacity: 0;
     transition: all .4s; }
-  .ly-toc.smaller .ly-toc_ttl {
+  .ly-toc.tocTop .ly-toc_ttl {
     border-bottom: 1px solid #d4d9e6;
     background: #f8f8f8; }
-  .ly-toc.smaller .ly-toc_lists {
+  .ly-toc.tocTop .ly-toc_lists {
     display: block;
     z-index: 2;
     position: absolute;
@@ -391,9 +391,9 @@ template {
     background: #eef7fb;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
     transition: all 0s; }
-  .ly-toc.smaller .miniHeaderTtl {
+  .ly-toc.tocTop .miniHeaderTtl {
     opacity: 1; }
-  .ly-toc.smaller.active .ly-toc_lists {
+  .ly-toc.tocTop.is-open .ly-toc_lists {
     transform: translateY(0);
     transition: all .4s; }
 

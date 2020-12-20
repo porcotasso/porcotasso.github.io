@@ -318,8 +318,8 @@ body{
 			}
 		}
 	}
-	&_header.smaller{
-		.articleCnt_headerBox{
+	// &_header.smaller{
+	// 	.articleCnt_headerBox{
 			// h1{
 			// 	font-size: $font-size-11;
 			// }
@@ -331,8 +331,8 @@ body{
 			// 	margin: 0;
 			// 	padding: 0;
 			// }
-		}
-	}
+	// 	}
+	// }
 	&_summary{
 		padding: 16px $gutter-width;
 		&::before{

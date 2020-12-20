@@ -79,7 +79,7 @@
 		  }
 
 	}
-	&.active{
+	&.is-open{
 		.ly-toc_ttl{
 			// border: none;
 			// background: none;
@@ -101,7 +101,7 @@
 		z-index: 1;
 		transition: all .4s;
 	}
-	&.smaller{
+	&.tocTop{
 		.ly-toc_ttl{
 			border-bottom:1px solid $border-gray;
 			background: #f8f8f8;
@@ -122,7 +122,7 @@
 			opacity: 1;
 		}
 		
-		&.active{
+		&.is-open{
 			.ly-toc_lists{
 				transform: translateY(0);
 				transition: all .4s;

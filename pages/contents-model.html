@@ -290,7 +290,7 @@
 			html		</li>
 		   
 	</ul>
-			<p class="el-updateDate">2020.12.19 更新</p>
+			<p class="el-updateDate">2020.12.20 更新</p>
 		<div class="otherCnt">
 			
 					<a href="/pages/shopify-memo.html" class="otherCnt_pre">shopify-memo</a>
@@ -299,7 +299,7 @@
 					
 	</div>
 </div>          </header>
-          <nav class="ly-toc js-tocToggle" id="js-miniHeader">
+          <nav class="ly-toc js-tocTgl" id="js-tocTop">
             <p class="miniHeaderTtl">コンテンツ・モデル</p>
             <div class="ly-toc_ttl" id="js-tocTtl">目次</div>
                         <ul class="ly-toc_lists">
@@ -420,45 +420,3 @@
     </body>
 
 </html>
-
-<script>
-window.addEventListener('DOMContentLoaded', function() {
-  const tocList = document.querySelectorAll('.js-tocList');
-  const tocContent = document.querySelectorAll('.tocContent');
-  const tocMap = new Map();
-  
-  //1. option設定 
-  const option = {
-    root: null,
-    rootMargin: "-74% 0px -20% 0px",
-    threshold: 0.0,
-  };
-  // 2.実行するcallback関数作成
-  const callback = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.intersectionRatio) {
-        tocMap.get(entry.target).classList.add('active');
-      } else {
-        tocMap.get(entry.target).classList.remove('active');
-      }
-    });
-  };
-  //3.初期化オブジェクト作成
-  const io = new IntersectionObserver(callback, option);
-
-  //4.監視
-  tocContent.forEach((content, i) => {
-    io.observe(content);
-    tocMap.set(content, tocList.item(i));
-    tocMap.set(tocList.item(i), content);
-  });
-
-
-  // 目次にクリックイベントリスナを登録
-  // tocList.forEach((item) => {
-  //   item.addEventListener('click', (event) => {
-  //     tocMap.get(event.currentTarget).scrollIntoView();
-  //   });
-  // });
-});
-</script>

@@ -4,7 +4,7 @@
         <header>
           <?php include("../_partial/pages-title.php"); ?>
         </header>
-          <nav class="ly-toc js-tocToggle" id="js-miniHeader">
+          <nav class="ly-toc js-tocTgl" id="js-tocTop">
             <p class="miniHeaderTtl"><?php echo $title ?></p>
             <div class="ly-toc_ttl" id="js-tocTtl">目次</div>
             <?php $navList = array("コンテンツ・モデルとは", "７つのカテゴリー", "７つのカテゴリーに分類されない３つのルール"); ?>
@@ -114,46 +114,3 @@
     </article>
 </main>
 <?php include("../_partial/wrapper-foot.php"); ?>
-
-
-<script>
-window.addEventListener('DOMContentLoaded', function() {
-  const tocList = document.querySelectorAll('.js-tocList');
-  const tocContent = document.querySelectorAll('.tocContent');
-  const tocMap = new Map();
-  
-  //1. option設定 
-  const option = {
-    root: null,
-    rootMargin: "-74% 0px -20% 0px",
-    threshold: 0.0,
-  };
-  // 2.実行するcallback関数作成
-  const callback = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.intersectionRatio) {
-        tocMap.get(entry.target).classList.add('active');
-      } else {
-        tocMap.get(entry.target).classList.remove('active');
-      }
-    });
-  };
-  //3.初期化オブジェクト作成
-  const io = new IntersectionObserver(callback, option);
-
-  //4.監視
-  tocContent.forEach((content, i) => {
-    io.observe(content);
-    tocMap.set(content, tocList.item(i));
-    tocMap.set(tocList.item(i), content);
-  });
-
-
-  // 目次にクリックイベントリスナを登録
-  // tocList.forEach((item) => {
-  //   item.addEventListener('click', (event) => {
-  //     tocMap.get(event.currentTarget).scrollIntoView();
-  //   });
-  // });
-});
-</script>
