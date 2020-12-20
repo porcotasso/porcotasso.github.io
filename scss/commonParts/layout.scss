@@ -27,7 +27,7 @@
 	}
 	.ly-toc_lists{
 		padding: 16px 5% 16px 2em;
-		margin: 0 5% 16px;
+		margin: 0 2% 16px 8%;
 		list-style: none;
 		display: none;
 		border: 1px solid $border-gray;
@@ -54,7 +54,8 @@
 				&:before {
 					content: '';
 					position: absolute;
-					top: calc(50% - 4px);
+					// top: calc(50% - 4px);
+					top: 10px;
 					left: -12px;
 					border-radius: 50%;
 					width: 6px;
@@ -64,19 +65,18 @@
 			}
 		}
 		.tocList:hover {
-			background: whitesmoke;
-			color: royalblue;
+			color: $font-gray;
 		  }
-		.tocList:hover:not(.active)::before {
-			content: '';
-			position: absolute;
-			top: 0.5rem;
-			left: -3px;
-			border-radius: 50%;
-			width: 5px;
-			height: 5px;
-			background: silver;
-		  }
+		// .tocList:hover:not(.active)::before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	top: 0.5rem;
+		// 	left: -3px;
+		// 	border-radius: 50%;
+		// 	width: 5px;
+		// 	height: 5px;
+		// 	background: silver;
+		// }
 
 	}
 	&.is-open{

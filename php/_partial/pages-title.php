@@ -39,3 +39,4 @@
 	</ul>
 </nav>
 <p class="articleCnt_summary"><?php echo $lead ?></p>
+<script src="/js/pages.js"></script>
