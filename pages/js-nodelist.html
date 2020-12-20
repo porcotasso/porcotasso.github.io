@@ -277,70 +277,63 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <div class="articleCnt_headerBox">
-	<h1>nodelist</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			js		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/js-marker.html" class="otherCnt_pre">黄色いmarkerアニメーション</a>
-			
-					<a href="/pages/js-scrolltop.html" class="otherCnt_nxt">スクロールでトップに戻るボタン</a>
-					
-	</div>
-</div>              <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">Nodeとは</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">主なノードの種類</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#2" class="">
-                            <div class="">属性ノード</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#3" class="">
-                            <div class="">HTMLコレクション</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#4" class="">
-                            <div class="">Nodelist</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#5" class="">
-                            <div class="">要素の探し方</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+               <header>
+	<div class="articleCnt_headerBox">
+		<h1>nodelist</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				js			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/js-marker.html" class="otherCnt_pre">黄色いmarkerアニメーション</a>
+				
+							<a href="/pages/js-scrolltop.html" class="otherCnt_nxt">スクロールでトップに戻るボタン</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">nodelist</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>Nodeとは</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>主なノードの種類</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>属性ノード</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>HTMLコレクション</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>Nodelist</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>要素の探し方</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">ノードリストにはliveとstaticがあります</p>            
+                
+            
+        <section class="ly-section tocContent">
             <h2>Nodeとは</h2>
             <p>DOMでは文書を木構造(tree)としてとらえ、枝分かれの部分や枝の先端をノード(node)と呼びます。タグやその中の属性、テキストがそれぞれノードになります。ノードとは各要素(HTMLではエレメントやタグという)自体のことを表す。特定のノードを基準としたときに、その上にあるノードを「親:parent」ノードと表現し、その下にあるノードを「子:childまたはchildren」ノードと表現する。また同一階層にあるノードのことを「兄弟姉妹:siblings」ノードと表現する。例えば「そのタグの子ノード全体を取得して、その親ノードから削除する」のような使い方をする。 </p>
             <h3>DOMとは</h3>
             <p>Document Object Model の略で、javascriptなどのプログラムからxmlやhtmlで書かれた文書を扱うための仕組みの標準。xml,html同様W3C(World Wide Web Consortium ダブリュースリーシー)が標準の策定をしています。DOMは「WEBページとプログラミング言語を繋ぐ役割を持つ」</p>
         </section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
             <h2>主なノードの種類</h2>
 <table>
 <thead>
@@ -383,7 +376,7 @@
 </ul>
 </pre>
           </sction>
-          <section class="ly-section" id="2">
+          <section class="ly-section tocContent">
             <h2>属性ノード</h2>
 
 
@@ -476,7 +469,7 @@ var nodeList = elementNodeReference.childNodes;
 var parentNode = elementNodeReference.parentNode
 </pre>
           </sction>
-          <section class="ly-section" id="3">
+          <section class="ly-section tocContent">
             <h2>HTMLコレクション</h2>
 
             <p>DOMを取得するにあたって、複数のものを習得した場合の戻り値の１つがHTMLCollectionです。HTMLCollectionでは「id」と「name」から要素の抽出が可能です。</p>
@@ -492,7 +485,7 @@ var parentNode = elementNodeReference.parentNode
             NodeList.keys()
             NodeList.values()</p>
           </sction>
-          <section class="ly-section" id="4">
+          <section class="ly-section tocContent">
             <h2>Nodelist</h2>
 
 
@@ -521,7 +514,7 @@ querySelectorAll, jQueryで取得したNodeListはStatic NodeListなので、取
 </ul>
 
           </sction>
-          <section class="ly-section" id="5">
+          <section class="ly-section tocContent">
             <h2>要素の探し方</h2>
 
 <h3>querySelector()</h3>

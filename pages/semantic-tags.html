@@ -277,52 +277,51 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <div class="articleCnt_headerBox">
-	<h1>セマンティックhtml</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			html		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/contents-model.html" class="otherCnt_pre">コンテンツ・モデル</a>
-			
-					<a href="/pages/reset-css.html" class="otherCnt_nxt">リセットCSSについて</a>
-					
-	</div>
-</div>              
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">セマンティックHTMLが重要な理由</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">主なタグの役割</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="1">
+                <header>
+	<div class="articleCnt_headerBox">
+		<h1>セマンティックhtml</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				html			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/contents-model.html" class="otherCnt_pre">コンテンツ・モデル</a>
+				
+							<a href="/pages/reset-css.html" class="otherCnt_nxt">リセットCSSについて</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">セマンティックhtml</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>セマンティックHTMLが重要な理由</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>主なタグの役割</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">クローラーや読み上げソフトがタグから各コンテンツの役割がわかるように記述するコンテンツの意味に合ったタグを使ってマークアップすることをセマンティックHTMLと呼びます。</p>
+
+        <section class="ly-section tocContent">
         <h2>セマンティックHTMLが重要な理由</h2>
             <p>セマンティックHTMLにする理由として３つあげられます。</p>
             <p>一つ目は検索エンジンの最適化です。GoogleがボットでHTMLコンテンツをスキャンする際に、検索エンジンが理解しやすいように作っておくことでSEOにおいて優位になります。GoogleもセマンティックHTMLを推奨しています。</p>
             <p>二つ目はアクセシビリティの改善です。例えば、視覚障害を持ったユーザは、ウェブサイトの文章を読み上げるスクリーンリーダーなどのツールを使っています。その際に見出しや段落など適切にタグ付けすると、スクリーンリーダーが解析しやすくなり、より分かりやすい形態でコンテンツを提供できるようになります。</p>
             <p>三つ目はコードをわかりやすくする目的です。きちんと構造化されたHTMLを書くことで人間が読んでも分かりやすくメンテナンスが楽になります。</p>
         </section>
-        <section class="ly-section" id="2">
+        <section class="ly-section tocContent">
             <h2>主なタグの役割</h2>
             <h3>header</h3>
             <p>ページ全体のヘッダーや、セクション内のヘッダーを表します。イントロダクション、ナビゲーション等のグループを表す。</p>

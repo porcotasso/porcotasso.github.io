@@ -1,23 +1,10 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-			<?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("box-sizingを全体に使う", "html", "body", "p, liタグ", "pタグ", "img", "abbr", "address", "a", "dl,dt,dd","blockqoute", "強調系タグ", "sub,sup", " pre,code,kbd,samp", "figure", "svg", "table", "form", "その他"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+      <?php $navList = array("box-sizingを全体に使う", "html", "body", "p, liタグ", "pタグ", "img", "abbr", "address", "a", "dl,dt,dd","blockqoute", "強調系タグ", "sub,sup", " pre,code,kbd,samp", "figure", "svg", "table", "form", "その他"); ?>
+        <?php include("../_partial/pages-title.php"); ?>
+  
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[0]; ?></h2>
             <p>box-sizingは「要素の幅（width）と高さ（height）の中にpaddingとborderを含めるかどうか」という設定</p>
             <p>値をcontent-boxにすると、幅や余白を%指定したいときには不向き（親要素からはみ出てしまったりしやすい）</p>
@@ -32,7 +19,7 @@ box-sizing: border-box;
 </pre>
         </section>
         <!-- html -->
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[1]; ?></h2>
             <p>htmlはルートとなるトップレベル要素なのでルート要素と呼ばれる。</p>
             <p><code>-webkit-text-size-adjust: 100%;</code></p>
@@ -48,7 +35,7 @@ font-size: 62.5%;
 </pre>
         </section>
         <!-- body -->
-        <section class="ly-section" id="2">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[2]; ?></h2>
             <h3>font-family</h3>
             <p><code>font-family:"游ゴシック Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,sans-serif;</code></p>
@@ -95,7 +82,7 @@ body {
 </pre>
         </section>
         <!-- p li -->
-        <section class="ly-section" id="3">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[3]; ?></h2>
             <p>p と li　が文章中で同じような見せ方で利用されることを基本として文字スタイルを合わせる。</p>
             <p>大きなコンテナの中でpやliを繰り返し使った時、最後のpやliの下のスペースが邪魔になることがある。ここではliは下のスペースを作らず、line-heightのみで、バランスを調整する。pは別途margin-bottomを追加する。</p>
@@ -112,7 +99,7 @@ ul{
 </pre>
         </section>
         <!-- p -->
-        <section class="ly-section" id="4">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[4]; ?></h2>
             <p>pタグは「Paragraph」の略です。長いひとかたまりの文章だけでなく、テキストを使ういろいろな場所で使われるので、用途ごとに対応できるスタイルの指定が必要になります。<br>このサイトでの考え方では、複数行にわたる文章にpタグを使用して、長文が読みやすいスタイルを指定するのを優先します。具体的にはline-heightを1.8~2 letter-space0.05em など通常よりスペースを開けています。フォントサイズは長文が読みやすいサイズを目的とします。mobileで14px、PCで16pxあたり？を基本に考えています。</p>
             <p>listなどと一緒にmargin-bottomを追加します。listの中のlistにはmargin-bottom を使いません。</p>
@@ -128,7 +115,7 @@ p,
 </pre>
         </section>
         <!-- img -->
-        <section class="ly-section" id="5">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[5]; ?></h2>
             <p>経験上、画面幅を超えて表示させたいことは基本なかったので、先にmax-width: 100%;を追加しておく。そのほかの設定はbootstrap-rebootから</p>
 <pre class="prettyprint">
@@ -141,7 +128,7 @@ img{
 </pre>
         </section>
         <!-- abbr -->
-        <section class="ly-section" id="6">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[6]; ?></h2>
             <p>「ABBR」とは、「abbreviation」の略で、略語を示すタグです。例えばWWW（World Wide Web）やInc.（incorporated）、HTTP（HyperText Transfer Protocol）、HTML(Hypertext Markup Language)、XML(Extensible Markup Language)、Ltd.（Limited）などの言葉を略す際に使用されます。
 同様の意味を持つタグに <code>acronym</code> があり、LAN(Local Area Network)やSOHO(Small Office Home Office)など、略語が頭字語（省略される各単語の頭文字から成るもの）である場合に使用します。
@@ -162,7 +149,7 @@ abbr[title]{
 </pre>
         </section>
         <!-- address -->
-        <section class="ly-section" id="7">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[7]; ?></h2>
             <p>addressタグはページとサイトに書いてある連絡先情報を示すときに使います。作者の名前、メールアドレス、住所、電話番号、ファックス番号、フォームへのリンクなど</p>
 <pre class="prettyprint">
@@ -173,7 +160,7 @@ address {
  }
 </pre>
         </section>
-        <section class="ly-section" id="8">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[8]; ?></h2>
             <p>aタグでhrefがないものは、スタイル省略</p>
 <pre class="prettyprint">
@@ -197,7 +184,7 @@ a:not([href]) {
  }
 </pre>
         </section>
-        <section class="ly-section" id="9">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[9]; ?></h2>
             <p>dl要素はdt要素（用語）,dd要素（その用語に対する説明）をともなう記述型リスト。</p>
 <pre class="prettyprint">
@@ -210,7 +197,7 @@ dt {
  }
 </pre>
         </section>
-        <section class="ly-section" id="10">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[10]; ?></h2>
             <p>「BLOCKQUOTE」とは、引用・転載文であることを示すタグです。比較的長いテキストを段落ごと引用する際に使用されます。短いテキストの場合はblockquoteタグではなく、qタグを使用して引用・抜粋を行います。</p>
             <cite class="ly-cite"><a class="ly-cite_link" href="https://nandemo-nobiru.com/2159/" <?php echo $targetBlank ?>>なんでものびるWEB</a></cite>
@@ -222,7 +209,7 @@ blockquote {
  }
 </pre>
         </section>
-        <section class="ly-section" id="11">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[11]; ?></h2>
             <p>強調系タグ</p>
 <pre class="prettyprint">
@@ -234,7 +221,7 @@ em,
  }
 </pre>
         </section>
-        <section class="ly-section" id="12">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[12]; ?></h2>
             <p>「SUB」とは、「Subscript」の略で下付き文字で表示するタグです。化学記号を表す際などに便利です。「SUP」とは、「Superscript」の略で上付き文字で表示するタグです。乗算を表す際などに便利sub、supで指定された上付き文字と下付き文字は、通常の文字サイズよりも少し小さいサイズで表示されます。</p>
 <pre class="prettyprint">
@@ -253,7 +240,7 @@ sup {
 }
 </pre>
         </section>
-        <section class="ly-section" id="13">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[13]; ?></h2>
             <h3>pre</h3>
             <p>Preformatted Text（整形済テキスト）という意味で、入力したソースのまま表示することができます。不要な空欄、タブもそのまま表示されるので使用できません。特殊文字は表示できないので、記号を使ってエスケープする必要があります。半角スペースや改行をそのまま表示。プログラムのコードを表示する場合に使用。プログラムのコードを表示する場合は、codeと組み合わせて使用されます。</p>
@@ -284,7 +271,7 @@ pre,
  }
 </pre>
         </section>
-        <section class="ly-section" id="14">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[14]; ?></h2>
             <p>figureフィギュアはHTML5から登場したタグで「自己完結するコンテンツ」を表します。その部分だけを抜き出しても意味が成り立つようなものに対して使います。図表やイラスト、写真などに対してよく使われる。無くても本文は成り立つが、あると嬉しい図表や、補足情報、説明を載せるときに使います。多くの場合、図表やイラスト、写真、コードなどにキャプション（注釈）を付けた形で使われます。figcaptionと合わせて使われることが多い</p>
 <pre class="prettyprint">
@@ -293,7 +280,7 @@ pre,
  }
 </pre>
         </section>
-        <section class="ly-section" id="15">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[15]; ?></h2>
             <p>svgタグ</p>
 <pre class="prettyprint">
@@ -303,7 +290,7 @@ svg {
  }
 </pre>
         </section>
-        <section class="ly-section" id="16">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[16]; ?></h2>
             <h3>table</h3>
             <p>border-collapseは隣り合ったテーブルセルの間隔を指定するプロパティ。collapse->隣接するボーダーラインを重ねあわせて表示するよう指定。テーブルで表を作るときにラインがきれいに収まるように。</p>
@@ -327,7 +314,7 @@ th {
 }
 </pre>
         </section>
-        <section class="ly-section" id="16">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[16]; ?></h2>
             <h3>LABEL</h3>
             <p>フォームの中でフォームの項目名と構成部品（チェックボックス、ラジオボタンなど）を関連付けるためのタグです。関連付けを行うことにより、ブラウザでラベル（もしくはラベルのアクセスキー）をクリックした際に、その構成部品をクリックしたのと同じ動作が可能になります。</p>
@@ -452,7 +439,7 @@ legend {
 }
 </pre>
         </section>
-        <section class="ly-section" id="17">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[17]; ?></h2>
             <h3>progress</h3>
             <p>タスクの進捗状況をプログレスバーで表示。</p>

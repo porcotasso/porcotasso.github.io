@@ -1,23 +1,12 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main browserRenderingEngine"> 
     <article class="articleCnt">
-        <header>
-            <?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("グラフ"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+		<?php $navList = array("グラフ"); ?>
+        <?php include("../_partial/pages-title.php"); ?>
+            
+                
+            
+        <section class="ly-section tocContent">
 		<h2><?php echo $navList[0]; ?></h2>
 			<table class="browserTable">
 				<tr>

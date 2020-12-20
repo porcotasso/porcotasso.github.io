@@ -277,44 +277,45 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <div class="articleCnt_headerBox">
-	<h1>黄色いmarkerアニメーション</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			js		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/js-date.html" class="otherCnt_pre">js-date</a>
-			
-					<a href="/pages/js-nodelist.html" class="otherCnt_nxt">nodelist</a>
-					
-	</div>
-</div>              <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">黄色いマーカー</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">関連コード:サイズと位置を取得</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+               <header>
+	<div class="articleCnt_headerBox">
+		<h1>黄色いmarkerアニメーション</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				js			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/js-date.html" class="otherCnt_pre">js-date</a>
+				
+							<a href="/pages/js-nodelist.html" class="otherCnt_nxt">nodelist</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">黄色いmarkerアニメーション</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>黄色いマーカー</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>関連コード:サイズと位置を取得</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">黄色いmarkerを引くアニメーションをjavascriptで作りました</p>            
+                
+            
+        <section class="ly-section tocContent">
             <h2>黄色いマーカー</h2>
 			<p>スクロールしたタイミングで<span class="el-marker">黄色いマーカー</span>を引くjavascriptです。</p>
  
@@ -354,7 +355,7 @@ window.addEventListener('load', saFunc);
 window.addEventListener('scroll', saFunc);
 </pre>
 </sction>
-<section class="ly-section" id="1">
+<section class="ly-section tocContent">
             <h2>関連コード:サイズと位置を取得</h2>
 			<p>モニター、ブラウザ、要素などのサイズと位置を取得。</p>
 

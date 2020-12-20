@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded',() => {
+  
   // HEADER HAMBURGER MENU 
   var burger = document.getElementById('js-burger');
   var headerNav = document.getElementById('js-headerNav');
@@ -7,6 +8,8 @@ document.addEventListener('DOMContentLoaded',() => {
     headerNav.classList.toggle('active');
     body.classList.toggle('active');
   };
+
+
   // HOME MENU OPEN/CLOSE #menu-triggerをクリックで#js-headerがオンオフ
   const accordionTrigger = document.getElementsByClassName('js-accordionTrigger');
   for (let i = 0; i < accordionTrigger.length; i++){
@@ -20,13 +23,7 @@ document.addEventListener('DOMContentLoaded',() => {
       });
     });
   }
-});
 
-
-
-
-
-window.addEventListener('DOMContentLoaded', function() {
 
   //目次クリックで目次リスト開閉
   let tocTgl = document.getElementsByClassName('js-tocTgl');
@@ -170,23 +167,45 @@ window.addEventListener('scroll', saFunc);
 document.addEventListener('DOMContentLoaded', function(){
   let start_pos = 0;
   let opacity = 0;
+  let display = 'block';
   const btnScrollTop = document.getElementById( "js-scrollTop" );
   window.addEventListener('scroll', function(e){
-       var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+       var scrollTop = window.pageYOffset || document.documentElement.scrollTop; //  上からのスクロール距離
        var current_pos =scrollTop;
-       if(scrollTop > 400){
-          if (current_pos > start_pos　&& opacity > 0) {
-            //down
+
+        if (current_pos > start_pos) {
+          //down
+          if (opacity > 0 ) {
             opacity -= 0.5;
-          }else{
-            //up
-            opacity += 0.2;
+            display = 'block';
+          } else {
+            opacity = 0;
+            display = 'none';
           }
         } else {
-          opacity -= 0.1;
+          //up
+          if (scrollTop < 800) {
+            if (opacity > 0 ) {
+              opacity -= 0.5;
+              display = 'block';
+            } else {
+              opacity = 0;
+              display = 'none';
+            }
+          } else {
+            if (opacity < 1){
+              opacity += 0.2;
+              display = 'block';
+            } else {
+              opacity = 1;
+              display = 'block';
+            }
+          }
         }
+
         start_pos = current_pos;
         btnScrollTop.style.opacity = opacity;
+        btnScrollTop.style.display = display;
         console.log(opacity);
    });
  });

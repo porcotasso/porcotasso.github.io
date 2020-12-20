@@ -277,64 +277,59 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <div class="articleCnt_headerBox">
-	<h1>event-handler</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			js		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/javascript-memo.html" class="otherCnt_pre">javascriptmemo</a>
-			
-					<a href="/pages/event-propagation.html" class="otherCnt_nxt">イベント伝搬とは</a>
-					
-	</div>
-</div>              <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">イベントとは</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">イベントハンドラーとは</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#2" class="">
-                            <div class="">HTML属性のイベントハンドラ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#3" class="">
-                            <div class="">DOM要素プロパティのイベントハンドラ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#4" class="">
-                            <div class="">イベントリスナーのイベントハンドラ３つの方法</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+                 <header>
+	<div class="articleCnt_headerBox">
+		<h1>event-handler</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				js			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/javascript-memo.html" class="otherCnt_pre">javascriptmemo</a>
+				
+							<a href="/pages/event-propagation.html" class="otherCnt_nxt">イベント伝搬とは</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">event-handler</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>イベントとは</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>イベントハンドラーとは</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>HTML属性のイベントハンドラ</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>DOM要素プロパティのイベントハンドラ</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>イベントリスナーのイベントハンドラ３つの方法</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">event、event-handler、addEventListenerについての説明です。</p>            
+                
+            
+        <section class="ly-section tocContent">
 			<h2>イベントとは</h2>
 
             <p>ウェブページ上で発生するアクションの総称。アクションには、例えばボタンのクリック、フォームへの入力、ページの読み込み、マウスポインタを要素の上に合わせるなどが含まれます。</p>
         </section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
 			<h2>イベントハンドラーとは</h2>
             <p>イベントの処理を行うコードのこと。方法は大きく３つに分けられます。</p>
             <ul>
@@ -343,7 +338,7 @@
                 <li>イベントリスナーのイベントハンドラ</li>
             </ul>
         </section>
-        <section class="ly-section" id="2">
+        <section class="ly-section tocContent">
 			<h2>HTML属性のイベントハンドラ</h2>
 <pre class="prettyprint">
 <input type="text" onchange="sample1()">
@@ -355,7 +350,7 @@ function sample1() {
 </script>
 </pre>
         </section>
-        <section class="ly-section" id="3">
+        <section class="ly-section tocContent">
 			<h2>DOM要素プロパティのイベントハンドラ</h2>
 <pre class="prettyprint">
 <p id="sample2">クリックでコンソールログにHello</p>
@@ -368,7 +363,7 @@ function sample1() {
 </script> 
 </pre>   
         </section>
-        <section class="ly-section" id="4">
+        <section class="ly-section tocContent">
 			<h2>イベントリスナーのイベントハンドラ３つの方法</h2>
             <p>複数の処理の登録が可能になります。</p>
             <h3>addEventListenerの基本的な使い方</h3>

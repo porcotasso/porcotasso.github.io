@@ -1,23 +1,12 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("ファイルの更新時刻を取得する", "date関数"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+        <?php $navList = array("ファイルの更新時刻を取得する", "date関数"); ?>
+         <?php include("../_partial/pages-title.php"); ?>
+            
+                
+            
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[0]; ?></h2>
 			<p></p>
 <pre class="prettyprint">
@@ -34,7 +23,7 @@
 
 <cite class="ly-cite"><a class="ly-cite_link" href="https://www.php.net/manual/ja/function.filemtime.php" <?php echo $targetBlank ?>>PHP マニュアル</a></cite>
 		</section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[1]; ?></h2>
             <p>date関数は指定された日時を任意の形式でフォーマットし、日付文字列を返す関数です。ローカルの日付/時刻を書式化</p>
             <p>date_format関数は、日時の値を指定した形式にフォーマットする関数です。DateTime::format() のエイリアス、、、</p>

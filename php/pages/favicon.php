@@ -1,23 +1,12 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("favicon、アイコンの種類", "画像フォーマット", "コード"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="1">
+        <?php $navList = array("favicon、アイコンの種類", "画像フォーマット", "コード"); ?>
+         <?php include("../_partial/pages-title.php"); ?>
+            
+                
+
+        <section class="ly-section tocContent">
             <h2 >favicon、アイコンの種類</h2>
             <p>現在は様々なサイズのデバイスがあり表示されるサイズの種類数は多いですが、最大のサイズで画像を用意しておけば自動で縮小されるので全種類用意する必要はないでしょう。</p>
             <p>favicon、アイコンは主に４つに分けられます。</p>
@@ -45,7 +34,7 @@
             <h3>Windows用アイコン</h3>
             <p>Windows8やWindows10のスタート画面にWebサイトをピン留めした時の表示をリッチにしたい場合は、Windows用アイコンの設定を行いましょう。</p>  
         </section>
-        <section class="ly-section" id="2">
+        <section class="ly-section tocContent">
             <h2>画像フォーマット</h2>
             <p>faviconはico形式、apple-touch-icon、android-touch-icon、Windows用アイコンはpng形式で作ります。画像をルートディレクトリに置く場合はheadタグに特に記述がなくともクローラーがfaviconと認識します。画像をルートディレクトリ以外に置く場合はhaedタグ内などに画像の場所を指定します。ファビコン、アイコン用フォルダを作ってまとめた方がわかりやすいです。</p>
             <h3>ico形式</h3>
@@ -57,7 +46,7 @@
             <p>android-touch-icon：192x192pxのpng画像</p>
             <p>Windows用アイコン：70x70px、150x150、310x150、310x310のpng画像</p>
         </section>
-        <section class="ly-section" id="3">
+        <section class="ly-section tocContent">
             <h2>コード</h2>
             <h3>favicon、apple-touch-icon、android-touch-ico用コード</h3>
             <p>この３つの設定はheadタグでコードを追加します。</p>

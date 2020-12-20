@@ -1,23 +1,12 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("ベースグループ", "レイアウトグループ", "ブロックモジュールグループ", "エレメントモジュールグループ", "エレメントモジュールモディファイヤーグループ", "ヘルパーグループ", "ユニークグループ", "プログラムグループ"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+        <?php $navList = array("ベースグループ", "レイアウトグループ", "ブロックモジュールグループ", "エレメントモジュールグループ", "エレメントモジュールモディファイヤーグループ", "ヘルパーグループ", "ユニークグループ", "プログラムグループ"); ?>
+         <?php include("../_partial/pages-title.php"); ?>
+            
+                
+            
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[0]; ?></h2>
             <p>CSS設計の大元となるCSSのグループ。各ブラウザ上にデフォルトで指定されているuser agent stylesheetを初期化するリセットCSS、または初期化ではなくブラウザ、デバイス間の不一致を修正するノーマライズCSSを始めに適用し、そこからプロジェクトの標準となるスタイリングをしていきます。</p>
             <h3>ノーマライズCSS</h3>
@@ -28,30 +17,30 @@
             <p>適度にuser agent stylesheetを無効化、正常化したCSS</p>
             <p>このサイトでは、bootstrap-reboot.css をコピーして、サイト用にカスタマイズしています。</p>
         </section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[1]; ?></h2>
             <p>位置調整を担当するCSS</p>
             <p>position, z-index, top/right/left/bottom, float, width, marginなどです。</p>
         </section>
-        <section class="ly-section" id="2">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[2]; ?></h2>
             <p>いろんな場所で使えて子要素を持つCSS。基本的にはレイアウトグループに属するスタイルを持たない。bl-</p>
         </section>
-        <section class="ly-section" id="3">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[3]; ?></h2>
             <p>最小単位のモジュールです。子要素を持ちません。どこにでも使える、ボタン、ラベル el-</p>
         </section>
-        <section class="ly-section" id="4">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[4]; ?></h2>
             <p>エレメントモジュールグループを少しだけ変更したい際に使います。エレメントモジュールグループと同時に追加します。--name</p>
         </section>
-        <section class="ly-section" id="5">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[5]; ?></h2>
         </section>
-        <section class="ly-section" id="6">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[6]; ?></h2>
         </section>
-        <section class="ly-section" id="7">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[7]; ?></h2>
             <p>js-</p>
         </section>

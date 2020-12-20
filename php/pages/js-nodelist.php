@@ -1,29 +1,18 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("Nodeとは", "主なノードの種類", "属性ノード", "HTMLコレクション", "Nodelist", "要素の探し方"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+      <?php $navList = array("Nodeとは", "主なノードの種類", "属性ノード", "HTMLコレクション", "Nodelist", "要素の探し方"); ?>
+         <?php include("../_partial/pages-title.php"); ?>
+            
+                
+            
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[0]; ?></h2>
             <p>DOMでは文書を木構造(tree)としてとらえ、枝分かれの部分や枝の先端をノード(node)と呼びます。タグやその中の属性、テキストがそれぞれノードになります。ノードとは各要素(HTMLではエレメントやタグという)自体のことを表す。特定のノードを基準としたときに、その上にあるノードを「親:parent」ノードと表現し、その下にあるノードを「子:childまたはchildren」ノードと表現する。また同一階層にあるノードのことを「兄弟姉妹:siblings」ノードと表現する。例えば「そのタグの子ノード全体を取得して、その親ノードから削除する」のような使い方をする。 </p>
             <h3>DOMとは</h3>
             <p>Document Object Model の略で、javascriptなどのプログラムからxmlやhtmlで書かれた文書を扱うための仕組みの標準。xml,html同様W3C(World Wide Web Consortium ダブリュースリーシー)が標準の策定をしています。DOMは「WEBページとプログラミング言語を繋ぐ役割を持つ」</p>
         </section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[1]; ?></h2>
 <table>
 <thead>
@@ -66,7 +55,7 @@
 </ul>
 </pre>
           </sction>
-          <section class="ly-section" id="2">
+          <section class="ly-section tocContent">
             <h2><?php echo $navList[2]; ?></h2>
 
 
@@ -159,7 +148,7 @@ var nodeList = elementNodeReference.childNodes;
 var parentNode = elementNodeReference.parentNode
 </pre>
           </sction>
-          <section class="ly-section" id="3">
+          <section class="ly-section tocContent">
             <h2><?php echo $navList[3]; ?></h2>
 
             <p>DOMを取得するにあたって、複数のものを習得した場合の戻り値の１つがHTMLCollectionです。HTMLCollectionでは「id」と「name」から要素の抽出が可能です。</p>
@@ -175,7 +164,7 @@ var parentNode = elementNodeReference.parentNode
             NodeList.keys()
             NodeList.values()</p>
           </sction>
-          <section class="ly-section" id="4">
+          <section class="ly-section tocContent">
             <h2><?php echo $navList[4]; ?></h2>
 
 
@@ -204,7 +193,7 @@ querySelectorAll, jQueryで取得したNodeListはStatic NodeListなので、取
 </ul>
 
           </sction>
-          <section class="ly-section" id="5">
+          <section class="ly-section tocContent">
             <h2><?php echo $navList[5]; ?></h2>
 
 <h3>querySelector()</h3>

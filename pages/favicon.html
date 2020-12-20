@@ -277,49 +277,48 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <div class="articleCnt_headerBox">
-	<h1>favicon</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			parts		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/element-em-strong-mark-b-difference.html" class="otherCnt_pre">em,strong,mark,b,dfn,iの違い</a>
-			
-					<a href="/pages/hamburger-menu.html" class="otherCnt_nxt">hamburger-menu</a>
-					
-	</div>
-</div>              <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">favicon、アイコンの種類</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">画像フォーマット</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#2" class="">
-                            <div class="">コード</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="1">
+                 <header>
+	<div class="articleCnt_headerBox">
+		<h1>favicon</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				parts			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/element-em-strong-mark-b-difference.html" class="otherCnt_pre">em,strong,mark,b,dfn,iの違い</a>
+				
+							<a href="/pages/hamburger-menu.html" class="otherCnt_nxt">hamburger-menu</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">favicon</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>favicon、アイコンの種類</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>画像フォーマット</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>コード</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">faviconはfavorite icon”の略語でウェブサイトのシンボルマーク・イメージとして、サイトに配置するアイコンの俗称です。閲覧中のタブなどに表示し潜在層にサイトを認知させる目的があります。</p>            
+                
+
+        <section class="ly-section tocContent">
             <h2 >favicon、アイコンの種類</h2>
             <p>現在は様々なサイズのデバイスがあり表示されるサイズの種類数は多いですが、最大のサイズで画像を用意しておけば自動で縮小されるので全種類用意する必要はないでしょう。</p>
             <p>favicon、アイコンは主に４つに分けられます。</p>
@@ -347,7 +346,7 @@
             <h3>Windows用アイコン</h3>
             <p>Windows8やWindows10のスタート画面にWebサイトをピン留めした時の表示をリッチにしたい場合は、Windows用アイコンの設定を行いましょう。</p>  
         </section>
-        <section class="ly-section" id="2">
+        <section class="ly-section tocContent">
             <h2>画像フォーマット</h2>
             <p>faviconはico形式、apple-touch-icon、android-touch-icon、Windows用アイコンはpng形式で作ります。画像をルートディレクトリに置く場合はheadタグに特に記述がなくともクローラーがfaviconと認識します。画像をルートディレクトリ以外に置く場合はhaedタグ内などに画像の場所を指定します。ファビコン、アイコン用フォルダを作ってまとめた方がわかりやすいです。</p>
             <h3>ico形式</h3>
@@ -359,7 +358,7 @@
             <p>android-touch-icon：192x192pxのpng画像</p>
             <p>Windows用アイコン：70x70px、150x150、310x150、310x310のpng画像</p>
         </section>
-        <section class="ly-section" id="3">
+        <section class="ly-section tocContent">
             <h2>コード</h2>
             <h3>favicon、apple-touch-icon、android-touch-ico用コード</h3>
             <p>この３つの設定はheadタグでコードを追加します。</p>

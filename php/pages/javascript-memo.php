@@ -1,23 +1,12 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("アコーディオン", "脱Jquery"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
-		<section class="ly-section" id="1">
+        <?php $navList = array("アコーディオン", "脱Jquery"); ?>
+         <?php include("../_partial/pages-title.php"); ?>
+            
+                
+
+		<section class="ly-section tocContent">
 			<h2>アコーディオン</h2>
             <cite class="ly-cite"><a class="ly-cite_link" href="https://flex-box.net/js-accordion/" <?php echo $targetBlank ?>>ブログの設置 アコーディオン</a></cite>
 		</section>
@@ -72,7 +61,7 @@ document.getElementById('element').classList.contains('active');
 
            
 		</section>
-        <section class="ly-section" id="3">
+        <section class="ly-section tocContent">
             <h2>「Magnific Popup」</h2>
             <p>jQueryプラグイン,レスポンシブ対応モーダル・ポップアップ</p>
             <p>Magnific Popupは、インライン、ギャラリー、Youtube、GoogleMap、フォーム、Ajax、アニメーション、など様々なタイプのポップアップを簡単に実装することができます。さらにRetinaにも対応。</p>

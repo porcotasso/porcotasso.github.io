@@ -277,56 +277,55 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <div class="articleCnt_headerBox">
-	<h1>ボタン作成</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			parts		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/basic-layout-style.html" class="otherCnt_pre">resetcss以外のスタイルルール</a>
-			
-					<a href="/pages/break-word.html" class="otherCnt_nxt">break-word</a>
-					
-	</div>
-</div>              <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">aタグ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">buttonタグ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#2" class="">
-                            <div class="">inputタグ</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+                 <header>
+	<div class="articleCnt_headerBox">
+		<h1>ボタン作成</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				parts			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/basic-layout-style.html" class="otherCnt_pre">resetcss以外のスタイルルール</a>
+				
+							<a href="/pages/break-word.html" class="otherCnt_nxt">break-word</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">ボタン作成</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>aタグ</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>buttonタグ</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>inputタグ</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">ボタンを作る際 &lt;a&gt;か&lt;button&gt;か&lt;input&gt;か迷わないように違いを理解する。</p>            
+                
+            
+        <section class="ly-section tocContent">
             <h2>aタグ</h2>
             <p>汎用的なボタンはaタグを使用する。理由として、一般的に浸透していること。buttonが推奨されているわけでもないということで、よく使われているaを使うのが無難。大手web会社もaを使っている様子。</p>
             <section class="ly-section">
 			<h2>サンプル</h2>
 			<a href="/" class="el-btn el-btn--center el-btn--angle">ボタンサンプル</a>
         </section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
             <h2>buttonタグ</h2>
 			<p>フォームの送信ボタンとして使用する。aタグは送信ボタンとして使えない。buttonは擬似要素が使えて、inputの上位互換となるので。</p>
 			<p>htmlに「type=""」の指定が必要。<br>cssにデフォルトのデザインを打ち消す指定が必要<br>リンクが「onclick="location.href='aa.html'"」となる</p>
@@ -335,7 +334,7 @@
 <button type="button" onclick="location.href='aaa.html'">ボタン</button>
 </pre>
 		</section>
-		<section class="ly-section" id="2">
+		<section class="ly-section tocContent">
             <h2>inputタグ</h2>
             <p>可能な限り使用しない。</p>
 		</section>

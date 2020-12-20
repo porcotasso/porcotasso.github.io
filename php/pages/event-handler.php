@@ -1,28 +1,17 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("イベントとは", "イベントハンドラーとは", "HTML属性のイベントハンドラ", "DOM要素プロパティのイベントハンドラ", "イベントリスナーのイベントハンドラ３つの方法"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+        <?php $navList = array("イベントとは", "イベントハンドラーとは", "HTML属性のイベントハンドラ", "DOM要素プロパティのイベントハンドラ", "イベントリスナーのイベントハンドラ３つの方法"); ?>
+         <?php include("../_partial/pages-title.php"); ?>
+            
+                
+            
+        <section class="ly-section tocContent">
 			<h2><?php echo $navList[0]; ?></h2>
 
             <p>ウェブページ上で発生するアクションの総称。アクションには、例えばボタンのクリック、フォームへの入力、ページの読み込み、マウスポインタを要素の上に合わせるなどが含まれます。</p>
         </section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
 			<h2><?php echo $navList[1]; ?></h2>
             <p>イベントの処理を行うコードのこと。方法は大きく３つに分けられます。</p>
             <ul>
@@ -31,7 +20,7 @@
                 <li>イベントリスナーのイベントハンドラ</li>
             </ul>
         </section>
-        <section class="ly-section" id="2">
+        <section class="ly-section tocContent">
 			<h2><?php echo $navList[2]; ?></h2>
 <pre class="prettyprint">
 <input type="text" onchange="sample1()">
@@ -43,7 +32,7 @@ function sample1() {
 </script>
 </pre>
         </section>
-        <section class="ly-section" id="3">
+        <section class="ly-section tocContent">
 			<h2><?php echo $navList[3]; ?></h2>
 <pre class="prettyprint">
 <p id="sample2">クリックでコンソールログにHello</p>
@@ -56,7 +45,7 @@ function sample1() {
 </script> 
 </pre>   
         </section>
-        <section class="ly-section" id="4">
+        <section class="ly-section tocContent">
 			<h2><?php echo $navList[4]; ?></h2>
             <p>複数の処理の登録が可能になります。</p>
             <h3>addEventListenerの基本的な使い方</h3>

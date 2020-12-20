@@ -277,44 +277,45 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-			<div class="articleCnt_headerBox">
-	<h1>カルーセルスライダー</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			js		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/js-scrolltop.html" class="otherCnt_pre">スクロールでトップに戻るボタン</a>
-			
-					<a href="/pages/php-memo.html" class="otherCnt_nxt">phpmemo</a>
-					
-	</div>
-</div>              <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">update順に並べる</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">swiperを使う</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+		        <header>
+	<div class="articleCnt_headerBox">
+		<h1>カルーセルスライダー</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				js			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/js-scrolltop.html" class="otherCnt_pre">スクロールでトップに戻るボタン</a>
+				
+							<a href="/pages/php-memo.html" class="otherCnt_nxt">phpmemo</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">カルーセルスライダー</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>update順に並べる</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>swiperを使う</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">ホームのカルーセルスライダーにupdateの新しい順にコンテンツを並べ、swiper.jsを使って動きを追加します。</p>            
+                
+            
+        <section class="ly-section tocContent">
             <h2>update順に並べる</h2>
 			<h3>html、php</h3>
 			<p>ファイルのupdate日はファイル自体にアクセスしないと取得できないのに対し、サイトで表示させたいのは$allPages内の変数なので、その違う情報をどう正確に結びつけるかがポイントです。</p>
@@ -424,7 +425,7 @@ for($i = 0; $i < $n; $i++){
           <cite class="ly-cite"><a class="ly-cite_link" href="https://tech.playground.style/javascript/carousel-slider/" target="_blank" rel="noopener noreferrer">カルーセルスライダーの実装に便利なSwiper.jsの使い方</a></cite>
           <cite class="ly-cite"><a class="ly-cite_link" href="https://cooen.jp/archives/510" target="_blank" rel="noopener noreferrer">スライダーSwiper.js 基本の使い方解説</a></cite>
 		</section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
             <h2>swiperを使う</h2>
             <p>swiperのオプションを追加するjavascript。</p>
 <pre class="prettyprint">

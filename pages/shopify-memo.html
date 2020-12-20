@@ -277,59 +277,56 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <div class="articleCnt_headerBox">
-	<h1>shopify-memo</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			shopify		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/design.html" class="otherCnt_pre">design-memo</a>
-			
-					<a href="/pages/contents-model.html" class="otherCnt_nxt">コンテンツ・モデル</a>
-					
-	</div>
-</div>              <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">shopifyとは</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">現在の時間を基準にif文をつくる</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#2" class="">
-                            <div class="">jsを利用する</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#3" class="">
-                            <div class="">新しいcssファイルを利用する</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+                 <header>
+	<div class="articleCnt_headerBox">
+		<h1>shopify-memo</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				shopify			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/design.html" class="otherCnt_pre">design-memo</a>
+				
+							<a href="/pages/contents-model.html" class="otherCnt_nxt">コンテンツ・モデル</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">shopify-memo</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>shopifyとは</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>現在の時間を基準にif文をつくる</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>jsを利用する</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>新しいcssファイルを利用する</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">shopify-memo</p>            
+                
+            
+        <section class="ly-section tocContent">
             <h2>shopifyとは</h2>
             <p>2004年にカナダで創業。世界最大のECサイト制作プラットフォームです。</p>
             
         </section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
             <h2>現在の時間を基準にif文をつくる</h2>
             <p>月曜の12時の前か後かを分ける。</p>
 <pre class="prettyprint">
@@ -352,7 +349,7 @@
 //"%Y-%m-%d %H:%M" 2020-09-04 16:05
 </pre>
         </section>
-        <section class="ly-section" id="2">
+        <section class="ly-section tocContent">
             <h2>jsを利用する</h2>
             <p>Assetsで、新しいassetを追加し、javascriptを選ぶ。そのファイル内にjavascriptを書く。CDNを使う方法がわからない。使えないのかも。その場合、コードをコピーすれば使える。使いたいliquidファイル内で、</p>
 <pre class="prettyprint">
@@ -360,7 +357,7 @@
 </pre>
             <p>と書けば使える。</p>
         </section>
-        <section class="ly-section" id="3">
+        <section class="ly-section tocContent">
             <h2>新しいcssファイルを利用する</h2>
             <p>Assetsで、新しいassetを追加し、cssを選ぶ。そのファイル内にstyleを書く。使いたいliquidファイル内で、</p>
 <pre class="prettyprint">

@@ -1,23 +1,12 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("コード", "シンプルなパターン"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+      <?php $navList = array("コード", "シンプルなパターン"); ?>
+         <?php include("../_partial/pages-title.php"); ?>
+            
+                
+            
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[0]; ?></h2>
             <h3>html</h3>
             <p>idとclassのあるaタグを準備します。</p>
@@ -95,7 +84,7 @@ let pageOffsetY = window.pageYOffset || document.documentElement.btnScrollTop;
           <p>ほぼこちらを参考にさせていただいてます。もっとシンプルなコードも書かれてますがそちらはsafariで動かなかったので複雑な方を使用。（2020.09.18）。</p>
           <cite class="ly-cite"><a class="ly-cite_link" href="https://flex-box.net/js-scrolltop/#co-index-4" <?php echo $targetBlank ?>>Javascriptのみでトップへ戻るボタンを実装</a></cite>
 		</section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[1]; ?></h2>
             <p>aタグのhref属性を#topにするだけでトップに戻ります。ただスクロールさせるjsを追加する場合は邪魔になるので削除します。</p>
 <pre class="prettyprint">

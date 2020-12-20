@@ -277,44 +277,45 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <div class="articleCnt_headerBox">
-	<h1>filemtime</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			php		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/php-memo.html" class="otherCnt_pre">phpmemo</a>
-			
-					<a href="/pages/environment-summary.html" class="otherCnt_nxt">制作環境設定全般</a>
-					
-	</div>
-</div>              <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">ファイルの更新時刻を取得する</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">date関数</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+                 <header>
+	<div class="articleCnt_headerBox">
+		<h1>filemtime</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				php			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/php-memo.html" class="otherCnt_pre">phpmemo</a>
+				
+							<a href="/pages/environment-summary.html" class="otherCnt_nxt">制作環境設定全般</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">filemtime</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>ファイルの更新時刻を取得する</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>date関数</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">filemtime()でファイルの更新時間を取得できます。</p>            
+                
+            
+        <section class="ly-section tocContent">
             <h2>ファイルの更新時刻を取得する</h2>
 			<p></p>
 <pre class="prettyprint">
@@ -331,7 +332,7 @@
 
 <cite class="ly-cite"><a class="ly-cite_link" href="https://www.php.net/manual/ja/function.filemtime.php" target="_blank" rel="noopener noreferrer">PHP マニュアル</a></cite>
 		</section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
             <h2>date関数</h2>
             <p>date関数は指定された日時を任意の形式でフォーマットし、日付文字列を返す関数です。ローカルの日付/時刻を書式化</p>
             <p>date_format関数は、日時の値を指定した形式にフォーマットする関数です。DateTime::format() のエイリアス、、、</p>

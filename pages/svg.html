@@ -277,73 +277,64 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <div class="articleCnt_headerBox">
-	<h1>svg</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			svg		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/browser-rendering-engine.html" class="otherCnt_pre">browser-rendering-engine</a>
-			
-					<a href="/pages/design.html" class="otherCnt_nxt">design-memo</a>
-					
-	</div>
-</div>              <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">SVGファイルとは</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">イラレからの書き出し設定</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#2" class="">
-                            <div class="">書き出したコードについて</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#3" class="">
-                            <div class="">SVG表示方法</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#4" class="">
-                            <div class="">SVGスプライトとは</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#5" class="">
-                            <div class="">SVGスプライトの使い方</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#6" class="">
-                            <div class="">SVGスプライトファイル作成時のコツ</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+                 <header>
+	<div class="articleCnt_headerBox">
+		<h1>svg</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				svg			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/browser-rendering-engine.html" class="otherCnt_pre">browser-rendering-engine</a>
+				
+							<a href="/pages/design.html" class="otherCnt_nxt">design-memo</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">svg</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>SVGファイルとは</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>イラレからの書き出し設定</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>書き出したコードについて</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>SVG表示方法</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>SVGスプライトとは</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>SVGスプライトの使い方</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>SVGスプライトファイル作成時のコツ</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">メモ</p>            
+                
+            
+        <section class="ly-section tocContent">
 			<h2>SVGファイルとは</h2>
             <p>SVGとはScalable Vector Graphicsの略でXMLに基づくマークアップ言語でもある二次元ベクターイメージの画像形式です。</p>
         </section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
 			<h2>イラレからの書き出し設定</h2>
             <p>イラレから書き出す際の設定について</p>
             <h3>SVG プロファイル</h3>
@@ -365,7 +356,7 @@
             <h3>XMP を含める</h3>
             <p>イラレで作成・編集されたことを記録するさまざまな情報（メタデータ）が書き出されます。とても長いので、Webサイトで使う分には、チェックすることはありません。</p>
         </section>
-        <section class="ly-section" id="2">
+        <section class="ly-section tocContent">
 			<h2>書き出したコードについて</h2>
             <h3>id="Layer_1"</h3>
             <p>イラレ編集時のレイヤー名です。一つのレイヤーの場合はsvgタグに記載され複数のレイヤーの場合はgタグに記載されます。</p>
@@ -374,7 +365,7 @@
             <p>さらに削除できる属性は削除します。<br>
                 <code>x="0"</code>と<code>y="0"</code>はSVGコンテナー<span>（アートボード）</span>のX/Y座標を表しますが、デフォルト値が<code>0</code>なので削除してよい。あと、<code>version="1.1"</code>と<code>xml:space="preserve"</code>は、“<q cite="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/xml:space">SVG 2以降非推奨</q>”とのことなので、今のうちから削除しても良いです。</p>
         </section>
-        <section class="ly-section" id="3">
+        <section class="ly-section tocContent">
 			<h2>SVG表示方法</h2>
             <p>SVGファイルをHTMLで表示する方法は以下の6種類。</p>
             <h3>img要素で設置</h3>
@@ -407,7 +398,7 @@ $str = file_get_contents('/aaa.png'); echo $str;
             <h3>use要素で設置する</h3>
             <p>SVGのuse要素を使ってSVGファイルの任意のid属性を持つ要素だけ読み込み</p>
         </section>
-        <section class="ly-section" id="4">
+        <section class="ly-section tocContent">
 			<h2>SVGスプライトとは</h2>
             <p>複数SVGオブジェクトの記述を１つのファイルの中にまとめる。任意の場所で任意のSVGオブジェクトを呼び出す。</p>
 <pre class="prettyprint">
@@ -423,7 +414,7 @@ $str = file_get_contents('/aaa.png'); echo $str;
 </svg>
 </pre>
         </section>
-        <section class="ly-section" id="5">
+        <section class="ly-section tocContent">
 			<h2>SVGスプライトの使い方</h2>
             <h3>1.SVG読み込み</h3>
             <p>bodyの下にsvgを読み込むコードを書く</p>
@@ -460,7 +451,7 @@ $str = file_get_contents('/aaa.png'); echo $str;
 }
 </pre>
         </section>
-        <section class="ly-section" id="6">
+        <section class="ly-section tocContent">
 			<h2>SVGスプライトファイル作成時のコツ</h2>
             <h3>必要なファイルは２つ</h3>
             <p>必要なファイルは２つあります。１つは、サイトに使用する.svgファイル。２つ目は画像内容を把握してpathを書き出す為のファイルでこちらはサイトには使わない。</p>

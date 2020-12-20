@@ -277,56 +277,53 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <div class="articleCnt_headerBox">
-	<h1>hamburger-menu</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			parts		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.12 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/favicon.html" class="otherCnt_pre">favicon</a>
-			
-					<a href="/pages/header-smaller.html" class="otherCnt_nxt">header-smaller</a>
-					
-	</div>
-</div>          
+		         <header>
+	<div class="articleCnt_headerBox">
+		<h1>hamburger-menu</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				parts			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/favicon.html" class="otherCnt_pre">favicon</a>
+				
+							<a href="/pages/header-smaller.html" class="otherCnt_nxt">header-smaller</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">hamburger-menu</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>hamburgerのデザイン</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>クリックしたらクラスをつける</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>背景のコンテンツを固定する</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>黒透過背景をつける</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">hamburger-menuを作る際に必要な要素がいくつかあるので、分解して説明します。</p>        
             
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">hamburgerのデザイン</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">クリックしたらクラスをつける</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#2" class="">
-                            <div class="">背景のコンテンツを固定する</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#3" class="">
-                            <div class="">黒透過背景をつける</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+            
+                
+            
+        <section class="ly-section tocContent">
             <h2>hamburgerのデザイン</h2>
             <p>ハンバーガーのラインは3つのspanでラインをつくり、親タグで全体の位置とサイズを調整します。floatを使っているのはロゴを中心にしたかったからで、レイアウトによっては必要ありません。</p>
 <pre class="prettyprint">
@@ -360,7 +357,7 @@
 }
 </pre>
 		</section>
-		<section class="ly-section" id="1">
+		<section class="ly-section tocContent">
             <h2>クリックしたらクラスをつける</h2>
 			<p>ハンバーガー（js-hamburger）をクリックしたらメニュー（js-headerNav）にactiveクラスをつけます。今回は大枠にクラスをつけることで下層のいろんな部分にスタイルを追加します。ハンバーガーを×印に変更し、メニューを表示しロゴや背景を変更します。</p>
 <pre class="prettyprint">
@@ -414,7 +411,7 @@ hamburger.onclick = function() {
 	}
 </pre>
 		</section>
-		<section class="ly-section" id="2">
+		<section class="ly-section tocContent">
             <h2>背景のコンテンツを固定する</h2>
 			<p>表示したメニューはスクロールできるようにしておきますが、なにもしないと背景のコンテンツもスクロールできてしまうので何かしら対応が必要。この時点では深く考えてませんでしたが、すでにデスマーチが流れていた模様。♪パーパラララララ♪</p>
 			<h3>試したこと1:overflow:hiddenを使う</h3>
@@ -512,7 +509,7 @@ function handleTouchMove(e) {
 			<p>今後の対応としては、psition:fixed;を使うか、背景を見せないか、overscroll-behavior: containがiOSで使えるようになるのを待つか、スクロール時にヘッダーメニューをそもそも見せないか、どれか。</p>
 		</section>
 
-		<section class="ly-section" id="3">
+		<section class="ly-section tocContent">
             <h2>黒透過背景をつける</h2>
 			<p>黒透過背景用のタグを追加し、トグルで表示非表示させます。黒背景をクリックした際に、メニューを閉じるスクリプトも追加。</p>
 <pre class="prettyprint">

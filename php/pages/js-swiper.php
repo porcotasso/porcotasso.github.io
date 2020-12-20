@@ -1,23 +1,12 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-			<?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("update順に並べる", "swiperを使う"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+		<?php $navList = array("update順に並べる", "swiperを使う"); ?>
+        <?php include("../_partial/pages-title.php"); ?>
+            
+                
+            
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[0]; ?></h2>
 			<h3>html、php</h3>
 			<p>ファイルのupdate日はファイル自体にアクセスしないと取得できないのに対し、サイトで表示させたいのは$allPages内の変数なので、その違う情報をどう正確に結びつけるかがポイントです。</p>
@@ -127,7 +116,7 @@ for($i = 0; $i < $n; $i++){
           <cite class="ly-cite"><a class="ly-cite_link" href="https://tech.playground.style/javascript/carousel-slider/" <?php echo $targetBlank ?>>カルーセルスライダーの実装に便利なSwiper.jsの使い方</a></cite>
           <cite class="ly-cite"><a class="ly-cite_link" href="https://cooen.jp/archives/510" <?php echo $targetBlank ?>>スライダーSwiper.js 基本の使い方解説</a></cite>
 		</section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[1]; ?></h2>
             <p>swiperのオプションを追加するjavascript。</p>
 <pre class="prettyprint">

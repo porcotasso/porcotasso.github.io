@@ -277,44 +277,45 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <div class="articleCnt_headerBox">
-	<h1>命名ルール</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			css		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/categorized-css.html" class="otherCnt_pre">CSSを役割ごとにカテゴライズする</a>
-			
-					<a href="/pages/basic-layout-style.html" class="otherCnt_nxt">resetcss以外のスタイルルール</a>
-					
-	</div>
-</div>              <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">命名ルール</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">略語</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-        <section class="ly-section"  id="1">
+                 <header>
+	<div class="articleCnt_headerBox">
+		<h1>命名ルール</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				css			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/categorized-css.html" class="otherCnt_pre">CSSを役割ごとにカテゴライズする</a>
+				
+							<a href="/pages/basic-layout-style.html" class="otherCnt_nxt">resetcss以外のスタイルルール</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">命名ルール</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>命名ルール</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>略語</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">クラス名からクラスの目的やスコープがわかるようにしておき、正確なコーディングに役立てる。</p>            
+                
+
+        <section class="ly-section tocContent">
             <h2>命名ルール</h2>
             <ul>
                 <li>ローワーキャメル</li>
@@ -326,7 +327,7 @@
                 <li>_ block element を繋ぐ</li>
             </ul>
         </section>
-        <section class="ly-section"  id="2">
+        <section class="ly-section tocContent">
             <h2>略語</h2>
             <ul>
                 <li>container　単体のブロックを囲う時に使う　主にレイアウト的な入れ物　レイアウトに関するスタイルをつける </li>

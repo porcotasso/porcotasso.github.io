@@ -1,27 +1,16 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("SVGファイルとは", "イラレからの書き出し設定", "書き出したコードについて", "SVG表示方法", "SVGスプライトとは", "SVGスプライトの使い方", "SVGスプライトファイル作成時のコツ"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+        <?php $navList = array("SVGファイルとは", "イラレからの書き出し設定", "書き出したコードについて", "SVG表示方法", "SVGスプライトとは", "SVGスプライトの使い方", "SVGスプライトファイル作成時のコツ"); ?>
+         <?php include("../_partial/pages-title.php"); ?>
+            
+                
+            
+        <section class="ly-section tocContent">
 			<h2><?php echo $navList[0]; ?></h2>
             <p>SVGとはScalable Vector Graphicsの略でXMLに基づくマークアップ言語でもある二次元ベクターイメージの画像形式です。</p>
         </section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
 			<h2><?php echo $navList[1]; ?></h2>
             <p>イラレから書き出す際の設定について</p>
             <h3>SVG プロファイル</h3>
@@ -43,7 +32,7 @@
             <h3>XMP を含める</h3>
             <p>イラレで作成・編集されたことを記録するさまざまな情報（メタデータ）が書き出されます。とても長いので、Webサイトで使う分には、チェックすることはありません。</p>
         </section>
-        <section class="ly-section" id="2">
+        <section class="ly-section tocContent">
 			<h2><?php echo $navList[2]; ?></h2>
             <h3>id="Layer_1"</h3>
             <p>イラレ編集時のレイヤー名です。一つのレイヤーの場合はsvgタグに記載され複数のレイヤーの場合はgタグに記載されます。</p>
@@ -52,7 +41,7 @@
             <p>さらに削除できる属性は削除します。<br>
                 <code>x="0"</code>と<code>y="0"</code>はSVGコンテナー<span>（アートボード）</span>のX/Y座標を表しますが、デフォルト値が<code>0</code>なので削除してよい。あと、<code>version="1.1"</code>と<code>xml:space="preserve"</code>は、“<q cite="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/xml:space">SVG 2以降非推奨</q>”とのことなので、今のうちから削除しても良いです。</p>
         </section>
-        <section class="ly-section" id="3">
+        <section class="ly-section tocContent">
 			<h2><?php echo $navList[3]; ?></h2>
             <p>SVGファイルをHTMLで表示する方法は以下の6種類。</p>
             <h3>img要素で設置</h3>
@@ -85,7 +74,7 @@ $str = file_get_contents('/aaa.png'); echo $str;
             <h3>use要素で設置する</h3>
             <p>SVGのuse要素を使ってSVGファイルの任意のid属性を持つ要素だけ読み込み</p>
         </section>
-        <section class="ly-section" id="4">
+        <section class="ly-section tocContent">
 			<h2><?php echo $navList[4]; ?></h2>
             <p>複数SVGオブジェクトの記述を１つのファイルの中にまとめる。任意の場所で任意のSVGオブジェクトを呼び出す。</p>
 <pre class="prettyprint">
@@ -101,7 +90,7 @@ $str = file_get_contents('/aaa.png'); echo $str;
 </svg>
 </pre>
         </section>
-        <section class="ly-section" id="5">
+        <section class="ly-section tocContent">
 			<h2><?php echo $navList[5]; ?></h2>
             <h3>1.SVG読み込み</h3>
             <p>bodyの下にsvgを読み込むコードを書く</p>
@@ -138,7 +127,7 @@ $str = file_get_contents('/aaa.png'); echo $str;
 }
 </pre>
         </section>
-        <section class="ly-section" id="6">
+        <section class="ly-section tocContent">
 			<h2><?php echo $navList[6]; ?></h2>
             <h3>必要なファイルは２つ</h3>
             <p>必要なファイルは２つあります。１つは、サイトに使用する.svgファイル。２つ目は画像内容を把握してpathを書き出す為のファイルでこちらはサイトには使わない。</p>

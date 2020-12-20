@@ -117,6 +117,7 @@
 			display: block;
 			transition: all 0s;
 			z-index: 2;
+			transition: all .4s;
 		}
 		.miniHeaderTtl{
 			opacity: 1;
@@ -125,13 +126,13 @@
 		&.is-open{
 			.ly-toc_lists{
 				transform: translateY(0);
-				transition: all .4s;
 			}
 		}
 	}
 
 }
 .ly-section{
+	margin-top: 48px;
 	margin-bottom: $space-unit*12;
 	padding-left: 5%;
 	padding-right: 5%;
@@ -184,7 +185,7 @@
 	position: fixed;
 	top: 64px;
 	right: 0;
-	width: 40px;
+	width: 64px;
 	height: 40px;
 	background: $bg-white;
 	border: 1px solid $border-gray;
@@ -192,17 +193,24 @@
 	border-radius: 4px 0 0 4px;
 	opacity: 0;
 	z-index: 20;
-	&:after{
-		content: "";
+	&_txt{
+		font-size: $font-size-12;
 		position: absolute;
-		display: inline-block;
-		width: 8px;
-		height: 8px;
-		right: 16px;
-		bottom: 14px;
-		border-bottom: 1px solid $font-gray;
-		border-right: 1px solid $font-gray;
-		transform: rotate(-135deg);
-		transition-duration: .3s;
+		top: 14px;
+		left: 12px;
+		color: $font-gray;
+		&:after{
+			content: "";
+			position: absolute;
+			display: inline-block;
+			width: 8px;
+			height: 8px;
+			right: 16px;
+			bottom: 14px;
+			border-bottom: 1px solid $font-gray;
+			border-right: 1px solid $font-gray;
+			transform: rotate(-135deg);
+			transition-duration: .3s;
+		}
 	}
 }

@@ -1,23 +1,12 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("文字の処理について","禁則処理とは"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+        <?php $navList = array("文字の処理について","禁則処理とは"); ?>
+         <?php include("../_partial/pages-title.php"); ?>
+            
+                
+            
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[0]; ?></h2>
             <p>判断する基準は次のようなものになります。</p>
             <ul>
@@ -47,7 +36,7 @@
             <h3>overflow-wrap:break-spaces;</h3>
             <p>改行は通常のように処理されるが、場合によりホワイトスペースの表示方法が異なる</p>
         </section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[1]; ?></h2>
             <p>読みやすい文章組みを行うのを目的に、主に日本語の文書作成・組版において、約物（句読点・疑問符・括弧類などの記号）を行頭・行末などに置かないといった禁止事項、またはそれを回避するためにする字詰めや文の長さの調整のこと。</p>
             <h3>行頭禁則文字</h3>

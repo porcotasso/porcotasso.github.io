@@ -1,27 +1,16 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("イベント伝搬とは", "イベントフェーズ", "発火のタイミングをコントロール", "イベント伝播の停止"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+		<?php $navList = array("イベント伝搬とは", "イベントフェーズ", "発火のタイミングをコントロール", "イベント伝播の停止"); ?>
+         <?php include("../_partial/pages-title.php"); ?>
+            
+                
+            
+        <section class="ly-section tocContent">
 			<h2><?php echo $navList[0]; ?></h2>
             <p>親子関係のようなネストされた二つの要素の両方の要素にクリックなど同じ「イベント」リスナーがついているときに子をクリックをすると親のイベントも一緒に発動します。イベント伝搬とはイベントハンドラーが呼ばれる順番についての概念、ルールです。</p>
 		</section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
 			<h2><?php echo $navList[1]; ?></h2>
 			<p>例えば下記のようにネストされた２つのイベントターゲット（イベントの対象の要素のこと）両方にイベントリスナーがついている場合、イベントの順番はどうなるでしょうか。</p>
 			<p>答えば、good evening　→　good morning　となります。</p>
@@ -67,7 +56,7 @@
 
 			
         </section>
-        <section class="ly-section" id="2">
+        <section class="ly-section tocContent">
 			<h2><?php echo $navList[2]; ?></h2>
             <p>addEventListener()の第3引数（true/false）で発火のタイミングをコントロールします。</p>
             <ul>
@@ -105,7 +94,7 @@ element.addEventListener('click', function,{
 			<h3>once</h3>
 			<p>イベントハンドラが一度だけの処理となり、一度しか読み込まないイベントを明示することでメモリの節約になり、毎回removeEventListenerを使うより楽。</p>
 		</section>
-        <section class="ly-section" id="3">
+        <section class="ly-section tocContent">
 			<h2><?php echo $navList[3]; ?></h2>
 			<p><code>stopPropagation();</code>でイベント伝播の停止をすることができます。</p>
 <pre class="prettyprint">

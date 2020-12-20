@@ -277,39 +277,42 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <div class="articleCnt_headerBox">
-	<h1>phpmemo</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			php		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/js-swiper.html" class="otherCnt_pre">カルーセルスライダー</a>
-			
-					<a href="/pages/php-filemtime.html" class="otherCnt_nxt">filemtime</a>
-					
-	</div>
-</div>              <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">phpで現在のURLを取得</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-		<section class="ly-section" id="1">
+                 <header>
+	<div class="articleCnt_headerBox">
+		<h1>phpmemo</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				php			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/js-swiper.html" class="otherCnt_pre">カルーセルスライダー</a>
+				
+							<a href="/pages/php-filemtime.html" class="otherCnt_nxt">filemtime</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">phpmemo</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>phpで現在のURLを取得</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">メモ</p>            
+                
+
+		<section class="ly-section tocContent">
             <h2>phpで現在のURLを取得</h2>
             <p><em>$_SERVER</em>というスーパーグローバル変数にアクセスすることで値を取得することができます。</p>
             <p>$_SERVERはPHPスクリプトが置かれているウェブサーバーのヘッダ情報などを提供する配列（配列変数）でサーバー変数情報はウェブサーバーによって生成され、種類や内容はサーバーに依存します。</p>

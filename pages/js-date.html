@@ -277,44 +277,45 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <div class="articleCnt_headerBox">
-	<h1>js-date</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			js		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/day-js.html" class="otherCnt_pre">day-js</a>
-			
-					<a href="/pages/js-marker.html" class="otherCnt_nxt">黄色いmarkerアニメーション</a>
-					
-	</div>
-</div>              <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">今日の日付を取得する</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">日時とif文</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-		<section class="ly-section" id="0">
+		         <header>
+	<div class="articleCnt_headerBox">
+		<h1>js-date</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				js			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/day-js.html" class="otherCnt_pre">day-js</a>
+				
+							<a href="/pages/js-marker.html" class="otherCnt_nxt">黄色いmarkerアニメーション</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">js-date</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>今日の日付を取得する</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>日時とif文</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">メモ</p>            
+                
+
+		<section class="ly-section tocContent">
 			<h2>今日の日付を取得する</h2>
 			<p>Dateクラスをnew演算子で指定して、新しいオブジェクトを生成した際に、そのインスタンスはデフォルトで今日がセットされた状態で初期化されます。そのまま変数に入れると、以後、今日の日を示すDateオブジェクトとして使用できます。下記コードのようにDateオブジェクトから、年、月、日、時、分、秒をそれぞれ単独でメソッドで取得できます。</p>
 
@@ -332,7 +333,7 @@
 	
 </pre>
 <p>Date#getMonth()だけは0～11の月数を返すため、これを1～12にするには、「+1」する必要があります。</p>
-		<section class="ly-section" id="1">
+		<section class="ly-section tocContent">
 			<h2>日時とif文</h2>
 			<p>日曜で12時前か、それ以外かの判定。</p>
 <pre class="prettyprint">

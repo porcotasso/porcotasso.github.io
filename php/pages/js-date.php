@@ -1,23 +1,12 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("今日の日付を取得する","日時とif文"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
-		<section class="ly-section" id="0">
+		<?php $navList = array("今日の日付を取得する","日時とif文"); ?>
+         <?php include("../_partial/pages-title.php"); ?>
+            
+                
+
+		<section class="ly-section tocContent">
 			<h2><?php echo $navList[0]; ?></h2>
 			<p>Dateクラスをnew演算子で指定して、新しいオブジェクトを生成した際に、そのインスタンスはデフォルトで今日がセットされた状態で初期化されます。そのまま変数に入れると、以後、今日の日を示すDateオブジェクトとして使用できます。下記コードのようにDateオブジェクトから、年、月、日、時、分、秒をそれぞれ単独でメソッドで取得できます。</p>
 
@@ -35,7 +24,7 @@
 	
 </pre>
 <p>Date#getMonth()だけは0～11の月数を返すため、これを1～12にするには、「+1」する必要があります。</p>
-		<section class="ly-section" id="1">
+		<section class="ly-section tocContent">
 			<h2><?php echo $navList[1]; ?></h2>
 			<p>日曜で12時前か、それ以外かの判定。</p>
 <pre class="prettyprint">

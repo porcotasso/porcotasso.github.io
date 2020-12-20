@@ -277,58 +277,55 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <div class="articleCnt_headerBox">
-	<h1>イベント伝搬とは</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			js		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/event-handler.html" class="otherCnt_pre">event-handler</a>
-			
-					<a href="/pages/scroll-junk.html" class="otherCnt_nxt">スクロールジャンクとは</a>
-					
-	</div>
-</div>              <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">イベント伝搬とは</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">イベントフェーズ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#2" class="">
-                            <div class="">発火のタイミングをコントロール</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#3" class="">
-                            <div class="">イベント伝播の停止</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+		         <header>
+	<div class="articleCnt_headerBox">
+		<h1>イベント伝搬とは</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				js			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/event-handler.html" class="otherCnt_pre">event-handler</a>
+				
+							<a href="/pages/scroll-junk.html" class="otherCnt_nxt">スクロールジャンクとは</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">イベント伝搬とは</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>イベント伝搬とは</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>イベントフェーズ</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>発火のタイミングをコントロール</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>イベント伝播の停止</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">イベントハンドラーが呼ばれる順番について</p>            
+                
+            
+        <section class="ly-section tocContent">
 			<h2>イベント伝搬とは</h2>
             <p>親子関係のようなネストされた二つの要素の両方の要素にクリックなど同じ「イベント」リスナーがついているときに子をクリックをすると親のイベントも一緒に発動します。イベント伝搬とはイベントハンドラーが呼ばれる順番についての概念、ルールです。</p>
 		</section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
 			<h2>イベントフェーズ</h2>
 			<p>例えば下記のようにネストされた２つのイベントターゲット（イベントの対象の要素のこと）両方にイベントリスナーがついている場合、イベントの順番はどうなるでしょうか。</p>
 			<p>答えば、good evening　→　good morning　となります。</p>
@@ -374,7 +371,7 @@
 
 			
         </section>
-        <section class="ly-section" id="2">
+        <section class="ly-section tocContent">
 			<h2>発火のタイミングをコントロール</h2>
             <p>addEventListener()の第3引数（true/false）で発火のタイミングをコントロールします。</p>
             <ul>
@@ -412,7 +409,7 @@ element.addEventListener('click', function,{
 			<h3>once</h3>
 			<p>イベントハンドラが一度だけの処理となり、一度しか読み込まないイベントを明示することでメモリの節約になり、毎回removeEventListenerを使うより楽。</p>
 		</section>
-        <section class="ly-section" id="3">
+        <section class="ly-section tocContent">
 			<h2>イベント伝播の停止</h2>
 			<p><code>stopPropagation();</code>でイベント伝播の停止をすることができます。</p>
 <pre class="prettyprint">

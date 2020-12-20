@@ -1,24 +1,13 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <?php include("../_partial/pages-title.php"); ?>        
+		<?php $navList = array("hamburgerのデザイン", "クリックしたらクラスをつける", "背景のコンテンツを固定する", "黒透過背景をつける"); ?>
+         <?php include("../_partial/pages-title.php"); ?>        
             
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("hamburgerのデザイン", "クリックしたらクラスをつける", "背景のコンテンツを固定する", "黒透過背景をつける"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+            
+                
+            
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[0]; ?></h2>
             <p>ハンバーガーのラインは3つのspanでラインをつくり、親タグで全体の位置とサイズを調整します。floatを使っているのはロゴを中心にしたかったからで、レイアウトによっては必要ありません。</p>
 <pre class="prettyprint">
@@ -52,7 +41,7 @@
 }
 </pre>
 		</section>
-		<section class="ly-section" id="1">
+		<section class="ly-section tocContent">
             <h2><?php echo $navList[1]; ?></h2>
 			<p>ハンバーガー（js-hamburger）をクリックしたらメニュー（js-headerNav）にactiveクラスをつけます。今回は大枠にクラスをつけることで下層のいろんな部分にスタイルを追加します。ハンバーガーを×印に変更し、メニューを表示しロゴや背景を変更します。</p>
 <pre class="prettyprint">
@@ -106,7 +95,7 @@ hamburger.onclick = function() {
 	}
 </pre>
 		</section>
-		<section class="ly-section" id="2">
+		<section class="ly-section tocContent">
             <h2><?php echo $navList[2]; ?></h2>
 			<p>表示したメニューはスクロールできるようにしておきますが、なにもしないと背景のコンテンツもスクロールできてしまうので何かしら対応が必要。この時点では深く考えてませんでしたが、すでにデスマーチが流れていた模様。♪パーパラララララ♪</p>
 			<h3>試したこと1:overflow:hiddenを使う</h3>
@@ -204,7 +193,7 @@ function handleTouchMove(e) {
 			<p>今後の対応としては、psition:fixed;を使うか、背景を見せないか、overscroll-behavior: containがiOSで使えるようになるのを待つか、スクロール時にヘッダーメニューをそもそも見せないか、どれか。</p>
 		</section>
 
-		<section class="ly-section" id="3">
+		<section class="ly-section tocContent">
             <h2><?php echo $navList[3]; ?></h2>
 			<p>黒透過背景用のタグを追加し、トグルで表示非表示させます。黒背景をクリックした際に、メニューを閉じるスクリプトも追加。</p>
 <pre class="prettyprint">

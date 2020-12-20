@@ -277,46 +277,47 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-			<div class="articleCnt_headerBox">
-	<h1>git-fetch</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			environment		</li>
-				<li class="tagLists_list">
-			git		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/gulpfile.html" class="otherCnt_pre">gulpfile</a>
-			
-					<a href="/pages/browser-rendering-engine.html" class="otherCnt_nxt">browser-rendering-engine</a>
-					
-	</div>
-</div>              <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">リモートブランチのコピー</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">できない場合の原因</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+                <header>
+	<div class="articleCnt_headerBox">
+		<h1>git-fetch</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				environment			</li>
+						<li class="tagLists_list">
+				git			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/gulpfile.html" class="otherCnt_pre">gulpfile</a>
+				
+							<a href="/pages/browser-rendering-engine.html" class="otherCnt_nxt">browser-rendering-engine</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">git-fetch</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>リモートブランチのコピー</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>できない場合の原因</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">リモートブランチをローカルにコピーしたいけどできない時のメモ。</p>            
+                
+            
+        <section class="ly-section tocContent">
             <h2>リモートブランチのコピー</h2>
 
 			<h3>html、php</h3>
@@ -325,7 +326,7 @@
 git checkout -b branch-name origin/branch-name	
 </pre>
 		</section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
             <h2>できない場合の原因</h2>
             <p>上の書き方でエラーが出ることがある。何が問題かとういうと、ローカルにリモートにどんなブランチがあるかの情報が古くて、データが欲しいブランチをローカルが認識できてない。それを解決するのが</p>
 <pre class="prettyprint">

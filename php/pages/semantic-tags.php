@@ -1,31 +1,18 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <?php include("../_partial/pages-title.php"); ?>
-            
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("セマンティックHTMLが重要な理由", "主なタグの役割"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="1">
+        <?php $navList = array("セマンティックHTMLが重要な理由", "主なタグの役割"); ?>
+        <?php include("../_partial/pages-title.php"); ?>
+
+
+        <section class="ly-section tocContent">
         <h2>セマンティックHTMLが重要な理由</h2>
             <p>セマンティックHTMLにする理由として３つあげられます。</p>
             <p>一つ目は検索エンジンの最適化です。GoogleがボットでHTMLコンテンツをスキャンする際に、検索エンジンが理解しやすいように作っておくことでSEOにおいて優位になります。GoogleもセマンティックHTMLを推奨しています。</p>
             <p>二つ目はアクセシビリティの改善です。例えば、視覚障害を持ったユーザは、ウェブサイトの文章を読み上げるスクリーンリーダーなどのツールを使っています。その際に見出しや段落など適切にタグ付けすると、スクリーンリーダーが解析しやすくなり、より分かりやすい形態でコンテンツを提供できるようになります。</p>
             <p>三つ目はコードをわかりやすくする目的です。きちんと構造化されたHTMLを書くことで人間が読んでも分かりやすくメンテナンスが楽になります。</p>
         </section>
-        <section class="ly-section" id="2">
+        <section class="ly-section tocContent">
             <h2>主なタグの役割</h2>
             <h3>header</h3>
             <p>ページ全体のヘッダーや、セクション内のヘッダーを表します。イントロダクション、ナビゲーション等のグループを表す。</p>

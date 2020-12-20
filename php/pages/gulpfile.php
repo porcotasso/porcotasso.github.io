@@ -2,22 +2,11 @@
 <?php $title = $gulpfile["title"] ?>
 <main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("gulp-htmlhint", "gulp-php2html"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
+        <?php $navList = array("gulp-htmlhint", "gulp-php2html"); ?>
+         <?php include("../_partial/pages-title.php"); ?>
+            
+         
+
         <section class="ly-section">
             <h2>gulp-htmlhint</h2>
             <p>gulp-htmlhintでHTMLのバリデーションを行う</p>

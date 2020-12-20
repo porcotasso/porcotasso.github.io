@@ -277,46 +277,47 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <div class="articleCnt_headerBox">
-	<h1>スクロールでトップに戻るボタン</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			js		</li>
-				<li class="tagLists_list">
-			parts		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/js-nodelist.html" class="otherCnt_pre">nodelist</a>
-			
-					<a href="/pages/js-swiper.html" class="otherCnt_nxt">カルーセルスライダー</a>
-					
-	</div>
-</div>              <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">コード</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">シンプルなパターン</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+               <header>
+	<div class="articleCnt_headerBox">
+		<h1>スクロールでトップに戻るボタン</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				js			</li>
+						<li class="tagLists_list">
+				parts			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/js-nodelist.html" class="otherCnt_pre">nodelist</a>
+				
+							<a href="/pages/js-swiper.html" class="otherCnt_nxt">カルーセルスライダー</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">スクロールでトップに戻るボタン</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>コード</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>シンプルなパターン</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">スクロールでトップに戻るボタンを右下に追加します。最初は表示せず、下にスクロールすると徐々に表示するようにします。</p>            
+                
+            
+        <section class="ly-section tocContent">
             <h2>コード</h2>
             <h3>html</h3>
             <p>idとclassのあるaタグを準備します。</p>
@@ -394,7 +395,7 @@ let pageOffsetY = window.pageYOffset || document.documentElement.btnScrollTop;
           <p>ほぼこちらを参考にさせていただいてます。もっとシンプルなコードも書かれてますがそちらはsafariで動かなかったので複雑な方を使用。（2020.09.18）。</p>
           <cite class="ly-cite"><a class="ly-cite_link" href="https://flex-box.net/js-scrolltop/#co-index-4" target="_blank" rel="noopener noreferrer">Javascriptのみでトップへ戻るボタンを実装</a></cite>
 		</section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
             <h2>シンプルなパターン</h2>
             <p>aタグのhref属性を#topにするだけでトップに戻ります。ただスクロールさせるjsを追加する場合は邪魔になるので削除します。</p>
 <pre class="prettyprint">

@@ -277,44 +277,45 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <div class="articleCnt_headerBox">
-	<h1>break-word</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			parts		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/button.html" class="otherCnt_pre">ボタン作成</a>
-			
-					<a href="/pages/element-em-strong-mark-b-difference.html" class="otherCnt_nxt">em,strong,mark,b,dfn,iの違い</a>
-					
-	</div>
-</div>              <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">文字の処理について</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">禁則処理とは</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+                 <header>
+	<div class="articleCnt_headerBox">
+		<h1>break-word</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				parts			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/button.html" class="otherCnt_pre">ボタン作成</a>
+				
+							<a href="/pages/element-em-strong-mark-b-difference.html" class="otherCnt_nxt">em,strong,mark,b,dfn,iの違い</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">break-word</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>文字の処理について</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>禁則処理とは</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">break-word</p>            
+                
+            
+        <section class="ly-section tocContent">
             <h2>文字の処理について</h2>
             <p>判断する基準は次のようなものになります。</p>
             <ul>
@@ -344,7 +345,7 @@
             <h3>overflow-wrap:break-spaces;</h3>
             <p>改行は通常のように処理されるが、場合によりホワイトスペースの表示方法が異なる</p>
         </section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
             <h2>禁則処理とは</h2>
             <p>読みやすい文章組みを行うのを目的に、主に日本語の文書作成・組版において、約物（句読点・疑問符・括弧類などの記号）を行頭・行末などに置かないといった禁止事項、またはそれを回避するためにする字詰めや文の長さの調整のこと。</p>
             <h3>行頭禁則文字</h3>

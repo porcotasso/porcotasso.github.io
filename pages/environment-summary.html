@@ -277,64 +277,57 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-			<div class="articleCnt_headerBox">
-	<h1>制作環境設定全般</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			environment		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/php-filemtime.html" class="otherCnt_pre">filemtime</a>
-			
-					<a href="/pages/gulpfile.html" class="otherCnt_nxt">gulpfile</a>
-					
-	</div>
-</div>              <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">何をしたいかを明確にする</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">管理と構成と流れ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#2" class="">
-                            <div class="">homebrewをインストール</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#3" class="">
-                            <div class="">homebrewでgitをインストール</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#4" class="">
-                            <div class="">anyenvをインストール</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#5" class="">
-                            <div class="">nodenvをインストール</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+		        <header>
+	<div class="articleCnt_headerBox">
+		<h1>制作環境設定全般</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				environment			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/php-filemtime.html" class="otherCnt_pre">filemtime</a>
+				
+							<a href="/pages/gulpfile.html" class="otherCnt_nxt">gulpfile</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">制作環境設定全般</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>何をしたいかを明確にする</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>管理と構成と流れ</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>homebrewをインストール</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>homebrewでgitをインストール</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>anyenvをインストール</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>nodenvをインストール</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">例えば一から環境を整える場合、何からすればいいかというメモ。</p>            
+                
+            
+        <section class="ly-section tocContent">
             <h2>何をしたいかを明確にする</h2>
 			<h3>sass→css、php→htmlの自動コンパイル</h3>
 			<p>スタイルをscssで書きたい。phpでコードを簡略したい。それとコンパイルも自動でできるようにしたい。</p>
@@ -347,7 +340,7 @@
 			<h3>コマンド打ちを楽したい</h3>
 			<p>fishを入れる。</p>
 		</section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
             <h2>管理と構成と流れ</h2>
 			<p>何かを使おうとした時、方法が色々あってあとでどうインストールしたか忘れてしまう。基本的には、homebrewとnpmで大まかに管理して、Node.jsはanyenvを利用。</p>
 			<h3>homebrewでインストールするもの</h3>
@@ -380,13 +373,13 @@
 				<li>fishをインストール</li>
 			</ol>
 		</section>
-        <section class="ly-section" id="2">
+        <section class="ly-section tocContent">
             <h2>homebrewをインストール</h2>
 			<p>homebrewはMac OSにおいてプログラミング上必要となるパッケージをインストールしたりアンインストールしたりする「パッケージ管理システム」です。</p>
 			<p><a href="https://brew.sh/index_ja">ここから</a>コードをコピペする。</p>
 			<p>※$curl というのはURLにアクセスしてデータを取得するコマンド。</p>
 		</section>
-		<section class="ly-section" id="3">
+		<section class="ly-section tocContent">
             <h2>homebrewでgitをインストール</h2>
 			<p>gitもhomebrewで管理します。</p>
 <pre class="prettyprint">
@@ -398,7 +391,7 @@ which git
 </pre>
 <p>で場所がわかる。現在、/usr/local/bin/gitが使われるがこれはこちらのエイリアス。ー＞/usr/local/Cellar/git/2.26.2/bin/git実際のデータはこちらにある。</p>
 		</section>
-        <section class="ly-section" id="4">
+        <section class="ly-section tocContent">
 		<h2>anyenvをインストール</h2>
 		<h3>anyenvとは</h3>
 		<p>ソフトウェア、アプリケーションの開発を行っていると、同じプログラミング言語でもバージョンの違うものを使いたいということがあります。anyenvは様々なプログラミング言語のバージョンを管理することができるツールです。</p>
@@ -413,7 +406,7 @@ set -U fish-user-paths ~/.anyenv/bin $fish-user-paths
 anyenv install --init
 </pre>
         </section>
-		<section class="ly-section" id="5">
+		<section class="ly-section tocContent">
 		<h2>nodenvをインストール</h2>
 		<h3>nodenvとは</h3>
 		<p>Node.jsは開発環境によって異なるバージョンを求められることがあり、Node.jsを複数バージョン保持しておき、それをコマンドひとつで切り替えられるのがanyenvの中のnodenvというソフトウェアです。</p>

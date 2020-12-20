@@ -1,23 +1,12 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-			<?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("レイアウトの基本の４つのルール", "反転"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+		<?php $navList = array("レイアウトの基本の４つのルール", "反転"); ?>
+        <?php include("../_partial/pages-title.php"); ?>
+            
+                
+            
+        <section class="ly-section tocContent">
 			<h2><?php echo $navList[0]; ?></h2>
 			<h3>Proximity（近接）</h3>
             <p>位置が近いもの同時はなんらか関係性があると認識する。</p>
@@ -28,7 +17,7 @@
 			<h3>Repitition（反復）</h3>
             <p>一定のルールに沿って繰り返されたものは、同じことについて表現していると感じる</p>
         </section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
 			<h2><?php echo $navList[1]; ?></h2>
 			<h3>基本的な概念</h3>
 			<p>背景が暗く文字が明るいデザインは</p>

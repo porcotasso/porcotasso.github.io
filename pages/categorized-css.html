@@ -277,74 +277,63 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <div class="articleCnt_headerBox">
-	<h1>CSSを役割ごとにカテゴライズする</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			css		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/reset-css.html" class="otherCnt_pre">リセットCSSについて</a>
-			
-					<a href="/pages/naming-rule.html" class="otherCnt_nxt">命名ルール</a>
-					
-	</div>
-</div>              <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">ベースグループ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">レイアウトグループ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#2" class="">
-                            <div class="">ブロックモジュールグループ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#3" class="">
-                            <div class="">エレメントモジュールグループ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#4" class="">
-                            <div class="">エレメントモジュールモディファイヤーグループ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#5" class="">
-                            <div class="">ヘルパーグループ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#6" class="">
-                            <div class="">ユニークグループ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#7" class="">
-                            <div class="">プログラムグループ</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+                 <header>
+	<div class="articleCnt_headerBox">
+		<h1>CSSを役割ごとにカテゴライズする</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				css			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/reset-css.html" class="otherCnt_pre">リセットCSSについて</a>
+				
+							<a href="/pages/naming-rule.html" class="otherCnt_nxt">命名ルール</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">CSSを役割ごとにカテゴライズする</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>ベースグループ</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>レイアウトグループ</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>ブロックモジュールグループ</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>エレメントモジュールグループ</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>エレメントモジュールモディファイヤーグループ</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>ヘルパーグループ</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>ユニークグループ</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>プログラムグループ</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">全てのCSSを目的ごとに分けることで、使い方を明確にするカテゴライズする。</p>            
+                
+            
+        <section class="ly-section tocContent">
             <h2>ベースグループ</h2>
             <p>CSS設計の大元となるCSSのグループ。各ブラウザ上にデフォルトで指定されているuser agent stylesheetを初期化するリセットCSS、または初期化ではなくブラウザ、デバイス間の不一致を修正するノーマライズCSSを始めに適用し、そこからプロジェクトの標準となるスタイリングをしていきます。</p>
             <h3>ノーマライズCSS</h3>
@@ -355,30 +344,30 @@
             <p>適度にuser agent stylesheetを無効化、正常化したCSS</p>
             <p>このサイトでは、bootstrap-reboot.css をコピーして、サイト用にカスタマイズしています。</p>
         </section>
-        <section class="ly-section" id="1">
+        <section class="ly-section tocContent">
             <h2>レイアウトグループ</h2>
             <p>位置調整を担当するCSS</p>
             <p>position, z-index, top/right/left/bottom, float, width, marginなどです。</p>
         </section>
-        <section class="ly-section" id="2">
+        <section class="ly-section tocContent">
             <h2>ブロックモジュールグループ</h2>
             <p>いろんな場所で使えて子要素を持つCSS。基本的にはレイアウトグループに属するスタイルを持たない。bl-</p>
         </section>
-        <section class="ly-section" id="3">
+        <section class="ly-section tocContent">
             <h2>エレメントモジュールグループ</h2>
             <p>最小単位のモジュールです。子要素を持ちません。どこにでも使える、ボタン、ラベル el-</p>
         </section>
-        <section class="ly-section" id="4">
+        <section class="ly-section tocContent">
             <h2>エレメントモジュールモディファイヤーグループ</h2>
             <p>エレメントモジュールグループを少しだけ変更したい際に使います。エレメントモジュールグループと同時に追加します。--name</p>
         </section>
-        <section class="ly-section" id="5">
+        <section class="ly-section tocContent">
             <h2>ヘルパーグループ</h2>
         </section>
-        <section class="ly-section" id="6">
+        <section class="ly-section tocContent">
             <h2>ユニークグループ</h2>
         </section>
-        <section class="ly-section" id="7">
+        <section class="ly-section tocContent">
             <h2>プログラムグループ</h2>
             <p>js-</p>
         </section>

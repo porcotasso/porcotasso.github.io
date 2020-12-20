@@ -1,23 +1,12 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("命名ルール", "略語"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
-        <section class="ly-section"  id="1">
+        <?php $navList = array("命名ルール", "略語"); ?>
+         <?php include("../_partial/pages-title.php"); ?>
+            
+                
+
+        <section class="ly-section tocContent">
             <h2>命名ルール</h2>
             <ul>
                 <li>ローワーキャメル</li>
@@ -29,7 +18,7 @@
                 <li>_ block element を繋ぐ</li>
             </ul>
         </section>
-        <section class="ly-section"  id="2">
+        <section class="ly-section tocContent">
             <h2>略語</h2>
             <ul>
                 <li>container　単体のブロックを囲う時に使う　主にレイアウト的な入れ物　レイアウトに関するスタイルをつける </li>

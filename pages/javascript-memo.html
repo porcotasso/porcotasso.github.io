@@ -277,44 +277,45 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <div class="articleCnt_headerBox">
-	<h1>javascriptmemo</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			js		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/header-smaller.html" class="otherCnt_pre">header-smaller</a>
-			
-					<a href="/pages/event-handler.html" class="otherCnt_nxt">event-handler</a>
-					
-	</div>
-</div>              <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">アコーディオン</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">脱Jquery</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-		<section class="ly-section" id="1">
+                 <header>
+	<div class="articleCnt_headerBox">
+		<h1>javascriptmemo</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				js			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/header-smaller.html" class="otherCnt_pre">header-smaller</a>
+				
+							<a href="/pages/event-handler.html" class="otherCnt_nxt">event-handler</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">javascriptmemo</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>アコーディオン</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>脱Jquery</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">メモ</p>            
+                
+
+		<section class="ly-section tocContent">
 			<h2>アコーディオン</h2>
             <cite class="ly-cite"><a class="ly-cite_link" href="https://flex-box.net/js-accordion/" target="_blank" rel="noopener noreferrer">ブログの設置 アコーディオン</a></cite>
 		</section>
@@ -369,7 +370,7 @@ document.getElementById('element').classList.contains('active');
 
            
 		</section>
-        <section class="ly-section" id="3">
+        <section class="ly-section tocContent">
             <h2>「Magnific Popup」</h2>
             <p>jQueryプラグイン,レスポンシブ対応モーダル・ポップアップ</p>
             <p>Magnific Popupは、インライン、ギャラリー、Youtube、GoogleMap、フォーム、Ajax、アニメーション、など様々なタイプのポップアップを簡単に実装することができます。さらにRetinaにも対応。</p>

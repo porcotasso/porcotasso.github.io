@@ -277,54 +277,51 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <div class="articleCnt_headerBox">
-	<h1>touch-event</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			js		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/scroll-junk.html" class="otherCnt_pre">スクロールジャンクとは</a>
-			
-					<a href="/pages/day-js.html" class="otherCnt_nxt">day-js</a>
-					
-	</div>
-</div>              <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">touchEventとは</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">touchEventの種類</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#2" class="">
-                            <div class="">TouchListの種類</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#3" class="">
-                            <div class="">Touchオブジェクト</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+                 <header>
+	<div class="articleCnt_headerBox">
+		<h1>touch-event</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				js			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/scroll-junk.html" class="otherCnt_pre">スクロールジャンクとは</a>
+				
+							<a href="/pages/day-js.html" class="otherCnt_nxt">day-js</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">touch-event</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>touchEventとは</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>touchEventの種類</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>TouchListの種類</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>Touchオブジェクト</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">touch-event</p>            
+                
+            
+        <section class="ly-section tocContent">
             <h2>touchEventとは</h2>
 			<p>iOSやAndroidなどのモバイルデバイスに実装されている、JavaScriptで扱えるイベントのことを指します。タッチイベントを使えば、ユーザーがスクリーンに触れたときの動作を取得することができます。</p>
             <p>4つのtouchEventにはそれぞれ３つのTouchListがあり、各TouchListには触った指ごとにTouchオブジェクトの情報（idや座標値）が格納されます。</p>
@@ -341,7 +338,7 @@
                 <dd>画面に触れたときに触った指ごとに発生する。idや座標のデータを含むオブジェクト</dd>
             </dl>
 		</section>
-		<section class="ly-section" id="1">
+		<section class="ly-section tocContent">
             <h2>touchEventの種類</h2>
 			<p>ユーザーが、画面をタッチで操作すると、操作の内容によって、以下のようなイベントが発生します。</p>
 			<table>
@@ -371,7 +368,7 @@ touchArea1.addEventListener("touchmove", () => {
 })
 </pre>
         </section>
-		<section class="ly-section" id="2">
+		<section class="ly-section tocContent">
             <h2>TouchListの種類</h2>
             <p>TouchEventは３種のTouchListをもっています。</p>
             <table>
@@ -382,7 +379,7 @@ touchArea1.addEventListener("touchmove", () => {
                 </tbody>
             </table>
         </section>
-        <section class="ly-section" id="3">
+        <section class="ly-section tocContent">
             <h2>Touchオブジェクト</h2>
             <p>各タッチの情報は、Touchオブジェクトから取得することができます。Touchオブジェクトは触った指ごとに発生し、もし４本の指でタッチしたら４つのTouchオブジェクトが発生します。Touchオブジェクトから取得できる主な情報は下表のとおり。</p>
             <table>

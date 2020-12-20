@@ -1,23 +1,12 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("phpで現在のURLを取得"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
-		<section class="ly-section" id="1">
+        <?php $navList = array("phpで現在のURLを取得"); ?>
+         <?php include("../_partial/pages-title.php"); ?>
+            
+                
+
+		<section class="ly-section tocContent">
             <h2>phpで現在のURLを取得</h2>
             <p><em>$_SERVER</em>というスーパーグローバル変数にアクセスすることで値を取得することができます。</p>
             <p>$_SERVERはPHPスクリプトが置かれているウェブサーバーのヘッダ情報などを提供する配列（配列変数）でサーバー変数情報はウェブサーバーによって生成され、種類や内容はサーバーに依存します。</p>

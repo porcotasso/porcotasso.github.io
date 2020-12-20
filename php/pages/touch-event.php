@@ -1,23 +1,12 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("touchEventとは","touchEventの種類","TouchListの種類","Touchオブジェクト"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+        <?php $navList = array("touchEventとは","touchEventの種類","TouchListの種類","Touchオブジェクト"); ?>
+         <?php include("../_partial/pages-title.php"); ?>
+            
+                
+            
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[0]; ?></h2>
 			<p>iOSやAndroidなどのモバイルデバイスに実装されている、JavaScriptで扱えるイベントのことを指します。タッチイベントを使えば、ユーザーがスクリーンに触れたときの動作を取得することができます。</p>
             <p>4つのtouchEventにはそれぞれ３つのTouchListがあり、各TouchListには触った指ごとにTouchオブジェクトの情報（idや座標値）が格納されます。</p>
@@ -34,7 +23,7 @@
                 <dd>画面に触れたときに触った指ごとに発生する。idや座標のデータを含むオブジェクト</dd>
             </dl>
 		</section>
-		<section class="ly-section" id="1">
+		<section class="ly-section tocContent">
             <h2><?php echo $navList[1]; ?></h2>
 			<p>ユーザーが、画面をタッチで操作すると、操作の内容によって、以下のようなイベントが発生します。</p>
 			<table>
@@ -64,7 +53,7 @@ touchArea1.addEventListener("touchmove", () => {
 })
 </pre>
         </section>
-		<section class="ly-section" id="2">
+		<section class="ly-section tocContent">
             <h2><?php echo $navList[2]; ?></h2>
             <p>TouchEventは３種のTouchListをもっています。</p>
             <table>
@@ -75,7 +64,7 @@ touchArea1.addEventListener("touchmove", () => {
                 </tbody>
             </table>
         </section>
-        <section class="ly-section" id="3">
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[3]; ?></h2>
             <p>各タッチの情報は、Touchオブジェクトから取得することができます。Touchオブジェクトは触った指ごとに発生し、もし４本の指でタッチしたら４つのTouchオブジェクトが発生します。Touchオブジェクトから取得できる主な情報は下表のとおり。</p>
             <table>

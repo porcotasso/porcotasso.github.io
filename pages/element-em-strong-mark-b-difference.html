@@ -277,84 +277,77 @@
         </nav>
     </header>
 
-    <a id="js-scrollTop" class="el-scrollTop"></a>
+    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <div class="articleCnt_headerBox">
-	<h1>em,strong,mark,b,dfn,iの違い</h1>
-	<ul class="tagLists">
-				<li class="tagLists_list">
-			parts		</li>
-		   
-	</ul>
-			<p class="el-updateDate">2020.12.10 更新</p>
-		<div class="otherCnt">
-			
-					<a href="/pages/break-word.html" class="otherCnt_pre">break-word</a>
-			
-					<a href="/pages/favicon.html" class="otherCnt_nxt">favicon</a>
-					
-	</div>
-</div>              <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                                <ol>
-                                        <li>
-                        <a href="#0" class="">
-                            <div class="">emタグ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#1" class="">
-                            <div class="">strongタグ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#2" class="">
-                            <div class="">markタグ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#3" class="">
-                            <div class="">bタグ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#4" class="">
-                            <div class="">dfnタグ</div>
-                        </a>
-                    </li>
-                                        <li>
-                        <a href="#5" class="">
-                            <div class="">iタグ</div>
-                        </a>
-                    </li>
-                                    </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="1">
+                 <header>
+	<div class="articleCnt_headerBox">
+		<h1>em,strong,mark,b,dfn,iの違い</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				parts			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.20 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/break-word.html" class="otherCnt_pre">break-word</a>
+				
+							<a href="/pages/favicon.html" class="otherCnt_nxt">favicon</a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="ly-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">em,strong,mark,b,dfn,iの違い</p>
+	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="ly-toc_lists">
+			<li class="tocList js-tocList">
+			<div>emタグ</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>strongタグ</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>markタグ</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>bタグ</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>dfnタグ</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>iタグ</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">文字を目立たせるタグの違いが曖昧になりがちなので明確に使い分けたい。基本的にはセマンティックマークアップとして利用するのが目的で装飾を前提に使用しないこと。</p>            
+                
+
+        <section class="ly-section tocContent">
             <h2>emタグ</h2>
             <p>文脈的に強調する部分によって文の意味が変更される場合に使います。</p>
         </section>
-        <section class="ly-section" id="2">
+        <section class="ly-section tocContent">
             <h2>strongタグ</h2>
             <p>strongタグは、<span class="el-marker">強い重要性、深刻性、緊急性</span>を表し大事な部分を強調するときに使います。前述のemタグは、文の意味が変更されるのに対して、strongタグは、文の意味が変更されません。emタグ、bタグより強い重要性を示します。HTML4.01からHTML5に移行で廃止されると言及もありましたが、そのまま使われています。特定のキーワードだけstrongタグを乱用するといった不適切な使用を繰り返せば、ペナルティのリスクを高める原因にもなりかねません。</p>
         </section>
-        <section class="ly-section" id="3">
+        <section class="ly-section tocContent">
             <h2>markタグ</h2>
             <p><span class="el-marker">重要性とは関係なく注目</span>させたい場合に使用します。検索結果をハイライトしたいときにも使えます。</p>
         </section>
-        <section class="ly-section" id="4">
+        <section class="ly-section tocContent">
             <h2>bタグ</h2>
             <p>目立たせたいけど、emタグ、strongタグ、markタグ、iタグではないと思ったときに<span class="el-marker">最後の手段</span>で使用します。見栄えを定義するタグとして、HTML4.01 では「非推奨(deprecated)」とされましたが、HTML5 では「特に付加的な重要性を与えるわけでも、異なるトーンや雰囲気を表現するわけでもないが、実利的な理由から注意を引きつける箇所」を示すタグとして、非推奨が解除されており、b は「太字」と理解するのは間違いのようです。単に太字にしたいのならfont-weightを使用すべきだそう。</p>
         </section>
-        <section class="ly-section" id="5">
+        <section class="ly-section tocContent">
             <h2>dfnタグ</h2>
             <p>definitionの略で、<span class="el-marker">用語の意味を定義</span>する際に使用します。定義用語が何度も出る場合には最初の用語だけdfnタグで囲むのが一般的ですがあまり使用されていません。</p>
         </section>
-        <section class="ly-section" id="6">
+        <section class="ly-section tocContent">
             <h2>iタグ</h2>
             <p>iタグを使用すると文字が斜めに表現されますが、<span class="el-marker">イタリック体、斜体、標準フォントを強引に傾斜</span>の３つパターンがあります。指定フォントにイタリック体があればイタリック体、ない場合は斜体、イタリック体も斜体もなければ標準フォントを斜めにして表示されます。日本語フォントの多くは標準フォントを斜めに傾けた表示になります。iタグ使用は非推奨ではないですができるだけスタイルシート<code>{font-style:italic;}</code>で指定しましょう。
             </p>

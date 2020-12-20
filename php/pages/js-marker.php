@@ -1,23 +1,12 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main class="ly-main"> 
     <article class="articleCnt">
-        <header>
-            <?php include("../_partial/pages-title.php"); ?>
-            <nav class="ly-toc">
-                <div class="ly-toc_ttl">目次</div>
-                <?php $navList = array("黄色いマーカー", "関連コード:サイズと位置を取得"); ?>
-                <ol>
-                    <?php for($i = 0; $i < count($navList); $i++){ ?>
-                    <li>
-                        <a href="#<?php echo $i; ?>" class="">
-                            <div class=""><?php echo $navList[$i]; ?></div>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ol>
-            </nav>
-        </header>
-        <section class="ly-section" id="0">
+      <?php $navList = array("黄色いマーカー", "関連コード:サイズと位置を取得"); ?>
+         <?php include("../_partial/pages-title.php"); ?>
+            
+                
+            
+        <section class="ly-section tocContent">
             <h2><?php echo $navList[0]; ?></h2>
 			<p>スクロールしたタイミングで<span class="el-marker">黄色いマーカー</span>を引くjavascriptです。</p>
  
@@ -57,7 +46,7 @@ window.addEventListener('load', saFunc);
 window.addEventListener('scroll', saFunc);
 </pre>
 </sction>
-<section class="ly-section" id="1">
+<section class="ly-section tocContent">
             <h2><?php echo $navList[1]; ?></h2>
 			<p>モニター、ブラウザ、要素などのサイズと位置を取得。</p>
 
