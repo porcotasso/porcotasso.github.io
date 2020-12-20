@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded',() => {
         if (current_pos > start_pos) {
           //down
           if (opacity > 0 ) {
-            opacity -= 0.5;
+            opacity -= 0.2;
             display = 'block';
           } else {
             opacity = 0;
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded',() => {
           //up
           if (scrollTop < 600) {
             if (opacity > 0 ) {
-              opacity -= 0.5;
+              opacity -= 0.2;
               display = 'block';
             } else {
               opacity = 0;
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded',() => {
             }
           } else {
             if (opacity < 1){
-              opacity += 0.2;
+              opacity += 0.1;
               display = 'block';
             } else {
               opacity = 1;
