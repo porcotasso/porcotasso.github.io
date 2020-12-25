@@ -1,5 +1,5 @@
 <?php include("../_partial/wrapper-head.php"); ?>
-<main class="ly-main"> 
+<main> 
     <article class="articleCnt">
 		<?php $navList = array("hamburgerのデザイン", "クリックしたらクラスをつける", "背景のコンテンツを固定する", "黒透過背景をつける"); ?>
          <?php include("../_partial/pages-title.php"); ?>        

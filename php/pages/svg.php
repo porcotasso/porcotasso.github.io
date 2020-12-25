@@ -1,5 +1,5 @@
 <?php include("../_partial/wrapper-head.php"); ?>
-<main class="ly-main"> 
+<main> 
     <article class="articleCnt">
         <?php $navList = array("SVGファイルとは", "イラレからの書き出し設定", "書き出したコードについて", "SVG表示方法", "SVGスプライトとは", "SVGスプライトの使い方", "SVGスプライトファイル作成時のコツ"); ?>
          <?php include("../_partial/pages-title.php"); ?>

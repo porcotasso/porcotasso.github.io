@@ -1,5 +1,5 @@
 <?php include("../_partial/wrapper-head.php"); ?>
-<main class="ly-main"> 
+<main> 
     <article class="articleCnt">
       <?php $navList = array("コンテンツ・モデルとは", "７つのカテゴリー", "７つのカテゴリーに分類されない３つのルール"); ?>
       <?php include("../_partial/pages-title.php"); ?>
@@ -11,7 +11,11 @@
           <p>コンテンツ・モデルが”Nothing”とされているものは、そのタグの中に何もコンテンツを入れられないというルールです。</p>
           <p>例：divタグはフロー・コンテンツしか内包できない。</p>
           <p>例：spanタグはフレージング・コンテンツしか内包できない。</p>
+          <h3>よくある間違い</h3>
+          <p>例：pタグは子要素にフレージングコンテンツしか含むことができませんので、divタグなどフレージングコンテンツではないものを入れてはいけない。</p>
+          <p>例：aタグの子孫要素にbuttonタグなどインタラクティブコンテンツを含むことはできない。</p>
           <cite class="ly-cite"><a class="ly-cite_link" href="https://yoshikawaweb.com/element/" <?php echo $targetBlank ?>>HTML5 入れ子チートシート</a></cite>
+          <cite class="ly-cite"><a class="ly-cite_link" href="https://s8a.jp/10-minutes-html-part-2" <?php echo $targetBlank ?>>10分でわかるHTMLの最小限（後編）</a></cite>
       </section>
       <section class="ly-section tocContent">
           <h2><?php echo $navList[1]; ?></h2>
@@ -31,7 +35,7 @@
           <p>&lt;base&gt; &lt;command&gt; &lt;link&gt; &lt;meta&gt; &lt;noscript&gt; &lt;script&gt; &lt;style&gt; &lt;title&gt;</p>
           
           <h3>フロー・コンテンツ</h3>
-          <p>ブラウザ上に表示される一般的なタグで子孫にテキストなどを持つもの<br>
+          <p>ブラウザ上に表示される一般的なタグで子孫にテキストなどを持つもの。<br>
           bodyタグ内で使用されるタグのほとんどがこれに当てはまります。セクショニング、ヘディング、フレージング、エンベディッド、インタラクティブ・コンテンツを含みます。</p>
           
           <h3>セクショニング・コンテンツ</h3>
@@ -39,7 +43,7 @@
           <p>&lt;article&gt; &lt;aside&gt; &lt;nav&gt; &lt;section&gt;</p>
           
           <h3>ヘディング・コンテンツ</h3>
-          <p>見出しを表すタグです。セクショニング・コンテンツの中にある場合はそのセクションの見出し、そうでない場合は文書の見出しの役割があります。</p>
+          <p>見出しを表すタグです。セクショニング・コンテンツの中にある場合はそのセクションの見出し、そうでない場合は文章の見出しの役割があります。</p>
           <p>&lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;h4&gt; &lt;h5&gt; &lt;h6&gt;</p>
           
           <h3>フレージング・コンテンツ</h3>

@@ -1,5 +1,5 @@
 <?php include("../_partial/wrapper-head.php"); ?>
-<main class="ly-main"> 
+<main> 
     <article class="articleCnt">
 		<?php $navList = array("イベント伝搬とは", "イベントフェーズ", "発火のタイミングをコントロール", "イベント伝播の停止"); ?>
          <?php include("../_partial/pages-title.php"); ?>

@@ -1,6 +1,6 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <?php $title = $gulpfile["title"] ?>
-<main class="ly-main"> 
+<main> 
     <article class="articleCnt">
         <?php $navList = array("gulp-htmlhint", "gulp-php2html"); ?>
          <?php include("../_partial/pages-title.php"); ?>

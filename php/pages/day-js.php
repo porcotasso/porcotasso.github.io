@@ -1,5 +1,5 @@
 <?php include("../_partial/wrapper-head.php"); ?>
-<main class="ly-main"> 
+<main> 
     <article class="articleCnt">
 		<?php $navList = array("day.jsの使い方"); ?>
          <?php include("../_partial/pages-title.php"); ?>

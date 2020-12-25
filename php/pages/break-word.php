@@ -1,5 +1,5 @@
 <?php include("../_partial/wrapper-head.php"); ?>
-<main class="ly-main"> 
+<main> 
     <article class="articleCnt">
         <?php $navList = array("文字の処理について","禁則処理とは"); ?>
          <?php include("../_partial/pages-title.php"); ?>

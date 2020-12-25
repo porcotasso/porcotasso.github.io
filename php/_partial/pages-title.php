@@ -13,16 +13,16 @@
 		<?php } ?>
 		<div class="otherCnt">
 			<?php if (isset($pageLast)) { ?>
-				<a href="<?php echo $pageLast ?>" class="otherCnt_pre"><?php echo $pageLastTtl ?></a>
+				<a href="<?php echo $pageLast ?>" class="otherCnt_pre"><p class="otherCnt_ttl"><?php echo $pageLastTtl ?></p></a>
 			<?php } ?>	
 			<?php if (isset($pagePre)) { ?>
-				<a href="<?php echo $pagePre ?>" class="otherCnt_pre"><?php echo $pagePreTtl ?></a>
+				<a href="<?php echo $pagePre ?>" class="otherCnt_pre"><p class="otherCnt_ttl"><?php echo $pagePreTtl ?></p></a>
 			<?php } ?>	
 			<?php if (isset($pageNext)) { ?>
-				<a href="<?php echo $pageNext ?>" class="otherCnt_nxt"><?php echo $pageNextTtl ?></a>
+				<a href="<?php echo $pageNext ?>" class="otherCnt_nxt"><p class="otherCnt_ttl"><?php echo $pageNextTtl ?></p></a>
 			<?php } ?>
 			<?php if (isset($pageFirst)) { ?>
-				<a href="<?php echo $pageFirst ?>" class="otherCnt_pre"><?php echo $pageFirstTtl ?></a>
+				<a href="<?php echo $pageFirst ?>" class="otherCnt_pre"><p class="otherCnt_ttl"><?php echo $pageFirstTtl ?></p></a>
 			<?php } ?>	
 		</div>
 	</div>  

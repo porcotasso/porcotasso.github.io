@@ -1,5 +1,5 @@
 <?php include("../_partial/wrapper-head.php"); ?>
-<main class="ly-main"> 
+<main> 
     <article class="articleCnt">
         <?php $navList = array("shopifyとは","現在の時間を基準にif文をつくる", "jsを利用する", "新しいcssファイルを利用する"); ?>
          <?php include("../_partial/pages-title.php"); ?>

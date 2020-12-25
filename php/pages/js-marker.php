@@ -1,5 +1,5 @@
 <?php include("../_partial/wrapper-head.php"); ?>
-<main class="ly-main"> 
+<main> 
     <article class="articleCnt">
       <?php $navList = array("黄色いマーカー", "関連コード:サイズと位置を取得"); ?>
          <?php include("../_partial/pages-title.php"); ?>

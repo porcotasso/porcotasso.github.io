@@ -1,5 +1,5 @@
 <?php include("../_partial/wrapper-head.php"); ?>
-<main class="ly-main"> 
+<main> 
     <article class="articleCnt">
 		<?php $navList = array("今日の日付を取得する","日時とif文"); ?>
          <?php include("../_partial/pages-title.php"); ?>

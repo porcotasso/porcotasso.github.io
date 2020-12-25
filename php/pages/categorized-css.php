@@ -1,5 +1,5 @@
 <?php include("../_partial/wrapper-head.php"); ?>
-<main class="ly-main"> 
+<main> 
     <article class="articleCnt">
         <?php $navList = array("ベースグループ", "レイアウトグループ", "ブロックモジュールグループ", "エレメントモジュールグループ", "エレメントモジュールモディファイヤーグループ", "ヘルパーグループ", "ユニークグループ", "プログラムグループ"); ?>
          <?php include("../_partial/pages-title.php"); ?>

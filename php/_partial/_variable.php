@@ -6,7 +6,7 @@ $baseUrl = '/Users/porcokafuka/projects/porcotasso.github.io';
 $contentsModel = array(
 	"file" => "/php/pages/contents-model.php",
 	"tag" => array("html"),
-	"title" => "コンテンツ・モデル",
+	"title" => "コンテンツ・モデルというHTMLの基本的ルールを理解する",
 	"lead" => "HTML5では、このタグの中にはこのタグが配置できる、といった配置ルールが決められており、これをコンテンツ・モデル（Content models）といいます。",
 	"html" => "contents-model.html"
 );

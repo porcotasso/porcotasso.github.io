@@ -1,5 +1,5 @@
 <?php include("../_partial/wrapper-head.php"); ?>
-<main class="ly-main"> 
+<main> 
     <article class="articleCnt">
       <?php $navList = array("Nodeとは", "主なノードの種類", "属性ノード", "HTMLコレクション", "Nodelist", "要素の探し方"); ?>
          <?php include("../_partial/pages-title.php"); ?>
