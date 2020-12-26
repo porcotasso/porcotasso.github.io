@@ -6,22 +6,22 @@ $baseUrl = '/Users/porcokafuka/projects/porcotasso.github.io';
 $contentsModel = array(
 	"file" => "/php/pages/contents-model.php",
 	"tag" => array("html"),
-	"title" => "コンテンツ・モデルというHTMLの基本的ルールを理解する",
+	"title" => "コンテンツ・モデルというHTMLの基本ルールを理解する",
 	"lead" => "HTML5では、このタグの中にはこのタグが配置できる、といった配置ルールが決められており、これをコンテンツ・モデル（Content models）といいます。",
 	"html" => "contents-model.html"
 );
 $semanticTags = array(
 	"file" => "/php/pages/semantic-tags.php",
 	"tag" => array("html"),
-	"title" => "セマンティックhtml",
+	"title" => "セマンティックHTMLで適切なDOMを構築する",
 	"lead" => "クローラーや読み上げソフトがタグから各コンテンツの役割がわかるように記述するコンテンツの意味に合ったタグを使ってマークアップすることをセマンティックHTMLと呼びます。",
 	"html" => "semantic-tags.html"
 );
 $resetCss = array(
 	"file" => "/php/pages/reset-css.php",
 	"tag" => array("css"),
-	"title" => "リセットCSSについて",
-	"lead" => "各タグのスタイルをどうするかは、考え方やサイトのないようによりますが、できるだけなぜそうしたかを明確にしておくことで修正がしやすくなるのでメモ。",
+	"title" => "リセットCSS•ノーマライズCSSを適切に使う",
+	"lead" => "リセットCSSとはその名の通りブラウザのデフォルトCSSを打ち消すファイルのこと。ブラウザ毎にデフォルトで違うCSSを持っていて、それがデザインに影響を与えるので、リセットCSSを使いレイアウトの崩れなどを防ぎます。リセットCSSはブラウザが持っているCSSを全て打ち消すので、新たにCSSを構築する作業が必要になるデメリットがあります。そこでブラウザが持っている利用できるCSSをできるだけ残しつつ、部分的にリセットする方法が主流になってきています。それがnormalize.cssです。各タグのスタイルをどうするかは、考え方やサイトの内容によります。できるだけなぜそうしたかを明確にしておくことで修正がしやすくなります。本サイトでは、boostrap-reboot.cssをベースにしてサイト用に加工したノーマライズCSSを構築しています。",
 	"html" => "reset-css.html"
 );
 //css

@@ -40,7 +40,7 @@ font-size: 62.5%;
             <h3>font-family</h3>
             <p><code>font-family:"游ゴシック Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,sans-serif;</code></p>
             <h3>基本のフォントサイズ</h3>
-            <p>基本のフォントサイズをpcモバイルとも16pxにする。chrome対策にbodyの単位はemに設定</p>
+            <p>基本のフォントサイズを決める。chrome対策にbodyの単位はemに設定</p>
             <p><code>font-size: 1.6em;</code></p>
             <h3>基本の文字間</h3>
             <p>フォントサイズを基準にするようにemを使う。</p>
@@ -56,6 +56,8 @@ font-size: 62.5%;
             <h3>改行の設定</h3>
             <p>単語の区切りで改行するが、場合によっては単語の途中でも改行。禁則処理：可能な限り保たれる！コンテナ（テキストの表示領域）幅より長い英単語：強制的に折り返される 記号の連続の折り返し：対応　テーブル内のセルにかけてもちゃんと効く。行内で適切に改行できる場所が他にない場合に限って単語の途中でも改行するようにします。</p>
             <p><code>word-break:break-word;</code></p>
+            <cite class="ly-cite"><a class="ly-cite_link" href="/pages/break-word.html" >文字の処理について</a></cite>
+            
             <h3>アンチエイリアス</h3>
             <p>コンピュータでの文字表示はピクセル単位より細かく描画することができません。このため、物体の輪郭にジャギーと呼ばれるギザギザが発生してしまいます。このジャギーを軽減し少しでも目立たなくするために、文字の輪郭を背景となじませるように、色を滑らかに変化させることをアンチエイリアスといい、その処理をアンチエイリアシングといいます。黒い文字を表現する場合でも、黒だけではギザギザのジャギーがでてしまうので文字の黒と背景との中間色も境界線に配置し滑らかに見せることができるのです。font-smoothingではこのアンチエイリアスをコントロールするCSSプロパティになります。</p>
             <h4>Webkit系（Chrome, Safari, Microsoft Edge, Opera）</h4>
@@ -315,7 +317,7 @@ th {
 </pre>
         </section>
         <section class="ly-section tocContent">
-            <h2><?php echo $navList[16]; ?></h2>
+            <h2><?php echo $navList[17]; ?></h2>
             <h3>LABEL</h3>
             <p>フォームの中でフォームの項目名と構成部品（チェックボックス、ラジオボタンなど）を関連付けるためのタグです。関連付けを行うことにより、ブラウザでラベル（もしくはラベルのアクセスキー）をクリックした際に、その構成部品をクリックしたのと同じ動作が可能になります。</p>
             <h3>outline</h3>
@@ -440,7 +442,7 @@ legend {
 </pre>
         </section>
         <section class="ly-section tocContent">
-            <h2><?php echo $navList[17]; ?></h2>
+            <h2><?php echo $navList[18]; ?></h2>
             <h3>progress</h3>
             <p>タスクの進捗状況をプログレスバーで表示。</p>
             <h3>type="number"</h3>

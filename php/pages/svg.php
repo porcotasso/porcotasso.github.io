@@ -134,14 +134,13 @@ $str = file_get_contents('/aaa.png'); echo $str;
             <p>サイトに使用するファイルでは、イラレで編集する為のコードを削除したり細かい設定変更をしているので、イラレで新たにこのファイル全体を上書きすることなどはせず、コードの部分部分を必要に応じて、編集する。例えば新たにアイコンが追加されたら、symbolタグをそのファイルに追加していく。</p>
             <p>２つ目のファイルは、実際のデータをイラレで開いて把握し、pathコードを作るためのファイル。アイコンごとにアートボードを作成してポジションの基準を常にx=0, y= 0で書き出すようにする。</p>
             <p>１つ目のファイルでは、全ての画像のポジションをx=0, y= 0にした方が、コード編集が楽になる。データ的には複数の画像が重なっている状態だが、このファイルでイメージ内容を把握することはないので問題ない。</p>
-        </section>
-        
             <cite class="ly-cite"><a class="ly-cite_link" href="https://www.e-webseisaku.com/column/web/6544/" <?php echo $targetBlank ?>>SVGスプライトの利用② 「使い方」</a></cite>
             <cite class="ly-cite"><a class="ly-cite_link" href="https://css-tricks.com/using-svg/" <?php echo $targetBlank ?>>css tricks</a></cite>
             <cite class="ly-cite"><a class="ly-cite_link" href="https://lopan.jp/about-svg/" <?php echo $targetBlank ?>>SVGでやることのまとめ</a></cite>
             <cite class="ly-cite"><a class="ly-cite_link" href="https://lopan.jp/about-svg-sprites/" <?php echo $targetBlank ?>>使いまわせるSVG</a></cite>
             <cite class="ly-cite"><a class="ly-cite_link" href="https://blog.webico.work/lottie-sample" <?php echo $targetBlank ?>>Lottieでウェブアニメーションを作ってみた　SVG+JSのウェブアニメーション</a></cite>
         </section>
+        
     </article>
 </main>
 <?php include("../_partial/wrapper-foot.php"); ?>

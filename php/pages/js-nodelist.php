@@ -54,7 +54,7 @@
 <li>バナナ</li>
 </ul>
 </pre>
-          </sction>
+          </section>
           <section class="ly-section tocContent">
             <h2><?php echo $navList[2]; ?></h2>
 
@@ -147,7 +147,7 @@ var nodeList = elementNodeReference.childNodes;
 <pre class="prettyprint">
 var parentNode = elementNodeReference.parentNode
 </pre>
-          </sction>
+          </section>
           <section class="ly-section tocContent">
             <h2><?php echo $navList[3]; ?></h2>
 
@@ -163,7 +163,7 @@ var parentNode = elementNodeReference.parentNode
             NodeList.forEach()
             NodeList.keys()
             NodeList.values()</p>
-          </sction>
+          </section>
           <section class="ly-section tocContent">
             <h2><?php echo $navList[4]; ?></h2>
 
@@ -192,7 +192,7 @@ querySelectorAll, jQueryで取得したNodeListはStatic NodeListなので、取
   <li>その時点での要素のスナップショットがほしいならquerySelectorAll()を使う。</li>
 </ul>
 
-          </sction>
+          </section>
           <section class="ly-section tocContent">
             <h2><?php echo $navList[5]; ?></h2>
 
@@ -231,12 +231,11 @@ document.getElementsByClassName('color orange'); // -> [.color.orange]
 document.getElementsByTagName("h2");
 </pre>
 
-</sction>
-
 <cite class="ly-cite"><a class="ly-cite_link" href="https://seiai.ed.jp/sys/text/htm4/chp09/h09a36.html" <?php echo $targetBlank ?>>class属性の変更でスタイルを変える</a></cite>
 <cite class="ly-cite"><a class="ly-cite_link" href="https://qiita.com/KDE_SPACE/items/e21bb31dd4d9c162c4a6" <?php echo $targetBlank ?>>ノードの取得／属性の取得・設定</a></cite>
+</section>
 
-		</section>
+
     </article>
 </main>
 <script>

@@ -45,7 +45,7 @@ var saFunc = function() {
 window.addEventListener('load', saFunc);
 window.addEventListener('scroll', saFunc);
 </pre>
-</sction>
+</section>
 <section class="ly-section tocContent">
             <h2><?php echo $navList[1]; ?></h2>
 			<p>モニター、ブラウザ、要素などのサイズと位置を取得。</p>

@@ -277,6 +277,8 @@ body{
 				position: relative;
 				height: 56px;
 				width: 50%;
+				display: flex;
+				align-items: center;
 				&:after{
 					content: "";
 					position: absolute;
@@ -313,6 +315,7 @@ body{
 				font-size: $font-size-13;
 				line-height: 1.4;
 				color: $font-gray;
+				margin: 0;
 				overflow: hidden;
 				text-overflow: ellipsis;
 				display: -webkit-box;
@@ -381,8 +384,8 @@ body{
 		font-style: normal;
 		// box-shadow: 2px 2px 1px rgba(24,44,84,.2);
 		&:before{
-			content:"参考サイト";
-			top: 3px;
+			content:"参考";
+			top: 6px;
 			left: 12px;
 			display: block;
 			font-size: $font-size-12;
@@ -402,20 +405,20 @@ body{
 		&_link{
 			font-size: $font-size-14;
 			font-weight: bold;
-			padding: 24px 24px 8px 12px;
+			padding: 26px 28px 10px 12px;
 			background: $bg-light-gray;
 			color: $font-black;
 			display: block;
 		}
 	}
 	// 目次
-	.ly-toc{
+	.bl-toc{
 		position: sticky;
 		top: 0;
 		z-index: 10;
 		padding: 0;
 		margin:0 0 16px;
-		.ly-toc_ttl{
+		.bl-toc_ttl{
 			text-align: right;
 			padding: 12px 16px;
 			display: block;
@@ -432,7 +435,7 @@ body{
 				font-size: $font-size-11;
 			}
 		}
-		.ly-toc_lists{
+		.bl-toc_lists{
 			padding: 16px 5% 16px 2em;
 			margin: 0 2% 16px 8%;
 			list-style: none;
@@ -487,14 +490,14 @@ body{
 
 		}
 		&.is-open{
-			.ly-toc_ttl{
+			.bl-toc_ttl{
 				// border: none;
 				// background: none;
 				&:after{
 					content: "[閉じる]";
 				}
 			}
-			.ly-toc_lists{
+			.bl-toc_lists{
 				display: block;
 			}
 		}
@@ -510,11 +513,11 @@ body{
 			transition: all .4s;
 		}
 		&.tocTop{
-			.ly-toc_ttl{
+			.bl-toc_ttl{
 				border-bottom:1px solid $border-gray;
 				background: #f8f8f8;
 			}
-			.ly-toc_lists{
+			.bl-toc_lists{
 				border: 1px solid $border-gray;
 				width: 90%;
 				background: #eef7fb;
@@ -532,7 +535,7 @@ body{
 			}
 			
 			&.is-open{
-				.ly-toc_lists{
+				.bl-toc_lists{
 					transform: translateY(0);
 				}
 			}

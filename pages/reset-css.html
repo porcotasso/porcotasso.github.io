@@ -14,7 +14,7 @@
       
     <!-- google font Pacifico for title -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
-            <title>リセットCSSについて</title>
+            <title>リセットCSS•ノーマライズCSSを適切に使う</title>
 </head>
 <body class="" id="js-body">
 <?xml version="1.0" encoding="utf-8"?>
@@ -78,12 +78,12 @@
                     <ul class="headerMenu_subNav">
                                                 <li class="headerMenu_subList">
                             <a href="/pages/contents-model.html" class="">
-                                <div class="">コンテンツ・モデルというHTMLの基本的ルールを理解する</div>
+                                <div class="">コンテンツ・モデルというHTMLの基本ルールを理解する</div>
                             </a>
                         </li>
                                                 <li class="headerMenu_subList">
                             <a href="/pages/semantic-tags.html" class="">
-                                <div class="">セマンティックhtml</div>
+                                <div class="">セマンティックHTMLで適切なDOMを構築する</div>
                             </a>
                         </li>
                                             </ul>
@@ -93,7 +93,7 @@
                     <ul class="headerMenu_subNav">
                                                 <li class="headerMenu_subList">
                             <a href="/pages/reset-css.html" class="">
-                                <div class="">リセットCSSについて</div>
+                                <div class="">リセットCSS•ノーマライズCSSを適切に使う</div>
                             </a>
                         </li>
                                                 <li class="headerMenu_subList">
@@ -284,26 +284,26 @@
     <article class="articleCnt">
               <header>
 	<div class="articleCnt_headerBox">
-		<h1>リセットCSSについて</h1>
+		<h1>リセットCSS•ノーマライズCSSを適切に使う</h1>
 		<ul class="tagLists">
 						<li class="tagLists_list">
 				css			</li>
 			   
 		</ul>
-					<p class="el-updateDate">2020.12.25 更新</p>
+					<p class="el-updateDate">2020.12.26 更新</p>
 				<div class="otherCnt">
 				
-							<a href="/pages/semantic-tags.html" class="otherCnt_pre"><p class="otherCnt_ttl">セマンティックhtml</p></a>
+							<a href="/pages/semantic-tags.html" class="otherCnt_pre"><p class="otherCnt_ttl">セマンティックHTMLで適切なDOMを構築する</p></a>
 				
 							<a href="/pages/categorized-css.html" class="otherCnt_nxt"><p class="otherCnt_ttl">CSSを役割ごとにカテゴライズする</p></a>
 							
 		</div>
 	</div>  
 </header>
-<nav class="ly-toc js-tocTgl" id="js-tocTop">
-	<p class="miniHeaderTtl">リセットCSSについて</p>
-	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
-	<ul class="ly-toc_lists">
+<nav class="bl-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">リセットCSS•ノーマライズCSSを適切に使う</p>
+	<div class="bl-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="bl-toc_lists">
 			<li class="tocList js-tocList">
 			<div>box-sizingを全体に使う</div>
 		</li>
@@ -363,7 +363,7 @@
 		</li>
 		</ul>
 </nav>
-<p class="articleCnt_summary">各タグのスタイルをどうするかは、考え方やサイトのないようによりますが、できるだけなぜそうしたかを明確にしておくことで修正がしやすくなるのでメモ。</p>
+<p class="articleCnt_summary">リセットCSSとはその名の通りブラウザのデフォルトCSSを打ち消すファイルのこと。ブラウザ毎にデフォルトで違うCSSを持っていて、それがデザインに影響を与えるので、リセットCSSを使いレイアウトの崩れなどを防ぎます。リセットCSSはブラウザが持っているCSSを全て打ち消すので、新たにCSSを構築する作業が必要になるデメリットがあります。そこでブラウザが持っている利用できるCSSをできるだけ残しつつ、部分的にリセットする方法が主流になってきています。それがnormalize.cssです。各タグのスタイルをどうするかは、考え方やサイトの内容によります。できるだけなぜそうしたかを明確にしておくことで修正がしやすくなります。本サイトでは、boostrap-reboot.cssをベースにしてサイト用に加工したノーマライズCSSを構築しています。</p>
 <script src="/js/pages.js"></script>  
         <section class="ly-section tocContent">
             <h2>box-sizingを全体に使う</h2>
@@ -401,7 +401,7 @@ font-size: 62.5%;
             <h3>font-family</h3>
             <p><code>font-family:"游ゴシック Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,sans-serif;</code></p>
             <h3>基本のフォントサイズ</h3>
-            <p>基本のフォントサイズをpcモバイルとも16pxにする。chrome対策にbodyの単位はemに設定</p>
+            <p>基本のフォントサイズを決める。chrome対策にbodyの単位はemに設定</p>
             <p><code>font-size: 1.6em;</code></p>
             <h3>基本の文字間</h3>
             <p>フォントサイズを基準にするようにemを使う。</p>
@@ -417,6 +417,8 @@ font-size: 62.5%;
             <h3>改行の設定</h3>
             <p>単語の区切りで改行するが、場合によっては単語の途中でも改行。禁則処理：可能な限り保たれる！コンテナ（テキストの表示領域）幅より長い英単語：強制的に折り返される 記号の連続の折り返し：対応　テーブル内のセルにかけてもちゃんと効く。行内で適切に改行できる場所が他にない場合に限って単語の途中でも改行するようにします。</p>
             <p><code>word-break:break-word;</code></p>
+            <cite class="ly-cite"><a class="ly-cite_link" href="/pages/break-word.html" >文字の処理について</a></cite>
+            
             <h3>アンチエイリアス</h3>
             <p>コンピュータでの文字表示はピクセル単位より細かく描画することができません。このため、物体の輪郭にジャギーと呼ばれるギザギザが発生してしまいます。このジャギーを軽減し少しでも目立たなくするために、文字の輪郭を背景となじませるように、色を滑らかに変化させることをアンチエイリアスといい、その処理をアンチエイリアシングといいます。黒い文字を表現する場合でも、黒だけではギザギザのジャギーがでてしまうので文字の黒と背景との中間色も境界線に配置し滑らかに見せることができるのです。font-smoothingではこのアンチエイリアスをコントロールするCSSプロパティになります。</p>
             <h4>Webkit系（Chrome, Safari, Microsoft Edge, Opera）</h4>
@@ -676,7 +678,7 @@ th {
 </pre>
         </section>
         <section class="ly-section tocContent">
-            <h2>table</h2>
+            <h2>form</h2>
             <h3>LABEL</h3>
             <p>フォームの中でフォームの項目名と構成部品（チェックボックス、ラジオボタンなど）を関連付けるためのタグです。関連付けを行うことにより、ブラウザでラベル（もしくはラベルのアクセスキー）をクリックした際に、その構成部品をクリックしたのと同じ動作が可能になります。</p>
             <h3>outline</h3>
@@ -801,7 +803,7 @@ legend {
 </pre>
         </section>
         <section class="ly-section tocContent">
-            <h2>form</h2>
+            <h2>その他</h2>
             <h3>progress</h3>
             <p>タスクの進捗状況をプログレスバーで表示。</p>
             <h3>type="number"</h3>

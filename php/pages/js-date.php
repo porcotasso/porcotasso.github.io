@@ -23,7 +23,8 @@
 	console.log("秒=" + today.getSeconds());
 	
 </pre>
-<p>Date#getMonth()だけは0～11の月数を返すため、これを1～12にするには、「+1」する必要があります。</p>
+		<p>Date#getMonth()だけは0～11の月数を返すため、これを1～12にするには、「+1」する必要があります。</p>
+		</section>
 		<section class="ly-section tocContent">
 			<h2><?php echo $navList[1]; ?></h2>
 			<p>日曜で12時前か、それ以外かの判定。</p>

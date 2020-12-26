@@ -659,7 +659,9 @@ body {
     align-items: center;
     padding: 0; }
     .articleCnt_headerBox .otherCnt_pre, .articleCnt_headerBox .otherCnt_nxt {
+      display: flex;
       position: relative;
+      align-items: center;
       width: 50%;
       height: 56px; }
       .articleCnt_headerBox .otherCnt_pre:after, .articleCnt_headerBox .otherCnt_nxt:after {
@@ -691,6 +693,7 @@ body {
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       display: -webkit-box;
+      margin: 0;
       overflow: hidden;
       color: #888;
       font-size: 1.3rem;
@@ -737,11 +740,11 @@ body {
   .articleCnt .ly-cite:before {
     display: block;
     position: absolute;
-    top: 3px;
+    top: 6px;
     left: 12px;
     color: #666;
     font-size: 1.2rem;
-    content: "参考サイト"; }
+    content: "参考"; }
   .articleCnt .ly-cite:after {
     position: absolute;
     top: 8px;
@@ -749,20 +752,20 @@ body {
     content: url(/images/common/cite-arrow.svg); }
   .articleCnt .ly-cite_link {
     display: block;
-    padding: 24px 24px 8px 12px;
+    padding: 26px 28px 10px 12px;
     background: #eff1f3;
     color: #181818;
     font-size: 1.4rem;
     font-weight: bold; }
 
-.articleCnt .ly-toc {
+.articleCnt .bl-toc {
   z-index: 10;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   margin: 0 0 16px;
   padding: 0; }
-  .articleCnt .ly-toc .ly-toc_ttl {
+  .articleCnt .bl-toc .bl-toc_ttl {
     display: block;
     width: 100%;
     margin: 0;
@@ -772,12 +775,12 @@ body {
     font-size: 1.3rem;
     text-align: right;
     transition: all .4s; }
-    .articleCnt .ly-toc .ly-toc_ttl:after {
+    .articleCnt .bl-toc .bl-toc_ttl:after {
       position: relative;
       left: 4px;
       font-size: 1.1rem;
       content: "[開く]"; }
-  .articleCnt .ly-toc .ly-toc_lists {
+  .articleCnt .bl-toc .bl-toc_lists {
     display: none;
     z-index: 2;
     position: absolute;
@@ -791,17 +794,17 @@ body {
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
     list-style: none;
     transition: all 0s; }
-    .articleCnt .ly-toc .ly-toc_lists .tocList {
+    .articleCnt .bl-toc .bl-toc_lists .tocList {
       position: relative;
       padding: 4px 0;
       font-size: 1.3rem;
       line-height: 1.5; }
-      .articleCnt .ly-toc .ly-toc_lists .tocList a {
+      .articleCnt .bl-toc .bl-toc_lists .tocList a {
         color: #181818;
         font-weight: bold; }
-      .articleCnt .ly-toc .ly-toc_lists .tocList.active {
+      .articleCnt .bl-toc .bl-toc_lists .tocList.active {
         font-weight: bold; }
-        .articleCnt .ly-toc .ly-toc_lists .tocList.active:before {
+        .articleCnt .bl-toc .bl-toc_lists .tocList.active:before {
           position: absolute;
           top: 10px;
           left: -12px;
@@ -810,13 +813,13 @@ body {
           border-radius: 50%;
           background: skyblue;
           content: ''; }
-    .articleCnt .ly-toc .ly-toc_lists .tocList:hover {
+    .articleCnt .bl-toc .bl-toc_lists .tocList:hover {
       color: #888; }
-  .articleCnt .ly-toc.is-open .ly-toc_ttl:after {
+  .articleCnt .bl-toc.is-open .bl-toc_ttl:after {
     content: "[閉じる]"; }
-  .articleCnt .ly-toc.is-open .ly-toc_lists {
+  .articleCnt .bl-toc.is-open .bl-toc_lists {
     display: block; }
-  .articleCnt .ly-toc .miniHeaderTtl {
+  .articleCnt .bl-toc .miniHeaderTtl {
     display: block;
     z-index: 1;
     position: absolute;
@@ -826,10 +829,10 @@ body {
     line-height: 1.2;
     opacity: 0;
     transition: all .4s; }
-  .articleCnt .ly-toc.tocTop .ly-toc_ttl {
+  .articleCnt .bl-toc.tocTop .bl-toc_ttl {
     border-bottom: 1px solid #d4d9e6;
     background: #f8f8f8; }
-  .articleCnt .ly-toc.tocTop .ly-toc_lists {
+  .articleCnt .bl-toc.tocTop .bl-toc_lists {
     display: block;
     z-index: 2;
     position: absolute;
@@ -841,9 +844,9 @@ body {
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
     transition: all 0s;
     transition: all .4s; }
-  .articleCnt .ly-toc.tocTop .miniHeaderTtl {
+  .articleCnt .bl-toc.tocTop .miniHeaderTtl {
     opacity: 1; }
-  .articleCnt .ly-toc.tocTop.is-open .ly-toc_lists {
+  .articleCnt .bl-toc.tocTop.is-open .bl-toc_lists {
     transform: translateY(0); }
 
 .el-marker {

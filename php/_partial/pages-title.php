@@ -27,10 +27,10 @@
 		</div>
 	</div>  
 </header>
-<nav class="ly-toc js-tocTgl" id="js-tocTop">
+<nav class="bl-toc js-tocTgl" id="js-tocTop">
 	<p class="miniHeaderTtl"><?php echo $title ?></p>
-	<div class="ly-toc_ttl" id="js-tocTtl">目次</div>
-	<ul class="ly-toc_lists">
+	<div class="bl-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="bl-toc_lists">
 	<?php for($i = 0; $i < count($navList); $i++){ ?>
 		<li class="tocList js-tocList">
 			<div><?php echo $navList[$i]; ?></div>
