@@ -464,18 +464,28 @@ li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
   pre .atv, code .atv {
     color: #060; } }
 
+body {
+  -ms-scroll-chaining: none;
+      overscroll-behavior: contain; }
+  body.active {
+    overflow: hidden; }
+
+th {
+  padding: 6px 4px;
+  border-bottom: 1px solid #888;
+  font-size: 1.4rem; }
+
+td {
+  padding: 6px 4px;
+  border-bottom: 1px solid #d4d9e6;
+  font-size: 1.4rem; }
+
 .ly-innnerWidth {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding-right: 5%;
   padding-left: 5%; }
-
-body {
-  -ms-scroll-chaining: none;
-      overscroll-behavior: contain; }
-  body.active {
-    overflow: hidden; }
 
 .bl-header .headerNav {
   display: flex;
@@ -625,6 +635,13 @@ body {
     color: #fff;
     font-size: 1.2rem;
     text-align: center; }
+
+.el-marker {
+  background: linear-gradient(to right, #fded06 50%, transparent 50%) 100% 0%/200% auto no-repeat;
+  transition: background-position .8s ease-out; }
+
+.el-marker.show {
+  background-position: 0% 0%; }
 
 .articleCnt_headerBox {
   position: relative;
@@ -848,13 +865,6 @@ body {
     opacity: 1; }
   .articleCnt .bl-toc.tocTop.is-open .bl-toc_lists {
     transform: translateY(0); }
-
-.el-marker {
-  background: linear-gradient(to right, #fded06 50%, transparent 50%) 100% 0%/200% auto no-repeat;
-  transition: background-position .8s ease-out; }
-
-.el-marker.show {
-  background-position: 0% 0%; }
 
 .dairyTime {
   font-weight: bold; }

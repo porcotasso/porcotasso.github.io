@@ -14,7 +14,7 @@
       
     <!-- google font Pacifico for title -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
-            <title>制作メモ、日記</title>
+            <title>アロー関数とは</title>
 </head>
 <body class="" id="js-body">
 <?xml version="1.0" encoding="utf-8"?>
@@ -287,136 +287,153 @@
     <!-- メニューを出した時に出る黒背景 -->
     <!-- <div class="el-blackCover" id="js-blackCover"></div> --><main> 
     <article class="articleCnt">
-        <header>
-            <h1>制作日記</h1>
-            <p>やってることをメモ的に書いています。</p>
-        </header>
-        <section class="ly-section">
-            <h2>これからやることリスト</h2>
-            <ul>
-                <li>クロスサイトスクリプティング（XSS）のセキュリティ対策</li>
-                <li>エンコード</li>
-                <li>スクロールについてまとめる　https://lab.syncer.jp/Web/JavaScript/Snippet/46/</li>
-                <li>scroll スムーズスクロール　内部リンク </li> 
-                <li>scroll したまでいったらコンテンツを読み込む</li> 
-                <!-- <li>scroll　スクロールに応じてイベントをトリガーしてくれるライブラリ「ScrollTrigger」　https://www.willstyle.co.jp/blog/2869/</li>  -->
-                <li>pointer-events</li>
-                <!-- <li>inviewテストhttps://ec-recipe.com/what-is-shopify-2018/</li> -->
-                <li>タグから検索ができるようにしたい。</li>
-                <li>「スクロールチェーン」の挙動を無効化https://necomesi.jp/blog/tsmd/posts/180</li>
-                <li>「スクロールジャンク」https://blog.webico.work/passive-event-listeber01</li>
-                <li>PCデザイン</li>
-                <li>docker</li>
-                <li>slick, Preload.js,Cookie判定にはjquery-cookie.js</li>
-                <li>ロゴ作成</li>
-                <li>ぱんくずリスト</li>
-                <li>目次の開閉</li>
-                <li>gulpfileまとめ</li>
-                <li>エスケープのjsまとめ</li>
-                <li>prettyまとめ</li>
-                <li>現実的問題まとめ</li>
-                <li>nginxまとめバーチャルホスト</li>
-                <li>githubまとめ</li>
-                <li>fishまとめ</li>
-                <li>homebrewまとめ</li>
-                <li>formまとめ</li>
-                <li>typescriptまとめ</li>
-                <li>UXまとめ</li>
-                <li>UIまとめ</li>
-                <li>データベースを作りそこからデータを呼びだす</li>
-                <li>ポップ</li>
+                 <header>
+	<div class="articleCnt_headerBox">
+		<h1>アロー関数とは</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				js			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2020.12.27 更新</p>
+				<div class="otherCnt">
+				
+							<a href="/pages/event-handler.html" class="otherCnt_pre"><p class="otherCnt_ttl">イベントハンドラーの種類と使い方</p></a>
+				
+							<a href="/pages/event-propagation.html" class="otherCnt_nxt"><p class="otherCnt_ttl">イベント伝搬とは</p></a>
+							
+		</div>
+	</div>  
+</header>
+<nav class="bl-toc js-tocTgl" id="js-tocTop">
+	<p class="miniHeaderTtl">アロー関数とは</p>
+	<div class="bl-toc_ttl" id="js-tocTtl">目次</div>
+	<ul class="bl-toc_lists">
+			<li class="tocList js-tocList">
+			<div>まずリテラルとは</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>関数リテラルとは</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>アロー関数とは</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>他の書き方について</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>アロー関数の中のthisについて</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>addEventListenerのクリック要素がe.targetで取得出来ない場合</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">アロー関数についての説明です。</p>
+<script src="/js/pages.js"></script>        <section class="ly-section tocContent">
+			<h2>まずリテラルとは</h2>
+            <p>ソースコードに直接ベタ書きした文字や数字のこと。下の例だとtaroや8が<em>リテラル</em>となります。</p>
+<pre class="prettyprint">
+var name = "taro";
+var age = 8;
+</pre>
+        </section>
+        <section class="ly-section tocContent">
+			<h2>関数リテラルとは</h2>
+            <p>関数リテラルとは直接ベタ書きされた関数のことになります。下の例だと</p>
+			<p><code>function(base, height){
+				return base * height /2;
+			};</code></p>
+			<p>が関数リテラルです。流れとしては以下のようになります。</p>
+			<p>※ literal : 文字通り</p>
+			<ol>
+				<li>関数リテラルを定義</li>
+				<li>その関数リテラルを変数getTriangleに代入</li>
+			</ol>
+<pre class="prettyprint">
+let getTriangle = function(base, height){
+	return base * height /2;
+};
+</pre>
+<p>上の関数リテラルは関数に名前が無いので「無名関数」と呼ばれます。</p>
+        </section>
+        <section class="ly-section tocContent">
+			<h2>アロー関数とは</h2>
+			<p>アロー関数とは関数リテラルをシンプルに記述する方法です。</p>
+			<h3>アロー関数の基本</h3>
+			<p>この形を読むとくときに意識する。</p>
+<pre class="prettyprint">
+(引数) => {関数の本体}
+</pre>
+<h3>アロー関数の例</h3>
+<pre class="prettyprint">
+function(base, height){
+	return base * height /2;
+};
+</pre>
+        </section>
+        <section class="ly-section tocContent">
+			<h2>他の書き方について</h2>
+			<h3>シンプル化1</h3>
+			<p>関数の本体が一文なら{} を省略できる。</p>
+<pre class="prettyprint">
+let getTriangle = (base, height) => base * height /2;
+</pre>   
+			<h3>シンプル化2</h3>
+			<p>引数がひとつなら、()を省略できる。</p>
+<pre class="prettyprint">
+let getCircle = radius => radius * radius * math.PI;
+</pre>   
+			<h3>引数がない場合</h3>
+			<p>引数が無い場合、()を省略せずに記述</p>
+<pre class="prettyprint">
+let show = () => console.log('hello world');
+</pre>   
+        </section>
+        <section class="ly-section tocContent">
+			<h2>アロー関数の中のthisについて</h2>
+			<p>アロー関数式で宣言された関数は宣言された時点でthisを確定（=束縛）させてしまう。</p>
+<pre class="prettyprint">
+param ='aaa';
+let print = () => {
+	console.log(this.param);
+	// この時点でparamがaaaで確定
+}
+let object = {
+	param : 'bbb';
+	func : print
+}
+object.func();
+//paramを変更してprint関数を実行しても、結果は aaa となる。
+</pre>   
+			<p>thisを使う場合、アロー関数とES6以前の書き方（通常関数）の書き方で挙動が異なる。</p>
+        </section>
+        <section class="ly-section tocContent">
+			<h2>addEventListenerのクリック要素がe.targetで取得出来ない場合</h2>
+			<p>addEventListenerのクリック処理にアロー関数を使った場合、クリック要素がevent.targetに格納される。下記のコードの場合、予想では、targetはid="wrap"になりそうですが、実際クリックされてるのは子要素のpタグで、targetはpタグになる。</p>
+<pre class="prettyprint">
+<div id="wrap">
+  <p>text</p>
+</div>
+const element = document.querySelector('#wrap')
+element.addEventListener('click', (event) => {
+      console.log(event.target);
+})
+</pre>   
+			<p>クリックした時に、addEventListenerを設定した要素を取得するにはevent.targetではなくevent.currentTargetを使えばクリックした要素を取得できます。</p>
+<pre class="prettyprint">
+<div id="wrap">
+  <p>text</p>
+</div>
+const element = document.querySelector('#wrap')
+element.addEventListener('click', (event) => {
+      console.log(event.currentTarget);
+})
+</pre>   
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://web-guided.com/994/" target="_blank" rel="noopener noreferrer">e.targetで要素を取得出来ない時の原因</a></cite>  
+        </section>
 
-                <li>全タグ確認</li>
-                <li>標準の日時書式指定 ローカル時間</li>
-                <li>background-attachment は、背景画像の固定表示を指定するプロパティ https://www.tagindex.com/stylesheet/page/background_attachment.htmls</li>
-                <li>@keyframes使い方まとめ　https://www.atmarkit.co.jp/fwcr/design/benkyo/webgraphics01/sample.html　</li>
-                <li>-CSSカテゴライズまとめ、break-wordなどテキスト、svgまとめ</li>
-            </ul>
-            <h2><time>2020年</time></h2>
-            <time class="dairyTime" datetime="2020-11-21">11月21日</time>
-            <p>reset.cssの全てのコードをチェック終了。</p>
-            <time class="dairyTime" datetime="2020-11-08">11月8日</time>
-            <p>ブラウザーのレンダリングエンジンとjavascriptエンジンとベンダープレフィックスについて</p>
-            <time class="dairyTime" datetime="2020-10-28">10月28日</time>
-            <p>reset css の内容説明を作成中。bodyのcssを調べて書く</p>
-            <time class="dairyTime" datetime="2020-10-01">10月1日</time>
-            <p>ずっと仕事が忙しくて勉強する時間の仕事にあてた。勉強時間をとられるのはあまり精神衛生によろしくない。仕事の時間を増やして仕事した気にならないように。</p>
-            <time class="dairyTime" datetime="2020-09-20">9月20日</time>
-            <p>スクロールにswiper.jsを使って動きを追加。swiper便利。表示するコンテンツも色々追加。スクロールカルーセルまとめ。各ページのタイトルの左右に前後のページのリンクを追加。</p>
-            <time class="dairyTime" datetime="2020-09-19">9月19日</time>
-            <p>スクロールでトップに戻るボタンを右下に追加してまとめる。ホームのスライダーで新しいページだけをリストに並べる。ファイルのupdate日はファイル自体にアクセスしないと取得できないのに対し、サイトで表示させたいのは$allPages内の変数なので、その違う情報をどう正確に結びつけるかがポイント</p>
-            <time class="dairyTime" datetime="2020-09-16">9月16日</time>
-            <p>HTML5では a href="#top">TOP でページトップへジャンプするようになった。</p>
-            <time class="dairyTime" datetime="2020-09-10">9月10日</time>
-            <p>スクロールしたら重要なテキストに黄色いマーカーをひくjavascript</p>
-            <time class="dairyTime" datetime="2020-09-08">9月8日</time>
-            <p>php filemtimeでファイルのupdated日を取得。</p>
-            <time class="dairyTime" datetime="2020-09-07">9月7日</time>
-            <p>day.jsのif文。曜日で分ける。</p>
-            <time class="dairyTime" datetime="2020-09-06">9月6日</time>
-            <p>スマホスクロールの停止について。スクロールしきったら１ピクセルずらす方法を試す。これまでのエラーは解消するが、あらたなエラーがでる。メニューの1度目のクリックではメニューが動かない。スクロールしきった時に少し戻る動きが変。使えないっぽい。shopifyの今週の水曜、来週の水曜を取得する方法のテスト。liquid のif文内で　jsが動かない。day.jsを調べてまとめる。</p>
-            <time class="dairyTime" datetime="2020-09-05">9月5日</time>
-            <p>スマホスクロールの停止について。とりあえずこれまでのことをまとめる。</p>
-            <time class="dairyTime" datetime="2020-09-04">9月4日</time>
-            <p>スマホスクロールの停止について。スマホのタッチイベントについて。</p>
-            <time class="dairyTime" datetime="2020-09-03">9月3日</time>
-            <p>スマホスクロールの停止について。</p>
-            <time class="dairyTime" datetime="2020-09-02">9月2日</time>
-            <p>各ページを並列化続き。jsで効率化。２重ループを試すも、最後のとろこで各タグ変数に代入ができない。固有の変数名でしかarray_pushで変数を追加していけないっぽい現象。</p>
-            <time class="dairyTime" datetime="2020-09-01">9月1日</time>
-            <p>各ページを並列化。タグを使ってカテゴライズする。</p>
-            <time class="dairyTime" datetime="2020-08-31">8月31日</time>
-            <p>イベント伝搬とはまとめ</p>
-            <time class="dairyTime" datetime="2020-08-30">8月30日</time>
-            <p>改行について、SVGについてまとめ。フッター追加</p>
-            <time class="dairyTime" datetime="2020-08-29">8月29日</time>
-            <p>event-handler, header-smallerページの追加。eventlisnerの使い方があいまいだったのでメモ。ボタンまとめ</p>
-            <time class="dairyTime" datetime="2020-08-27">8月27日</time>
-            <p>ハンバーガーメニューの機能について</p>
-            <time class="dairyTime" datetime="2020-08-26">8月26日</time>
-            <p>背景位置固定は、bodyタグにoverflow:hidden をつけることで対応。</p>
-            <p>https://tech.arms-soft.co.jp/ レイアウトがきれい</p>
-            <time class="dairyTime" datetime="2020-08-25">8月25日</time>
-            <p>メニューをだした時に黒透過背景を追加。メニューの開閉で背景の位置が変わる。position:fixed;と.getBoundingClientRect()で位置を取得での位置固定と解除した時の static の変更でできるとかいてあったけど、できない。</p>
-            <time class="dairyTime" datetime="2020-08-24">8月24日</time>
-            <p>コンテンツモデルページまとめ</p>
-            <p>セマンティックHTML</p>
-            <p>ホームメニューカテゴリーに矢印追加</p>
-            <p>メニューのスクロールエラー修正中。ヘッダー部分の高さを考慮せずにheight:100vh;にしていたのと、背景をスクロールさせていたのが原因。背景を固定しないといけないがtopを0にすると、メニュー表示を解除したときにトップに戻っている</p>
-            <time class="dairyTime" datetime="2020-08-23">8月23日</time>
-            <p>スーパーグローバル関数を調べる。</p>
-            <p>gulpfileのphp2htmlをまとめる。</p>
-            <p>phpメモページ追加。</p>
-            <p>iタグ、dfnタグ追加。目立たすタグページ修正。</p>
-            <p>日記ページ作成。timeタグを調べる。</p>
-            <p>preタグとcodeタグの違いを調べる。改行やインデントなどはcodeは反映されない。</p>
-            <p>faviconページに目次と内部リンクを追加。使った時に、ヘッダーの下に表示される問題が解決。これまで使ってた方法よりかなり楽になった。</p><p>内部リンクでコンテンツがヘッダー下に隠れる問題。htmlタグにscroll-padding-top: 80px;を入れる。</p>
-            <time class="dairyTime" datetime="2020-08-22">8月22日</time>
-            <p>
-                faviconページでコードを表示させようとしたところ、勝手に閉じタグが挿入される問題。原因不明。対処方不明。
-                <code>　&lt;square70x70logo src=&quot;/image/favicon/tileImg-70x70.png&quot;/&gt;</code>php->htmlの変換では問題ない。
-                .htmlファイルをブラウザで表示させる段階で勝手に追加される。例えば上のコード一行だけ書いたhtmlファイルをブラウザで表示させると、勝手に閉じタグがつく。chrome, safari両方同じ。jsでpre内の特殊文字の自動エスケープをしていたので、codeタグに変更してエスケープして表示させ、それ用のスタイルを追加して対応。
-            </p>
-            <p>各ページのheadタグ内のtitleタグの中を自動にしたい。wrapper-head.php内でどのページで利用するのか判別できてなかったので、<code>$_SERVER['REQUEST_URI']</code>とvariable内のurlで、判別。ついでにtitle leadも各ページで読み込めるようにしておいた。foeach文にbreakを記入するも、ループを抜けれない。foreachを二重に使っていることが原因ではないかと予想。</p>
-            <time class="dairyTime" datetime="2020-08-21">8月21日</time>
-            <p>code pretty を導入。そのうちcode penも追加したい</p>
-            <p>header smallerのJSの挙動がおかしい。上から80pxの部分が反応してない。if文修正。</p>
-            <time class="dairyTime" datetime="2020-08-20">8月20日</time>
-            <p>ファビコンの使い方があいまいだったので調べて実行。各情報も結構あいまいなものもある。明確にわけれたと思う。</p>
-            <time class="dairyTime" datetime="2020-08-19">8月19日</time>
-            <p>脱jQueryをする。ヘッダーのsmallerのコードを変更。</p>
-        </section>
-        <section class="ly-section">
-            <h3>参考</h3>
-            <cite class="ly-cite"><a class="ly-cite_link" href="https://murashun.jp" target="_blank" rel="noopener noreferrer">murashun.jp</a></cite>
-            <cite class="ly-cite"><a class="ly-cite_link" href="https://www.ameamelog.com/category/web-design/css/" target="_blank" rel="noopener noreferrer">ameamelogコーディング</a></cite>
-            <cite class="ly-cite"><a class="ly-cite_link" href="http://honttoni.blog74.fc2.com/blog-entry-107.html?sp" target="_blank" rel="noopener noreferrer">ほんっとにはじめてのHTML5とCSS3</a></cite>
-            <cite class="ly-cite"><a class="ly-cite_link" href="https://www.w3.org/TR/html51/grouping-content.html#the-p-element" target="_blank" rel="noopener noreferrer">w3.org p element</a></cite>
-            <cite class="ly-cite"><a class="ly-cite_link" href="https://liginc.co.jp/" target="_blank" rel="noopener noreferrer">lig</a></cite>
-            <cite class="ly-cite"><a class="ly-cite_link" href="https://baigie.me/menu/" target="_blank" rel="noopener noreferrer">baigie</a></cite>
-        </section>
     </article>
-    
 </main>
         <footer class="bl-footer">
             <p class="el-copyright">&copy; 2019-2020 porco tasso</p>

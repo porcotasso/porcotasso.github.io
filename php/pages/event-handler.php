@@ -1,23 +1,19 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main> 
     <article class="articleCnt">
-        <?php $navList = array("イベントとは", "イベントハンドラーとは", "HTML属性のイベントハンドラ", "DOM要素プロパティのイベントハンドラ", "イベントリスナーのイベントハンドラ３つの方法"); ?>
+        <?php $navList = array("まずイベントとは", "javascriptのイベントハンドラーとは", "HTML属性のイベントハンドラ", "DOM要素プロパティのイベントハンドラ", "イベントリスナーのイベントハンドラ３つの方法"); ?>
          <?php include("../_partial/pages-title.php"); ?>
-            
-                
-            
         <section class="ly-section tocContent">
 			<h2><?php echo $navList[0]; ?></h2>
-
             <p>ウェブページ上で発生するアクションの総称。アクションには、例えばボタンのクリック、フォームへの入力、ページの読み込み、マウスポインタを要素の上に合わせるなどが含まれます。</p>
         </section>
         <section class="ly-section tocContent">
 			<h2><?php echo $navList[1]; ?></h2>
-            <p>イベントの処理を行うコードのこと。方法は大きく３つに分けられます。</p>
+            <p>一般的にはイベントが発生したときに呼び出される処理のことですが、javascriptのイベントハンドラーは少し意味が違い、「きっかけ（イベント）→　処理」の間を繋ぐ役割を果たすものをいいます。方法は大きく３つに分けられます。</p>
             <ul>
                 <li>HTML属性のイベントハンドラ</li>
                 <li>DOM要素プロパティのイベントハンドラ</li>
-                <li>イベントリスナーのイベントハンドラ</li>
+                <li>イベントリスナーを使ったイベントハンドラ</li>
             </ul>
         </section>
         <section class="ly-section tocContent">
@@ -71,7 +67,6 @@ function sample1() {
     sample3.addEventListener('click', sayHello, false);
 </script>
 </pre>
-
             <h3>方法2 無名関数で書く</h3>
             <p>よく使われる書き方で第2引数へそのまま関数を記述。単純な処理しか記述しないようなケースは、関数をわざわざ用意するよりコードが分かりやすい。</p>
 <pre class="prettyprint">
@@ -85,7 +80,6 @@ function sample1() {
     }, false);
 </script>
 </pre>
-
             <h3>方法3 アロー関数を使う</h3>
             <p>無名関数をES2015の書き方にしただけ</p>
 <pre class="prettyprint">

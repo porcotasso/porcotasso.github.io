@@ -42,7 +42,7 @@ $namingRule = array(
 $basicLayoutStyle = array(
 	"file" => "/php/pages/basic-layout-style.php",
 	"tag" => array("css"),
-	"title" => "resetcss以外のスタイルルール",
+	"title" => "reset.css以外のスタイルルール",
 	"lead" => "レイアウトの基本ルールとして把握、作成しておいたほうがいいスタイルについて。",
 	"html" => "basic-layout-style.html"
 );
@@ -50,7 +50,7 @@ $basicLayoutStyle = array(
 $button = array(
 	"file" => "/php/pages/button.php",
 	"tag" => array("parts"),
-	"title" => "ボタン作成",
+	"title" => "ボタン作成の種類",
 	"lead" => "ボタンを作る際 &lt;a&gt;か&lt;button&gt;か&lt;input&gt;か迷わないように違いを理解する。",
 	"html" => "button.html"
 );
@@ -58,7 +58,7 @@ $breakWord = array(
 	"file" => "/php/pages/break-word.php",
 	"tag" => array("parts"),
 	"title" => "break-word",
-	"lead" => "break-word",
+	"lead" => "文字、文章のルール",
 	"html" => "break-word.html"
 );
 $elementEmStrongMarkB = array(
@@ -78,14 +78,14 @@ $favicon = array(
 $hamburgerMenu = array(
 	"file" => "/php/pages/hamburger-menu.php",
 	"tag" => array("parts"),
-	"title" => "hamburger-menu",
+	"title" => "ハンバーガーメニューの作り方",
 	"lead" => "hamburger-menuを作る際に必要な要素がいくつかあるので、分解して説明します。",
 	"html" => "hamburger-menu.html"
 );
 $headerSmaller = array(
 	"file" => "/php/pages/header-smaller.php",
 	"tag" => array("parts"),
-	"title" => "header-smaller",
+	"title" => "スクロールでヘッダーのスタイルを変更する",
 	"lead" => "画面をスクロールした時に高さを変えるjavascriptについての説明です。",
 	"html" => "header-smaller.html"
 );
@@ -133,9 +133,16 @@ $jsScrollTop = array(
 $eventHandler = array(
 	"file" => "/php/pages/event-handler.php",
 	"tag" => array("js"),
-	"title" => "event-handler",
-	"lead" => "event、event-handler、addEventListenerについての説明です。",
+	"title" => "イベントハンドラーの種類と使い方",
+	"lead" => "イベントハンドラーの種類と使い方、addEventListenerの使い方についての説明です。",
 	"html" => "event-handler.html"
+);
+$jsArrowFunction = array(
+	"file" => "/php/pages/arrow-function.php",
+	"tag" => array("js"),
+	"title" => "アロー関数とは",
+	"lead" => "アロー関数についての説明です。",
+	"html" => "arrow-function.html"
 );
 $eventPropagation = array(
 	"file" => "/php/pages/event-propagation.php",
@@ -229,8 +236,8 @@ $browserRenderingEngine = array(
 $svg = array(
 	"file" => "/php/pages/svg.php",
 	"tag" => array("svg"),
-	"title" => "svg",
-	"lead" => "メモ",
+	"title" => "svgファイルの使い方",
+	"lead" => "svgを活用する方法をまとめました。",
 	"html" => "svg.html"
 );
 //shopify-memo
@@ -255,7 +262,7 @@ $allPages = array(
 	$contentsModel, $semanticTags, $resetCss, 
 	$categorizedCSS, $namingRule, $basicLayoutStyle,
 	$button, $breakWord, $elementEmStrongMarkB, $favicon, $hamburgerMenu, $headerSmaller,
-	$javascriptMemo, $eventHandler, $eventPropagation, $scrollJunk, $touchEvent, $dayJs, $jsDate, $jsMarker, $jsNodelist, $jsScrollTop, $jsSwiper,
+	$javascriptMemo, $eventHandler,$jsArrowFunction, $eventPropagation, $scrollJunk, $touchEvent, $dayJs, $jsDate, $jsMarker, $jsNodelist, $jsScrollTop, $jsSwiper,
 	$phpMemo,$phpFilemtime,
 	$environmentSummary, $gulpfile, $gitFetch, $browserRenderingEngine,
 	$svg, $design,

@@ -4,19 +4,35 @@
 @import "commonParts/elementModule";
 @import "commonParts/prettifyTheme";
 
-// 1.common
-// common_header
-// common_footer
-// marker design
-
+// スコープ
+// 1.common　全てのページに影響
+	// common_header
+	// common_footer
+	// marker design
 
 // 2.コンテンツページ
 
 
 // 3.diary ページ
 
-//common
+//1.common
 // 基本body直下で全画面幅の中で両端にスペースを追加
+body{
+	overscroll-behavior: contain;
+	&.active{
+		overflow: hidden;
+	}
+}
+th{
+	border-bottom: 1px solid $font-gray;
+	font-size: $font-size-14;
+	padding: 6px 4px;
+}
+td{
+	border-bottom: 1px solid $border-gray;
+	font-size: $font-size-14;
+	padding: 6px 4px;
+}
 .ly-innnerWidth{
 	width: 100%;
 	margin-right: auto;
@@ -24,12 +40,6 @@
 	padding-right: $gutter-width;
 	padding-left: $gutter-width;
 }	
-body{
-	overscroll-behavior: contain;
-	&.active{
-		overflow: hidden;
-	}
-}
 
 // common_header
 .bl-header {
@@ -227,7 +237,17 @@ body{
 	}
 }
 
-// コンテンツページ
+// marker design
+.el-marker {
+	background: linear-gradient(to right, #fded06 50%, transparent 50%) 100% 0% / 200% auto no-repeat;
+	transition: background-position .8s ease-out;
+}
+.el-marker.show {
+	background-position: 0% 0%;
+}
+
+
+// 2.コンテンツページ
 // コンテンツのページのarticle タグに追加し、hタグなどのスタイルを統一させる
 .articleCnt{
 	&_headerBox{
@@ -544,14 +564,7 @@ body{
 	}
 }
   
-// marker design
-.el-marker {
-background: linear-gradient(to right, #fded06 50%, transparent 50%) 100% 0% / 200% auto no-repeat;
-transition: background-position .8s ease-out;
-}
-.el-marker.show {
-background-position: 0% 0%;
-}
+
 
 
 

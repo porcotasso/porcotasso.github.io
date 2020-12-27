@@ -14,7 +14,7 @@
       
     <!-- google font Pacifico for title -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
-            <title>event-handler</title>
+            <title>イベントハンドラーの種類と使い方</title>
 </head>
 <body class="" id="js-body">
 <?xml version="1.0" encoding="utf-8"?>
@@ -108,7 +108,7 @@
                         </li>
                                                 <li class="headerMenu_subList">
                             <a href="/pages/basic-layout-style.html" class="">
-                                <div class="">resetcss以外のスタイルルール</div>
+                                <div class="">reset.css以外のスタイルルール</div>
                             </a>
                         </li>
                                             </ul>
@@ -118,7 +118,7 @@
                     <ul class="headerMenu_subNav">
                                                 <li class="headerMenu_subList">
                             <a href="/pages/button.html" class="">
-                                <div class="">ボタン作成</div>
+                                <div class="">ボタン作成の種類</div>
                             </a>
                         </li>
                                                 <li class="headerMenu_subList">
@@ -138,12 +138,12 @@
                         </li>
                                                 <li class="headerMenu_subList">
                             <a href="/pages/hamburger-menu.html" class="">
-                                <div class="">hamburger-menu</div>
+                                <div class="">ハンバーガーメニューの作り方</div>
                             </a>
                         </li>
                                                 <li class="headerMenu_subList">
                             <a href="/pages/header-smaller.html" class="">
-                                <div class="">header-smaller</div>
+                                <div class="">スクロールでヘッダーのスタイルを変更する</div>
                             </a>
                         </li>
                                                 <li class="headerMenu_subList">
@@ -163,7 +163,12 @@
                         </li>
                                                 <li class="headerMenu_subList">
                             <a href="/pages/event-handler.html" class="">
-                                <div class="">event-handler</div>
+                                <div class="">イベントハンドラーの種類と使い方</div>
+                            </a>
+                        </li>
+                                                <li class="headerMenu_subList">
+                            <a href="/pages/arrow-function.html" class="">
+                                <div class="">アロー関数とは</div>
                             </a>
                         </li>
                                                 <li class="headerMenu_subList">
@@ -253,7 +258,7 @@
                     <ul class="headerMenu_subNav">
                                                 <li class="headerMenu_subList">
                             <a href="/pages/svg.html" class="">
-                                <div class="">svg</div>
+                                <div class="">svgファイルの使い方</div>
                             </a>
                         </li>
                                             </ul>
@@ -284,31 +289,31 @@
     <article class="articleCnt">
                  <header>
 	<div class="articleCnt_headerBox">
-		<h1>event-handler</h1>
+		<h1>イベントハンドラーの種類と使い方</h1>
 		<ul class="tagLists">
 						<li class="tagLists_list">
 				js			</li>
 			   
 		</ul>
-					<p class="el-updateDate">2020.12.25 更新</p>
+					<p class="el-updateDate">2020.12.27 更新</p>
 				<div class="otherCnt">
 				
 							<a href="/pages/javascript-memo.html" class="otherCnt_pre"><p class="otherCnt_ttl">javascriptmemo</p></a>
 				
-							<a href="/pages/event-propagation.html" class="otherCnt_nxt"><p class="otherCnt_ttl">イベント伝搬とは</p></a>
+							<a href="/pages/arrow-function.html" class="otherCnt_nxt"><p class="otherCnt_ttl">アロー関数とは</p></a>
 							
 		</div>
 	</div>  
 </header>
 <nav class="bl-toc js-tocTgl" id="js-tocTop">
-	<p class="miniHeaderTtl">event-handler</p>
+	<p class="miniHeaderTtl">イベントハンドラーの種類と使い方</p>
 	<div class="bl-toc_ttl" id="js-tocTtl">目次</div>
 	<ul class="bl-toc_lists">
 			<li class="tocList js-tocList">
-			<div>イベントとは</div>
+			<div>まずイベントとは</div>
 		</li>
 			<li class="tocList js-tocList">
-			<div>イベントハンドラーとは</div>
+			<div>javascriptのイベントハンドラーとは</div>
 		</li>
 			<li class="tocList js-tocList">
 			<div>HTML属性のイベントハンドラ</div>
@@ -321,22 +326,18 @@
 		</li>
 		</ul>
 </nav>
-<p class="articleCnt_summary">event、event-handler、addEventListenerについての説明です。</p>
-<script src="/js/pages.js"></script>            
-                
-            
-        <section class="ly-section tocContent">
-			<h2>イベントとは</h2>
-
+<p class="articleCnt_summary">イベントハンドラーの種類と使い方、addEventListenerの使い方についての説明です。</p>
+<script src="/js/pages.js"></script>        <section class="ly-section tocContent">
+			<h2>まずイベントとは</h2>
             <p>ウェブページ上で発生するアクションの総称。アクションには、例えばボタンのクリック、フォームへの入力、ページの読み込み、マウスポインタを要素の上に合わせるなどが含まれます。</p>
         </section>
         <section class="ly-section tocContent">
-			<h2>イベントハンドラーとは</h2>
-            <p>イベントの処理を行うコードのこと。方法は大きく３つに分けられます。</p>
+			<h2>javascriptのイベントハンドラーとは</h2>
+            <p>一般的にはイベントが発生したときに呼び出される処理のことですが、javascriptのイベントハンドラーは少し意味が違い、「きっかけ（イベント）→　処理」の間を繋ぐ役割を果たすものをいいます。方法は大きく３つに分けられます。</p>
             <ul>
                 <li>HTML属性のイベントハンドラ</li>
                 <li>DOM要素プロパティのイベントハンドラ</li>
-                <li>イベントリスナーのイベントハンドラ</li>
+                <li>イベントリスナーを使ったイベントハンドラ</li>
             </ul>
         </section>
         <section class="ly-section tocContent">
@@ -390,7 +391,6 @@ function sample1() {
     sample3.addEventListener('click', sayHello, false);
 </script>
 </pre>
-
             <h3>方法2 無名関数で書く</h3>
             <p>よく使われる書き方で第2引数へそのまま関数を記述。単純な処理しか記述しないようなケースは、関数をわざわざ用意するよりコードが分かりやすい。</p>
 <pre class="prettyprint">
@@ -404,7 +404,6 @@ function sample1() {
     }, false);
 </script>
 </pre>
-
             <h3>方法3 アロー関数を使う</h3>
             <p>無名関数をES2015の書き方にしただけ</p>
 <pre class="prettyprint">
