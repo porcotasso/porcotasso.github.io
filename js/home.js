@@ -38,7 +38,8 @@ function showElementAnimation() {
 	var scrollY = window.pageYOffset;
 	// if(scrollY > 100){
 		logoMark.style.left = scrollY - 100 + scrollY*scrollY/1000;
-		logoMark.style.top = scrollY/2 + 90;
+		logoMark.style.top = scrollY/3 - 80;
+		logoMark.style.opacity = 0.3 - scrollY/1200;
 	// }
 	console.log(scrollY);
 	// var windowH = window.innerHeight;
