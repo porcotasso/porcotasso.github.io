@@ -6,6 +6,11 @@
     max-width: 160px;
     margin: 0 auto 24px; }
 
+.svg-logoMark {
+  fill: rgba(101, 206, 233, 0.2);
+  position: absolute;
+  width: 70%; }
+
 .bl-summary {
   padding-top: 24px;
   padding-bottom: 16px;

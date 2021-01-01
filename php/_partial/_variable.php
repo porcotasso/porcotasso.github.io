@@ -141,7 +141,7 @@ $jsArrowFunction = array(
 	"file" => "/php/pages/arrow-function.php",
 	"tag" => array("js"),
 	"title" => "アロー関数とは",
-	"lead" => "アロー関数についての説明です。",
+	"lead" => "アロー関数とは関数リテラルをシンプルに記述する方法です。",
 	"html" => "arrow-function.html"
 );
 $eventPropagation = array(

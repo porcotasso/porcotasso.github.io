@@ -1,46 +1,47 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main> 
     <article class="articleCnt">
-        <?php $navList = array("まずリテラルとは", "関数リテラルとは", "アロー関数とは", "他の書き方について", "アロー関数の中のthisについて", "addEventListenerのクリック要素がe.targetで取得出来ない場合"); ?>
+        <?php $navList = array("まずリテラルを理解する", "関数リテラルとは", "アロー関数とは", "他の書き方について", "アロー関数の中のthisについて", "addEventListenerのクリック要素がe.targetで取得出来ない場合"); ?>
          <?php include("../_partial/pages-title.php"); ?>
         <section class="ly-section tocContent">
 			<h2><?php echo $navList[0]; ?></h2>
-            <p>ソースコードに直接ベタ書きした文字や数字のこと。下の例だとtaroや8が<em>リテラル</em>となります。</p>
+            <p>ソースコードに直接ベタ書きした文字や数字のこと。下の例だと<em>taro</em>や<em>8</em>がリテラルとなります。</p>
 <pre class="prettyprint">
 var name = "taro";
 var age = 8;
 </pre>
+<p>※ literal : 文字通り</p>
         </section>
         <section class="ly-section tocContent">
 			<h2><?php echo $navList[1]; ?></h2>
-            <p>関数リテラルとは直接ベタ書きされた関数のことになります。下の例だと</p>
-			<p><code>function(base, height){
-				return base * height /2;
-			};</code></p>
-			<p>が関数リテラルです。流れとしては以下のようになります。</p>
-			<p>※ literal : 文字通り</p>
-			<ol>
-				<li>関数リテラルを定義</li>
-				<li>その関数リテラルを変数getTriangleに代入</li>
-			</ol>
+            <p>関数リテラルとは直接ベタ書きされた関数です。下の例だと</p>
 <pre class="prettyprint">
 let getTriangle = function(base, height){
 	return base * height /2;
 };
 </pre>
+			<p><code>function(base, height){
+				return base * height /2;
+			};</code></p>
+			<p>が<em>関数リテラル</em>です。流れとしては以下のようになります。</p>
+			
+			<ol>
+				<li>関数リテラルを定義</li>
+				<li>その関数リテラルを変数getTriangleに代入</li>
+			</ol>
 <p>上の関数リテラルは関数に名前が無いので「無名関数」と呼ばれます。</p>
         </section>
         <section class="ly-section tocContent">
 			<h2><?php echo $navList[2]; ?></h2>
 			<p>アロー関数とは関数リテラルをシンプルに記述する方法です。</p>
 			<h3>アロー関数の基本</h3>
-			<p>この形を読むとくときに意識する。</p>
+			<p>この形を読みとくときに意識する。</p>
 <pre class="prettyprint">
 (引数) => {関数の本体}
 </pre>
 <h3>アロー関数の例</h3>
 <pre class="prettyprint">
-function(base, height){
+(base, height) => {
 	return base * height /2;
 };
 </pre>

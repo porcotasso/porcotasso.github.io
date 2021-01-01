@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded',() => {
     body.classList.toggle('active');
   };
 
-
 // HOME MENU OPEN/CLOSE #menu-triggerをクリックで#js-headerがオンオフ
   const accordionTrigger = document.getElementsByClassName('js-accordionTrigger');
   for (let i = 0; i < accordionTrigger.length; i++){
@@ -20,8 +19,8 @@ document.addEventListener('DOMContentLoaded',() => {
       content.classList.toggle('is-open');
       Array.prototype.forEach.call(accordionTrigger, function(element) {
         element.classList.toggle('not-focus');
+        });
       });
-    });
   }
 });
 
@@ -56,7 +55,6 @@ document.addEventListener('DOMContentLoaded',() => {
   for(var i = 0; i < pre.length; i++) {
     pre[i].innerHTML = escapeHtml(pre[i].innerHTML);
   }
-
 
 //marker 
   var saClass = 'el-marker';

@@ -109,6 +109,10 @@ b,
 strong {
   font-weight: bold; }
 
+em {
+  padding-right: 0.3em;
+  padding-left: 0.1em; }
+
 small {
   font-size: 80%; }
 

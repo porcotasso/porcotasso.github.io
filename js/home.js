@@ -24,3 +24,37 @@ var mySwiper = new Swiper ('.swiper-container', {
 		}
 	}
 });
+
+
+//home
+const logoMark = document.getElementById('js-logoMark');
+
+function showElementAnimation() {
+	console.log('---');
+	// let logoMarkLeft = logoMark.style.left;
+	// let logoMarkLeftNum = parseFloat(logoMarkLeft);
+	// var showTiming = window.innerHeight > 768 ? 200 : 40; // 要素が出てくるタイミングはここで調整
+	var showTiming = 0;
+	var scrollY = window.pageYOffset;
+	// if(scrollY > 100){
+		logoMark.style.left = scrollY - 200;
+		logoMark.style.top = scrollY/2 + 60;
+	// }
+	console.log(scrollY);
+	// var windowH = window.innerHeight;
+	// var elemClientRect = logoMark.getBoundingClientRect(); 
+	// var elemY = scrollY + elemClientRect.top; 
+	// console.log('scrollY');
+	// console.log(scrollY);
+	// console.log('elemClientRect');
+	// console.log(elemClientRect);
+	// if(scrollY + windowH - showTiming > elemY) {
+	//   logoMark.style.left = scrollY -100;
+	//   // logoMark.style.top = 100 + scrollY;
+	// } else if(scrollY + windowH < elemY) {
+	//   logoMark.style.left = -scrollY - 100;
+	//   // logoMark.style.top = 100 - scrollY;
+	// }
+  }
+  showElementAnimation();
+  window.addEventListener('scroll', showElementAnimation);

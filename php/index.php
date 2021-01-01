@@ -21,6 +21,9 @@
             }
         }
     } ?>
+        <svg class="svg-logoMark" viewBox="0 0 53 36" id="js-logoMark">
+            <use xlink:href="#svg-logoMark"></use>
+        </svg>
     <div class="bl-summary ly-innnerWidth">
         <h2 class="bl-summary_ttl">ウェブを楽しむ</h2>
         <p class="bl-summary_txt">ウェブフロントエンドエンジニア、ポルコのこつこつ技術メモです。そのうち清書予定。多分。</p>

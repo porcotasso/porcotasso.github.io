@@ -8,6 +8,13 @@
     margin:0 auto $space-unit * 3;
   }
 }
+.svg-logoMark{
+  position: absolute;
+  fill: rgba(101, 206, 233, 0.2);
+  width: 70%;
+  // top: 0;
+  // left: 0;  
+}
 .bl-summary{
   border-bottom: 1px solid $font-black;
   padding-bottom: 16px;
