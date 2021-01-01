@@ -23,11 +23,13 @@
 @keyframes slideIn {
   from {
     left: -200px;
+    opacity: 0.1;
   }
   50% {
   }
   to {
     left: -100px;
+    opacity: 0.3;
   }
 }
 
@@ -36,13 +38,13 @@
   // border-bottom: 1px solid $font-black;
   overflow: hidden;
   padding-bottom: 16px;
-  padding-top: 24px;
+  padding-top: 32px;
   background: $bg-light-gray;
   min-height: 320px;
   animation-duration: 3s;
   animation-name: fadeIn;
   &_ttl{
-    font-size: $font-size-19;
+    font-size: $font-size-20;
     margin-bottom: 20px;
   }
   &_txt{
@@ -67,7 +69,7 @@
 }
 
 .bl-recentCnt{
-  border-bottom: 1px solid $font-black;
+  // border-bottom: 1px solid $font-black;
   padding-bottom: 16px;
   margin-top: 64px;
   &_ttl{
@@ -83,19 +85,23 @@
   }
   &_list{
     width: 100%;
-    border-bottom: 1px dashed $border-gray;
+    // border-bottom: 1px dashed $border-gray;
     &:last-of-type{
       border: none;
     }
   }
   &_link{
     color: $font-black;
-    padding: 12px 4px;
+    padding: 18px 8px;
     display: block;
   }
   &_pagettl{
     font-size: $font-size-15;
-    margin: 0 0 2px;
+    margin: 0 0 6px;
+  }
+  &_detail{
+    display: flex;
+    justify-content: space-between;
   }
   &_tag{
     display: flex;
@@ -103,7 +109,7 @@
     padding: 0;
     margin-bottom: 2px;
     &_list{
-      padding: 4px 8px;
+      padding: 4px 12px;
       border-radius: 40px;
       background: $bg-light-blue;
       color: $font-gray;
@@ -112,7 +118,7 @@
     }
   }
   &_updateDate{
-    font-size: $font-size-13;
+    font-size: $font-size-12;
     color: $font-gray;
     margin: 0;
   }

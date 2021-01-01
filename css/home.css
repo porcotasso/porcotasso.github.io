@@ -21,21 +21,25 @@
 
 @-webkit-keyframes slideIn {
   from {
-    left: -200px; }
+    left: -200px;
+    opacity: 0.1; }
   50% { }
   to {
-    left: -100px; } }
+    left: -100px;
+    opacity: 0.3; } }
 
 @keyframes slideIn {
   from {
-    left: -200px; }
+    left: -200px;
+    opacity: 0.1; }
   50% { }
   to {
-    left: -100px; } }
+    left: -100px;
+    opacity: 0.3; } }
 
 .bl-summary {
   min-height: 320px;
-  padding-top: 24px;
+  padding-top: 32px;
   padding-bottom: 16px;
   overflow: hidden;
   background: #eff1f3;
@@ -45,7 +49,7 @@
           animation-duration: 3s; }
   .bl-summary_ttl {
     margin-bottom: 20px;
-    font-size: 1.9rem; }
+    font-size: 2rem; }
   .bl-summary_txt {
     margin-left: 2%;
     font-size: 1.4rem; }
@@ -68,8 +72,7 @@
 
 .bl-recentCnt {
   margin-top: 64px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid #181818; }
+  padding-bottom: 16px; }
   .bl-recentCnt_ttl {
     margin: 0 0 16px;
     color: #20bedd;
@@ -80,24 +83,26 @@
     padding: 0;
     list-style: none; }
   .bl-recentCnt_list {
-    width: 100%;
-    border-bottom: 1px dashed #d4d9e6; }
+    width: 100%; }
     .bl-recentCnt_list:last-of-type {
       border: none; }
   .bl-recentCnt_link {
     display: block;
-    padding: 12px 4px;
+    padding: 18px 8px;
     color: #181818; }
   .bl-recentCnt_pagettl {
-    margin: 0 0 2px;
+    margin: 0 0 6px;
     font-size: 1.5rem; }
+  .bl-recentCnt_detail {
+    display: flex;
+    justify-content: space-between; }
   .bl-recentCnt_tag {
     display: flex;
     margin-bottom: 2px;
     padding: 0;
     list-style: none; }
     .bl-recentCnt_tag_list {
-      padding: 4px 8px;
+      padding: 4px 12px;
       border-radius: 40px;
       background: #eef7fb;
       color: #888;
@@ -106,7 +111,7 @@
   .bl-recentCnt_updateDate {
     margin: 0;
     color: #888;
-    font-size: 1.3rem; }
+    font-size: 1.2rem; }
 
 .bl-pageNav {
   padding-top: 64px;

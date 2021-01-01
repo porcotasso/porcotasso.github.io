@@ -35,14 +35,16 @@
                 <li class="bl-recentCnt_list">
                     <a href="<?php echo '/pages/'. $value["html"]; ?>" class="bl-recentCnt_link">
                         <h2 class="bl-recentCnt_pagettl"><?php echo $value["title"];?></h2>
-                        <ul class="bl-recentCnt_tag">
-                            <?php foreach ( $value["tag"] as $name) { ?>
-                            <li class="bl-recentCnt_tag_list">
-                                <?php echo $name; ?>
-                            </li>
-                            <?php } ?>   
-                        </ul>
-                        <p class="bl-recentCnt_updateDate"><?php echo date ("Y.m.d", filemtime($baseUrl.$value["file"])); ?></p>
+                        <div class="bl-recentCnt_detail">
+                            <ul class="bl-recentCnt_tag">
+                                <?php foreach ( $value["tag"] as $name) { ?>
+                                <li class="bl-recentCnt_tag_list">
+                                    <?php echo $name; ?>
+                                </li>
+                                <?php } ?>   
+                            </ul>
+                            <p class="bl-recentCnt_updateDate"><?php echo date ("Y.m.d", filemtime($baseUrl.$value["file"])); ?></p>
+                        </div>
                     </a>
                 </li>
             <?php } ?>

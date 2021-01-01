@@ -252,8 +252,8 @@ $shopifyMemo = array(
 $design = array(
 	"file" => "/php/pages/design.php",
 	"tag" => array("design"),
-	"title" => "design-memo",
-	"lead" => "design-memo",
+	"title" => "デザインメモ",
+	"lead" => "基本的なデザインの考え方についてのメモです。",
 	"html" => "design.html"
 );
 
