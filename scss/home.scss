@@ -13,10 +13,25 @@
   fill: rgb(101, 206, 233);
   width: 75%;
   opacity: 0.3;
+  filter: drop-shadow(0 0px 3px rgba(0, 0, 0, .3));
   // margin-top: -180px;
   // top: 0;
-  // left: 0;  
+  animation-duration: 1s;
+  animation-name: slideIn;
+  left: -100px;  
 }
+@keyframes slideIn {
+  from {
+    left: -200px;
+  }
+  50% {
+  }
+  to {
+    left: -100px;
+  }
+}
+
+
 .bl-summary{
   // border-bottom: 1px solid $font-black;
   overflow: hidden;
@@ -24,21 +39,42 @@
   padding-top: 24px;
   background: $bg-light-gray;
   min-height: 320px;
+  animation-duration: 3s;
+  animation-name: fadeIn;
   &_ttl{
-    font-size: $font-size-17;
+    font-size: $font-size-19;
+    margin-bottom: 20px;
   }
   &_txt{
     font-size: $font-size-14;
     margin-left: 2%;
   }
 }
+
+@keyframes fadeIn {
+  from {
+    background: #fff;
+    color: #fff;
+  }
+  // 50% {
+  //   background: #f8f8f8;
+  //   color: #ccc;
+  // }
+  to {
+    background: $bg-light-gray;
+    color: $font-black;
+  }
+}
+
 .bl-recentCnt{
   border-bottom: 1px solid $font-black;
   padding-bottom: 16px;
   margin-top: 64px;
   &_ttl{
     margin: 0 0 16px;
-    font-size: $font-size-17;
+    font-size: $font-size-18;
+    text-align: center;
+    color: $primary-turquoise;
   }
   &_pages{
     list-style: none;

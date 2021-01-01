@@ -9,20 +9,62 @@
 .svg-logoMark {
   fill: #65cee9;
   position: relative;
+  left: -100px;
   width: 75%;
+  -webkit-animation-name: slideIn;
+          animation-name: slideIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-filter: drop-shadow(0 0px 3px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(0 0px 3px rgba(0, 0, 0, 0.3));
   opacity: 0.3; }
+
+@-webkit-keyframes slideIn {
+  from {
+    left: -200px; }
+  50% { }
+  to {
+    left: -100px; } }
+
+@keyframes slideIn {
+  from {
+    left: -200px; }
+  50% { }
+  to {
+    left: -100px; } }
 
 .bl-summary {
   min-height: 320px;
   padding-top: 24px;
   padding-bottom: 16px;
   overflow: hidden;
-  background: #eff1f3; }
+  background: #eff1f3;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s; }
   .bl-summary_ttl {
-    font-size: 1.7rem; }
+    margin-bottom: 20px;
+    font-size: 1.9rem; }
   .bl-summary_txt {
     margin-left: 2%;
     font-size: 1.4rem; }
+
+@-webkit-keyframes fadeIn {
+  from {
+    background: #fff;
+    color: #fff; }
+  to {
+    background: #eff1f3;
+    color: #181818; } }
+
+@keyframes fadeIn {
+  from {
+    background: #fff;
+    color: #fff; }
+  to {
+    background: #eff1f3;
+    color: #181818; } }
 
 .bl-recentCnt {
   margin-top: 64px;
@@ -30,7 +72,9 @@
   border-bottom: 1px solid #181818; }
   .bl-recentCnt_ttl {
     margin: 0 0 16px;
-    font-size: 1.7rem; }
+    color: #20bedd;
+    font-size: 1.8rem;
+    text-align: center; }
   .bl-recentCnt_pages {
     margin: 0 0 32px 2%;
     padding: 0;
