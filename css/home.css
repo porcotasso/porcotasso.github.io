@@ -12,9 +12,10 @@
   width: 70%; }
 
 .bl-summary {
+  min-height: 400px;
   padding-top: 24px;
   padding-bottom: 16px;
-  border-bottom: 1px solid #181818; }
+  background: #eff1f3; }
   .bl-summary_ttl {
     font-size: 1.7rem; }
   .bl-summary_txt {

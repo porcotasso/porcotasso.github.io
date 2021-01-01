@@ -16,9 +16,11 @@
   // left: 0;  
 }
 .bl-summary{
-  border-bottom: 1px solid $font-black;
+  // border-bottom: 1px solid $font-black;
   padding-bottom: 16px;
   padding-top: 24px;
+  background: $bg-light-gray;
+  min-height: 400px;
   &_ttl{
     font-size: $font-size-17;
   }
