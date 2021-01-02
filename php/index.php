@@ -29,7 +29,7 @@
         </svg>
     </div>
     <div class="bl-recentCnt ly-innnerWidth">
-        <h2 class="bl-recentCnt_ttl">最近更新したページ</h2>
+        <h2 class="bl-recentCnt_ttl">最近更新</h2>
         <ul class="bl-recentCnt_pages">
             <?php foreach($latestContent as $value){ ?>
                 <li class="bl-recentCnt_list">
@@ -51,7 +51,7 @@
         </ul>
     </div>
 
-<?php /*
+
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <?php foreach($latestContent as $value){ ?>
@@ -75,7 +75,7 @@
         <div class="swiper-button-prev"></div> 
         <div class="swiper-button-next"></div>
     </div>
-*/ ?>
+
 
     <!-- <div class="ly-innnerWidth">
         <a href="pages/diary.html">
@@ -197,6 +197,7 @@
     <h2>SVG</h2> -->
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    
 <script src="/js/home.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script> -->
 <?php include("_partial/wrapper-foot.php"); ?>

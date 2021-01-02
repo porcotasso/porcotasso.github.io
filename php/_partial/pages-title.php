@@ -11,6 +11,10 @@
 		<?php if (file_exists($filename)) { ?>
 			<p class="el-updateDate"><?php echo date ("Y.m.d", filemtime($filename)).' 更新'; ?></p>
 		<?php } ?>
+
+
+		<?php /*
+
 		<div class="otherCnt">
 			<?php if (isset($pageLast)) { ?>
 				<a href="<?php echo $pageLast ?>" class="otherCnt_pre"><p class="otherCnt_ttl"><?php echo $pageLastTtl ?></p></a>
@@ -25,8 +29,25 @@
 				<a href="<?php echo $pageFirst ?>" class="otherCnt_pre"><p class="otherCnt_ttl"><?php echo $pageFirstTtl ?></p></a>
 			<?php } ?>	
 		</div>
+
+		*/ ?>
+
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<?php foreach($allPages as $value){ ?>
+					<a href="<?php echo '/pages/'. $value["html"]; ?>" class="swiper-slide">
+						<p class="swiper-slide_cnt"><?php echo $value["title"];?></p>
+					</a>
+				<?php } ?>
+			</div>
+			<!-- <div class="swiper-pagination"></div>
+			<div class="swiper-button-prev"></div> 
+			<div class="swiper-button-next"></div> -->
+		</div>
 	</div>  
 </header>
+
+
 <nav class="bl-toc js-tocTgl" id="js-tocTop">
 	<p class="miniHeaderTtl"><?php echo $title ?></p>
 	<div class="bl-toc_ttl" id="js-tocTtl">目次</div>
@@ -40,3 +61,4 @@
 </nav>
 <p class="articleCnt_summary"><?php echo $lead ?></p>
 <script src="/js/pages.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>

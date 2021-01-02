@@ -1,12 +1,17 @@
 @import "variables";
 
-.ly-homeIco{
-  text-align: center;
-  &_image{
-    width: 50%;
-    max-width: 160px;
-    margin:0 auto $space-unit * 3;
-  }
+// .ly-homeIco{
+//   text-align: center;
+//   &_image{
+//     width: 50%;
+//     max-width: 160px;
+//     margin:0 auto $space-unit * 3;
+//   }
+// }
+.bl-header .headerNav{
+  background: $bg-light-gray;
+  animation-duration: 3s;
+  animation-name: fadeIn;
 }
 .svg-logoMark{
   position: relative;
@@ -77,6 +82,7 @@
     font-size: $font-size-18;
     text-align: center;
     color: $primary-turquoise;
+    letter-spacing: 0.2em;
   }
   &_pages{
     list-style: none;
@@ -111,8 +117,9 @@
     &_list{
       padding: 4px 12px;
       border-radius: 40px;
-      background: $bg-light-blue;
-      color: $font-gray;
+      background: #fff;
+      border: 1px solid $primary-turquoise;
+      color: $primary-turquoise;
       font-size: $font-size-13;
       line-height: 1;
     }

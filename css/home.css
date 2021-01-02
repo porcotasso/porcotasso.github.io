@@ -1,10 +1,10 @@
 @charset "UTF-8";
-.ly-homeIco {
-  text-align: center; }
-  .ly-homeIco_image {
-    width: 50%;
-    max-width: 160px;
-    margin: 0 auto 24px; }
+.bl-header .headerNav {
+  background: #eff1f3;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s; }
 
 .svg-logoMark {
   fill: #65cee9;
@@ -77,6 +77,7 @@
     margin: 0 0 16px;
     color: #20bedd;
     font-size: 1.8rem;
+    letter-spacing: 0.2em;
     text-align: center; }
   .bl-recentCnt_pages {
     margin: 0 0 32px 2%;
@@ -103,9 +104,10 @@
     list-style: none; }
     .bl-recentCnt_tag_list {
       padding: 4px 12px;
+      border: 1px solid #20bedd;
       border-radius: 40px;
-      background: #eef7fb;
-      color: #888;
+      background: #fff;
+      color: #20bedd;
       font-size: 1.3rem;
       line-height: 1; }
   .bl-recentCnt_updateDate {
