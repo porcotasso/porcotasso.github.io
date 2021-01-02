@@ -90,12 +90,23 @@ window.addEventListener('scroll', saFunc);
 
 
 //swiper
+
+var articleCntTtl = document.getElementById('js-articleCntTtl').textContent;
+var swiperSliderTtl = document.getElementsByClassName('js-swiperSliderTtl');
+var array = Array.prototype.slice.call(swiperSliderTtl);//配列に変換
+let pageNumber = 0;
+for (let i = 0; i < array.length; i++) {
+  if (array[i].outerText == articleCntTtl){
+    pageNumber = i - 2;
+  }
+}
+//swiper
 var mySwiper = new Swiper ('.swiper-container', {
-  initialSlide: 5,
+  initialSlide: pageNumber,
 	// autoplay: {
 	// 	delay: 2500,
 	// },
-	// loop: true,
+	loop: true,
 	// speed: 500,
 	// ここから
 	// pagination: {
@@ -116,3 +127,9 @@ var mySwiper = new Swiper ('.swiper-container', {
 		}
 	}
 });
+
+
+
+
+// console.log(articleCntTtl2);
+// console.log(array);

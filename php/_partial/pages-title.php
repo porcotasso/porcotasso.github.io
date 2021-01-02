@@ -1,6 +1,6 @@
 <header>
 	<div class="articleCnt_headerBox">
-		<h1><?php echo $title ?></h1>
+		<h1 id="js-articleCntTtl"><?php echo $title ?></h1>
 		<ul class="tagLists">
 			<?php foreach ( $tag as $name) { ?>
 			<li class="tagLists_list">
@@ -36,7 +36,7 @@
 			<div class="swiper-wrapper">
 				<?php foreach($allPages as $value){ ?>
 					<a href="<?php echo '/pages/'. $value["html"]; ?>" class="swiper-slide">
-						<p class="swiper-slide_cnt"><?php echo $value["title"];?></p>
+						<p class="swiper-slide_ttl js-swiperSliderTtl"><?php echo $value["title"];?></p>
 					</a>
 				<?php } ?>
 			</div>

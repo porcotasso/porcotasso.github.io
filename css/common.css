@@ -924,7 +924,7 @@ td {
   background: #fff url("/images/common/dot.svg"); }
   .swiper-container .swiper-wrapper {
     align-items: center; }
-    .swiper-container .swiper-wrapper .swiper-slide_cnt {
+    .swiper-container .swiper-wrapper .swiper-slide_ttl {
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;
       display: -webkit-box;
