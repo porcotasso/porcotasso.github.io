@@ -89,20 +89,21 @@ window.addEventListener('load', saFunc);
 window.addEventListener('scroll', saFunc);
 
 
-//swiper
-
+//swiper set 'initialSlide'
 var articleCntTtl = document.getElementById('js-articleCntTtl').textContent;
 var swiperSliderTtl = document.getElementsByClassName('js-swiperSliderTtl');
 var array = Array.prototype.slice.call(swiperSliderTtl);//配列に変換
 let pageNumber = 0;
 for (let i = 0; i < array.length; i++) {
   if (array[i].outerText == articleCntTtl){
-    pageNumber = i - 2;
+    pageNumber = i ;
   }
 }
+
 //swiper
 var mySwiper = new Swiper ('.swiper-container', {
   initialSlide: pageNumber,
+  centeredSlides: true,
 	// autoplay: {
 	// 	delay: 2500,
 	// },
@@ -129,6 +130,16 @@ var mySwiper = new Swiper ('.swiper-container', {
 });
 
 
+let pagesActive = document.getElementsByClassName('swiper-slide-active');
+pagesActive[0].classList.add('pagesActive');
+let pagesActiveNumber = pagesActive[0].getAttribute('data-swiper-slide-index');
+document.getElementById('js-swiperNumber').insertAdjacentHTML('afterbegin', pagesActiveNumber);
+
+// console.log('bbb');
+
+// 
+// console.log(number);
+// console.log(array1);
 
 
 // console.log(articleCntTtl2);

@@ -672,7 +672,8 @@ td {
       font-size: 1.3rem;
       line-height: 1; }
   .articleCnt_headerBox .el-updateDate {
-    margin: 0 5% 8px;
+    margin: 0 5%;
+    padding-bottom: 8px;
     color: #888;
     font-size: 1.3rem;
     text-align: right; }
@@ -721,6 +722,14 @@ td {
       font-size: 1.3rem;
       line-height: 1.4;
       text-overflow: ellipsis; }
+
+.articleCnt_index {
+  display: flex;
+  justify-content: center;
+  color: #888;
+  font-size: 1rem; }
+  .articleCnt_index_active {
+    color: #666; }
 
 .articleCnt_summary {
   padding: 16px 5%; }
@@ -785,7 +794,7 @@ td {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  margin: 0 0 16px;
+  margin: 32px 0 16px;
   padding: 0; }
   .articleCnt .bl-toc .bl-toc_ttl {
     display: block;
@@ -920,10 +929,12 @@ td {
       transition-duration: .3s; }
 
 .swiper-container {
-  padding: 12px 0;
+  padding: 16px 0;
   background: #fff url("/images/common/dot.svg"); }
   .swiper-container .swiper-wrapper {
     align-items: center; }
+    .swiper-container .swiper-wrapper .swiper-slide.pagesActive {
+      pointer-events: none; }
     .swiper-container .swiper-wrapper .swiper-slide_ttl {
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 2;

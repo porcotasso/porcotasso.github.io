@@ -284,7 +284,8 @@ td{
 		.el-updateDate{
 			font-size: $font-size-13;
 			text-align: right;
-			margin: 0 $gutter-width 8px;
+			margin: 0 $gutter-width;
+			padding-bottom: 8px;
 			color: $font-gray;
 		}
 		.otherCnt{
@@ -360,6 +361,18 @@ td{
 			// }
 	// 	}
 	// }
+	&_index{
+		display: flex;
+		font-size: $font-size-10;
+		color: $font-gray;
+		justify-content: center;
+		&_active{
+			color: $font-dark-gray;
+		}
+		&_all{
+
+		}
+	}
 	&_summary{
 		padding: 16px $gutter-width;
 		&::before{
@@ -438,7 +451,7 @@ td{
 		top: 0;
 		z-index: 10;
 		padding: 0;
-		margin:0 0 16px;
+		margin:32px 0 16px;
 		.bl-toc_ttl{
 			text-align: right;
 			padding: 12px 16px;
@@ -637,10 +650,16 @@ font-weight: bold;
 
 .swiper-container{
 	background: #fff url('/images/common/dot.svg');
-    padding:12px 0;
+    padding:16px 0;
   .swiper-wrapper{
 	  align-items: center;
     .swiper-slide{
+		&.swiper-slide-active{
+			// pointer-events: none;
+		}
+		&.pagesActive{
+			pointer-events: none;
+		}
       &_ttl{
 		line-height: 1.1;
 		text-align: center;

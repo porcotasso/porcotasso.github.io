@@ -12,9 +12,7 @@
 			<p class="el-updateDate"><?php echo date ("Y.m.d", filemtime($filename)).' 更新'; ?></p>
 		<?php } ?>
 
-
 		<?php /*
-
 		<div class="otherCnt">
 			<?php if (isset($pageLast)) { ?>
 				<a href="<?php echo $pageLast ?>" class="otherCnt_pre"><p class="otherCnt_ttl"><?php echo $pageLastTtl ?></p></a>
@@ -29,22 +27,26 @@
 				<a href="<?php echo $pageFirst ?>" class="otherCnt_pre"><p class="otherCnt_ttl"><?php echo $pageFirstTtl ?></p></a>
 			<?php } ?>	
 		</div>
-
 		*/ ?>
 
-		<div class="swiper-container">
-			<div class="swiper-wrapper">
-				<?php foreach($allPages as $value){ ?>
-					<a href="<?php echo '/pages/'. $value["html"]; ?>" class="swiper-slide">
-						<p class="swiper-slide_ttl js-swiperSliderTtl"><?php echo $value["title"];?></p>
-					</a>
-				<?php } ?>
-			</div>
-			<!-- <div class="swiper-pagination"></div>
-			<div class="swiper-button-prev"></div> 
-			<div class="swiper-button-next"></div> -->
-		</div>
 	</div>  
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<?php foreach($allPages as $value){ ?>
+				<a href="<?php echo '/pages/'. $value["html"]; ?>" class="swiper-slide swiper-slide_ttl js-swiperSliderTtl">
+					<?php echo $value["title"];?>
+				</a>
+			<?php } ?>
+		</div>
+		<!-- <div class="swiper-pagination"></div>
+		<div class="swiper-button-prev"></div> 
+		<div class="swiper-button-next"></div> -->
+	</div>
+	<div class="articleCnt_index">
+		<span class="articleCnt_index_active" id="js-swiperNumber"></span>
+		<span class="articleCnt_index_slash">/</span>
+		<span class="articleCnt_index_all"><?php echo (count($allPages)) ?></span>
+	</div>
 </header>
 
 
