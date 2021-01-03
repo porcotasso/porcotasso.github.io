@@ -30,22 +30,24 @@
 		*/ ?>
 
 	</div>  
-	<div class="swiper-container">
-		<div class="swiper-wrapper">
-			<?php foreach($allPages as $value){ ?>
-				<a href="<?php echo '/pages/'. $value["html"]; ?>" class="swiper-slide swiper-slide_ttl js-swiperSliderTtl">
-					<?php echo $value["title"];?>
-				</a>
-			<?php } ?>
+	<div class="cntList">
+		<div class="swiper-container" id="js-swiperWrapper">
+			<div class="swiper-wrapper" >
+				<?php foreach($allPages as $value){ ?>
+					<a href="<?php echo '/pages/'. $value["html"]; ?>" class="swiper-slide  js-swiperSliderTtl">
+						<p class="swiper-slide_ttl"><?php echo $value["title"];?></p>
+					</a>
+				<?php } ?>
+			</div>
+			<!-- <div class="swiper-pagination"></div>
+			<div class="swiper-button-prev"></div> 
+			<div class="swiper-button-next"></div> -->
 		</div>
-		<!-- <div class="swiper-pagination"></div>
-		<div class="swiper-button-prev"></div> 
-		<div class="swiper-button-next"></div> -->
-	</div>
-	<div class="articleCnt_index">
-		<span class="articleCnt_index_active" id="js-swiperNumber"></span>
-		<span class="articleCnt_index_slash">/</span>
-		<span class="articleCnt_index_all"><?php echo (count($allPages)) ?></span>
+		<div class="cntList_index">
+			<span class="cntList_index_active" id="js-numberArea"></span>
+			<span class="cntList_index_slash">/</span>
+			<span class="cntList_index_all"><?php echo (count($allPages)) ?></span>
+		</div>
 	</div>
 </header>
 

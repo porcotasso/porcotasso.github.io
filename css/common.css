@@ -671,6 +671,8 @@ td {
       color: #888;
       font-size: 1.3rem;
       line-height: 1; }
+      .articleCnt_headerBox .tagLists_list + .tagLists_list {
+        margin-left: 3px; }
   .articleCnt_headerBox .el-updateDate {
     margin: 0 5%;
     padding-bottom: 8px;
@@ -722,14 +724,6 @@ td {
       font-size: 1.3rem;
       line-height: 1.4;
       text-overflow: ellipsis; }
-
-.articleCnt_index {
-  display: flex;
-  justify-content: center;
-  color: #888;
-  font-size: 1rem; }
-  .articleCnt_index_active {
-    color: #666; }
 
 .articleCnt_summary {
   padding: 16px 5%; }
@@ -928,27 +922,51 @@ td {
       content: "";
       transition-duration: .3s; }
 
-.swiper-container {
-  padding: 16px 0;
+.cntList {
   background: #fff url("/images/common/dot.svg"); }
-  .swiper-container .swiper-wrapper {
+  .cntList .swiper-container .swiper-wrapper {
     align-items: center; }
-    .swiper-container .swiper-wrapper .swiper-slide.pagesActive {
+    .cntList .swiper-container .swiper-wrapper .swiper-slide.pagesActive {
+      position: relative;
       pointer-events: none; }
-    .swiper-container .swiper-wrapper .swiper-slide_ttl {
+      .cntList .swiper-container .swiper-wrapper .swiper-slide.pagesActive .swiper-slide_ttl {
+        display: table;
+        width: 22px;
+        height: 22px;
+        margin: 12px auto 2px;
+        padding: 3px;
+        border: 1px solid #d8d8d8;
+        border-radius: 30px;
+        background: #fff;
+        color: #888;
+        font-size: 0; }
+      .cntList .swiper-container .swiper-wrapper .swiper-slide.pagesActive:first-letter {
+        font-size: 1.4rem;
+        line-height: 1; }
+      .cntList .swiper-container .swiper-wrapper .swiper-slide.pagesActive::after {
+        position: absolute;
+        top: 0;
+        left: calc(50% - 11px);
+        width: 0;
+        height: 0;
+        border-top: 11px solid #eef7fb;
+        border-right: 11px solid transparent;
+        border-left: 11px solid transparent;
+        content: ""; }
+    .cntList .swiper-container .swiper-wrapper .swiper-slide_ttl {
       -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 1;
       display: -webkit-box;
-      margin: 0 auto;
-      padding: 0 3px;
+      margin: 0 auto 6px;
+      padding: 14px 3px 0;
       overflow: hidden;
       color: #181818;
       font-size: 1.1rem;
       line-height: 1.1;
       text-align: center; }
-  .swiper-container .swiper-button-next, .swiper-container .swiper-button-prev {
+  .cntList .swiper-container .swiper-button-next, .cntList .swiper-container .swiper-button-prev {
     background: none; }
-    .swiper-container .swiper-button-next:after, .swiper-container .swiper-button-prev:after {
+    .cntList .swiper-container .swiper-button-next:after, .cntList .swiper-container .swiper-button-prev:after {
       display: inline-block;
       position: absolute;
       right: 25px;
@@ -958,16 +976,24 @@ td {
       border-right: 1px solid #d8d8d8;
       border-bottom: 1px solid #d8d8d8;
       content: ""; }
-    .swiper-container .swiper-button-next:focus, .swiper-container .swiper-button-prev:focus {
+    .cntList .swiper-container .swiper-button-next:focus, .cntList .swiper-container .swiper-button-prev:focus {
       outline: 0 !important; }
-  .swiper-container .swiper-button-prev:after {
+  .cntList .swiper-container .swiper-button-prev:after {
     transform: rotate(135deg); }
-  .swiper-container .swiper-button-next:after {
+  .cntList .swiper-container .swiper-button-next:after {
     transform: rotate(-45deg); }
-  .swiper-container.swiper-container-horizontal > .swiper-pagination-bullets {
+  .cntList .swiper-container.swiper-container-horizontal > .swiper-pagination-bullets {
     bottom: 18px; }
-    .swiper-container.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    .cntList .swiper-container.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
       background: #eff1f3; }
-      .swiper-container.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
+      .cntList .swiper-container.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
         background: #f76eb5; }
+  .cntList_index {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2px;
+    color: #888;
+    font-size: 1rem; }
+    .cntList_index_active {
+      color: #666; }
 /*# sourceMappingURL=maps/common.css.map */

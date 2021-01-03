@@ -47,7 +47,7 @@
             <h3>img要素で設置</h3>
             <p>他のフォーマットの画像と同じようにimg要素で画像を表示</p>
 <pre class="prettyprint">
-<img src="logomark.svg" width="32" height="32">
+<img src="../images/common/cite-arrow.svg" width="32" height="32">
 </pre>
             <h3>object要素で設置</h3>
             <p>object要素で画像を表示</p>
@@ -57,7 +57,8 @@
             <h3>背景画像として表示する</h3>
             <p>CSSのbackgroundプロパティを使って背景画像として表示</p>
 <pre class="prettyprint">
-<div style="width:32px; height:32px; background-image:url(logomark.svg); background-size:100%;"></div>
+<div style='width:32px; height:32px; background-image: url("../images/common/cite-arrow.svg"); background-size:100%;'></div>
+
 </pre>
             <h3>svg要素を直接書き込む</h3>
             <p>SVGファイル内のsvg要素をHTMLにコピペして画像を表示</p>
