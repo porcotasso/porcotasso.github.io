@@ -647,6 +647,7 @@ font-weight: bold;
 			.swiper-slide{
 			&.swiper-slide-active{
 				// pointer-events: none;
+				font-weight: bold;
 			}
 			&.pagesActive{
 				pointer-events: none;
@@ -685,7 +686,7 @@ font-weight: bold;
 				line-height: 1.1;
 				text-align: center;
 				// display: table;
-				padding: 14px 3px 0;
+				padding: 14px 3px 3px;
 				font-size: $font-size-11;
 				color: $font-black;
 				margin: 0 auto 6px;
@@ -795,7 +796,7 @@ font-weight: bold;
 		font-size: $font-size-10;
 		color: $font-gray;
 		justify-content: center;
-		padding-bottom: 2px;
+		padding-bottom: 3px;
 		&_active{
 			color: $font-dark-gray;
 		}

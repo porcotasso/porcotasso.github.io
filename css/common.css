@@ -926,6 +926,8 @@ td {
   background: #fff url("/images/common/dot.svg"); }
   .cntList .swiper-container .swiper-wrapper {
     align-items: center; }
+    .cntList .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active {
+      font-weight: bold; }
     .cntList .swiper-container .swiper-wrapper .swiper-slide.pagesActive {
       position: relative;
       pointer-events: none; }
@@ -958,7 +960,7 @@ td {
       -webkit-line-clamp: 1;
       display: -webkit-box;
       margin: 0 auto 6px;
-      padding: 14px 3px 0;
+      padding: 14px 3px 3px;
       overflow: hidden;
       color: #181818;
       font-size: 1.1rem;
@@ -991,7 +993,7 @@ td {
   .cntList_index {
     display: flex;
     justify-content: center;
-    padding-bottom: 2px;
+    padding-bottom: 3px;
     color: #888;
     font-size: 1rem; }
     .cntList_index_active {
