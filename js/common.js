@@ -90,18 +90,31 @@ window.addEventListener('scroll', saFunc);
 
 
 //swiper set 'initialSlide'
-var articleCntTtl = document.getElementById('js-articleCntTtl').textContent;
-var swiperSliderTtl = document.getElementsByClassName('js-swiperSliderTtl');
-var array = Array.prototype.slice.call(swiperSliderTtl);//配列に変換
-let pageNumber = 0;
-for (let n = 0; n < array.length; n++) {
-  if (array[n].outerText == articleCntTtl){
-    pageNumber = n ;
-  }
-}
+let pageNumber = Number(document.getElementById('js-articleCntTtl').getAttribute('name'));
+// var swiperSliderTtl = document.getElementsByClassName('js-swiperSliderTtl');
+// var array = Array.prototype.slice.call(swiperSliderTtl);//配列に変換
+// let pageNumber = 0;
+	
+
+// for (let n = 0; n < array.length; n++) {
+//   console.log(array[n].outerText.normalize('NFD'));
+//   console.log(articleCntTtl.normalize('NFD'));
+
+//   // console.log(array[n].outerText);
+//   // console.log(articleCntTtl);
+//   if (array[n].outerText.normalize( "NFD" ) == articleCntTtl.normalize( "NFD" )){
+//     console.log(array[n].outerText);
+//     console.log(articleCntTtl);
+//     pageNumber = n;
+//     console.log(pageNumber);
+//     console.log('aaaaa');
+//     break;
+//   }
+
 
 //swiper
 var mySwiper = new Swiper ('.swiper-container', {
+  
   initialSlide: pageNumber,
   centeredSlides: true,
 	// autoplay: {
@@ -113,10 +126,10 @@ var mySwiper = new Swiper ('.swiper-container', {
 	// pagination: {
 	// 	el: '.swiper-pagination',
 	// },
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
+	// navigation: {
+	// 	nextEl: '.swiper-button-next',
+	// 	prevEl: '.swiper-button-prev',
+	// },
 	// ここまでを追加
 	slidesPerView: 9,    // 追加...1度に表示するスライド枚数
 	spaceBetween: 4,    // 追加...スライド間の余白
