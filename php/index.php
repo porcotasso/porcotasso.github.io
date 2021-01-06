@@ -29,29 +29,42 @@
         </svg>
     </div>
     <div class="bl-recentCnt ly-innnerWidth">
-        <h2 class="bl-recentCnt_ttl">最近更新</h2>
+        <h2 class="bl-recentCnt_ttl">更新ページ</h2>
         <ul class="bl-recentCnt_pages">
             <?php foreach($latestContent as $value){ ?>
                 <li class="bl-recentCnt_list">
                     <a href="<?php echo '/pages/'. $value["html"]; ?>" class="bl-recentCnt_link">
-                        <h2 class="bl-recentCnt_pagettl"><?php echo $value["title"];?></h2>
-                        <div class="bl-recentCnt_detail">
-                            <ul class="bl-recentCnt_tag">
-                                <?php foreach ( $value["tag"] as $name) { ?>
-                                <li class="bl-recentCnt_tag_list">
-                                    <?php echo $name; ?>
-                                </li>
-                                <?php } ?>   
-                            </ul>
-                            <p class="bl-recentCnt_updateDate"><?php echo date ("Y.m.d", filemtime($baseUrl.$value["file"])); ?></p>
-                        </div>
+                        <?php echo $value["title"];?>
                     </a>
+                    <div class="bl-recentCnt_detail">
+                        <ul class="bl-recentCnt_tag">
+                            <?php foreach ( $value["tag"] as $name) { ?>
+                            <li class="bl-recentCnt_tagList">
+                                <div class="bl-recentCnt_tagMark js-tagMark"><?php echo $name; ?></div>
+                                <?php foreach($pageLists as $list){ ?>
+                                    <?php if( $name == $list["title"]){ ?>
+                                        <ul class="bl-recentCnt_related js-related">
+                                            <?php foreach($list["pages"] as $page){ ?>
+                                            <li  class="bl-recentCnt_relatedList">
+                                                <a href="<?php echo '/pages/'. $page["html"]; ?>" class="bl-recentCnt_relatedLink">
+                                                    <?php echo $page["title"]; ?>
+                                                </a>
+                                            </li>
+                                            <?php } ?>
+                                        </ul>
+                                    <?php } ?>   
+                                <?php } ?>   
+                            </li>
+                            <?php } ?>   
+                        </ul>
+                        <p class="bl-recentCnt_updateDate"><?php echo date ("Y.m.d", filemtime($baseUrl.$value["file"])); ?></p>
+                    </div>
                 </li>
             <?php } ?>
         </ul>
     </div>
 
-
+<?php /*
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <?php foreach($latestContent as $value){ ?>
@@ -75,7 +88,7 @@
         <div class="swiper-button-prev"></div> 
         <div class="swiper-button-next"></div>
     </div>
-
+*/ ?>
 
     <!-- <div class="ly-innnerWidth">
         <a href="pages/diary.html">
@@ -113,6 +126,7 @@
             </ul>
         </div> -->
 </main>
+
 <nav class="bl-pageNav ly-innnerWidth">
     <h2 class="bl-pageNav_ttl">メニュー</h2>
     <ul class="bl-pageNav_list">

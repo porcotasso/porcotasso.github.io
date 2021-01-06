@@ -925,9 +925,7 @@ td {
 .cntList {
   background: #fff url("/images/common/dot.svg"); }
   .cntList .swiper-container .swiper-wrapper {
-    align-items: center; }
-    .cntList .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active {
-      font-weight: bold; }
+    align-items: flex-start; }
     .cntList .swiper-container .swiper-wrapper .swiper-slide.pagesActive {
       position: relative;
       pointer-events: none; }
@@ -957,10 +955,10 @@ td {
         content: ""; }
     .cntList .swiper-container .swiper-wrapper .swiper-slide_ttl {
       -webkit-box-orient: vertical;
-      -webkit-line-clamp: 1;
+      -webkit-line-clamp: 2;
       display: -webkit-box;
       margin: 0 auto 6px;
-      padding: 14px 3px 3px;
+      padding: 14px 3px 0;
       overflow: hidden;
       color: #181818;
       font-size: 1.1rem;

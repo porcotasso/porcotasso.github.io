@@ -80,20 +80,19 @@
     letter-spacing: 0.2em;
     text-align: center; }
   .bl-recentCnt_pages {
-    margin: 0 0 32px 2%;
+    margin: 0 0 32px;
     padding: 0;
     list-style: none; }
   .bl-recentCnt_list {
-    width: 100%; }
+    width: 100%;
+    padding: 16px 8px;
+    border-bottom: 1px dashed #d4d9e6; }
     .bl-recentCnt_list:last-of-type {
       border: none; }
   .bl-recentCnt_link {
     display: block;
-    padding: 18px 8px;
+    margin-bottom: 4px;
     color: #181818; }
-  .bl-recentCnt_pagettl {
-    margin: 0 0 6px;
-    font-size: 1.5rem; }
   .bl-recentCnt_detail {
     display: flex;
     justify-content: space-between; }
@@ -102,14 +101,34 @@
     margin-bottom: 2px;
     padding: 0;
     list-style: none; }
-    .bl-recentCnt_tag_list {
-      padding: 4px 12px;
-      border: 1px solid #20bedd;
-      border-radius: 40px;
-      background: #fff;
-      color: #20bedd;
-      font-size: 1.3rem;
-      line-height: 1; }
+  .bl-recentCnt_tagList {
+    position: relative; }
+  .bl-recentCnt_tagMark {
+    padding: 4px 12px;
+    border: 1px solid #20bedd;
+    border-radius: 40px;
+    background: #fff;
+    color: #20bedd;
+    font-size: 1.3rem;
+    line-height: 1; }
+  .bl-recentCnt_related {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: 12px 8px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    list-style: none; }
+    .bl-recentCnt_related.is-active {
+      display: block; }
+  .bl-recentCnt_relatedList {
+    line-height: 1.3; }
+  .bl-recentCnt_relatedLink {
+    font-size: 1.3rem; }
   .bl-recentCnt_updateDate {
     margin: 0;
     color: #888;

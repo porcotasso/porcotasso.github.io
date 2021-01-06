@@ -92,7 +92,7 @@ $headerSmaller = array(
 //javascript memo
 $javascriptMemo = array(
 	"file" => "/php/pages/javascript-memo.php",
-	"tag" => array("js"),
+	"tag" => array("javascript"),
 	"title" => "javascriptmemo",
 	"lead" => "メモ",
 	"html" => "javascript-memo.html"
@@ -100,7 +100,7 @@ $javascriptMemo = array(
 //day-js
 $dayJs = array(
 	"file" => "/php/pages/day-js.php",
-	"tag" => array("js"),
+	"tag" => array("javascript"),
 	"title" => "day-js",
 	"lead" => "Day.jsは軽量（2KB）で多くのブラウザでサポートされているJavaScriptの日付操作ライブラリです。",
 	"html" => "day-js.html"
@@ -108,7 +108,7 @@ $dayJs = array(
 //js-date
 $jsDate = array(
 	"file" => "/php/pages/js-date.php",
-	"tag" => array("js"),
+	"tag" => array("javascript"),
 	"title" => "js-date",
 	"lead" => "メモ",
 	"html" => "js-date.html"
@@ -116,7 +116,7 @@ $jsDate = array(
 //js-scroll
 $jsScroll = array(
 	"file" => "/php/pages/js-scroll.php",
-	"tag" => array("js"),
+	"tag" => array("javascript"),
 	"title" => "js-scroll",
 	"lead" => "メモ",
 	"html" => "js-scroll.html"
@@ -132,42 +132,42 @@ $jsScrollTop = array(
 
 $eventHandler = array(
 	"file" => "/php/pages/event-handler.php",
-	"tag" => array("js"),
+	"tag" => array("javascript"),
 	"title" => "イベントハンドラーの種類と使い方",
 	"lead" => "イベントハンドラーの種類と使い方、addEventListenerの使い方についての説明です。",
 	"html" => "event-handler.html"
 );
 $jsArrowFunction = array(
 	"file" => "/php/pages/arrow-function.php",
-	"tag" => array("js"),
+	"tag" => array("javascript"),
 	"title" => "アロー関数とは",
 	"lead" => "アロー関数とは関数リテラルをシンプルに記述する方法です。",
 	"html" => "arrow-function.html"
 );
 $eventPropagation = array(
 	"file" => "/php/pages/event-propagation.php",
-	"tag" => array("js"),
+	"tag" => array("javascript"),
 	"title" => "イベント伝搬とは",
 	"lead" => "イベントハンドラーが呼ばれる順番について",
 	"html" => "event-propagation.html"
 );
 $scrollJunk = array(
 	"file" => "/php/pages/scroll-junk.php",
-	"tag" => array("js"),
+	"tag" => array("javascript"),
 	"title" => "スクロールジャンクとは",
 	"lead" => "スクロールジャンクとその防ぎ方について",
 	"html" => "scroll-junk.html"
 );
 $touchEvent = array(
 	"file" => "/php/pages/touch-event.php",
-	"tag" => array("js"),
+	"tag" => array("javascript"),
 	"title" => "touch-event",
 	"lead" => "touch-event",
 	"html" => "touch-event.html"
 );
 $jsMarker = array(
 	"file" => "/php/pages/js-marker.php",
-	"tag" => array("js"),
+	"tag" => array("javascript"),
 	"title" => "黄色いmarkerアニメーション",
 	"lead" => "黄色いmarkerを引くアニメーションをjavascriptで作りました",
 	"html" => "js-marker.html"
@@ -175,7 +175,7 @@ $jsMarker = array(
 //js-nodelist
 $jsNodelist = array(
 	"file" => "/php/pages/js-nodelist.php",
-	"tag" => array("js"),
+	"tag" => array("javascript"),
 	"title" => "nodelist",
 	"lead" => "ノードリストにはliveとstaticがあります",
 	"html" => "js-nodelist.html"
@@ -183,7 +183,7 @@ $jsNodelist = array(
 //js-swiper
 $jsSwiper = array(
 	"file" => "/php/pages/js-swiper.php",
-	"tag" => array("js"),
+	"tag" => array("javascript"),
 	"title" => "カルーセルスライダー",
 	"lead" => "ホームのカルーセルスライダーにupdateの新しい順にコンテンツを並べ、swiper.jsを使って動きを追加します。",
 	"html" => "js-swiper.html"
@@ -249,7 +249,7 @@ $shopifyMemo = array(
 	"html" => "shopify-memo.html"
 );
 //design
-$design = array(
+$designMemo = array(
 	"file" => "/php/pages/design.php",
 	"tag" => array("design"),
 	"title" => "デザインメモ",
@@ -265,12 +265,12 @@ $allPages = array(
 	$javascriptMemo, $eventHandler,$jsArrowFunction, $eventPropagation, $scrollJunk, $touchEvent, $dayJs, $jsDate, $jsMarker, $jsNodelist, $jsScrollTop, $jsSwiper,
 	$phpMemo,$phpFilemtime,
 	$environmentSummary, $gulpfile, $gitFetch, $browserRenderingEngine,
-	$svg, $design,
+	$svg, $designMemo,
 	$shopifyMemo
 );
 
 // 2.新規タグを作ったら空のタグの変数を作る。
-$tagHtml = $tagCss = $tagParts = $tagJs = $tagPhp = $tagEnvironment = $tagSvg = $tagShopify = $tagWorksite = array();
+$tagHtml = $tagCss = $tagParts = $tagJs = $tagPhp = $tagEnvironment = $tagSvg = $tagShopify = $tagWorksite = $tagDesign = array();
 
 // 3..新規タグを作ったらesleifを追加してタグが当てはまるページを2の配列に追加する
 $count=count($allPages);
@@ -282,7 +282,7 @@ for($i = 0; $i < $count; $i++){
 		array_push($tagCss, $variable);
 	} elseif (in_array("parts", $allPages[$i]["tag"])){
 		array_push($tagParts, $variable);
-	} elseif (in_array("js", $allPages[$i]["tag"])){
+	} elseif (in_array("javascript", $allPages[$i]["tag"])){
 		array_push($tagJs, $variable);
 	} elseif (in_array("php", $allPages[$i]["tag"])){
 		array_push($tagPhp, $variable);
@@ -292,6 +292,8 @@ for($i = 0; $i < $count; $i++){
 		array_push($tagSvg, $variable);
 	} elseif (in_array("shopify", $allPages[$i]["tag"])){
 		array_push($tagShopify, $variable);
+	} elseif (in_array("shopify", $allPages[$i]["tag"])){
+		array_push($tagDesign, $variable);
 	}
 }
 // 上のコードを効率化してみたけど、最後の$tagArray[$n]が各タグの変数として認識せず各タグにどのページが入っているかを追加できない
@@ -349,6 +351,11 @@ $workSite = array(
 	"title" => "現実的な問題点",
 	"lead" => "ルールを完璧に満たしたコーディングが理想だけど、現実的にはいろんな問題が起きるのでメモと考察",
 	"pages" => $tagWorksite
+);
+$design = array(
+	"title" => "現実的な問題点",
+	"lead" => "",
+	"pages" => $tagDesign
 );
 
 $pageLists = array($codeHtml, $codeCss, $codeParts, $codeJs, $codePhp, $codeEnv, $codeSvg, $shopify, $workSite);

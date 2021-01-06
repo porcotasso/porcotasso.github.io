@@ -25,6 +25,9 @@ document.addEventListener('DOMContentLoaded',() => {
 });
 
 
+
+
+
 // escape code in pre tag
   var escapeHtml = (function (String) {
     var escapeMap = {
@@ -88,77 +91,3 @@ var saFunc = function() {
 window.addEventListener('load', saFunc);
 window.addEventListener('scroll', saFunc);
 
-
-//swiper set 'initialSlide'
-let pageNumber = Number(document.getElementById('js-articleCntTtl').getAttribute('name'));
-// var swiperSliderTtl = document.getElementsByClassName('js-swiperSliderTtl');
-// var array = Array.prototype.slice.call(swiperSliderTtl);//配列に変換
-// let pageNumber = 0;
-	
-
-// for (let n = 0; n < array.length; n++) {
-//   console.log(array[n].outerText.normalize('NFD'));
-//   console.log(articleCntTtl.normalize('NFD'));
-
-//   // console.log(array[n].outerText);
-//   // console.log(articleCntTtl);
-//   if (array[n].outerText.normalize( "NFD" ) == articleCntTtl.normalize( "NFD" )){
-//     console.log(array[n].outerText);
-//     console.log(articleCntTtl);
-//     pageNumber = n;
-//     console.log(pageNumber);
-//     console.log('aaaaa');
-//     break;
-//   }
-
-
-//swiper
-var mySwiper = new Swiper ('.swiper-container', {
-  
-  initialSlide: pageNumber,
-  centeredSlides: true,
-	// autoplay: {
-	// 	delay: 2500,
-	// },
-	loop: true,
-	// speed: 500,
-	// ここから
-	// pagination: {
-	// 	el: '.swiper-pagination',
-	// },
-	// navigation: {
-	// 	nextEl: '.swiper-button-next',
-	// 	prevEl: '.swiper-button-prev',
-	// },
-	// ここまでを追加
-	slidesPerView: 9,    // 追加...1度に表示するスライド枚数
-	spaceBetween: 4,    // 追加...スライド間の余白
-	// ブレイクポイントを設定
-	breakpoints: {
-		767: {
-		slidesPerView: 5,
-		spaceBetween: 0,
-		}
-	}
-});
-
-// swiper をスライドするたびに真ん中の番号を更新する
-
-let pagesActive = document.getElementsByClassName('swiper-slide-active');
-pagesActive[0].classList.add('pagesActive');//今のページのタイトルをクリックをできなくする
-let pagesActiveNumber = Number(pagesActive[0].getAttribute('data-swiper-slide-index'));//番号を代入
-document.getElementById('js-numberArea').insertAdjacentHTML('afterbegin', pagesActiveNumber + 1);
-
-function aaaa (){
-  let numberArea = document.getElementById('js-numberArea');
-  numberArea.insertAdjacentHTML('afterend','<span class="articleCnt_index_active" id="js-numberAreaNew"></span>');
-  numberArea.remove();
-  let pagesActive = document.getElementsByClassName('swiper-slide-active');//新規に番号を取得
-  let pagesActiveNumber = Number(pagesActive[0].getAttribute('data-swiper-slide-index'));//番号を代入
-  let numberAreaNew = document.getElementById('js-numberAreaNew');
-  numberAreaNew.insertAdjacentHTML('afterbegin', pagesActiveNumber + 1 );//番号を表示
-  numberAreaNew.id = 'js-numberArea';
-};
-
-let bbb = document.getElementById('js-swiperWrapper');
-bbb.addEventListener('touchend', aaaa, false); //イベントの種類はtouch系しか動かない

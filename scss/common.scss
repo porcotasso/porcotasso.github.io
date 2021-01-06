@@ -643,11 +643,11 @@ font-weight: bold;
 	.swiper-container{
 		// padding:16px 0 8px;
 		.swiper-wrapper{
-			align-items: center;
+			align-items: flex-start;
 			.swiper-slide{
 			&.swiper-slide-active{
 				// pointer-events: none;
-				font-weight: bold;
+				// font-weight: bold;
 			}
 			&.pagesActive{
 				pointer-events: none;
@@ -686,13 +686,13 @@ font-weight: bold;
 				line-height: 1.1;
 				text-align: center;
 				// display: table;
-				padding: 14px 3px 3px;
+				padding: 14px 3px 0;
 				font-size: $font-size-11;
 				color: $font-black;
 				margin: 0 auto 6px;
 				display: -webkit-box;
 				-webkit-box-orient: vertical;
-				-webkit-line-clamp: 1;
+				-webkit-line-clamp: 2;
 				overflow: hidden;
 			}
 			//   &_tag{
