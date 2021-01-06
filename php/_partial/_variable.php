@@ -8,21 +8,21 @@ $contentsModel = array(
 	"tag" => array("html"),
 	"title" => "コンテンツ・モデルというHTMLの基本ルールを理解する",
 	"lead" => "HTML5では、このタグの中にはこのタグが配置できる、といった配置ルールが決められており、これをコンテンツ・モデル（Content models）といいます。",
-	"html" => "contents-model.html"
+	"pageName" => "contents-model"
 );
 $semanticTags = array(
 	"file" => "/php/pages/semantic-tags.php",
 	"tag" => array("html"),
 	"title" => "セマンティックHTMLで適切なDOMを構築する",
 	"lead" => "クローラーや読み上げソフトがタグから各コンテンツの役割がわかるように記述するコンテンツの意味に合ったタグを使ってマークアップすることをセマンティックHTMLと呼びます。",
-	"html" => "semantic-tags.html"
+	"pageName" => "semantic-tags"
 );
 $resetCss = array(
 	"file" => "/php/pages/reset-css.php",
 	"tag" => array("css"),
 	"title" => "リセットCSS•ノーマライズCSSを適切に使う",
 	"lead" => "リセットCSSとはその名の通りブラウザのデフォルトCSSを打ち消すファイルのこと。ブラウザ毎にデフォルトで違うCSSを持っていて、それがデザインに影響を与えるので、リセットCSSを使いレイアウトの崩れなどを防ぎます。リセットCSSはブラウザが持っているCSSを全て打ち消すので、新たにCSSを構築する作業が必要になるデメリットがあります。そこでブラウザが持っている利用できるCSSをできるだけ残しつつ、部分的にリセットする方法が主流になってきています。それがnormalize.cssです。各タグのスタイルをどうするかは、考え方やサイトの内容によります。できるだけなぜそうしたかを明確にしておくことで修正がしやすくなります。本サイトでは、boostrap-reboot.cssをベースにしてサイト用に加工したノーマライズCSSを構築しています。",
-	"html" => "reset-css.html"
+	"pageName" => "reset-css"
 );
 //css
 $categorizedCSS = array(
@@ -30,21 +30,21 @@ $categorizedCSS = array(
 	"tag" => array("css"),
 	"title" => "CSSを役割ごとにカテゴライズする",
 	"lead" => "全てのCSSを目的ごとに分けることで、使い方を明確にするカテゴライズする。",
-	"html" => "categorized-css.html"
+	"pageName" => "categorized-css"
 );
 $namingRule = array(
 	"file" => "/php/pages/naming-rule.php",
 	"tag" => array("css"),
 	"title" => "命名ルール",
 	"lead" => "クラス名からクラスの目的やスコープがわかるようにしておき、正確なコーディングに役立てる。",
-	"html" => "naming-rule.html"
+	"pageName" => "naming-rule"
 );
 $basicLayoutStyle = array(
 	"file" => "/php/pages/basic-layout-style.php",
 	"tag" => array("css"),
 	"title" => "reset.css以外のスタイルルール",
 	"lead" => "レイアウトの基本ルールとして把握、作成しておいたほうがいいスタイルについて。",
-	"html" => "basic-layout-style.html"
+	"pageName" => "basic-layout-style"
 );
 //parts
 $button = array(
@@ -52,42 +52,42 @@ $button = array(
 	"tag" => array("parts"),
 	"title" => "ボタン作成の種類",
 	"lead" => "ボタンを作る際 &lt;a&gt;か&lt;button&gt;か&lt;input&gt;か迷わないように違いを理解する。",
-	"html" => "button.html"
+	"pageName" => "button"
 );
 $breakWord = array(
 	"file" => "/php/pages/break-word.php",
 	"tag" => array("parts"),
 	"title" => "break-word",
 	"lead" => "文字、文章のルール",
-	"html" => "break-word.html"
+	"pageName" => "break-word"
 );
 $elementEmStrongMarkB = array(
 	"file" => "/php/pages/element-em-strong-mark-b-difference.php",
 	"tag" => array("parts"),
 	"title" => "em,strong,mark,b,dfn,iの違い",
 	"lead" => "文字を目立たせるタグの違いが曖昧になりがちなので明確に使い分けたい。基本的にはセマンティックマークアップとして利用するのが目的で装飾を前提に使用しないこと。",
-	"html" => "element-em-strong-mark-b-difference.html"
+	"pageName" => "element-em-strong-mark-b-difference"
 );
 $favicon = array(
 	"file" => "/php/pages/favicon.php",
 	"tag" => array("parts"),
 	"title" => "favicon",
 	"lead" => "faviconはfavorite icon”の略語でウェブサイトのシンボルマーク・イメージとして、サイトに配置するアイコンの俗称です。閲覧中のタブなどに表示し潜在層にサイトを認知させる目的があります。",
-	"html" => "favicon.html"
+	"pageName" => "favicon"
 );
 $hamburgerMenu = array(
 	"file" => "/php/pages/hamburger-menu.php",
 	"tag" => array("parts"),
 	"title" => "ハンバーガーメニューの作り方",
 	"lead" => "hamburger-menuを作る際に必要な要素がいくつかあるので、分解して説明します。",
-	"html" => "hamburger-menu.html"
+	"pageName" => "hamburger-menu"
 );
 $headerSmaller = array(
 	"file" => "/php/pages/header-smaller.php",
 	"tag" => array("parts"),
 	"title" => "スクロールでヘッダーのスタイルを変更する",
 	"lead" => "画面をスクロールした時に高さを変えるjavascriptについての説明です。",
-	"html" => "header-smaller.html"
+	"pageName" => "header-smaller"
 );
 //javascript memo
 $javascriptMemo = array(
@@ -95,7 +95,7 @@ $javascriptMemo = array(
 	"tag" => array("javascript"),
 	"title" => "javascriptmemo",
 	"lead" => "メモ",
-	"html" => "javascript-memo.html"
+	"pageName" => "javascript-memo"
 );
 //day-js
 $dayJs = array(
@@ -103,7 +103,7 @@ $dayJs = array(
 	"tag" => array("javascript"),
 	"title" => "day-js",
 	"lead" => "Day.jsは軽量（2KB）で多くのブラウザでサポートされているJavaScriptの日付操作ライブラリです。",
-	"html" => "day-js.html"
+	"pageName" => "day-js"
 );
 //js-date
 $jsDate = array(
@@ -111,7 +111,7 @@ $jsDate = array(
 	"tag" => array("javascript"),
 	"title" => "js-date",
 	"lead" => "メモ",
-	"html" => "js-date.html"
+	"pageName" => "js-date"
 );
 //js-scroll
 $jsScroll = array(
@@ -119,7 +119,7 @@ $jsScroll = array(
 	"tag" => array("javascript"),
 	"title" => "js-scroll",
 	"lead" => "メモ",
-	"html" => "js-scroll.html"
+	"pageName" => "js-scroll"
 );
 //js-scrollTop
 $jsScrollTop = array(
@@ -127,7 +127,7 @@ $jsScrollTop = array(
 	"tag" => array("js", "parts"),
 	"title" => "スクロールでトップに戻るボタン",
 	"lead" => "スクロールでトップに戻るボタンを右下に追加します。最初は表示せず、下にスクロールすると徐々に表示するようにします。",
-	"html" => "js-scrolltop.html"
+	"pageName" => "js-scrolltop"
 );
 
 $eventHandler = array(
@@ -135,42 +135,42 @@ $eventHandler = array(
 	"tag" => array("javascript"),
 	"title" => "イベントハンドラーの種類と使い方",
 	"lead" => "イベントハンドラーの種類と使い方、addEventListenerの使い方についての説明です。",
-	"html" => "event-handler.html"
+	"pageName" => "event-handler"
 );
 $jsArrowFunction = array(
 	"file" => "/php/pages/arrow-function.php",
 	"tag" => array("javascript"),
 	"title" => "アロー関数とは",
 	"lead" => "アロー関数とは関数リテラルをシンプルに記述する方法です。",
-	"html" => "arrow-function.html"
+	"pageName" => "arrow-function"
 );
 $eventPropagation = array(
 	"file" => "/php/pages/event-propagation.php",
 	"tag" => array("javascript"),
 	"title" => "イベント伝搬とは",
 	"lead" => "イベントハンドラーが呼ばれる順番について",
-	"html" => "event-propagation.html"
+	"pageName" => "event-propagation"
 );
 $scrollJunk = array(
 	"file" => "/php/pages/scroll-junk.php",
 	"tag" => array("javascript"),
 	"title" => "スクロールジャンクとは",
 	"lead" => "スクロールジャンクとその防ぎ方について",
-	"html" => "scroll-junk.html"
+	"pageName" => "scroll-junk"
 );
 $touchEvent = array(
 	"file" => "/php/pages/touch-event.php",
 	"tag" => array("javascript"),
 	"title" => "touch-event",
 	"lead" => "touch-event",
-	"html" => "touch-event.html"
+	"pageName" => "touch-event"
 );
 $jsMarker = array(
 	"file" => "/php/pages/js-marker.php",
 	"tag" => array("javascript"),
 	"title" => "黄色いmarkerアニメーション",
 	"lead" => "黄色いmarkerを引くアニメーションをjavascriptで作りました",
-	"html" => "js-marker.html"
+	"pageName" => "js-marker"
 );
 //js-nodelist
 $jsNodelist = array(
@@ -178,7 +178,7 @@ $jsNodelist = array(
 	"tag" => array("javascript"),
 	"title" => "nodelist",
 	"lead" => "ノードリストにはliveとstaticがあります",
-	"html" => "js-nodelist.html"
+	"pageName" => "js-nodelist"
 );
 //js-swiper
 $jsSwiper = array(
@@ -186,7 +186,7 @@ $jsSwiper = array(
 	"tag" => array("javascript"),
 	"title" => "カルーセルスライダー",
 	"lead" => "ホームのカルーセルスライダーにupdateの新しい順にコンテンツを並べ、swiper.jsを使って動きを追加します。",
-	"html" => "js-swiper.html"
+	"pageName" => "js-swiper"
 );
 //php
 $phpMemo = array(
@@ -194,14 +194,14 @@ $phpMemo = array(
 	"tag" => array("php"),
 	"title" => "phpmemo",
 	"lead" => "メモ",
-	"html" => "php-memo.html"
+	"pageName" => "php-memo"
 );
 $phpFilemtime = array(
 	"file" => "/php/pages/php-filemtime.php",
 	"tag" => array("php"),
 	"title" => "filemtime",
 	"lead" => "filemtime()でファイルの更新時間を取得できます。",
-	"html" => "php-filemtime.html"
+	"pageName" => "php-filemtime"
 );
 //environment
 $environmentSummary = array(
@@ -209,28 +209,28 @@ $environmentSummary = array(
 	"tag" => array("environment"),
 	"title" => "制作環境設定全般",
 	"lead" => "例えば一から環境を整える場合、何からすればいいかというメモ。",
-	"html" => "environment-summary.html"
+	"pageName" => "environment-summary"
 );
 $gulpfile = array(
 	"file" => "/php/pages/gulpfile.php",
 	"tag" => array("environment"),
 	"title" => "gulpfile",
 	"lead" => "メモ",
-	"html" => "gulpfile.html"
+	"pageName" => "gulpfile"
 );
 $gitFetch = array(
 	"file" => "/php/pages/git-fetch.php",
 	"tag" => array("environment", "git"),
 	"title" => "git-fetch",
 	"lead" => "リモートブランチをローカルにコピーしたいけどできない時のメモ。",
-	"html" => "git-fetch.html"
+	"pageName" => "git-fetch"
 );
 $browserRenderingEngine = array(
 	"file" => "/php/pages/browser-rendering-engine.php",
 	"tag" => array("environment"),
 	"title" => "browser-rendering-engine",
 	"lead" => "ブラウザーのレンダリングエンジンとjavascriptエンジンとベンダープレフィックスについて",
-	"html" => "browser-rendering-engine.html"
+	"pageName" => "browser-rendering-engine"
 );
 //svg
 $svg = array(
@@ -238,7 +238,7 @@ $svg = array(
 	"tag" => array("svg"),
 	"title" => "svgファイルの使い方",
 	"lead" => "svgを活用する方法をまとめました。",
-	"html" => "svg.html"
+	"pageName" => "svg"
 );
 //shopify-memo
 $shopifyMemo = array(
@@ -246,7 +246,7 @@ $shopifyMemo = array(
 	"tag" => array("shopify"),
 	"title" => "shopify-memo",
 	"lead" => "shopify-memo",
-	"html" => "shopify-memo.html"
+	"pageName" => "shopify-memo"
 );
 //design
 $designMemo = array(
@@ -254,7 +254,7 @@ $designMemo = array(
 	"tag" => array("design"),
 	"title" => "デザインメモ",
 	"lead" => "基本的なデザインの考え方についてのメモです。",
-	"html" => "design.html"
+	"pageName" => "design"
 );
 
 // 1.新規ページを作ったら全てのページの配列に追加
@@ -308,51 +308,61 @@ for($i = 0; $i < $count; $i++){
 // }
 
 $codeHtml = array(
+	"tag" => "codeHtml",
 	"title" => "html",
 	"lead" => "",
 	"pages" => $tagHtml
 );
 $codeCss = array(
+	"tag" => "codeCss",
 	"title" => "css",
 	"lead" => "cssについての説明",
 	"pages" => $tagCss
 );
 $codeParts = array(
+	"tag" => "codeParts",
 	"title" => "パーツ",
 	"lead" => "明確なルールがないが実際にやってみると定義が必要になってくるもののメモ",
 	"pages" => $tagParts
 );
 $codeJs = array(
+	"tag" => "codeJs",
 	"title" => "javascript",
 	"lead" => "javascriptメモ",
 	"pages" => $tagJs
 );
 $codePhp = array(
+	"tag" => "codePhp",
 	"title" => "php",
 	"lead" => "phpメモ",
 	"pages" => $tagPhp
 );
 $codeEnv = array(
+	"tag" => "codeEnv",
 	"title" => "作業効率を高める環境設定",
 	"lead" => "gulpfile.js package.json、ローカルサーバnginx バーチャルホスト,scss",
 	"pages" => $tagEnvironment
 );
 $codeSvg = array(
+	"tag" => "codeSvg",
 	"title" => "svg",
 	"lead" => "svg",
 	"pages" => $tagSvg
 );
 $shopify = array(
+	"tag" => "shopify",
 	"title" => "shopify",
 	"lead" => "",
 	"pages" => $tagShopify
 );
 $workSite = array(
+	"tag" => "workSite",
 	"title" => "現実的な問題点",
 	"lead" => "ルールを完璧に満たしたコーディングが理想だけど、現実的にはいろんな問題が起きるのでメモと考察",
 	"pages" => $tagWorksite
 );
 $design = array(
+	"tag" => "design",
 	"title" => "現実的な問題点",
 	"lead" => "",
 	"pages" => $tagDesign

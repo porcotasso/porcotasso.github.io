@@ -35,17 +35,17 @@
                     $filename = $baseUrl.$list["file"];
                     $pageNumber = $index;
                     // if($i != 0){
-                    //     $pagePre = "/pages/".$allPages[$i - 1]["html"];
+                    //     $pagePre = "/pages/".$allPages[$i - 1]["pageName"].'.html';
                     //     $pagePreTtl = $allPages[$i - 1]["title"];
                     // }else{
-                    //     $pagePre = "/pages/".$allPages[$pageNumber - 1]["html"];            
+                    //     $pagePre = "/pages/".$allPages[$pageNumber - 1]["pageName"].'.html';            
                     //     $pagePreTtl = $allPages[$pageNumber - 1]["title"];
                     // }
                     // if($i != $pageNumber -1 ){
-                    //     $pageNext = "/pages/".$allPages[$i + 1]["html"];
+                    //     $pageNext = "/pages/".$allPages[$i + 1]["pageName"].'.html';
                     //     $pageNextTtl = $allPages[$i + 1]["title"];
                     // } else {
-                    //     $pageNext = "/pages/".$allPages[0]["html"];             
+                    //     $pageNext = "/pages/".$allPages[0]["pageName"].'.html';             
                     //     $pageNextTtl = $allPages[0]["title"];
                     // }       
                     // break;
@@ -92,7 +92,7 @@
                     <ul class="headerMenu_subNav">
                         <?php foreach($list["pages"] as $value){ ?>
                         <li class="headerMenu_subList">
-                            <a href="<?php echo '/pages/'.$value["html"]; ?>" class="">
+                            <a href="<?php echo '/pages/'.$value["pageName"].'.html'; ?>" class="">
                                 <div class=""><?php echo $value["title"]; ?></div>
                             </a>
                         </li>

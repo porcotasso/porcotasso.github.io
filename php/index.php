@@ -33,27 +33,14 @@
         <ul class="bl-recentCnt_pages">
             <?php foreach($latestContent as $value){ ?>
                 <li class="bl-recentCnt_list">
-                    <a href="<?php echo '/pages/'. $value["html"]; ?>" class="bl-recentCnt_link">
+                    <a href="<?php echo '/pages/'. $value["pageName"].'.html'; ?>" class="bl-recentCnt_link">
                         <?php echo $value["title"];?>
                     </a>
                     <div class="bl-recentCnt_detail">
                         <ul class="bl-recentCnt_tag">
                             <?php foreach ( $value["tag"] as $name) { ?>
                             <li class="bl-recentCnt_tagList">
-                                <div class="bl-recentCnt_tagMark js-tagMark"><?php echo $name; ?></div>
-                                <?php foreach($pageLists as $list){ ?>
-                                    <?php if( $name == $list["title"]){ ?>
-                                        <ul class="bl-recentCnt_related js-related">
-                                            <?php foreach($list["pages"] as $page){ ?>
-                                            <li  class="bl-recentCnt_relatedList">
-                                                <a href="<?php echo '/pages/'. $page["html"]; ?>" class="bl-recentCnt_relatedLink">
-                                                    <?php echo $page["title"]; ?>
-                                                </a>
-                                            </li>
-                                            <?php } ?>
-                                        </ul>
-                                    <?php } ?>   
-                                <?php } ?>   
+                                <div class="bl-recentCnt_tagMark js-tagMark js-tagMark-<?php echo $name; ?>"><?php echo $name; ?></div>
                             </li>
                             <?php } ?>   
                         </ul>
@@ -62,13 +49,27 @@
                 </li>
             <?php } ?>
         </ul>
+        <?php foreach($pageLists as $lists){ ?>
+            <div class="bl-recentCnt_related" id="js-related<?php echo $lists["tag"]; ?>">
+                <h3><?php echo $lists["title"]; ?></h3>
+                <ul class="bl-pageNav_menuList">
+                    <?php foreach($lists["pages"] as $value){ ?>
+                    <li>
+                        <a href="<?php echo '/pages/'. $value["pageName"].'.html'; ?>" class="bl-pageNav_link">
+                            <?php echo $value["title"]; ?>
+                        </a>
+                    </li>
+                    <?php } ?>
+                </ul>
+            </div>
+        <?php } ?>
     </div>
 
 <?php /*
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <?php foreach($latestContent as $value){ ?>
-                <a href="<?php echo '/pages/'. $value["html"]; ?>" class="swiper-slide">
+                <a href="<?php echo '/pages/'. $value["pageName"].'.html'; ?>" class="swiper-slide">
                     <div class="swiper-slide_cnt">
                         <ul class="swiper-slide_tag">
                             <?php foreach ( $value["tag"] as $name) { ?>
@@ -143,7 +144,7 @@
                 <ul class="bl-pageNav_menuList">
                     <?php foreach($list["pages"] as $value){ ?>
                     <li>
-                        <a href="<?php echo '/pages/'. $value["html"]; ?>" class="bl-pageNav_link">
+                        <a href="<?php echo '/pages/'. $value["pageName"].'.html'; ?>" class="bl-pageNav_link">
                             <?php echo $value["title"]; ?>
                         </a>
                     </li>

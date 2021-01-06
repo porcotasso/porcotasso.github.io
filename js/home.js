@@ -11,31 +11,45 @@ showElementAnimation();
 window.addEventListener('scroll', showElementAnimation);
 
 
-const tagMark = document.getElementsByClassName('js-tagMark');
+const tagMarkJavascript = Array.from(document.getElementsByClassName('js-tagMark-javascript'));
+const tagMarkSvg = Array.from(document.getElementsByClassName('js-tagMarkSvg'));
+const tagMarkHtml = Array.from(document.getElementsByClassName('js-tagMark-html'));
+// let tagMarkElements =[ ... tagMark];
 
-let aaa =[ ... tagMark];
-console.log(aaa);
-aaa.forEach((value, index, array) => {
-// 	console.log(value);
-// console.log(index);
-// console.log(array);
-  aaa[index].addEventListener('click', () => {
+const relatedcodeJs = document.getElementById('js-relatedcodeJs');
+const relatedcodeHtml = document.getElementById('js-relatedcodeHtml');
 
-	  if(aaa[index].className == 'bl-recentCnt_tagMark js-tagMark is-active'){
-		  aaa[index].classList.remove('is-active');
-console.log('active');
-console.log(event.currentTarget);
-console.log(value);
-console.log(index);
-} else {
-	let active = document.getElementsByClassName('js-tagMark');
-	for (var i = 0; i < active.length; i++) {
-		active[i].classList.remove('is-active');
-	}
-	console.log('no');
 
-}
-tagMark[index].classList.toggle('is-active');
-tagMark[index].nextElementSibling.classList.toggle('is-active');
-  }, false);
+tagMarkJavascript.forEach((value, index) => {
+	tagMarkJavascript[index].addEventListener('click', () => {
+		relatedcodeJs.classList.toggle('is-active');
+	}, false)
 });
+tagMarkHtml.forEach((value, index) => {
+	tagMarkHtml[index].addEventListener('click', () => {
+		relatedcodeHtml.classList.toggle('is-active');
+	}, false)
+});
+
+// // 	console.log(value);
+// // console.log(index);
+// // console.log(array);
+
+// 	  if(aaa[index].className == 'bl-recentCnt_tagMark js-tagMark is-active'){
+// 		  aaa[index].classList.remove('is-active');
+// console.log('active');
+// console.log(event.currentTarget);
+// console.log(value);
+// console.log(index);
+// } else {
+// 	let active = document.getElementsByClassName('js-tagMark');
+// 	for (var i = 0; i < active.length; i++) {
+// 		active[i].classList.remove('is-active');
+// 	}
+// 	console.log('no');
+
+// }
+// tagMark[index].classList.toggle('is-active');
+// tagMark[index].nextElementSibling.classList.toggle('is-active');
+//   }, false);
+// });
