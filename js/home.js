@@ -10,24 +10,52 @@ logoMark.style.opacity = 0.3 - scrollY/1200;
 showElementAnimation();
 window.addEventListener('scroll', showElementAnimation);
 
+// close button
+const relatedClose = Array.from(document.getElementsByClassName('js-relatedClose'));
 
-const tagMarkJavascript = Array.from(document.getElementsByClassName('js-tagMark-javascript'));
-const tagMarkSvg = Array.from(document.getElementsByClassName('js-tagMarkSvg'));
-const tagMarkHtml = Array.from(document.getElementsByClassName('js-tagMark-html'));
-// let tagMarkElements =[ ... tagMark];
-
-const relatedcodeJs = document.getElementById('js-relatedcodeJs');
-const relatedcodeHtml = document.getElementById('js-relatedcodeHtml');
-
-
-tagMarkJavascript.forEach((value, index) => {
-	tagMarkJavascript[index].addEventListener('click', () => {
-		relatedcodeJs.classList.toggle('is-active');
+relatedClose.forEach((value, index) => {
+	console.log(relatedClose[index]);
+	relatedClose[index].addEventListener('click', () => {
+		console.log('aaaaa');
+		let related = Array.from(document.getElementsByClassName('is-active'));
+		related.forEach((value, index) => {
+			related[index].classList.remove('is-active');
+		});
 	}, false)
 });
-tagMarkHtml.forEach((value, index) => {
-	tagMarkHtml[index].addEventListener('click', () => {
-		relatedcodeHtml.classList.toggle('is-active');
+
+// 全てのタグのクリック　表示されているリストを削除
+const tag = Array.from(document.getElementsByClassName('js-tag'));
+tag.forEach((value, index) => {
+	tag[index].addEventListener('click', () => {
+		let related = Array.from(document.getElementsByClassName('is-active'));
+		related.forEach((value, index) => {
+			related[index].classList.remove('is-active');
+		});
+	}, false)
+});
+
+const tagJavascript = Array.from(document.getElementsByClassName('js-tag-javascript'));
+const javascript = document.getElementById('js-javascript');
+tagJavascript.forEach((value, index) => {
+	tagJavascript[index].addEventListener('click', () => {
+		javascript.classList.toggle('is-active');
+	}, false)
+});
+
+const tagHtml = Array.from(document.getElementsByClassName('js-tag-html'));
+const html = document.getElementById('js-html');
+tagHtml.forEach((value, index) => {
+	tagHtml[index].addEventListener('click', () => {
+		html.classList.toggle('is-active');
+	}, false)
+});
+
+const tagSvg = Array.from(document.getElementsByClassName('js-tag-svg'));
+const svg = document.getElementById('js-svg');
+tagSvg.forEach((value, index) => {
+	tagSvg[index].addEventListener('click', () => {
+		svg.classList.toggle('is-active');
 	}, false)
 });
 
@@ -35,21 +63,21 @@ tagMarkHtml.forEach((value, index) => {
 // // console.log(index);
 // // console.log(array);
 
-// 	  if(aaa[index].className == 'bl-recentCnt_tagMark js-tagMark is-active'){
+// 	  if(aaa[index].className == 'bl-recentCnt_tag js-tag is-active'){
 // 		  aaa[index].classList.remove('is-active');
 // console.log('active');
 // console.log(event.currentTarget);
 // console.log(value);
 // console.log(index);
 // } else {
-// 	let active = document.getElementsByClassName('js-tagMark');
+// 	let active = document.getElementsByClassName('js-tag');
 // 	for (var i = 0; i < active.length; i++) {
 // 		active[i].classList.remove('is-active');
 // 	}
 // 	console.log('no');
 
 // }
-// tagMark[index].classList.toggle('is-active');
-// tagMark[index].nextElementSibling.classList.toggle('is-active');
+// tag[index].classList.toggle('is-active');
+// tag[index].nextElementSibling.classList.toggle('is-active');
 //   }, false);
 // });

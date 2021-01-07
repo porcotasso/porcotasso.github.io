@@ -37,10 +37,10 @@
                         <?php echo $value["title"];?>
                     </a>
                     <div class="bl-recentCnt_detail">
-                        <ul class="bl-recentCnt_tag">
+                        <ul class="tagList">
                             <?php foreach ( $value["tag"] as $name) { ?>
-                            <li class="bl-recentCnt_tagList">
-                                <div class="bl-recentCnt_tagMark js-tagMark js-tagMark-<?php echo $name; ?>"><?php echo $name; ?></div>
+                            <li class="tag js-tag js-tag-<?php echo $name; ?>">
+                                <?php echo $name; ?>
                             </li>
                             <?php } ?>   
                         </ul>
@@ -50,12 +50,15 @@
             <?php } ?>
         </ul>
         <?php foreach($pageLists as $lists){ ?>
-            <div class="bl-recentCnt_related" id="js-related<?php echo $lists["tag"]; ?>">
-                <h3><?php echo $lists["title"]; ?></h3>
-                <ul class="bl-pageNav_menuList">
+            <div class="bl-recentCnt_related js-related" id="js-<?php echo $lists["tag"]; ?>">
+                <div class="bl-recentCnt_relatedTtl">
+                    <h3><?php echo $lists["title"]; ?></h3>
+                    <div class="bl-recentCnt_relatedClose js-relatedClose">×</div>
+                </div>
+                <ul class="bl-recentCnt_relatedMenuList">
                     <?php foreach($lists["pages"] as $value){ ?>
                     <li>
-                        <a href="<?php echo '/pages/'. $value["pageName"].'.html'; ?>" class="bl-pageNav_link">
+                        <a href="<?php echo '/pages/'. $value["pageName"].'.html'; ?>" class="bl-recentCnt_relatedLink">
                             <?php echo $value["title"]; ?>
                         </a>
                     </li>

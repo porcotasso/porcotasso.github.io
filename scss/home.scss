@@ -74,9 +74,10 @@
 }
 
 .bl-recentCnt{
-  // border-bottom: 1px solid $font-black;
+  position: relative;
   padding-bottom: 16px;
   margin-top: 64px;
+  overflow: hidden;
   &_ttl{
     margin: 0 0 16px;
     font-size: $font-size-18;
@@ -99,7 +100,9 @@
   }
   &_link{
     color: $font-black;
-    margin-bottom: 4px;
+    font-size: $font-size-13;
+    line-height: 1.4;
+    margin-bottom: 12px;
     display: block;
   }
   // &_pagettl{
@@ -111,44 +114,71 @@
     display: flex;
     justify-content: space-between;
   }
-  &_tag{
+  .tagList{
     display: flex;
     list-style: none;
     padding: 0;
     margin-bottom: 2px;
   }
-  &_tagList{
+  .tag{
     position: relative;
-  }
-  &_tagMark{
-    padding: 4px 12px;
+    padding: 3px 10px;
     border-radius: 40px;
     background: #fff;
     border: 1px solid $primary-turquoise;
     color: $primary-turquoise;
-    font-size: $font-size-13;
+    font-size: $font-size-12;
     line-height: 1;
   }
   &_related{
     position: absolute;
     list-style: none;
-    width: max-content;
+    width: 72%;
+    min-height: 200px;
+    top: 60px;
+    right: -100%;
     z-index: 1;
-    background: rgba(255, 255, 255, 0.96);
-    padding: 12px 8px;
-    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.86);
+    padding: 20px 8px 12px 12px;
+    // border-radius: 6px;
     box-shadow: $box-shadow;
-    display: none;
+    display: block;
+    transition: $transition;
     &.is-active{
-      display: block;
+      right: 0;
+      // display: block;
     }
   }
-  &_relatedList{
-    line-height: 1.3;
+  &_relatedTtl{
+    display: flex;
+    justify-content: space-between;
+    margin:0 8px 12px 0;
+    h3{
+      margin: 0;
+    }
+  }
+  &_relatedClose{
+    font-size: $font-size-22;
+
+    display: block;
+  }
+  &_relatedMenuList{
+    list-style: none;
+    padding-left: 0;
   }
   &_relatedLink{
-    font-size: $font-size-13;
+    color: $font-black;
+    font-size: $font-size-12;
+    line-height: 1.4;
+    display: block;
+    margin-bottom: 12px;
   }
+  // &_relatedList{
+  //   line-height: 1.3;
+  // }
+  // &_relatedLink{
+  //   font-size: $font-size-13;
+  // }
 
   &_updateDate{
     font-size: $font-size-12;

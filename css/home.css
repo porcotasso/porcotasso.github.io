@@ -71,8 +71,10 @@
     color: #181818; } }
 
 .bl-recentCnt {
+  position: relative;
   margin-top: 64px;
-  padding-bottom: 16px; }
+  padding-bottom: 16px;
+  overflow: hidden; }
   .bl-recentCnt_ttl {
     margin: 0 0 16px;
     color: #20bedd;
@@ -91,44 +93,60 @@
       border: none; }
   .bl-recentCnt_link {
     display: block;
-    margin-bottom: 4px;
-    color: #181818; }
+    margin-bottom: 12px;
+    color: #181818;
+    font-size: 1.3rem;
+    line-height: 1.4; }
   .bl-recentCnt_detail {
     display: flex;
     justify-content: space-between; }
-  .bl-recentCnt_tag {
+  .bl-recentCnt .tagList {
     display: flex;
     margin-bottom: 2px;
     padding: 0;
     list-style: none; }
-  .bl-recentCnt_tagList {
-    position: relative; }
-  .bl-recentCnt_tagMark {
-    padding: 4px 12px;
+  .bl-recentCnt .tag {
+    position: relative;
+    padding: 3px 10px;
     border: 1px solid #20bedd;
     border-radius: 40px;
     background: #fff;
     color: #20bedd;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1; }
   .bl-recentCnt_related {
-    display: none;
+    display: block;
     z-index: 1;
     position: absolute;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    padding: 12px 8px;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.96);
+    top: 60px;
+    right: -100%;
+    width: 72%;
+    min-height: 200px;
+    padding: 20px 8px 12px 12px;
+    background: rgba(255, 255, 255, 0.86);
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
-    list-style: none; }
+    list-style: none;
+    transition: 0.4s; }
     .bl-recentCnt_related.is-active {
-      display: block; }
-  .bl-recentCnt_relatedList {
-    line-height: 1.3; }
+      right: 0; }
+  .bl-recentCnt_relatedTtl {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 8px 12px 0; }
+    .bl-recentCnt_relatedTtl h3 {
+      margin: 0; }
+  .bl-recentCnt_relatedClose {
+    display: block;
+    font-size: 2.2rem; }
+  .bl-recentCnt_relatedMenuList {
+    padding-left: 0;
+    list-style: none; }
   .bl-recentCnt_relatedLink {
-    font-size: 1.3rem; }
+    display: block;
+    margin-bottom: 12px;
+    color: #181818;
+    font-size: 1.2rem;
+    line-height: 1.4; }
   .bl-recentCnt_updateDate {
     margin: 0;
     color: #888;

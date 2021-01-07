@@ -307,44 +307,44 @@ for($i = 0; $i < $count; $i++){
 // 	}
 // }
 
-$codeHtml = array(
-	"tag" => "codeHtml",
+$html = array(
+	"tag" => "html",
 	"title" => "html",
 	"lead" => "",
 	"pages" => $tagHtml
 );
-$codeCss = array(
-	"tag" => "codeCss",
+$css = array(
+	"tag" => "css",
 	"title" => "css",
 	"lead" => "cssについての説明",
 	"pages" => $tagCss
 );
-$codeParts = array(
-	"tag" => "codeParts",
+$parts = array(
+	"tag" => "parts",
 	"title" => "パーツ",
 	"lead" => "明確なルールがないが実際にやってみると定義が必要になってくるもののメモ",
 	"pages" => $tagParts
 );
-$codeJs = array(
-	"tag" => "codeJs",
+$javascript = array(
+	"tag" => "javascript",
 	"title" => "javascript",
 	"lead" => "javascriptメモ",
 	"pages" => $tagJs
 );
-$codePhp = array(
-	"tag" => "codePhp",
+$php = array(
+	"tag" => "php",
 	"title" => "php",
 	"lead" => "phpメモ",
 	"pages" => $tagPhp
 );
-$codeEnv = array(
-	"tag" => "codeEnv",
+$env = array(
+	"tag" => "env",
 	"title" => "作業効率を高める環境設定",
 	"lead" => "gulpfile.js package.json、ローカルサーバnginx バーチャルホスト,scss",
 	"pages" => $tagEnvironment
 );
-$codeSvg = array(
-	"tag" => "codeSvg",
+$svg = array(
+	"tag" => "svg",
 	"title" => "svg",
 	"lead" => "svg",
 	"pages" => $tagSvg
@@ -368,7 +368,7 @@ $design = array(
 	"pages" => $tagDesign
 );
 
-$pageLists = array($codeHtml, $codeCss, $codeParts, $codeJs, $codePhp, $codeEnv, $codeSvg, $shopify, $workSite);
+$pageLists = array($html, $css, $parts, $javascript, $php, $env, $svg, $shopify, $workSite, $design);
 
 $targetBlank = 'target="_blank" rel="noopener noreferrer"';
 ?>

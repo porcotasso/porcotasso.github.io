@@ -510,8 +510,8 @@ td {
     position: relative;
     position: relative;
     top: 2px;
-    width: 34px;
-    height: 24px; }
+    width: 24px;
+    height: 18px; }
     .bl-header .headerNav_burger span {
       position: absolute;
       left: 0;
@@ -523,7 +523,7 @@ td {
       .bl-header .headerNav_burger span:nth-of-type(1) {
         top: 0; }
       .bl-header .headerNav_burger span:nth-of-type(2) {
-        top: 11px; }
+        top: 8px; }
       .bl-header .headerNav_burger span:nth-of-type(3) {
         bottom: 0; }
   .bl-header .headerNav .headerMenu {
@@ -617,13 +617,13 @@ td {
       left: -2px;
       opacity: .2; }
     .bl-header .headerNav.active .headerNav_burger span:nth-of-type(1) {
-      top: 12px;
+      top: 8px;
       transform: rotate(-45deg); }
     .bl-header .headerNav.active .headerNav_burger span:nth-of-type(2) {
-      left: 15px;
+      left: 12px;
       width: 0; }
     .bl-header .headerNav.active .headerNav_burger span:nth-of-type(3) {
-      top: 12px;
+      top: 8px;
       transform: rotate(45deg); }
     .bl-header .headerNav.active .headerMenu {
       display: block;
