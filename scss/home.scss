@@ -93,7 +93,7 @@
   &_list{
     width: 100%;
     border-bottom: 1px dashed $border-gray;
-    padding: 16px 8px;
+    padding: 24px 8px 16px;
     &:last-of-type{
       border: none;
     }
@@ -102,7 +102,7 @@
     color: $font-black;
     font-size: $font-size-13;
     line-height: 1.4;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     display: block;
   }
   // &_pagettl{

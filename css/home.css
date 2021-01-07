@@ -87,13 +87,13 @@
     list-style: none; }
   .bl-recentCnt_list {
     width: 100%;
-    padding: 16px 8px;
+    padding: 24px 8px 16px;
     border-bottom: 1px dashed #d4d9e6; }
     .bl-recentCnt_list:last-of-type {
       border: none; }
   .bl-recentCnt_link {
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     color: #181818;
     font-size: 1.3rem;
     line-height: 1.4; }
