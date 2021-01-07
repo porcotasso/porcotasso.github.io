@@ -44,7 +44,7 @@ td{
 // common_header
 .bl-header {
 	.headerNav{
-		padding: 16px 20px;
+		padding: 24px 20px;
 		display: flex;
 		justify-content: space-between;
 		transition: $transition;
@@ -87,7 +87,7 @@ td{
 		}
 		.headerMenu{
 			position: absolute;
-			top: 58px;
+			top: 68px;
 			width: 0%;
 			left: 100%;
 			height:calc(100vh - 58px); //これがないと縦にスクロールせず、画面からはみ出たメニューが見れない
@@ -105,7 +105,7 @@ td{
 				margin: 0;
 				border-top: 1px solid $border-gray;
 				padding: 16px 16px 16px 30px;
-				font-size: $font-size-16;
+				font-size: $font-size-14;
 				font-weight: bold;
 				background: $bg-light-gray;
 				position: relative;
@@ -164,7 +164,8 @@ td{
 				a{
 					display: block;
 					padding: 12px 16px 12px 20px;
-					font-size: $font-size-15;
+					font-size: $font-size-13;
+					line-height: 1.4;
 					color: $font-black;
 				}
 			}
