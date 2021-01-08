@@ -114,6 +114,9 @@
     color: #20bedd;
     font-size: 1.2rem;
     line-height: 1; }
+    .bl-recentCnt .tag.active-tag {
+      background-color: #20bedd;
+      color: #fff; }
   .bl-recentCnt_related {
     display: block;
     z-index: 1;

@@ -14,9 +14,7 @@ window.addEventListener('scroll', showElementAnimation);
 const relatedClose = Array.from(document.getElementsByClassName('js-relatedClose'));
 
 relatedClose.forEach((value, index) => {
-	console.log(relatedClose[index]);
 	relatedClose[index].addEventListener('click', () => {
-		console.log('aaaaa');
 		let related = Array.from(document.getElementsByClassName('is-active'));
 		related.forEach((value, index) => {
 			related[index].classList.remove('is-active');
@@ -29,11 +27,16 @@ const tag = Array.from(document.getElementsByClassName('js-tag'));
 tag.forEach((value, index) => {
 	tag[index].addEventListener('click', () => {
 		let related = Array.from(document.getElementsByClassName('is-active'));
+		let activeTag = Array.from(document.getElementsByClassName('active-tag'));
+		tag[index].classList.toggle('active-tag');
 		related.forEach((value, index) => {
 			related[index].classList.remove('is-active');
+			activeTag[index].classList.remove('active-tag');
 		});
 	}, false)
 });
+
+
 
 const tagJavascript = Array.from(document.getElementsByClassName('js-tag-javascript'));
 const javascript = document.getElementById('js-javascript');
@@ -42,6 +45,9 @@ tagJavascript.forEach((value, index) => {
 		javascript.classList.toggle('is-active');
 	}, false)
 });
+
+const bb = Array.from(document.getElementsByClassName('active-tag'));
+
 
 const tagHtml = Array.from(document.getElementsByClassName('js-tag-html'));
 const html = document.getElementById('js-html');

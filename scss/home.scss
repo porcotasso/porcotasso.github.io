@@ -129,6 +129,10 @@
     color: $primary-turquoise;
     font-size: $font-size-12;
     line-height: 1;
+    &.active-tag{
+      color: #fff;
+      background-color: $primary-turquoise;
+    }
   }
   &_related{
     position: absolute;
