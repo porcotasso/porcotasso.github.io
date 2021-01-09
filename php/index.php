@@ -55,9 +55,9 @@
                     <h3><?php echo $lists["title"]; ?></h3>
                     <div class="bl-recentCnt_relatedClose js-relatedClose">×</div>
                 </div>
-                <ul class="bl-recentCnt_relatedMenuList">
+                <ul class="bl-recentCnt_relatedMenuLists">
                     <?php foreach($lists["pages"] as $value){ ?>
-                    <li>
+                    <li class="bl-recentCnt_relatedMenuList">
                         <a href="<?php echo '/pages/'. $value["pageName"].'.html'; ?>" class="bl-recentCnt_relatedLink">
                             <?php echo $value["title"]; ?>
                         </a>

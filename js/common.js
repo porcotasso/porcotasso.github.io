@@ -22,6 +22,82 @@ document.addEventListener('DOMContentLoaded',() => {
         });
       });
   }
+
+  // スクロールでトップに戻る動き
+  let btnScrollTop1 = document.getElementById( "js-scrollTop" );
+  // window.addEventListener('scroll', () => {
+  //   let pageOffsetY = window.pageYOffset || document.documentElement.btnScrollTop;
+  //   if(pageOffsetY > 400){
+  //     btnScrollTop.style.opacity = 0.4;
+  //   } else {
+  //     btnScrollTop.style.opacity = pageOffsetY/1000;
+  //   }
+  // });
+  scrollTop(btnScrollTop1, 180);
+  function scrollTop(el, duration) {
+    el.addEventListener('click', function() {
+      let currentY = window.pageYOffset; 
+      let step = duration/currentY > 1 ? 10 : 100; // 三項演算子
+      let timeStep = duration/currentY * step; // スクロール時間
+      let intervalId = setInterval(scrollUp, timeStep);
+      // timeStepの間隔でscrollUpを繰り返す。
+      // clearItervalのために返り値intervalIDを定義する。
+      function scrollUp(){
+        currentY = window.pageYOffset;
+        if(currentY === 0) {
+          clearInterval(intervalId); // ページ最上部に来たら終了
+        } else {
+          scrollBy( 0, -step ); // step分上へスクロール
+        }
+      }
+    });
+  };
+
+  // スクロールでトップに戻るボタンの表示
+  let start_pos = 0;
+  let opacity = 0;
+  let display = 'block';
+  const btnScrollTop = document.getElementById( "js-scrollTop" );
+  window.addEventListener('scroll', function(e){
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop; //  上からのスクロール距離
+      var current_pos =scrollTop;
+
+        if (current_pos > start_pos) {
+          //down
+          if (opacity > 0 ) {
+            opacity -= 0.2;
+            display = 'block';
+          } else {
+            opacity = 0;
+            display = 'none';
+          }
+        } else {
+          //up
+          if (scrollTop < 600) {
+            if (opacity > 0 ) {
+              opacity -= 0.2;
+              display = 'block';
+            } else {
+              opacity = 0;
+              display = 'none';
+            }
+          } else {
+            if (opacity < 1){
+              opacity += 0.1;
+              display = 'block';
+            } else {
+              opacity = 1;
+              display = 'block';
+            }
+          }
+        }
+
+        start_pos = current_pos;
+        btnScrollTop.style.opacity = opacity;
+        btnScrollTop.style.display = display;
+        // console.log(opacity);
+  });
+
 });
 
 

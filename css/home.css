@@ -114,23 +114,23 @@
     color: #20bedd;
     font-size: 1.2rem;
     line-height: 1; }
-    .bl-recentCnt .tag#active-tag {
+    .bl-recentCnt .tag.active-tag {
       background-color: #20bedd;
       color: #fff; }
   .bl-recentCnt .relatedList {
     display: block;
-    z-index: 1;
+    z-index: 21;
     position: absolute;
     top: 60px;
     right: -100%;
     width: 72%;
-    min-height: 200px;
+    min-height: 240px;
     padding: 20px 8px 12px 12px;
     background: rgba(255, 255, 255, 0.86);
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
     list-style: none;
     transition: 0.4s; }
-    .bl-recentCnt .relatedList#active-list {
+    .bl-recentCnt .relatedList.active-list {
       right: 0; }
   .bl-recentCnt_relatedTtl {
     display: flex;
@@ -141,15 +141,17 @@
   .bl-recentCnt_relatedClose {
     display: block;
     font-size: 2.2rem; }
-  .bl-recentCnt_relatedMenuList {
+  .bl-recentCnt_relatedMenuLists {
     padding-left: 0;
     list-style: none; }
   .bl-recentCnt_relatedLink {
     display: block;
-    margin-bottom: 12px;
+    padding: 12px 0;
     color: #181818;
     font-size: 1.2rem;
     line-height: 1.4; }
+  .bl-recentCnt .bl-recentCnt_relatedMenuList + .bl-recentCnt_relatedMenuList {
+    border-top: 1px dashed #d4d9e6; }
   .bl-recentCnt_updateDate {
     margin: 0;
     color: #888;

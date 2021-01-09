@@ -17,6 +17,14 @@ $semanticTags = array(
 	"lead" => "クローラーや読み上げソフトがタグから各コンテンツの役割がわかるように記述するコンテンツの意味に合ったタグを使ってマークアップすることをセマンティックHTMLと呼びます。",
 	"pageName" => "semantic-tags"
 );
+$jsNodelist = array(
+	"file" => "/php/pages/js-nodelist.php",
+	"tag" => array("html"),
+	"title" => "Node、HTMLCollection, NodeListを理解する",
+	"lead" => "ノードリストにはliveとstaticがあります",
+	"pageName" => "js-nodelist"
+);
+//css
 $resetCss = array(
 	"file" => "/php/pages/reset-css.php",
 	"tag" => array("css"),
@@ -24,7 +32,6 @@ $resetCss = array(
 	"lead" => "リセットCSSとはその名の通りブラウザのデフォルトCSSを打ち消すファイルのこと。ブラウザ毎にデフォルトで違うCSSを持っていて、それがデザインに影響を与えるので、リセットCSSを使いレイアウトの崩れなどを防ぎます。リセットCSSはブラウザが持っているCSSを全て打ち消すので、新たにCSSを構築する作業が必要になるデメリットがあります。そこでブラウザが持っている利用できるCSSをできるだけ残しつつ、部分的にリセットする方法が主流になってきています。それがnormalize.cssです。各タグのスタイルをどうするかは、考え方やサイトの内容によります。できるだけなぜそうしたかを明確にしておくことで修正がしやすくなります。本サイトでは、boostrap-reboot.cssをベースにしてサイト用に加工したノーマライズCSSを構築しています。",
 	"pageName" => "reset-css"
 );
-//css
 $categorizedCSS = array(
 	"file" => "/php/pages/categorized-css.php",
 	"tag" => array("css"),
@@ -172,14 +179,6 @@ $jsMarker = array(
 	"lead" => "黄色いmarkerを引くアニメーションをjavascriptで作りました",
 	"pageName" => "js-marker"
 );
-//js-nodelist
-$jsNodelist = array(
-	"file" => "/php/pages/js-nodelist.php",
-	"tag" => array("javascript"),
-	"title" => "nodelist",
-	"lead" => "ノードリストにはliveとstaticがあります",
-	"pageName" => "js-nodelist"
-);
 //js-swiper
 $jsSwiper = array(
 	"file" => "/php/pages/js-swiper.php",
@@ -259,10 +258,10 @@ $designMemo = array(
 
 // 1.新規ページを作ったら全てのページの配列に追加
 $allPages = array(
-	$contentsModel, $semanticTags, $resetCss, 
+	$contentsModel, $semanticTags, $jsNodelist, $resetCss, 
 	$categorizedCSS, $namingRule, $basicLayoutStyle,
 	$button, $breakWord, $elementEmStrongMarkB, $favicon, $hamburgerMenu, $headerSmaller,
-	$javascriptMemo, $eventHandler,$jsArrowFunction, $eventPropagation, $scrollJunk, $touchEvent, $dayJs, $jsDate, $jsMarker, $jsNodelist, $jsScrollTop, $jsSwiper,
+	$javascriptMemo, $eventHandler,$jsArrowFunction, $eventPropagation, $scrollJunk, $touchEvent, $dayJs, $jsDate, $jsMarker,  $jsScrollTop, $jsSwiper,
 	$phpMemo,$phpFilemtime,
 	$environmentSummary, $gulpfile, $gitFetch, $browserRenderingEngine,
 	$svg, $designMemo,
@@ -363,7 +362,7 @@ $workSite = array(
 );
 $design = array(
 	"tag" => "design",
-	"title" => "現実的な問題点",
+	"title" => "デザイン",
 	"lead" => "",
 	"pages" => $tagDesign
 );
