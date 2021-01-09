@@ -114,10 +114,10 @@
     color: #20bedd;
     font-size: 1.2rem;
     line-height: 1; }
-    .bl-recentCnt .tag.active-tag {
+    .bl-recentCnt .tag#active-tag {
       background-color: #20bedd;
       color: #fff; }
-  .bl-recentCnt_related {
+  .bl-recentCnt .relatedList {
     display: block;
     z-index: 1;
     position: absolute;
@@ -130,7 +130,7 @@
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
     list-style: none;
     transition: 0.4s; }
-    .bl-recentCnt_related.is-active {
+    .bl-recentCnt .relatedList#active-list {
       right: 0; }
   .bl-recentCnt_relatedTtl {
     display: flex;

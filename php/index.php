@@ -39,7 +39,7 @@
                     <div class="bl-recentCnt_detail">
                         <ul class="tagList">
                             <?php foreach ( $value["tag"] as $name) { ?>
-                            <li class="tag js-tag js-tag-<?php echo $name; ?>">
+                            <li class="tag js-tag" name="<?php echo $name ?>">
                                 <?php echo $name; ?>
                             </li>
                             <?php } ?>   
@@ -50,7 +50,7 @@
             <?php } ?>
         </ul>
         <?php foreach($pageLists as $lists){ ?>
-            <div class="bl-recentCnt_related js-related" id="js-<?php echo $lists["tag"]; ?>">
+            <div class="relatedList" id="<?php echo $lists["tag"] ?>">
                 <div class="bl-recentCnt_relatedTtl">
                     <h3><?php echo $lists["title"]; ?></h3>
                     <div class="bl-recentCnt_relatedClose js-relatedClose">×</div>
