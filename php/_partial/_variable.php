@@ -291,7 +291,7 @@ for($i = 0; $i < $count; $i++){
 		array_push($tagSvg, $variable);
 	} elseif (in_array("shopify", $allPages[$i]["tag"])){
 		array_push($tagShopify, $variable);
-	} elseif (in_array("shopify", $allPages[$i]["tag"])){
+	} elseif (in_array("design", $allPages[$i]["tag"])){
 		array_push($tagDesign, $variable);
 	}
 }
