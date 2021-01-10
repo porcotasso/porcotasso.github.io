@@ -29,7 +29,7 @@
         </svg>
     </div>
     <div class="bl-recentCnt ly-innnerWidth">
-        <h2 class="bl-recentCnt_ttl">更新ページ</h2>
+        <h2 class="bl-recentCnt_ttl">最近の更新</h2>
         <ul class="bl-recentCnt_pages">
             <?php foreach($latestContent as $value){ ?>
                 <li class="bl-recentCnt_list">

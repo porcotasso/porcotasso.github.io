@@ -58,53 +58,52 @@
 </head>
 <body class="" id="js-body">
 <?php include_once($baseUrl.'/images/common/sprite.svg'); ?>
-    <header class="bl-header">  
-        <nav class="headerNav" id="js-headerNav">
-            <?php if($_SERVER['REQUEST_URI'] == "/"){ ?>
-                <h1 class="headerNav_logo">
-                    <a href="/">
-                        <svg class="svg-logo" viewBox="0 0 252 36">
-                            <use xlink:href="#svg-logo"></use>
-                        </svg>
-                        <?php /* $str = file_get_contents($baseUrl.'/images/common/logo.svg'); echo $str; */ ?>
-                    </a>
-                </h1>
-            <?php }else{ ?>
-                <div class="headerNav_logo">
-                    <a href="/">
-                        <svg class="svg-logo" viewBox="0 0 252 36">
-                            <use xlink:href="#svg-logo"></use>
-                        </svg>
-                        <?php /* $str = file_get_contents($baseUrl.'/images/common/logo.svg'); echo $str; */ ?>
-                    </a>
-                </div>
-            <?php } ?>
-            <a class="headerNav_burger" id="js-burger">
-                <span></span>
-                <span></span>
-                <span></span>
+    <header class="ly-header" id="js-header">  
+        <?php if($_SERVER['REQUEST_URI'] == "/"){ ?>
+        <h1 class="headerLogo">
+            <a href="/">
+                <svg class="svg-logo" viewBox="0 0 252 36">
+                    <use xlink:href="#svg-logo"></use>
+                </svg>
+                <?php /* $str = file_get_contents($baseUrl.'/images/common/logo.svg'); echo $str; */ ?>
             </a>
-            
-            <ul class="headerMenu">
-                <?php foreach($pageLists as $list){ ?>
-                <details>
-                    <summary class="headerMenu_list"><?php echo $list["title"]; ?></summary>
-                    <ul class="headerMenu_subNav">
-                        <?php foreach($list["pages"] as $value){ ?>
-                        <li class="headerMenu_subList">
-                            <a href="<?php echo '/pages/'.$value["pageName"].'.html'; ?>" class="">
-                                <div class=""><?php echo $value["title"]; ?></div>
-                            </a>
-                        </li>
-                        <?php } ?>
-                    </ul>
-                </details>
-                <?php } ?>
-            </ul>
-        </nav>
+        </h1>
+        <?php } else { ?>
+        <div class="headerLogo">
+            <a href="/">
+                <svg class="svg-logo" viewBox="0 0 252 36">
+                    <use xlink:href="#svg-logo"></use>
+                </svg>
+                <?php /* $str = file_get_contents($baseUrl.'/images/common/logo.svg'); echo $str; */ ?>
+            </a>
+        </div>
+        <?php } ?>
+        <div class="headerBurger" id="js-headerBurger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>        
     </header>
+    <nav class="headerNav">
+        <div class="headerMenu" id="js-headerMenu">
+            <?php foreach($pageLists as $list){ ?>
+            <details class="headerMenu_detail">
+                <summary class="headerMenu_summary"><?php echo $list["title"]; ?></summary>
+                <ul class="headerMenu_ul">
+                    <?php foreach($list["pages"] as $value){ ?>
+                    <li class="headerMenu_li">
+                        <a href="<?php echo '/pages/'.$value["pageName"].'.html'; ?>" class="headerMenu_link">
+                           <?php echo $value["title"]; ?>
+                        </a>
+                    </li>
+                    <?php } ?>
+                </ul>
+            </details>
+            <?php } ?>
+        </div>
+    </nav>
 
     <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
-    <!-- <div class="el-blackCover" id="js-blackCover"></div> -->
+    <div class="el-blackCover" id="js-blackCover"></div>

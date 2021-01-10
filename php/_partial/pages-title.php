@@ -53,8 +53,10 @@
 
 
 <nav class="bl-toc js-tocTgl" id="js-tocTop">
-	<p class="miniHeaderTtl"><?php echo $title ?></p>
-	<div class="bl-toc_ttl" id="js-tocTtl">目次</div>
+	<div class="bl-toc_box">
+		<p class="miniHeaderTtl"><?php echo $title ?></p>
+		<div class="bl-toc_ttl" id="js-tocTtl">目次</div>
+	</div>
 	<ul class="bl-toc_lists">
 	<?php for($i = 0; $i < count($navList); $i++){ ?>
 		<li class="tocList js-tocList">

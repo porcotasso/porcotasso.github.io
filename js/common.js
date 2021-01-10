@@ -1,13 +1,28 @@
 document.addEventListener('DOMContentLoaded',() => {
   
 // HEADER HAMBURGER MENU 
-  var burger = document.getElementById('js-burger');
-  var headerNav = document.getElementById('js-headerNav');
-  var body = document.getElementById('js-body');
-  burger.onclick = function() {
-    headerNav.classList.toggle('active');
-    body.classList.toggle('active');
-  };
+const headerBurger = document.getElementById('js-headerBurger');
+const header = document.getElementById('js-header');
+const headerMenu = document.getElementById('js-headerMenu');
+let bodytag = document.getElementById('js-body');
+const blackCover = document.getElementById('js-blackCover');
+
+headerBurger.addEventListener('click', () => {
+  headerBurger.classList.toggle('avtive-headerMenu');
+  header.classList.toggle('avtive-headerMenu');
+  headerMenu.classList.toggle('avtive-headerMenu');
+  blackCover.classList.toggle('avtive-headerMenu');
+  bodytag.classList.toggle('avtive-headerMenu');
+});
+
+blackCover.addEventListener('click', () => {
+  headerBurger.classList.toggle('avtive-headerMenu');
+  header.classList.toggle('avtive-headerMenu');
+  headerMenu.classList.toggle('avtive-headerMenu');
+  blackCover.classList.toggle('avtive-headerMenu');
+  bodytag.classList.toggle('avtive-headerMenu');
+});
+
 
 // HOME MENU OPEN/CLOSE #menu-triggerをクリックで#js-headerがオンオフ
   const accordionTrigger = document.getElementsByClassName('js-accordionTrigger');
