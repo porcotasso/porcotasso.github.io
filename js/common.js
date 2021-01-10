@@ -40,6 +40,7 @@ blackCover.addEventListener('click', () => {
 
   // スクロールでトップに戻る動き
   let btnScrollTop1 = document.getElementById( "js-scrollTop" );
+  let minHeaderTtl = document.getElementById( "js-min-HeaderTtl" );
   // window.addEventListener('scroll', () => {
   //   let pageOffsetY = window.pageYOffset || document.documentElement.btnScrollTop;
   //   if(pageOffsetY > 400){
@@ -48,7 +49,6 @@ blackCover.addEventListener('click', () => {
   //     btnScrollTop.style.opacity = pageOffsetY/1000;
   //   }
   // });
-  scrollTop(btnScrollTop1, 180);
   function scrollTop(el, duration) {
     el.addEventListener('click', function() {
       let currentY = window.pageYOffset; 
@@ -67,6 +67,8 @@ blackCover.addEventListener('click', () => {
       }
     });
   };
+  scrollTop(btnScrollTop1, 180);
+  scrollTop(minHeaderTtl, 180);
 
   // スクロールでトップに戻るボタンの表示
   let start_pos = 0;

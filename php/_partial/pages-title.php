@@ -54,7 +54,7 @@
 
 <nav class="bl-toc js-tocTgl" id="js-tocTop">
 	<div class="bl-toc_box">
-		<p class="miniHeaderTtl"><?php echo $title ?></p>
+		<p class="miniHeaderTtl" id="js-min-HeaderTtl"><?php echo $title ?></p>
 		<div class="bl-toc_ttl" id="js-tocTtl">目次</div>
 	</div>
 	<ul class="bl-toc_lists">
