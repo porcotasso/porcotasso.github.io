@@ -104,33 +104,34 @@
         </a>
     </div> -->
         
-        <!-- <div class="ly-homeProfile">
-            <h2>プロフィール</h2>
-            <p>ウェブのフロントエンドエンジニアです。html, css, php, javascript,gulp、adobe XD, Illustrator, phptoshopなどを使います。作ること全般が好きで、イラストやレタッチ、動画、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。</p>
-            <ul>
-                <li>スプライトsvgファイルの利用ができる。</li>
-                <li>bootstrap-rebootを全て確認。reset.cssを把握。</li>
-                <li>jsの変数、定数の宣言ができる</li>
-                <li>jsの変数、定数に値を定義できる</li>
-                <li>jsの変数、定数のUndifindがおこる原因がわかる</li>
-                <li>htmlの要素を取得してjsの変数、定数に代入</li>
-                <li>セレクタの違いがわかる</li>
-                <li>プロパティと値がわかる</li>
-                <li>メソッドと関数の違いがわかる</li>
-                <li>リテラルと関数リテラルがわかる</li>
-                <li>アロー関数と通常関数の違いがわかる</li>
-                <li>addEventListenerのクリック処理をアロー関数で書いたとき、event.target とevent.currentTargetで格納する要素が違う</li>
-                <li>API Intersector Observerが使える</li>
-                <li>Loadイベントの種類と違いがわかる</li>
-                <li>コールバック関数を理解している</li>
-                <li>関数の基本の作り方がわかる</li>
-                <li>関数を実行できる</li>
-                <li>イベントがわかる</li>
-                <li>変数、定数にあてがわれた要素のイベントをトリガーに関数を実行できる</li>
-            </ul>
-        </div> -->
+    <div class="ly-homeProfile">
+        <h2>プロフィール</h2>
+        <p>ウェブのフロントエンドエンジニアです。html, css, php, javascript,gulp、adobe XD, Illustrator, phptoshopなどを使います。作ること全般が好きで、イラストやレタッチ、動画、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。</p>
+        <!-- <ul>
+            <li>スプライトsvgファイルの利用ができる。</li>
+            <li>bootstrap-rebootを全て確認。reset.cssを把握。</li>
+            <li>jsの変数、定数の宣言ができる</li>
+            <li>jsの変数、定数に値を定義できる</li>
+            <li>jsの変数、定数のUndifindがおこる原因がわかる</li>
+            <li>htmlの要素を取得してjsの変数、定数に代入</li>
+            <li>セレクタの違いがわかる</li>
+            <li>プロパティと値がわかる</li>
+            <li>メソッドと関数の違いがわかる</li>
+            <li>リテラルと関数リテラルがわかる</li>
+            <li>アロー関数と通常関数の違いがわかる</li>
+            <li>addEventListenerのクリック処理をアロー関数で書いたとき、event.target とevent.currentTargetで格納する要素が違う</li>
+            <li>API Intersector Observerが使える</li>
+            <li>Loadイベントの種類と違いがわかる</li>
+            <li>コールバック関数を理解している</li>
+            <li>関数の基本の作り方がわかる</li>
+            <li>関数を実行できる</li>
+            <li>イベントがわかる</li>
+            <li>変数、定数にあてがわれた要素のイベントをトリガーに関数を実行できる</li>
+        </ul> -->
+    </div>
 </main>
 
+<?php /*
 <nav class="bl-pageNav ly-innnerWidth">
     <h2 class="bl-pageNav_ttl">メニュー</h2>
     <ul class="bl-pageNav_list">
@@ -156,7 +157,8 @@
             </li>
         <?php } ?>
     </ul>
-</nav>  
+</nav> 
+*/ ?>
                 <!-- 
                 
                     <li class="home__menu__cnt">

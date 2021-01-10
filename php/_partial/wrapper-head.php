@@ -88,7 +88,7 @@
         <div class="headerMenu" id="js-headerMenu">
             <?php foreach($pageLists as $list){ ?>
             <details class="headerMenu_detail">
-                <summary class="headerMenu_summary"><?php echo $list["title"]; ?></summary>
+                <summary class="headerMenu_summary"><?php echo $list["title"]; ?><span class="summary_cntNumber"><?php echo count($list["pages"]) ?></span></summary>
                 <ul class="headerMenu_ul">
                     <?php foreach($list["pages"] as $value){ ?>
                     <li class="headerMenu_li">
