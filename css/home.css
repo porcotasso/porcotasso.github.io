@@ -75,10 +75,13 @@
   margin-top: 64px;
   padding-bottom: 16px;
   overflow: hidden; }
+  .bl-recentCnt .svg-note {
+    display: block;
+    width: 20px;
+    margin: 0 auto 4px; }
   .bl-recentCnt_ttl {
     margin: 0 0 16px;
-    color: #20bedd;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     letter-spacing: 0.2em;
     text-align: center; }
   .bl-recentCnt_pages {
@@ -96,7 +99,7 @@
     display: block;
     position: relative;
     margin-bottom: 8px;
-    padding: 0 12px 12px 0;
+    padding: 0 12px 16px 0;
     border-bottom: 1px dotted #d4d9e6;
     color: #181818;
     font-size: 1.3rem;
@@ -260,33 +263,37 @@
     font-size: 1.4rem; }
 
 .ly-homeProfile {
-  padding: 24px 5%;
+  padding: 42px 5% 64px;
   background: #eff1f3; }
   .ly-homeProfile_ttl {
-    margin: 0 0 16px;
-    color: #20bedd;
-    font-size: 1.8rem;
-    letter-spacing: 0.2em;
+    margin: 0 0 12px;
+    font-size: 1.4rem;
     text-align: center; }
-  .ly-homeProfile .characotor-icon {
+  .ly-homeProfile .svg-characotorIcon {
     display: block;
-    width: 90px;
-    margin: 0 auto 16px; }
+    width: 72px;
+    margin: 0 auto 12px; }
   .ly-homeProfile_txt {
     font-size: 1.3rem; }
+  .ly-homeProfile h3 {
+    margin-bottom: 16px;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed #d4d9e6;
+    font-size: 1.5rem; }
   .ly-homeProfile h4 {
-    margin-bottom: 4px;
+    margin-bottom: 8px;
+    padding-left: 6px;
+    border-left: 2px solid #d4d9e6;
     font-size: 1.3rem; }
   .ly-homeProfile ul {
     display: flex;
-    padding: 0;
+    padding: 0 0 0 6px;
     list-style: none; }
     .ly-homeProfile ul li {
-      padding: 0 6px;
-      border: 1px solid #d4d9e6;
+      padding: 0 8px;
       border-radius: 4px;
       background: #fff;
       font-size: 1.2rem; }
       .ly-homeProfile ul li + li {
-        margin-left: 4px; }
+        margin-left: 6px; }
 /*# sourceMappingURL=maps/home.css.map */

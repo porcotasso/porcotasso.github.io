@@ -29,6 +29,9 @@
         </svg>
     </div>
     <div class="bl-recentCnt ly-innnerWidth">
+        <svg class="svg-note" viewBox="0 0 17 20">
+            <use xlink:href="#svg-note"></use>
+        </svg>
         <h2 class="bl-recentCnt_ttl">最近の更新</h2>
         <ul class="bl-recentCnt_pages">
             <?php foreach($latestContent as $value){ ?>
@@ -105,33 +108,45 @@
     </div> -->
         
     <div class="ly-homeProfile">
-        <h2 class="ly-homeProfile_ttl">プロフィール</h2>
-        <svg class="characotor-icon" viewBox="0 0 100 83">
-            <use xlink:href="#characotor-icon"></use>
+        <svg class="svg-characotorIcon" viewBox="0 0 100 83">
+            <use xlink:href="#svg-characotorIcon"></use>
         </svg>
+        <h2 class="ly-homeProfile_ttl">プロフィール</h2>
         <p class="ly-homeProfile_txt">ウェブのフロントエンドエンジニアです。<br>作ること全般が好きで、CG動画、イラスト、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。</p>
-        <h3>スキル</h3>
-        <h4>Coding</h4>
+        <h3>skill</h3>
+        <h4>coding</h4>
         <ul>
             <li>html</li>
             <li>scss</li>
             <li>javascript</li>
             <li>php</li>
         </ul>
-        <h4>Build system</h4>
-        <ul><li>gulp</li></ul>
-        <h4>Design</h4>
+        <h4>design</h4>
         <ul>
             <li>XD</li>
             <li>Illustrator</li>
             <li>phptoshop</li>
         </ul>
-        <h4>Movie</h4>
+        <h4>framework</h4>
+        <ul>
+            <li>bootstrap</li>
+            <li>Angular</li>
+        </ul>
+        <h4>distributed version control system</h4>
+        <ul><li>git</li></ul>
+        <h4>build system</h4>
+        <ul><li>gulp</li></ul>
+        <h4>ecommerce platform</h4>
+        <ul><li>shopify</li></ul>
+        <h4>movie</h4>
         <ul><li>Affter Effects</li></ul>
         <h4>3D</h4>
         <ul><li>Maya</li></ul>
         <h4>Illustration, Photo</h4>
-        <a href="https://www.instagram.com/porco.tasso/">Instagram</a>
+        <ul>
+            <li><a href="https://www.instagram.com/porco.tasso/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        </ul>
+
 
         <!-- <ul>
             <li>スプライトsvgファイルの利用ができる。</li>
