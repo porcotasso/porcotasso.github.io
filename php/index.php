@@ -105,8 +105,34 @@
     </div> -->
         
     <div class="ly-homeProfile">
-        <h2>プロフィール</h2>
-        <p>ウェブのフロントエンドエンジニアです。html, css, php, javascript,gulp、adobe XD, Illustrator, phptoshopなどを使います。作ること全般が好きで、イラストやレタッチ、動画、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。</p>
+        <h2 class="ly-homeProfile_ttl">プロフィール</h2>
+        <svg class="characotor-icon" viewBox="0 0 100 83">
+            <use xlink:href="#characotor-icon"></use>
+        </svg>
+        <p class="ly-homeProfile_txt">ウェブのフロントエンドエンジニアです。<br>作ること全般が好きで、CG動画、イラスト、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。</p>
+        <h3>スキル</h3>
+        <h4>Coding</h4>
+        <ul>
+            <li>html</li>
+            <li>scss</li>
+            <li>javascript</li>
+            <li>php</li>
+        </ul>
+        <h4>Build system</h4>
+        <ul><li>gulp</li></ul>
+        <h4>Design</h4>
+        <ul>
+            <li>XD</li>
+            <li>Illustrator</li>
+            <li>phptoshop</li>
+        </ul>
+        <h4>Movie</h4>
+        <ul><li>Affter Effects</li></ul>
+        <h4>3D</h4>
+        <ul><li>Maya</li></ul>
+        <h4>Illustration, Photo</h4>
+        <a href="https://www.instagram.com/porco.tasso/">Instagram</a>
+
         <!-- <ul>
             <li>スプライトsvgファイルの利用ができる。</li>
             <li>bootstrap-rebootを全て確認。reset.cssを把握。</li>
