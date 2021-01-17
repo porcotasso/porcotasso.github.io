@@ -18,7 +18,7 @@
   fill: rgb(101, 206, 233);
   width: 75%;
   opacity: 0.3;
-  filter: drop-shadow(0 0px 3px rgba(0, 0, 0, .3));
+  // filter: drop-shadow(0 0px 3px rgba(0, 0, 0, .3));
   // margin-top: -180px;
   // top: 0;
   animation-duration: 1s;
@@ -47,15 +47,16 @@
   padding-top: 32px;
   background: $bg-light-gray;
   min-height: 320px;
+  max-height: 400px;
   animation-duration: 3s;
   animation-name: fadeIn;
   &_ttl{
-    font-size: $font-size-20;
+    font-size: $font-size-22;
     margin-bottom: 20px;
   }
   &_txt{
     font-size: $font-size-14;
-    margin-left: 2%;
+    margin-left: 1%; 
   }
 }
 
@@ -79,6 +80,7 @@
   padding-bottom: 16px;
   margin-top: 64px;
   overflow: hidden;
+  border-bottom: 1px dashed $border-gray;
   .svg-note{
     width: 20px;
     margin: 0 auto 4px;
@@ -108,13 +110,10 @@
     // }
   }
   &_link{
-    color: $font-black;
-    font-size: $font-size-13;
-    font-weight: bold;
-    line-height: 1.4;
     margin-bottom: 8px;
-    padding:0 12px 16px 0;
-    display: block;
+    padding:0 12px 12px 0;
+    display: flex;
+    align-items: center;
     position: relative;
     border-bottom: 1px dotted $border-gray;
     &:after{
@@ -126,8 +125,37 @@
       border-right: 2px solid $primary-turquoise;
       position: absolute;
       right: 0;
-      top: 4px;
+      top: 16px;
     }
+  }
+  &_linkImg{
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    background: #1b1b1b;
+    display: flex;
+    justify-content: center;
+    margin-right: 12px;
+    align-items: center;
+  }
+  &_linkImgtxt{
+    margin: 0;
+    font-size: 0;
+    transform: rotate(24deg);
+    &:first-letter{
+      color: #fff;
+      font-size: 64px;
+      font-weight: bold;
+      line-height: 1;
+    }
+  }
+  &_linkTxt{
+    color: $font-black;
+    font-size: $font-size-13;
+    font-weight: bold;
+    line-height: 1.4;
+    margin: 0;
   }
   // &_pagettl{
   //   font-size: $font-size-14;
@@ -333,9 +361,9 @@
 }
 
 
-.ly-homeProfile{
+.homeProfile{
   // margin: 0 $gutter-width;
-  background: $bg-light-gray;
+  // background: $bg-light-gray;
   padding: 42px $gutter-width 64px;
   &_ttl{
     margin: 0 0 12px;
@@ -351,33 +379,58 @@
   &_txt{
     font-size: $font-size-13;
   }
-  h3{
-    padding-bottom: 4px;
-    margin-bottom: 16px;
-    border-bottom: 1px dashed $border-gray;
-    font-size: $font-size-15;
-  }
-  h4{
-    font-size: $font-size-13;
-    margin-bottom: 8px;
-    border-left: 2px solid $border-gray;
-    padding-left: 6px;
-  }
-  ul{
-    list-style: none;
-    display: flex;
-    padding: 0 0 0 6px;
-    li{
-      padding: 0 8px;
-      // border: 1px solid $border-gray;
-      font-size: $font-size-12;
-      border-radius: 4px;
-      background: #fff;
-      + li{
-        margin-left: 6px;
+  .homeCareer{
+    margin-bottom: 32px;
+    ul{
+      display: flex;
+      overflow: scroll;
+      list-style: none;
+      margin: 0 -5%;
+      padding-left: $gutter-width;
+      li{
+        min-width: 120px;
+        border: 1px solid $border-gray;
+        padding: 6px;
+        border-radius: 4px;
+        font-size: $font-size-13;
+        line-height: 1.4;
+        + li{
+          margin-left: 12px;
+        }
       }
     }
+
   }
+  .homeSkill{
+    h3{
+      padding-bottom: 4px;
+      margin-bottom: 16px;
+      border-bottom: 1px dashed $border-gray;
+      font-size: $font-size-15;
+    }
+    h4{
+      font-size: $font-size-13;
+      margin-bottom: 8px;
+      border-left: 2px solid $border-gray;
+      padding-left: 6px;
+    }
+    ul{
+      list-style: none;
+      display: flex;
+      padding: 0 0 0 6px;
+      li{
+        padding: 0 8px;
+        // border: 1px solid $border-gray;
+        font-size: $font-size-12;
+        border-radius: 4px;
+        background: #fff;
+        border: 1px solid $border-gray;
+        + li{
+          margin-left: 6px;
+        }
+      }
+    }
+  } 
 }
 
 
@@ -395,7 +448,7 @@
 //     margin: 4px 0 12px;
 //   }
 // }
-// .ly-homeProfile{
+// .homeProfile{
 //   margin-bottom: 48px;
 //   padding: 16px $gutter-width;
 // }

@@ -23,7 +23,11 @@
     } ?>
     <div class="bl-summary ly-innnerWidth">
         <h2 class="bl-summary_ttl">ウェブを楽しむ</h2>
-        <p class="bl-summary_txt">ウェブフロントエンドエンジニア、ポルコのこつこつ技術メモです。そのうち清書予定。多分。</p>
+        <div class="bl-summary_txt">
+            <p>Porco noteはフロントエンドエンジニア、ポルコ タッソのこつこつ技術メモです。</p>
+            <p>知らないことは理解するのを楽しむ<br>できないことは身につくのを楽しむ</p>
+            <p>まとまってないメモはそのうち清書予定。多分。</p>
+        </div>
         <svg class="svg-logoMark" viewBox="0 0 53 36" id="js-logoMark">
             <use xlink:href="#svg-logoMark"></use>
         </svg>
@@ -37,7 +41,8 @@
             <?php foreach($latestContent as $value){ ?>
                 <li class="bl-recentCnt_list">
                     <a href="<?php echo '/pages/'. $value["pageName"].'.html'; ?>" class="bl-recentCnt_link">
-                        <?php echo $value["title"];?>
+                        <div class="bl-recentCnt_linkImg"><p class="bl-recentCnt_linkImgtxt"><?php echo $value["title"];?></p></div>
+                        <p class="bl-recentCnt_linkTxt"><?php echo $value["title"];?></p>
                     </a>
                     <div class="bl-recentCnt_detail">
                         <ul class="tagList">
@@ -107,45 +112,57 @@
         </a>
     </div> -->
         
-    <div class="ly-homeProfile">
+    <div class="homeProfile">
         <svg class="svg-characotorIcon" viewBox="0 0 100 83">
             <use xlink:href="#svg-characotorIcon"></use>
         </svg>
-        <h2 class="ly-homeProfile_ttl">プロフィール</h2>
-        <p class="ly-homeProfile_txt">ウェブのフロントエンドエンジニアです。<br>作ること全般が好きで、CG動画、イラスト、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。</p>
-        <h3>skill</h3>
-        <h4>coding</h4>
-        <ul>
-            <li>html</li>
-            <li>scss</li>
-            <li>javascript</li>
-            <li>php</li>
-        </ul>
-        <h4>design</h4>
-        <ul>
-            <li>XD</li>
-            <li>Illustrator</li>
-            <li>phptoshop</li>
-        </ul>
-        <h4>framework</h4>
-        <ul>
-            <li>bootstrap</li>
-            <li>Angular</li>
-        </ul>
-        <h4>distributed version control system</h4>
-        <ul><li>git</li></ul>
-        <h4>build system</h4>
-        <ul><li>gulp</li></ul>
-        <h4>ecommerce platform</h4>
-        <ul><li>shopify</li></ul>
-        <h4>movie</h4>
-        <ul><li>Affter Effects</li></ul>
-        <h4>3D</h4>
-        <ul><li>Maya</li></ul>
-        <h4>Illustration, Photo</h4>
-        <ul>
-            <li><a href="https://www.instagram.com/porco.tasso/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-        </ul>
+        <h2 class="homeProfile_ttl">ポルコ タッソ</h2>
+        <p class="homeProfile_txt">ウェブのフロントエンドエンジニアです。<br>作ること全般が好きで、CG動画、イラスト、３Dデータ作成などを経験して、今は楽しくサイト作成をしています。</p>
+        <div class="homeCareer">
+            <h3>Career</h3>
+            <ul>
+                <li>油絵、CGを学ぶ</li>
+                <li>設計事務所でイメージ画像の作成</li>
+                <li>テレビのCG映像制作</li>
+                <li>カタログデザイン</li>
+                <li>フロントエンドエンジニア</li>
+            </ul>
+        </div>
+        <div class="homeSkill">
+            <h3>skill</h3>
+            <h4>coding</h4>
+            <ul>
+                <li>html</li>
+                <li>scss</li>
+                <li>javascript</li>
+                <li>php</li>
+            </ul>
+            <h4>design</h4>
+            <ul>
+                <li>XD</li>
+                <li>Illustrator</li>
+                <li>phptoshop</li>
+            </ul>
+            <h4>framework</h4>
+            <ul>
+                <li>bootstrap</li>
+                <li>Angular</li>
+            </ul>
+            <h4>distributed version control system</h4>
+            <ul><li>git</li></ul>
+            <h4>build system</h4>
+            <ul><li>gulp</li></ul>
+            <h4>ecommerce platform</h4>
+            <ul><li>shopify</li></ul>
+            <h4>movie</h4>
+            <ul><li>Affter Effects</li></ul>
+            <h4>3D</h4>
+            <ul><li>Maya</li></ul>
+            <h4>Illustration, Photo</h4>
+            <ul>
+                <li><a href="https://www.instagram.com/porco.tasso/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            </ul>
+        </div>
 
 
         <!-- <ul>

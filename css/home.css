@@ -15,8 +15,6 @@
           animation-name: slideIn;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
-  -webkit-filter: drop-shadow(0 0px 3px rgba(0, 0, 0, 0.3));
-          filter: drop-shadow(0 0px 3px rgba(0, 0, 0, 0.3));
   opacity: 0.3; }
 
 @-webkit-keyframes slideIn {
@@ -39,6 +37,7 @@
 
 .bl-summary {
   min-height: 320px;
+  max-height: 400px;
   padding-top: 32px;
   padding-bottom: 16px;
   overflow: hidden;
@@ -49,9 +48,9 @@
           animation-duration: 3s; }
   .bl-summary_ttl {
     margin-bottom: 20px;
-    font-size: 2rem; }
+    font-size: 2.2rem; }
   .bl-summary_txt {
-    margin-left: 2%;
+    margin-left: 1%;
     font-size: 1.4rem; }
 
 @-webkit-keyframes fadeIn {
@@ -74,7 +73,8 @@
   position: relative;
   margin-top: 64px;
   padding-bottom: 16px;
-  overflow: hidden; }
+  overflow: hidden;
+  border-bottom: 1px dashed #d4d9e6; }
   .bl-recentCnt .svg-note {
     display: block;
     width: 20px;
@@ -96,18 +96,15 @@
     background: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); }
   .bl-recentCnt_link {
-    display: block;
+    display: flex;
     position: relative;
+    align-items: center;
     margin-bottom: 8px;
-    padding: 0 12px 16px 0;
-    border-bottom: 1px dotted #d4d9e6;
-    color: #181818;
-    font-size: 1.3rem;
-    font-weight: bold;
-    line-height: 1.4; }
+    padding: 0 12px 12px 0;
+    border-bottom: 1px dotted #d4d9e6; }
     .bl-recentCnt_link:after {
       position: absolute;
-      top: 4px;
+      top: 16px;
       right: 0;
       width: 8px;
       height: 8px;
@@ -115,6 +112,31 @@
       border-top: 2px solid #20bedd;
       border-right: 2px solid #20bedd;
       content: ""; }
+  .bl-recentCnt_linkImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+    margin-right: 12px;
+    border-radius: 4px;
+    background: #1b1b1b; }
+  .bl-recentCnt_linkImgtxt {
+    margin: 0;
+    transform: rotate(24deg);
+    font-size: 0; }
+    .bl-recentCnt_linkImgtxt:first-letter {
+      color: #fff;
+      font-size: 64px;
+      font-weight: bold;
+      line-height: 1; }
+  .bl-recentCnt_linkTxt {
+    margin: 0;
+    color: #181818;
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.4; }
   .bl-recentCnt_detail {
     display: flex;
     justify-content: space-between; }
@@ -262,38 +284,55 @@
     color: #181818;
     font-size: 1.4rem; }
 
-.ly-homeProfile {
-  padding: 42px 5% 64px;
-  background: #eff1f3; }
-  .ly-homeProfile_ttl {
+.homeProfile {
+  padding: 42px 5% 64px; }
+  .homeProfile_ttl {
     margin: 0 0 12px;
     font-size: 1.4rem;
     text-align: center; }
-  .ly-homeProfile .svg-characotorIcon {
+  .homeProfile .svg-characotorIcon {
     display: block;
     width: 72px;
     margin: 0 auto 12px; }
-  .ly-homeProfile_txt {
+  .homeProfile_txt {
     font-size: 1.3rem; }
-  .ly-homeProfile h3 {
+  .homeProfile .homeCareer {
+    margin-bottom: 32px; }
+    .homeProfile .homeCareer ul {
+      display: flex;
+      margin: 0 -5%;
+      padding-left: 5%;
+      overflow: scroll;
+      list-style: none; }
+      .homeProfile .homeCareer ul li {
+        min-width: 120px;
+        padding: 6px;
+        border: 1px solid #d4d9e6;
+        border-radius: 4px;
+        font-size: 1.3rem;
+        line-height: 1.4; }
+        .homeProfile .homeCareer ul li + li {
+          margin-left: 12px; }
+  .homeProfile .homeSkill h3 {
     margin-bottom: 16px;
     padding-bottom: 4px;
     border-bottom: 1px dashed #d4d9e6;
     font-size: 1.5rem; }
-  .ly-homeProfile h4 {
+  .homeProfile .homeSkill h4 {
     margin-bottom: 8px;
     padding-left: 6px;
     border-left: 2px solid #d4d9e6;
     font-size: 1.3rem; }
-  .ly-homeProfile ul {
+  .homeProfile .homeSkill ul {
     display: flex;
     padding: 0 0 0 6px;
     list-style: none; }
-    .ly-homeProfile ul li {
+    .homeProfile .homeSkill ul li {
       padding: 0 8px;
+      border: 1px solid #d4d9e6;
       border-radius: 4px;
       background: #fff;
       font-size: 1.2rem; }
-      .ly-homeProfile ul li + li {
+      .homeProfile .homeSkill ul li + li {
         margin-left: 6px; }
 /*# sourceMappingURL=maps/home.css.map */
