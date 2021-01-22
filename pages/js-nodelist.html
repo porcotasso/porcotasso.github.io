@@ -15,9 +15,9 @@
       
     <!-- google font Pacifico for title -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
-            <title>Node、HTMLCollection, NodeListを理解する</title>
+            <title>Node、HTMLCollection、NodeListを理解する</title>
 </head>
-<body class="" id="js-body">
+<body class="js-nodelist" id="js-body">
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -139,7 +139,7 @@
                     </li>
                                         <li class="headerMenu_li">
                         <a href="/pages/js-nodelist.html" class="headerMenu_link">
-                           Node、HTMLCollection, NodeListを理解する                        </a>
+                           Node、HTMLCollection、NodeListを理解する                        </a>
                     </li>
                                     </ul>
             </div>
@@ -318,13 +318,15 @@
     <article class="articleCnt">
                <header>
 	<div class="articleCnt_headerBox">
-		<h1 id="js-articleCntTtl" name="2">Node、HTMLCollection, NodeListを理解する</h1>
+		<h1 id="js-articleCntTtl" name="2">Node、HTMLCollection、NodeListを理解する</h1>
 		<ul class="tagLists">
 						<li class="tagLists_list">
 				html			</li>
+						<li class="tagLists_list">
+				javascript			</li>
 			   
 		</ul>
-					<p class="el-updateDate">2021.01.10 更新</p>
+					<p class="el-updateDate">2021.01.22 更新</p>
 		
 		
 	</div>  
@@ -338,7 +340,7 @@
 						<p class="swiper-slide_ttl">セマンティックHTMLで適切なDOMを構築する</p>
 					</a>
 									<a href="/pages/js-nodelist.html" class="swiper-slide js-swiperSliderTtl">
-						<p class="swiper-slide_ttl">Node、HTMLCollection, NodeListを理解する</p>
+						<p class="swiper-slide_ttl">Node、HTMLCollection、NodeListを理解する</p>
 					</a>
 									<a href="/pages/reset-css.html" class="swiper-slide js-swiperSliderTtl">
 						<p class="swiper-slide_ttl">リセットCSS•ノーマライズCSSを適切に使う</p>
@@ -446,7 +448,7 @@
 
 <nav class="bl-toc js-tocTgl" id="js-tocTop">
 	<div class="bl-toc_box">
-		<p class="miniHeaderTtl" id="js-min-HeaderTtl">Node、HTMLCollection, NodeListを理解する</p>
+		<p class="miniHeaderTtl" id="js-min-HeaderTtl">Node、HTMLCollection、NodeListを理解する</p>
 		<div class="bl-toc_ttl" id="js-tocTtl">目次</div>
 	</div>
 	<ul class="bl-toc_lists">
@@ -479,18 +481,18 @@
 		</li>
 		</ul>
 </nav>
-<p class="articleCnt_summary">ノードリストにはliveとstaticがあります</p>
+<p class="articleCnt_summary">javascriptでHTMLの要素を扱う際に、Nodeの状態、形式などの違いを理解して適切に扱う方法を身に着けよう。</p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 <script src="/js/pages.js"></script>            
         <section class="ly-section tocContent">
             <h2>Nodeとは</h2>
-            <p>DOMでは文書を木構造(tree)としてとらえ、枝分かれの部分や枝の先端をノード(node)と呼びます。タグやその中の属性、テキストがそれぞれノードになります。ノードとは各要素(HTMLではエレメントやタグという)自体のことを表します。特定のノードを基準としたときに、その上にあるノードを「親:parent」ノードと表現し、その下にあるノードを「子:childまたはchildren」ノードと表現します。また同一階層にあるノードのことを「兄弟姉妹:siblings」ノードと表現します。例えば「そのタグの子ノード全体を取得して、その親ノードから削除する」のような使い方をします。 </p>
+            <p>DOMでは文書を木構造(tree)としてとらえ、枝分かれの部分や枝の先端をノード(node)と呼びます。<br>タグやその中の属性、テキストがそれぞれノードになります。<br>ノードとは各要素(HTMLではエレメントやタグという)自体のことを表します。<br>特定のノードを基準としたときに、その上にあるノードを「親:parent」ノードと表現し、その下にあるノードを「子:childまたはchildren」ノードと表現します。<br>また同一階層にあるノードのことを「兄弟姉妹:siblings」ノードと表現します。例えば「そのタグの子ノード全体を取得して、その親ノードから削除する」のような使い方をします。 </p>
             <h3>DOMとは</h3>
-            <p>Document Object Model の略で、javascriptなどのプログラムからxmlやhtmlで書かれた文書を扱うための仕組みの標準のことです。xml,html同様W3C(World Wide Web Consortium ダブリュースリーシー)が標準の策定をしています。DOMは「WEBページとプログラミング言語を繋ぐ役割」を果たします。</p>
+            <p>Document Object Model の略で、javascriptなどのプログラムからxmlやhtmlで書かれた文書を扱うための仕組みの標準のことです。<br>DOMは「WEBページとプログラミング言語を繋ぐ役割」を果たします。</p>
         </section>
         <section class="ly-section tocContent">
             <h2>主なノードの種類</h2>
-            <table>
+            <table class="nodeType">
               <thead>
                 <tr>
                   <th>ノードの種類</th>
@@ -534,7 +536,7 @@
 </pre>
 
             <h3>element nodeを取り出すためのプロパティ</h3>
-            <table>
+            <table class="nodeType">
               <thead>
               <tr>
               <th>プロパティ名</th>
@@ -579,13 +581,13 @@ var nodeList = elementNodeReference.childNodes;
 </pre>
             <h4>親ノードを取得して、操作する</h4>
 <pre class="prettyprint">
-var parentNode = elementNodeReference.parentNode
+var parentNode = elementNodeReference.parentNode;
 </pre>
           </section>
           <section class="ly-section tocContent">
             <h2>attribute node</h2>
               <h3>attribute node</h3>
-              <p>attribute(属性)とはタグ内に「属性名="値"」という形で書かれるものです。src="images/hoge.png" では、src が属性名で images/hoge.png が値です。attribute nodeには src の他に class, id, title, href, alt, for, colspan, rowspan, type などたくさんあります。</p>
+              <p>attribute(属性)とはタグ内に「属性名="値"」という形で書かれるものです。src="images/hoge.png" では、src が属性名で images/hoge.png が値です。<br>attribute nodeには src の他に class, id, title, href, alt, for, colspan, rowspan, type などたくさんあります。</p>
               <h3>attribute nodeの値の変更</h3>
               <p>attribute nodeの値の変更には2つの方法があります。</p>
               <h4>属性名="値" を使う方法</h4>
@@ -698,10 +700,10 @@ elements.forEach((value, index) => {
 
           <section class="ly-section tocContent">
             <h2>要素の取得方法</h2>
-            <p>javascriptでDOM要素をとる方法には、getElementシリーズと、querySelector系とがあります。getElementsByの方がquerySelectorAllよりも速い。</p>
+            <p>javascriptでDOM要素をとる方法には、getElementシリーズと、querySelector系とがあります。getElementsByの方がquerySelectorAllよりも速いです。</p>
             
             <h3>querySelector()</h3>
-            <p>「querySelector()」を使うとid属性値・class属性値などを意識せずにjQuery感覚でHTML要素をセレクタ指定することができます。簡単に言うと「querySelector()」だけであらゆるHTML要素を取得することができる。最初に合致したHTML要素を取得した時点でプログラムは終了するので複数の要素を取得するには自作のループ処理を作成するか、「querySelectorAll()」を使う</p>
+            <p>「querySelector()」を使うとid属性値・class属性値などを意識せずにjQuery感覚でHTML要素をセレクタ指定することができます。<br>簡単に言うと「querySelector()」だけであらゆるHTML要素を取得することができる。最初に合致したHTML要素を取得した時点でプログラムは終了するので複数の要素を取得するには自作のループ処理を作成するか「querySelectorAll()」を使うこと。</p>
 <pre class="prettyprint">
 const elm = document.querySelector('.elem');
 </pre>

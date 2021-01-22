@@ -33,6 +33,7 @@
                     $lead = $list["lead"];
                     $tag = $list["tag"];
                     $filename = $baseUrl.$list["file"];
+                    $pageName = $list["pageName"];
                     $pageNumber = $index;
                     // if($i != 0){
                     //     $pagePre = "/pages/".$allPages[$i - 1]["pageName"].'.html';
@@ -56,7 +57,7 @@
         } ?>
     <title><?php echo ($title); ?></title>
 </head>
-<body class="" id="js-body">
+<body class="<?php echo ($pageName); ?>" id="js-body">
 <?php include_once($baseUrl.'/images/common/sprite.svg'); ?>
     <header class="ly-header" id="js-header">  
         <?php if($_SERVER['REQUEST_URI'] == "/"){ ?>

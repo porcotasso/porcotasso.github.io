@@ -122,7 +122,7 @@ td{
 	// top: 68px;
 	width: 93%;
 	right: -100%;
-	max-height:calc(100% - 152px); //これがないと縦にスクロールせず、画面からはみ出たメニューが見れない
+	max-height:calc(100% - 72px); //これがないと縦にスクロールせず、画面からはみ出たメニューが見れない
 	padding: 16px 0;
 	text-align: left;
 	background: #fff;
@@ -618,6 +618,18 @@ td{
 			display: block;
 			z-index: 1;
 			transition: all .4s;
+			position: relative;
+			&::before{
+				position: absolute;
+				top: 4px;
+				left: 0;
+				width: 0;
+				height: 0;
+				border-bottom: 6px solid #a8e0ea;
+				border-right: 6px solid transparent;
+				border-left: 6px solid transparent;
+				content: "";
+			}
 		}
 		&.tocTop{
 			.bl-toc_box{
@@ -687,13 +699,20 @@ font-weight: bold;
 }
 
 
-
+// js-nodelist
+.js-nodelist{
+	.nodeType{
+		th{
+			min-width: 100px;
+		}
+	}
+}
 
 
 //scroll top button
 .el-scrollTop{
 	position: fixed;
-	top: 40%;
+	top: 80%;
 	right: 0;
 	width: 64px;
 	height: 40px;

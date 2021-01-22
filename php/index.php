@@ -142,6 +142,14 @@
                 <li>XD</li>
                 <li>Illustrator</li>
                 <li>phptoshop</li>
+                <li>UI Design</li>
+            </ul>
+            <h4>Analytics</h4>
+            <ul>
+                <li>google Analytics</li>
+                <li>google Tag Manager</li>
+                <li>google Optimize</li>
+                <li>UX Design</li>
             </ul>
             <h4>framework</h4>
             <ul>
@@ -149,9 +157,16 @@
                 <li>Angular</li>
             </ul>
             <h4>distributed version control system</h4>
-            <ul><li>git</li></ul>
+            <ul>
+                <li>git</li>
+                <li>github</li>
+            </ul>
+            <h4>server-side environment</h4>
+            <ul><li>node.js</li></ul>
             <h4>build system</h4>
             <ul><li>gulp</li></ul>
+            <h4>command line shell</h4>
+            <ul><li>fish</li></ul>
             <h4>ecommerce platform</h4>
             <ul><li>shopify</li></ul>
             <h4>movie</h4>

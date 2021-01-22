@@ -154,6 +154,8 @@
     color: #20bedd;
     font-size: 1.2rem;
     line-height: 1; }
+    .bl-recentCnt .tag + .tag {
+      margin-left: 4px; }
     .bl-recentCnt .tag.active-tag {
       background-color: #20bedd;
       color: #fff; }
@@ -325,14 +327,16 @@
     font-size: 1.3rem; }
   .homeProfile .homeSkill ul {
     display: flex;
+    flex-wrap: wrap;
     padding: 0 0 0 6px;
     list-style: none; }
     .homeProfile .homeSkill ul li {
+      margin: 0 6px 6px 0;
       padding: 0 8px;
       border: 1px solid #d4d9e6;
       border-radius: 4px;
       background: #fff;
       font-size: 1.2rem; }
-      .homeProfile .homeSkill ul li + li {
-        margin-left: 6px; }
+      .homeProfile .homeSkill ul li:last-of-type {
+        margin-right: 0; }
 /*# sourceMappingURL=maps/home.css.map */

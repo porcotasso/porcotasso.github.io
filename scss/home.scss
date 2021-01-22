@@ -181,6 +181,9 @@
     color: $primary-turquoise;
     font-size: $font-size-12;
     line-height: 1;
+    & + .tag{
+      margin-left: 4px;
+    }
     &.active-tag{
       color: #fff;
       background-color: $primary-turquoise;
@@ -417,6 +420,7 @@
     ul{
       list-style: none;
       display: flex;
+      flex-wrap: wrap;
       padding: 0 0 0 6px;
       li{
         padding: 0 8px;
@@ -425,8 +429,9 @@
         border-radius: 4px;
         background: #fff;
         border: 1px solid $border-gray;
-        + li{
-          margin-left: 6px;
+        margin:0 6px 6px 0;
+        &:last-of-type{
+          margin-right: 0;
         }
       }
     }

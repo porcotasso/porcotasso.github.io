@@ -67,8 +67,8 @@ blackCover.addEventListener('click', () => {
       }
     });
   };
-  scrollTop(btnScrollTop1, 180);
-  scrollTop(minHeaderTtl, 180);
+  scrollTop(btnScrollTop1, 280);
+  scrollTop(minHeaderTtl, 280);
 
   // スクロールでトップに戻るボタンの表示
   let start_pos = 0;

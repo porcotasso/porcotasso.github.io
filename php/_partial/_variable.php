@@ -19,9 +19,9 @@ $semanticTags = array(
 );
 $jsNodelist = array(
 	"file" => "/php/pages/js-nodelist.php",
-	"tag" => array("html"),
-	"title" => "Node、HTMLCollection, NodeListを理解する",
-	"lead" => "ノードリストにはliveとstaticがあります",
+	"tag" => array('html','javascript'),
+	"title" => "Node、HTMLCollection、NodeListを理解する",
+	"lead" => "javascriptでHTMLの要素を扱う際に、Nodeの状態、形式などの違いを理解して適切に扱う方法を身に着けよう。",
 	"pageName" => "js-nodelist"
 );
 //css

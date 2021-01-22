@@ -111,12 +111,12 @@ var mySwiper = new Swiper ('.swiper-container', {
 	// 	prevEl: '.swiper-button-prev',
 	// },
 	// ここまでを追加
-	slidesPerView: 9,    // 追加...1度に表示するスライド枚数
+	slidesPerView: 7,    // 追加...1度に表示するスライド枚数
 	spaceBetween: 4,    // 追加...スライド間の余白
 	// ブレイクポイントを設定
 	breakpoints: {
 		767: {
-		slidesPerView: 5,
+		slidesPerView: 4,
 		spaceBetween: 0,
 		}
 	}

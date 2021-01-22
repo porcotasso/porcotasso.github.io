@@ -6,13 +6,13 @@
             
         <section class="ly-section tocContent">
             <h2><?php echo $navList[0]; ?></h2>
-            <p>DOMでは文書を木構造(tree)としてとらえ、枝分かれの部分や枝の先端をノード(node)と呼びます。タグやその中の属性、テキストがそれぞれノードになります。ノードとは各要素(HTMLではエレメントやタグという)自体のことを表します。特定のノードを基準としたときに、その上にあるノードを「親:parent」ノードと表現し、その下にあるノードを「子:childまたはchildren」ノードと表現します。また同一階層にあるノードのことを「兄弟姉妹:siblings」ノードと表現します。例えば「そのタグの子ノード全体を取得して、その親ノードから削除する」のような使い方をします。 </p>
+            <p>DOMでは文書を木構造(tree)としてとらえ、枝分かれの部分や枝の先端をノード(node)と呼びます。<br>タグやその中の属性、テキストがそれぞれノードになります。<br>ノードとは各要素(HTMLではエレメントやタグという)自体のことを表します。<br>特定のノードを基準としたときに、その上にあるノードを「親:parent」ノードと表現し、その下にあるノードを「子:childまたはchildren」ノードと表現します。<br>また同一階層にあるノードのことを「兄弟姉妹:siblings」ノードと表現します。例えば「そのタグの子ノード全体を取得して、その親ノードから削除する」のような使い方をします。 </p>
             <h3>DOMとは</h3>
-            <p>Document Object Model の略で、javascriptなどのプログラムからxmlやhtmlで書かれた文書を扱うための仕組みの標準のことです。xml,html同様W3C(World Wide Web Consortium ダブリュースリーシー)が標準の策定をしています。DOMは「WEBページとプログラミング言語を繋ぐ役割」を果たします。</p>
+            <p>Document Object Model の略で、javascriptなどのプログラムからxmlやhtmlで書かれた文書を扱うための仕組みの標準のことです。<br>DOMは「WEBページとプログラミング言語を繋ぐ役割」を果たします。</p>
         </section>
         <section class="ly-section tocContent">
             <h2><?php echo $navList[1]; ?></h2>
-            <table>
+            <table class="nodeType">
               <thead>
                 <tr>
                   <th>ノードの種類</th>
@@ -56,7 +56,7 @@
 </pre>
 
             <h3>element nodeを取り出すためのプロパティ</h3>
-            <table>
+            <table class="nodeType">
               <thead>
               <tr>
               <th>プロパティ名</th>
@@ -101,13 +101,13 @@ var nodeList = elementNodeReference.childNodes;
 </pre>
             <h4>親ノードを取得して、操作する</h4>
 <pre class="prettyprint">
-var parentNode = elementNodeReference.parentNode
+var parentNode = elementNodeReference.parentNode;
 </pre>
           </section>
           <section class="ly-section tocContent">
             <h2><?php echo $navList[3]; ?></h2>
               <h3>attribute node</h3>
-              <p>attribute(属性)とはタグ内に「属性名="値"」という形で書かれるものです。src="images/hoge.png" では、src が属性名で images/hoge.png が値です。attribute nodeには src の他に class, id, title, href, alt, for, colspan, rowspan, type などたくさんあります。</p>
+              <p>attribute(属性)とはタグ内に「属性名="値"」という形で書かれるものです。src="images/hoge.png" では、src が属性名で images/hoge.png が値です。<br>attribute nodeには src の他に class, id, title, href, alt, for, colspan, rowspan, type などたくさんあります。</p>
               <h3>attribute nodeの値の変更</h3>
               <p>attribute nodeの値の変更には2つの方法があります。</p>
               <h4>属性名="値" を使う方法</h4>
@@ -220,10 +220,10 @@ elements.forEach((value, index) => {
 
           <section class="ly-section tocContent">
             <h2><?php echo $navList[7]; ?></h2>
-            <p>javascriptでDOM要素をとる方法には、getElementシリーズと、querySelector系とがあります。getElementsByの方がquerySelectorAllよりも速い。</p>
+            <p>javascriptでDOM要素をとる方法には、getElementシリーズと、querySelector系とがあります。getElementsByの方がquerySelectorAllよりも速いです。</p>
             
             <h3>querySelector()</h3>
-            <p>「querySelector()」を使うとid属性値・class属性値などを意識せずにjQuery感覚でHTML要素をセレクタ指定することができます。簡単に言うと「querySelector()」だけであらゆるHTML要素を取得することができる。最初に合致したHTML要素を取得した時点でプログラムは終了するので複数の要素を取得するには自作のループ処理を作成するか、「querySelectorAll()」を使う</p>
+            <p>「querySelector()」を使うとid属性値・class属性値などを意識せずにjQuery感覚でHTML要素をセレクタ指定することができます。<br>簡単に言うと「querySelector()」だけであらゆるHTML要素を取得することができる。最初に合致したHTML要素を取得した時点でプログラムは終了するので複数の要素を取得するには自作のループ処理を作成するか「querySelectorAll()」を使うこと。</p>
 <pre class="prettyprint">
 const elm = document.querySelector('.elem');
 </pre>
