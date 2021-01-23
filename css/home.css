@@ -330,13 +330,24 @@
     flex-wrap: wrap;
     padding: 0 0 0 6px;
     list-style: none; }
-    .homeProfile .homeSkill ul li {
+    .homeProfile .homeSkill ul li h5 {
       margin: 0 6px 6px 0;
       padding: 0 8px;
       border: 1px solid #d4d9e6;
       border-radius: 4px;
       background: #fff;
       font-size: 1.2rem; }
-      .homeProfile .homeSkill ul li:last-of-type {
-        margin-right: 0; }
+    .homeProfile .homeSkill ul li p {
+      display: none;
+      position: absolute;
+      left: 0;
+      margin: 0 5%;
+      padding: 4px 8px;
+      border-radius: 4px;
+      background: #ccc;
+      font-size: 1.2rem; }
+    .homeProfile .homeSkill ul li:last-of-type {
+      margin-right: 0; }
+    .homeProfile .homeSkill ul li:hover p {
+      display: block; }
 /*# sourceMappingURL=maps/home.css.map */

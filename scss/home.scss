@@ -365,14 +365,11 @@
 
 
 .homeProfile{
-  // margin: 0 $gutter-width;
-  // background: $bg-light-gray;
   padding: 42px $gutter-width 64px;
   &_ttl{
     margin: 0 0 12px;
     font-size: $font-size-14;
     text-align: center;
-    // letter-spacing: 0.2em;
   }
   .svg-characotorIcon{
     width: 72px;
@@ -402,7 +399,6 @@
         }
       }
     }
-
   }
   .homeSkill{
     h3{
@@ -423,15 +419,32 @@
       flex-wrap: wrap;
       padding: 0 0 0 6px;
       li{
-        padding: 0 8px;
-        // border: 1px solid $border-gray;
-        font-size: $font-size-12;
-        border-radius: 4px;
-        background: #fff;
-        border: 1px solid $border-gray;
-        margin:0 6px 6px 0;
+        h5{
+          padding: 0 8px;
+          // border: 1px solid $border-gray;
+          font-size: $font-size-12;
+          border-radius: 4px;
+          background: #fff;
+          border: 1px solid $border-gray;
+          margin:0 6px 6px 0;
+        }
+        p{
+          display: none;
+          font-size: $font-size-12;
+          padding: 4px 8px;
+          border-radius: 4px;
+          background: #ccc;
+          position: absolute;
+          margin: 0 5%;
+          left: 0;
+        }
         &:last-of-type{
           margin-right: 0;
+        }
+        &:hover{
+          p{
+            display: block;
+          }
         }
       }
     }

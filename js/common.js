@@ -1,30 +1,30 @@
 document.addEventListener('DOMContentLoaded',() => {
   
-// HEADER HAMBURGER MENU 
-const headerBurger = document.getElementById('js-headerBurger');
-const header = document.getElementById('js-header');
-const headerMenu = document.getElementById('js-headerMenu');
-let bodytag = document.getElementById('js-body');
-const blackCover = document.getElementById('js-blackCover');
+  // HEADER HAMBURGER MENU 
+  const headerBurger = document.getElementById('js-headerBurger');
+  const header = document.getElementById('js-header');
+  const headerMenu = document.getElementById('js-headerMenu');
+  let bodytag = document.getElementById('js-body');
+  const blackCover = document.getElementById('js-blackCover');
 
-headerBurger.addEventListener('click', () => {
-  headerBurger.classList.toggle('avtive-headerMenu');
-  header.classList.toggle('avtive-headerMenu');
-  headerMenu.classList.toggle('avtive-headerMenu');
-  blackCover.classList.toggle('avtive-headerMenu');
-  bodytag.classList.toggle('avtive-headerMenu');
-});
+  headerBurger.addEventListener('click', () => {
+    headerBurger.classList.toggle('avtive-headerMenu');
+    header.classList.toggle('avtive-headerMenu');
+    headerMenu.classList.toggle('avtive-headerMenu');
+    blackCover.classList.toggle('avtive-headerMenu');
+    bodytag.classList.toggle('avtive-headerMenu');
+  });
 
-blackCover.addEventListener('click', () => {
-  headerBurger.classList.toggle('avtive-headerMenu');
-  header.classList.toggle('avtive-headerMenu');
-  headerMenu.classList.toggle('avtive-headerMenu');
-  blackCover.classList.toggle('avtive-headerMenu');
-  bodytag.classList.toggle('avtive-headerMenu');
-});
+  blackCover.addEventListener('click', () => {
+    headerBurger.classList.toggle('avtive-headerMenu');
+    header.classList.toggle('avtive-headerMenu');
+    headerMenu.classList.toggle('avtive-headerMenu');
+    blackCover.classList.toggle('avtive-headerMenu');
+    bodytag.classList.toggle('avtive-headerMenu');
+  });
 
 
-// HOME MENU OPEN/CLOSE #menu-triggerをクリックで#js-headerがオンオフ
+  // HOME MENU OPEN/CLOSE #menu-triggerをクリックで#js-headerがオンオフ
   const accordionTrigger = document.getElementsByClassName('js-accordionTrigger');
   for (let i = 0; i < accordionTrigger.length; i++){
     let titleEach = accordionTrigger[i];
@@ -108,13 +108,11 @@ blackCover.addEventListener('click', () => {
             }
           }
         }
-
         start_pos = current_pos;
         btnScrollTop.style.opacity = opacity;
         btnScrollTop.style.display = display;
         // console.log(opacity);
   });
-
 });
 
 

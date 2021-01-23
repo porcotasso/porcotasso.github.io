@@ -24,11 +24,11 @@
     <div class="bl-summary ly-innnerWidth">
         <h2 class="bl-summary_ttl">ウェブを楽しむ</h2>
         <div class="bl-summary_txt">
-            <p>Porco noteはフロントエンドエンジニア、ポルコ タッソのこつこつ技術メモです。</p>
-            <p>知らないことは理解するのを楽しむ<br>できないことは身につくのを楽しむ</p>
+            <p>フロントエンドエンジニア、ポルコ•タッソのこつこつ技術メモです。</p>
+            <p>知らないことは理解するのを楽しもう<br>できないことは身につくのを楽しもう</p>
             <p>まとまってないメモはそのうち清書予定。多分。</p>
         </div>
-        <svg class="svg-logoMark" viewBox="0 0 53 36" id="js-logoMark">
+        <svg class="svg-logoMark" viewBox="0 0 53 36">
             <use xlink:href="#svg-logoMark"></use>
         </svg>
     </div>
@@ -132,10 +132,22 @@
             <h3>skill</h3>
             <h4>coding</h4>
             <ul>
-                <li>html</li>
-                <li>scss</li>
-                <li>javascript</li>
-                <li>php</li>
+                <li>
+                    <h5>html</h5>
+                    <p>コンテンツ・モデルに従ったコーディングをする。セマンティックHTMLの重要性の理解。Nodeの概要把握</p>
+                </li>
+                <li>
+                    <h5>scss</h5>
+                    <p>リセットCSS•ノーマライズCSSの理解。スタイルのカテゴライズを意識する。スコープの意図的な指定や命名ルールでカオスにならないようなルール作りを心がける。</p>
+                </li>
+                <li>
+                    <h5>javascript</h5>
+                    <p>ノードの取得からイベントの実行ができる。複雑なアルゴリズム、関数の利用、typescriptなどを今後身に着ける。</p>
+                </li>
+                <li>
+                    <h5>php</h5>
+                    <p>php形式のファイルでphpオブジェクトをループで回しhtmlにコンパイルできる。</p>
+                </li>
             </ul>
             <h4>design</h4>
             <ul>
@@ -150,6 +162,10 @@
                 <li>google Tag Manager</li>
                 <li>google Optimize</li>
                 <li>UX Design</li>
+                <p>exit rate, bounce rateなどから分析してサイト改善ができる。</p>
+                <p>gtmとhtmlを連動させ各ボタンのクリック数など詳細データを取得分析し改善に利用できる。</p>
+                <p>A/Bテスト、リダイレクトテストをしてコンテンツの改善ができる</p>
+                <p>利用者の</p>
             </ul>
             <h4>framework</h4>
             <ul>
