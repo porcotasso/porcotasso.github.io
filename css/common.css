@@ -472,7 +472,7 @@ li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
 body {
   -ms-scroll-chaining: none;
       overscroll-behavior: contain; }
-  body.avtive-headerMenu {
+  body.acvtive-headerMenu {
     overflow: hidden; }
 
 th {
@@ -529,20 +529,20 @@ td {
         top: 8px; }
       .ly-header .headerBurger span:nth-of-type(3) {
         bottom: 0; }
-    .ly-header .headerBurger.avtive-headerMenu span {
+    .ly-header .headerBurger.acvtive-headerMenu span {
       background-color: #fff; }
-      .ly-header .headerBurger.avtive-headerMenu span:nth-of-type(1) {
+      .ly-header .headerBurger.acvtive-headerMenu span:nth-of-type(1) {
         top: 8px;
         transform: rotate(-45deg); }
-      .ly-header .headerBurger.avtive-headerMenu span:nth-of-type(2) {
+      .ly-header .headerBurger.acvtive-headerMenu span:nth-of-type(2) {
         left: 11px;
         width: 0; }
-      .ly-header .headerBurger.avtive-headerMenu span:nth-of-type(3) {
+      .ly-header .headerBurger.acvtive-headerMenu span:nth-of-type(3) {
         top: 8px;
         transform: rotate(45deg); }
-  .ly-header.avtive-headerMenu {
+  .ly-header.acvtive-headerMenu {
     background: #eff1f3; }
-    .ly-header.avtive-headerMenu .headerLogo {
+    .ly-header.acvtive-headerMenu .headerLogo {
       left: -2px; }
 
 .headerNav {
@@ -649,7 +649,7 @@ td {
   100% {
     transform: none;
     opacity: 1; } }
-  .headerMenu.avtive-headerMenu {
+  .headerMenu.acvtive-headerMenu {
     display: block;
     right: 0;
     opacity: 1; }
@@ -666,7 +666,7 @@ td {
   opacity: 0;
   pointer-events: none;
   transition: 0.4s; }
-  .el-blackCover.avtive-headerMenu {
+  .el-blackCover.acvtive-headerMenu {
     opacity: 0.86;
     pointer-events: auto; }
 

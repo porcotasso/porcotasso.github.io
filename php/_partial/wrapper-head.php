@@ -56,14 +56,20 @@
 
         } ?>
     <title><?php echo ($title); ?></title>
+    <title><?php echo ($_SERVER['REQUEST_URI']); ?></title>
 </head>
-<body class="<?php echo ($pageName); ?>" id="js-body">
+<?php if($_SERVER['REQUEST_URI'] == "/php/index.php"){ ?>
+    <body id="js-body">
+<?php } else { ?>
+    <body class="<?php echo ($pageName); ?>" id="js-body">
+<?php } ?>
+
 <?php include_once($baseUrl.'/images/common/sprite.svg'); ?>
     <header class="ly-header" id="js-header">  
         <?php if($_SERVER['REQUEST_URI'] == "/"){ ?>
         <h1 class="headerLogo">
             <a href="/">
-                <svg class="svg-logo" viewBox="0 0 252 36">
+                <svg class="svg-logo" viewBox="0 0 252 52">
                     <use xlink:href="#svg-logo"></use>
                 </svg>
                 <?php /* $str = file_get_contents($baseUrl.'/images/common/logo.svg'); echo $str; */ ?>

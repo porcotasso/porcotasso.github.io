@@ -57,10 +57,24 @@ relatedClose.forEach((value, index) => {
 
 
 //popup
-const popup = Array.from(document.getElementsByClassName('js-popup'));
-popup.forEach((value, index) => {
-	popup[index].addEventListener('click', () => {
-		console.log('aa');
-		popup[index].nextElementSibling.style.display = 'block';
+const popupTrigger = Array.from(document.getElementsByClassName('js-popupTrigger'));
+let closePopup = document.getElementById('js-body');
+popupTrigger.forEach((value, index) => {
+	popupTrigger[index].addEventListener('click', () => {
+		let popup = Array.from(document.getElementsByClassName('js-popup'));
+		// console.log(popup[0]);
+		if(popup[0] != undefined){
+			// console.log(popup[0]);
+			popup[0].remove();
+		};
+		popupTrigger[index].insertAdjacentHTML('afterend', '<div class="popupTxt js-popup">' + popupTrigger[index].getAttribute("data") + '</div>');
 	}, false)
+});
+
+closePopup.addEventListener('click', () => {
+	let popup2 = Array.from(document.getElementsByClassName('js-popup'));
+	if(popup2[0] != undefined){
+		console.log(popup2[0]);
+		// popup2[0].remove();
+	};
 });

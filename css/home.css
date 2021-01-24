@@ -346,6 +346,14 @@
       border-radius: 4px;
       background: #ccc;
       font-size: 1.2rem; }
+    .homeProfile .homeSkill ul li .popupTxt {
+      position: absolute;
+      left: 0;
+      margin: 0 5%;
+      padding: 4px 8px;
+      border-radius: 4px;
+      background: #ccc;
+      font-size: 1.2rem; }
     .homeProfile .homeSkill ul li:last-of-type {
       margin-right: 0; }
 /*# sourceMappingURL=maps/home.css.map */

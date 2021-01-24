@@ -19,7 +19,7 @@
 // 基本body直下で全画面幅の中で両端にスペースを追加
 body{
 	overscroll-behavior: contain;
-	&.avtive-headerMenu{
+	&.acvtive-headerMenu{
 		overflow: hidden;
 	}
 }
@@ -85,7 +85,7 @@ td{
 			bottom: 0;
 			}
 		}
-		&.avtive-headerMenu{
+		&.acvtive-headerMenu{
 			span{
 				background-color: #fff;
 				&:nth-of-type(1) {
@@ -103,7 +103,7 @@ td{
 			}
 		}
 	}
-	&.avtive-headerMenu{
+	&.acvtive-headerMenu{
 		background: $bg-light-gray;
 		.headerLogo {
 			// opacity: .2;
@@ -273,7 +273,7 @@ td{
 	// 		color: $font-black;
 	// 	}
 	// }
-	&.avtive-headerMenu{
+	&.acvtive-headerMenu{
 		display: block;
 		opacity: 1;
 		right: 0;
@@ -291,7 +291,7 @@ td{
 	pointer-events: none;
 	background-color: #000;
 	transition: $transition;
-	&.avtive-headerMenu{
+	&.acvtive-headerMenu{
 		opacity: 0.86;
 		pointer-events: auto;
 

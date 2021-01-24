@@ -133,12 +133,12 @@
             <h4>coding</h4>
             <ul>
                 <li>
-                    <h5 class="js-popup">html</h5>
+                    <h5 class="js-popupTrigger" data="コンテンツ・モデルに従ったコーディ">html</h5>
                     <p>コンテンツ・モデルに従ったコーディングをする。セマンティックHTMLの重要性の理解。Nodeの概要把握</p>
                 </li>
                 <li>
-                    <h5>scss</h5>
-                    <p>リセットCSS•ノーマライズCSSの理解。スタイルのカテゴライズを意識する。スコープの意図的な指定や命名ルールでカオスにならないようなルール作りを心がける。</p>
+                    <h5 class="js-popupTrigger" data="コンテンwディ">scss</h5>
+                    <p>リセットCSS•ノーマライズ CSSの理解。スタイルのカテゴライズを意識する。スコープの意図的な指定や命名ルールでカオスにならないようなルール作りを心がける。</p>
                 </li>
                 <li>
                     <h5>javascript</h5>
