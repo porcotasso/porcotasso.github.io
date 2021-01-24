@@ -54,3 +54,13 @@ relatedClose.forEach((value, index) => {
 		inactiveTag();
 	}, false)
 });
+
+
+//popup
+const popup = Array.from(document.getElementsByClassName('js-popup'));
+popup.forEach((value, index) => {
+	popup[index].addEventListener('click', () => {
+		console.log('aa');
+		popup[index].nextElementSibling.style.display = 'block';
+	}, false)
+});

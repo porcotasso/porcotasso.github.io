@@ -112,7 +112,7 @@ var parentNode = elementNodeReference.parentNode;
               <p>attribute nodeの値の変更には2つの方法があります。</p>
               <h4>属性名="値" を使う方法</h4>
 <pre class="prettyprint">
-<img src="image/motogazou.png" alt="" id="n1" />
+<img src="" alt="" id="n1" />
 document.getElementById("n1").src = "images/example.png";
 </pre>
 
@@ -120,7 +120,7 @@ document.getElementById("n1").src = "images/example.png";
 <pre class="prettyprint">
 element.setAttribute('属性名', '属性値');
 
-<img src="image/motogazou.png" alt="" id="n1" />
+<img src="" alt="" id="n1" />
 document.getElementById("n1").setAttribute("src","images/example.png");
 </pre>
 
