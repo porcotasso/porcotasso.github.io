@@ -656,6 +656,7 @@ td {
 
 .el-blackCover {
   display: block;
+  visibility: hidden;
   z-index: 99;
   position: fixed;
   top: 0;
@@ -667,6 +668,7 @@ td {
   pointer-events: none;
   transition: 0.4s; }
   .el-blackCover.acvtive-headerMenu {
+    visibility: visible;
     opacity: 0.86;
     pointer-events: auto; }
 

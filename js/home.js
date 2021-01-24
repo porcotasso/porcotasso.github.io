@@ -58,10 +58,11 @@ relatedClose.forEach((value, index) => {
 
 //popup
 const popupTrigger = Array.from(document.getElementsByClassName('js-popupTrigger'));
-let closePopup = document.getElementById('js-body');
+let closePopup = document.getElementById('js-closePopup');
 popupTrigger.forEach((value, index) => {
 	popupTrigger[index].addEventListener('click', () => {
 		let popup = Array.from(document.getElementsByClassName('js-popup'));
+		closePopup.classList.add('is-active');
 		// console.log(popup[0]);
 		if(popup[0] != undefined){
 			// console.log(popup[0]);
@@ -75,6 +76,7 @@ closePopup.addEventListener('click', () => {
 	let popup2 = Array.from(document.getElementsByClassName('js-popup'));
 	if(popup2[0] != undefined){
 		console.log(popup2[0]);
-		// popup2[0].remove();
+		popup2[0].remove();
+		closePopup.classList.remove('is-active');
 	};
 });
