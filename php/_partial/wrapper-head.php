@@ -72,7 +72,7 @@
         <?php } else { ?>
         <div class="headerLogo">
             <a href="/">
-                <svg class="svg-logo" viewBox="0 0 252 36">
+                <svg class="svg-logo" viewBox="0 0 252 52">
                     <use xlink:href="#svg-logo"></use>
                 </svg>
                 <?php /* $str = file_get_contents($baseUrl.'/images/common/logo.svg'); echo $str; */ ?>
