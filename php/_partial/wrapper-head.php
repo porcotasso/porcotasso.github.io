@@ -21,7 +21,7 @@
     <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
     <?php date_default_timezone_set('Asia/Tokyo'); ?>
     <?php if($_SERVER['REQUEST_URI'] == "/php/index.php"){
-        $title = "Porco Tassoのフロントエンドエンジニアまとめ";
+        $title = "Porco note";
         } elseif($_SERVER['REQUEST_URI'] == "/php/diary/diary.php"){
             $title = "制作メモ、日記";
         } else {
