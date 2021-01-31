@@ -58,25 +58,58 @@ relatedClose.forEach((value, index) => {
 
 //popup
 const popupTrigger = Array.from(document.getElementsByClassName('js-popupTrigger'));
-let closePopup = document.getElementById('js-closePopup');
+const closePopup = document.getElementById('js-closePopup');
 popupTrigger.forEach((value, index) => {
 	popupTrigger[index].addEventListener('click', () => {
 		let popup = Array.from(document.getElementsByClassName('js-popup'));
-		closePopup.classList.add('is-active');
-		// console.log(popup[0]);
-		if(popup[0] != undefined){
-			// console.log(popup[0]);
-			popup[0].remove();
-		};
-		popupTrigger[index].insertAdjacentHTML('afterend', '<div class="popupTxt js-popup">' + popupTrigger[index].getAttribute("data") + '</div>');
+		let activeTrigger = popupTrigger[index].classList.contains('is-active');
+
+
+		console.log(activeTrigger);
+		// closePopup.classList.add('is-active');
+		if(activeTrigger != true){
+			//click active trigger
+			// console.log('click active trigger');
+			// popup[0].remove();
+			// popupTrigger[index].classList.add('is-active');
+			// closePopup.classList.remove('is-active');
+			 if(popup[0] != undefined) {
+				console.log('there is anotger active click');
+
+			 } else {
+				console.log('first click');
+				popupTrigger[index].classList.add('is-active');
+			 }
+			// popup[0].remove();
+			// activeTrigger.classList.remove('is-active');
+			// popupTrigger[index].classList.add('is-active');
+			// popupTrigger[index].parentNode.parentNode.insertAdjacentHTML('afterend', '<div class="popupTxt js-popup">' + popupTrigger[index].getAttribute("data-popup") + '</div>');
+			// closePopup.classList.remove('is-active');
+			// console.log('already clicked');
+
+		} else {
+			popupTrigger[index].classList.remove('is-active');
+			// popupTrigger[index].parentNode.parentNode.insertAdjacentHTML('afterend', '<div class="popupTxt js-popup">' + popupTrigger[index].getAttribute("data-popup") + '</div>');
+		}
+
+		// if(popup[0] != undefined){
+		// 	popup[0].remove();
+		// };
+		// console.log(popupTrigger[index]);
+		// if(popupTrigger[index].classList.contains('is-active') == true){
+		// 	popup[0].remove();
+		// 	console.log('aaaaa');
+		// 	popupTrigger[index].classList.remove('is-active');
+		// } else {
+		// popupTrigger[index].classList.add('is-active');
+		// popupTrigger[index].parentNode.parentNode.insertAdjacentHTML('afterend', '<div class="popupTxt js-popup">' + popupTrigger[index].getAttribute("data-popup") + '</div>');
+		// }
 	}, false)
 });
-
 closePopup.addEventListener('click', () => {
-	let popup2 = Array.from(document.getElementsByClassName('js-popup'));
-	if(popup2[0] != undefined){
-		console.log(popup2[0]);
-		popup2[0].remove();
+	let popup = Array.from(document.getElementsByClassName('js-popup'));
+	if(popup[0] != undefined){
+		popup[0].remove();
 		closePopup.classList.remove('is-active');
 	};
 });
