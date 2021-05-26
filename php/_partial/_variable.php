@@ -131,10 +131,18 @@ $jsScroll = array(
 //js-scrollTop
 $jsScrollTop = array(
 	"file" => "/php/pages/js-scrolltop.php",
-	"tag" => array("js", "parts"),
+	"tag" => array("javascript", "parts"),
 	"title" => "スクロールでトップに戻るボタン",
 	"lead" => "スクロールでトップに戻るボタンを右下に追加します。最初は表示せず、下にスクロールすると徐々に表示するようにします。",
 	"pageName" => "js-scrolltop"
+);
+//js-arrayObject
+$jsArrayObject = array(
+	"file" => "/php/pages/js-arrayObject.php",
+	"tag" => array("javascript"),
+	"title" => "配列の中にオブジェクトの中に配列の中にオブジェクト",
+	"lead" => "配列の中にオブジェクトの中に配列の中にオブジェクト",
+	"pageName" => "js-arrayObject"
 );
 
 $eventHandler = array(
@@ -261,7 +269,7 @@ $allPages = array(
 	$contentsModel, $semanticTags, $jsNodelist, $resetCss, 
 	$categorizedCSS, $namingRule, $basicLayoutStyle,
 	$button, $breakWord, $elementEmStrongMarkB, $favicon, $hamburgerMenu, $headerSmaller,
-	$javascriptMemo, $eventHandler,$jsArrowFunction, $eventPropagation, $scrollJunk, $touchEvent, $dayJs, $jsDate, $jsMarker,  $jsScrollTop, $jsSwiper,
+	$javascriptMemo, $eventHandler,$jsArrowFunction, $eventPropagation, $scrollJunk, $touchEvent, $dayJs, $jsDate, $jsMarker,  $jsScrollTop, $jsArrayObject, $jsSwiper,
 	$phpMemo,$phpFilemtime,
 	$environmentSummary, $gulpfile, $gitFetch, $browserRenderingEngine,
 	$svg, $designMemo,

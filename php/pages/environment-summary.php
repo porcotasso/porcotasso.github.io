@@ -1,7 +1,7 @@
 <?php include("../_partial/wrapper-head.php"); ?>
 <main> 
     <article class="articleCnt">
-		<?php $navList = array("何をしたいかを明確にする", "管理と構成と流れ", "homebrewをインストール", "homebrewでgitをインストール", "anyenvをインストール", "nodenvをインストール"); ?>
+		<?php $navList = array("何をしたいかを明確にする", "管理と構成と流れ", "homebrewをインストール", "homebrewでgitをインストール", "anyenvをインストール", "nodenvをインストール", "sassをcssに"); ?>
         <?php include("../_partial/pages-title.php"); ?>
             
                 
@@ -21,15 +21,23 @@
 		</section>
         <section class="ly-section tocContent">
             <h2><?php echo $navList[1]; ?></h2>
-			<p>何かを使おうとした時、方法が色々あってあとでどうインストールしたか忘れてしまう。基本的には、homebrewとnpmで大まかに管理して、Node.jsはanyenvを利用。</p>
-			<h3>homebrewでインストールするもの</h3>
-			<ul>
-				<li>git</li>
-				<li>php</li>
-				<li>mariaDB</li>
-				<li>nginx</li>
-				<li>fish</li>
-			</ul>
+			<p>インストールの流れ</p>
+			<ol>
+				<li>なにはともあれvisual Studio Codeをインストール</li>
+				<li>Homebrewをインストール</li>
+				<li>homebrewでgitをインストール</li>
+				<li>homebrewでfishをインストール</li>
+				<li>homebrewでphpをインストール</li>
+				<li>homebrewでnginxをインストール</li>
+				<li>homebrewでmariadbをインストール</li>
+				<li>gitでanyenvをインストール</li>
+				<li>anyenvでnodeenvをインストール</li>
+				<li>nodeenvでNode.jsをインストール</li>
+				<li>Node.jsでgulpをインストール</li>
+				<li>Node.jsでwebpackをインストール</li>
+				<li>Node.jsでtypescriptをインストール</li>
+			</ol>
+
 			<h3>anyenvでインストールするもの</h3>
 			<ul>
 				<li>nodenv</li>
@@ -40,17 +48,6 @@
 					</ul>
 				</li>
 			</ul>
-			<h3>流れ</h3>
-			<ol>
-				<li>なにはともあれvisual Studio Codeをインストール</li>
-				<li>homebrewをインストール</li>
-				<li>gitをインストール</li>
-				<li>anyenvをインストール</li>
-				<li>nodeenvをインストール</li>
-				<li>gulpをインストール</li>
-				<li>phpをインストール</li>
-				<li>fishをインストール</li>
-			</ol>
 		</section>
         <section class="ly-section tocContent">
             <h2><?php echo $navList[2]; ?></h2>
@@ -128,6 +125,52 @@ nodenv
 brew uninstall nodebrew
 </pre>
 		</section>
+		<section class="ly-section tocContent">
+		<h2><?php echo $navList[6]; ?></h2>
+		<ol>
+			<li>作業directoryの決定（これからこの下にデータを作っていくってフォルダを作ります httpdocs下とか）</li>
+			<li>visual code studio 開く。</li>
+			<li>File-> new window でそのフォルダ選択して開く。terminal のdirectly がそのフォルダに移動される。</li>
+			<li>terminalで Node.jsをインストール（すでにしてたら無視）</li>
+			<li>npm initで作業場所の宣言&package.json作成</li>
+			<li>npm install でGulpのインストール</li>
+			<li>gulpfile.js の作成　</li>
+			<li>package.json、gulpfile.js編集</li>
+			<li>npm run で実行</li>
+		</ol>
+		<h3>作業ディレクトリの決定</h3>
+		<p>npm initで「このディレクトリ下は 我々npmが 管理下に置く！」宣言。ついでにpackage.jsonファイルも作成される。package.jsonにはプロジェクトの設定情報が書いてあります。Nodeからどんな便利な機能を追加するなど。</p>
+<pre class="prettyprint">
+npm init -y
+</pre>
+		<h3>Gulpのインストール　方法１</h3>
+		<p>package.jsonのdevDependenciesにインストールしたプラグイン名とバージョンが記載されます。node_modulesというフォルダ下に、ライブラリが保存されます。 (node_modulesフォルダが作業場所に作成される)</p>
+<pre class="prettyprint">
+npm install -D gulp
+</pre>
+		<h3>Gulpのインストール　方法２</h3>
+		<p>package.jsonのdependencies内に入ったライブラリは、npm installだけで自動的にインストールすることができます。（他の同じ環境の制作者とpackage.jsonを統一するときとか、package.jsonをもらってnpm installすれば一気にDLできる）</p>
+		<h3>gulpfile.js の作成</h3>
+		<p>package.json、gulpfile.js編集（色々参照してコピって編集）重要だけど長くなるのでここは省く</p>
+<pre class="prettyprint">
+実行
+
+$ npm run dev
+npm run dev -> package.json の中身をみる　→　
+
+ "scripts": {
+   "dev": "gulp"
+ }
+-> gulpfile.js の
+
+gulp.task( {
+});
+が実行される。
+</pre>
+		<cite class="ly-cite"><a class="ly-cite_link" href="https://ics.media/entry/3290/" <?php echo $targetBlank ?>>絶対つまずかないGulp 4入門</a></cite>
+		<cite class="ly-cite"><a class="ly-cite_link" href="https://qiita.com/hashrock/items/15f4a4961183cfbb2658" <?php echo $targetBlank ?>>フロントエンド開発の３ステップ（npmことはじめ）</a></cite>
+		</section>
+
     </article>
 </main>
 <?php include("../_partial/wrapper-foot.php") ?>
