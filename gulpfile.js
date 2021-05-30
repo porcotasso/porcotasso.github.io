@@ -32,7 +32,7 @@ const htmlhint = require('gulp-htmlhint');
 
 // compile php
 gulp.task('php', () => {
-  return gulp.src(['./php/index.php'])
+  return gulp.src(['./php/*.php', ])
     .pipe(php2html({}))
     .pipe(rename({ extname: '.html' }))
     .pipe(gulp.dest('./'))
@@ -93,7 +93,7 @@ var live = (options.env === 'live') ? true : false;
 // console.log('[build env]', options.env, '[is live]', islive);
 
 gulp.task('sass', () => {
-    return gulp.src(['./scss/common.scss', './scss/home.scss', './scss/frontend.scss'], { sourcemaps: true })
+    return gulp.src(['./scss/common.scss', './scss/home.scss', './scss/frontend.scss', './scss/profile.scss'], { sourcemaps: true })
     .pipe(plumber(notify.onError('Error: <%= error.message %>')))
     .pipe(sass())
     .pipe(postcss([cssdeclsort({

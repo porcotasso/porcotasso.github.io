@@ -18,14 +18,21 @@
         <link rel="stylesheet" href="/css/home.css">
         <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" rel="stylesheet"> -->
     <?php } ?>
+    <?php 
+        if($_SERVER['REQUEST_URI'] == "/php/frontend.php"){ ?>
+        <link rel="stylesheet" href="/css/frontend.css">
+    <?php } ?>
+    <?php 
+        if($_SERVER['REQUEST_URI'] == "/php/profile.php"){ ?>
+        <link rel="stylesheet" href="/css/profile.css">
+    <?php } ?>
     <?php
         $frontendPages = glob($_SERVER['DOCUMENT_ROOT'] . '/php/frontend/*.php');
         $currentPage = $_SERVER['DOCUMENT_ROOT'] . $_SERVER['REQUEST_URI'];
         foreach($frontendPages as $frontendPage){ 
             if( $currentPage == $frontendPage){ ?>
             <link rel="stylesheet" href="/css/frontend.css">
-        <?php }  ?>
-    <?php } ?>
+    <?php }} ?>
     <!-- google font Pacifico for title -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
     <?php date_default_timezone_set('Asia/Tokyo'); ?>
@@ -69,9 +76,9 @@
 </head>
 
 <?php if($_SERVER['REQUEST_URI'] == "/php/index.php"){ ?>
-    <body id="js-body">
+    <body id="js-body ly-body">
 <?php } else { ?>
-    <body class="<?php echo ($pageName); ?>" id="js-body">
+    <body class="<?php echo ($pageName); ?> ly-body" id="js-body">
 <?php } ?>
 
 <?php include_once($baseUrl.'/images/common/sprite.svg'); ?>
@@ -109,7 +116,7 @@
                 <ul class="headerMenu_ul">
                     <?php foreach($list["pages"] as $value){ ?>
                     <li class="headerMenu_li">
-                        <a href="<?php echo '/pages/'.$value["pageName"].'.html'; ?>" class="headerMenu_link">
+                        <a href="<?php echo '/frontend/'.$value["pageName"].'.html'; ?>" class="headerMenu_link">
                            <?php echo $value["title"]; ?>
                         </a>
                     </li>

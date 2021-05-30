@@ -231,80 +231,6 @@
     visibility: visible;
     pointer-events: auto; }
 
-.homeProfile {
-  z-index: 2;
-  padding: 42px 5% 64px; }
-  .homeProfile_ttl {
-    margin: 0 0 12px;
-    font-size: 1.4rem;
-    text-align: center; }
-  .homeProfile .svg-characotorIcon {
-    display: block;
-    width: 72px;
-    margin: 0 auto 12px; }
-  .homeProfile_txt {
-    font-size: 1.3rem; }
-  .homeProfile .homeCareer {
-    margin-bottom: 32px; }
-    .homeProfile .homeCareer ul {
-      display: flex;
-      margin: 0 -5%;
-      padding-left: 5%;
-      overflow: scroll;
-      list-style: none; }
-      .homeProfile .homeCareer ul li {
-        min-width: 120px;
-        padding: 6px;
-        border: 1px solid #d4d9e6;
-        border-radius: 4px;
-        font-size: 1.3rem;
-        line-height: 1.4; }
-        .homeProfile .homeCareer ul li + li {
-          margin-left: 12px; }
-  .homeProfile .homeSkill h3 {
-    margin-bottom: 16px;
-    padding-bottom: 4px;
-    border-bottom: 1px dashed #d4d9e6;
-    font-size: 1.5rem; }
-  .homeProfile .homeSkill h4 {
-    margin-bottom: 8px;
-    padding-left: 6px;
-    border-left: 2px solid #d4d9e6;
-    font-size: 1.3rem; }
-  .homeProfile .homeSkill ul {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0 0 0 6px;
-    list-style: none; }
-    .homeProfile .homeSkill ul li {
-      z-index: 10; }
-      .homeProfile .homeSkill ul li h5 {
-        margin: 0 6px 6px 0;
-        padding: 0 8px;
-        border: 1px solid #d4d9e6;
-        border-radius: 4px;
-        background: #fff;
-        font-size: 1.2rem; }
-      .homeProfile .homeSkill ul li p {
-        display: none;
-        position: absolute;
-        left: 0;
-        margin: 0 5%;
-        padding: 4px 8px;
-        border-radius: 4px;
-        background: #ccc;
-        font-size: 1.2rem; }
-      .homeProfile .homeSkill ul li:last-of-type {
-        margin-right: 0; }
-  .homeProfile .homeSkill .popupTxt {
-    left: 0;
-    padding: 8px;
-    border-radius: 4px;
-    background: #fff;
-    box-shadow: 2px 2px 10px #ddd;
-    font-size: 1.2rem; }
-
 .el-marker {
   background: linear-gradient(to right, #fded06 50%, transparent 50%) 100% 0%/200% auto no-repeat;
   transition: background-position .8s ease-out; }
@@ -576,37 +502,6 @@
 
 .js-nodelist .nodeType th {
   min-width: 100px; }
-
-.el-scrollTop {
-  z-index: 20;
-  position: fixed;
-  top: 80%;
-  right: 0;
-  width: 64px;
-  height: 40px;
-  border: 1px solid #d4d9e6;
-  border-right: none;
-  border-radius: 4px 0 0 4px;
-  background: #fcfcfc;
-  opacity: 0; }
-  .el-scrollTop_txt {
-    position: absolute;
-    top: 14px;
-    left: 12px;
-    color: #888;
-    font-size: 1.2rem; }
-    .el-scrollTop_txt:after {
-      display: inline-block;
-      position: absolute;
-      right: 16px;
-      bottom: 14px;
-      width: 8px;
-      height: 8px;
-      transform: rotate(-135deg);
-      border-right: 1px solid #888;
-      border-bottom: 1px solid #888;
-      content: "";
-      transition-duration: .3s; }
 
 .cntList {
   background: #fff url("/images/common/dot.svg"); }

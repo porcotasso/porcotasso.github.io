@@ -34,7 +34,7 @@
 		<div class="swiper-container" id="js-swiperWrapper">
 			<div class="swiper-wrapper" >
 				<?php foreach($allPages as $value){ ?>
-					<a href="<?php echo '/pages/'. $value["pageName"].'.html'; ?>" class="swiper-slide js-swiperSliderTtl">
+					<a href="<?php echo '/frontend/'. $value["pageName"].'.html'; ?>" class="swiper-slide js-swiperSliderTtl">
 						<p class="swiper-slide_ttl"><?php echo $value["title"];?></p>
 					</a>
 				<?php } ?>
