@@ -13,10 +13,19 @@
     <link rel="android-touch-icon" sizes="192x192" href="/images/favicon/android-touch-icon.png" >
     <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/common.css">
-    <?php if($_SERVER['REQUEST_URI'] == "/php/index.php"){ ?>
+    <?php 
+        if($_SERVER['REQUEST_URI'] == "/php/index.php"){ ?>
         <link rel="stylesheet" href="/css/home.css">
         <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" rel="stylesheet"> -->
-    <?php } ?>  
+    <?php } ?>
+    <?php
+        $frontendPages = glob('../frontend/*.php');
+        $currentPage = '../' . $_SERVER['REQUEST_URI'];
+        foreach($frontendPages as $frontendPage){ 
+            if( $currentPage == $frontendPage){ ?>
+            <link rel="stylesheet" href="/css/frontend.css">
+        <?php }  ?>
+    <?php } ?>
     <!-- google font Pacifico for title -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
     <?php date_default_timezone_set('Asia/Tokyo'); ?>

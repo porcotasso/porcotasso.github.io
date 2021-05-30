@@ -38,9 +38,15 @@ document.addEventListener('DOMContentLoaded',() => {
   //     });
   // }
 
+  const headerMenuTtl = Array.from(document.getElementsByClassName('js-headerMenuTtl'));
+  headerMenuTtl.forEach((value, index) => {
+    headerMenuTtl[index].addEventListener('click', () => {
+  console.log('dddd');
+  headerMenuTtl[index].nextElementSibling.classList.toggle('is-active');
+    }, false)
+  });
 
 });
-
 
 
 
@@ -110,10 +116,3 @@ window.addEventListener('scroll', saFunc);
 
 
 
-const headerMenuTtl = Array.from(document.getElementsByClassName('js-headerMenuTtl'));
-headerMenuTtl.forEach((value, index) => {
-	headerMenuTtl[index].addEventListener('click', () => {
-console.log('dddd');
-headerMenuTtl[index].nextElementSibling.classList.toggle('is-active');
-	}, false)
-});

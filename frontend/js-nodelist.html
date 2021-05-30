@@ -12,15 +12,12 @@
     <link rel="android-touch-icon" sizes="192x192" href="/images/favicon/android-touch-icon.png" >
     <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/common.css">
-      
-    <!-- google font Pacifico for title -->
+                                                                                                                                            <!-- google font Pacifico for title -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
-            <title>制作メモ、日記</title>
-    <title>/php/diary/diary.php</title>
+            <title>Node、HTMLCollection、NodeListを理解する</title>
+    <title>/php/frontend/js-nodelist.php</title>
 </head>
-    <body class="<br />
-<b>Notice</b>:  Undefined variable: pageName in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php</b> on line <b>64</b><br />
-" id="js-body">
+    <body class="js-nodelist" id="js-body">
 
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -310,136 +307,438 @@
     <!-- メニューを出した時に出る黒背景 -->
     <div class="el-blackCover" id="js-blackCover"></div><main> 
     <article class="articleCnt">
-        <header>
-            <h1>制作日記</h1>
-            <p>やってることをメモ的に書いています。</p>
-        </header>
-        <section class="ly-section">
-            <h2>これからやることリスト</h2>
-            <ul>
-                <li>クロスサイトスクリプティング（XSS）のセキュリティ対策</li>
-                <li>エンコード</li>
-                <li>スクロールについてまとめる　https://lab.syncer.jp/Web/JavaScript/Snippet/46/</li>
-                <li>scroll スムーズスクロール　内部リンク </li> 
-                <li>scroll したまでいったらコンテンツを読み込む</li> 
-                <!-- <li>scroll　スクロールに応じてイベントをトリガーしてくれるライブラリ「ScrollTrigger」　https://www.willstyle.co.jp/blog/2869/</li>  -->
-                <li>pointer-events</li>
-                <!-- <li>inviewテストhttps://ec-recipe.com/what-is-shopify-2018/</li> -->
-                <li>タグから検索ができるようにしたい。</li>
-                <li>「スクロールチェーン」の挙動を無効化https://necomesi.jp/blog/tsmd/posts/180</li>
-                <li>「スクロールジャンク」https://blog.webico.work/passive-event-listeber01</li>
-                <li>PCデザイン</li>
-                <li>docker</li>
-                <li>slick, Preload.js,Cookie判定にはjquery-cookie.js</li>
-                <li>ロゴ作成</li>
-                <li>ぱんくずリスト</li>
-                <li>目次の開閉</li>
-                <li>gulpfileまとめ</li>
-                <li>エスケープのjsまとめ</li>
-                <li>prettyまとめ</li>
-                <li>現実的問題まとめ</li>
-                <li>nginxまとめバーチャルホスト</li>
-                <li>githubまとめ</li>
-                <li>fishまとめ</li>
-                <li>homebrewまとめ</li>
-                <li>formまとめ</li>
-                <li>typescriptまとめ</li>
-                <li>UXまとめ</li>
-                <li>UIまとめ</li>
-                <li>データベースを作りそこからデータを呼びだす</li>
-                <li>ポップ</li>
+               <header>
+	<div class="articleCnt_headerBox">
+		<h1 id="js-articleCntTtl" name="2">Node、HTMLCollection、NodeListを理解する</h1>
+		<ul class="tagLists">
+						<li class="tagLists_list">
+				html			</li>
+						<li class="tagLists_list">
+				javascript			</li>
+			   
+		</ul>
+					<p class="el-updateDate">2021.01.24 更新</p>
+		
+		
+	</div>  
+	<div class="cntList">
+		<div class="swiper-container" id="js-swiperWrapper">
+			<div class="swiper-wrapper" >
+									<a href="/pages/contents-model.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">コンテンツ・モデルというHTMLの基本ルールを理解する</p>
+					</a>
+									<a href="/pages/semantic-tags.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">セマンティックHTMLで適切なDOMを構築する</p>
+					</a>
+									<a href="/pages/js-nodelist.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">Node、HTMLCollection、NodeListを理解する</p>
+					</a>
+									<a href="/pages/reset-css.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">リセットCSS•ノーマライズCSSを適切に使う</p>
+					</a>
+									<a href="/pages/categorized-css.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">CSSを役割ごとにカテゴライズする</p>
+					</a>
+									<a href="/pages/button.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">ボタン作成の種類</p>
+					</a>
+									<a href="/pages/break-word.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">break-word</p>
+					</a>
+									<a href="/pages/element-em-strong-mark-b-difference.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">em,strong,mark,b,dfn,iの違い</p>
+					</a>
+									<a href="/pages/favicon.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">favicon</p>
+					</a>
+									<a href="/pages/hamburger-menu.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">ハンバーガーメニューの作り方</p>
+					</a>
+									<a href="/pages/header-smaller.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">スクロールでヘッダーのスタイルを変更する</p>
+					</a>
+									<a href="/pages/javascript-memo.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">javascriptmemo</p>
+					</a>
+									<a href="/pages/event-handler.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">イベントハンドラーの種類と使い方</p>
+					</a>
+									<a href="/pages/arrow-function.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">アロー関数とは</p>
+					</a>
+									<a href="/pages/event-propagation.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">イベント伝搬とは</p>
+					</a>
+									<a href="/pages/touch-event.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">touch-event</p>
+					</a>
+									<a href="/pages/day-js.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">day-js</p>
+					</a>
+									<a href="/pages/js-date.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">js-date</p>
+					</a>
+									<a href="/pages/js-marker.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">黄色いmarkerアニメーション</p>
+					</a>
+									<a href="/pages/js-scrolltop.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">スクロールでトップに戻るボタン</p>
+					</a>
+									<a href="/pages/js-swiper.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">カルーセルスライダー</p>
+					</a>
+									<a href="/pages/php-filemtime.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">filemtime</p>
+					</a>
+									<a href="/pages/environment-summary.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">制作環境設定全般</p>
+					</a>
+									<a href="/pages/gulpfile.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">gulpfile</p>
+					</a>
+									<a href="/pages/git-fetch.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">git-fetch</p>
+					</a>
+									<a href="/pages/browser-rendering-engine.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">browser-rendering-engine</p>
+					</a>
+									<a href="/pages/svg.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">svgファイルの使い方</p>
+					</a>
+									<a href="/pages/design.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">デザインメモ</p>
+					</a>
+									<a href="/pages/shopify-memo.html" class="swiper-slide js-swiperSliderTtl">
+						<p class="swiper-slide_ttl">shopify-memo</p>
+					</a>
+							</div>
+			<!-- <div class="swiper-pagination"></div>
+			<div class="swiper-button-prev"></div> 
+			<div class="swiper-button-next"></div> -->
+		</div>
+		<div class="cntList_index">
+			<span class="cntList_index_active" id="js-numberArea"></span>
+			<span class="cntList_index_slash">/</span>
+			<span class="cntList_index_all">29</span>
+		</div>
+	</div>
+</header>
 
-                <li>全タグ確認</li>
-                <li>標準の日時書式指定 ローカル時間</li>
-                <li>background-attachment は、背景画像の固定表示を指定するプロパティ https://www.tagindex.com/stylesheet/page/background_attachment.htmls</li>
-                <li>@keyframes使い方まとめ　https://www.atmarkit.co.jp/fwcr/design/benkyo/webgraphics01/sample.html　</li>
-                <li>-CSSカテゴライズまとめ、break-wordなどテキスト、svgまとめ</li>
+
+<nav class="bl-toc js-tocTgl" id="js-tocTop">
+	<div class="bl-toc_box">
+		<p class="miniHeaderTtl" id="js-min-HeaderTtl">Node、HTMLCollection、NodeListを理解する</p>
+		<div class="bl-toc_ttl" id="js-tocTtl">目次</div>
+	</div>
+	<ul class="bl-toc_lists">
+			<li class="tocList js-tocList">
+			<div>Nodeとは</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>主なノードの種類</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>element node</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>attribute node</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>Nodelist</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>HTMLcollection</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>HTML element</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>要素の取得方法</div>
+		</li>
+			<li class="tocList js-tocList">
+			<div>コピー方法</div>
+		</li>
+		</ul>
+</nav>
+<p class="articleCnt_summary">javascriptでHTMLの要素を扱う際に、Nodeの状態、形式などの違いを理解して適切に扱う方法を身に着けよう。</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+<script src="/js/frontend.js"></script>            
+        <section class="ly-section tocContent">
+            <h2>Nodeとは</h2>
+            <p>DOMでは文書を木構造(tree)としてとらえ、枝分かれの部分や枝の先端をノード(node)と呼びます。<br>タグやその中の属性、テキストがそれぞれノードになります。<br>ノードとは各要素(HTMLではエレメントやタグという)自体のことを表します。<br>特定のノードを基準としたときに、その上にあるノードを「親:parent」ノードと表現し、その下にあるノードを「子:childまたはchildren」ノードと表現します。<br>また同一階層にあるノードのことを「兄弟姉妹:siblings」ノードと表現します。例えば「そのタグの子ノード全体を取得して、その親ノードから削除する」のような使い方をします。 </p>
+            <h3>DOMとは</h3>
+            <p>Document Object Model の略で、javascriptなどのプログラムからxmlやhtmlで書かれた文書を扱うための仕組みの標準のことです。<br>DOMは「WEBページとプログラミング言語を繋ぐ役割」を果たします。</p>
+        </section>
+        <section class="ly-section tocContent">
+            <h2>主なノードの種類</h2>
+            <table class="nodeType">
+              <thead>
+                <tr>
+                  <th>ノードの種類</th>
+                  <th>概要</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>document node</td>
+                  <td>ドキュメント全体を表すDocumentオブジェクト</td>
+                </tr>
+                <tr>
+                  <td>element node</td>
+                  <td>要素を表すオブジェクト</td>
+                </tr>
+                <tr>
+                  <td>text node</td>
+                  <td>テキストを表すオブジェクト</td>
+                </tr>
+                <tr>
+                  <td>comment node</td>
+                  <td>コメントを表すオブジェクト</td>
+                </tr>
+                <tr>
+                  <td>attribute node</td>
+                  <td>属性を表すオブジェクト</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        <section class="ly-section tocContent">
+            <h2>element node</h2>
+            <p>例えば以下のようなリストではulタグやliタグがelement nodeになります。ulタグの中に3つのliタグがありますからulで枝分かれしていると見るわけです。</p>
+            <p>liタグの中の「りんご」「みかん」といった文字列はtext nodeといいます。</p>
+<pre class="prettyprint">
+<ul>
+<li>りんご</li>
+<li>みかん</li>
+<li>バナナ</li>
+</ul>
+</pre>
+
+            <h3>element nodeを取り出すためのプロパティ</h3>
+            <table class="nodeType">
+              <thead>
+              <tr>
+              <th>プロパティ名</th>
+              <th>概要</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+              <td>parentElement</td>
+              <td>親要素ノードへの参照。（親要素ノードがない場合はnull）</td>
+              </tr>
+              <tr>
+              <td>children</td>
+              <td>子要素ノードへの参照を格納するHTMLCollection</td>
+              </tr>
+              <tr>
+              <td>firstElementChild</td>
+              <td>最初の子要素ノード。（子要素ノードがない場合はnull）</td>
+              </tr>
+              <tr>
+              <td>lastElementChild</td>
+              <td>最後の子要素ノード。（子要素ノードがない場合はnull）</td>
+              </tr>
+              <tr>
+              <td>nextElementSibling</td>
+              <td>兄弟要素ノードの中で次の要素ノード。（次の兄弟要素ノードをもたない場合はnull）</td>
+              </tr>
+              <tr>
+              <td>previousElementSibling</td>
+              <td>兄弟要素ノードの中で1つ前の要素ノード。（前の兄弟要素ノードをもたない場合はnull）</td>
+              </tr>
+              <tr>
+              <td>childElementCount</td>
+              <td>子要素ノードの数。（= children.length）</td>
+              </tr>
+              </tbody>
+            </table>
+
+            <h4>子ノードを取得して、操作する</h4>
+<pre class="prettyprint">
+var nodeList = elementNodeReference.childNodes;
+</pre>
+            <h4>親ノードを取得して、操作する</h4>
+<pre class="prettyprint">
+var parentNode = elementNodeReference.parentNode;
+</pre>
+          </section>
+          <section class="ly-section tocContent">
+            <h2>attribute node</h2>
+              <h3>attribute node</h3>
+              <p>attribute(属性)とはタグ内に「属性名="値"」という形で書かれるものです。src="images/hoge.png" では、src が属性名で images/hoge.png が値です。<br>attribute nodeには src の他に class, id, title, href, alt, for, colspan, rowspan, type などたくさんあります。</p>
+              <h3>attribute nodeの値の変更</h3>
+              <p>attribute nodeの値の変更には2つの方法があります。</p>
+              <h4>属性名="値" を使う方法</h4>
+<pre class="prettyprint">
+<img src="" alt="" id="n1" />
+document.getElementById("n1").src = "images/example.png";
+</pre>
+
+              <h4> setAttribute("属性名","値") を使う方法</h4>
+<pre class="prettyprint">
+element.setAttribute('属性名', '属性値');
+
+<img src="" alt="" id="n1" />
+document.getElementById("n1").setAttribute("src","images/example.png");
+</pre>
+
+<p>classだけは、classがプログラムで別の意味を持つためclassNameにしなければなりません。</p>
+<pre class="prettyprint">
+document.getElementById("n1").setAttribute("class","mushi");
+document.getElementById("n1").className = "mushi";
+</pre>
+
+              <h3>attribute nodeの値の読み取り</h3>
+<pre class="prettyprint">
+document.getElementById("area01").getAttribute("src");
+</pre>
+
+              <h3>属性があるかないか</h3>
+<pre class="prettyprint">
+element.hasAttribute('属性名');
+</pre>
+
+              <h3>属性の削除</h3>
+<pre class="prettyprint">
+element.removeAttribute('属性名');
+</pre>
+
+          </section>
+          <section class="ly-section tocContent">
+            <h2>Nodelist</h2>
+            <p>DOMを取得するにあたって、nodeの集合を表すオブジェクトがNode Listです。見た目、配列に似ていますが配列ではないです。</p>
+            <h3>取得方法</h3>
+            <ul>
+              <li>querySelectorAll</li>
+              <li>getElementsByName</li>
+              <li>jQuery</li>
             </ul>
-            <h2><time>2020年</time></h2>
-            <time class="dairyTime" datetime="2020-11-21">11月21日</time>
-            <p>reset.cssの全てのコードをチェック終了。</p>
-            <time class="dairyTime" datetime="2020-11-08">11月8日</time>
-            <p>ブラウザーのレンダリングエンジンとjavascriptエンジンとベンダープレフィックスについて</p>
-            <time class="dairyTime" datetime="2020-10-28">10月28日</time>
-            <p>reset css の内容説明を作成中。bodyのcssを調べて書く</p>
-            <time class="dairyTime" datetime="2020-10-01">10月1日</time>
-            <p>ずっと仕事が忙しくて勉強する時間の仕事にあてた。勉強時間をとられるのはあまり精神衛生によろしくない。仕事の時間を増やして仕事した気にならないように。</p>
-            <time class="dairyTime" datetime="2020-09-20">9月20日</time>
-            <p>スクロールにswiper.jsを使って動きを追加。swiper便利。表示するコンテンツも色々追加。スクロールカルーセルまとめ。各ページのタイトルの左右に前後のページのリンクを追加。</p>
-            <time class="dairyTime" datetime="2020-09-19">9月19日</time>
-            <p>スクロールでトップに戻るボタンを右下に追加してまとめる。ホームのスライダーで新しいページだけをリストに並べる。ファイルのupdate日はファイル自体にアクセスしないと取得できないのに対し、サイトで表示させたいのは$allPages内の変数なので、その違う情報をどう正確に結びつけるかがポイント</p>
-            <time class="dairyTime" datetime="2020-09-16">9月16日</time>
-            <p>HTML5では a href="#top">TOP でページトップへジャンプするようになった。</p>
-            <time class="dairyTime" datetime="2020-09-10">9月10日</time>
-            <p>スクロールしたら重要なテキストに黄色いマーカーをひくjavascript</p>
-            <time class="dairyTime" datetime="2020-09-08">9月8日</time>
-            <p>php filemtimeでファイルのupdated日を取得。</p>
-            <time class="dairyTime" datetime="2020-09-07">9月7日</time>
-            <p>day.jsのif文。曜日で分ける。</p>
-            <time class="dairyTime" datetime="2020-09-06">9月6日</time>
-            <p>スマホスクロールの停止について。スクロールしきったら１ピクセルずらす方法を試す。これまでのエラーは解消するが、あらたなエラーがでる。メニューの1度目のクリックではメニューが動かない。スクロールしきった時に少し戻る動きが変。使えないっぽい。shopifyの今週の水曜、来週の水曜を取得する方法のテスト。liquid のif文内で　jsが動かない。day.jsを調べてまとめる。</p>
-            <time class="dairyTime" datetime="2020-09-05">9月5日</time>
-            <p>スマホスクロールの停止について。とりあえずこれまでのことをまとめる。</p>
-            <time class="dairyTime" datetime="2020-09-04">9月4日</time>
-            <p>スマホスクロールの停止について。スマホのタッチイベントについて。</p>
-            <time class="dairyTime" datetime="2020-09-03">9月3日</time>
-            <p>スマホスクロールの停止について。</p>
-            <time class="dairyTime" datetime="2020-09-02">9月2日</time>
-            <p>各ページを並列化続き。jsで効率化。２重ループを試すも、最後のとろこで各タグ変数に代入ができない。固有の変数名でしかarray_pushで変数を追加していけないっぽい現象。</p>
-            <time class="dairyTime" datetime="2020-09-01">9月1日</time>
-            <p>各ページを並列化。タグを使ってカテゴライズする。</p>
-            <time class="dairyTime" datetime="2020-08-31">8月31日</time>
-            <p>イベント伝搬とはまとめ</p>
-            <time class="dairyTime" datetime="2020-08-30">8月30日</time>
-            <p>改行について、SVGについてまとめ。フッター追加</p>
-            <time class="dairyTime" datetime="2020-08-29">8月29日</time>
-            <p>event-handler, header-smallerページの追加。eventlisnerの使い方があいまいだったのでメモ。ボタンまとめ</p>
-            <time class="dairyTime" datetime="2020-08-27">8月27日</time>
-            <p>ハンバーガーメニューの機能について</p>
-            <time class="dairyTime" datetime="2020-08-26">8月26日</time>
-            <p>背景位置固定は、bodyタグにoverflow:hidden をつけることで対応。</p>
-            <p>https://tech.arms-soft.co.jp/ レイアウトがきれい</p>
-            <time class="dairyTime" datetime="2020-08-25">8月25日</time>
-            <p>メニューをだした時に黒透過背景を追加。メニューの開閉で背景の位置が変わる。position:fixed;と.getBoundingClientRect()で位置を取得での位置固定と解除した時の static の変更でできるとかいてあったけど、できない。</p>
-            <time class="dairyTime" datetime="2020-08-24">8月24日</time>
-            <p>コンテンツモデルページまとめ</p>
-            <p>セマンティックHTML</p>
-            <p>ホームメニューカテゴリーに矢印追加</p>
-            <p>メニューのスクロールエラー修正中。ヘッダー部分の高さを考慮せずにheight:100vh;にしていたのと、背景をスクロールさせていたのが原因。背景を固定しないといけないがtopを0にすると、メニュー表示を解除したときにトップに戻っている</p>
-            <time class="dairyTime" datetime="2020-08-23">8月23日</time>
-            <p>スーパーグローバル関数を調べる。</p>
-            <p>gulpfileのphp2htmlをまとめる。</p>
-            <p>phpメモページ追加。</p>
-            <p>iタグ、dfnタグ追加。目立たすタグページ修正。</p>
-            <p>日記ページ作成。timeタグを調べる。</p>
-            <p>preタグとcodeタグの違いを調べる。改行やインデントなどはcodeは反映されない。</p>
-            <p>faviconページに目次と内部リンクを追加。使った時に、ヘッダーの下に表示される問題が解決。これまで使ってた方法よりかなり楽になった。</p><p>内部リンクでコンテンツがヘッダー下に隠れる問題。htmlタグにscroll-padding-top: 80px;を入れる。</p>
-            <time class="dairyTime" datetime="2020-08-22">8月22日</time>
-            <p>
-                faviconページでコードを表示させようとしたところ、勝手に閉じタグが挿入される問題。原因不明。対処方不明。
-                <code>　&lt;square70x70logo src=&quot;/image/favicon/tileImg-70x70.png&quot;/&gt;</code>php->htmlの変換では問題ない。
-                .htmlファイルをブラウザで表示させる段階で勝手に追加される。例えば上のコード一行だけ書いたhtmlファイルをブラウザで表示させると、勝手に閉じタグがつく。chrome, safari両方同じ。jsでpre内の特殊文字の自動エスケープをしていたので、codeタグに変更してエスケープして表示させ、それ用のスタイルを追加して対応。
-            </p>
-            <p>各ページのheadタグ内のtitleタグの中を自動にしたい。wrapper-head.php内でどのページで利用するのか判別できてなかったので、<code>$_SERVER['REQUEST_URI']</code>とvariable内のurlで、判別。ついでにtitle leadも各ページで読み込めるようにしておいた。foeach文にbreakを記入するも、ループを抜けれない。foreachを二重に使っていることが原因ではないかと予想。</p>
-            <time class="dairyTime" datetime="2020-08-21">8月21日</time>
-            <p>code pretty を導入。そのうちcode penも追加したい</p>
-            <p>header smallerのJSの挙動がおかしい。上から80pxの部分が反応してない。if文修正。</p>
-            <time class="dairyTime" datetime="2020-08-20">8月20日</time>
-            <p>ファビコンの使い方があいまいだったので調べて実行。各情報も結構あいまいなものもある。明確にわけれたと思う。</p>
-            <time class="dairyTime" datetime="2020-08-19">8月19日</time>
-            <p>脱jQueryをする。ヘッダーのsmallerのコードを変更。</p>
-        </section>
-        <section class="ly-section">
-            <h3>参考</h3>
-            <cite class="ly-cite"><a class="ly-cite_link" href="https://murashun.jp" target="_blank" rel="noopener noreferrer">murashun.jp</a></cite>
-            <cite class="ly-cite"><a class="ly-cite_link" href="https://www.ameamelog.com/category/web-design/css/" target="_blank" rel="noopener noreferrer">ameamelogコーディング</a></cite>
-            <cite class="ly-cite"><a class="ly-cite_link" href="http://honttoni.blog74.fc2.com/blog-entry-107.html?sp" target="_blank" rel="noopener noreferrer">ほんっとにはじめてのHTML5とCSS3</a></cite>
-            <cite class="ly-cite"><a class="ly-cite_link" href="https://www.w3.org/TR/html51/grouping-content.html#the-p-element" target="_blank" rel="noopener noreferrer">w3.org p element</a></cite>
-            <cite class="ly-cite"><a class="ly-cite_link" href="https://liginc.co.jp/" target="_blank" rel="noopener noreferrer">lig</a></cite>
-            <cite class="ly-cite"><a class="ly-cite_link" href="https://baigie.me/menu/" target="_blank" rel="noopener noreferrer">baigie</a></cite>
-        </section>
+            <h3>状態</h3>
+            <p>ディープコピー(deep copy)で取得したStatic Node List。生成した段階のDOMがコピーされるもので、このNodeList経由でデータを変更しても、ほかのNodeListには影響を与えない。まったく独立している。静的なNoteListが、生成した段階のROMをごっそり別のものとしてディープコピーします。
+querySelectorAll, jQueryで取得したNodeListはStatic NodeListなので、取得した瞬間にdocument上にあるDOMを取得し、更新はされません。</p>
+            <h3>扱い方</h3>
+            <p>そのままでは扱えない。利用するには</p>
+            <ul>
+              <li><code>nodelist[0]</code>の様に、[]内にインデックスを記入する</li>
+              <li><code>nodelist.item(0)</code>の様に、itemメソッドを使う。</li>
+            </ul>
+            <p>DOMの規程ではどちらの記法でも大丈夫。</p>
+            
+            <h3>lengthプロパティが使える</h3>
+            <p><code>let length = nodeList.length</code>で、中身をカウントできます。</p>
+
+            <h3>forEachメソッドでループ的な利用方法（正確にはループではない）</h3>
+<pre class="prettyprint">
+const elements = document.querySelectorAll('element'));
+elements.forEach((value, index) => {
+  //処理
+  elements[index].classList.add('aaa');
+}
+</pre>
+          </section>
+          <section class="ly-section tocContent">
+            <h2>HTMLcollection</h2>
+            <p>DOMを取得するにあたって、html要素の集合を表すオブジェクトがhtml Colllectionです。見た目、配列に似ていますが配列ではないです。</p>
+            <h3>取得方法</h3>
+            <ul>
+              <li>getElementsByClassName</li>
+              <li>getElementsByTagName</li>
+            </ul>
+            <h3>状態</h3>
+            <p>シャローコピー(shallow copy)で取得したLive Node List<br>動的に内容が変更されます。取得した後に追加したDOMも反映されます。</p>
+            <h3>扱い方</h3>
+            <p>そのままでは扱えない。利用するには</p>
+            <ul>
+              <li><code>htmlCollection[0]</code>の様に、[]内にインデックスを記入する</li>
+              <li><code>htmlCollection.item(0)</code>の様に、itemメソッドを使う。</li>
+              <li>name属性を指定して要素を取得できる。</li>
+            </ul>
+
+            <h3>array、もしくはスプレッド演算子(...)で配列に変更後、forEachメソッドでループ的な利用方法</h3>
+<pre class="prettyprint">
+const elements =  Array.from(document.getElementsByClassName('element'));
+elements.forEach((value, index) => {
+  //処理
+  elements[index].classList.add('aaa');
+}
+</pre>
+          </section>
+
+          <section class="ly-section tocContent">
+            <h2>HTML element</h2>
+            <p>DOMを取得するにあたって、element要素の集合を表すオブジェクトがhtml elementです。</p>
+            <h3>取得方法</h3>
+            <ul>
+              <li>getElementById</li>
+              <li>querySelector</li>
+            </ul>
+            <h3>扱い方</h3>
+            <p>そのままで扱える。性質的に取得しているのは１つの要素。</p>
+          </section>
+
+          <section class="ly-section tocContent">
+            <h2>要素の取得方法</h2>
+            <p>javascriptでDOM要素をとる方法には、getElementシリーズと、querySelector系とがあります。getElementsByの方がquerySelectorAllよりも速いです。</p>
+            
+            <h3>querySelector()</h3>
+            <p>「querySelector()」を使うとid属性値・class属性値などを意識せずにjQuery感覚でHTML要素をセレクタ指定することができます。<br>簡単に言うと「querySelector()」だけであらゆるHTML要素を取得することができる。最初に合致したHTML要素を取得した時点でプログラムは終了するので複数の要素を取得するには自作のループ処理を作成するか「querySelectorAll()」を使うこと。</p>
+<pre class="prettyprint">
+const elm = document.querySelector('.elem');
+</pre>
+            
+            <h3>querySelectorAll()</h3>
+            <p>querySelectorAll()で取得した要素はNodeListと言って、配列によく似たデータ構造が格納されています。そこで、配列を効率よく繰り返し処理できる「forEach」を使って各要素を1つずつ処理</p>
+            <p>NodeList:配列とは異なります。メソッドとしてforEach()をもっているので反復処理が可能</p>
+            <p>HTMLCollection:NodeListと同様、やはり配列風オブジェクトですが、加えて名前（ id や name ）によるアクセスも可能。</p>
+<pre class="prettyprint">
+const elm = document.querySelectorAll('.element');
+elm.forEach(function(value) {
+console.log(value);
+})
+</pre>
+            
+            <p>idを使ってエレメント(要素)ノードを探します</p>
+<pre class="prettyprint">
+<div id="main">aaaa</div>
+document.getElementById("main");
+</pre>
+            <p>クラス名を使ってエレメントノードを探します</p>
+<pre class="prettyprint">
+<div class="main">aaaa</div>
+document.getElementsByClassName('main');
+document.getElementsByClassName('color orange'); // -> [.color.orange]
+</pre>
+            
+            <p>タグ名を使ってエレメントノードを探します。</p>
+<pre class="prettyprint">
+<h2>aaaa</h2>
+document.getElementsByTagName("h2");
+</pre>
+          </section>
+
+          <section class="ly-section tocContent">
+            <h2>コピー方法</h2>
+            <h3>ディープコピー(deep copy)</h3>
+            <p>オブジェクトとメモリ上のデータの両方をコピーします。コピー元のプロパティを変更しても、コピー先のプロパティは変更されません。例えば、変更前後の値を比較する際に、ディープコピーが使われる。</p>
+            <h3>シャローコピー(shallow copy)</h3>
+            <p>シャローコピーはざっくり言うと参照元のオブジェクトとコピー先のオブジェクトどちらも同じメモリを参照していることをいいます。</p>
+            <h3>ちがい</h3>
+            <p>実装的にみてディープコピーはシャローコピーよりもコストのかかる処理となる。実装を工夫することで改善は可能だろうが、本質的に静的なNodeListを生成するquerySelectorAll()はgetElementsByTagName()よりも処理時間がかかることになる。</p>
+            <h3>使い分け</h3>
+            <ul>
+              <li>要素のリストがほしいだけなら高速に動作するgetElementsByTagName()を使う。</li>
+              <li>複雑なCSSクエリを発行する必要がある場合にはquerySelectorAll()を使う。</li>
+              <li>その時点での要素のスナップショットがほしいならquerySelectorAll()を使う。</li>
+            </ul>
+
+
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://seiai.ed.jp/sys/text/htm4/chp09/h09a36.html" target="_blank" rel="noopener noreferrer">class属性の変更でスタイルを変える</a></cite>
+            <cite class="ly-cite"><a class="ly-cite_link" href="https://qiita.com/KDE_SPACE/items/e21bb31dd4d9c162c4a6" target="_blank" rel="noopener noreferrer">ノードの取得／属性の取得・設定</a></cite>
+          </section>
+
+
     </article>
-    
 </main>
         <footer class="bl-footer">
             <p class="el-copyright">&copy; 2019-2021 porco tasso</p>

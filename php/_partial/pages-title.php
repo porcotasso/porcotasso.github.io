@@ -67,4 +67,4 @@
 </nav>
 <p class="articleCnt_summary"><?php echo $lead ?></p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
-<script src="/js/pages.js"></script>
+<script src="/js/frontend.js"></script>
