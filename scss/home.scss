@@ -61,6 +61,18 @@
   min-height: 100vh;
   animation-duration: 3s;
   animation-name: fadeIn;
+  .content-list{
+    width: 90%;
+    max-width: 400px;
+    box-shadow: $box-shadow;
+    height: 400px;
+    padding: 32px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto 100px;
+    background: $bg-white;
+  }
   &_ttl{
     font-size: $font-size-22;
     margin-bottom: 20px;
