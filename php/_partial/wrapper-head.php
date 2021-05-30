@@ -19,8 +19,8 @@
         <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" rel="stylesheet"> -->
     <?php } ?>
     <?php
-        $frontendPages = glob('../frontend/*.php');
-        $currentPage = '../' . $_SERVER['REQUEST_URI'];
+        $frontendPages = glob($_SERVER['DOCUMENT_ROOT'] . '/php/frontend/*.php');
+        $currentPage = $_SERVER['DOCUMENT_ROOT'] . $_SERVER['REQUEST_URI'];
         foreach($frontendPages as $frontendPage){ 
             if( $currentPage == $frontendPage){ ?>
             <link rel="stylesheet" href="/css/frontend.css">
@@ -67,6 +67,7 @@
     <title><?php echo ($title); ?></title>
     <title><?php echo ($_SERVER['REQUEST_URI']); ?></title>
 </head>
+
 <?php if($_SERVER['REQUEST_URI'] == "/php/index.php"){ ?>
     <body id="js-body">
 <?php } else { ?>
