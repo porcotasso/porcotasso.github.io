@@ -76,7 +76,7 @@
 </head>
 
 <?php if($_SERVER['REQUEST_URI'] == "/php/index.php"){ ?>
-    <body id="js-body ly-body">
+    <body class="ly-body" id="js-body">
 <?php } else { ?>
     <body class="<?php echo ($pageName); ?> ly-body" id="js-body">
 <?php } ?>

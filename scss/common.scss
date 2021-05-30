@@ -41,9 +41,9 @@ td{
 	padding-left: $gutter-width;
 }	
 
-.ly-body{
-	position: relative;
-}
+// .ly-body{
+// 	position: relative;
+// }
 // common_header
 .ly-header {
 	padding: 24px 20px;
@@ -308,15 +308,13 @@ td{
 
 // common_footer
 .bl-footer{
-	bottom: 0;
 	height: 60px;
-	background: $bg-black;
+	background: $bg-light-gray;
 	padding: $space-unit *2 $gutter-width;
-	position: absolute;
 	width: 100%;
 	.el-copyright{
 		text-align: center;
-		color: #fff;
+		color: $font-black;
 		font-size: $font-size-12;
 	}
 }
