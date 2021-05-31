@@ -17,6 +17,9 @@
 
 //1.common
 // 基本body直下で全画面幅の中で両端にスペースを追加
+html{
+	background: #333;
+}
 body{
 	overscroll-behavior: contain;
 	&.acvtive-headerMenu{

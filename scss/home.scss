@@ -8,8 +8,11 @@
 //     margin:0 auto $space-unit * 3;
 //   }
 // }
+html{
+	background: #333;
+}
 .ly-body{
-  background: linear-gradient(0deg, #e8e7de 0%,  #ded5ba 50%, #a5d2fb 100%);
+  background: linear-gradient(0deg, #e8e7de 0%,  #ded5ba 40%, #a5d2fb 100%);
   animation-duration: 6s;
   // animation-name: bgFadeIn;
   height: 100vh;
@@ -27,6 +30,8 @@
 // }
 .ly-header{
   // background: $bg-light-gray;
+  position: absolute;
+  width: 100%;
 }
 
 // .svg-logoMark{
