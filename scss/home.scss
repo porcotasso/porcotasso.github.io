@@ -8,108 +8,112 @@
 //     margin:0 auto $space-unit * 3;
 //   }
 // }
+.ly-body{
+  background: linear-gradient(0deg, #e8e7de 0%,  #ded5ba 50%, #a5d2fb 100%);
+  animation-duration: 6s;
+  // animation-name: bgFadeIn;
+  height: 100vh;
+  
+}
+// @keyframes bgFadeIn {
+//   from {
+//     background: linear-gradient(0deg, #dee6e8 0%, #ffffff 100%);
+//   }
+//   50% {
+//   }
+//   to {
+//     background: linear-gradient(0deg, #dee6e8 0%, #1e75c2 100%);
+//   }
+// }
 .ly-header{
-  background: $bg-light-gray;
-  animation-duration: 3s;
-  animation-name: headerFadeIn;
-}
-@keyframes headerFadeIn {
-  from {
-    background: $bg-white;
-  }
-  50% {
-  }
-  to {
-    background: #eff1f3;
-  }
-}
-
-.svg-logoMark{
-  position: relative;
-  fill: rgb(101, 206, 233);
-  width: 75%;
-  opacity: 0.3;
-  // filter: drop-shadow(0 0px 3px rgba(0, 0, 0, .3));
-  // margin-top: -180px;
-  // top: 0;
-  animation-duration: 1s;
-  animation-name: slideIn;
-  left: -100px;  
-}
-
-@keyframes slideIn {
-  from {
-    left: -200px;
-    opacity: 0.1;
-  }
-  50% {
-  }
-  to {
-    left: -100px;
-    opacity: 0.3;
-  }
-}
-
-
-.bl-summary{
-  // border-bottom: 1px solid $font-black;
-  overflow: hidden;
-  padding-bottom: 16px;
-  padding-top: 32px;
   // background: $bg-light-gray;
-  background: linear-gradient(0deg, $bg-white 0%, #eff1f3 100%);
-  min-height: 100vh;
-  animation-duration: 3s;
-  animation-name: fadeIn;
-  .content-list{
-    width: 90%;
-    max-width: 400px;
-    box-shadow: $box-shadow;
-    height: 400px;
-    padding: 32px 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin:0 auto 100px;
-    background: $bg-white;
-  }
-  &_ttl{
-    font-size: $font-size-22;
-    margin-bottom: 20px;
-  }
-  &_txt{
-    font-size: $font-size-14;
-    margin-left: 1%; 
-  }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    // color: #fff;
-  }
-  // 50% {
-  //   background: #f8f8f8;
-  //   color: #ccc;
-  // }
-  to {
-    opacity: 1;
-    // color: $font-black;
-  }
-}
+// .svg-logoMark{
+//   position: relative;
+//   fill: rgb(101, 206, 233);
+//   width: 75%;
+//   opacity: 0.3;
+//   // filter: drop-shadow(0 0px 3px rgba(0, 0, 0, .3));
+//   // margin-top: -180px;
+//   // top: 0;
+//   animation-duration: 1s;
+//   animation-name: slideIn;
+//   left: -100px;  
+// }
+
+// @keyframes slideIn {
+//   from {
+//     left: -200px;
+//     opacity: 0.1;
+//   }
+//   50% {
+//   }
+//   to {
+//     left: -100px;
+//     opacity: 0.3;
+//   }
+// }
 
 
-.slide-item{
-  height: 200px;
-  height: 500px;
-  // background: pink;
-  color: #fff;
-  font-size: 3rem;
-  text-align: center;
-  &:nth-child(2){
-    background: rgb(243, 252, 255);
-  }
-  &:nth-child(3){
-    background: rgb(202, 233, 202);
-  }
-}
+// .bl-summary{
+//   // border-bottom: 1px solid $font-black;
+//   overflow: hidden;
+//   padding-bottom: 16px;
+//   padding-top: 32px;
+//   // background: $bg-light-gray;
+  
+//   animation-duration: 3s;
+//   animation-name: fadeIn;
+//   .content-list{
+//     width: 90%;
+//     max-width: 400px;
+//     box-shadow: $box-shadow;
+//     height: 400px;
+//     padding: 32px 16px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin:0 auto 100px;
+//     background: $bg-white;
+//   }
+//   &_ttl{
+//     font-size: $font-size-22;
+//     margin-bottom: 20px;
+//   }
+//   &_txt{
+//     font-size: $font-size-14;
+//     margin-left: 1%; 
+//   }
+// }
+
+// @keyframes fadeIn {
+//   from {
+//     opacity: 0;
+//     // color: #fff;
+//   }
+//   // 50% {
+//   //   background: #f8f8f8;
+//   //   color: #ccc;
+//   // }
+//   to {
+//     opacity: 1;
+//     // color: $font-black;
+//   }
+// }
+
+
+// .slide-item{
+//   height: 200px;
+//   height: 500px;
+//   // background: pink;
+//   color: #fff;
+//   font-size: 3rem;
+//   text-align: center;
+//   &:nth-child(2){
+//     background: rgb(243, 252, 255);
+//   }
+//   &:nth-child(3){
+//     background: rgb(202, 233, 202);
+//   }
+// }
