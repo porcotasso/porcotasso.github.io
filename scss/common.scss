@@ -108,7 +108,7 @@ td{
 		}
 	}
 	&.acvtive-headerMenu{
-		background: $bg-light-gray;
+		// background: $bg-light-gray;
 		.headerLogo {
 			// opacity: .2;
 			left: -2px;
@@ -127,23 +127,24 @@ td{
 	// top: 68px;
 	width: 93%;
 	right: -100%;
-	max-height:calc(100% - 72px); //これがないと縦にスクロールせず、画面からはみ出たメニューが見れない
+	// max-height:calc(100% - 72px); //これがないと縦にスクロールせず、画面からはみ出たメニューが見れない
 	padding: 16px 0;
 	text-align: left;
-	background: #fff;
-	overflow: scroll;
+	// background: rgba(255, 255, 255, 0.281);
+	border-left: 1px solid #eaeaea;
+	// overflow: scroll;<---白背景がでる。内容が多いなら必要
 	list-style: none;
-	box-shadow: $box-shadow;
+	// box-shadow: $box-shadow;
 	transition: $transition;
 	z-index: 101;
-	background: $bg-white;
-	border-radius: 6px 0 0 6px;
+	// background: $bg-white;
+	// border-radius: 6px 0 0 6px;
 	visibility: collapse;
 	// overscroll-behavior: contain; // 親要素にスクロールが伝わらないようにする。「スクロールチェーン」の挙動を無効化
 	&_detail{
 		margin: 0;
 		padding: 12px 16px 4px 16px;
-		background: $bg-white;
+		// background: $bg-white;
 		position: relative;
 		& + .headerMenu_list{
 			border-top: 1px solid $border-gray;
@@ -297,10 +298,10 @@ td{
 	visibility: hidden;
 	opacity: 0;
 	pointer-events: none;
-	background-color: #000;
+	background-color: #e0e0e0;
 	transition: $transition;
 	&.acvtive-headerMenu{
-		opacity: 0.86;
+		opacity: 0.75;
 		pointer-events: auto;
 		visibility: visible;
 

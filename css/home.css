@@ -1,6 +1,2 @@
-.ly-body {
-  height: 100vh;
-  background: linear-gradient(0deg, #e8e7de 0%, #ded5ba 50%, #a5d2fb 100%);
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s; }
+.ly-body{height:100vh;background:linear-gradient(0deg,#e8e7de 0,#ded5ba 50%,#a5d2fb 100%);-webkit-animation-duration:6s;animation-duration:6s}
 /*# sourceMappingURL=maps/home.css.map */
