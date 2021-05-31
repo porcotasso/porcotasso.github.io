@@ -99,3 +99,17 @@
 }
 
 
+.slide-item{
+  height: 200px;
+  height: 500px;
+  // background: pink;
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  &:nth-child(2){
+    background: rgb(243, 252, 255);
+  }
+  &:nth-child(3){
+    background: rgb(202, 233, 202);
+  }
+}
