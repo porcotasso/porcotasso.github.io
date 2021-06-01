@@ -9,14 +9,19 @@
 //   }
 // }
 html{
-	background: #333;
+	background: #2c2c2c;
 }
+// $color1: #e8e7de;
+// $color2: #ded5ba;
+// $color3: #a5d2fb;
 .ly-body{
-  background: linear-gradient(0deg, #e8e7de 0%,  #ded5ba 40%, #a5d2fb 100%);
-  animation-duration: 20s;
-  animation-name: bgFadeIn;
-  animation-timing-function:ease-in;
-  animation-delay:0.1s;
+  background-image: linear-gradient(-18deg, #f0dfb6, #f3ebee 62%, #45bbe6 80%, #20c0c5);
+  // background-image: linear-gradient(0deg, #e8e7de 0%,  #ded5ba 40%, #a5d2fb 100%);
+  animation-duration: 16s;
+  // background-size: 400% 400%;
+  animation-name: gradient;
+  animation-timing-function:ease-in-out;
+  // animation-delay:0.1s;
   animation-iteration-count:infinite;
   animation-direction:alternate;
   animation-fill-mode:forwards;
@@ -24,15 +29,20 @@ html{
   height: 100vh;
   
 }
-@keyframes bgFadeIn {
+@keyframes gradient {
   0% {
-    background-image: linear-gradient(0deg, #f1f1f1 0%,  #ffffff 40%, #d0deeb 100%);
+    background-position: 0% 92%;
+    background-size: 200% 200%;
+
   }
   50% {
-    background-image: linear-gradient(0deg, #e8e7de 0%,  #ded5ba 40%, #a5d2fb 100%);
+    background-size: 200% 240%;
+
+    
   }
   100% {
-    background-image: linear-gradient(0deg, #dee6e8 0%, #1e75c2 100%);
+    background-position: 0% 0%;
+    background-size: 200% 360%;
   }
 }
 .ly-header{
