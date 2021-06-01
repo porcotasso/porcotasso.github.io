@@ -512,33 +512,39 @@ td {
     z-index: 100;
     position: relative;
     position: relative;
-    top: 2px;
-    width: 24px;
-    height: 18px; }
+    top: 0;
+    width: 20px;
+    height: 20px; }
     .ly-header .headerBurger span {
       position: absolute;
-      left: 0;
-      width: 100%;
+      width: 8px;
       height: 1px;
       border-radius: 4px;
       background-color: #fff;
       transition: 0.4s; }
       .ly-header .headerBurger span:nth-of-type(1) {
-        top: 0; }
+        top: 4px;
+        left: 6px;
+        transform: rotate(90deg); }
       .ly-header .headerBurger span:nth-of-type(2) {
-        top: 8px; }
+        top: 10px;
+        left: 0; }
       .ly-header .headerBurger span:nth-of-type(3) {
-        bottom: 0; }
+        top: 10px;
+        left: 12px; }
+      .ly-header .headerBurger span:nth-of-type(4) {
+        top: 16px;
+        left: 6px;
+        transform: rotate(90deg); }
     .ly-header .headerBurger.acvtive-headerMenu span {
       background-color: #fff; }
       .ly-header .headerBurger.acvtive-headerMenu span:nth-of-type(1) {
-        top: 8px;
-        transform: rotate(-45deg); }
+        transform: rotate(45deg); }
       .ly-header .headerBurger.acvtive-headerMenu span:nth-of-type(2) {
-        left: 11px;
-        width: 0; }
+        transform: rotate(45deg); }
       .ly-header .headerBurger.acvtive-headerMenu span:nth-of-type(3) {
-        top: 8px;
+        transform: rotate(45deg); }
+      .ly-header .headerBurger.acvtive-headerMenu span:nth-of-type(4) {
         transform: rotate(45deg); }
   .ly-header.acvtive-headerMenu .headerLogo {
     left: -2px; }

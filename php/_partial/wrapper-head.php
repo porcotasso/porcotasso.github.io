@@ -107,6 +107,7 @@
             <span></span>
             <span></span>
             <span></span>
+            <span></span>
         </div>        
     </header>
     <nav class="headerNav">
