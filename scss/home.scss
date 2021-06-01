@@ -34,12 +34,9 @@ html{
   0% {
     background-position: 0% 92%;
     background-size: 200% 200%;
-
   }
   50% {
     background-size: 200% 240%;
-
-    
   }
   100% {
     background-position: 0% 0%;
@@ -47,13 +44,25 @@ html{
   }
 }
 .ly-header{
-  // background: $bg-light-gray;
   position: fixed;
   width: 100%;
 }
 .bl-footer .el-copyright{
   color: #e9e3dc;
   opacity: 0.7;
+}
+.bl-menu{
+  text-align: center;
+
+  list-style: none;
+  padding: 50% 0 0;
+  &_list{
+    line-height: 4;
+  }
+  &_link{
+    color: #fff;
+    letter-spacing: 2rem;
+  }
 }
 // .svg-logoMark{
 //   position: relative;

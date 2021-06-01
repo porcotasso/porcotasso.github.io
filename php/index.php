@@ -2,16 +2,11 @@
 <main>
     <!-- <img src="/images/illustration/illustration002.jpg"> -->
 
-<!-- <script>
-var mySwiper = new Swiper ('.swiper-container', {});
-</script> -->
-    <div class="bl-summary ly-innnerWidth">
         
-        <div class="bl-summary_txt">
- 
-            <!-- <a href="/profile.html">profile.html</a> -->
-        </div>
-    </div>
+    <ul class="bl-menu">
+        <li class="bl-menu_list"><a class="bl-menu_link" href="/profile.html">art</a></li>
+        <li class="bl-menu_list"><a class="bl-menu_link" href="/profile.html">profile</a></li>
+    </ul>
 </main>
 <script src="/js/home.js"></script>
 <?php include("_partial/wrapper-foot.php"); ?>
