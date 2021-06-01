@@ -15,7 +15,7 @@ html{
 // $color2: #ded5ba;
 // $color3: #a5d2fb;
 .ly-body{
-  background-image: linear-gradient(-18deg, #f0dfb6, #f3ebee 62%, #45bbe6 80%, #20c0c5);
+  background-image: linear-gradient(-18deg, #f0d5b6, #f7f0f2 60%, #45bbe6 78%, #2baae6 94%, #12b7e9);
   // background-image: linear-gradient(0deg, #e8e7de 0%,  #ded5ba 40%, #a5d2fb 100%);
   animation-duration: 16s;
   background-position: 0% 92%;
@@ -28,7 +28,7 @@ html{
   animation-fill-mode:forwards;
   // animation-play-state:running;
   height: 100vh;
-  
+  position: relative;
 }
 @keyframes gradient {
   0% {
@@ -43,7 +43,7 @@ html{
   }
   100% {
     background-position: 0% 0%;
-    background-size: 200% 360%;
+    background-size: 200% 400%;
   }
 }
 .ly-header{
@@ -51,7 +51,10 @@ html{
   position: fixed;
   width: 100%;
 }
-
+.bl-footer .el-copyright{
+  color: #e9e3dc;
+  opacity: 0.7;
+}
 // .svg-logoMark{
 //   position: relative;
 //   fill: rgb(101, 206, 233);
