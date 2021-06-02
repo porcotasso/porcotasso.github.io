@@ -148,14 +148,14 @@ td{
 	padding: 16px 0;
 	text-align: left;
 	// background: rgba(255, 255, 255, 0.281);
-	border-left: 8px solid #eaeaea;
+	border-left: 1px solid #eaeaea;
 	// border-right: none;
 	// overflow: scroll;<---白背景がでる。内容が多いなら必要
 	list-style: none;
 	// box-shadow: $box-shadow;
 	transition: $transition;
 	z-index: 101;
-	background: #70707081;
+	background: #8d8d8d81;
 	// border-radius: 6px 0 0 6px;
 	box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.04);
 	visibility: collapse;
@@ -227,6 +227,8 @@ td{
 			outline: none;
 			outline-offset: -1px;
 			letter-spacing: 1rem;
+		color: #fff;
+
 		}
 	}
 	&_ul{

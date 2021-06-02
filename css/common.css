@@ -567,8 +567,8 @@ td {
   right: -100%;
   width: 64%;
   padding: 16px 0;
-  border-left: 8px solid #eaeaea;
-  background: #70707081;
+  border-left: 1px solid #eaeaea;
+  background: #8d8d8d81;
   box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.04);
   list-style: none;
   text-align: left;
@@ -611,6 +611,7 @@ td {
     .headerMenu_link:hover, .headerMenu_link:focus, .headerMenu_link:active {
       outline: none;
       outline-offset: -1px;
+      color: #fff;
       letter-spacing: 1rem; }
   .headerMenu_ul {
     visibility: collapse;
