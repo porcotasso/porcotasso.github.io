@@ -88,23 +88,22 @@
 
 <?php include_once($baseUrl.'/images/common/sprite.svg'); ?>
     <header class="ly-header" id="js-header">  
-        <?php if($_SERVER['REQUEST_URI'] == "/"){ ?>
+        <?php if($_SERVER['REQUEST_URI'] == "/php/index.php"){ ?>
         <h1 class="headerLogo">
-            <a href="/">
                 <svg class="svg-logo" viewBox="0 0 252 52">
                     <use xlink:href="#svg-logo"></use>
                 </svg>
                 <?php /* $str = file_get_contents($baseUrl.'/images/common/logo.svg'); echo $str; */ ?>
-            </a>
         </h1>
         <?php } else { ?>
         <div class="headerLogo">
-            <a href="/">
-                <svg class="svg-logo" viewBox="0 0 252 52">
-                    <use xlink:href="#svg-logo"></use>
+            <a class="headerLogo_symbol" href="/">
+                <svg class="svg-logo-symbol" viewBox="0 0 48 48">
+                    <use xlink:href="#svg-logo-symbol"></use>
                 </svg>
                 <?php /* $str = file_get_contents($baseUrl.'/images/common/logo.svg'); echo $str; */ ?>
             </a>
+            <p>Codenote</p>
         </div>
         <?php } ?>
         <div class="headerBurger" id="js-headerBurger">

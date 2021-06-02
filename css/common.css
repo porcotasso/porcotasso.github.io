@@ -502,12 +502,16 @@ td {
     position: relative;
     left: 0;
     width: 100%;
+    margin: 0;
     opacity: 1;
     transition: 0.4s; }
     .ly-header .headerLogo .svg-logo {
       fill: #fff;
       width: 56%;
       max-width: 200px; }
+    .ly-header .headerLogo .svg-logo-symbol {
+      width: 60px;
+      height: 60px; }
   .ly-header .headerBurger {
     z-index: 100;
     position: relative;
@@ -536,16 +540,14 @@ td {
         top: 16px;
         left: 6px;
         transform: rotate(90deg); }
-    .ly-header .headerBurger.acvtive-headerMenu span {
-      background-color: #fff; }
-      .ly-header .headerBurger.acvtive-headerMenu span:nth-of-type(1) {
-        transform: rotate(45deg); }
-      .ly-header .headerBurger.acvtive-headerMenu span:nth-of-type(2) {
-        transform: rotate(45deg); }
-      .ly-header .headerBurger.acvtive-headerMenu span:nth-of-type(3) {
-        transform: rotate(45deg); }
-      .ly-header .headerBurger.acvtive-headerMenu span:nth-of-type(4) {
-        transform: rotate(45deg); }
+    .ly-header .headerBurger.acvtive-headerMenu span:nth-of-type(1) {
+      transform: rotate(45deg); }
+    .ly-header .headerBurger.acvtive-headerMenu span:nth-of-type(2) {
+      transform: rotate(45deg); }
+    .ly-header .headerBurger.acvtive-headerMenu span:nth-of-type(3) {
+      transform: rotate(45deg); }
+    .ly-header .headerBurger.acvtive-headerMenu span:nth-of-type(4) {
+      transform: rotate(45deg); }
   .ly-header.acvtive-headerMenu .headerLogo {
     left: -2px; }
 
@@ -563,12 +565,11 @@ td {
   z-index: 101;
   position: absolute;
   right: -100%;
-  width: 84%;
+  width: 64%;
   padding: 16px 0;
-  border-radius: 6px 0 0 6px;
-  background: #ffffff66;
-  box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.05);
-  box-shadow: -4px -4px 8px rgba(255, 255, 255, 0.2);
+  border-left: 8px solid #eaeaea;
+  background: #70707081;
+  box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.04);
   list-style: none;
   text-align: left;
   transition: 0.4s;
@@ -582,31 +583,35 @@ td {
   .headerMenu_ttl {
     display: flex;
     position: relative;
+    align-items: center;
     justify-content: space-between;
-    margin: 0 0 0 24px; }
+    margin: 0 0 0 32px; }
     .headerMenu_ttl .summary_cntNumber {
       color: #888;
       font-size: 1.2rem; }
     .headerMenu_ttl::before {
-      box-sizing: border-box;
       position: absolute;
-      top: 0;
-      bottom: 0;
-      left: -12px;
-      width: 5px;
-      height: 5px;
-      margin: auto;
-      border: 4px solid transparent;
-      border-left: 5px solid #fff;
+      position: absolute;
+      left: -16px;
+      width: 8px;
+      height: 1px;
+      border-radius: 4px;
+      background-color: #fff;
       content: "";
       transition: 0.4s; }
-    .headerMenu_ttl:focus {
+    .headerMenu_ttl:hover, .headerMenu_ttl:focus, .headerMenu_ttl:active {
       outline: none;
       outline-offset: -1px; }
   .headerMenu_link {
+    color: #fff;
     font-size: 1.5rem;
     letter-spacing: 0.6rem;
-    line-height: 3; }
+    line-height: 3;
+    transition: 0.4s; }
+    .headerMenu_link:hover, .headerMenu_link:focus, .headerMenu_link:active {
+      outline: none;
+      outline-offset: -1px;
+      letter-spacing: 1rem; }
   .headerMenu_ul {
     visibility: collapse;
     max-height: 0;

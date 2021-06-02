@@ -1,5 +1,23 @@
 @import "variables";
 
+.ly-header{
+	.headerLogo{
+		display: flex;
+		align-items: center;
+		&_symbol{
+			margin-right: 20px;
+		}
+		p{
+			font-size: $font-size-17;
+			letter-spacing: 1rem;
+			margin: 0;
+		}
+	}
+	.headerBurger span{
+		background-color: #111;
+	}
+}
+
 .bl-recentCnt{
 	position: relative;
 	padding-bottom: 16px;
