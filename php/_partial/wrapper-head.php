@@ -17,13 +17,11 @@
         if($_SERVER['REQUEST_URI'] == "/php/index.php"){ ?>
         <link rel="stylesheet" href="/css/home.css">
         <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" rel="stylesheet"> -->
-    <?php } ?>
-    <?php 
-        if($_SERVER['REQUEST_URI'] == "/php/frontend.php"){ ?>
+    <?php } elseif($_SERVER['REQUEST_URI'] == "/php/art.php"){ ?>
+        <link rel="stylesheet" href="/css/art.css">
+    <?php }elseif($_SERVER['REQUEST_URI'] == "/php/frontend.php"){ ?>
         <link rel="stylesheet" href="/css/frontend.css">
-    <?php } ?>
-    <?php 
-        if($_SERVER['REQUEST_URI'] == "/php/profile.php"){ ?>
+    <?php } elseif($_SERVER['REQUEST_URI'] == "/php/profile.php"){ ?>
         <link rel="stylesheet" href="/css/profile.css">
     <?php } ?>
     <?php
@@ -77,6 +75,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 
 <?php if($_SERVER['REQUEST_URI'] == "/php/index.php"){ ?>
+    <body class="ly-body" id="js-body">
+<?php } elseif($_SERVER['REQUEST_URI'] == "/php/art.php"){ ?>
+    <body class="ly-body" id="js-body">
+<?php } elseif($_SERVER['REQUEST_URI'] == "/php/frontend.php"){ ?>
+    <body class="ly-body" id="js-body">
+<?php } elseif($_SERVER['REQUEST_URI'] == "/php/profile.php"){ ?>
     <body class="ly-body" id="js-body">
 <?php } else { ?>
     <body class="<?php echo ($pageName); ?> ly-body" id="js-body">

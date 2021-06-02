@@ -1,0 +1,98 @@
+html {
+  background: #2c2c2c; }
+
+.ly-body {
+  position: relative;
+  height: 100vh;
+  background: #222; }
+
+.ly-header {
+  z-index: 10;
+  width: 100%; }
+
+.bl-footer .el-copyright {
+  color: #e9e3dc;
+  opacity: 0.7; }
+
+.ly-art {
+  display: block;
+  position: relative;
+  min-height: 300px;
+  margin: auto;
+  padding-top: 100px; }
+  .ly-art .artwork {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    max-width: 400px;
+    -webkit-animation-name: artwork;
+            animation-name: artwork;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+    opacity: 0; }
+    .ly-art .artwork:nth-of-type(1) {
+      -webkit-animation-delay: 0s;
+              animation-delay: 0s; }
+    .ly-art .artwork:nth-of-type(2) {
+      -webkit-animation-delay: 3s;
+              animation-delay: 3s; }
+    .ly-art .artwork:nth-of-type(3) {
+      -webkit-animation-delay: 6s;
+              animation-delay: 6s; }
+    .ly-art .artwork:nth-of-type(4) {
+      -webkit-animation-delay: 9s;
+              animation-delay: 9s; }
+    .ly-art .artwork:nth-of-type(5) {
+      -webkit-animation-delay: 12s;
+              animation-delay: 12s; }
+
+@-webkit-keyframes artwork {
+  0% {
+    visibility: hidden;
+    top: 0;
+    left: 2%; }
+  1% {
+    visibility: visible;
+    opacity: 0; }
+  25% {
+    opacity: 1; }
+  75% {
+    opacity: 1; }
+  99% {
+    visibility: visible;
+    opacity: 0; }
+  100% {
+    visibility: hidden;
+    left: 10%; } }
+
+@keyframes artwork {
+  0% {
+    visibility: hidden;
+    top: 0;
+    left: 2%; }
+  1% {
+    visibility: visible;
+    opacity: 0; }
+  25% {
+    opacity: 1; }
+  75% {
+    opacity: 1; }
+  99% {
+    visibility: visible;
+    opacity: 0; }
+  100% {
+    visibility: hidden;
+    left: 10%; } }
+/*# sourceMappingURL=maps/art.css.map */

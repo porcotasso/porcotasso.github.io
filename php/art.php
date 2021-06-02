@@ -1,7 +1,13 @@
 <?php include("_partial/wrapper-head.php"); ?>
 <main>
 
-       <img src="/images/illustration/illustration002.jpg">
+       <sdiv class="ly-art">
+              <img class="artwork" src="/images/illustration/illustration002.jpg">
+              <img class="artwork" src="/images/illustration/illustration002.jpg">
+              <img class="artwork" src="/images/illustration/illustration002.jpg">
+              <img class="artwork" src="/images/illustration/illustration002.jpg">
+              <img class="artwork" src="/images/illustration/illustration002.jpg">
+       </sdiv>
 
 </main>
 
