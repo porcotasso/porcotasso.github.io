@@ -4,7 +4,7 @@ html {
 .ly-body {
   position: relative;
   height: 100vh;
-  background-image: linear-gradient(-18deg, #f0d5b6, #f7f0f2 60%, #45bbe6 70%, #2baae6 90%, #24ccff);
+  background-image: linear-gradient(-18deg, #f0d5b6, #f7f0f2 60%, #45bbe6 72%, #2baae6 90%, #24ccff);
   background-position: 0% 92%;
   background-size: 200% 200%;
   -webkit-animation-name: gradient;
@@ -15,6 +15,8 @@ html {
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
