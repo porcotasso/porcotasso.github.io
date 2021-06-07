@@ -59,22 +59,22 @@ html {
   opacity: 0.7; }
 
 .ly-homeNav {
-  margin-top: 80px; }
+  margin-top: 80px;
+  margin-bottom: 32px; }
   .ly-homeNav .navLink {
     display: flex;
     position: relative;
     left: 42px;
     align-items: center;
     color: #fff;
-    font-size: 1.5rem;
-    letter-spacing: 0.6rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.8rem;
     line-height: 2.4;
     transition: 0.4s; }
     .ly-homeNav .navLink:hover, .ly-homeNav .navLink:focus, .ly-homeNav .navLink:active {
       outline: none;
       outline-offset: -1px;
-      color: #fff;
-      letter-spacing: 1rem; }
+      color: #fff; }
     .ly-homeNav .navLink::before {
       position: absolute;
       position: absolute;
@@ -86,10 +86,23 @@ html {
       content: "";
       transition: 0.4s; }
     .ly-homeNav .navLink.active-navLink {
-      left: 80px; }
+      left: 64px; }
 
-.navCnt {
-  display: none; }
-  .navCnt.active-navCnt {
-    display: block; }
+.ly-navCnt {
+  position: relative; }
+  .ly-navCnt .navCnt {
+    visibility: collapse;
+    position: absolute;
+    top: 32px;
+    width: 100%;
+    padding: 0 5%;
+    color: #fff;
+    opacity: 0;
+    transition: 0.4s; }
+    .ly-navCnt .navCnt.active-navCnt {
+      visibility: visible;
+      top: 0;
+      opacity: 1; }
+    .ly-navCnt .navCnt_txt {
+      font-size: 1.3rem; }
 /*# sourceMappingURL=maps/home.css.map */

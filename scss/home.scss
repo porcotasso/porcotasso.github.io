@@ -62,10 +62,11 @@ html{
 }
 .ly-homeNav{
   margin-top: 80px;
+  margin-bottom: 32px;
   .navLink{
     line-height: 2.4;
-		font-size: $font-size-15;
-		letter-spacing: 0.6rem;
+		font-size: $font-size-14;
+		letter-spacing: 0.8rem;
 		color: #fff;
 		transition: $transition;
     display: flex;
@@ -75,7 +76,7 @@ html{
 		&:hover, &:focus, &:active{
 			outline: none;
 			outline-offset: -1px;
-			letter-spacing: 1rem;
+			// letter-spacing: 1rem;
 		color: #fff;
 		}
     &::before {
@@ -99,14 +100,34 @@ html{
 			transition: $transition;
 		}
     &.active-navLink{
-      left:80px;
+      left:64px;
     }
   }
 }
-.navCnt{
-  display:none;
-  &.active-navCnt{
-    display: block;
+.ly-navCnt{
+  position: relative;
+  .navCnt{
+    // display:none;
+    position: absolute;
+    visibility: collapse;
+    transition: $transition;
+    opacity: 0;
+    width: 100%;
+    padding: 0 $gutter-width;
+    color: #fff;
+    top:32px;
+    &.active-navCnt{
+      // display: block;
+      visibility: visible;
+      opacity: 1;
+      top: 0;
+    }
+    &_ttl{
+    }
+    &_txt{
+      // margin: 0 $gutter-width;
+      font-size:$font-size-13;
+    }
   }
 }
 // .swiper-container {
