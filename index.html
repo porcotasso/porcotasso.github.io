@@ -1,7 +1,12 @@
 <!doctype html>
 <html lang="ja">
+<!-- <br />
+<b>Warning</b>:  include(_variable.php): failed to open stream: No such file or directory in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/index.php</b> on line <b>3</b><br />
+<br />
+<b>Warning</b>:  include(): Failed opening '_variable.php' for inclusion (include_path='.:/usr/local/Cellar/php@7.3/7.3.18/share/php@7.3/pear') in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/index.php</b> on line <b>3</b><br />
+ -->
 <!-- code-prettify -->
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<!-- <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script> -->
 
 <head>
     <meta charset="utf-8">
@@ -12,17 +17,11 @@
     <link rel="android-touch-icon" sizes="192x192" href="/images/favicon/android-touch-icon.png" >
     <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/common.css">
-            <link rel="stylesheet" href="/css/home.css">
-        <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" rel="stylesheet"> -->
-            <!-- google font Pacifico for title -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
-            <title>Porconote</title>
-    <title>/php/index.php</title>
+    <link rel="stylesheet" href="/css/home.css">
+        <title>Porconote</title>
 </head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
-
-    <body class="ly-body" id="js-body">
-
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script> -->
+<body class="ly-body" id="js-body">
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -130,37 +129,121 @@
 	</defs>
 </svg>
     <header class="ly-header" id="js-header">  
-                <h1 class="headerLogo">
-                <svg class="svg-logo" viewBox="0 0 252 52">
-                    <use xlink:href="#svg-logo"></use>
-                </svg>
-                        </h1>
-                <div class="headerBurger" id="js-headerBurger">
+        <h1 class="headerLogo">
+            <svg class="svg-logo" viewBox="0 0 252 52">
+                <use xlink:href="#svg-logo"></use>
+            </svg>
+        </h1>
+        <!-- <div class="headerBurger" id="js-headerBurger">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-        </div>        
+        </div>         -->
     </header>
-    <nav class="headerNav">
-        <div class="headerMenu" id="js-headerMenu">
-
-        <div class="headerMenu_detail">
-            <p class="headerMenu_ttl"><a class="headerMenu_link" href="frontend.html">codenote</a></p>
-            <p class="headerMenu_ttl"><a class="headerMenu_link" href="art.html">artnote</a></p>
-            <p class="headerMenu_ttl"><a class="headerMenu_link" href="profile.html">profile</a></p>
-        </div>
-
-
-                    </div>
+    <nav class="ly-homeNav">
+        <!-- <div class="headerMenu" id="js-headerMenu"> -->
+        <a class="navLink js-navLink" name="codenote">Codenote</a>
+        <a class="navLink js-navLink" name="artnote">Artnote</a>
+        <a class="navLink js-navLink" name="profile">Profile</a>
+        <!-- </div> -->
     </nav>
+    <div>
+        <div class="navCnt" id="codenote">
+            <h2 class="bl-summary_ttl">ウェブを楽しむ</h2>
+            <div class="bl-summary_txt">
+                <p>フロントエンドエンジニア、ポルコ•タッソのこつこつ技術メモです。 </p>
+                <p>知らないことは理解するのを楽しもう<br>できないことは身につくのを楽しもう</p>
+                <p>まとまってないメモはそのうち清書予定。多分。</p>
+            </div>
+        </div>
+        <div class="navCnt" id="artnote">artnoteeeee</div>
+        <div class="navCnt" id="profile">pronoteeeee</div>
+    </div>
+
+<script>
+
+// toggle tag and relatedList by clicking tag
+const navLink = Array.from(document.getElementsByClassName('js-navLink'));
+function inactiveNavLink(){
+	//inactive an active tag
+	document.getElementsByClassName('active-navLink')[0].classList.remove('active-navLink');
+}
+function inactiveRelatedCnt(){
+	//inactive relatedList
+	document.getElementsByClassName('active-navCnt')[0].classList.remove('active-navCnt');
+}
+navLink.forEach((value, index) => {
+	navLink[index].addEventListener('click', () => {
+		let activeTag = document.getElementsByClassName('active-navLink');
+		if(activeTag.length !== 0){
+			//not first click
+			if(navLink[index].classList.contains('active-navLink') == true){
+			//click same tag - inactive clicked tag and relatedList
+			navLink[index].classList.remove('active-navLink');
+			inactiveRelatedCnt();
+			} else {
+				//click different tag - inactive different tag and relatedList
+				inactiveNavLink();
+				inactiveRelatedCnt();
+				//active clicked tag and relatedList
+				navLink[index].classList.add('active-navLink');
+				document.getElementById(navLink[index].getAttribute('name')).classList.add('active-navCnt');
+			}
+		} else {
+			//first click - active clicked tag and relatedList
+			navLink[index].classList.add('active-navLink');
+			document.getElementById(navLink[index].getAttribute('name')).classList.add('active-navCnt');
+		}
+	}, false);
+});
+// close button action
+const relatedClose = Array.from(document.getElementsByClassName('js-relatedClose'));
+relatedClose.forEach((value, index) => {
+	relatedClose[index].addEventListener('click', () => {
+		inactiveRelatedCnt();
+		inactiveNavLink();
+	}, false)
+});
+</script>
+
+
+
+
+
 
     <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
     
     <!-- メニューを出した時に出る黒背景 -->
-    <div class="el-blackCover" id="js-blackCover"></div><main>
+    <div class="el-blackCover" id="js-blackCover"></div>
+<main>
+    <!-- <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">codenote</div>
+            <div class="swiper-slide">artnote</div>
+            <div class="swiper-slide">profile</div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
 
-        
+    </div>
+    <script>
+  var mySwiper = new Swiper ('.swiper-container', {
+    // ここからオプション
+    slidesPerView: 'auto',
+    loop: true,
+    // direction: vertical,
+    autoplay: {
+        delay: 2000,
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+
+  })
+</script> -->
     <!-- <ul class="bl-menu">
         <li class="bl-menu_list"><a class="bl-menu_link" href="art.html">art</a></li>
         <li class="bl-menu_list"><a class="bl-menu_link" href="profile.html">profile</a></li>

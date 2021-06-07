@@ -57,4 +57,39 @@ html {
 .bl-footer .el-copyright {
   color: #e9e3dc;
   opacity: 0.7; }
+
+.ly-homeNav {
+  margin-top: 80px; }
+  .ly-homeNav .navLink {
+    display: flex;
+    position: relative;
+    left: 42px;
+    align-items: center;
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 0.6rem;
+    line-height: 2.4;
+    transition: 0.4s; }
+    .ly-homeNav .navLink:hover, .ly-homeNav .navLink:focus, .ly-homeNav .navLink:active {
+      outline: none;
+      outline-offset: -1px;
+      color: #fff;
+      letter-spacing: 1rem; }
+    .ly-homeNav .navLink::before {
+      position: absolute;
+      position: absolute;
+      left: -16px;
+      width: 8px;
+      height: 1px;
+      border-radius: 4px;
+      background-color: #fff;
+      content: "";
+      transition: 0.4s; }
+    .ly-homeNav .navLink.active-navLink {
+      left: 80px; }
+
+.navCnt {
+  display: none; }
+  .navCnt.active-navCnt {
+    display: block; }
 /*# sourceMappingURL=maps/home.css.map */
