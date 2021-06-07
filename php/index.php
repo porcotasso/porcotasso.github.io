@@ -40,8 +40,9 @@
         <a class="navLink js-navLink" name="profile">Profile</a>
         <!-- </div> -->
     </nav>
-    <div class="ly-navCnt">
+    <main class="ly-navCnt">
         <div class="navCnt" id="codenote">
+            <div class="el-cover el-cover--codenote js-closeCnt"></div>
             <h2 class="navCnt_ttl">ウェブを楽しむ</h2>
             <p class="navCnt_txt">
                 フロントエンドエンジニア、ポルコ•タッソのこつこつ技術メモです。<br>
@@ -50,18 +51,20 @@
             </p>
         </div>
         <div class="navCnt" id="artnote">
+            <div class="el-cover el-cover--artnote js-closeCnt"></div>
             <h2 class="navCnt_ttl">描くことを楽しむ</h2>
             <div class="navCnt_txt">
                 <p>イラストを描いてます </p>
             </div>
         </div>
         <div class="navCnt" id="profile">
-        <h2 class="navCnt_ttl">プロフィール</h2>
+            <div class="el-cover el-cover--profile js-closeCnt"></div>
+            <h2 class="navCnt_ttl">プロフィール</h2>
             <div class="navCnt_txt">
                 <p>ポルコタッソ</p>
             </div>
         </div>
-    </div>
+    </main>
 
 <script>
 
@@ -100,25 +103,17 @@ navLink.forEach((value, index) => {
 	}, false);
 });
 // close button action
-const relatedClose = Array.from(document.getElementsByClassName('js-relatedClose'));
-relatedClose.forEach((value, index) => {
-	relatedClose[index].addEventListener('click', () => {
+const closeCnt = Array.from(document.getElementsByClassName('js-closeCnt'));
+closeCnt.forEach((value, index) => {
+	closeCnt[index].addEventListener('click', () => {
 		inactiveRelatedCnt();
 		inactiveNavLink();
 	}, false)
 });
 </script>
 
-
-
-
-
-
-    <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a>
-    
+    <!-- <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a> -->
     <!-- メニューを出した時に出る黒背景 -->
-    <div class="el-blackCover" id="js-blackCover"></div>
-<main>
     <!-- <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">codenote</div>
@@ -127,7 +122,6 @@ relatedClose.forEach((value, index) => {
         </div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-
     </div>
     <script>
   var mySwiper = new Swiper ('.swiper-container', {
@@ -138,18 +132,15 @@ relatedClose.forEach((value, index) => {
     autoplay: {
         delay: 2000,
     },
-
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     }
-
   })
 </script> -->
     <!-- <ul class="bl-menu">
         <li class="bl-menu_list"><a class="bl-menu_link" href="art.html">art</a></li>
         <li class="bl-menu_list"><a class="bl-menu_link" href="profile.html">profile</a></li>
     </ul> -->
-</main>
 <script src="/js/home.js"></script>
 <?php include("_partial/wrapper-foot.php"); ?>
