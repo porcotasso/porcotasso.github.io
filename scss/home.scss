@@ -73,7 +73,7 @@ html{
     display: flex;
     align-items: center;
     position: relative;
-    left: 36px;
+    left: 28px;
     cursor: pointer;
     width: fit-content;
 		&:hover, &:focus, &:active{
@@ -104,6 +104,7 @@ html{
 		}
     &.active-navLink{
       left:64px;
+      font-weight: bold;
     }
   }
 }
@@ -144,17 +145,17 @@ html{
       // visibility: hidden;
       // opacity: 0;
       // pointer-events: none;
-      opacity: 0.4;
+      opacity: 0.5;
       pointer-events: auto;
       visibility: visible;
       &.el-cover--codenote{
         background-color: #3bd2a8;
       }
       &.el-cover--artnote{
-        background-color: #7e748f;
+        background-color: #5e4ca1;
       }
       &.el-cover--profile{
-        background-color: #bdb0a5;
+        background-color: #918983;
       }
     }
   }

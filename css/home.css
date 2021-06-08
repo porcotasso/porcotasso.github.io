@@ -65,7 +65,7 @@ html {
     display: flex;
     z-index: 100;
     position: relative;
-    left: 36px;
+    left: 28px;
     align-items: center;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -91,7 +91,8 @@ html {
       content: "";
       transition: 0.4s; }
     .ly-homeNav .navLink.active-navLink {
-      left: 64px; }
+      left: 64px;
+      font-weight: bold; }
 
 .ly-navCnt {
   position: relative; }
@@ -121,13 +122,13 @@ html {
       left: 0;
       width: 100%;
       height: 100vh;
-      opacity: 0.4;
+      opacity: 0.5;
       pointer-events: auto;
       transition: 0.4s; }
       .ly-navCnt .navCnt .el-cover.el-cover--codenote {
         background-color: #3bd2a8; }
       .ly-navCnt .navCnt .el-cover.el-cover--artnote {
-        background-color: #7e748f; }
+        background-color: #5e4ca1; }
       .ly-navCnt .navCnt .el-cover.el-cover--profile {
-        background-color: #bdb0a5; }
+        background-color: #918983; }
 /*# sourceMappingURL=maps/home.css.map */
