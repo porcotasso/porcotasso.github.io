@@ -12,13 +12,13 @@
     <link rel="android-touch-icon" sizes="192x192" href="/images/favicon/android-touch-icon.png" >
     <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/common.css">
-            <link rel="stylesheet" href="/css/frontend.css">
+            <link rel="stylesheet" href="/css/codenote.css">
             <!-- google font Pacifico for title -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
             <title><br />
 <b>Notice</b>:  Undefined variable: title in <b>/Users/porcokafuka/projects/porcotasso.github.io/php/_partial/wrapper-head.php</b> on line <b>72</b><br />
 </title>
-    <title>/php/frontend.php</title>
+    <title>/php/codenote.php</title>
 </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 
@@ -131,15 +131,14 @@
 	</defs>
 </svg>
     <header class="ly-header" id="js-header">  
-                <div class="headerLogo">
+        <div class="headerLogo">
             <a class="headerLogo_symbol" href="/">
-                <svg class="svg-logo-symbol" viewBox="0 0 48 48">
-                    <use xlink:href="#svg-logo-symbol"></use>
+                <svg class="svg-logo" viewBox="0 0 252 52">
+                    <use xlink:href="#svg-logo"></use>
                 </svg>
-                            </a>
-            <p>Codenote</p>
+            </a>
         </div>
-                <div class="headerBurger" id="js-headerBurger">
+        <div class="headerBurger" id="js-headerBurger">
             <span></span>
             <span></span>
             <span></span>
@@ -150,7 +149,7 @@
         <div class="headerMenu" id="js-headerMenu">
 
         <div class="headerMenu_detail">
-            <p class="headerMenu_ttl"><a class="headerMenu_link" href="frontend.html">codenote</a></p>
+            <p class="headerMenu_ttl"><a class="headerMenu_link" href="codenote.html">codenote</a></p>
             <p class="headerMenu_ttl"><a class="headerMenu_link" href="art.html">artnote</a></p>
             <p class="headerMenu_ttl"><a class="headerMenu_link" href="profile.html">profile</a></p>
         </div>
@@ -163,22 +162,14 @@
     
     <!-- メニューを出した時に出る黒背景 -->
     <div class="el-blackCover" id="js-blackCover"></div><main>
-        <div class="bl-summary ly-innnerWidth">
-        <h2 class="bl-summary_ttl">ウェブを楽しむ</h2>
-        <div class="bl-summary_txt">
-            <p>フロントエンドエンジニア、ポルコ•タッソのこつこつ技術メモです。 </p>
-            <p>知らないことは理解するのを楽しもう<br>できないことは身につくのを楽しもう</p>
-            <p>まとまってないメモはそのうち清書予定。多分。</p>
-        </div>
-    </div>
-    <div class="bl-recentCnt ly-innnerWidth">
+        <div class="bl-recentCnt ly-innnerWidth">
         <svg class="svg-note" viewBox="0 0 17 20">
             <use xlink:href="#svg-note"></use>
         </svg>
         <h2 class="bl-recentCnt_ttl">最近の更新</h2>
         <ul class="bl-recentCnt_pages">
                             <li class="bl-recentCnt_list">
-                    <a href="/frontend/environment-summary.html" class="bl-recentCnt_link">
+                    <a href="/codenote/environment-summary.html" class="bl-recentCnt_link">
                         <div class="bl-recentCnt_linkImg"><p class="bl-recentCnt_linkImgtxt">制作環境設定全般</p></div>
                         <p class="bl-recentCnt_linkTxt">制作環境設定全般</p>
                     </a>
@@ -192,7 +183,7 @@
                     </div>
                 </li>
                             <li class="bl-recentCnt_list">
-                    <a href="/frontend/js-nodelist.html" class="bl-recentCnt_link">
+                    <a href="/codenote/js-nodelist.html" class="bl-recentCnt_link">
                         <div class="bl-recentCnt_linkImg"><p class="bl-recentCnt_linkImgtxt">Node、HTMLCollection、NodeListを理解する</p></div>
                         <p class="bl-recentCnt_linkTxt">Node、HTMLCollection、NodeListを理解する</p>
                     </a>
@@ -208,7 +199,7 @@
                     </div>
                 </li>
                             <li class="bl-recentCnt_list">
-                    <a href="/frontend/arrow-function.html" class="bl-recentCnt_link">
+                    <a href="/codenote/arrow-function.html" class="bl-recentCnt_link">
                         <div class="bl-recentCnt_linkImg"><p class="bl-recentCnt_linkImgtxt">アロー関数とは</p></div>
                         <p class="bl-recentCnt_linkTxt">アロー関数とは</p>
                     </a>
@@ -222,7 +213,7 @@
                     </div>
                 </li>
                             <li class="bl-recentCnt_list">
-                    <a href="/frontend/svg.html" class="bl-recentCnt_link">
+                    <a href="/codenote/svg.html" class="bl-recentCnt_link">
                         <div class="bl-recentCnt_linkImg"><p class="bl-recentCnt_linkImgtxt">svgファイルの使い方</p></div>
                         <p class="bl-recentCnt_linkTxt">svgファイルの使い方</p>
                     </a>
@@ -236,7 +227,7 @@
                     </div>
                 </li>
                             <li class="bl-recentCnt_list">
-                    <a href="/frontend/contents-model.html" class="bl-recentCnt_link">
+                    <a href="/codenote/contents-model.html" class="bl-recentCnt_link">
                         <div class="bl-recentCnt_linkImg"><p class="bl-recentCnt_linkImgtxt">コンテンツ・モデルというHTMLの基本ルールを理解する</p></div>
                         <p class="bl-recentCnt_linkTxt">コンテンツ・モデルというHTMLの基本ルールを理解する</p>
                     </a>
@@ -257,15 +248,15 @@
                 </div>
                 <ul class="bl-recentCnt_relatedMenuLists">
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/contents-model.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/contents-model.html" class="bl-recentCnt_relatedLink">
                             コンテンツ・モデルというHTMLの基本ルールを理解する                        </a>
                     </li>
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/semantic-tags.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/semantic-tags.html" class="bl-recentCnt_relatedLink">
                             セマンティックHTMLで適切なDOMを構築する                        </a>
                     </li>
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/js-nodelist.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/js-nodelist.html" class="bl-recentCnt_relatedLink">
                             Node、HTMLCollection、NodeListを理解する                        </a>
                     </li>
                                     </ul>
@@ -277,11 +268,11 @@
                 </div>
                 <ul class="bl-recentCnt_relatedMenuLists">
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/reset-css.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/reset-css.html" class="bl-recentCnt_relatedLink">
                             リセットCSS•ノーマライズCSSを適切に使う                        </a>
                     </li>
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/categorized-css.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/categorized-css.html" class="bl-recentCnt_relatedLink">
                             CSSを役割ごとにカテゴライズする                        </a>
                     </li>
                                     </ul>
@@ -293,31 +284,31 @@
                 </div>
                 <ul class="bl-recentCnt_relatedMenuLists">
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/button.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/button.html" class="bl-recentCnt_relatedLink">
                             ボタン作成の種類                        </a>
                     </li>
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/break-word.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/break-word.html" class="bl-recentCnt_relatedLink">
                             break-word                        </a>
                     </li>
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/element-em-strong-mark-b-difference.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/element-em-strong-mark-b-difference.html" class="bl-recentCnt_relatedLink">
                             em,strong,mark,b,dfn,iの違い                        </a>
                     </li>
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/favicon.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/favicon.html" class="bl-recentCnt_relatedLink">
                             favicon                        </a>
                     </li>
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/hamburger-menu.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/hamburger-menu.html" class="bl-recentCnt_relatedLink">
                             ハンバーガーメニューの作り方                        </a>
                     </li>
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/header-smaller.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/header-smaller.html" class="bl-recentCnt_relatedLink">
                             スクロールでヘッダーのスタイルを変更する                        </a>
                     </li>
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/js-scrolltop.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/js-scrolltop.html" class="bl-recentCnt_relatedLink">
                             スクロールでトップに戻るボタン                        </a>
                     </li>
                                     </ul>
@@ -329,39 +320,39 @@
                 </div>
                 <ul class="bl-recentCnt_relatedMenuLists">
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/javascript-memo.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/javascript-memo.html" class="bl-recentCnt_relatedLink">
                             javascriptmemo                        </a>
                     </li>
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/event-handler.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/event-handler.html" class="bl-recentCnt_relatedLink">
                             イベントハンドラーの種類と使い方                        </a>
                     </li>
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/arrow-function.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/arrow-function.html" class="bl-recentCnt_relatedLink">
                             アロー関数とは                        </a>
                     </li>
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/event-propagation.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/event-propagation.html" class="bl-recentCnt_relatedLink">
                             イベント伝搬とは                        </a>
                     </li>
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/touch-event.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/touch-event.html" class="bl-recentCnt_relatedLink">
                             touch-event                        </a>
                     </li>
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/day-js.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/day-js.html" class="bl-recentCnt_relatedLink">
                             day-js                        </a>
                     </li>
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/js-date.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/js-date.html" class="bl-recentCnt_relatedLink">
                             js-date                        </a>
                     </li>
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/js-marker.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/js-marker.html" class="bl-recentCnt_relatedLink">
                             黄色いmarkerアニメーション                        </a>
                     </li>
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/js-swiper.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/js-swiper.html" class="bl-recentCnt_relatedLink">
                             カルーセルスライダー                        </a>
                     </li>
                                     </ul>
@@ -373,7 +364,7 @@
                 </div>
                 <ul class="bl-recentCnt_relatedMenuLists">
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/php-filemtime.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/php-filemtime.html" class="bl-recentCnt_relatedLink">
                             filemtime                        </a>
                     </li>
                                     </ul>
@@ -385,19 +376,19 @@
                 </div>
                 <ul class="bl-recentCnt_relatedMenuLists">
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/environment-summary.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/environment-summary.html" class="bl-recentCnt_relatedLink">
                             制作環境設定全般                        </a>
                     </li>
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/gulpfile.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/gulpfile.html" class="bl-recentCnt_relatedLink">
                             gulpfile                        </a>
                     </li>
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/git-fetch.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/git-fetch.html" class="bl-recentCnt_relatedLink">
                             git-fetch                        </a>
                     </li>
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/browser-rendering-engine.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/browser-rendering-engine.html" class="bl-recentCnt_relatedLink">
                             browser-rendering-engine                        </a>
                     </li>
                                     </ul>
@@ -409,7 +400,7 @@
                 </div>
                 <ul class="bl-recentCnt_relatedMenuLists">
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/svg.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/svg.html" class="bl-recentCnt_relatedLink">
                             svgファイルの使い方                        </a>
                     </li>
                                     </ul>
@@ -421,7 +412,7 @@
                 </div>
                 <ul class="bl-recentCnt_relatedMenuLists">
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/shopify-memo.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/shopify-memo.html" class="bl-recentCnt_relatedLink">
                             shopify-memo                        </a>
                     </li>
                                     </ul>
@@ -441,7 +432,7 @@
                 </div>
                 <ul class="bl-recentCnt_relatedMenuLists">
                                         <li class="bl-recentCnt_relatedMenuList">
-                        <a href="/frontend/design.html" class="bl-recentCnt_relatedLink">
+                        <a href="/codenote/design.html" class="bl-recentCnt_relatedLink">
                             デザインメモ                        </a>
                     </li>
                                     </ul>
@@ -464,7 +455,7 @@
 </main>
 
             
-<!-- <script src="/js/frontend.js"></script> -->
+<!-- <script src="/js/codenote.js"></script> -->
 <script>
 
 // toggle tag and relatedList by clicking tag

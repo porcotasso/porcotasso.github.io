@@ -24,7 +24,7 @@ const htmlhint = require('gulp-htmlhint');
  
 // compile ejs
 // gulp.task('ejs', () => {
-//   return gulp.src(['./ejs/frontend/*.ejs', './ejs/frontend/**/*.ejs'])
+//   return gulp.src(['./ejs/codenote/*.ejs', './ejs/codenote/**/*.ejs'])
 //     .pipe(ejs({}))
 //     .pipe(rename({ extname: '.html' }))
 //     .pipe(gulp.dest('./'))
@@ -38,10 +38,10 @@ gulp.task('php', () => {
     .pipe(gulp.dest('./'))
 })
 gulp.task('php2', () => {
-  return gulp.src(['./php/frontend/*.php', './php/diary/diary.php'])
+  return gulp.src(['./php/codenote/*.php', './php/diary/diary.php'])
     .pipe(php2html({}))
     .pipe(rename({ extname: '.html' }))
-    .pipe(gulp.dest('./frontend/'))
+    .pipe(gulp.dest('./codenote/'))
 })
 
 gulp.task('html', function() {
@@ -93,7 +93,7 @@ var live = (options.env === 'live') ? true : false;
 // console.log('[build env]', options.env, '[is live]', islive);
 
 gulp.task('sass', () => {
-    return gulp.src(['./scss/common.scss', './scss/home.scss', './scss/frontend.scss', './scss/art.scss', './scss/profile.scss'], { sourcemaps: true })
+    return gulp.src(['./scss/common.scss', './scss/home.scss', './scss/codenote.scss', './scss/art.scss', './scss/profile.scss'], { sourcemaps: true })
     .pipe(plumber(notify.onError('Error: <%= error.message %>')))
     .pipe(sass())
     .pipe(postcss([cssdeclsort({
@@ -106,7 +106,7 @@ gulp.task('sass', () => {
 })
 
 gulp.task('watch', () => {
-    return gulp.watch(['./scss/*.scss', './scss/**/*.scss', './php/*.php', './php/frontend/*.php', './php/_partial/*.php'], gulp.series('sass', 'php', 'php2', 'html'))
+    return gulp.watch(['./scss/*.scss', './scss/**/*.scss', './php/*.php', './php/codenote/*.php', './php/_partial/*.php'], gulp.series('sass', 'php', 'php2', 'html'))
 })
 
 //create default task  -> 'npm run dev' -> run

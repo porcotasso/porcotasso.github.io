@@ -1,14 +1,4 @@
 @charset "UTF-8";
-.ly-header .headerLogo {
-  display: flex;
-  align-items: center; }
-  .ly-header .headerLogo_symbol {
-    margin-right: 20px; }
-  .ly-header .headerLogo p {
-    margin: 0;
-    font-size: 1.7rem;
-    letter-spacing: 1rem; }
-
 .ly-header .headerBurger span {
   background-color: #111; }
 
@@ -590,4 +580,4 @@
     font-size: 1rem; }
     .cntList_index_active {
       color: #666; }
-/*# sourceMappingURL=maps/frontend.css.map */
+/*# sourceMappingURL=maps/codenote.css.map */

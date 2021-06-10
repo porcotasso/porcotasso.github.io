@@ -19,17 +19,17 @@
         <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" rel="stylesheet"> -->
     <?php } elseif($_SERVER['REQUEST_URI'] == "/php/art.php"){ ?>
         <link rel="stylesheet" href="/css/art.css">
-    <?php }elseif($_SERVER['REQUEST_URI'] == "/php/frontend.php"){ ?>
-        <link rel="stylesheet" href="/css/frontend.css">
+    <?php }elseif($_SERVER['REQUEST_URI'] == "/php/codenote.php"){ ?>
+        <link rel="stylesheet" href="/css/codenote.css">
     <?php } elseif($_SERVER['REQUEST_URI'] == "/php/profile.php"){ ?>
         <link rel="stylesheet" href="/css/profile.css">
     <?php } ?>
     <?php
-        $frontendPages = glob($_SERVER['DOCUMENT_ROOT'] . '/php/frontend/*.php');
+        $codenotePages = glob($_SERVER['DOCUMENT_ROOT'] . '/php/codenote/*.php');
         $currentPage = $_SERVER['DOCUMENT_ROOT'] . $_SERVER['REQUEST_URI'];
-        foreach($frontendPages as $frontendPage){ 
-            if( $currentPage == $frontendPage){ ?>
-            <link rel="stylesheet" href="/css/frontend.css">
+        foreach($codenotePages as $codenotePage){ 
+            if( $currentPage == $codenotePage){ ?>
+            <link rel="stylesheet" href="/css/codenote.css">
     <?php }} ?>
     <!-- google font Pacifico for title -->
     <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> -->
@@ -78,7 +78,7 @@
     <body class="ly-body" id="js-body">
 <?php } elseif($_SERVER['REQUEST_URI'] == "/php/art.php"){ ?>
     <body class="ly-body" id="js-body">
-<?php } elseif($_SERVER['REQUEST_URI'] == "/php/frontend.php"){ ?>
+<?php } elseif($_SERVER['REQUEST_URI'] == "/php/codenote.php"){ ?>
     <body class="ly-body" id="js-body">
 <?php } elseif($_SERVER['REQUEST_URI'] == "/php/profile.php"){ ?>
     <body class="ly-body" id="js-body">
@@ -88,24 +88,13 @@
 
 <?php include_once($baseUrl.'/images/common/sprite.svg'); ?>
     <header class="ly-header" id="js-header">  
-        <?php if($_SERVER['REQUEST_URI'] == "/php/index.php"){ ?>
-        <h1 class="headerLogo">
+        <div class="headerLogo">
+            <a class="headerLogo_symbol" href="/">
                 <svg class="svg-logo" viewBox="0 0 252 52">
                     <use xlink:href="#svg-logo"></use>
                 </svg>
-                <?php /* $str = file_get_contents($baseUrl.'/images/common/logo.svg'); echo $str; */ ?>
-        </h1>
-        <?php } else { ?>
-        <div class="headerLogo">
-            <a class="headerLogo_symbol" href="/">
-                <svg class="svg-logo-symbol" viewBox="0 0 48 48">
-                    <use xlink:href="#svg-logo-symbol"></use>
-                </svg>
-                <?php /* $str = file_get_contents($baseUrl.'/images/common/logo.svg'); echo $str; */ ?>
             </a>
-            <p>Codenote</p>
         </div>
-        <?php } ?>
         <div class="headerBurger" id="js-headerBurger">
             <span></span>
             <span></span>
@@ -117,7 +106,7 @@
         <div class="headerMenu" id="js-headerMenu">
 
         <div class="headerMenu_detail">
-            <p class="headerMenu_ttl"><a class="headerMenu_link" href="frontend.html">codenote</a></p>
+            <p class="headerMenu_ttl"><a class="headerMenu_link" href="codenote.html">codenote</a></p>
             <p class="headerMenu_ttl"><a class="headerMenu_link" href="art.html">artnote</a></p>
             <p class="headerMenu_ttl"><a class="headerMenu_link" href="profile.html">profile</a></p>
         </div>
@@ -129,7 +118,7 @@
                 <ul class="headerMenu_ul">
                     <?php foreach($list["pages"] as $value){ ?>
                     <li class="headerMenu_li">
-                        <a href="<?php echo '/frontend/'.$value["pageName"].'.html'; ?>" class="headerMenu_link">
+                        <a href="<?php echo '/codenote/'.$value["pageName"].'.html'; ?>" class="headerMenu_link">
                            <?php echo $value["title"]; ?>
                         </a>
                     </li>

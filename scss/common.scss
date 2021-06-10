@@ -63,7 +63,7 @@ td{
 		.svg-logo{
 			max-width: 200px;
 			width: 56%;
-			fill: #fff;
+			fill: $font-black;
 		}
 		.svg-logo-symbol{
 			width: 60px;
@@ -192,45 +192,45 @@ td{
 		&:hover {
 			// cursor: pointer; /* カーソルを指マークに */
 		}
-		&::before {
-			content: "";
-			// margin: auto;
-			position: absolute;
-			// top: 0;
-			// bottom: 0;
-			left: -16px;
-			// width: 5px;
-			// height: 5px;
-			// border: 4px solid transparent;
-			// border-left: 5px solid #fff;
-			// box-sizing: border-box;
-			// transition: $transition;
-			position: absolute;
-			width: 8px;
-			height: 1px;
-			background-color:#fff;
-			border-radius: 4px;
-			transition: $transition;
-		}
+		// &::before {
+		// 	content: "";
+		// 	// margin: auto;
+		// 	position: absolute;
+		// 	// top: 0;
+		// 	// bottom: 0;
+		// 	left: -16px;
+		// 	// width: 5px;
+		// 	// height: 5px;
+		// 	// border: 4px solid transparent;
+		// 	// border-left: 5px solid #fff;
+		// 	// box-sizing: border-box;
+		// 	// transition: $transition;
+		// 	position: absolute;
+		// 	width: 8px;
+		// 	height: 1px;
+		// 	background-color:#fff;
+		// 	border-radius: 4px;
+		// 	transition: $transition;
+		// }
 		&:hover, &:focus, &:active{
 			outline: none;
 			outline-offset: -1px;
 		}
 	}
-	&_link{
-		line-height: 3;
-		font-size: $font-size-15;
-		letter-spacing: 0.6rem;
-		color: #fff;
-		transition: $transition;
-		&:hover, &:focus, &:active{
-			outline: none;
-			outline-offset: -1px;
-			letter-spacing: 1rem;
-		color: #fff;
+	// &_link{
+	// 	line-height: 3;
+	// 	font-size: $font-size-15;
+	// 	letter-spacing: 0.6rem;
+	// 	color: #fff;
+	// 	transition: $transition;
+	// 	&:hover, &:focus, &:active{
+	// 		outline: none;
+	// 		outline-offset: -1px;
+	// 		letter-spacing: 1rem;
+	// 	color: #fff;
 
-		}
-	}
+	// 	}
+	// }
 	&_ul{
 		list-style: none;
 		border-top: 1px solid $border-gray;

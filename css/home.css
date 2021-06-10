@@ -53,6 +53,8 @@ html {
 .ly-header {
   position: fixed;
   width: 100%; }
+  .ly-header .headerLogo .svg-logo {
+    fill: #fff; }
 
 .bl-footer .el-copyright {
   color: #e9e3dc;
@@ -114,6 +116,12 @@ html {
     .ly-navCnt .navCnt_txt {
       position: relative;
       font-size: 1.3rem; }
+    .ly-navCnt .navCnt_link {
+      display: block;
+      z-index: 1;
+      position: relative;
+      color: #fff;
+      cursor: pointer; }
     .ly-navCnt .navCnt .el-cover {
       display: block;
       visibility: visible;
@@ -130,5 +138,5 @@ html {
       .ly-navCnt .navCnt .el-cover.el-cover--artnote {
         background-color: #5e4ca1; }
       .ly-navCnt .navCnt .el-cover.el-cover--profile {
-        background-color: #918983; }
+        background-color: #927966; }
 /*# sourceMappingURL=maps/home.css.map */

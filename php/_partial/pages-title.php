@@ -34,7 +34,7 @@
 		<div class="swiper-container" id="js-swiperWrapper">
 			<div class="swiper-wrapper" >
 				<?php foreach($allPages as $value){ ?>
-					<a href="<?php echo '/frontend/'. $value["pageName"].'.html'; ?>" class="swiper-slide js-swiperSliderTtl">
+					<a href="<?php echo '/codenote/'. $value["pageName"].'.html'; ?>" class="swiper-slide js-swiperSliderTtl">
 						<p class="swiper-slide_ttl"><?php echo $value["title"];?></p>
 					</a>
 				<?php } ?>
@@ -67,4 +67,4 @@
 </nav>
 <p class="articleCnt_summary"><?php echo $lead ?></p>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script> -->
-<script src="/js/frontend.js"></script>
+<script src="/js/codenote.js"></script>

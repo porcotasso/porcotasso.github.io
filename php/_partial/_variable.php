@@ -4,21 +4,21 @@ $baseUrl = '/Users/porcokafuka/projects/porcotasso.github.io';
 
 //html
 $contentsModel = array(
-	"file" => "/php/frontend/contents-model.php",
+	"file" => "/php/codenote/contents-model.php",
 	"tag" => array("html"),
 	"title" => "コンテンツ・モデルというHTMLの基本ルールを理解する",
 	"lead" => "HTML5では、このタグの中にはこのタグが配置できる、といった配置ルールが決められており、これをコンテンツ・モデル（Content models）といいます。",
 	"pageName" => "contents-model"
 );
 $semanticTags = array(
-	"file" => "/php/frontend/semantic-tags.php",
+	"file" => "/php/codenote/semantic-tags.php",
 	"tag" => array("html"),
 	"title" => "セマンティックHTMLで適切なDOMを構築する",
 	"lead" => "クローラーや読み上げソフトがタグから各コンテンツの役割がわかるように記述するコンテンツの意味に合ったタグを使ってマークアップすることをセマンティックHTMLと呼びます。",
 	"pageName" => "semantic-tags"
 );
 $jsNodelist = array(
-	"file" => "/php/frontend/js-nodelist.php",
+	"file" => "/php/codenote/js-nodelist.php",
 	"tag" => array('html','javascript'),
 	"title" => "Node、HTMLCollection、NodeListを理解する",
 	"lead" => "javascriptでHTMLの要素を扱う際に、Nodeの状態、形式などの違いを理解して適切に扱う方法を身に着けよう。",
@@ -26,14 +26,14 @@ $jsNodelist = array(
 );
 //css
 $resetCss = array(
-	"file" => "/php/frontend/reset-css.php",
+	"file" => "/php/codenote/reset-css.php",
 	"tag" => array("css"),
 	"title" => "リセットCSS•ノーマライズCSSを適切に使う",
 	"lead" => "リセットCSSとはその名の通りブラウザのデフォルトCSSを打ち消すファイルのこと。ブラウザ毎にデフォルトで違うCSSを持っていて、それがデザインに影響を与えるので、リセットCSSを使いレイアウトの崩れなどを防ぎます。リセットCSSはブラウザが持っているCSSを全て打ち消すので、新たにCSSを構築する作業が必要になるデメリットがあります。そこでブラウザが持っている利用できるCSSをできるだけ残しつつ、部分的にリセットする方法が主流になってきています。それがnormalize.cssです。各タグのスタイルをどうするかは、考え方やサイトの内容によります。できるだけなぜそうしたかを明確にしておくことで修正がしやすくなります。本サイトでは、boostrap-reboot.cssをベースにしてサイト用に加工したノーマライズCSSを構築しています。",
 	"pageName" => "reset-css"
 );
 $categorizedCSS = array(
-	"file" => "/php/frontend/categorized-css.php",
+	"file" => "/php/codenote/categorized-css.php",
 	"tag" => array("css"),
 	"title" => "CSSを役割ごとにカテゴライズする",
 	"lead" => "全てのCSSを目的ごとに分けることで、使い方を明確にするカテゴライズする。",
@@ -41,42 +41,42 @@ $categorizedCSS = array(
 );
 //parts
 $button = array(
-	"file" => "/php/frontend/button.php",
+	"file" => "/php/codenote/button.php",
 	"tag" => array("parts"),
 	"title" => "ボタン作成の種類",
 	"lead" => "ボタンを作る際 &lt;a&gt;か&lt;button&gt;か&lt;input&gt;か迷わないように違いを理解する。",
 	"pageName" => "button"
 );
 $breakWord = array(
-	"file" => "/php/frontend/break-word.php",
+	"file" => "/php/codenote/break-word.php",
 	"tag" => array("parts"),
 	"title" => "break-word",
 	"lead" => "文字、文章のルール",
 	"pageName" => "break-word"
 );
 $elementEmStrongMarkB = array(
-	"file" => "/php/frontend/element-em-strong-mark-b-difference.php",
+	"file" => "/php/codenote/element-em-strong-mark-b-difference.php",
 	"tag" => array("parts"),
 	"title" => "em,strong,mark,b,dfn,iの違い",
 	"lead" => "文字を目立たせるタグの違いが曖昧になりがちなので明確に使い分けたい。基本的にはセマンティックマークアップとして利用するのが目的で装飾を前提に使用しないこと。",
 	"pageName" => "element-em-strong-mark-b-difference"
 );
 $favicon = array(
-	"file" => "/php/frontend/favicon.php",
+	"file" => "/php/codenote/favicon.php",
 	"tag" => array("parts"),
 	"title" => "favicon",
 	"lead" => "faviconはfavorite icon”の略語でウェブサイトのシンボルマーク・イメージとして、サイトに配置するアイコンの俗称です。閲覧中のタブなどに表示し潜在層にサイトを認知させる目的があります。",
 	"pageName" => "favicon"
 );
 $hamburgerMenu = array(
-	"file" => "/php/frontend/hamburger-menu.php",
+	"file" => "/php/codenote/hamburger-menu.php",
 	"tag" => array("parts"),
 	"title" => "ハンバーガーメニューの作り方",
 	"lead" => "hamburger-menuを作る際に必要な要素がいくつかあるので、分解して説明します。",
 	"pageName" => "hamburger-menu"
 );
 $headerSmaller = array(
-	"file" => "/php/frontend/header-smaller.php",
+	"file" => "/php/codenote/header-smaller.php",
 	"tag" => array("parts"),
 	"title" => "スクロールでヘッダーのスタイルを変更する",
 	"lead" => "画面をスクロールした時に高さを変えるjavascriptについての説明です。",
@@ -84,7 +84,7 @@ $headerSmaller = array(
 );
 //javascript memo
 $javascriptMemo = array(
-	"file" => "/php/frontend/javascript-memo.php",
+	"file" => "/php/codenote/javascript-memo.php",
 	"tag" => array("javascript"),
 	"title" => "javascriptmemo",
 	"lead" => "メモ",
@@ -92,7 +92,7 @@ $javascriptMemo = array(
 );
 //day-js
 $dayJs = array(
-	"file" => "/php/frontend/day-js.php",
+	"file" => "/php/codenote/day-js.php",
 	"tag" => array("javascript"),
 	"title" => "day-js",
 	"lead" => "Day.jsは軽量（2KB）で多くのブラウザでサポートされているJavaScriptの日付操作ライブラリです。",
@@ -100,7 +100,7 @@ $dayJs = array(
 );
 //js-date
 $jsDate = array(
-	"file" => "/php/frontend/js-date.php",
+	"file" => "/php/codenote/js-date.php",
 	"tag" => array("javascript"),
 	"title" => "js-date",
 	"lead" => "メモ",
@@ -108,7 +108,7 @@ $jsDate = array(
 );
 //js-scroll
 $jsScroll = array(
-	"file" => "/php/frontend/js-scroll.php",
+	"file" => "/php/codenote/js-scroll.php",
 	"tag" => array("javascript"),
 	"title" => "js-scroll",
 	"lead" => "メモ",
@@ -116,7 +116,7 @@ $jsScroll = array(
 );
 //js-scrollTop
 $jsScrollTop = array(
-	"file" => "/php/frontend/js-scrolltop.php",
+	"file" => "/php/codenote/js-scrolltop.php",
 	"tag" => array("javascript", "parts"),
 	"title" => "スクロールでトップに戻るボタン",
 	"lead" => "スクロールでトップに戻るボタンを右下に追加します。最初は表示せず、下にスクロールすると徐々に表示するようにします。",
@@ -125,21 +125,21 @@ $jsScrollTop = array(
 
 
 $eventHandler = array(
-	"file" => "/php/frontend/event-handler.php",
+	"file" => "/php/codenote/event-handler.php",
 	"tag" => array("javascript"),
 	"title" => "イベントハンドラーの種類と使い方",
 	"lead" => "イベントハンドラーの種類と使い方、addEventListenerの使い方についての説明です。",
 	"pageName" => "event-handler"
 );
 $jsArrowFunction = array(
-	"file" => "/php/frontend/arrow-function.php",
+	"file" => "/php/codenote/arrow-function.php",
 	"tag" => array("javascript"),
 	"title" => "アロー関数とは",
 	"lead" => "アロー関数とは関数リテラルをシンプルに記述する方法です。",
 	"pageName" => "arrow-function"
 );
 $eventPropagation = array(
-	"file" => "/php/frontend/event-propagation.php",
+	"file" => "/php/codenote/event-propagation.php",
 	"tag" => array("javascript"),
 	"title" => "イベント伝搬とは",
 	"lead" => "イベントハンドラーが呼ばれる順番について",
@@ -147,14 +147,14 @@ $eventPropagation = array(
 );
 
 $touchEvent = array(
-	"file" => "/php/frontend/touch-event.php",
+	"file" => "/php/codenote/touch-event.php",
 	"tag" => array("javascript"),
 	"title" => "touch-event",
 	"lead" => "touch-event",
 	"pageName" => "touch-event"
 );
 $jsMarker = array(
-	"file" => "/php/frontend/js-marker.php",
+	"file" => "/php/codenote/js-marker.php",
 	"tag" => array("javascript"),
 	"title" => "黄色いmarkerアニメーション",
 	"lead" => "黄色いmarkerを引くアニメーションをjavascriptで作りました",
@@ -162,7 +162,7 @@ $jsMarker = array(
 );
 //js-swiper
 $jsSwiper = array(
-	"file" => "/php/frontend/js-swiper.php",
+	"file" => "/php/codenote/js-swiper.php",
 	"tag" => array("javascript"),
 	"title" => "カルーセルスライダー",
 	"lead" => "ホームのカルーセルスライダーにupdateの新しい順にコンテンツを並べ、swiper.jsを使って動きを追加します。",
@@ -170,7 +170,7 @@ $jsSwiper = array(
 );
 
 $phpFilemtime = array(
-	"file" => "/php/frontend/php-filemtime.php",
+	"file" => "/php/codenote/php-filemtime.php",
 	"tag" => array("php"),
 	"title" => "filemtime",
 	"lead" => "filemtime()でファイルの更新時間を取得できます。",
@@ -178,28 +178,28 @@ $phpFilemtime = array(
 );
 //environment
 $environmentSummary = array(
-	"file" => "/php/frontend/environment-summary.php",
+	"file" => "/php/codenote/environment-summary.php",
 	"tag" => array("environment"),
 	"title" => "制作環境設定全般",
 	"lead" => "例えば一から環境を整える場合、何からすればいいかというメモ。",
 	"pageName" => "environment-summary"
 );
 $gulpfile = array(
-	"file" => "/php/frontend/gulpfile.php",
+	"file" => "/php/codenote/gulpfile.php",
 	"tag" => array("environment"),
 	"title" => "gulpfile",
 	"lead" => "メモ",
 	"pageName" => "gulpfile"
 );
 $gitFetch = array(
-	"file" => "/php/frontend/git-fetch.php",
+	"file" => "/php/codenote/git-fetch.php",
 	"tag" => array("environment", "git"),
 	"title" => "git-fetch",
 	"lead" => "リモートブランチをローカルにコピーしたいけどできない時のメモ。",
 	"pageName" => "git-fetch"
 );
 $browserRenderingEngine = array(
-	"file" => "/php/frontend/browser-rendering-engine.php",
+	"file" => "/php/codenote/browser-rendering-engine.php",
 	"tag" => array("environment"),
 	"title" => "browser-rendering-engine",
 	"lead" => "ブラウザーのレンダリングエンジンとjavascriptエンジンとベンダープレフィックスについて",
@@ -207,7 +207,7 @@ $browserRenderingEngine = array(
 );
 //svg
 $svg = array(
-	"file" => "/php/frontend/svg.php",
+	"file" => "/php/codenote/svg.php",
 	"tag" => array("svg"),
 	"title" => "svgファイルの使い方",
 	"lead" => "svgを活用する方法をまとめました。",
@@ -215,7 +215,7 @@ $svg = array(
 );
 //shopify-memo
 $shopifyMemo = array(
-	"file" => "/php/frontend/shopify-memo.php",
+	"file" => "/php/codenote/shopify-memo.php",
 	"tag" => array("shopify"),
 	"title" => "shopify-memo",
 	"lead" => "shopify-memo",
@@ -223,7 +223,7 @@ $shopifyMemo = array(
 );
 //design
 $designMemo = array(
-	"file" => "/php/frontend/design.php",
+	"file" => "/php/codenote/design.php",
 	"tag" => array("design"),
 	"title" => "デザインメモ",
 	"lead" => "基本的なデザインの考え方についてのメモです。",

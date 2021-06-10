@@ -21,14 +21,6 @@
             }
         }
     } ?>
-    <div class="bl-summary ly-innnerWidth">
-        <h2 class="bl-summary_ttl">ウェブを楽しむ</h2>
-        <div class="bl-summary_txt">
-            <p>フロントエンドエンジニア、ポルコ•タッソのこつこつ技術メモです。 </p>
-            <p>知らないことは理解するのを楽しもう<br>できないことは身につくのを楽しもう</p>
-            <p>まとまってないメモはそのうち清書予定。多分。</p>
-        </div>
-    </div>
     <div class="bl-recentCnt ly-innnerWidth">
         <svg class="svg-note" viewBox="0 0 17 20">
             <use xlink:href="#svg-note"></use>
@@ -37,7 +29,7 @@
         <ul class="bl-recentCnt_pages">
             <?php foreach($latestContent as $value){ ?>
                 <li class="bl-recentCnt_list">
-                    <a href="<?php echo '/frontend/'. $value["pageName"].'.html'; ?>" class="bl-recentCnt_link">
+                    <a href="<?php echo '/codenote/'. $value["pageName"].'.html'; ?>" class="bl-recentCnt_link">
                         <div class="bl-recentCnt_linkImg"><p class="bl-recentCnt_linkImgtxt"><?php echo $value["title"];?></p></div>
                         <p class="bl-recentCnt_linkTxt"><?php echo $value["title"];?></p>
                     </a>
@@ -63,7 +55,7 @@
                 <ul class="bl-recentCnt_relatedMenuLists">
                     <?php foreach($lists["pages"] as $value){ ?>
                     <li class="bl-recentCnt_relatedMenuList">
-                        <a href="<?php echo '/frontend/'. $value["pageName"].'.html'; ?>" class="bl-recentCnt_relatedLink">
+                        <a href="<?php echo '/codenote/'. $value["pageName"].'.html'; ?>" class="bl-recentCnt_relatedLink">
                             <?php echo $value["title"]; ?>
                         </a>
                     </li>
@@ -142,7 +134,7 @@
 </nav> 
 */ ?>
             
-<!-- <script src="/js/frontend.js"></script> -->
+<!-- <script src="/js/codenote.js"></script> -->
 <script>
 
 // toggle tag and relatedList by clicking tag

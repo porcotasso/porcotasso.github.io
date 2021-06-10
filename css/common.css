@@ -506,7 +506,7 @@ td {
     opacity: 1;
     transition: 0.4s; }
     .ly-header .headerLogo .svg-logo {
-      fill: #fff;
+      fill: #181818;
       width: 56%;
       max-width: 200px; }
     .ly-header .headerLogo .svg-logo-symbol {
@@ -589,30 +589,9 @@ td {
     .headerMenu_ttl .summary_cntNumber {
       color: #888;
       font-size: 1.2rem; }
-    .headerMenu_ttl::before {
-      position: absolute;
-      position: absolute;
-      left: -16px;
-      width: 8px;
-      height: 1px;
-      border-radius: 4px;
-      background-color: #fff;
-      content: "";
-      transition: 0.4s; }
     .headerMenu_ttl:hover, .headerMenu_ttl:focus, .headerMenu_ttl:active {
       outline: none;
       outline-offset: -1px; }
-  .headerMenu_link {
-    color: #fff;
-    font-size: 1.5rem;
-    letter-spacing: 0.6rem;
-    line-height: 3;
-    transition: 0.4s; }
-    .headerMenu_link:hover, .headerMenu_link:focus, .headerMenu_link:active {
-      outline: none;
-      outline-offset: -1px;
-      color: #fff;
-      letter-spacing: 1rem; }
   .headerMenu_ul {
     visibility: collapse;
     max-height: 0;

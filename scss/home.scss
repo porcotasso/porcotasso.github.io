@@ -55,6 +55,9 @@ html{
 .ly-header{
   position: fixed;
   width: 100%;
+  .headerLogo .svg-logo{
+    fill: #fff;
+  }
 }
 .bl-footer .el-copyright{
   color: #e9e3dc;
@@ -134,6 +137,13 @@ html{
       // margin: 0 $gutter-width;
       font-size:$font-size-13;
     }
+    &_link{
+      position: relative;
+      color: #fff;
+      cursor: pointer;
+      display: block;
+      z-index: 1;
+    }
     .el-cover{
       display: block;
       position: fixed;
@@ -155,7 +165,7 @@ html{
         background-color: #5e4ca1;
       }
       &.el-cover--profile{
-        background-color: #918983;
+        background-color: #927966;
       }
     }
   }
