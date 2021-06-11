@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="ja">
 <!-- <?php include("_variable.php"); ?> -->
-<!-- code-prettify -->
-<!-- <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script> -->
+
 
 <head>
     <meta charset="utf-8">
@@ -26,12 +25,6 @@
                 <use xlink:href="#svg-logo"></use>
             </svg>
         </h1>
-        <!-- <div class="headerBurger" id="js-headerBurger">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>         -->
     </header>
     <nav class="ly-homeNav">
         <!-- <div class="headerMenu" id="js-headerMenu"> -->
@@ -54,9 +47,10 @@
         </div>
         <div class="navCnt" id="artnote">
             <div class="el-cover el-cover--artnote js-closeCnt"></div>
-            <h2 class="navCnt_ttl">描くことを楽しむ</h2>
+            <h2 class="navCnt_ttl">表現を楽しむ</h2>
             <div class="navCnt_txt">
-                <p>イラストを描いてます </p>
+                <p>イラストを描いたり写真を撮ったり。自分の感覚を基準に表現をするのは大事なことなんだと。</p>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/porco.tasso/?hl=ja" class="navCnt_link">Instagramに観に行く</a>
             </div>
         </div>
         <div class="navCnt" id="profile">
@@ -66,6 +60,7 @@
                 <p>ポルコタッソ</p>
             </div>
         </div>
+        <div class="onBeforeUnloadCover" id="js-onBeforeUnloadCover"></div>
     </main>
 
 <script>
@@ -112,6 +107,16 @@ closeCnt.forEach((value, index) => {
 		inactiveNavLink();
 	}, false)
 });
+
+
+// ページを離れる直前の処理
+const onBeforeUnloadCover = docment.getElementById('js-onBeforeUnloadCover'); 
+function mes(event){
+    //   event.returnValue = "ページを離れます。よろしいですか？";
+    onBeforeUnloadCover.classList.add('onBeforeUnload');
+}
+ 
+window.onbeforeunload = mes;
 </script>
 
     <!-- <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a> -->

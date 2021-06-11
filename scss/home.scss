@@ -170,6 +170,22 @@ html{
     }
   }
 }
+.onBeforeUnloadCover{
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  transition: $transition;
+  opacity: 0;
+  background: #fff;
+  // visibility:collapse;
+  &.onBeforeUnload{
+    opacity: 1;
+    visibility: visible;
+  }
+}
 // .swiper-container {
 //   width: 90%;
 //   height: 400px;
