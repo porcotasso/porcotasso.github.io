@@ -48,10 +48,8 @@
         <div class="navCnt" id="artnote">
             <div class="el-cover el-cover--artnote js-closeCnt"></div>
             <h2 class="navCnt_ttl">表現を楽しむ</h2>
-            <div class="navCnt_txt">
-                <p>イラストを描いたり写真を撮ったり。自分の感覚を基準に表現をするのは大事なことなんだと。</p>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/porco.tasso/?hl=ja" class="navCnt_link">Instagramに観に行く</a>
-            </div>
+            <p class="navCnt_txt">イラストや小ネタを描いたり写真を撮ったり、Instagramに投稿しています。</p>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/porco.tasso/?hl=ja" class="navCnt_link">Instagram</a>
         </div>
         <div class="navCnt" id="profile">
             <div class="el-cover el-cover--profile js-closeCnt"></div>

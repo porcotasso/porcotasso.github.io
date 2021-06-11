@@ -1,2 +1,156 @@
-html{background:#2c2c2c}.ly-body{-ms-scroll-chaining:none;overscroll-behavior:none;position:fixed;top:0;right:0;bottom:0;left:0;width:100%;height:100%;overflow:hidden;background-image:linear-gradient(-18deg,#f0d5b6,#f7f0f2 60%,#45bbe6 72%,#2baae6 90%,#24ccff);background-position:0 92%;background-size:200% 200%;-webkit-animation-name:gradient;animation-name:gradient;-webkit-animation-duration:16s;animation-duration:16s;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;-webkit-animation-delay:-5s;animation-delay:-5s;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-direction:alternate;animation-direction:alternate}@-webkit-keyframes gradient{0%{background-position:0 92%;background-size:200% 200%}50%{background-size:200% 240%}100%{background-position:0 0;background-size:200% 400%}}@keyframes gradient{0%{background-position:0 92%;background-size:200% 200%}50%{background-size:200% 240%}100%{background-position:0 0;background-size:200% 400%}}.ly-header{position:fixed;width:100%}.ly-header .headerLogo .svg-logo{fill:#fff}.bl-footer .el-copyright{color:#e9e3dc;opacity:.7}.ly-homeNav{margin-top:80px;margin-bottom:32px}.ly-homeNav .navLink{display:flex;z-index:100;position:relative;left:28px;align-items:center;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;color:#fff;font-size:1.4rem;letter-spacing:.8rem;line-height:3.6;cursor:pointer;transition:.4s}.ly-homeNav .navLink:active,.ly-homeNav .navLink:focus,.ly-homeNav .navLink:hover{outline:0;outline-offset:-1px;color:#fff}.ly-homeNav .navLink::before{position:absolute;position:absolute;left:-72px;width:64px;height:1px;border-radius:4px;background-color:#fff;content:"";transition:.4s}.ly-homeNav .navLink.active-navLink{left:64px;font-weight:700}.ly-navCnt{position:relative}.ly-navCnt .navCnt{visibility:collapse;position:absolute;top:32px;width:100%;padding:0 5%;color:#fff;opacity:0;transition:.4s}.ly-navCnt .navCnt.active-navCnt{visibility:visible;top:0;opacity:1}.ly-navCnt .navCnt_ttl{position:relative}.ly-navCnt .navCnt_txt{position:relative;font-size:1.3rem}.ly-navCnt .navCnt_link{display:block;z-index:1;position:relative;color:#fff;cursor:pointer}.ly-navCnt .navCnt .el-cover{display:block;visibility:visible;position:fixed;top:0;left:0;width:100%;height:100vh;opacity:.5;pointer-events:auto;transition:.4s}.ly-navCnt .navCnt .el-cover.el-cover--codenote{background-color:#3bd2a8}.ly-navCnt .navCnt .el-cover.el-cover--artnote{background-color:#5e4ca1}.ly-navCnt .navCnt .el-cover.el-cover--profile{background-color:#927966}.onBeforeUnloadCover{display:block;position:fixed;top:0;left:0;width:100%;height:100vh;background:#fff;opacity:0;transition:.4s}.onBeforeUnloadCover.onBeforeUnload{visibility:visible;opacity:1}
+html {
+  background: #2c2c2c; }
+
+.ly-body {
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: linear-gradient(-18deg, #f0d5b6, #f7f0f2 60%, #45bbe6 72%, #2baae6 90%, #24ccff);
+  background-position: 0% 92%;
+  background-size: 200% 200%;
+  -webkit-animation-name: gradient;
+          animation-name: gradient;
+  -webkit-animation-duration: 16s;
+          animation-duration: 16s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate; }
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 92%;
+    background-size: 200% 200%; }
+  50% {
+    background-size: 200% 240%; }
+  100% {
+    background-position: 0% 0%;
+    background-size: 200% 400%; } }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 92%;
+    background-size: 200% 200%; }
+  50% {
+    background-size: 200% 240%; }
+  100% {
+    background-position: 0% 0%;
+    background-size: 200% 400%; } }
+
+.ly-header {
+  position: fixed;
+  width: 100%; }
+  .ly-header .headerLogo .svg-logo {
+    fill: #fff; }
+
+.bl-footer .el-copyright {
+  color: #e9e3dc;
+  opacity: 0.7; }
+
+.ly-homeNav {
+  margin-top: 80px;
+  margin-bottom: 32px; }
+  .ly-homeNav .navLink {
+    display: flex;
+    z-index: 100;
+    position: relative;
+    left: 28px;
+    align-items: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    color: #fff;
+    font-size: 1.4rem;
+    letter-spacing: 0.8rem;
+    line-height: 3.6;
+    cursor: pointer;
+    transition: 0.4s; }
+    .ly-homeNav .navLink:hover, .ly-homeNav .navLink:focus, .ly-homeNav .navLink:active {
+      outline: none;
+      outline-offset: -1px;
+      color: #fff; }
+    .ly-homeNav .navLink::before {
+      position: absolute;
+      position: absolute;
+      left: -72px;
+      width: 64px;
+      height: 1px;
+      border-radius: 4px;
+      background-color: #fff;
+      content: "";
+      transition: 0.4s; }
+    .ly-homeNav .navLink.active-navLink {
+      left: 64px;
+      font-weight: bold; }
+
+.ly-navCnt {
+  position: relative; }
+  .ly-navCnt .navCnt {
+    visibility: collapse;
+    position: absolute;
+    top: 32px;
+    width: 100%;
+    padding: 0 5%;
+    color: #fff;
+    opacity: 0;
+    transition: 0.4s; }
+    .ly-navCnt .navCnt.active-navCnt {
+      visibility: visible;
+      top: 0;
+      opacity: 1; }
+    .ly-navCnt .navCnt_ttl {
+      position: relative; }
+    .ly-navCnt .navCnt_txt {
+      position: relative;
+      font-size: 1.3rem; }
+    .ly-navCnt .navCnt_link {
+      display: block;
+      z-index: 1;
+      position: relative;
+      color: #fff;
+      cursor: pointer; }
+    .ly-navCnt .navCnt .el-cover {
+      display: block;
+      visibility: visible;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      opacity: 0.5;
+      pointer-events: auto;
+      transition: 0.4s; }
+      .ly-navCnt .navCnt .el-cover.el-cover--codenote {
+        background-color: #3bd2a8; }
+      .ly-navCnt .navCnt .el-cover.el-cover--artnote {
+        background-color: #5e4ca1; }
+      .ly-navCnt .navCnt .el-cover.el-cover--profile {
+        background-color: #927966; }
+
+.onBeforeUnloadCover {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  opacity: 0;
+  transition: 0.4s; }
+  .onBeforeUnloadCover.onBeforeUnload {
+    visibility: visible;
+    opacity: 1; }
 /*# sourceMappingURL=maps/home.css.map */
