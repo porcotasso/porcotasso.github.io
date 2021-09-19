@@ -16,7 +16,7 @@
     <?php date_default_timezone_set('Asia/Tokyo'); ?>
     <title>Porconote</title>
 </head>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 <body class="ly-body" id="js-body">
 <?php include_once($_SERVER['DOCUMENT_ROOT'].'/images/common/sprite.svg'); ?>
     <header class="ly-header" id="js-header">  
@@ -48,7 +48,55 @@
         <div class="navCnt" id="artnote">
             <div class="el-cover el-cover--artnote js-closeCnt"></div>
             <h2 class="navCnt_ttl">表現を楽しむ</h2>
-            <p class="navCnt_txt">イラストや小ネタを描いたり写真を撮ったり、Instagramに投稿しています。</p>
+            <p class="navCnt_txt">イラストや小ネタを描いたり写真を撮ったり。</p>
+
+
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img class="artwork" src="/images/illust/illust_001.jpg">aaaa</div>
+                    <div class="swiper-slide"><img class="artwork" src="/images/illust/illust_002.jpg">aaaa</div>
+                    <div class="swiper-slide"><img class="artwork" src="/images/illust/illust_001.jpg">aaaa</div>
+                    <div class="swiper-slide"><img class="artwork" src="/images/illust/illust_002.jpg">aaaa</div>
+                </div>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img class="artwork" src="/images/illust/illust_001.jpg">aaaa</div>
+                    <div class="swiper-slide"><img class="artwork" src="/images/illust/illust_002.jpg">aaaa</div>
+                    <div class="swiper-slide"><img class="artwork" src="/images/illust/illust_001.jpg">aaaa</div>
+                    <div class="swiper-slide"><img class="artwork" src="/images/illust/illust_002.jpg">aaaa</div>
+                </div>
+            </div>
+<script>
+let mySwiper = new Swiper ('.swiper-container', {
+  // 以下にオプションを設定
+  loop: true, //最後に達したら先頭に戻る
+  speed:300,
+  //ページネーション表示の設定
+  pagination: { 
+    el: '.swiper-pagination', //ページネーションの要素
+    type: 'bullets', //ページネーションの種類
+    clickable: true, //クリックに反応させる
+  },
+  slidesPerView:3,
+  slidesPerGroup:1,
+  centeredSlides:true,
+  autoplay: {
+    delay: 2000,
+  },
+  //ナビゲーションボタン（矢印）表示の設定
+//   navigation: { 
+//     nextEl: '.swiper-button-next', //「次へボタン」要素の指定
+//     prevEl: '.swiper-button-prev', //「前へボタン」要素の指定
+//   },
+ 
+  //スクロールバー表示の設定
+  scrollbar: { 
+    el: '.swiper-scrollbar', //要素の指定
+  },
+})
+</script> 
+
             <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/porco.tasso/?hl=ja" class="navCnt_link">Instagram</a>
         </div>
         <div class="navCnt" id="profile">
@@ -108,41 +156,19 @@ closeCnt.forEach((value, index) => {
 
 
 // ページを離れる直前の処理
-const onBeforeUnloadCover = docment.getElementById('js-onBeforeUnloadCover'); 
-function mes(event){
-    //   event.returnValue = "ページを離れます。よろしいですか？";
-    onBeforeUnloadCover.classList.add('onBeforeUnload');
-}
+// const onBeforeUnloadCover = docment.getElementById('js-onBeforeUnloadCover'); 
+// function mes(event){
+//     //   event.returnValue = "ページを離れます。よろしいですか？";
+//     onBeforeUnloadCover.classList.add('onBeforeUnload');
+// }
  
-window.onbeforeunload = mes;
+// window.onbeforeunload = mes;
 </script>
 
     <!-- <a id="js-scrollTop" class="el-scrollTop"><span class="el-scrollTop_txt">トップ</span></a> -->
     <!-- メニューを出した時に出る黒背景 -->
-    <!-- <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">codenote</div>
-            <div class="swiper-slide">artnote</div>
-            <div class="swiper-slide">profile</div>
-        </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-    </div>
-    <script>
-  var mySwiper = new Swiper ('.swiper-container', {
-    // ここからオプション
-    slidesPerView: 'auto',
-    loop: true,
-    // direction: vertical,
-    autoplay: {
-        delay: 2000,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
-  })
-</script> -->
+    
+
     <!-- <ul class="bl-menu">
         <li class="bl-menu_list"><a class="bl-menu_link" href="art.html">art</a></li>
         <li class="bl-menu_list"><a class="bl-menu_link" href="profile.html">profile</a></li>

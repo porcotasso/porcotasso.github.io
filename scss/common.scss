@@ -18,7 +18,9 @@
 //1.common
 // 基本body直下で全画面幅の中で両端にスペースを追加
 
-body{
+.ly-body{
+	position: relative;
+	padding-bottom: 60px;//footer用スペース
 	overscroll-behavior: contain;
 	&.acvtive-headerMenu{
 		overflow: hidden;
@@ -357,7 +359,7 @@ td{
 	bottom: 0;
 	.el-copyright{
 		text-align: center;
-		color: #fff;
+		// color: #fff;
 		font-size: $font-size-12;
 	}
 }

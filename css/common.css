@@ -51,8 +51,15 @@ h3 {
 
 p, li {
   font-size: 1.4rem;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   line-height: 2; }
+
+@media (min-width: 768px) {
+  p, li {
+    font-size: 1.6rem; } }
+
+p {
+  margin: 0 0 2em; }
 
 img {
   max-width: 100%;
@@ -469,10 +476,12 @@ li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
   pre .atv, code .atv {
     color: #060; } }
 
-body {
+.ly-body {
   -ms-scroll-chaining: none;
-      overscroll-behavior: contain; }
-  body.acvtive-headerMenu {
+      overscroll-behavior: contain;
+  position: relative;
+  padding-bottom: 60px; }
+  .ly-body.acvtive-headerMenu {
     overflow: hidden; }
 
 th {
@@ -665,7 +674,6 @@ td {
   height: 60px;
   padding: 16px 5%; }
   .bl-footer .el-copyright {
-    color: #fff;
     font-size: 1.2rem;
     text-align: center; }
 

@@ -153,4 +153,9 @@ html {
   .onBeforeUnloadCover.onBeforeUnload {
     visibility: visible;
     opacity: 1; }
+
+.swiper-container {
+  width: 100%;
+  max-width: 500px;
+  height: 400px; }
 /*# sourceMappingURL=maps/home.css.map */

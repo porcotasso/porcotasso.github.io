@@ -457,6 +457,8 @@ display: block;
 	// }
 	&_summary{
 		padding: 16px $gutter-width;
+		max-width: 1024px;
+		margin: 0 auto;
 		&::before{
 			content: "概要";
 			background: $primary-turquoise;
@@ -491,6 +493,9 @@ display: block;
 	}
 	.ly-section{
 		padding: $space-unit*2 $gutter-width $space-unit*8;
+		max-width: 1024px;
+		margin: 0 auto;
+
 	}
 	.ly-cite{
 		display: block;

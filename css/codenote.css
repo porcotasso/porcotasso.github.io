@@ -319,6 +319,8 @@
       text-overflow: ellipsis; }
 
 .articleCnt_summary {
+  max-width: 1024px;
+  margin: 0 auto;
   padding: 16px 5%; }
   .articleCnt_summary::before {
     display: table;
@@ -347,6 +349,8 @@
   font-weight: bold; }
 
 .articleCnt .ly-section {
+  max-width: 1024px;
+  margin: 0 auto;
   padding: 16px 5% 64px; }
 
 .articleCnt .ly-cite {

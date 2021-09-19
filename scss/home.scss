@@ -186,10 +186,11 @@ html{
     visibility: visible;
   }
 }
-// .swiper-container {
-//   width: 90%;
-//   height: 400px;
-// }
+.swiper-container {
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
+}
 // .bl-menu{
 //   text-align: center;
 
