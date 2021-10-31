@@ -139,7 +139,11 @@ sup {
 a {
   background-color: transparent;
   color: #20bedd;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
+
+p a {
+  text-decoration: underline; }
 
 a:hover {
   color: #07adce;

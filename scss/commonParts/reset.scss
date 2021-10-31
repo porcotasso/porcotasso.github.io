@@ -166,6 +166,11 @@ img {
    color: $link-blue;
    text-decoration: none;
    background-color: transparent;
+   cursor: pointer;
+ }
+ 
+ p a {
+   text-decoration: underline;
  }
  
  a:hover {

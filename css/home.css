@@ -114,8 +114,9 @@ html {
     .ly-navCnt .navCnt_ttl {
       position: relative; }
     .ly-navCnt .navCnt_txt {
+      z-index: 1;
       position: relative;
-      font-size: 1.3rem; }
+      font-size: 1.5rem; }
     .ly-navCnt .navCnt_link {
       display: block;
       z-index: 1;

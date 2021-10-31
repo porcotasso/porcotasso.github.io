@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="ja">
-<!-- <?php include("_variable.php"); ?> -->
+<?php /* include("_variable.php"); */ ?> 
 
 
 <head>
@@ -16,7 +16,7 @@
     <?php date_default_timezone_set('Asia/Tokyo'); ?>
     <title>Porconote</title>
 </head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script> -->
 <body class="ly-body" id="js-body">
 <?php include_once($_SERVER['DOCUMENT_ROOT'].'/images/common/sprite.svg'); ?>
     <header class="ly-header" id="js-header">  
@@ -48,57 +48,51 @@
         <div class="navCnt" id="artnote">
             <div class="el-cover el-cover--artnote js-closeCnt"></div>
             <h2 class="navCnt_ttl">表現を楽しむ</h2>
-            <p class="navCnt_txt">イラストや小ネタを描いたり写真を撮ったり。</p>
-
-
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img class="artwork" src="/images/illust/illust_001.jpg">aaaa</div>
-                    <div class="swiper-slide"><img class="artwork" src="/images/illust/illust_002.jpg">aaaa</div>
-                    <div class="swiper-slide"><img class="artwork" src="/images/illust/illust_001.jpg">aaaa</div>
-                    <div class="swiper-slide"><img class="artwork" src="/images/illust/illust_002.jpg">aaaa</div>
-                </div>
-            </div>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img class="artwork" src="/images/illust/illust_001.jpg">aaaa</div>
-                    <div class="swiper-slide"><img class="artwork" src="/images/illust/illust_002.jpg">aaaa</div>
-                    <div class="swiper-slide"><img class="artwork" src="/images/illust/illust_001.jpg">aaaa</div>
-                    <div class="swiper-slide"><img class="artwork" src="/images/illust/illust_002.jpg">aaaa</div>
-                </div>
-            </div>
-<script>
-let mySwiper = new Swiper ('.swiper-container', {
-  // 以下にオプションを設定
-  loop: true, //最後に達したら先頭に戻る
-  speed:300,
-  //ページネーション表示の設定
-  pagination: { 
-    el: '.swiper-pagination', //ページネーションの要素
-    type: 'bullets', //ページネーションの種類
-    clickable: true, //クリックに反応させる
-  },
-  slidesPerView:3,
-  slidesPerGroup:1,
-  centeredSlides:true,
-  autoplay: {
-    delay: 2000,
-  },
-  //ナビゲーションボタン（矢印）表示の設定
-//   navigation: { 
-//     nextEl: '.swiper-button-next', //「次へボタン」要素の指定
-//     prevEl: '.swiper-button-prev', //「前へボタン」要素の指定
-//   },
- 
-  //スクロールバー表示の設定
-  scrollbar: { 
-    el: '.swiper-scrollbar', //要素の指定
-  },
-})
-</script> 
-
-            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/porco.tasso/?hl=ja" class="navCnt_link">Instagram</a>
+            <p class="navCnt_txt">まだ取りかかっていません。しばらく時間がかかります。<br>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/porco.tasso/?hl=ja">Instagram</a>にコンテンツを載せています。</p>
         </div>
+
+        <?php /*
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img class="artwork" src="/images/illust/illust_001.jpg">aaaa</div>
+                    <div class="swiper-slide"><img class="artwork" src="/images/illust/illust_002.jpg">aaaa</div>
+                    <div class="swiper-slide"><img class="artwork" src="/images/illust/illust_001.jpg">aaaa</div>
+                    <div class="swiper-slide"><img class="artwork" src="/images/illust/illust_002.jpg">aaaa</div>
+                </div>
+            </div>
+
+            <script>
+            let mySwiper = new Swiper ('.swiper-container', {
+            // 以下にオプションを設定
+            loop: true, //最後に達したら先頭に戻る
+            speed:300,
+            //ページネーション表示の設定
+            pagination: { 
+                el: '.swiper-pagination', //ページネーションの要素
+                type: 'bullets', //ページネーションの種類
+                clickable: true, //クリックに反応させる
+            },
+            slidesPerView:3,
+            slidesPerGroup:1,
+            centeredSlides:true,
+            autoplay: {
+                delay: 2000,
+            },
+            //ナビゲーションボタン（矢印）表示の設定
+            //   navigation: { 
+            //     nextEl: '.swiper-button-next', //「次へボタン」要素の指定
+            //     prevEl: '.swiper-button-prev', //「前へボタン」要素の指定
+            //   },
+            
+            //スクロールバー表示の設定
+            scrollbar: { 
+                el: '.swiper-scrollbar', //要素の指定
+            },
+            })
+            </script> 
+        */ ?>
+
         <div class="navCnt" id="profile">
             <div class="el-cover el-cover--profile js-closeCnt"></div>
             <h2 class="navCnt_ttl">プロフィール</h2>

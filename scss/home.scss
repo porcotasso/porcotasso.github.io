@@ -83,7 +83,7 @@ html{
 			outline: none;
 			outline-offset: -1px;
 			// letter-spacing: 1rem;
-		color: #fff;
+		  color: #fff;
 		}
     &::before {
 			content: "";
@@ -135,7 +135,8 @@ html{
     &_txt{
       position: relative;
       // margin: 0 $gutter-width;
-      font-size:$font-size-13;
+      font-size:$font-size-15;
+      z-index: 1;
     }
     &_link{
       position: relative;
