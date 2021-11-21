@@ -1,7 +1,6 @@
 {
   "name": "porcotasso.github.io",
   "version": "1.0.0",
-  "description": "",
   "scripts": {
     "live": "gulp --env live",
     "dev": "gulp"
@@ -32,5 +31,16 @@
     "postcss-sorting": "^5.0.1",
     "stylelint": "^13.6.0",
     "stylelint-config-standard": "^20.0.0"
-  }
+  },
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/porcotasso/porcotasso.github.io.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/porcotasso/porcotasso.github.io/issuens"
+  },
+  "homepage": "https://github.com/porcotasso/porcotasso.github.io#readme",
+  "description": ""
 }
